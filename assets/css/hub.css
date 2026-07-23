@@ -1,0 +1,221 @@
+/* Book Wikis hub — library portal (distinct from per-book wiki themes) */
+:root {
+  --hub-bg: #0f1419;
+  --hub-surface: #1a2332;
+  --hub-surface-elevated: #243044;
+  --hub-text: #e8eef6;
+  --hub-muted: #9aa8bc;
+  --hub-border: #334155;
+  --hub-accent: #5b9fd4;
+  --hub-accent-hover: #7eb6e0;
+  --hub-spoiler-bg: #3d2e14;
+  --hub-spoiler-text: #f0d78c;
+  --hub-spoiler-border: #8a6a28;
+  --hub-content-max: 56rem;
+  --hub-font: system-ui, -apple-system, "Segoe UI", Roboto, Ubuntu, Cantarell, "Noto Sans", sans-serif;
+  --hub-radius: 0.5rem;
+  --hub-focus: #7eb6e0;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 16px;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  font-family: var(--hub-font);
+  color: var(--hub-text);
+  background: var(--hub-bg);
+  line-height: 1.55;
+}
+
+a {
+  color: var(--hub-accent);
+}
+
+a:hover {
+  color: var(--hub-accent-hover);
+}
+
+a:focus-visible {
+  outline: 2px solid var(--hub-focus);
+  outline-offset: 2px;
+}
+
+.site-header {
+  display: flex;
+  align-items: center;
+  padding: 1rem 1.25rem;
+  background: var(--hub-surface);
+  border-bottom: 1px solid var(--hub-border);
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+.site-title {
+  font-weight: 700;
+  font-size: 1.125rem;
+  letter-spacing: 0.02em;
+  color: var(--hub-text);
+  text-decoration: none;
+}
+
+.site-title:visited {
+  color: var(--hub-text);
+}
+
+.site-title:hover {
+  color: var(--hub-accent-hover);
+}
+
+.layout {
+  max-width: var(--hub-content-max);
+  margin: 0 auto;
+  padding: 2rem 1.25rem 3rem;
+}
+
+.intro {
+  margin-bottom: 2rem;
+}
+
+.intro h1 {
+  margin: 0 0 0.75rem;
+  font-size: 1.75rem;
+  font-weight: 700;
+  line-height: 1.25;
+}
+
+.intro .lead {
+  margin: 0;
+  color: var(--hub-muted);
+  font-size: 1.05rem;
+  max-width: 40rem;
+}
+
+.card-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.25rem;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+@media (min-width: 40rem) {
+  .card-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 56rem) {
+  .card-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+.book-card {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  padding: 1.25rem 1.35rem;
+  background: var(--hub-surface);
+  border: 1px solid var(--hub-border);
+  border-radius: var(--hub-radius);
+  transition: border-color 0.15s ease, background 0.15s ease;
+}
+
+.book-card:hover,
+.book-card:focus-within {
+  border-color: var(--hub-accent);
+  background: var(--hub-surface-elevated);
+}
+
+.book-card__title {
+  margin: 0;
+  font-size: 1.2rem;
+  font-weight: 700;
+  line-height: 1.3;
+}
+
+.book-card__title a {
+  color: var(--hub-text);
+  text-decoration: none;
+}
+
+.book-card__title a:visited {
+  color: var(--hub-text);
+}
+
+.book-card__title a:hover {
+  color: var(--hub-accent-hover);
+}
+
+.book-card__meta {
+  margin: 0;
+  font-size: 0.9rem;
+  color: var(--hub-muted);
+}
+
+.book-card__blurb {
+  margin: 0;
+  flex: 1;
+  color: var(--hub-text);
+  font-size: 0.95rem;
+}
+
+.book-card__spoiler {
+  display: inline-block;
+  align-self: flex-start;
+  margin: 0;
+  padding: 0.2rem 0.55rem;
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  color: var(--hub-spoiler-text);
+  background: var(--hub-spoiler-bg);
+  border: 1px solid var(--hub-spoiler-border);
+  border-radius: 0.25rem;
+}
+
+.book-card__cta {
+  display: inline-block;
+  align-self: flex-start;
+  margin-top: 0.25rem;
+  padding: 0.45rem 0.9rem;
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--hub-bg);
+  background: var(--hub-accent);
+  border-radius: 0.35rem;
+  text-decoration: none;
+}
+
+.book-card__cta:visited {
+  color: var(--hub-bg);
+}
+
+.book-card__cta:hover {
+  color: var(--hub-bg);
+  background: var(--hub-accent-hover);
+}
+
+.site-footer {
+  max-width: var(--hub-content-max);
+  margin: 0 auto;
+  padding: 0 1.25rem 2rem;
+  font-size: 0.875rem;
+  color: var(--hub-muted);
+}
+
+.site-footer p {
+  margin: 0;
+}

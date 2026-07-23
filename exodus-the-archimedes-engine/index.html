@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Main Page — Exodus Wiki</title>
+  <link rel="stylesheet" href="assets/css/wiki.css">
+</head>
+<body data-root="./">
+  <header class="site-header">
+    <button type="button" class="menu-toggle" aria-expanded="false" aria-controls="site-sidebar">Menu</button>
+    <a class="site-title" href="index.html">Exodus Wiki</a>
+    <form class="search-form" action="search.html" method="get" role="search">
+      <input class="search-input" type="search" name="q" placeholder="Search wiki…" autocomplete="off" aria-label="Search">
+      <button type="submit">Search</button>
+      <div class="search-dropdown" hidden></div>
+    </form>
+  </header>
+  <div class="layout">
+    <aside class="sidebar" id="site-sidebar">
+      <nav aria-label="Wiki">
+        <ul>
+          <li><a href="../index.html">All book wikis</a></li>
+          <li><a href="index.html">Main Page</a></li>
+          <li><a href="pages/book.html">Book</a></li>
+          <li><a href="pages/characters/index.html">Characters</a></li>
+          <li><a href="pages/locations/index.html">Locations</a></li>
+          <li><a href="pages/factions/index.html">Factions</a></li>
+          <li><a href="pages/technology/index.html">Technology</a></li>
+          <li><a href="pages/timeline.html">Timeline</a></li>
+          <li><a href="pages/plot.html">Plot</a></li>
+          <li><a href="pages/chapters.html">Chapters</a></li>
+        </ul>
+      </nav>
+    </aside>
+    <main class="content">
+      <article class="article" style="grid-template-columns: 1fr;">
+        <header>
+          <h1>Main Page</h1>
+        </header>
+
+        <div class="spoiler-banner" role="note">
+          <strong>Spoilers:</strong> This wiki assumes you have finished <em>Exodus: The Archimedes Engine</em>. Articles contain full spoilers.
+        </div>
+
+        <p class="lead">
+          This is a personal full-spoiler reading companion for Peter F. Hamilton’s 2024 novel
+          <em>Exodus: The Archimedes Engine</em> — a space-opera set in the far-future Centauri Cluster
+          and a narrative prequel for the <em>Exodus</em> game universe. Use it to look up people, places,
+          factions, technology, timeline, and plot after (or while) reading.
+        </p>
+
+        <section>
+          <h2>Start here</h2>
+          <ul>
+            <li><a href="pages/book.html">Book overview</a> — premise, publication facts, and major threads</li>
+            <li><a href="pages/plot.html">Plot summary</a> — full-spoiler arc structure</li>
+            <li><a href="pages/chapters.html">Chapter summaries</a> — reading-order chapter guide</li>
+            <li><a href="pages/timeline.html">Timeline</a> — ordered events with cross-links</li>
+            <li><a href="pages/characters/finn-jalgori-tobu.html">Finn Jalgori-Tobu</a> — Uranic protagonist</li>
+            <li><a href="pages/characters/thyra.html">Thyra</a> — Congregant who rises to power on Wynid</li>
+            <li><a href="pages/characters/terence-wilson-fletcher.html">Terence Wilson-Fletcher</a> — detective on Gondiar</li>
+          </ul>
+        </section>
+
+        <section>
+          <h2>Browse by category</h2>
+          <ul>
+            <li><a href="pages/book.html">Book</a></li>
+            <li><a href="pages/characters/index.html">Characters</a></li>
+            <li><a href="pages/locations/index.html">Locations</a></li>
+            <li><a href="pages/factions/index.html">Factions</a></li>
+            <li><a href="pages/technology/index.html">Technology</a></li>
+            <li><a href="pages/timeline.html">Timeline</a></li>
+            <li><a href="pages/plot.html">Plot</a></li>
+            <li><a href="pages/chapters.html">Chapters</a></li>
+          </ul>
+        </section>
+
+        <section>
+          <h2>About this wiki</h2>
+          <p>
+            Articles are encyclopedic own-words summaries drawn from public lore. Long novel quotations
+            are avoided. Secondary topics may appear as short stubs until expanded. Header search works
+            best when the site is opened through a local static server (see the project README).
+          </p>
+        </section>
+      </article>
+    </main>
+  </div>
+  <script src="assets/data/search-index.js"></script>
+  <script src="assets/js/search.js"></script>
+</body>
+</html>

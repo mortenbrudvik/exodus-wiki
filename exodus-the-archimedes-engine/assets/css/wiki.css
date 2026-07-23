@@ -1,0 +1,361 @@
+/* Exodus wiki — clean modern wiki layout */
+:root {
+  --bg: #f6f7f9;
+  --surface: #ffffff;
+  --text: #1a1a1a;
+  --muted: #5c6570;
+  --border: #d8dee6;
+  --link: #0b57d0;
+  --link-visited: #5b2a86;
+  --accent: #1f3a5f;
+  --banner-bg: #fff4e5;
+  --banner-border: #e0a800;
+  --stub-bg: #eef6ff;
+  --sidebar-width: 15rem;
+  --content-max: 48rem;
+  --font: system-ui, -apple-system, "Segoe UI", Roboto, Ubuntu, Cantarell, "Noto Sans", sans-serif;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 16px;
+}
+
+body {
+  margin: 0;
+  font-family: var(--font);
+  color: var(--text);
+  background: var(--bg);
+  line-height: 1.55;
+}
+
+a {
+  color: var(--link);
+}
+
+a:visited {
+  color: var(--link-visited);
+}
+
+.site-header {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.75rem 1rem;
+  padding: 0.75rem 1rem;
+  background: var(--surface);
+  border-bottom: 1px solid var(--border);
+  position: sticky;
+  top: 0;
+  z-index: 20;
+}
+
+.site-title {
+  font-weight: 700;
+  color: var(--accent);
+  text-decoration: none;
+  margin-right: auto;
+}
+
+.site-title:visited {
+  color: var(--accent);
+}
+
+.menu-toggle {
+  display: none;
+  border: 1px solid var(--border);
+  background: var(--surface);
+  padding: 0.4rem 0.75rem;
+  border-radius: 0.35rem;
+  cursor: pointer;
+  font: inherit;
+}
+
+.search-form {
+  position: relative;
+  display: flex;
+  gap: 0.35rem;
+  min-width: min(100%, 18rem);
+  flex: 1 1 14rem;
+  max-width: 22rem;
+}
+
+.search-input {
+  flex: 1;
+  padding: 0.45rem 0.6rem;
+  border: 1px solid var(--border);
+  border-radius: 0.35rem;
+  font: inherit;
+}
+
+.search-form button {
+  padding: 0.45rem 0.75rem;
+  border: 1px solid var(--accent);
+  background: var(--accent);
+  color: #fff;
+  border-radius: 0.35rem;
+  cursor: pointer;
+  font: inherit;
+}
+
+.search-dropdown {
+  display: none;
+  position: absolute;
+  top: calc(100% + 0.25rem);
+  left: 0;
+  right: 0;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 0.35rem;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+  max-height: 20rem;
+  overflow: auto;
+  z-index: 30;
+}
+
+.search-dropdown.is-open {
+  display: block;
+}
+
+.search-hit {
+  display: block;
+  padding: 0.55rem 0.75rem;
+  text-decoration: none;
+  color: inherit;
+  border-bottom: 1px solid var(--border);
+}
+
+.search-hit:last-child {
+  border-bottom: 0;
+}
+
+.search-hit:hover,
+.search-hit:focus {
+  background: #f0f4fa;
+}
+
+.search-hit .hit-title {
+  font-weight: 600;
+  color: var(--link);
+}
+
+.search-hit .hit-meta {
+  font-size: 0.85rem;
+  color: var(--muted);
+}
+
+.search-empty,
+.search-error {
+  padding: 0.75rem;
+  color: var(--muted);
+}
+
+.layout {
+  display: grid;
+  grid-template-columns: var(--sidebar-width) minmax(0, 1fr);
+  gap: 0;
+  min-height: calc(100vh - 4rem);
+}
+
+.sidebar {
+  background: var(--surface);
+  border-right: 1px solid var(--border);
+  padding: 1rem 0.75rem 2rem;
+}
+
+.sidebar nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.sidebar nav a {
+  display: block;
+  padding: 0.4rem 0.6rem;
+  border-radius: 0.3rem;
+  text-decoration: none;
+}
+
+.sidebar nav a:hover,
+.sidebar nav a[aria-current="page"] {
+  background: #e8eef7;
+}
+
+.content {
+  padding: 1.25rem 1.25rem 3rem;
+}
+
+.article {
+  max-width: calc(var(--content-max) + 16rem);
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: minmax(0, var(--content-max)) minmax(12rem, 16rem);
+  gap: 1.25rem 1.5rem;
+  align-items: start;
+}
+
+.article > header,
+.article > .lead,
+.article > section,
+.article > .stub-notice,
+.article > .article-footer,
+.article > .categories {
+  grid-column: 1;
+}
+
+.article > .infobox {
+  grid-column: 2;
+  grid-row: 1 / span 8;
+}
+
+.article h1 {
+  margin: 0 0 0.5rem;
+  font-size: 1.85rem;
+  line-height: 1.2;
+  border-bottom: 1px solid var(--border);
+  padding-bottom: 0.35rem;
+}
+
+.lead {
+  font-size: 1.05rem;
+  color: #222;
+}
+
+.article section h2 {
+  margin: 1.5rem 0 0.5rem;
+  font-size: 1.25rem;
+  border-bottom: 1px solid var(--border);
+  padding-bottom: 0.2rem;
+}
+
+.article section h3 {
+  margin: 1rem 0 0.35rem;
+  font-size: 1.05rem;
+}
+
+.infobox {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 0.4rem;
+  padding: 0.75rem;
+  font-size: 0.92rem;
+}
+
+.infobox h2 {
+  margin: 0 0 0.5rem;
+  font-size: 1rem;
+  text-align: center;
+}
+
+.infobox dl {
+  margin: 0;
+}
+
+.infobox dt {
+  font-weight: 600;
+  margin-top: 0.45rem;
+  color: var(--muted);
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 0.02em;
+}
+
+.infobox dd {
+  margin: 0.1rem 0 0;
+}
+
+.spoiler-banner {
+  background: var(--banner-bg);
+  border: 1px solid var(--banner-border);
+  border-radius: 0.4rem;
+  padding: 0.75rem 1rem;
+  margin: 0 0 1rem;
+}
+
+.stub-notice {
+  background: var(--stub-bg);
+  border: 1px solid #b7d0f0;
+  border-radius: 0.4rem;
+  padding: 0.65rem 0.85rem;
+  margin: 0 0 1rem;
+}
+
+.categories {
+  margin-top: 1.5rem;
+  padding-top: 0.75rem;
+  border-top: 1px solid var(--border);
+  font-size: 0.95rem;
+}
+
+.categories a {
+  margin-right: 0.5rem;
+}
+
+.wiki-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 0.75rem 0;
+  font-size: 0.95rem;
+}
+
+.wiki-table th,
+.wiki-table td {
+  border: 1px solid var(--border);
+  padding: 0.4rem 0.55rem;
+  text-align: left;
+  vertical-align: top;
+}
+
+.wiki-table th {
+  background: #eef2f7;
+}
+
+.hub-list {
+  columns: 2;
+  gap: 1.5rem;
+}
+
+.hub-list ul {
+  margin-top: 0.25rem;
+}
+
+@media (max-width: 960px) {
+  .article {
+    grid-template-columns: 1fr;
+  }
+
+  .article > .infobox {
+    grid-column: 1;
+    grid-row: auto;
+    order: -1;
+  }
+
+  .hub-list {
+    columns: 1;
+  }
+}
+
+@media (max-width: 720px) {
+  .menu-toggle {
+    display: inline-block;
+  }
+
+  .layout {
+    grid-template-columns: 1fr;
+  }
+
+  .sidebar {
+    display: none;
+    border-right: 0;
+    border-bottom: 1px solid var(--border);
+  }
+
+  .sidebar.is-open {
+    display: block;
+  }
+}

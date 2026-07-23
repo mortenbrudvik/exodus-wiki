@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{{TITLE}} — Exodus Wiki</title>
+  <link rel="stylesheet" href="{{ROOT}}assets/css/wiki.css">
+</head>
+<body data-root="{{ROOT}}">
+  <header class="site-header">
+    <button type="button" class="menu-toggle" aria-expanded="false" aria-controls="site-sidebar">Menu</button>
+    <a class="site-title" href="{{ROOT}}index.html">Exodus Wiki</a>
+    <form class="search-form" action="{{ROOT}}search.html" method="get" role="search">
+      <input class="search-input" type="search" name="q" placeholder="Search wiki…" autocomplete="off" aria-label="Search">
+      <button type="submit">Search</button>
+      <div class="search-dropdown" hidden></div>
+    </form>
+  </header>
+  <div class="layout">
+    <aside class="sidebar" id="site-sidebar">
+      <nav aria-label="Wiki">
+        <ul>
+          <li><a href="{{ROOT}}../index.html">All book wikis</a></li>
+          <li><a href="{{ROOT}}index.html">Main Page</a></li>
+          <li><a href="{{ROOT}}pages/book.html">Book</a></li>
+          <li><a href="{{ROOT}}pages/characters/index.html">Characters</a></li>
+          <li><a href="{{ROOT}}pages/locations/index.html">Locations</a></li>
+          <li><a href="{{ROOT}}pages/factions/index.html">Factions</a></li>
+          <li><a href="{{ROOT}}pages/technology/index.html">Technology</a></li>
+          <li><a href="{{ROOT}}pages/timeline.html">Timeline</a></li>
+          <li><a href="{{ROOT}}pages/plot.html">Plot</a></li>
+          <li><a href="{{ROOT}}pages/chapters.html">Chapters</a></li>
+        </ul>
+      </nav>
+    </aside>
+    <main class="content">
+      <article class="article">
+        <header>
+          <h1>{{TITLE}}</h1>
+        </header>
+        <!-- Optional: <p class="stub-notice"><strong>Stub:</strong> expand when more is known.</p> -->
+        <aside class="infobox">
+          <h2>{{TITLE}}</h2>
+          <dl>
+            <dt>Type</dt>
+            <dd>…</dd>
+          </dl>
+        </aside>
+        <p class="lead">Lead paragraph (2–4 sentences).</p>
+        <section>
+          <h2>Background</h2>
+          <p>…</p>
+        </section>
+        <section>
+          <h2>Role in the story</h2>
+          <p>…</p>
+        </section>
+        <footer class="article-footer categories">
+          Categories:
+          <a href="{{CATEGORY_HREF}}">{{CATEGORY_NAME}}</a>
+        </footer>
+      </article>
+    </main>
+  </div>
+  <script src="{{ROOT}}assets/data/search-index.js"></script>
+  <script src="{{ROOT}}assets/js/search.js"></script>
+</body>
+</html>

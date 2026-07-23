@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Search — Exodus Wiki</title>
+  <link rel="stylesheet" href="assets/css/wiki.css">
+</head>
+<body data-root="./">
+  <header class="site-header">
+    <button type="button" class="menu-toggle" aria-expanded="false" aria-controls="site-sidebar">Menu</button>
+    <a class="site-title" href="index.html">Exodus Wiki</a>
+    <form class="search-form" action="search.html" method="get" role="search">
+      <input class="search-input" type="search" name="q" placeholder="Search wiki…" autocomplete="off" aria-label="Search">
+      <button type="submit">Search</button>
+      <div class="search-dropdown" hidden></div>
+    </form>
+  </header>
+  <div class="layout">
+    <aside class="sidebar" id="site-sidebar">
+      <nav aria-label="Wiki">
+        <ul>
+          <li><a href="../index.html">All book wikis</a></li>
+          <li><a href="index.html">Main Page</a></li>
+          <li><a href="pages/book.html">Book</a></li>
+          <li><a href="pages/characters/index.html">Characters</a></li>
+          <li><a href="pages/locations/index.html">Locations</a></li>
+          <li><a href="pages/factions/index.html">Factions</a></li>
+          <li><a href="pages/technology/index.html">Technology</a></li>
+          <li><a href="pages/timeline.html">Timeline</a></li>
+          <li><a href="pages/plot.html">Plot</a></li>
+          <li><a href="pages/chapters.html">Chapters</a></li>
+        </ul>
+      </nav>
+    </aside>
+    <main class="content">
+      <article class="article" style="grid-template-columns: 1fr;">
+        <header>
+          <h1 id="search-query-label">Search</h1>
+        </header>
+        <div id="search-results"></div>
+      </article>
+    </main>
+  </div>
+  <script src="assets/data/search-index.js"></script>
+  <script src="assets/js/search.js"></script>
+</body>
+</html>
