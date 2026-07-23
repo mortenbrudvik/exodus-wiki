@@ -59,11 +59,14 @@ window.WIKI_SEARCH_INDEX = [
     "title": "Factions",
     "path": "pages/factions/index.html",
     "category": "Factions",
-    "summary": "Faction hub: Celestials, Crown Dominion, Uranics, Travelers, liberation",
+    "summary": "Faction hub: Celestials, Crown Dominion, Uranics, Travelers, human liberation",
     "keywords": [
       "groups",
       "politics",
-      "hub"
+      "hub",
+      "heresy",
+      "talloch",
+      "dominion"
     ]
   },
   {
@@ -545,7 +548,7 @@ window.WIKI_SEARCH_INDEX = [
     "title": "Crown Dominion",
     "path": "pages/factions/crown-dominion.html",
     "category": "Factions",
-    "summary": "Imperial Accord among queens; Kelowan capital; human underclass",
+    "summary": "Imperial Accord; five/six houses; Kelowan georing; HeSea helium; Zuberi trauma; client worlds",
     "keywords": [
       "crown dominion",
       "imperial accord",
@@ -553,14 +556,20 @@ window.WIKI_SEARCH_INDEX = [
       "queens",
       "kelowan",
       "dominion",
-      "hesea"
+      "hesea",
+      "helium",
+      "zuberi",
+      "verak",
+      "wynid",
+      "tinaja",
+      "scoopships"
     ]
   },
   {
     "title": "Celestials",
     "path": "pages/factions/celestials.html",
     "category": "Factions",
-    "summary": "Transhuman ruling clade; archons; mindlines; Great Game politics",
+    "summary": "Post-human clades; Elohim past; mindlines/archons/riders; Heresy & Talloch-Te peers",
     "keywords": [
       "celestial",
       "celestials",
@@ -569,14 +578,21 @@ window.WIKI_SEARCH_INDEX = [
       "mindline",
       "great game",
       "queen",
-      "congregant"
+      "congregant",
+      "elohim",
+      "heresy",
+      "talloch",
+      "bloodstone",
+      "rider",
+      "remnant",
+      "mara yama"
     ]
   },
   {
     "title": "Uranics",
     "path": "pages/factions/uranics.html",
     "category": "Factions",
-    "summary": "Later-arrival humans; second-class status; client aristocracy",
+    "summary": "Intermediate humans; neural interfaces; livestone; Gondiar farms & Anoosha mines",
     "keywords": [
       "uranic",
       "uranics",
@@ -584,14 +600,18 @@ window.WIKI_SEARCH_INDEX = [
       "second-class",
       "jalgori",
       "gondiar",
-      "later arrival"
+      "later arrival",
+      "livestone",
+      "anoosha",
+      "interface",
+      "proxy"
     ]
   },
   {
     "title": "Travelers",
     "path": "pages/factions/travelers.html",
     "category": "Factions",
-    "summary": "Interstellar free agents; Arcadia’s Moon; ZPZ and salvage ops",
+    "summary": "Ship owners; Remnant hunters; ZPZ; Arcadia’s Moon & Enfoes; steal fire from gods",
     "keywords": [
       "traveler",
       "travelers",
@@ -600,14 +620,20 @@ window.WIKI_SEARCH_INDEX = [
       "arcadia",
       "arcadia's moon",
       "zpz",
-      "free agent"
+      "free agent",
+      "remnant",
+      "enfoe",
+      "lestari",
+      "lidon",
+      "gates of heaven",
+      "ghosts"
     ]
   },
   {
     "title": "Human liberation",
     "path": "pages/factions/human-liberation.html",
     "category": "Factions",
-    "summary": "Resistance; Regal Democrats; strikes; Celestial countermeasures",
+    "summary": "Regal Democrats; QIX; Tinaja funding; strikes; Engine plot; Celestial infiltration",
     "keywords": [
       "liberation",
       "human liberation",
@@ -615,7 +641,12 @@ window.WIKI_SEARCH_INDEX = [
       "resistance",
       "strike",
       "josias",
-      "rebellion"
+      "rebellion",
+      "qix",
+      "tinaja",
+      "engine",
+      "infiltration",
+      "gyvoy"
     ]
   },
   {
