@@ -36,7 +36,7 @@
     "title": "Characters",
     "path": "pages/characters/index.html",
     "category": "Characters",
-    "summary": "Character hub: protagonists, Celestial court, Gondiar, Travelers",
+    "summary": "Character hub: protagonists, full Celestials roster, Gondiar, Travelers",
     "keywords": [
       "people",
       "cast",
@@ -59,14 +59,17 @@
     "title": "Factions",
     "path": "pages/factions/index.html",
     "category": "Factions",
-    "summary": "Faction hub: Celestials, Crown Dominion, Uranics, Travelers, human liberation",
+    "summary": "Faction hub: Dominions roster, Celestials, Crown, Uranics, Travelers, liberation",
     "keywords": [
       "groups",
       "politics",
       "hub",
       "heresy",
       "talloch",
-      "dominion"
+      "dominion",
+      "dominions",
+      "roster",
+      "mara yama"
     ]
   },
   {
@@ -562,7 +565,9 @@
       "verak",
       "wynid",
       "tinaja",
-      "scoopships"
+      "scoopships",
+      "dominions roster",
+      "peer"
     ]
   },
   {
@@ -794,6 +799,365 @@
       "toc",
       "summary",
       "reading order"
+    ]
+  },
+  {
+    "title": "Celestials roster",
+    "path": "pages/characters/celestials-roster.html",
+    "category": "Characters",
+    "summary": "Detailed list of all named Celestials with links to dedicated pages",
+    "keywords": [
+      "celestials",
+      "roster",
+      "queens",
+      "archons",
+      "list",
+      "imperial",
+      "mindline"
+    ]
+  },
+  {
+    "title": "Makaio",
+    "path": "pages/characters/makaio.html",
+    "category": "Characters",
+    "summary": "Wynid archon mindline Yalbo→Faraji; Dolod warning; Makaio-Spirit in Terence",
+    "keywords": [
+      "makaio",
+      "yalbo",
+      "faraji",
+      "archon",
+      "alumata",
+      "spymaster",
+      "makaio-spirit"
+    ]
+  },
+  {
+    "title": "Sahdiah",
+    "path": "pages/characters/sahdiah.html",
+    "category": "Characters",
+    "summary": "Talloch-Te archon; ZPZ denial; Medusa tasking; Dolod endgame",
+    "keywords": [
+      "sahdiah",
+      "talloch",
+      "talloch-te",
+      "archon",
+      "medusa",
+      "traveler"
+    ]
+  },
+  {
+    "title": "Lord Jolav",
+    "path": "pages/characters/lord-jolav.html",
+    "category": "Characters",
+    "summary": "Helena consort; Clavissa father; residual opposition under Thyra",
+    "keywords": [
+      "jolav",
+      "jolav-dabny",
+      "consort",
+      "clavissa",
+      "wynid"
+    ]
+  },
+  {
+    "title": "Siskala",
+    "path": "pages/characters/siskala.html",
+    "category": "Characters",
+    "summary": "Major of Wynid Royal Tiger Guard; Helena new-life daughter",
+    "keywords": [
+      "siskala",
+      "tiger guard",
+      "new life",
+      "wynid",
+      "military"
+    ]
+  },
+  {
+    "title": "Acelynn",
+    "path": "pages/characters/acelynn.html",
+    "category": "Characters",
+    "summary": "Chief Archon of Carolien-Amaia of Verak",
+    "keywords": [
+      "acelynn",
+      "verak",
+      "chief archon",
+      "carolien"
+    ]
+  },
+  {
+    "title": "Ramona-Ursule",
+    "path": "pages/characters/ramona-ursule.html",
+    "category": "Characters",
+    "summary": "Now and Forever Queen of Nizinsk; politics trial host",
+    "keywords": [
+      "ramona",
+      "ursule",
+      "ramona-ursule",
+      "nizinsk",
+      "queen"
+    ]
+  },
+  {
+    "title": "Inessa-Pierina",
+    "path": "pages/characters/inessa-pierina.html",
+    "category": "Characters",
+    "summary": "Now and Forever Queen of Cheluli; Crown peer queen",
+    "keywords": [
+      "inessa",
+      "pierina",
+      "inessa-pierina",
+      "cheluli",
+      "queen"
+    ]
+  },
+  {
+    "title": "Luus",
+    "path": "pages/characters/luus.html",
+    "category": "Characters",
+    "summary": "Queen of Bassa; prior Empress Luus-Kinza; hands throne to Carolien",
+    "keywords": [
+      "luus",
+      "luus-kinza",
+      "luus-marcela",
+      "bassa",
+      "empress"
+    ]
+  },
+  {
+    "title": "Zuberi-Dulcina",
+    "path": "pages/characters/zuberi-dulcina.html",
+    "category": "Characters",
+    "summary": "Former Queen of Kelowan; neural weapons; Accord founding trauma",
+    "keywords": [
+      "zuberi",
+      "dulcina",
+      "zuberi-dulcina",
+      "kelowan",
+      "accord"
+    ]
+  },
+  {
+    "title": "Uulana",
+    "path": "pages/characters/uulana.html",
+    "category": "Characters",
+    "summary": "Uulana-Lyon investigator; Uulana-Shoigu infiltrated chief archon",
+    "keywords": [
+      "uulana",
+      "lyon",
+      "shoigu",
+      "iuntin",
+      "guillrameo",
+      "infiltration"
+    ]
+  },
+  {
+    "title": "Lord Valdier",
+    "path": "pages/characters/valdier.html",
+    "category": "Characters",
+    "summary": "Helena father; Master of the Court Valdier-Mímir",
+    "keywords": [
+      "valdier",
+      "mimir",
+      "master of the court",
+      "helena",
+      "father"
+    ]
+  },
+  {
+    "title": "Lord Stethos-Thierry",
+    "path": "pages/characters/stethos-thierry.html",
+    "category": "Characters",
+    "summary": "Court datamaster to Helena-Chione",
+    "keywords": [
+      "stethos",
+      "thierry",
+      "datamaster",
+      "wynid"
+    ]
+  },
+  {
+    "title": "Asahi-Iryna",
+    "path": "pages/characters/asahi-iryna.html",
+    "category": "Characters",
+    "summary": "Hardline archon; pursues Diligent and foreign archons",
+    "keywords": [
+      "asahi",
+      "iryna",
+      "asahi-iryna",
+      "archon",
+      "pursuit"
+    ]
+  },
+  {
+    "title": "Avone-Valerio",
+    "path": "pages/characters/avone-valerio.html",
+    "category": "Characters",
+    "summary": "Hardline general; Gondiar navy occupation",
+    "keywords": [
+      "avone",
+      "valerio",
+      "avone-valerio",
+      "general",
+      "gondiar",
+      "navy"
+    ]
+  },
+  {
+    "title": "Dagon",
+    "path": "pages/characters/dagon.html",
+    "category": "Characters",
+    "summary": "Celestial operator; Gyvoy imposture; Thyra uncle",
+    "keywords": [
+      "dagon",
+      "gyvoy",
+      "imposture",
+      "uncle",
+      "thyra"
+    ]
+  },
+  {
+    "title": "Radwarno",
+    "path": "pages/characters/radwarno.html",
+    "category": "Characters",
+    "summary": "Verak fleet commander; Diligent capture order",
+    "keywords": [
+      "radwarno",
+      "verak",
+      "commander",
+      "diligent",
+      "fleet"
+    ]
+  },
+  {
+    "title": "Neusch",
+    "path": "pages/characters/neusch.html",
+    "category": "Characters",
+    "summary": "Makaio son; residual protocols; Aecus; Clavissa aid",
+    "keywords": [
+      "neusch",
+      "makaio",
+      "aecus",
+      "neural gifts"
+    ]
+  },
+  {
+    "title": "Malquilvo",
+    "path": "pages/characters/malquilvo.html",
+    "category": "Characters",
+    "summary": "Court parent; killed after Binji trial accusations",
+    "keywords": [
+      "malquilvo",
+      "beaumont",
+      "binji",
+      "valeri",
+      "trial"
+    ]
+  },
+  {
+    "title": "Dominions roster",
+    "path": "pages/factions/dominions-roster.html",
+    "category": "Factions",
+    "summary": "Detailed list of all named Dominions and peer polities with dedicated pages",
+    "keywords": [
+      "dominions",
+      "roster",
+      "list",
+      "heresy",
+      "talloch",
+      "mara yama",
+      "gomatu",
+      "crown"
+    ]
+  },
+  {
+    "title": "Heresy Dominion",
+    "path": "pages/factions/heresy-dominion.html",
+    "category": "Factions",
+    "summary": "Hexapod Celestial dominion; Olomo; Wynid ally; Dolod discovery",
+    "keywords": [
+      "heresy",
+      "hersey",
+      "olomo",
+      "hexapod",
+      "dominion",
+      "tinaja"
+    ]
+  },
+  {
+    "title": "Talloch-Te Dominion",
+    "path": "pages/factions/talloch-te-dominion.html",
+    "category": "Factions",
+    "summary": "Nomad trader/shipbuilder dominion; Sahdiah; Verak ally; ZPZ politics",
+    "keywords": [
+      "talloch",
+      "talloch-te",
+      "tallach",
+      "sahdiah",
+      "traders",
+      "shipbuilding"
+    ]
+  },
+  {
+    "title": "Mara Yama",
+    "path": "pages/factions/mara-yama.html",
+    "category": "Factions",
+    "summary": "Nomad citadel Celestials; external threat; Crown hardline pretext",
+    "keywords": [
+      "mara yama",
+      "mara",
+      "yama",
+      "nomad",
+      "citadel",
+      "threat"
+    ]
+  },
+  {
+    "title": "Gomatu Dominion",
+    "path": "pages/factions/gomatu-dominion.html",
+    "category": "Factions",
+    "summary": "Dyson-sphere builders; original Dolod destination vector",
+    "keywords": [
+      "gomatu",
+      "dyson",
+      "dolod",
+      "jk67b",
+      "megastructure"
+    ]
+  },
+  {
+    "title": "Uthara Dominion",
+    "path": "pages/factions/uthara-dominion.html",
+    "category": "Factions",
+    "summary": "Annexation target with Capo Frois in Thyra hardline plans",
+    "keywords": [
+      "uthara",
+      "annexation",
+      "capo frois",
+      "thyra"
+    ]
+  },
+  {
+    "title": "Ratarajan Dominion",
+    "path": "pages/factions/ratarajan-dominion.html",
+    "category": "Factions",
+    "summary": "Hoa Quinzu dominion; warns Diligent of Mara Yama refuel",
+    "keywords": [
+      "ratarajan",
+      "hoa quinzu",
+      "kajval",
+      "warning"
+    ]
+  },
+  {
+    "title": "Elohim",
+    "path": "pages/factions/elohim.html",
+    "category": "Factions",
+    "summary": "Dawn Era planetary engineers; Archimedes Engines; Eden worlds",
+    "keywords": [
+      "elohim",
+      "dawn",
+      "archimedes",
+      "eden",
+      "terraform"
     ]
   }
 ]
