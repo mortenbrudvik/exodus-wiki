@@ -81,7 +81,7 @@
     "title": "Finn Jalgori-Tobu",
     "path": "pages/characters/finn-jalgori-tobu.html",
     "category": "Characters",
-    "summary": "Uranic protagonist; Hafnir; Diligent alliance; Archimedes Engine endgame",
+    "summary": "Finbar (~25); Uranic Minsterialis of Hafnir; Diligent alliance; Dolod Engine endgame",
     "keywords": [
       "finbar",
       "finn",
@@ -91,44 +91,53 @@
       "uranic",
       "protagonist",
       "livestone",
-      "anoosha"
+      "anoosha",
+      "traveler",
+      "gyvoy",
+      "dolod"
     ]
   },
   {
     "title": "Eleanor Aponi",
     "path": "pages/characters/eleanor-aponi.html",
     "category": "Characters",
-    "summary": "Diligent lieutenant; rescues Finn; rekaul memory beat vs Gyvoy",
+    "summary": "Ellie Faith Aponi (~23); Diligent lieutenant; Finn’s field partner; rekaul vs Gyvoy",
     "keywords": [
       "ellie",
       "eleanor",
+      "faith",
       "aponi",
       "diligent",
       "rekaul",
       "gyvoy",
-      "lieutenant"
+      "lieutenant",
+      "kajval",
+      "kingsnest"
     ]
   },
   {
     "title": "Josias Aponi",
     "path": "pages/characters/josias-aponi.html",
     "category": "Characters",
-    "summary": "Diligent owner; orator; Regal Democrats; Hafnir deal; strike broadcast",
+    "summary": "Josias Matthew Aponi (~51); Diligent owner; Regal Democrats; Hafnir deal; strike broadcast",
     "keywords": [
       "josias",
+      "matthew",
       "aponi",
       "diligent",
       "regal democrats",
       "orator",
       "agitator",
-      "liberation"
+      "liberation",
+      "eunomia",
+      "otylia"
     ]
   },
   {
     "title": "Helena-Chione",
     "path": "pages/characters/helena-chione.html",
     "category": "Characters",
-    "summary": "Now and Forever Queen of Wynid; mindline; usurped as Helena-Thyra",
+    "summary": "Now and Forever Queen of Wynid; mindline continuity; usurped as Helena-Thyra",
     "keywords": [
       "helena",
       "chione",
@@ -137,14 +146,16 @@
       "queen",
       "wynid",
       "empress",
-      "mindline"
+      "mindline",
+      "jolav",
+      "pregnancy"
     ]
   },
   {
     "title": "Thyra",
     "path": "pages/characters/thyra.html",
     "category": "Characters",
-    "summary": "Congregant who seizes Wynid; hardline politics; Dolod/Boksrock endgame",
+    "summary": "Congregant→Helena-Thyra; Wynid trials; hardline fleets; Dagon uncle; Boksrock endgame",
     "keywords": [
       "thyra",
       "helena-thyra",
@@ -153,14 +164,17 @@
       "mindline",
       "boksrock",
       "bekket",
-      "usurpation"
+      "usurpation",
+      "dracaenae",
+      "dagon",
+      "binji"
     ]
   },
   {
     "title": "Terence Wilson-Fletcher",
     "path": "pages/characters/terence-wilson-fletcher.html",
     "category": "Characters",
-    "summary": "Santa Rosa detective; informant network; Makaio-Spirit; manhunt threads",
+    "summary": "Terence (~24); Santa Rosa detective; Makaio-Spirit; Gyvoy/Dagon/Liliana manhunt",
     "keywords": [
       "terence",
       "terrence",
@@ -171,28 +185,33 @@
       "santa rosa",
       "makaio",
       "makaio-spirit",
-      "gondiar"
+      "gondiar",
+      "jimena",
+      "younes",
+      "procedural"
     ]
   },
   {
     "title": "Lord Gahiji",
     "path": "pages/characters/lord-gahiji.html",
     "category": "Characters",
-    "summary": "Chief Archon to Helena-Chione; displaced under Thyra; political operator",
+    "summary": "Gahiji-Calder; Chief Archon to Helena; displaced by Uulana-Shoigu; residual investigator",
     "keywords": [
       "gahiji",
       "gahiji-calder",
       "archon",
       "wynid",
       "chief archon",
-      "helena"
+      "helena",
+      "zuberi",
+      "makaio"
     ]
   },
   {
     "title": "Andino",
     "path": "pages/characters/andino.html",
     "category": "Characters",
-    "summary": "Traveler captain of Arcadia’s Moon; ambiguous motives",
+    "summary": "Traveler captain of Arcadia’s Moon; ZPZ war; Infinite Totality; antimatter demo",
     "keywords": [
       "andino",
       "arcadia",
@@ -200,59 +219,74 @@
       "traveler",
       "travellers",
       "zpz",
-      "captain"
+      "captain",
+      "infinite totality",
+      "antimatter",
+      "capo frois",
+      "marcellu"
     ]
   },
   {
     "title": "Otylia Jalgori-Tobu",
     "path": "pages/characters/otylia-jalgori-tobu.html",
     "category": "Characters",
-    "summary": "Finn’s twin; Minsterialis of Serki; marries Josias; Gondiar crisis",
+    "summary": "Otylia Roasmund Silkie; Finn’s twin; Serki; marries Josias; Laurella & Dushan",
     "keywords": [
       "otylia",
+      "roasmund",
+      "silkie",
       "jalgori",
       "tobu",
       "serki",
       "twin",
       "josias",
-      "ministerialis"
+      "ministerialis",
+      "laurella",
+      "dushan"
     ]
   },
   {
     "title": "Clavissa",
     "path": "pages/characters/clavissa.html",
     "category": "Characters",
-    "summary": "Helena’s congregant daughter; court survivor under Thyra",
+    "summary": "Jolav’s daughter; Binji spare; nanny under Thyra; Kelowan spy channel with Neusch",
     "keywords": [
       "clavissa",
       "congregant",
       "wynid",
       "helena",
       "jolav",
-      "court"
+      "jolav-dabny",
+      "court",
+      "neusch",
+      "binji"
     ]
   },
   {
     "title": "Zelinda Jalgori-Tobu",
     "path": "pages/characters/zelinda-jalgori-tobu.html",
     "category": "Characters",
-    "summary": "Jalgori-Tobu heir; Gondiar client aristocracy; official-channel contact",
+    "summary": "Zelinda Maryann Richelle; Jalgori-Tobu heir; Dagon stand-down; Polkadav escape",
     "keywords": [
       "zelinda",
+      "maryann",
+      "richelle",
       "jalgori",
       "tobu",
       "heir",
       "gondiar",
       "uranic",
       "governor",
-      "dagon"
+      "dagon",
+      "polkadav",
+      "marchioness"
     ]
   },
   {
     "title": "Carolien-Amaia",
     "path": "pages/characters/carolien-amaia.html",
     "category": "Characters",
-    "summary": "Rotating Empress of Crown Dominion; Verak; Kelowan endgame collapse",
+    "summary": "Queen of Verak; 60y Empress; Gondiar crackdown; kestrel-sprite palace fall",
     "keywords": [
       "carolien",
       "amaia",
@@ -260,28 +294,37 @@
       "empress",
       "verak",
       "kelowan",
-      "imperial"
+      "imperial",
+      "avone",
+      "kestrel",
+      "luus-kinza"
     ]
   },
   {
     "title": "Olomo",
     "path": "pages/characters/olomo.html",
     "category": "Characters",
-    "summary": "Celestial archon; Gyvoy-imposture warnings; Dolod convergence",
+    "summary": "Heresy Dominion archon; hexapod; first flags Dolod; Tinaja watch; Diligent pursuit",
     "keywords": [
       "olomo",
       "archon",
       "celestial",
+      "heresy",
+      "hersey",
       "gyvoy",
       "warning",
-      "dolod"
+      "dolod",
+      "tinaja",
+      "xirya",
+      "karaglo",
+      "sahdiah"
     ]
   },
   {
     "title": "Liliana",
     "path": "pages/characters/liliana.html",
     "category": "Characters",
-    "summary": "Mercenary; Anoosha heist; cherenkov blade; Josias extraction",
+    "summary": "Lidon mercenary; dumps Finn; kills Marcellu; Gyvoy/Bekket ops; Josias extraction",
     "keywords": [
       "liliana",
       "mercenary",
@@ -290,28 +333,35 @@
       "tose",
       "toše",
       "gyvoy",
-      "anoosha"
+      "anoosha",
+      "lidon",
+      "bekket",
+      "cybele"
     ]
   },
   {
     "title": "Medusa",
     "path": "pages/characters/medusa.html",
     "category": "Characters",
-    "summary": "Sahdiah-tasked operative; Traveler contact; Terence case thread",
+    "summary": "Marcellu’s right-hand; Sahdiah assassin; Bopbe case; fake death; Dolod alert",
     "keywords": [
       "medusa",
       "sahdiah",
       "traveler",
       "andino",
       "operative",
-      "gondiar"
+      "gondiar",
+      "assassin",
+      "bopbe",
+      "marcellu",
+      "hospice"
     ]
   },
   {
     "title": "Elsbeth McQuillan",
     "path": "pages/characters/elsbeth-mcquillan.html",
     "category": "Characters",
-    "summary": "Drive boss on Kajval extraction; Diligent Engine campaign specialist",
+    "summary": "Commander of tank Hell Welcomes Careful Drivers; Kajval dropship extraction",
     "keywords": [
       "elsbeth",
       "mcquillan",
@@ -319,28 +369,33 @@
       "drive",
       "dropship",
       "kingsnest",
-      "hoa quinzu"
+      "hoa quinzu",
+      "hell welcomes",
+      "tank",
+      "saberstones"
     ]
   },
   {
     "title": "Dejean",
     "path": "pages/characters/dejean.html",
     "category": "Characters",
-    "summary": "Captain of arkship Diligent; ship command through campaigns",
+    "summary": "Dejean (~59); Diligent captain; Gath refit era; triggers ZPZ for Dolod escape",
     "keywords": [
       "dejean",
       "captain",
       "diligent",
       "arkship",
       "crew",
-      "command"
+      "command",
+      "zpz",
+      "capo frois"
     ]
   },
   {
     "title": "Bekket",
     "path": "pages/characters/bekket.html",
     "category": "Characters",
-    "summary": "Thyra’s father; Oneshot; master of court under Helena-Thyra",
+    "summary": "Bekket Oneshot of Uixic; Thyra’s father; Guillrameo; master of court under Helena-Thyra",
     "keywords": [
       "bekket",
       "oneshot",
@@ -348,7 +403,11 @@
       "wynid",
       "court",
       "helena",
-      "father"
+      "father",
+      "uixic",
+      "guillrameo",
+      "iuntin",
+      "dagon"
     ]
   },
   {
