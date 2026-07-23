@@ -1,51 +1,83 @@
 # Book Wikis
 
-Personal collection of full-spoiler reading-companion wikis (plain HTML).
+Personal **full-spoiler** reading companions for novels — plain multi-page HTML wikis you can browse on desktop or add to an iPhone home screen.
 
-> **Public site:** This repository is public. Wikis contain **full spoilers**.
+> **Spoiler warning:** This repository and the live site are **public**. Articles assume you have finished the book.
 
 ## Live site
 
-**https://mortenbrudvik.github.io/my-books/**
+**[Open Book Wikis →](https://mortenbrudvik.github.io/my-books/)**
 
-### Install on iPhone (Add to Home Screen)
+| | |
+|---|---|
+| Hub | https://mortenbrudvik.github.io/my-books/ |
+| Repository | https://github.com/mortenbrudvik/my-books |
+| Hosting | GitHub Pages (deployed from `main`) |
 
-1. Open the live site in **Safari** (not an in-app browser).
-2. Tap the **Share** button.
+### Install on iPhone
+
+Use **Safari** (not an in-app browser):
+
+1. Open the [live site](https://mortenbrudvik.github.io/my-books/).
+2. Tap **Share**.
 3. Tap **Add to Home Screen**.
-4. Confirm the name **Book Wikis**.
+4. Keep the name **Book Wikis** and add it.
 
-The home-screen icon opens the collection hub. Book wikis open from hub cards and keep working as multi-page sites.
+The home-screen icon opens the collection hub in a standalone window. From there you can open each book wiki. Content needs network access (no offline full-wiki cache).
 
-## Open locally
+## What’s inside
 
-From this directory (`books/`):
+A small **hub** lists available book wikis. Each book is a self-contained plain-HTML wiki (sidebar nav, articles, client-side search).
+
+| Wiki | Book | Folder |
+|------|------|--------|
+| [Exodus Wiki](https://mortenbrudvik.github.io/my-books/exodus-the-archimedes-engine/) | *Exodus: The Archimedes Engine* (Peter F. Hamilton, 2024) | [`exodus-the-archimedes-engine/`](exodus-the-archimedes-engine/) |
+
+Categories in a typical book wiki: characters, locations, factions, technology, timeline, plot, chapters.
+
+## Project layout
+
+```text
+.
+├── index.html                 # Collection hub
+├── manifest.webmanifest       # Home-screen install metadata
+├── assets/
+│   ├── css/hub.css            # Hub styles
+│   └── icons/                 # App icons
+├── exodus-the-archimedes-engine/   # Example book wiki
+└── .github/workflows/pages.yml     # GitHub Pages deploy
+```
+
+Hub files are independent of each book’s CSS/JS. Book wikis link back to the hub via **All book wikis** in the sidebar.
+
+## Run locally
 
 ```bash
+# from the repository root
 python -m http.server 8080
 ```
 
-Then open http://localhost:8080/
+Open http://localhost:8080/
 
-Install/manifest behavior is best verified on the HTTPS Pages URL.
+Home-screen install works best on the HTTPS Pages URL.
 
-## Book wikis
+### Book wiki notes
 
-| Wiki | Folder |
-|------|--------|
-| Exodus: The Archimedes Engine | [`exodus-the-archimedes-engine/`](exodus-the-archimedes-engine/) |
+For page templates, search index, and conventions inside a book folder, see that wiki’s own README (e.g. [`exodus-the-archimedes-engine/README.md`](exodus-the-archimedes-engine/README.md)).
 
-For in-wiki page authoring (templates, search index), see that folder’s README.
+## Add another book wiki
 
-## Add a book wiki
+1. Create a kebab-case folder with its own `index.html` and assets.
+2. Copy a card block in the root `index.html` (title, author, year, blurb, spoiler note, links).
+3. Add an **All book wikis** sidebar link to the collection root (`../index.html` from the wiki root; deeper pages need more `../`).
 
-1. Create a new folder (kebab-case slug), with its own `index.html` and assets.
-2. Copy a card block in the root `index.html`, fill title / author / year / blurb / spoiler / links.
-3. In that wiki’s sidebar chrome, add **All book wikis** pointing at the collection root `index.html` with a depth-correct relative path (`../index.html` from the wiki root).
+## Tech
 
-## Hub files
+- Static HTML + CSS + light JS (no build step, no framework)
+- Installable hub via web app manifest + Apple meta tags (**not** a full offline PWA — no service worker)
+- Mobile-friendly layout (responsive hub; overlay nav on book wikis)
+- Relative links only (works under `https://…github.io/my-books/`)
 
-- `index.html` — catalog landing page (PWA/Apple meta)
-- `manifest.webmanifest` — home-screen install metadata
-- `assets/css/hub.css` — hub-only styles
-- `assets/icons/` — app icons
+## License / use
+
+Personal reading companion. Content is encyclopedic own-words summary material for private study; treat spoilers and public visibility accordingly.
