@@ -169,9 +169,33 @@
     var btn = document.querySelector(".menu-toggle");
     var sidebar = document.getElementById("site-sidebar");
     if (!btn || !sidebar) return;
-    btn.addEventListener("click", function () {
-      var open = sidebar.classList.toggle("is-open");
+
+    var backdrop = document.querySelector(".sidebar-backdrop");
+    if (!backdrop) {
+      backdrop = document.createElement("div");
+      backdrop.className = "sidebar-backdrop";
+      backdrop.hidden = true;
+      document.body.appendChild(backdrop);
+    }
+
+    function setOpen(open) {
+      sidebar.classList.toggle("is-open", open);
+      backdrop.classList.toggle("is-open", open);
+      backdrop.hidden = !open;
+      document.body.classList.toggle("nav-open", open);
       btn.setAttribute("aria-expanded", open ? "true" : "false");
+    }
+
+    btn.addEventListener("click", function () {
+      setOpen(!sidebar.classList.contains("is-open"));
+    });
+
+    backdrop.addEventListener("click", function () {
+      setOpen(false);
+    });
+
+    document.addEventListener("keydown", function (e) {
+      if (e.key === "Escape") setOpen(false);
     });
   }
 

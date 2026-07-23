@@ -2,7 +2,22 @@
 
 Personal collection of full-spoiler reading-companion wikis (plain HTML).
 
-## Open the hub
+> **Public site:** This repository is public. Wikis contain **full spoilers**.
+
+## Live site
+
+**https://mortenbrudvik.github.io/my-books/**
+
+### Install on iPhone (Add to Home Screen)
+
+1. Open the live site in **Safari** (not an in-app browser).
+2. Tap the **Share** button.
+3. Tap **Add to Home Screen**.
+4. Confirm the name **Book Wikis**.
+
+The home-screen icon opens the collection hub. Book wikis open from hub cards and keep working as multi-page sites.
+
+## Open locally
 
 From this directory (`books/`):
 
@@ -12,7 +27,7 @@ python -m http.server 8080
 
 Then open http://localhost:8080/
 
-The hub is `index.html`. Each subdirectory is an independent book wiki.
+Install/manifest behavior is best verified on the HTTPS Pages URL.
 
 ## Book wikis
 
@@ -30,5 +45,7 @@ For in-wiki page authoring (templates, search index), see that folder’s README
 
 ## Hub files
 
-- `index.html` — catalog landing page
-- `assets/css/hub.css` — hub-only styles (not shared with book wikis)
+- `index.html` — catalog landing page (PWA/Apple meta)
+- `manifest.webmanifest` — home-screen install metadata
+- `assets/css/hub.css` — hub-only styles
+- `assets/icons/` — app icons

@@ -30,10 +30,13 @@ html {
 body {
   margin: 0;
   min-height: 100vh;
+  min-height: 100dvh;
   font-family: var(--hub-font);
   color: var(--hub-text);
   background: var(--hub-bg);
   line-height: 1.55;
+  padding-left: env(safe-area-inset-left, 0);
+  padding-right: env(safe-area-inset-right, 0);
 }
 
 a {
@@ -53,6 +56,7 @@ a:focus-visible {
   display: flex;
   align-items: center;
   padding: 1rem 1.25rem;
+  padding-top: calc(1rem + env(safe-area-inset-top, 0px));
   background: var(--hub-surface);
   border-bottom: 1px solid var(--hub-border);
   position: sticky;
@@ -80,6 +84,7 @@ a:focus-visible {
   max-width: var(--hub-content-max);
   margin: 0 auto;
   padding: 2rem 1.25rem 3rem;
+  padding-bottom: calc(3rem + env(safe-area-inset-bottom, 0px));
 }
 
 .intro {
@@ -125,6 +130,7 @@ a:focus-visible {
   display: flex;
   flex-direction: column;
   gap: 0.75rem;
+  min-width: 0;
   padding: 1.25rem 1.35rem;
   background: var(--hub-surface);
   border: 1px solid var(--hub-border);
@@ -187,11 +193,14 @@ a:focus-visible {
 }
 
 .book-card__cta {
-  display: inline-block;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
   align-self: flex-start;
   margin-top: 0.25rem;
-  padding: 0.45rem 0.9rem;
-  font-size: 0.9rem;
+  min-height: 2.75rem;
+  padding: 0.55rem 1rem;
+  font-size: 0.95rem;
   font-weight: 600;
   color: var(--hub-bg);
   background: var(--hub-accent);
@@ -212,10 +221,18 @@ a:focus-visible {
   max-width: var(--hub-content-max);
   margin: 0 auto;
   padding: 0 1.25rem 2rem;
+  padding-bottom: calc(2rem + env(safe-area-inset-bottom, 0px));
   font-size: 0.875rem;
   color: var(--hub-muted);
 }
 
 .site-footer p {
   margin: 0;
+}
+
+img,
+svg,
+video {
+  max-width: 100%;
+  height: auto;
 }
