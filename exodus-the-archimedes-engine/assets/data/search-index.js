@@ -1053,6 +1053,73 @@ window.WIKI_SEARCH_INDEX = [
     ]
   },
   {
+    "title": "Gyvoy Enfoe",
+    "path": "pages/characters/gyvoy-enfoe.html",
+    "category": "Characters",
+    "summary": "Diligent’s broker and imposture shell; ZPZ trade; steers Dolod; forced interface on Finn",
+    "keywords": [
+      "gyvoy",
+      "enfoe",
+      "imposture",
+      "shell",
+      "celestial operator",
+      "broker",
+      "financier",
+      "zpz",
+      "dolod",
+      "archimedes engine",
+      "induction pad",
+      "mind wipe",
+      "rekaul",
+      "dagon",
+      "gondiar"
+    ]
+  },
+  {
+    "title": "Marcellu",
+    "path": "pages/characters/marcellu.html",
+    "category": "Characters",
+    "summary": "Traveler middleman for Sahdiah; ZPZ interdiction; killed by Liliana’s cherenkov blade",
+    "keywords": [
+      "marcellu",
+      "traveler",
+      "middleman",
+      "fixer",
+      "sahdiah",
+      "zpz",
+      "andino",
+      "medusa",
+      "liliana",
+      "cherenkov",
+      "pana-seak",
+      "anoosha",
+      "talloch-te"
+    ]
+  },
+  {
+    "title": "Toše",
+    "path": "pages/characters/tose.html",
+    "category": "Characters",
+    "summary": "Mercenary assassin; snipes Makaio-Faraji; Gondiar capsule bomb; guards Josias with Liliana",
+    "keywords": [
+      "tose",
+      "toše",
+      "mercenary",
+      "assassin",
+      "sniper",
+      "gyvoy",
+      "liliana",
+      "makaio",
+      "makaio-faraji",
+      "lucia",
+      "bomb",
+      "gansvoort",
+      "josias",
+      "gondiar",
+      "terrik papuan"
+    ]
+  },
+  {
     "title": "Dominions roster",
     "path": "pages/factions/dominions-roster.html",
     "category": "Factions",

@@ -131,8 +131,8 @@ const celestials = [
       {
         h2: "Gondiar, loyalty tests, and death",
         paras: [
-          `Makaio-Faraji uses Terence as a human instrument: Wynid loyalty-test invitation during Thyra’s first combat trial; later meetings on the <em>Alumata</em>; suspicion that Gyvoy/Bopbe networks may touch Mara Yama interests. Under hardline <a href="thyra.html">Helena-Thyra</a>, Uulana-Shoigu fires him from Wynid oversight and winds down his Gondiar task force.`,
-          `Toše snipes him at the Governor’s mansion. Dying, he neurally transfers an aspect of himself into Terence — the <strong>Makaio-Spirit</strong> — which activates protocols with Neusch and drives the late Gyvoy / Diligent / Dolod manhunt.`,
+          `Makaio-Faraji uses Terence as a human instrument: Wynid loyalty-test invitation during Thyra’s first combat trial; later meetings on the <em>Alumata</em>; suspicion that <a href="gyvoy-enfoe.html">Gyvoy</a>/Bopbe networks may touch Mara Yama interests. Under hardline <a href="thyra.html">Helena-Thyra</a>, Uulana-Shoigu fires him from Wynid oversight and winds down his Gondiar task force.`,
+          `<a href="tose.html">Toše</a> snipes him at the Governor’s mansion. Dying, he neurally transfers an aspect of himself into Terence — the <strong>Makaio-Spirit</strong> — which activates protocols with Neusch and drives the late Gyvoy / Diligent / Dolod manhunt.`,
         ],
       },
     ],
@@ -152,7 +152,7 @@ const celestials = [
       ["Role", "Archon of the Talloch-Te (nomad trader dominion)"],
       ["Affiliation", "<a href=\"../factions/celestials.html\">Celestials</a> (Talloch-Te)"],
       ["Crown alignment", "Verak / <a href=\"carolien-amaia.html\">Carolien-Amaia</a> orbit (helium &amp; shipbuilding)"],
-      ["Assets", "Marcellu; <a href=\"medusa.html\">Medusa</a>; tasking via <a href=\"andino.html\">Andino</a>"],
+      ["Assets", "<a href=\"marcellu.html\">Marcellu</a>; <a href=\"medusa.html\">Medusa</a>; tasking via <a href=\"andino.html\">Andino</a>"],
       ["Agenda", "Suppress ZPZ “random factors”; investigate Marcellu’s murder; Dolod endgame"],
     ],
     lead: `<strong>Sahdiah</strong> is the Talloch-Te archon who uses Traveler logistics as deniable sensors — ordering interference against the <a href="../locations/arkship-diligent.html"><em>Diligent</em></a>’s ZPZ bid, tasking <a href="medusa.html">Medusa</a> after Marcellu’s death, and burning for <a href="../locations/dolod.html">Dolod</a> when Terence’s warning reaches him.`,
@@ -166,7 +166,7 @@ const celestials = [
       {
         h2: "ZPZ denial and Marcellu",
         paras: [
-          `Sahdiah asks Marcellu (with Andino on <em>Arcadia’s Moon</em>) to prevent the Diligent from acquiring a ZPZ generator. After <a href="liliana.html">Liliana</a> kills Marcellu with a cherenkov blade, Sahdiah summons Medusa, suspects <a href="olomo.html">Olomo</a>, and sets her to investigate.`,
+          `Sahdiah asks <a href="marcellu.html">Marcellu</a> (with Andino on <em>Arcadia’s Moon</em>) to prevent the Diligent from acquiring a ZPZ generator. After <a href="liliana.html">Liliana</a> kills Marcellu with a cherenkov blade, Sahdiah summons Medusa, suspects <a href="olomo.html">Olomo</a>, and sets her to investigate.`,
         ],
       },
       {
@@ -179,6 +179,7 @@ const celestials = [
     seeAlso: [
       '<a href="olomo.html">Olomo</a>',
       '<a href="medusa.html">Medusa</a>',
+      '<a href="marcellu.html">Marcellu</a>',
       '<a href="andino.html">Andino</a>',
       '<a href="asahi-iryna.html">Asahi-Iryna</a>',
     ],
@@ -514,12 +515,12 @@ const celestials = [
     h1: "Dagon",
     infobox: [
       ["Nature", "Celestial-grade operator; offworld contact / imposture network"],
-      ["Covers", "Linked to Gyvoy Enfoe imposture"],
+      ["Covers", "Operates the <a href=\"gyvoy-enfoe.html\">Gyvoy Enfoe</a> imposture"],
       ["Family reveal", "Thyra’s uncle (endgame recaps)"],
       ["Affiliation", "<a href=\"bekket.html\">Bekket</a> / Guillrameo extended network"],
       ["Human investigation", "Terence ordered not to pursue; later core manhunt target"],
     ],
-    lead: `<strong>Dagon</strong> is the offworld Celestial-linked operator who enters Santa Rosa gang networks as Gyvoy’s contact, ties into the Gyvoy imposture that steers the Engine plot, and is revealed as <a href="thyra.html">Thyra</a>’s uncle.`,
+    lead: `<strong>Dagon</strong> is the offworld Celestial-linked operator who enters Santa Rosa gang networks as <a href="gyvoy-enfoe.html">Gyvoy Enfoe</a>’s contact, operates the Gyvoy imposture that steers the Engine plot, and is revealed as <a href="thyra.html">Thyra</a>’s uncle.`,
     sections: [
       {
         h2: "Crime-network entry point",
@@ -530,11 +531,12 @@ const celestials = [
       {
         h2: "Imposture and Dolod",
         paras: [
-          `Late investigation finds Gyvoy’s body as a discarded shell. Ellie recovers forced induction-pad memories. Endgame recaps: Dagon is Thyra’s uncle, binding Engine manipulation to Bekket’s dynasty war.`,
+          `Late investigation finds <a href="gyvoy-enfoe.html">Gyvoy</a>’s body as a discarded shell. Ellie recovers forced induction-pad memories. Endgame recaps: Dagon is Thyra’s uncle, binding Engine manipulation to Bekket’s dynasty war.`,
         ],
       },
     ],
     seeAlso: [
+      '<a href="gyvoy-enfoe.html">Gyvoy Enfoe</a>',
       '<a href="thyra.html">Thyra</a>',
       '<a href="bekket.html">Bekket</a>',
       '<a href="terence-wilson-fletcher.html">Terence Wilson-Fletcher</a>',

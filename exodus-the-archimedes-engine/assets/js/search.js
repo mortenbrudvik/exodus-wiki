@@ -1,19 +1,25 @@
 (function (window, document) {
   "use strict";
 
+  // Fold diacritics so ASCII typing finds accented names ("tose" → "Toše").
+  function fold(s) {
+    s = String(s || "").toLowerCase();
+    return s.normalize ? s.normalize("NFD").replace(/[\u0300-\u036f]/g, "") : s;
+  }
+
   function normalizeQuery(q) {
-    return String(q || "").trim().toLowerCase();
+    return fold(String(q || "").trim());
   }
 
   function scoreEntry(entry, q) {
     if (!q) return 0;
     var score = 0;
-    var title = String(entry.title || "").toLowerCase();
-    var summary = String(entry.summary || "").toLowerCase();
+    var title = fold(entry.title);
+    var summary = fold(entry.summary);
     var keywords = Array.isArray(entry.keywords) ? entry.keywords : [];
     if (title.indexOf(q) !== -1) score += 100;
     for (var i = 0; i < keywords.length; i++) {
-      if (String(keywords[i]).toLowerCase().indexOf(q) !== -1) {
+      if (fold(keywords[i]).indexOf(q) !== -1) {
         score += 40;
         break;
       }

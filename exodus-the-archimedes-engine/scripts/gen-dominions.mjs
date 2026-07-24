@@ -132,7 +132,7 @@ const dominions = [
         h2: "Dolod, Elohim science, and the endgame",
         paras: [
           `Olomo’s research teams gain access to HeSea studies and long-range flights around the Pillar of Zeus. They identify Dolod’s track, its iron-exotic composition, and its Archimedes Engine course change seven thousand years ago toward Kelowan. Dumping that intelligence on Wynid is classic peer-dominion statecraft: force a Crown crisis without Heresy fingerprints on any Engine sabotage.`,
-          `Late plot: Olomo spies on Kelowan naval exercises, receives Terence/Makaio-Spirit’s Gyvoy warning, intercepts toward the Diligent, quarrels with <a href="../characters/sahdiah.html">Sahdiah</a>, then tracks the arkship’s Capo Frois escape while hardline Crown forces treat foreign archons as problems to be chased.`,
+          `Late plot: Olomo spies on Kelowan naval exercises, receives Terence/Makaio-Spirit’s <a href="../characters/gyvoy-enfoe.html">Gyvoy</a> warning, intercepts toward the Diligent, quarrels with <a href="../characters/sahdiah.html">Sahdiah</a>, then tracks the arkship’s Capo Frois escape while hardline Crown forces treat foreign archons as problems to be chased.`,
         ],
       },
     ],
@@ -173,7 +173,7 @@ const dominions = [
       {
         h2: "Traveler deniability and Dolod",
         paras: [
-          `Sahdiah tasks Marcellu and Andino to stop the <em>Diligent</em> from acquiring a ZPZ generator; after Marcellu’s murder he tasks <a href="../characters/medusa.html">Medusa</a> and later races Dolod when warned of Gyvoy imposture. Talloch-Te power in the novel is felt through archon errands and Traveler logistics more than through open fleet battles at Kelowan.`,
+          `Sahdiah tasks <a href="../characters/marcellu.html">Marcellu</a> and Andino to stop the <em>Diligent</em> from acquiring a ZPZ generator; after Marcellu’s murder he tasks <a href="../characters/medusa.html">Medusa</a> and later races Dolod when warned of Gyvoy imposture. Talloch-Te power in the novel is felt through archon errands and Traveler logistics more than through open fleet battles at Kelowan.`,
         ],
       },
     ],
