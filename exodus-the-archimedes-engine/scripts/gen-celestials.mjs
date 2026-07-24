@@ -108,7 +108,7 @@ const celestials = [
       ["Role", "Archon / spymaster of Queen <a href=\"helena-chione.html\">Helena-Chione</a> of Wynid"],
       ["Brief", "Kelowan-system intelligence; later Wynid oversight until hardline purge"],
       ["Affiliation", "<a href=\"../factions/celestials.html\">Imperial Celestials</a>; Wynid / Crown Dominion"],
-      ["Ship (excerpt)", "<em>Alumata</em>"],
+      ["Ship (excerpt)", "<em><a href=\"../locations/alumata.html\">Alumata</a></em>"],
       ["Successor hosts", "Faraji (selected son); residual Makaio-Spirit in <a href=\"terence-wilson-fletcher.html\">Terence</a>"],
       ["Son / ally", "Neusch (neural gifts; continues investigation)"],
     ],
@@ -131,7 +131,7 @@ const celestials = [
       {
         h2: "Gondiar, loyalty tests, and death",
         paras: [
-          `Makaio-Faraji uses Terence as a human instrument: Wynid loyalty-test invitation during Thyra’s first combat trial; later meetings on the <em>Alumata</em>; suspicion that <a href="gyvoy-enfoe.html">Gyvoy</a>/Bopbe networks may touch Mara Yama interests. Under hardline <a href="thyra.html">Helena-Thyra</a>, Uulana-Shoigu fires him from Wynid oversight and winds down his Gondiar task force.`,
+          `Makaio-Faraji uses Terence as a human instrument: Wynid loyalty-test invitation during Thyra’s first combat trial; later meetings on the <em><a href="../locations/alumata.html">Alumata</a></em>; suspicion that <a href="gyvoy-enfoe.html">Gyvoy</a>/Bopbe networks may touch Mara Yama interests. Under hardline <a href="thyra.html">Helena-Thyra</a>, Uulana-Shoigu fires him from Wynid oversight and winds down his Gondiar task force.`,
           `<a href="tose.html">Toše</a> snipes him at the Governor’s mansion. Dying, he neurally transfers an aspect of himself into Terence — the <strong>Makaio-Spirit</strong> — which activates protocols with Neusch and drives the late Gyvoy / Diligent / Dolod manhunt.`,
         ],
       },
@@ -166,7 +166,7 @@ const celestials = [
       {
         h2: "ZPZ denial and Marcellu",
         paras: [
-          `Sahdiah asks <a href="marcellu.html">Marcellu</a> (with Andino on <em>Arcadia’s Moon</em>) to prevent the Diligent from acquiring a ZPZ generator. After <a href="liliana.html">Liliana</a> kills Marcellu with a cherenkov blade, Sahdiah summons Medusa, suspects <a href="olomo.html">Olomo</a>, and sets her to investigate.`,
+          `Sahdiah asks <a href="marcellu.html">Marcellu</a> (with Andino on the <em><a href="../locations/arcadias-moon.html">Arcadia’s Moon</a></em>) to prevent the Diligent from acquiring a ZPZ generator. After <a href="liliana.html">Liliana</a> kills Marcellu with a cherenkov blade, Sahdiah summons Medusa, suspects <a href="olomo.html">Olomo</a>, and sets her to investigate.`,
         ],
       },
       {

@@ -548,6 +548,105 @@ window.WIKI_SEARCH_INDEX = [
     ]
   },
   {
+    "title": "Arcadia’s Moon",
+    "path": "pages/locations/arcadias-moon.html",
+    "category": "Locations",
+    "summary": "Andino’s Traveler starship; carries Medusa and Josias; flies as Infinite Totality; Capo Frois endgame",
+    "keywords": [
+      "arcadia",
+      "arcadia's moon",
+      "arcadias moon",
+      "andino",
+      "traveler",
+      "ship",
+      "starship",
+      "infinite totality",
+      "medusa",
+      "marcellu",
+      "sahdiah",
+      "capo frois",
+      "antimatter",
+      "terrik papuan"
+    ]
+  },
+  {
+    "title": "Cybele’s Eagle",
+    "path": "pages/locations/cybeles-eagle.html",
+    "category": "Locations",
+    "summary": "Deniable hull off Gondiar under lockdown; Liliana escapes aboard; key to Terence’s facial match",
+    "keywords": [
+      "cybele",
+      "cybele's eagle",
+      "cybeles eagle",
+      "ship",
+      "hull",
+      "liliana",
+      "gondiar",
+      "lockdown",
+      "disguise",
+      "terence",
+      "facial match",
+      "tose",
+      "toše"
+    ]
+  },
+  {
+    "title": "Alumata",
+    "path": "pages/locations/alumata.html",
+    "category": "Locations",
+    "summary": "Makaio-Faraji’s archon ship; meeting ground with Terence; yardstick for Heresy hull scale",
+    "keywords": [
+      "alumata",
+      "makaio",
+      "makaio-faraji",
+      "archon",
+      "ship",
+      "terence",
+      "olomo",
+      "heresy",
+      "wynid",
+      "spymaster"
+    ]
+  },
+  {
+    "title": "Lestari",
+    "path": "pages/locations/lestari.html",
+    "category": "Locations",
+    "summary": "Enfoe dynasty ship under Uzoma Enfoe; carries Finn and Ellie on the ZPZ salvage run",
+    "keywords": [
+      "lestari",
+      "enfoe",
+      "uzoma",
+      "uzoma enfoe",
+      "ship",
+      "zpz",
+      "terrik papuan",
+      "finn",
+      "ellie",
+      "salvage",
+      "ghost fleet",
+      "arcadia's moon"
+    ]
+  },
+  {
+    "title": "Polkadav",
+    "path": "pages/locations/polkadav.html",
+    "category": "Locations",
+    "summary": "Hull that evacuates the Jalgori-Tobus from Gondiar to rendezvous with the Diligent",
+    "keywords": [
+      "polkadav",
+      "ship",
+      "evacuation",
+      "zelinda",
+      "otylia",
+      "jalgori-tobu",
+      "gondiar",
+      "diligent",
+      "rendezvous",
+      "airstrike"
+    ]
+  },
+  {
     "title": "Crown Dominion",
     "path": "pages/factions/crown-dominion.html",
     "category": "Factions",
