@@ -87,6 +87,7 @@ a:visited {
 
 .search-input {
   flex: 1;
+  min-width: 0;
   padding: 0.45rem 0.6rem;
   border: 1px solid var(--border);
   border-radius: 0.35rem;
@@ -326,7 +327,7 @@ a:visited {
 
 @media (max-width: 960px) {
   .article {
-    grid-template-columns: 1fr;
+    grid-template-columns: minmax(0, 1fr);
   }
 
   .article > .infobox {
@@ -384,7 +385,7 @@ a:visited {
   }
 
   .layout {
-    grid-template-columns: 1fr;
+    grid-template-columns: minmax(0, 1fr);
   }
 
   .sidebar {
