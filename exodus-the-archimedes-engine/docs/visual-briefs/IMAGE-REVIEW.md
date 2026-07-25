@@ -52,6 +52,18 @@ plus the prior hangar plate (ship/environment). Foreground hexapod shows **exact
 two legs**; research warship remains in cool blue dock light behind. No caption bars, logos, or
 invented labels. **PASS.**
 
+**Verified by eye, independently of the regen note:** arms counted at four, legs at two, expanded
+skull with the blue tracery, cool pallor — all matching `heresy-dominion.html`. Worth counting
+rather than trusting a prompt, since Olomo shipped with six arms and then five before landing on
+four.
+
+One consequence of chaining, recorded rather than treated as a defect: the faction plate is
+*recognisably Olomo* — same figure, same pose, same stylus, card and tablet — composited into the
+hangar. Clade-accurate, and defensible since the wiki says the Heresy is *"represented chiefly by
+archon Olomo"*. But `factions/heresy-dominion.html` and `characters/olomo.html` now carry
+near-identical figures, which reads as a duplicate to anyone visiting both. A wider or differently
+posed Heresy figure would separate the clade plate from the character portrait.
+
 ### PASS — with observations
 
 | Image | Verdict |
