@@ -20,7 +20,7 @@ Research inventory of public sources useful for this wiki. Compiled **25 July 20
 | The novel itself | Plot, names, relationships, tech, locations | Sole authority. Long quotations avoided on the wiki. |
 | In-book “Timeline of the Centauri Cluster” | Macro history (Exodus era → Elohim → Crown Dominion → Present era) | Printed in the novel’s **front matter**, not an appendix. Public transcriptions exist (see §3) as convenience indexes only. Note the Wikipedia article does not mention it, so the transcription thread and reader reviews are the only public evidence — confirm against a physical copy before treating any transcribed year as book-sourced. |
 | Audiobook (John Lee) | Same text, different medium | Simultaneous release with print/ebook. |
-| [Google Books publisher preview](https://books.google.com/books?id=T01PEQAAQBAJ) (Random House ebook, volume `T01PEQAAQBAJ`) | **Checking a single word or phrase against the book’s own text** | The authorized preview answers in-book searches with real page-numbered snippets — the cheapest legitimate route to primary text when you do not have the book open. Append `&q=<term>`. Two cautions: the Books **API** returns HTTP 429 once its daily quota is gone while the volume viewer still works, and the index throws **false negatives** (`the`, `wing` and exact phrases visible on a returned page can all come back empty), so absence of a hit is never evidence of absence. |
+| [Google Books publisher preview](https://books.google.com/books?id=T01PEQAAQBAJ) (Random House ebook, volume `T01PEQAAQBAJ`) | **Checking a single word or phrase against the book’s own text** | The authorized preview answers in-book searches with real page-numbered snippets — the cheapest legitimate route to primary text when you do not have the book open. Append `&q=<term>`; the snippets live in a `search_results` JSON blob in the page source, not in the rendered HTML, so fetch the raw page rather than relying on a reader-mode tool. **It is rate-limited, and it fails silently** — no error, no 429, just an empty result set. Measured 25 July 2026: the identical URL returned its seven snippets twice, then returned nothing for roughly ten consecutive requests, then recovered after about 150 seconds of no traffic. (The Books *API* is separate and does return a plain HTTP 429 on quota.) A miss therefore means nothing. Space requests out, and retry before concluding a term is absent. |
 
 **Rule:** if a web recap and the book disagree, the book wins.
 
@@ -278,6 +278,10 @@ HTTP 200 (following redirects, browser user-agent).
 | Wikipedia: maintenance tags present | confirmed (`non-primary source needed`, `better source needed`) |
 | Wikipedia: novel called “a narrative prequel” to the game | confirmed; it does **not** say before or after |
 | thisguise recap dates are reverse-engineered from dialogue, not the book’s timeline | confirmed, quoted in §3.1 |
+| thisguise spelling drift | only `Dilligent` confirmed |
+| Expanded Universe: TTRPG titles, free character sheet, *Secret Level* “EXODUS: Odyssey” | confirmed |
+| PRH: publisher, 17 Sep 2024, 928 pages | confirmed |
+| Wikipedia roster vs this wiki’s Characters hub | all 30 covered; 40 pages here |
 
 **25 July 2026 — “nightweid”, checked against the book’s own text.** The wiki used the term three
 times as an unglossed hazard. An in-book search of the authorized Google Books preview (§1) returns
@@ -311,13 +315,11 @@ Rejected, and worth recording so it is not re-proposed:
   (p. 598, “The nightweid will catch up with us…”), which is also this wiki’s existing house style.
 - **“Swarms of several thousand.”** Fan-sourced only; not confirmed in any returned snippet.
 
-**Do not read a zero result as absence.** This index is unreliable in one direction only: it returned
-nothing for `leathery wings` and `hairless gray skin` on repeated attempts despite both being on p. 589,
-which it had just returned. Hits are trustworthy; misses are not. Retry before concluding anything.
-| thisguise spelling drift | only `Dilligent` confirmed |
-| Expanded Universe: TTRPG titles, free character sheet, *Secret Level* “EXODUS: Odyssey” | confirmed |
-| PRH: publisher, 17 Sep 2024, 928 pages | confirmed |
-| Wikipedia roster vs this wiki’s Characters hub | all 30 covered; 40 pages here |
+**Do not read a zero result as absence.** Every query above was re-run and confirmed by hand. But the
+preview is rate-limited and fails silently (§1): the same `nightweid` URL returned its seven snippets
+twice, then nothing at all for about ten requests, then recovered after roughly 150 seconds untouched.
+Hits are trustworthy; misses are not — which is exactly the trap an earlier draft of this entry fell
+into when it read a zero result for `avian` as proof the word was absent from the book.
 
 **Not verified — do not treat as fact:**
 
