@@ -3,7 +3,7 @@ window.WIKI_SEARCH_INDEX = [
     "title": "Main Page",
     "path": "index.html",
     "category": "Main",
-    "summary": "Reading companion for Exodus: The Helium Sea — structure in place, article coverage not yet written",
+    "summary": "Structure in place; article coverage not yet written",
     "keywords": [
       "home",
       "start",
