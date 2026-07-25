@@ -7,6 +7,8 @@
 
 **Status:** strategy only. This document does not run campaigns, change wiki product code, buy ads, or claim official endorsement. A human maintainer executes outreach by hand.
 
+**This file is public.** It is committed to a public repository and deployed with the site. It is written to be read by every community it names, and nothing in it should need to be private. Compiled 25 July 2026 — re-sequence whenever a date inside this file has passed.
+
 **Companion research:** in-repo franchise landscape is inventoried in [`exodus-the-archimedes-engine/docs/external-sources-research.md`](../exodus-the-archimedes-engine/docs/external-sources-research.md). Live product framing lives in the root [`README.md`](../README.md).
 
 ---
@@ -36,13 +38,15 @@ A hand-authored, **full-spoiler reading companion** for Peter F. Hamilton’s *E
 2. **Primary CTA** = hub URL `https://mortenbrudvik.github.io/exodus-wiki/` (deep links to a book index or a single article are optional *second* links).  
 3. **Novel scope** — “reading companion for the novel(s)”, not “the EXODUS game wiki.”  
 4. **Unofficial** — fan project / personal reading companion; not affiliated with Archetype, Wizards of the Coast, or the publishers.  
-5. If showing illustrations: **inferred, not canonical** (the novel fixes almost no likenesses).
+5. If showing illustrations: **inferred, not canonical** (the novel fixes almost no likenesses)
+   and **AI-generated to a written brief** — the briefs are in the repo under
+   `exodus-the-archimedes-engine/docs/visual-briefs/`.
 
 ### Taglines by segment (pick one)
 
 - **Readers post-book:** “Finished *Archimedes Engine*? Here’s a full-spoiler companion for the cast, Dominions, and endgame.”  
 - **Game-curious:** “Same universe as the EXODUS RPG — this wiki covers Hamilton’s **novels** only, not unreleased game lore.”  
-- **Hamilton fans:** “A plain-HTML, searchable companion for the *Exodus* duology — timeline, Celestials, arkships.”
+- **Hamilton fans:** “A plain-HTML, searchable companion for *Exodus: The Archimedes Engine* (book 1 of the duology) — timeline, Celestials, arkships.”
 
 ### Voice
 
@@ -70,7 +74,7 @@ At least three distinct audiences — different venues and different hooks. Do *
 |---|---|
 | **Who** | Fans of the Archetype Entertainment EXODUS RPG, *Secret Level* “EXODUS: Odyssey”, official socials, or game Fandom who also read (or might read) the novels. |
 | **Need** | Clear map of novel vs game chronology and vocabulary (Celestials, Travelers, Dominions) without being sold a game database this project does not maintain. |
-| **Where reachable** | [r/exodus](https://www.reddit.com/r/exodus/) (game-focused; book threads exist); official awareness channels for *context only* — [exodusgame.com Expanded Universe / News](https://www.exodusgame.com/en-US/expanded-universe), `@EXODUSGameOfficial` socials (do **not** spam brand accounts); official Discord when rules allow fan resources (`exodus.game/discord` / community invites as published by the studio); [Exodus Game Fandom](https://exodus-game.fandom.com/) talk/discussion if editors welcome cross-links to a novel companion. |
+| **Where reachable** | [r/exodus](https://www.reddit.com/r/exodus/) (game-focused; book threads exist); official awareness channels for *context only* — [exodusgame.com Expanded Universe / News](https://www.exodusgame.com/en-US/expanded-universe), `@EXODUSGameOfficial` socials (do **not** spam brand accounts); the official Discord, if one exists, when rules allow fan resources (find the current invite from exodusgame.com news or the official socials — do not trust a stale invite link); [Exodus Game Fandom](https://exodus-game.fandom.com/) talk/discussion if editors welcome cross-links to a novel companion. |
 | **Tactic** | Frame as **novel prequel/companion duology wiki**, explicitly **not** a replacement for game lore wikis or official Traveler’s Guide pages. Offer value on book-timeline and cast questions that game wikis leave thin. Never paste game-spoilers-as-novel-canon. |
 | **Avoid** | Claiming complete game coverage; arguing chronology wars in promotional posts (point to `pages/sources.html` framing if asked); hijacking trailer/hype threads with off-topic wiki links. |
 
@@ -81,7 +85,7 @@ At least three distinct audiences — different venues and different hooks. Do *
 | **Who** | Commonwealth / Void / Night’s Dawn readers who sample the *Exodus* books; general hard-SF and space-opera communities. |
 | **Need** | Trust that the companion is careful (sources page, no invented likeness-as-canon) and spoiler-safe to open only after the book. |
 | **Where reachable** | r/PeterFHamilton; r/printSF; r/Fantasy (rules-dependent; often hostile to self-promo); book Twitter/Bluesky under Hamilton or #SpaceOpera tags; library / book-club Discord servers the maintainer already belongs to. |
-| **Tactic** | Soft discovery: participate first; mention the wiki when someone asks for cast help or “is there a wiki?” One-off “resource I maintain” posts only where self-promo is allowed. Emphasize depth (40+ character pages, timeline, chapters) vs thin AI summary sites. |
+| **Tactic** | Soft discovery: participate first; mention the wiki when someone asks for cast help or “is there a wiki?” One-off “resource I maintain” posts only where self-promo is allowed. Emphasize depth: 40+ character pages, a timeline and chapter notes, all hand-written. |
 | **Avoid** | Comparing other authors’ wikis in a boastful way; mass cross-posting identical text. |
 
 ### Segment D — Secondary-source users (recap / Wikipedia pathfinders)
@@ -98,7 +102,14 @@ At least three distinct audiences — different venues and different hooks. Do *
 
 ## 3. Channel notes (grounded venues)
 
-Channels named below are real as of mid-2026 research (see also external-sources research doc and maintainer research notes). Re-check each community’s sidebar rules immediately before posting — norms change.
+**Corroborated** in [`external-sources-research.md`](../exodus-the-archimedes-engine/docs/external-sources-research.md)
+(checked 25 July 2026): r/PeterFHamilton, r/exodus, the Goodreads *Archimedes Engine* page,
+exodusgame.com, Exodus Game Fandom.
+
+**Not verified in-repo — confirm each exists and re-read its rules before use:** r/printSF, r/scifi,
+r/Fantasy, the official Discord, a Goodreads page for *Helium Sea*, and the review blogs below.
+
+Re-check each community’s sidebar rules immediately before posting — norms change.
 
 | Channel | Fit | Promo posture |
 |---|---|---|
@@ -119,43 +130,47 @@ Channels named below are real as of mid-2026 research (see also external-sources
 
 ## 4. Prioritized action list
 
-### Near-term (week 0–2) — zero budget, high fit
+### Near-term (from week of 27 July 2026) — zero budget, high fit
 
 1. **Prepare assets (no code required)**  
    - Bookmark hub CTA + 2–3 deep links (book index, Characters, Timeline, Sources).  
    - Save pitch templates from §5 into a notes app.  
-   - One screenshot of the hub or a non-spoiler-looking ship illustration *only* with caption that art is inferred (prefer text-only posts first).
+   - One screenshot of the hub or a non-spoiler-looking ship illustration *only* with a caption saying the art is AI-generated and inferred (prefer text-only posts first, and check the community’s AI-image policy).
 
-2. **r/PeterFHamilton — soft launch**  
+2. **Helium Sea window — live now**  
+   - *Exodus: The Helium Sea* published 16 June 2026, so post-book-2 threads are already active. This is the largest attention window the project gets; do not save it for later.  
+   - Wherever the sequel comes up, post “companion covers *Archimedes Engine*; book 2 is not wikified yet.”  
+   - Never imply Helium Sea is covered until it is.
+
+3. **r/PeterFHamilton — soft launch**  
    - Read the latest Archimedes Engine / Helium Sea threads.  
    - Leave 2–3 substantive comments *without* links.  
    - When a natural “is there a timeline / cast list?” moment appears, reply with Template A.  
-   - If no natural moment within a week, one self-post using Template B (spoiler-tagged title).
+   - A self-post using Template B (spoiler-tagged title) only if the sub’s rules permit it and no natural moment has arisen. There is no deadline on this — participation is not a waiting period to be served before promoting.
 
-3. **r/exodus — franchise-aware note**  
+4. **r/exodus — franchise-aware note**  
    - One post or comment using Template C (novel-only scope explicit).  
    - Do not argue game vs book chronology in the promo itself.
 
-4. **Goodreads**  
+5. **Goodreads**  
    - If a Reader Q&A asks for summaries/wikis, answer with finished-book framing + hub URL.  
    - Do not flood recent reviews.
 
-5. **Owned surfaces**  
-   - Ensure GitHub repo README already carries the hub link and spoiler warning (it does).  
+6. **Owned surfaces**  
+   - Check the GitHub repo README still carries the hub link and spoiler warning.  
    - Optional: short “About this project” gist or profile README link for people who find the repo first.
 
 ### Near-term optional (same fortnight)
 
-6. **thisguise recap adjacency** — if the blog has comments or the author is reachable politely, thank them and mention the multi-page companion as complementary (not competitive).  
-7. **Fandom talk** — brief note on the novel book stub Talk page: independent full-spoiler *novel* wiki exists at hub URL; game wiki remains the game glossary.
+7. **thisguise recap adjacency** — if the blog has comments or the author is reachable politely, thank them and mention the multi-page companion as complementary (not competitive).  
+8. **Fandom talk** — brief note on the novel book stub Talk page: independent full-spoiler *novel* wiki exists at hub URL; game wiki remains the game glossary.
 
-### Later (month 1–3) — still free / human-scale
+### Later (roughly September–October 2026) — still free / human-scale
 
-8. **Helium Sea timing** — when the sequel ships (announced path: 16 June 2026 on official franchise news), post “companion for book 1; book 2 coverage planned/limited” updates in the same subs; never pretend Helium Sea is fully wikified until it is.  
-9. **r/scifi Self-Promotion Saturday** — one Template B-style post if energy remains.  
+9. **r/scifi Self-Promotion Saturday** — one Template B-style post if energy remains, and if that thread still runs.  
 10. **Review-site comments** — only on posts you actually read; one link.  
-11. **Discord** — join official EXODUS Discord; contribute; share wiki only in allowed channels with spoiler tags.  
-12. **Wikipedia** — improve the novel article with *independent reliable sources* if you can; **do not** use Wikipedia as an advertising billboard for the wiki. A single external link in “External links” may be proposed only if it meets Wikipedia’s external-link guideline and local consensus — expect pushback; drop it if contested.  
+11. **Discord** — join the official EXODUS Discord if one exists; contribute; share wiki only in allowed channels with spoiler tags.  
+12. **Wikipedia** — improve the novel article with *independent reliable sources* if you can; **do not** use Wikipedia as an advertising billboard for the wiki. You have a conflict of interest here: declare it on the Talk page, propose rather than add, and never insert the link yourself. A single external link in “External links” may be proposed only if it meets Wikipedia’s external-link guideline and local consensus — expect pushback; drop it if contested.  
 13. **Light SEO patience** — the site already has descriptions, sitemap, canonicals; do not treat SEO engineering as part of this marketing plan (product non-goal). Discovery via search is a long tail, not a campaign.
 
 ### Later / if appropriate (not committed)
@@ -230,7 +245,7 @@ Finish the book first; the articles assume you have. Unofficial fan project.
 
 ```text
 If you’ve finished the novel and want a spoiler-heavy reference (characters, timeline,
-factions), there’s an independent reading-companion wiki for the Exodus books here:
+factions), there’s an independent reading-companion wiki for *Exodus: The Archimedes Engine* here:
 https://mortenbrudvik.github.io/exodus-wiki/
 Not official, and not a game wiki — novels only. Skip it until you’re done with the book.
 ```
@@ -243,7 +258,8 @@ Full-spoiler novel companion (wiki-style): characters, timeline, plot, tech.
 https://mortenbrudvik.github.io/exodus-wiki/
 
 Unofficial. Novel scope only (not the full game bible).
-[If image] Art is inferred for the companion — not canonical character design.
+[If image] Art is AI-generated to a written brief, and inferred — not canonical
+character design.
 ```
 
 ### Template F — One-line reply when someone asks “is there a wiki?”
@@ -277,7 +293,8 @@ https://mortenbrudvik.github.io/exodus-wiki/
 | **Fake official status** | Always “independent / unofficial / fan reading companion.” No logos or wording that imply Archetype, Wizards, Random House, Tor, or Hamilton endorsement. |
 | **Community bans** | Read each sub’s rules and recent mod posts before posting; use designated promo threads; accept removal without brigade. |
 | **Scope overclaim** | Do not market as the definitive EXODUS **game** wiki. Novel companion only. |
-| **Illustrations** | If used in promo, state **inferred, not canonical**. No burned-in fake house names or dates in creatives. |
+| **Illustrations** | If used in promo, state **inferred, not canonical**. No burned-in fake house names or dates in creatives. Open the actual file and look before posting — shipped assets have previously carried invented captions and a real brand logo. |
+| **AI-generated art** | Every illustration is AI-generated to a written brief. Say so whenever an image is posted, and check the community’s AI-image policy first — several book communities ban AI art outright. Text-only if unsure. Never argue the point in a promo thread. |
 | **Secondary sources** | Don’t present thisguise, Wikipedia, or Fandom as this project’s content, or vice versa. |
 | **Harassment / review bombing** | Never astroturf ratings to “support” the wiki or the book. |
 | **Privacy** | Don’t scrape user lists or cold-DM readers en masse. |
@@ -307,7 +324,8 @@ If a single channel repeatedly removes posts, retire that channel rather than es
 - [ ] Says **novel** companion (not full game wiki)  
 - [ ] Unofficial / no fake endorsement  
 - [ ] No piracy links  
-- [ ] Art (if any) marked inferred  
+- [ ] Art (if any) marked **inferred** *and* **AI-generated**  
+- [ ] This community’s AI-image policy checked (text-only if unsure)  
 - [ ] Fits this community’s self-promo rules  
 - [ ] Contributed value beyond the bare link when in a discussion thread  
 
