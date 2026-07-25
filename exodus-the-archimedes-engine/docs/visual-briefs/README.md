@@ -56,5 +56,10 @@ well as the bottom.
 
 ## Image paths
 
-- Characters → `assets/images/characters/<slug>.jpg`
-- Ships → `assets/images/ships/<slug>.jpg`
+- Characters → `assets/images/characters/<slug>.jpg` (portrait 3:4)
+- Ships → `assets/images/ships/<slug>.jpg` (wide 16:9)
+- Places → `assets/images/locations/<slug>.jpg` (wide 16:9)
+- Technology → `assets/images/technology/<slug>.jpg` (wide 16:9)
+- Factions → `assets/images/factions/<slug>.jpg` (wide 16:9)
+
+Second-pass illustrated extras (not full category coverage): Gondiar, Kelowan, Dolod, Anoosha, Hafnir; Archimedes Engine, ZPZ, livestone, mindline; Celestials, Heresy Dominion, Travelers, Crown Dominion.

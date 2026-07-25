@@ -55,7 +55,7 @@ ${bodyMain}
 </html>
 `;
 
-function page({ title, h1, infobox, lead, sections, seeAlso }) {
+function page({ title, h1, infobox, lead, sections, seeAlso, image }) {
   const dl = infobox
     .map(([dt, dd]) => `            <dt>${dt}</dt>\n            <dd>${dd}</dd>`)
     .join("\n");
@@ -69,13 +69,19 @@ function page({ title, h1, infobox, lead, sections, seeAlso }) {
     )
     .join("\n");
   const see = seeAlso.map((a) => `            <li>${a}</li>`).join("\n");
+  const imgBlock = image
+    ? `          <div class="infobox-image infobox-image--wide">
+            <img src="../../assets/images/factions/${image}" alt="${h1}" width="640" height="360" loading="lazy">
+          </div>
+`
+    : "";
   const body = `      <article class="article">
         <header>
           <h1>${h1}</h1>
         </header>
         <aside class="infobox">
           <h2>${h1}</h2>
-          <dl>
+${imgBlock}          <dl>
 ${dl}
           </dl>
         </aside>
@@ -108,6 +114,7 @@ const dominions = [
     file: "heresy-dominion.html",
     title: "Heresy Dominion",
     h1: "Heresy Dominion",
+    image: "heresy-dominion.jpg",
     infobox: [
       ["Type", "Celestial dominion (peer of the Crown)"],
       ["Clade", "<a href=\"celestials.html\">Heresy Celestials</a> — tall hexapods (~3&nbsp;m; four arms, two legs)"],

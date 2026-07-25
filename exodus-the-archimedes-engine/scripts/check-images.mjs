@@ -1,10 +1,14 @@
 /**
- * Structural check: every individual character page and every ship-typed
- * location page has a research brief, a non-empty image file, and infobox
- * <img> markup pointing at that asset.
+ * Structural check: required illustrated subjects have research briefs,
+ * non-empty image files, and infobox <img> markup.
  *
- * Discovery is from the pages tree (not only index.json), so missing ships
- * cannot green-light by omission. Exit non-zero on failure.
+ * Discovery:
+ * - Every individual character page (not hubs)
+ * - Every ship-typed location page (hub Ships list + Type heuristics)
+ * - Every subject in docs/visual-briefs/index.json with kind
+ *   location | technology | faction (second-pass extras must stay covered)
+ *
+ * Exit non-zero on failure.
  */
 import fs from "fs";
 import path from "path";
@@ -25,13 +29,26 @@ if (!fs.existsSync(briefsPath)) {
 const index = JSON.parse(fs.readFileSync(briefsPath, "utf8"));
 const bySlug = new Map(index.subjects.map((s) => [s.slug, s]));
 
-/** Character pages that are hubs/rosters, not individual subjects. */
 const CHAR_EXCLUDE = new Set(["index.html", "celestials-roster.html"]);
+const FACTION_EXCLUDE = new Set(["index.html", "dominions-roster.html"]);
 
-/**
- * A location page is ship-typed when its Type dd mentions hull/ship/vessel
- * language, or when the locations hub lists it under Ships & vessels.
- */
+function pageDirForKind(kind) {
+  if (kind === "character") return "characters";
+  if (kind === "ship" || kind === "location") return "locations";
+  if (kind === "technology") return "technology";
+  if (kind === "faction") return "factions";
+  return null;
+}
+
+function imagePathFor(kind, slug) {
+  if (kind === "character") return `assets/images/characters/${slug}.jpg`;
+  if (kind === "ship") return `assets/images/ships/${slug}.jpg`;
+  if (kind === "location") return `assets/images/locations/${slug}.jpg`;
+  if (kind === "technology") return `assets/images/technology/${slug}.jpg`;
+  if (kind === "faction") return `assets/images/factions/${slug}.jpg`;
+  return null;
+}
+
 function discoverShipSlugs() {
   const locDir = path.join(root, "pages", "locations");
   const hub = fs.readFileSync(path.join(locDir, "index.html"), "utf8");
@@ -40,13 +57,11 @@ function discoverShipSlugs() {
     /<h2>Ships\s*&amp;\s*vessels<\/h2>[\s\S]*?(?=<h2>|<\/div>\s*<footer|$)/i
   );
   if (shipsSection) {
-    // Only location-relative ship pages (e.g. polkadav.html), not ../characters/...
     for (const m of shipsSection[0].matchAll(/href="([^"/]+\.html)"/g)) {
       const slug = m[1].replace(/\.html$/, "");
       if (slug !== "index") hubShips.add(slug);
     }
   }
-
   const fromType = new Set();
   for (const f of fs.readdirSync(locDir)) {
     if (!f.endsWith(".html") || f === "index.html") continue;
@@ -59,7 +74,6 @@ function discoverShipSlugs() {
       fromType.add(f.replace(/\.html$/, ""));
     }
   }
-
   return new Set([...hubShips, ...fromType]);
 }
 
@@ -71,21 +85,21 @@ function discoverCharacterSlugs() {
     .map((f) => f.replace(/\.html$/, ""));
 }
 
-function checkSubject({ slug, kind, titleHint }) {
-  const pageRel =
-    kind === "ship"
-      ? path.join("pages", "locations", `${slug}.html`)
-      : path.join("pages", "characters", `${slug}.html`);
+function checkSubject({ slug, kind }) {
+  const pageSub = pageDirForKind(kind);
+  const imageRel = imagePathFor(kind, slug);
+  if (!pageSub || !imageRel) {
+    errors.push(`${slug}: unknown kind ${kind}`);
+    return;
+  }
+
+  const pageRel = path.join("pages", pageSub, `${slug}.html`);
   const pageAbs = path.join(root, pageRel);
   if (!fs.existsSync(pageAbs)) {
     errors.push(`${slug}: page missing at ${pageRel}`);
     return;
   }
 
-  const imageRel =
-    kind === "ship"
-      ? `assets/images/ships/${slug}.jpg`
-      : `assets/images/characters/${slug}.jpg`;
   const imgAbs = path.join(root, imageRel);
   if (!fs.existsSync(imgAbs)) {
     errors.push(`${slug}: image missing at ${imageRel}`);
@@ -116,33 +130,42 @@ function checkSubject({ slug, kind, titleHint }) {
   if (!html.includes(imageRel.replace(/\\/g, "/"))) {
     errors.push(`${slug}: page img src does not include ${imageRel}`);
   }
-
-  // optional titleHint unused — reserved for future h1 cross-check
-  void titleHint;
 }
 
-const charSlugs = discoverCharacterSlugs();
-const shipSlugs = discoverShipSlugs();
+/** @type {Map<string, string>} slug -> kind */
+const required = new Map();
 
-for (const slug of charSlugs) {
-  checkSubject({ slug, kind: "character" });
+for (const slug of discoverCharacterSlugs()) {
+  required.set(slug, "character");
 }
-for (const slug of [...shipSlugs].sort()) {
-  checkSubject({ slug, kind: "ship" });
+for (const slug of discoverShipSlugs()) {
+  required.set(slug, "ship");
+}
+for (const s of index.subjects) {
+  if (s.kind === "location" || s.kind === "technology" || s.kind === "faction") {
+    required.set(s.slug, s.kind);
+  }
 }
 
-// CSS pattern must exist
+for (const [slug, kind] of [...required.entries()].sort((a, b) =>
+  a[0].localeCompare(b[0])
+)) {
+  checkSubject({ slug, kind });
+}
+
 const css = fs.readFileSync(path.join(root, "assets", "css", "wiki.css"), "utf8");
 if (!css.includes(".infobox-image")) {
   errors.push("wiki.css missing .infobox-image rules");
 }
 
-// Orphan index entries (listed but no page) — soft? No, fail.
+// Orphan index entries
 for (const s of index.subjects) {
-  const pageRel =
-    s.kind === "ship"
-      ? path.join("pages", "locations", `${s.slug}.html`)
-      : path.join("pages", "characters", `${s.slug}.html`);
+  const pageSub = pageDirForKind(s.kind);
+  if (!pageSub) {
+    errors.push(`${s.slug}: index.json has unknown kind ${s.kind}`);
+    continue;
+  }
+  const pageRel = path.join("pages", pageSub, `${s.slug}.html`);
   if (!fs.existsSync(path.join(root, pageRel))) {
     errors.push(`${s.slug}: index.json entry has no page at ${pageRel}`);
   }
@@ -154,7 +177,22 @@ if (errors.length) {
   process.exit(1);
 }
 
+const counts = {};
+for (const kind of required.values()) {
+  counts[kind] = (counts[kind] || 0) + 1;
+}
+const plurals = {
+  character: "characters",
+  ship: "ships",
+  location: "locations",
+  technology: "technologies",
+  faction: "factions",
+};
+const summary = Object.entries(counts)
+  .map(([k, n]) => `${n} ${n === 1 ? k : plurals[k] || k + "s"}`)
+  .join(" + ");
 console.log(
-  `check-images: OK — ${charSlugs.length} characters + ${shipSlugs.size} ships ` +
-    `(discovered from pages; briefs, images ≥${MIN_BYTES}B, infobox markup)`
+  `check-images: OK — ${required.size} subjects (${summary}); briefs, images ≥${MIN_BYTES}B, infobox markup`
 );
+// silence unused
+void FACTION_EXCLUDE;

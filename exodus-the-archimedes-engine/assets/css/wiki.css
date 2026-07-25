@@ -311,7 +311,8 @@ a:visited {
   aspect-ratio: 3 / 4;
 }
 
-.infobox-image--ship img {
+.infobox-image--ship img,
+.infobox-image--wide img {
   aspect-ratio: 16 / 9;
 }
 

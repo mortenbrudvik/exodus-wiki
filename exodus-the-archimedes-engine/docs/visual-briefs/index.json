@@ -1,6 +1,6 @@
 {
   "style": "Highly detailed cinematic sci-fi encyclopedia illustration, rich textures, sharp focus, painterly digital art with photographic detail, soft volumetric lighting, no text, no watermark, no UI chrome.",
-  "count": 46,
+  "count": 59,
   "subjects": [
     {
       "slug": "finn-jalgori-tobu",
@@ -369,6 +369,110 @@
       "image": "assets/images/ships/aeacus.jpg",
       "clade": "Crown/Wynid Celestial household hull",
       "prompt": "Highly detailed cinematic sci-fi encyclopedia illustration, rich textures, sharp focus, painterly digital art with photographic detail, soft volumetric lighting, no text, no watermark, no UI chrome. Exterior plate of the Aeacus, a compact Crown Imperial Celestial household ship lent to a human investigator: elegant elongated pearlescent silver-violet hull with livestone-like plating, refined personal yacht lines smaller than a capital or freighter, subtle glowing spinal ridge, Wynid archon-household craft. Three-quarter view against deep starfield, cool luminous lighting."
+    },
+    {
+      "slug": "gondiar",
+      "title": "Gondiar",
+      "kind": "location",
+      "image": "assets/images/locations/gondiar.jpg",
+      "prompt": "Highly detailed cinematic sci-fi encyclopedia illustration, rich textures, sharp focus, painterly digital art with photographic detail, soft volumetric lighting. Wide establishing plate of Gondiar, a fertile Uranic client agricultural world under Celestial rule: green estates and farmland continents, a coastal administrative city with modest towers (Santa Rosa scale, not megacity), soft atmosphere haze, dual-tone day side. Human client planet, not alien godworld. Three-quarter orbital view. Absolutely no text of any kind: no captions, no labels, no lettering, no logos, no brand marks, no map names, no UI chrome, no watermarks.",
+      "clade": "Planet / Uranic client world"
+    },
+    {
+      "slug": "kelowan",
+      "title": "Kelowan",
+      "kind": "location",
+      "image": "assets/images/locations/kelowan.jpg",
+      "prompt": "Highly detailed cinematic sci-fi encyclopedia illustration, rich textures, sharp focus, painterly digital art with photographic detail, soft volumetric lighting. Wide establishing plate of the Kelowan capital world of a far-future imperial dominion: planet wrapped by a luminous georing with slender orbital towers rising from surface to ring, a vast mountain-engulfing Imperial Palace complex of pearlescent livestone architecture, helium-economy power and court grandeur. Three-quarter orbital view. Absolutely no text of any kind: no captions, no labels, no lettering, no logos, no brand marks, no map names, no UI chrome, no watermarks.",
+      "clade": "Capital system / imperial focus"
+    },
+    {
+      "slug": "dolod",
+      "title": "Dolod",
+      "kind": "location",
+      "image": "assets/images/locations/dolod.jpg",
+      "prompt": "Highly detailed cinematic sci-fi encyclopedia illustration, rich textures, sharp focus, painterly digital art with photographic detail, soft volumetric lighting. Wide establishing plate of Dolod, an iron-exotic gas giant: dark metallic storm bands with iron-rich ochre and gunmetal clouds, subtle ancient megastructure rings or engine hardware faintly visible in the upper atmosphere, ominous strategic presence in deep space, cold starlight. Not a normal blue gas giant. Three-quarter view. Absolutely no text of any kind: no captions, no labels, no lettering, no logos, no brand marks, no map names, no UI chrome, no watermarks.",
+      "clade": "Iron exotic gas giant"
+    },
+    {
+      "slug": "anoosha",
+      "title": "Anoosha",
+      "kind": "location",
+      "image": "assets/images/locations/anoosha.jpg",
+      "prompt": "Highly detailed cinematic sci-fi encyclopedia illustration, rich textures, sharp focus, painterly digital art with photographic detail, soft volumetric lighting. Wide establishing plate of Anoosha, a rough client mining world: rugged Camurdy mountain ranges, open-pit ore scars, industrial haze, a large orbital city structure in high orbit (Pana-Seak scale commercial hub), day side with harsh sunlight. Working frontier planet, not court capital. Three-quarter orbital view. Absolutely no text of any kind: no captions, no labels, no lettering, no logos, no brand marks, no map names, no UI chrome, no watermarks.",
+      "clade": "Planet / client world"
+    },
+    {
+      "slug": "hafnir",
+      "title": "Hafnir",
+      "kind": "location",
+      "image": "assets/images/locations/hafnir.jpg",
+      "prompt": "Highly detailed cinematic sci-fi encyclopedia illustration, rich textures, sharp focus, painterly digital art with photographic detail, soft volumetric lighting. Wide establishing plate of the Hafnir domain on Gondiar: rolling agricultural estates, pale estate manors, empty settlement plots and new temporary settler camps for arkship colonists, green fields under a soft sky, human client-world countryside rather than a whole planet globe. Low aerial landscape view. Absolutely no text of any kind: no captions, no labels, no lettering, no logos, no brand marks, no map names, no UI chrome, no watermarks.",
+      "clade": "Land / settlement domain on Gondiar"
+    },
+    {
+      "slug": "archimedes-engine",
+      "title": "Archimedes Engine",
+      "kind": "technology",
+      "image": "assets/images/technology/archimedes-engine.jpg",
+      "prompt": "Highly detailed cinematic sci-fi encyclopedia illustration, rich textures, sharp focus, painterly digital art with photographic detail, soft volumetric lighting. Concept plate of an Archimedes Engine: enormous ancient orbital megastructure girdling a dark iron-rich gas giant, massive curved spars and station rings, luminous energy conduits, Elohim deep-history engineering scale dwarfing any ship. No readable control panels or glyphs. Three-quarter space view. Absolutely no text of any kind: no captions, no labels, no lettering, no logos, no brand marks, no map names, no UI chrome, no watermarks.",
+      "clade": "Orbital / planetary engineering megastructure"
+    },
+    {
+      "slug": "zpz-generator",
+      "title": "ZPZ generator",
+      "kind": "technology",
+      "image": "assets/images/technology/zpz-generator.jpg",
+      "prompt": "Highly detailed cinematic sci-fi encyclopedia illustration, rich textures, sharp focus, painterly digital art with photographic detail, soft volumetric lighting. Concept plate of a ZPZ generator: advanced compact starship power-drive core, nested exotic geometry coils and luminous zero-point field chambers, industrial salvage-bay lighting, human engineering scale (fits a large vessel, not a planet). No labels or gauges with numbers. Three-quarter hardware view. Absolutely no text of any kind: no captions, no labels, no lettering, no logos, no brand marks, no map names, no UI chrome, no watermarks.",
+      "clade": "Advanced drive / power plant"
+    },
+    {
+      "slug": "livestone",
+      "title": "Livestone",
+      "kind": "technology",
+      "image": "assets/images/technology/livestone.jpg",
+      "prompt": "Highly detailed cinematic sci-fi encyclopedia illustration, rich textures, sharp focus, painterly digital art with photographic detail, soft volumetric lighting. Close concept plate of livestone: living silicate architecture mid-reshape, pearlescent stone flowing into vaulted Celestial corridors under soft neural-glow light, surface texture between crystal and organic growth, no readable symbols. Material study / interior architectural detail. Absolutely no text of any kind: no captions, no labels, no lettering, no logos, no brand marks, no map names, no UI chrome, no watermarks.",
+      "clade": "Self-shaping silicate / programmable material"
+    },
+    {
+      "slug": "mindline",
+      "title": "Mindline",
+      "kind": "technology",
+      "image": "assets/images/technology/mindline.jpg",
+      "prompt": "Highly detailed cinematic sci-fi encyclopedia illustration, rich textures, sharp focus, painterly digital art with photographic detail, soft volumetric lighting. Abstract concept plate of the mindline: ethereal neural transfer between two tall Imperial Celestial silhouettes, luminous threads of memory and identity flowing as light rather than wires, court chamber soft glow, no faces required to be photoreal, no text, no diagrams with labels. Symbolic succession moment. Absolutely no text of any kind: no captions, no labels, no lettering, no logos, no brand marks, no map names, no UI chrome, no watermarks.",
+      "clade": "Neural-cultural continuity / succession system"
+    },
+    {
+      "slug": "celestials",
+      "title": "Celestials",
+      "kind": "faction",
+      "image": "assets/images/factions/celestials.jpg",
+      "prompt": "Highly detailed cinematic sci-fi encyclopedia illustration, rich textures, sharp focus, painterly digital art with photographic detail, soft volumetric lighting. Culture plate for Celestials: distant view of tall elegant Imperial humanoid figures on a livestone palace terrace under star-ringed sky, bloodstone jewellery glints, post-human scale and court grandeur without focusing on one named character. Encyclopedia faction illustration. Absolutely no text of any kind: no captions, no labels, no lettering, no logos, no brand marks, no map names, no UI chrome, no watermarks.",
+      "clade": "Transhuman post-human clades"
+    },
+    {
+      "slug": "heresy-dominion",
+      "title": "Heresy Dominion",
+      "kind": "faction",
+      "image": "assets/images/factions/heresy-dominion.jpg",
+      "prompt": "Highly detailed cinematic sci-fi encyclopedia illustration, rich textures, sharp focus, painterly digital art with photographic detail, soft volumetric lighting. Culture plate for the Heresy Dominion: a vast spindly hexapod Celestial silhouette (exactly four arms, two legs) before a huge research warship in cool blue dock light, refined alien architecture, lower temperature palette. Peer power aesthetic, not Crown gold. Absolutely no text of any kind: no captions, no labels, no lettering, no logos, no brand marks, no map names, no UI chrome, no watermarks.",
+      "clade": "Celestial dominion; hexapod citizens"
+    },
+    {
+      "slug": "travelers",
+      "title": "Travelers",
+      "kind": "faction",
+      "image": "assets/images/factions/travelers.jpg",
+      "prompt": "Highly detailed cinematic sci-fi encyclopedia illustration, rich textures, sharp focus, painterly digital art with photographic detail, soft volumetric lighting. Culture plate for Travelers: mixed independent starships at a deep-space gate or salvage yard, worn freighter-explorer hulls, human crews as small figures, practical commercial grit, Gates of Heaven scale portal glow in the background. Freedom-of-the-void aesthetic. Absolutely no text of any kind: no captions, no labels, no lettering, no logos, no brand marks, no map names, no UI chrome, no watermarks.",
+      "clade": "Ship-centred human free agents"
+    },
+    {
+      "slug": "crown-dominion",
+      "title": "Crown Dominion",
+      "kind": "faction",
+      "image": "assets/images/factions/crown-dominion.jpg",
+      "prompt": "Highly detailed cinematic sci-fi encyclopedia illustration, rich textures, sharp focus, painterly digital art with photographic detail, soft volumetric lighting. Culture plate for the Crown Dominion: Imperial Palace mountain complex and georing under multi-house fleet banners of abstract crystalline design (no readable heraldry text), five-house imperial grandeur, pearlescent and indigo court colours. Establishing political landscape. Absolutely no text of any kind: no captions, no labels, no lettering, no logos, no brand marks, no map names, no UI chrome, no watermarks.",
+      "clade": "Imperial alliance of Celestial royal houses"
     }
   ]
 }
