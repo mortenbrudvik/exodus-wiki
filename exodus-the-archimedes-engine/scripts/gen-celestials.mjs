@@ -236,7 +236,7 @@ const celestials = [
       {
         h2: "Tiger Guard and new life",
         paras: [
-          `Imperial Celestial culture routes some offspring into mindline candidacy and others into “new life” careers. As a major of the Royal Tiger Guard she is a key military figure around Helena’s household and honor formations, and the armed continuity of Wynid queenship runs through those formations rather than through the mindline.`,
+          `Imperial Celestial culture routes some offspring into mindline candidacy and others into “new life” careers. As a major of the Royal Tiger Guard she is a key military figure around Helena’s household and honour formations, and the armed continuity of Wynid queenship runs through those formations rather than through the mindline.`,
         ],
       },
     ],
@@ -455,7 +455,7 @@ const celestials = [
       {
         h2: "Datamaster of Wynid",
         paras: [
-          `Stethos stands shorter than his ~3&nbsp;m queen, in scarlet-and-gray robes with bloodstone petals and a permanent connection bulb. He identifies Luus-Kinza’s palace expansions, offers archive searches, and fields reports including Makaio’s return and the Olomo meeting.`,
+          `Stethos stands shorter than his ~3&nbsp;m queen, in scarlet-and-grey robes with bloodstone petals and a permanent connection bulb. He identifies Luus-Kinza’s palace expansions, offers archive searches, and fields reports including Makaio’s return and the Olomo meeting.`,
         ],
       },
     ],
@@ -498,7 +498,7 @@ const celestials = [
     infobox: [
       ["Rank", "General (hardline navy)"],
       ["Affiliation", "Crown Dominion navy under Empress Carolien’s crackdown"],
-      ["Theater", "<a href=\"../locations/gondiar.html\">Gondiar</a> lockdown"],
+      ["Theatre", "<a href=\"../locations/gondiar.html\">Gondiar</a> lockdown"],
       ["Mindline", "Avone (minor)"],
     ],
     lead: `<strong>General Avone-Valerio</strong> commands the hardline navy fleet that locks down Gondiar after Makaio’s murder — ghost units, awakened animals, navy HQ in <a href="finn-jalgori-tobu.html">Jalgori-Tobu</a> spaces, and the occupation that radicalizes the liberation crisis.`,

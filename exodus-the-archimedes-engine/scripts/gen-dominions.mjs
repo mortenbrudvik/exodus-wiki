@@ -112,7 +112,7 @@ const dominions = [
       ["Type", "Celestial dominion (peer of the Crown)"],
       ["Clade", "<a href=\"celestials.html\">Heresy Celestials</a> — tall hexapods (~3&nbsp;m; four arms, two legs)"],
       ["Known archon", "<a href=\"../characters/olomo.html\">Olomo</a>"],
-      ["Crown alignment", "Favorable / occasional ally of Wynid Royal House"],
+      ["Crown alignment", "Favourable / occasional ally of Wynid Royal House"],
       ["Lifespan culture", "Centuries-scale lives; Crown mindline Celestials call them “children”"],
       ["Strengths", "Research reach; large individual warships; planetary engineering interest"],
       ["Book role", "First flags Dolod; Tinaja / HeSea science; endgame pursuit of <em>Diligent</em>"],
@@ -122,14 +122,14 @@ const dominions = [
       {
         h2: "People and self-image",
         paras: [
-          `Heresy citizens are close to three meters tall with spindly six-limb builds (two legs, four arms), lower body temperatures, and expanded skulls. Their ships can outscale Crown counterparts such as the <em><a href="../locations/alumata.html">Alumata</a></em>; individual hulls carry heavy defensive systems because the Heresy fields fewer traditional war fleets.`,
+          `Heresy citizens are close to three metres tall with spindly six-limb builds (two legs, four arms), lower body temperatures, and expanded skulls. Their ships can outscale Crown counterparts such as the <em><a href="../locations/alumata.html">Alumata</a></em>; individual hulls carry heavy defensive systems because the Heresy fields fewer traditional war fleets.`,
           `Heresy culture claims greater distance from baseline human stock than the Crown. Imperial Celestials retort that without mindline immortality Heresy lives are short (a few centuries) and therefore “childish.” The rivalry is cultural as much as strategic.`,
         ],
       },
       {
         h2: "Alliance with Wynid",
         paras: [
-          `The Heresy and the Wynid Royal House of the <a href="crown-dominion.html">Crown Dominion</a> regard each other favorably — a flexible Great Game alignment, not a permanent federation. Makaio-Yalbo notes the alliance would switch instantly if advantage demanded, just as he would switch the Crown’s. Verak’s opposite alignment with Talloch-Te frames helium and trade politics around the HeSea.`,
+          `The Heresy and the Wynid Royal House of the <a href="crown-dominion.html">Crown Dominion</a> regard each other favourably — a flexible Great Game alignment, not a permanent federation. Makaio-Yalbo notes the alliance would switch instantly if advantage demanded, just as he would switch the Crown’s. Verak’s opposite alignment with Talloch-Te frames helium and trade politics around the HeSea.`,
         ],
       },
       {
@@ -171,7 +171,7 @@ const dominions = [
       {
         h2: "Verak alignment and the HeSea",
         paras: [
-          `Wynid aligns with the Heresy, and Verak with Talloch-Te. If iron-exotic Dolod cheapens Anoosha ore (Verak asset), Carolien as empress might favor Talloch-Te access to the Crown’s HeSea monopoly — a policy other queens would treat as Accord-breaking. Sahdiah’s intelligence work sits inside that economic war even when he never holds a Crown throne.`,
+          `Wynid aligns with the Heresy, and Verak with Talloch-Te. If iron-exotic Dolod cheapens Anoosha ore (Verak asset), Carolien as empress might favour Talloch-Te access to the Crown’s HeSea monopoly — a policy other queens would treat as Accord-breaking. Sahdiah’s intelligence work sits inside that economic war even when he never holds a Crown throne.`,
         ],
       },
       {
@@ -211,13 +211,13 @@ const dominions = [
         h2: "Instrument of Crown hardliners",
         paras: [
           `Helena-Thyra cites increasing Mara Yama activity when seizing Wynid. She proposes annexing Capo Frois and the <a href="uthara-dominion.html">Uthara Dominion</a> (the Mara Yama’s original target before they “stopped” at Hoa Quinzu), false-flag destabilization, and massing all queens’ fleets at Kelowan a decade ahead of a supposed confrontation.`,
-          `At Hoa Quinzu the Ratarajan warn the <em>Diligent</em> that Mara Yama forces orbit de Verya to refuel — a concrete theater touch that keeps the threat from being pure propaganda even while Thyra exploits it.`,
+          `At Hoa Quinzu the Ratarajan warn the <em>Diligent</em> that Mara Yama forces orbit de Verya to refuel — a concrete theatre touch that keeps the threat from being pure propaganda even while Thyra exploits it.`,
         ],
       },
       {
         h2: "What the novel does not resolve",
         paras: [
-          `The book does not deliver a full Mara Yama invasion POV. Their narrative function is pressure: they make hardline expansion and fleet theater legible, and they keep Capo Frois / Hoa Quinzu on the strategic map when the <em>Diligent</em> flees. How much Mara Yama activity is real, and how much is inflated by <a href="../characters/bekket.html">Bekket</a>-network politics, is never resolved.`,
+          `The book does not deliver a full Mara Yama invasion POV. Their narrative function is pressure: they make hardline expansion and fleet theatre legible, and they keep Capo Frois / Hoa Quinzu on the strategic map when the <em>Diligent</em> flees. How much Mara Yama activity is real, and how much is inflated by <a href="../characters/bekket.html">Bekket</a>-network politics, is never resolved.`,
         ],
       },
     ],
@@ -286,7 +286,7 @@ const dominions = [
     h1: "Ratarajan Dominion",
     infobox: [
       ["Type", "Celestial dominion"],
-      ["Book theater", "Hoa Quinzu system — warns <em>Diligent</em> of Mara Yama presence"],
+      ["Book theatre", "Hoa Quinzu system — warns <em>Diligent</em> of Mara Yama presence"],
       ["Role", "Local authority / intelligence touch during Kajval campaign"],
     ],
     lead: `The <strong>Ratarajan Dominion</strong> is the Celestial power that warns the <a href="../locations/arkship-diligent.html"><em>Diligent</em></a> in the Hoa Quinzu system that <a href="mara-yama.html">Mara Yama</a> forces are present — orbiting de Verya to refuel — just as Finn and Ellie’s team stage the Kajval Celestial dropship theft.`,

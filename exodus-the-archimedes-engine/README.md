@@ -74,6 +74,8 @@ alias or an alternate spelling.
 - Names use the spelling on the subject's own page; ship names are italicised when they mean the
   hull (`the <em>Diligent</em>'s ZPZ`) and left roman when they mean the people (`Diligent settlers`)
 - `Uranic` and `Celestial` are clade names — always capitalised
+- Oxford British spelling: `-our`, `-re`, but `-ize`; `licence` (noun) / `license` (verb). The
+  `Travelers` faction and the *Creature Catalog* title are proper nouns and keep their US spelling
 - Every page needs `<a class="skip-link" href="#main-content">` as the first child of `<body>`,
   `id="main-content"` on `<main>`, and a `rel="icon"` link to `assets/icons/favicon.svg` at the right
   `../` depth; hub pages carry `aria-current="page"` on their own nav link

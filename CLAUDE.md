@@ -146,6 +146,10 @@ These are enforced conventions, not suggestions, and past passes have violated t
   roman when they mean the people or their politics (`Diligent settlers`). Section headings leave
   ship names roman by convention here.
 - **`Uranic` and `Celestial`** are clade names — always capitalised, like a nationality.
+- **Spelling** is Oxford British: `-our` (labour, honour, favour), `-re` (centre, theatre, metre),
+  `-ise`→**`-ize`** (radicalize, civilization, organized), doubled `-ll-` (travelling), `licence` for
+  the noun and `license` for the verb. Two exceptions are proper nouns and stay as they are: the
+  **Travelers** faction, and the tie-in title *Creature Catalog* on `pages/sources.html`.
 - **DRY**: link rather than restating the same plot beat at length on several pages.
 
 ## External sources (Exodus wiki)
