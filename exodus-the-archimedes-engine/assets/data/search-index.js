@@ -683,6 +683,22 @@ window.WIKI_SEARCH_INDEX = [
     ]
   },
   {
+    "title": "Aeacus",
+    "path": "pages/locations/aeacus.html",
+    "category": "Locations",
+    "summary": "Ship Neusch lends Terence; Celestial support for the late manhunt",
+    "keywords": [
+      "aeacus",
+      "aecus",
+      "ship",
+      "hull",
+      "neusch",
+      "terence",
+      "makaio",
+      "wynid"
+    ]
+  },
+  {
     "title": "Crown Dominion",
     "path": "pages/factions/crown-dominion.html",
     "category": "Factions",
@@ -1235,7 +1251,6 @@ window.WIKI_SEARCH_INDEX = [
       "neusch",
       "makaio",
       "aeacus",
-      "aecus",
       "neural gifts",
       "celestials"
     ]
