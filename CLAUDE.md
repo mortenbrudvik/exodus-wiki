@@ -173,14 +173,20 @@ never hand-edit those; every other page is served by `scripts/inject-infobox-ima
 idempotent and skips any page that already has `.infobox-image`. `check-images.mjs` prints the
 current counts.
 
-The illustrations are **inferred, not canonical** — no likeness is described in the novel. Two rules
-follow, and both have been violated before:
+The illustrations are **inferred, not canonical** — no likeness is described in the novel. A full
+review of all 46 is in `docs/visual-briefs/IMAGE-REVIEW.md` (38 pass, 3 query, 5 fail). Four rules
+follow, and every one has been violated in shipped assets:
 
 - **No text inside an image.** No caption bars, ranks, house names, service numbers or dates. The
-  briefs already specify "no text, no watermark, no UI chrome"; assets have shipped with captions
-  anyway, asserting titles and dates (`2784.4`, `c. 478 Post-Collapse`) that appear nowhere in the
-  wiki and contradict `timeline.html`'s own "years are approximate" caveat. Burned-in text is
-  invented canon that no check can catch — treat a caption bar as a blocking defect.
+  briefs already specify "no text, no watermark, no UI chrome"; assets shipped with captions anyway,
+  inventing `House Veyl`, `3rd Scion`, `2784.4` and `c. 478 Post-Collapse` — none of which appear
+  anywhere in the wiki, and the dates contradict `timeline.html`'s own "years are approximate"
+  caveat. Captions appear at the **top** of the frame as well as the bottom. Burned-in text is
+  invented canon that no check can catch — treat it as a blocking defect.
+- **No real-world logos or brand marks.** One portrait shipped wearing the Chanel logo. The site is
+  public; the negative prompt must exclude brand marks explicitly.
+- **Match the clade body plan.** Heresy Celestials have *four* arms, not six — check the count
+  against `heresy-dominion.html` rather than trusting a convincing silhouette.
 - **Anything the novel does not fix goes under "Inference flags"** in the brief, not under
   "Physical / design cues (research)". Hair and eye colour, and any visible hardware, are
   inferences unless a page says otherwise.

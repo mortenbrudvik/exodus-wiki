@@ -39,10 +39,15 @@ See individual `*.md` briefs in this folder. Filenames match page slugs.
 
 ## Review
 
-`check-images.mjs` cannot see inside a JPEG, so delivered assets are checked by eye against
-[CAPTION-AUDIT.md](CAPTION-AUDIT.md). Burned-in text is the failure that matters most: assets have
-shipped with caption bars asserting ranks and dates that appear nowhere in the wiki, which the
-"no text, no watermark" line above is meant to prevent.
+`check-images.mjs` cannot see inside a JPEG, so delivered assets are checked by eye. All 46 were
+reviewed on 25 July 2026 — results in [IMAGE-REVIEW.md](IMAGE-REVIEW.md): 38 pass, 3 query, 5 fail.
+
+Every canon-breaking defect found was **text burned into the image**. Caption bars invented houses,
+ranks and dates (`House Veyl`, `3rd Scion`, `2784.4`, `c. 478 Post-Collapse`) that appear nowhere in
+the wiki, and one portrait carries a real-world brand logo. The "no text, no watermark" line above
+did not prevent any of it, so widen the negative prompt when regenerating: **no caption, no name
+plate, no lettering, no logos, no brand marks, no insignia text**. Check the top of the frame as
+well as the bottom.
 
 ## Image paths
 
