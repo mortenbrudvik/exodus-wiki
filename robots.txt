@@ -1,0 +1,5 @@
+# https://mortenbrudvik.github.io/my-books/
+User-agent: *
+Allow: /
+
+Sitemap: https://mortenbrudvik.github.io/my-books/sitemap.xml
