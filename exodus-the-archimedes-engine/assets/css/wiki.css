@@ -294,6 +294,27 @@ a:visited {
   text-align: center;
 }
 
+.infobox-image {
+  margin: 0 0 0.65rem;
+  border-radius: 0.3rem;
+  overflow: hidden;
+  background: #0c1018;
+  border: 1px solid var(--border);
+}
+
+.infobox-image img {
+  display: block;
+  width: 100%;
+  height: auto;
+  vertical-align: middle;
+  object-fit: cover;
+  aspect-ratio: 3 / 4;
+}
+
+.infobox-image--ship img {
+  aspect-ratio: 16 / 9;
+}
+
 .infobox dl {
   margin: 0;
 }

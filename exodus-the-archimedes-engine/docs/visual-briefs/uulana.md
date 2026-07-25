@@ -1,0 +1,38 @@
+# Uulana
+
+| Field | Value |
+|---|---|
+| **Slug** | `uulana` |
+| **Kind** | character |
+| **Clade / type** | Imperial Celestial (Uulana-Lyon / hardline cluster) |
+| **Role** | Wynid political cluster: investigator Uulana-Lyon and hardline identity politics |
+| **Image path** | `assets/images/characters/uulana.jpg` |
+
+## Physical / design cues (research)
+
+- Composite page for Uulana political line
+- Investigative archon severity
+- Tall Imperial humanoid
+
+## Clothing / finish
+
+Investigator-archon charcoal robes with hardline crimson lining
+
+## Setting / composition
+
+Ambush-risk corridor of court
+
+## Inference flags
+
+- Page covers multiple hosts/identities — single composite investigator face
+
+## Generation prompt
+
+```
+Highly detailed cinematic sci-fi encyclopedia illustration, rich textures, sharp focus, painterly digital art with photographic detail, soft volumetric lighting, no text, no watermark, no UI chrome. Portrait of Uulana as Wynid Imperial Celestial investigator-archon type: tall post-human figure with sharp vigilant eyes, charcoal robes with crimson lining, crystalline accents. Political investigation under threat. Upper-body portrait, tense corridor light.
+```
+
+## Sources
+
+- Wiki article `pages/characters/uulana.html`
+- Clade grammar: `docs/visual-briefs/README.md`, faction pages (Celestials / Uranics / Travelers / Heresy)

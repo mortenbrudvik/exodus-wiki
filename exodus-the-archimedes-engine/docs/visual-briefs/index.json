@@ -1,0 +1,358 @@
+{
+  "style": "Highly detailed cinematic sci-fi encyclopedia illustration, rich textures, sharp focus, painterly digital art with photographic detail, soft volumetric lighting, no text, no watermark, no UI chrome.",
+  "count": 44,
+  "subjects": [
+    {
+      "slug": "finn-jalgori-tobu",
+      "title": "Finn Jalgori-Tobu",
+      "kind": "character",
+      "image": "assets/images/characters/finn-jalgori-tobu.jpg",
+      "prompt": "Highly detailed cinematic sci-fi encyclopedia illustration, rich textures, sharp focus, painterly digital art with photographic detail, soft volumetric lighting, no text, no watermark, no UI chrome. Portrait of Finn Jalgori-Tobu, a 25-year-old Uranic human aristocrat from a far-future space empire: athletic young man with aristocratic features, subtle neural interface ports at the temples, restless determined eyes, wearing a dark tailored spacer jacket over practical field layers. Client nobility aesthetic, not godlike alien. Upper-body three-quarter portrait, soft starfield and estate architecture behind him.",
+      "clade": "Uranic aristocrat (~25)"
+    },
+    {
+      "slug": "eleanor-aponi",
+      "title": "Eleanor Aponi",
+      "kind": "character",
+      "image": "assets/images/characters/eleanor-aponi.jpg",
+      "prompt": "Highly detailed cinematic sci-fi encyclopedia illustration, rich textures, sharp focus, painterly digital art with photographic detail, soft volumetric lighting, no text, no watermark, no UI chrome. Portrait of Eleanor Ellie Aponi, a skilled 23-year-old lieutenant from a late-arriving human generation arkship: competent young woman with practical military bearing, baseline human features, short practical hair, wearing a functional grey-blue arkship lieutenant uniform with harness straps. Field partner energy, not court fashion. Upper-body portrait, cool bulkhead lighting.",
+      "clade": "Baseline late-arkship human (~23)"
+    },
+    {
+      "slug": "josias-aponi",
+      "title": "Josias Aponi",
+      "kind": "character",
+      "image": "assets/images/characters/josias-aponi.jpg",
+      "prompt": "Highly detailed cinematic sci-fi encyclopedia illustration, rich textures, sharp focus, painterly digital art with photographic detail, soft volumetric lighting, no text, no watermark, no UI chrome. Portrait of Josias Aponi, a 51-year-old human arkship owner and fiery political orator: middle-aged man with intense determined expression, greying temples, strong jaw, wearing a formal dark owner’s coat over practical settler layers. Liberation agitator energy. Upper-body portrait, warm assembly-hall light and arkship viewport glow.",
+      "clade": "Baseline late-arkship human (~51 intro)"
+    },
+    {
+      "slug": "dejean",
+      "title": "Dejean",
+      "kind": "character",
+      "image": "assets/images/characters/dejean.jpg",
+      "prompt": "Highly detailed cinematic sci-fi encyclopedia illustration, rich textures, sharp focus, painterly digital art with photographic detail, soft volumetric lighting, no text, no watermark, no UI chrome. Portrait of Captain Dejean, a 59-year-old professional captain of a human generation arkship: weathered middle-aged man with calm competent expression, short greying hair, wearing a clean grey arkship captain’s uniform with subtle rank tabs. Steady professional, not politician. Upper-body portrait, cool bridge console lighting.",
+      "clade": "Baseline late-arkship human (59)"
+    },
+    {
+      "slug": "elsbeth-mcquillan",
+      "title": "Elsbeth McQuillan",
+      "kind": "character",
+      "image": "assets/images/characters/elsbeth-mcquillan.jpg",
+      "prompt": "Highly detailed cinematic sci-fi encyclopedia illustration, rich textures, sharp focus, painterly digital art with photographic detail, soft volumetric lighting, no text, no watermark, no UI chrome. Portrait of Elsbeth McQuillan, fearless tank commander of Hell Welcomes Careful Drivers: tough woman in armoured tanker coveralls and headset, gauntlets, carbon scoring on gear, confident battlefield expression. Ground-war specialist aesthetic. Upper-body portrait, red-tinged vehicle-bay lighting.",
+      "clade": "Baseline human specialist"
+    },
+    {
+      "slug": "terence-wilson-fletcher",
+      "title": "Terence Wilson-Fletcher",
+      "kind": "character",
+      "image": "assets/images/characters/terence-wilson-fletcher.jpg",
+      "prompt": "Highly detailed cinematic sci-fi encyclopedia illustration, rich textures, sharp focus, painterly digital art with photographic detail, soft volumetric lighting, no text, no watermark, no UI chrome. Portrait of Terence Wilson-Fletcher, a 24-year-old detective on a far-future colony city: sharp-eyed young man with thoughtful intense expression, short neat hair, wearing a dark detective coat over civilian layers, subtle earpiece. Human investigator aesthetic. Upper-body portrait, cool neon-rain city bokeh behind him.",
+      "clade": "Baseline/Uranic-adjacent human detective (~24)"
+    },
+    {
+      "slug": "otylia-jalgori-tobu",
+      "title": "Otylia Jalgori-Tobu",
+      "kind": "character",
+      "image": "assets/images/characters/otylia-jalgori-tobu.jpg",
+      "prompt": "Highly detailed cinematic sci-fi encyclopedia illustration, rich textures, sharp focus, painterly digital art with photographic detail, soft volumetric lighting, no text, no watermark, no UI chrome. Portrait of Otylia Jalgori-Tobu, a 25-year-old Uranic aristocratic twin sister and political manager: composed young woman with intelligent steady eyes, subtle neural interface ports, tailored ministerial coat in deep teal and black. Institutional calm. Upper-body portrait, soft palace office light.",
+      "clade": "Uranic aristocrat (Finn’s twin)"
+    },
+    {
+      "slug": "zelinda-jalgori-tobu",
+      "title": "Zelinda Jalgori-Tobu",
+      "kind": "character",
+      "image": "assets/images/characters/zelinda-jalgori-tobu.jpg",
+      "prompt": "Highly detailed cinematic sci-fi encyclopedia illustration, rich textures, sharp focus, painterly digital art with photographic detail, soft volumetric lighting, no text, no watermark, no UI chrome. Portrait of Zelinda Jalgori-Tobu, Uranic aristocratic heir of a client noble family: composed young woman with pragmatic confident expression, subtle neural ports, elegant deep-burgundy formal gown with estate jewellery (not alien bloodstone). Upper-body portrait, warm salon light and subtle livestone wall texture.",
+      "clade": "Uranic aristocrat (heir)"
+    },
+    {
+      "slug": "helena-chione",
+      "title": "Helena-Chione",
+      "kind": "character",
+      "image": "assets/images/characters/helena-chione.jpg",
+      "prompt": "Highly detailed cinematic sci-fi encyclopedia illustration, rich textures, sharp focus, painterly digital art with photographic detail, soft volumetric lighting, no text, no watermark, no UI chrome. Portrait of Helena-Chione, Imperial Celestial Now and Forever Queen of Wynid: extremely tall elegant post-human woman with elongated regal proportions, luminous pale skin, serene strategic expression, wearing ivory-and-gold queen’s robes with crystalline bloodstone jewellery growing along collar and wrists. Godlike court beauty. Upper-body portrait emphasizing height, soft livestone palace glow.",
+      "clade": "Imperial Celestial queen (~3 m humanoid scale)"
+    },
+    {
+      "slug": "thyra",
+      "title": "Thyra",
+      "kind": "character",
+      "image": "assets/images/characters/thyra.jpg",
+      "prompt": "Highly detailed cinematic sci-fi encyclopedia illustration, rich textures, sharp focus, painterly digital art with photographic detail, soft volumetric lighting, no text, no watermark, no UI chrome. Portrait of Thyra as Helena-Thyra, Imperial Celestial usurper queen: tall post-human young woman with elongated elegant features, cold ruthless intelligent eyes, wearing sharp black and crimson armour-robes with a crystalline bloodstone collar-crown. Hardline power. Upper-body portrait, dramatic side lighting and fleet viewport glow.",
+      "clade": "Imperial Celestial congregant → queen (Helena-Thyra)"
+    },
+    {
+      "slug": "clavissa",
+      "title": "Clavissa",
+      "kind": "character",
+      "image": "assets/images/characters/clavissa.jpg",
+      "prompt": "Highly detailed cinematic sci-fi encyclopedia illustration, rich textures, sharp focus, painterly digital art with photographic detail, soft volumetric lighting, no text, no watermark, no UI chrome. Portrait of Clavissa, Imperial Celestial congregant daughter of a queen: tall elegant post-human young woman with careful wary expression, silver-blue court robes, modest crystalline jewellery, elongated proportions. Survivor of succession culture, not the usurper. Upper-body portrait, soft gallery light.",
+      "clade": "Imperial Celestial congregant daughter"
+    },
+    {
+      "slug": "carolien-amaia",
+      "title": "Carolien-Amaia",
+      "kind": "character",
+      "image": "assets/images/characters/carolien-amaia.jpg",
+      "prompt": "Highly detailed cinematic sci-fi encyclopedia illustration, rich textures, sharp focus, painterly digital art with photographic detail, soft volumetric lighting, no text, no watermark, no UI chrome. Portrait of Carolien-Amaia, Imperial Celestial empress of the Crown Dominion: extremely tall regal post-human woman with commanding calm expression, deep indigo and platinum imperial robes, heavy crystalline bloodstone mantle, elongated proportions. Peak court authority. Upper-body portrait, grand palace light.",
+      "clade": "Imperial Celestial empress / Verak queen"
+    },
+    {
+      "slug": "luus",
+      "title": "Luus",
+      "kind": "character",
+      "image": "assets/images/characters/luus.jpg",
+      "prompt": "Highly detailed cinematic sci-fi encyclopedia illustration, rich textures, sharp focus, painterly digital art with photographic detail, soft volumetric lighting, no text, no watermark, no UI chrome. Portrait of Luus, Imperial Celestial Now and Forever Queen of Bassa: tall elegant post-human sovereign woman, mature dignified expression, emerald and gold robes with crystalline bloodstone diadem. Peer queen handing imperial rotation. Upper-body portrait, ceremonial light.",
+      "clade": "Imperial Celestial queen (Bassa)"
+    },
+    {
+      "slug": "inessa-pierina",
+      "title": "Inessa-Pierina",
+      "kind": "character",
+      "image": "assets/images/characters/inessa-pierina.jpg",
+      "prompt": "Highly detailed cinematic sci-fi encyclopedia illustration, rich textures, sharp focus, painterly digital art with photographic detail, soft volumetric lighting, no text, no watermark, no UI chrome. Portrait of Inessa-Pierina, Imperial Celestial queen of Cheluli: tall post-human regal woman, composed expression, white and copper court robes with crystalline bloodstone shoulder ornaments. Peer queen. Upper-body portrait, cool ceremonial lighting.",
+      "clade": "Imperial Celestial queen (Cheluli)"
+    },
+    {
+      "slug": "ramona-ursule",
+      "title": "Ramona-Ursule",
+      "kind": "character",
+      "image": "assets/images/characters/ramona-ursule.jpg",
+      "prompt": "Highly detailed cinematic sci-fi encyclopedia illustration, rich textures, sharp focus, painterly digital art with photographic detail, soft volumetric lighting, no text, no watermark, no UI chrome. Portrait of Ramona-Ursule, Imperial Celestial queen of Nizinsk: tall post-human woman with sharp assessing eyes, amethyst and silver robes, crystalline bloodstone collar. Host of multi-dominion politics trial. Upper-body portrait, cool chamber light.",
+      "clade": "Imperial Celestial queen (Nizinsk)"
+    },
+    {
+      "slug": "zuberi-dulcina",
+      "title": "Zuberi-Dulcina",
+      "kind": "character",
+      "image": "assets/images/characters/zuberi-dulcina.jpg",
+      "prompt": "Highly detailed cinematic sci-fi encyclopedia illustration, rich textures, sharp focus, painterly digital art with photographic detail, soft volumetric lighting, no text, no watermark, no UI chrome. Portrait of Zuberi-Dulcina, historical Imperial Celestial queen of Kelowan: tall post-human war sovereign with tragic commanding expression, blackened-gold armour robes, cracked crystalline bloodstone crown. Fallen empire grandeur. Upper-body portrait, smoky dramatic light.",
+      "clade": "Imperial Celestial queen (historical)"
+    },
+    {
+      "slug": "bekket",
+      "title": "Bekket",
+      "kind": "character",
+      "image": "assets/images/characters/bekket.jpg",
+      "prompt": "Highly detailed cinematic sci-fi encyclopedia illustration, rich textures, sharp focus, painterly digital art with photographic detail, soft volumetric lighting, no text, no watermark, no UI chrome. Portrait of Lord Bekket, Imperial Celestial court schemer and father of a usurper queen: tall elegant post-human man with calculating half-smile, dark tailored court suit, crystalline bloodstone cuff ornaments. Political manipulator. Upper-body portrait, shadowed corridor light.",
+      "clade": "Imperial Celestial lord (Uixic / Zuberi-linked)"
+    },
+    {
+      "slug": "lord-gahiji",
+      "title": "Lord Gahiji",
+      "kind": "character",
+      "image": "assets/images/characters/lord-gahiji.jpg",
+      "prompt": "Highly detailed cinematic sci-fi encyclopedia illustration, rich textures, sharp focus, painterly digital art with photographic detail, soft volumetric lighting, no text, no watermark, no UI chrome. Portrait of Lord Gahiji, Chief Archon to an Imperial Celestial queen: tall post-human older man with shrewd political eyes, blue-grey archon robes, subtle crystalline accents, elongated proportions. Statesman not soldier. Upper-body portrait, cool council light.",
+      "clade": "Imperial Celestial archon"
+    },
+    {
+      "slug": "lord-jolav",
+      "title": "Lord Jolav",
+      "kind": "character",
+      "image": "assets/images/characters/lord-jolav.jpg",
+      "prompt": "Highly detailed cinematic sci-fi encyclopedia illustration, rich textures, sharp focus, painterly digital art with photographic detail, soft volumetric lighting, no text, no watermark, no UI chrome. Portrait of Lord Jolav, Imperial Celestial consort to a queen: tall elegant post-human man with restrained worried dignity, silver-black consort robes, subtle crystalline jewellery. Quiet opposition energy. Upper-body portrait, soft anteroom light.",
+      "clade": "Imperial Celestial consort"
+    },
+    {
+      "slug": "valdier",
+      "title": "Lord Valdier",
+      "kind": "character",
+      "image": "assets/images/characters/valdier.jpg",
+      "prompt": "Highly detailed cinematic sci-fi encyclopedia illustration, rich textures, sharp focus, painterly digital art with photographic detail, soft volumetric lighting, no text, no watermark, no UI chrome. Portrait of Lord Valdier, elderly Imperial Celestial Master of the Court and royal father: tall post-human elder man with formal austere expression, heavy ceremonial robes, crystalline bloodstone protocol collar. Old-guard court. Upper-body portrait, formal gold light.",
+      "clade": "Imperial Celestial elder"
+    },
+    {
+      "slug": "stethos-thierry",
+      "title": "Lord Stethos-Thierry",
+      "kind": "character",
+      "image": "assets/images/characters/stethos-thierry.jpg",
+      "prompt": "Highly detailed cinematic sci-fi encyclopedia illustration, rich textures, sharp focus, painterly digital art with photographic detail, soft volumetric lighting, no text, no watermark, no UI chrome. Portrait of Lord Stethos-Thierry, Imperial Celestial court datamaster: tall post-human man with calm vacant-focused expression, slim tech robes, glowing neural filaments and interface hardware along scalp and neck. Permanently networked. Upper-body portrait, cool holographic bokeh without readable text.",
+      "clade": "Imperial Celestial datamaster"
+    },
+    {
+      "slug": "siskala",
+      "title": "Siskala",
+      "kind": "character",
+      "image": "assets/images/characters/siskala.jpg",
+      "prompt": "Highly detailed cinematic sci-fi encyclopedia illustration, rich textures, sharp focus, painterly digital art with photographic detail, soft volumetric lighting, no text, no watermark, no UI chrome. Portrait of Major Siskala of the Wynid Royal Tiger Guard: tall athletic Imperial Celestial woman warrior, sharp professional expression, dark gold and black guard armour with subtle tiger motif, helmet under arm. Court military, not queen. Upper-body portrait, cool corridor light.",
+      "clade": "Imperial Celestial (new life / military)"
+    },
+    {
+      "slug": "makaio",
+      "title": "Makaio",
+      "kind": "character",
+      "image": "assets/images/characters/makaio.jpg",
+      "prompt": "Highly detailed cinematic sci-fi encyclopedia illustration, rich textures, sharp focus, painterly digital art with photographic detail, soft volumetric lighting, no text, no watermark, no UI chrome. Portrait of Makaio, Imperial Celestial archon spymaster: tall post-human man with piercing analytical eyes, charcoal intelligence coat, crystalline bloodstone growths on shoulders, elongated regal proportions. Multi-host mindline power. Upper-body portrait, dim shipboard intelligence-suite light.",
+      "clade": "Imperial Celestial archon (multi-host mindline)"
+    },
+    {
+      "slug": "neusch",
+      "title": "Neusch",
+      "kind": "character",
+      "image": "assets/images/characters/neusch.jpg",
+      "prompt": "Highly detailed cinematic sci-fi encyclopedia illustration, rich textures, sharp focus, painterly digital art with photographic detail, soft volumetric lighting, no text, no watermark, no UI chrome. Portrait of Neusch, young Imperial Celestial son of a spymaster archon: tall young post-human man with intense focused eyes, dark slim coat, glowing neural-gift collar, elongated proportions. Investigator heir energy. Upper-body portrait, cool chamber light.",
+      "clade": "Imperial Celestial (archon household)"
+    },
+    {
+      "slug": "asahi-iryna",
+      "title": "Asahi-Iryna",
+      "kind": "character",
+      "image": "assets/images/characters/asahi-iryna.jpg",
+      "prompt": "Highly detailed cinematic sci-fi encyclopedia illustration, rich textures, sharp focus, painterly digital art with photographic detail, soft volumetric lighting, no text, no watermark, no UI chrome. Portrait of Asahi-Iryna, hardline Imperial Celestial archon: tall post-human figure with severe expression, black and crimson archon uniform-robes, crystalline accents, elongated proportions. Ruthless oversight. Upper-body portrait, cold fleet light.",
+      "clade": "Imperial Celestial archon (hardline)"
+    },
+    {
+      "slug": "avone-valerio",
+      "title": "Avone-Valerio",
+      "kind": "character",
+      "image": "assets/images/characters/avone-valerio.jpg",
+      "prompt": "Highly detailed cinematic sci-fi encyclopedia illustration, rich textures, sharp focus, painterly digital art with photographic detail, soft volumetric lighting, no text, no watermark, no UI chrome. Portrait of General Avone-Valerio, Imperial Celestial navy commander: tall post-human military leader with cold commanding face, angular steel-blue navy armour plates, rank ornaments without text. Occupation authority. Upper-body portrait, harsh navy bridge light.",
+      "clade": "Imperial Celestial navy general"
+    },
+    {
+      "slug": "acelynn",
+      "title": "Acelynn",
+      "kind": "character",
+      "image": "assets/images/characters/acelynn.jpg",
+      "prompt": "Highly detailed cinematic sci-fi encyclopedia illustration, rich textures, sharp focus, painterly digital art with photographic detail, soft volumetric lighting, no text, no watermark, no UI chrome. Portrait of Acelynn, Chief Archon to the Verak queen and imperial throne: tall post-human Celestial with composed political expression, indigo and silver archon robes, mindline crest jewellery. Senior crown mindline. Upper-body portrait, palace light.",
+      "clade": "Imperial Celestial chief archon (Verak)"
+    },
+    {
+      "slug": "radwarno",
+      "title": "Radwarno",
+      "kind": "character",
+      "image": "assets/images/characters/radwarno.jpg",
+      "prompt": "Highly detailed cinematic sci-fi encyclopedia illustration, rich textures, sharp focus, painterly digital art with photographic detail, soft volumetric lighting, no text, no watermark, no UI chrome. Portrait of Commander Radwarno, Verak Imperial Celestial fleet officer: tall post-human man with stern focused expression, dark navy armour-coat with helium-blue accents, elongated proportions. Fleet capture authority. Upper-body portrait, starfield fleet light.",
+      "clade": "Imperial Celestial navy commander (Verak)"
+    },
+    {
+      "slug": "dagon",
+      "title": "Dagon",
+      "kind": "character",
+      "image": "assets/images/characters/dagon.jpg",
+      "prompt": "Highly detailed cinematic sci-fi encyclopedia illustration, rich textures, sharp focus, painterly digital art with photographic detail, soft volumetric lighting, no text, no watermark, no UI chrome. Portrait of Dagon, Imperial Celestial covert operator posing in human underworld networks: tall elegant man with predatory calm eyes, layered dark merchant coat over subtle high-tech under-armour, elongated post-human proportions barely hidden. Dual-face spy. Upper-body portrait, neon underworld bokeh.",
+      "clade": "Imperial Celestial operator (Thyra’s uncle)"
+    },
+    {
+      "slug": "malquilvo",
+      "title": "Malquilvo",
+      "kind": "character",
+      "image": "assets/images/characters/malquilvo.jpg",
+      "prompt": "Highly detailed cinematic sci-fi encyclopedia illustration, rich textures, sharp focus, painterly digital art with photographic detail, soft volumetric lighting, no text, no watermark, no UI chrome. Portrait of Malquilvo, Imperial Celestial court parent in mourning and accusation: tall post-human figure with anguished stern expression, grey court robes, crystalline tear-like bloodstone jewellery. Tragic court politics. Upper-body portrait, cold public-gallery light.",
+      "clade": "Imperial Celestial court parent"
+    },
+    {
+      "slug": "uulana",
+      "title": "Uulana",
+      "kind": "character",
+      "image": "assets/images/characters/uulana.jpg",
+      "prompt": "Highly detailed cinematic sci-fi encyclopedia illustration, rich textures, sharp focus, painterly digital art with photographic detail, soft volumetric lighting, no text, no watermark, no UI chrome. Portrait of Uulana as Wynid Imperial Celestial investigator-archon type: tall post-human figure with sharp vigilant eyes, charcoal robes with crimson lining, crystalline accents. Political investigation under threat. Upper-body portrait, tense corridor light.",
+      "clade": "Imperial Celestial (Uulana-Lyon / hardline cluster)"
+    },
+    {
+      "slug": "olomo",
+      "title": "Olomo",
+      "kind": "character",
+      "image": "assets/images/characters/olomo.jpg",
+      "prompt": "Highly detailed cinematic sci-fi encyclopedia illustration, rich textures, sharp focus, painterly digital art with photographic detail, soft volumetric lighting, no text, no watermark, no UI chrome. Portrait of Olomo, archon of the Heresy Dominion: a towering three-metre spindly hexapod post-human with TWO legs and FOUR long arms, expanded elongated skull, cool pale-blue skin, intelligent severe face, wearing multi-limb dark research robes tailored for four arms. Clearly non-humanoid Celestial. Upper body showing all four arms, cool blue starship light.",
+      "clade": "Heresy Celestial hexapod (~3 m)"
+    },
+    {
+      "slug": "sahdiah",
+      "title": "Sahdiah",
+      "kind": "character",
+      "image": "assets/images/characters/sahdiah.jpg",
+      "prompt": "Highly detailed cinematic sci-fi encyclopedia illustration, rich textures, sharp focus, painterly digital art with photographic detail, soft volumetric lighting, no text, no watermark, no UI chrome. Portrait of Sahdiah, Talloch-Te Celestial trader archon: tall elegant post-human with calculating merchant eyes, bronze and void-black merchant-archon finery, subtle crystalline accents, elongated proportions. Deniable power, not Crown court pomp. Upper-body portrait, warm ship-lounge light against stars.",
+      "clade": "Talloch-Te Celestial archon"
+    },
+    {
+      "slug": "andino",
+      "title": "Andino",
+      "kind": "character",
+      "image": "assets/images/characters/andino.jpg",
+      "prompt": "Highly detailed cinematic sci-fi encyclopedia illustration, rich textures, sharp focus, painterly digital art with photographic detail, soft volumetric lighting, no text, no watermark, no UI chrome. Portrait of Andino, Traveler starship captain of Arcadia’s Moon: experienced human spacer with enigmatic half-smile, weathered captain’s coat and harness, practical short hair. Independent freighter-explorer captain. Upper-body portrait, warm bridge instrument glow.",
+      "clade": "Traveler human captain"
+    },
+    {
+      "slug": "marcellu",
+      "title": "Marcellu",
+      "kind": "character",
+      "image": "assets/images/characters/marcellu.jpg",
+      "prompt": "Highly detailed cinematic sci-fi encyclopedia illustration, rich textures, sharp focus, painterly digital art with photographic detail, soft volumetric lighting, no text, no watermark, no UI chrome. Portrait of Marcellu, Traveler middleman and archon fixer: slick human man with wary deal-maker expression, sharp commercial spacer suit, subtle high-tech earpiece. Deniable logistics broker. Upper-body portrait, dockside neon.",
+      "clade": "Traveler middleman"
+    },
+    {
+      "slug": "medusa",
+      "title": "Medusa",
+      "kind": "character",
+      "image": "assets/images/characters/medusa.jpg",
+      "prompt": "Highly detailed cinematic sci-fi encyclopedia illustration, rich textures, sharp focus, painterly digital art with photographic detail, soft volumetric lighting, no text, no watermark, no UI chrome. Portrait of Medusa, ruthless human field assassin: sharp-featured woman with cold calm eyes, black tactical bodysuit and knife harness, short practical hair. Professional killer. Upper-body portrait, dark corridor rim light.",
+      "clade": "Human assassin / operative"
+    },
+    {
+      "slug": "liliana",
+      "title": "Liliana",
+      "kind": "character",
+      "image": "assets/images/characters/liliana.jpg",
+      "prompt": "Highly detailed cinematic sci-fi encyclopedia illustration, rich textures, sharp focus, painterly digital art with photographic detail, soft volumetric lighting, no text, no watermark, no UI chrome. Portrait of Liliana, Lidon-linked human mercenary: striking woman with cool professional expression, stylish dark mercenary coat over light armour, exotic blade sheath on hip. Deniable operator chic. Upper-body portrait, windy hatch light and cloud haze.",
+      "clade": "Human mercenary (Lidon-linked)"
+    },
+    {
+      "slug": "tose",
+      "title": "Toše",
+      "kind": "character",
+      "image": "assets/images/characters/tose.jpg",
+      "prompt": "Highly detailed cinematic sci-fi encyclopedia illustration, rich textures, sharp focus, painterly digital art with photographic detail, soft volumetric lighting, no text, no watermark, no UI chrome. Portrait of Toše, heavy-weapons mercenary and sniper: rugged muscular man with grim focused expression, combat harness and scarred armour plates, ammo webbing, short beard stubble. Loud half of a deniable duo. Upper-body portrait, harsh daylight and dust.",
+      "clade": "Human mercenary / heavy weapons"
+    },
+    {
+      "slug": "gyvoy-enfoe",
+      "title": "Gyvoy Enfoe",
+      "kind": "character",
+      "image": "assets/images/characters/gyvoy-enfoe.jpg",
+      "prompt": "Highly detailed cinematic sci-fi encyclopedia illustration, rich textures, sharp focus, painterly digital art with photographic detail, soft volumetric lighting, no text, no watermark, no UI chrome. Portrait of Gyvoy Enfoe as the charming offworld financier cover identity: polished human man with too-smooth confident smile, expensive dark suit with subtle high-tech cufflinks, immaculate hair. Deal-maker who attaches to a liberation project. Upper-body portrait, warm negotiation-room light.",
+      "clade": "Offworld financier (human cover / Celestial imposture plot)"
+    },
+    {
+      "slug": "arkship-diligent",
+      "title": "Arkship Diligent",
+      "kind": "ship",
+      "image": "assets/images/ships/arkship-diligent.jpg",
+      "prompt": "Highly detailed cinematic sci-fi encyclopedia illustration, rich textures, sharp focus, painterly digital art with photographic detail, soft volumetric lighting, no text, no watermark, no UI chrome. Exterior plate of the arkship Diligent, a massive late-human generation arkship: enormous multi-kilometre modular hull with stacked colony cylinders, radiator fins, docking rings, utilitarian grey-and-white plating scarred by centuries of voyage, small escort craft for scale. Human megastructure engineering, not elegant alien yacht. Three-quarter view in deep space with a distant blue-white star.",
+      "clade": "Late human generation arkship"
+    },
+    {
+      "slug": "arcadias-moon",
+      "title": "Arcadia’s Moon",
+      "kind": "ship",
+      "image": "assets/images/ships/arcadias-moon.jpg",
+      "prompt": "Highly detailed cinematic sci-fi encyclopedia illustration, rich textures, sharp focus, painterly digital art with photographic detail, soft volumetric lighting, no text, no watermark, no UI chrome. Exterior plate of Arcadia’s Moon, a Traveler deniable charter starship: mid-size modular freighter-explorer hull with cargo pods, articulated salvage arms, worn civilian plating in charcoal and amber, independent ship character. Three-quarter view near a ringed gas giant, deep space lighting.",
+      "clade": "Traveler charter starship"
+    },
+    {
+      "slug": "alumata",
+      "title": "Alumata",
+      "kind": "ship",
+      "image": "assets/images/ships/alumata.jpg",
+      "prompt": "Highly detailed cinematic sci-fi encyclopedia illustration, rich textures, sharp focus, painterly digital art with photographic detail, soft volumetric lighting, no text, no watermark, no UI chrome. Exterior plate of the Alumata, a Crown Imperial Celestial archon’s ship: sleek elegant elongated hull of pearlescent silver-blue livestone-like plating, refined intelligence yacht lines, subtle glowing spine, smaller than capital warships. Three-quarter view against deep starfield, cool luminous lighting.",
+      "clade": "Crown Celestial archon ship"
+    },
+    {
+      "slug": "cybeles-eagle",
+      "title": "Cybele’s Eagle",
+      "kind": "ship",
+      "image": "assets/images/ships/cybeles-eagle.jpg",
+      "prompt": "Highly detailed cinematic sci-fi encyclopedia illustration, rich textures, sharp focus, painterly digital art with photographic detail, soft volumetric lighting, no text, no watermark, no UI chrome. Exterior plate of Cybele’s Eagle, a compact deniable passenger starship: small-to-mid civilian transport with streamlined commercial hull, passenger windows, modest thrusters, cream and slate civilian livery. Not a warship. Three-quarter view leaving planetary orbit with atmosphere limb glow.",
+      "clade": "Deniable passenger transport"
+    },
+    {
+      "slug": "lestari",
+      "title": "Lestari",
+      "kind": "ship",
+      "image": "assets/images/ships/lestari.jpg",
+      "prompt": "Highly detailed cinematic sci-fi encyclopedia illustration, rich textures, sharp focus, painterly digital art with photographic detail, soft volumetric lighting, no text, no watermark, no UI chrome. Exterior plate of the Lestari, an Enfoe dynasty commercial starship: robust mid-large freighter with cargo spines, commercial markings without readable text, bronze-and-dark hull, Traveler-adjacent working commerce aesthetic. Three-quarter view in deep space with open cargo-bay light spill.",
+      "clade": "Enfoe commercial starship"
+    }
+  ]
+}

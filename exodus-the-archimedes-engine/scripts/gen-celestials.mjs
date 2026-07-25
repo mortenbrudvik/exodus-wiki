@@ -55,7 +55,7 @@ ${bodyMain}
 </html>
 `;
 
-function page({ title, h1, infobox, lead, sections, seeAlso }) {
+function page({ title, h1, infobox, lead, sections, seeAlso, image }) {
   const dl = infobox
     .map(([dt, dd]) => `            <dt>${dt}</dt>\n            <dd>${dd}</dd>`)
     .join("\n");
@@ -69,13 +69,19 @@ function page({ title, h1, infobox, lead, sections, seeAlso }) {
     )
     .join("\n");
   const see = seeAlso.map((a) => `            <li>${a}</li>`).join("\n");
+  const imgBlock = image
+    ? `          <div class="infobox-image">
+            <img src="../../assets/images/characters/${image}" alt="${h1}" width="320" height="427" loading="lazy">
+          </div>
+`
+    : "";
   const body = `      <article class="article">
         <header>
           <h1>${h1}</h1>
         </header>
         <aside class="infobox">
           <h2>${h1}</h2>
-          <dl>
+${imgBlock}          <dl>
 ${dl}
           </dl>
         </aside>
@@ -630,7 +636,8 @@ const celestials = [
 ];
 
 for (const c of celestials) {
-  fs.writeFileSync(path.join(dir, c.file), page(c), "utf8");
+  const image = c.file.replace(/\.html$/, ".jpg");
+  fs.writeFileSync(path.join(dir, c.file), page({ ...c, image }), "utf8");
   console.log("wrote", c.file);
 }
 console.log("done", celestials.length);
