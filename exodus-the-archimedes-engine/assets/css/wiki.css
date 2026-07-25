@@ -472,6 +472,15 @@ img {
   align-self: start;
 }
 
+/* Timeline and Chapters are mostly three-column tables, which a 66ch prose
+   measure squeezes into a column of wrapped fragments. Those pages get a wider
+   measure — their prose is a short intro, not long-form reading, so the usual
+   argument for a narrow measure does not apply. */
+.article:has(.wiki-table) {
+  grid-template-columns: minmax(0, 82ch) 17rem;
+  max-width: calc(82ch + 21rem);
+}
+
 /* Hubs, rosters, and the Main Page carry no infobox: one full-width column. */
 .article--wide {
   grid-template-columns: minmax(0, 1fr);
@@ -1117,6 +1126,14 @@ body.lightbox-open {
 
   .article h1 {
     font-size: 2rem;
+  }
+
+  /* One full-width 3:4 portrait is most of a phone screen, so force two up.
+     A percentage inside repeat(auto-fill, minmax()) does not resolve reliably,
+     which is why this is a breakpoint rather than a min(). */
+  .hub-cards--portrait {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 1.2rem 0.8rem;
   }
 
   .wiki-table {

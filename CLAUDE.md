@@ -101,6 +101,11 @@ edit the generator's template literal or infobox tuple array and re-run it:
 node scripts/gen-celestials.mjs && node scripts/gen-dominions.mjs
 ```
 
+Both generators import shared helpers rather than carrying their own copies, so the generated and
+hand-authored paths cannot drift: `buildNav` from `scripts/regroup-nav.mjs` and `buildConnections`
+from `scripts/lib/connections.mjs`. Change the nav groups or the connections rules in those files
+and re-run the generators; do not paste markup into the shells.
+
 The generators are the source of truth and currently reproduce all 25 pages byte-for-byte.
 `check-wiki.mjs` enforces this: it re-renders both generators into a scratch directory (via the
 `WIKI_OUT_DIR` env override they accept) and fails if any committed page differs. Any sitewide sweep
@@ -112,7 +117,7 @@ migrations. They guard against re-application and are now no-ops; leave them alo
 
 ## Sync invariants
 
-Adding, renaming or removing a page means touching **seven or eight** things:
+Adding, renaming or removing a page means touching **eleven** things:
 
 1. The `.html` file (copy `templates/article.html`; set `data-root` to `../` or `../../`).
 2. Its category hub — every page must be reachable from `pages/<category>/index.html`.
@@ -125,12 +130,42 @@ Adding, renaming or removing a page means touching **seven or eight** things:
 7. `node scripts/gen-sitemap.mjs` — re-lists the site so crawlers see the new page.
 8. `node scripts/wire-lightbox-script.mjs` — every page that loads `search.js` must also load
    `lightbox.js`; `check-lightbox.mjs` fails otherwise.
+9. `node scripts/wire-theme-toggle.mjs` — the no-flash stamp in `<head>`, the header button, and
+   `theme.js` at the end of `<body>`. See "Theming" below.
+10. `node scripts/regroup-nav.mjs` — the grouped sidebar nav, with `aria-current` resolved against
+    the page. `check-wiki.mjs` fails if any page's nav labels differ from the rest.
+11. `node scripts/build-connections.mjs` — the derived Connections strip, for pages whose infobox
+    links three or more illustrated character pages.
 
-Steps 6 to 8 are all idempotent, so re-running them over an unchanged site is a no-op.
+If the page belongs to a category hub that shows cards, also run
+`node scripts/build-hub-cards.mjs`.
+
+Steps 6 to 11 are all idempotent, so re-running them over an unchanged site is a no-op. Order
+matters in one place only: run the generators **before** the sweeps, never after — the sweeps skip
+generated pages precisely because the generators already produce the same markup.
 
 `data-root` is not decoration: `search.js` reads `document.body.getAttribute("data-root")` to
 resolve index and result paths from nested folders. A wrong value silently breaks search on that
-page only.
+page only. `regroup-nav.mjs` reads it too, to build depth-correct nav hrefs.
+
+## Theming
+
+Dark is the default and light is a full override — neither is a fallback. The design lives in
+`docs/superpowers/specs/2026-07-25-starfield-visual-direction-design.md`.
+
+- Colour is defined **only** in `assets/css/wiki.css` (and `assets/css/hub.css` for the root hub).
+  Nothing else names a colour.
+- The light tokens appear **twice on purpose**: once under `[data-theme="light"]` for an explicit
+  choice, once under `@media (prefers-color-scheme: light) { :root:not([data-theme]) }` for readers
+  who have not chosen, including readers with JavaScript off. Plain CSS cannot share one declaration
+  block between a selector and a media query. **Keep the two blocks identical** — both carry a
+  comment saying so, in each file.
+- The no-flash stamp is inline in every page's `<head>` and must stay there. Moving it into
+  `theme.js` repaints.
+- `theme.js` only owns the button, which ships `hidden` and is revealed by JS, so a reader without
+  JavaScript sees no control that cannot work.
+- `hub.css` duplicates the palette rather than importing it: a book wiki must stay self-contained,
+  and the hub must not depend on any one book's assets. The two are kept in step by hand.
 
 ## Search architecture
 
@@ -221,6 +256,18 @@ Characters are 3:4; everything else is 16:9. `check-images.mjs` prints the curre
 | `inject-infobox-images.mjs` | character and ship images on hand-authored pages |
 | `inject-extra-images.mjs` | place, tech and faction images on hand-authored pages |
 | `wire-lightbox-script.mjs` | ensures every page loading `search.js` also loads `lightbox.js` |
+| `build-hub-cards.mjs` | the card grids on category hubs, with a monogram plate where art is missing |
+| `lib/connections.mjs` + `build-connections.mjs` | the derived Connections strip |
+
+Two rules those last two encode, both deliberate:
+
+- **Hubs get cards only where most entries are illustrated** (`COVERAGE_FLOOR`, currently 60%). A
+  grid of mostly letter-plates reads as broken images, so factions — 4 images across 14 pages —
+  keeps its list while characters, locations and technology get cards.
+- **Connections are derived from the infobox, never hand-written.** A chip is any `<dd>` link to a
+  character page that has a portrait; its `<dt>` becomes the label. So there is no field to maintain
+  and the strip cannot contradict the infobox — but it also only knows what the infobox knows, which
+  is why Finn's strip omits Gyvoy Enfoe. Fewer than three chips renders nothing.
 
 All the injectors are idempotent and skip pages that already carry the markup.
 
