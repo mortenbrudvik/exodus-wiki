@@ -29,8 +29,10 @@ python -m http.server 8080
 .\serve.ps1 -NoBrowser
 ```
 
-Prefer HTTP over `file://`: search `fetch`es its JSON index. A JS fallback index is also shipped so
-`file://` degrades rather than breaking.
+Search itself does not need the server. Every page loads `assets/data/search-index.js` before
+`search.js`, and `loadIndex()` short-circuits on the `window.WIKI_SEARCH_INDEX` global it defines, so
+the JSON `fetch` only runs if that script is missing — search behaves the same over `file://`. Serve
+over HTTP anyway for realistic relative-link behaviour.
 
 ```bash
 # The two checks in the repo. Run both after ANY change to pages, the index, or search.js.
@@ -111,6 +113,9 @@ one:
 
 - `<a class="skip-link" href="#main-content">` as the first child of `<body>`, and
   `id="main-content"` on `<main class="content">`.
+- `<link rel="icon" href="…assets/icons/favicon.svg" type="image/svg+xml">` in the `<head>`, with the
+  same `../` depth as the stylesheet. `check-wiki.mjs` resolves that href and fails if it does not
+  land on a non-empty file.
 - The 11-item sidebar nav, byte-identical across all pages.
 - `aria-current="page"` on the nav link pointing at the current page — only the hub-level pages
   (Main Page, Book, each category index, Dominions roster, Timeline, Plot, Chapters) have a

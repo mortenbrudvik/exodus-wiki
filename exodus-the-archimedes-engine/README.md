@@ -14,7 +14,9 @@ python -m http.server 8080
 
 Then open http://localhost:8080/
 
-Search also loads an embedded index script, so basic search may work via `file://`, but a local server is preferred.
+Search works the same either way: every page loads the embedded `assets/data/search-index.js`, which
+takes precedence over the JSON `fetch`. Serve over HTTP anyway so relative links behave as they do
+on the deployed site.
 
 ## Add a page
 
@@ -24,7 +26,7 @@ Search also loads an embedded index script, so basic search may work via `file:/
 4. Link from the category hub.
 5. Add the **same** entry to `assets/data/search-index.json` and `assets/data/search-index.js`.
 6. Wikilink related articles.
-7. Run `node scripts/check-search-rank.mjs`.
+7. Run both checks (below). `check-wiki.mjs` catches the sync steps above if you miss one.
 
 ## Generated pages
 
@@ -50,8 +52,9 @@ Both exit non-zero on failure, so they work as a pre-commit gate.
 
 `check-wiki.mjs` fails the run on: broken internal links, a page missing from a category hub
 or from the search index, the two index files diverging, a wrong `data-root`, missing skip
-link / `#main-content` / search scripts, a misplaced `aria-current`, sourcing meta-commentary
-in article prose, and any generated page that no longer matches its generator.
+link / `#main-content` / search scripts, a favicon link that does not resolve to a real file, a
+misplaced `aria-current`, sourcing meta-commentary in article prose, and any generated page that
+no longer matches its generator.
 
 It also prints **warnings**, which never fail the run because they need judgement: pages whose
 spelling looks like a stray variant of an established name, thin pages with no stub notice,
@@ -71,6 +74,7 @@ alias or an alternate spelling.
 - Names use the spelling on the subject's own page; ship names are italicised when they mean the
   hull (`the <em>Diligent</em>'s ZPZ`) and left roman when they mean the people (`Diligent settlers`)
 - `Uranic` and `Celestial` are clade names — always capitalised
-- Every page needs `<a class="skip-link" href="#main-content">` as the first child of `<body>` and
-  `id="main-content"` on `<main>`; hub pages carry `aria-current="page"` on their own nav link
+- Every page needs `<a class="skip-link" href="#main-content">` as the first child of `<body>`,
+  `id="main-content"` on `<main>`, and a `rel="icon"` link to `assets/icons/favicon.svg` at the right
+  `../` depth; hub pages carry `aria-current="page"` on their own nav link
 - Pages with no infobox use `<article class="article article--wide">`
