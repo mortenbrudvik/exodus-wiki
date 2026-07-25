@@ -3,6 +3,7 @@ import path from "path";
 import { fileURLToPath } from "url";
 import { seoRegion } from "./lib/seo.mjs";
 import { buildNav } from "./regroup-nav.mjs";
+import { buildConnections } from "./lib/connections.mjs";
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 // WIKI_OUT_DIR lets check-wiki.mjs render into a scratch directory to prove the
@@ -68,16 +69,19 @@ function page({ title, h1, infobox, lead, sections, seeAlso, image, file }) {
           </div>
 `
     : "";
-  const body = `      <article class="article">
-        <header>
-          <h1>${h1}</h1>
-        </header>
-        <aside class="infobox">
+  const infoboxHtml = `        <aside class="infobox">
           <h2>${h1}</h2>
 ${imgBlock}          <dl>
 ${dl}
           </dl>
-        </aside>
+        </aside>`;
+  // The same helper the hand-authored sweep uses, so all 87 pages agree.
+  const connections = buildConnections(infoboxHtml, `pages/factions/${file}`);
+  const body = `      <article class="article">
+        <header>
+          <h1>${h1}</h1>
+        </header>
+${infoboxHtml}
         <p class="lead">
           ${lead}
         </p>
@@ -92,7 +96,8 @@ ${see}
             <li><a href="../characters/celestials-roster.html">Celestials roster</a></li>
           </ul>
         </section>
-
+${connections ? `
+${connections}` : ""}
         <footer class="article-footer categories">
           Categories:
           <a href="index.html">Factions</a> ·
