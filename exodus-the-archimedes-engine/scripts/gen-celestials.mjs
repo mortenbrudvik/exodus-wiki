@@ -585,14 +585,14 @@ const celestials = [
       ["Relation", "Son of Makaio-Faraji; recipient of neural gifts"],
       ["Role", "Continues Makaio protocols after assassination"],
       ["Affiliation", "Wynid archon household; residual opposition"],
-      ["Endgame", "Lends Terence the ship <em>Aecus</em>; aids Clavissa"],
+      ["Endgame", "Lends Terence the ship <em>Aeacus</em>; aids Clavissa"],
     ],
     lead: `<strong>Neusch</strong> is a son of Makaio-Faraji who receives neural gifts before the archon’s death. When the Makaio-Spirit activates inside Terence, Neusch becomes the living continuation of Makaio’s work.`,
     sections: [
       {
         h2: "Heir of a spymaster line",
         paras: [
-          `Neusch lends Terence the ship <em>Aecus</em>, shares information with Clavissa, and carries residual requests to dig into Bekket-network crimes. He inherits his father’s contacts without his father’s rank, and works them inside a court that has already purged the Makaio line.`,
+          `Neusch lends Terence the ship <em>Aeacus</em>, shares information with Clavissa, and carries residual requests to dig into Bekket-network crimes. He inherits his father’s contacts without his father’s rank, and works them inside a court that has already purged the Makaio line.`,
         ],
       },
     ],

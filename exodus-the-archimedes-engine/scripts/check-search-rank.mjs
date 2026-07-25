@@ -56,6 +56,10 @@ const EXPECTED = [
   ["space opera", "pages/book.html"],
   ["hell welcomes careful drivers", "pages/characters/elsbeth-mcquillan.html"],
   ["boksrock", "pages/locations/boksrock.html"],
+  // The ship Neusch lends Terence has no page of its own, so both the correct spelling and the
+  // earlier misspelling resolve to the character the hull belongs to.
+  ["aeacus", "pages/characters/neusch.html"],
+  ["aecus", "pages/characters/neusch.html"],
   // Hazard vocabulary belongs to the page that actually describes the encounter, not to the
   // technology the scene happens to be about: "nightweid" used to land on the Archimedes Engine
   // page, which never mentions them.
