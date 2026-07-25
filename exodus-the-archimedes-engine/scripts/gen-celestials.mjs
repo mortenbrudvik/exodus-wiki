@@ -1,18 +1,20 @@
 import fs from "fs";
 import path from "path";
 import { fileURLToPath } from "url";
+import { seoRegion } from "./lib/seo.mjs";
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 // WIKI_OUT_DIR lets check-wiki.mjs render into a scratch directory to prove the
 // committed pages still match what this script produces.
 const dir = process.env.WIKI_OUT_DIR || path.join(__dirname, "..", "pages", "characters");
 
-const shell = (title, bodyMain) => `<!DOCTYPE html>
+const shell = (title, bodyMain, relPath) => `<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>${title} — Exodus Wiki</title>
+${seoRegion(relPath)}
   <link rel="stylesheet" href="../../assets/css/wiki.css">
   <link rel="icon" href="../../assets/icons/favicon.svg" type="image/svg+xml">
 </head>
@@ -55,7 +57,7 @@ ${bodyMain}
 </html>
 `;
 
-function page({ title, h1, infobox, lead, sections, seeAlso, image }) {
+function page({ title, h1, infobox, lead, sections, seeAlso, image, file }) {
   const dl = infobox
     .map(([dt, dd]) => `            <dt>${dt}</dt>\n            <dd>${dd}</dd>`)
     .join("\n");
@@ -105,7 +107,7 @@ ${see}
           <a href="celestials-roster.html">Celestials</a>
         </footer>
       </article>`;
-  return shell(title, body);
+  return shell(title, body, `pages/characters/${file}`);
 }
 
 const celestials = [
@@ -637,7 +639,10 @@ const celestials = [
 
 for (const c of celestials) {
   const image = c.file.replace(/\.html$/, ".jpg");
-  fs.writeFileSync(path.join(dir, c.file), page({ ...c, image }), "utf8");
+  // These pages are CRLF on disk; seoRegion() joins with "\n", so normalize before writing
+  // or the injected block would be the only LF region in the file.
+  const html = page({ ...c, image }).replace(/\r?\n/g, "\r\n");
+  fs.writeFileSync(path.join(dir, c.file), html, "utf8");
   console.log("wrote", c.file);
 }
 console.log("done", celestials.length);

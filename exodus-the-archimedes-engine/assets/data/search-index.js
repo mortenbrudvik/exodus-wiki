@@ -3,7 +3,7 @@ window.WIKI_SEARCH_INDEX = [
     "title": "Main Page",
     "path": "index.html",
     "category": "Main",
-    "summary": "Exodus wiki home and spoiler notice",
+    "summary": "Character, location, faction, technology, timeline and plot articles",
     "keywords": [
       "home",
       "start",

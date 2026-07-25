@@ -1,18 +1,20 @@
 import fs from "fs";
 import path from "path";
 import { fileURLToPath } from "url";
+import { seoRegion } from "./lib/seo.mjs";
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 // WIKI_OUT_DIR lets check-wiki.mjs render into a scratch directory to prove the
 // committed pages still match what this script produces.
 const dir = process.env.WIKI_OUT_DIR || path.join(__dirname, "..", "pages", "factions");
 
-const shell = (title, bodyMain) => `<!DOCTYPE html>
+const shell = (title, bodyMain, relPath) => `<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>${title} — Exodus Wiki</title>
+${seoRegion(relPath)}
   <link rel="stylesheet" href="../../assets/css/wiki.css">
   <link rel="icon" href="../../assets/icons/favicon.svg" type="image/svg+xml">
 </head>
@@ -55,7 +57,7 @@ ${bodyMain}
 </html>
 `;
 
-function page({ title, h1, infobox, lead, sections, seeAlso, image }) {
+function page({ title, h1, infobox, lead, sections, seeAlso, image, file }) {
   const dl = infobox
     .map(([dt, dd]) => `            <dt>${dt}</dt>\n            <dd>${dd}</dd>`)
     .join("\n");
@@ -106,7 +108,7 @@ ${see}
           <a href="dominions-roster.html">Dominions</a>
         </footer>
       </article>`;
-  return shell(title, body);
+  return shell(title, body, `pages/factions/${file}`);
 }
 
 const dominions = [
@@ -347,7 +349,10 @@ const dominions = [
 ];
 
 for (const d of dominions) {
-  fs.writeFileSync(path.join(dir, d.file), page(d), "utf8");
+  // These pages are LF on disk; keep the whole file LF regardless of this script's own
+  // line endings so the injected seoRegion() block cannot introduce a mixed-ending file.
+  const html = page(d).replace(/\r\n/g, "\n");
+  fs.writeFileSync(path.join(dir, d.file), html, "utf8");
   console.log("wrote", d.file);
 }
 console.log("done", dominions.length);
