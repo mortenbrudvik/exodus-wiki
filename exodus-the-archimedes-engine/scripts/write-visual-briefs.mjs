@@ -31,8 +31,10 @@ const briefs = [
     ],
     clothing: "Mixed Uranic estate fashion and Traveler field kit — dark tailored jacket over practical spacer layers, neural-compatible gloves",
     setting: "Neutral dark space-station backdrop with faint Gondiar green-world glow",
-    prompt: `${STYLE} Portrait of Finn Jalgori-Tobu, a 25-year-old Uranic human aristocrat from a far-future space empire: athletic young man with aristocratic features, subtle neural interface ports at the temples, restless determined eyes, wearing a dark tailored spacer jacket over practical field layers. Client nobility aesthetic, not godlike alien. Upper-body three-quarter portrait, soft starfield and estate architecture behind him.`,
-    inference: ["Hair/eye colour not fixed in wiki — dark hair, medium-warm skin as default Gondiar client aristocracy"],
+    prompt: `${STYLE} Portrait of Finn Jalgori-Tobu, a 25-year-old Uranic human aristocrat from a far-future space empire: athletic young man with aristocratic East Asian features, straight black hair and warm medium skin tone, subtle neural interface ports at the temples, restless determined eyes, wearing a dark tailored spacer jacket over practical field layers. Client nobility aesthetic, not godlike alien. Upper-body three-quarter portrait, soft starfield and estate architecture behind him.`,
+    inference: [
+      "Hair/eye colour and ancestry are not fixed in the wiki. The delivered portrait's East Asian colouring is now stated in the prompt so that it is reproducible and so that his twin Otylia and sister Zelinda can be locked to the same family appearance",
+    ],
     image: "assets/images/characters/finn-jalgori-tobu.jpg",
   },
   {
@@ -135,8 +137,10 @@ const briefs = [
     ],
     clothing: "Uranic ministerial formalwear — clean tailored coat, estate colours",
     setting: "Palace/ministerial office soft light",
-    prompt: `${STYLE} Portrait of Otylia Jalgori-Tobu, a 25-year-old Uranic aristocratic twin sister and political manager: composed young woman with intelligent steady eyes, subtle neural interface ports, tailored ministerial coat in deep teal and black. Institutional calm. Upper-body portrait, soft palace office light.`,
-    inference: ["Family resemblance to Finn implied — shared features, different affect"],
+    prompt: `${STYLE} Portrait of Otylia Jalgori-Tobu, a 25-year-old Uranic aristocratic twin sister and political manager: composed young woman with intelligent steady eyes, subtle neural interface ports, tailored ministerial coat in deep teal and black. She is the twin of Finn Jalgori-Tobu and must share his ancestry and colouring — the same East Asian features, straight black hair and warm medium skin tone — differing in affect, not in family resemblance. Institutional calm. Upper-body portrait, soft palace office light.`,
+    inference: [
+      "Family resemblance to Finn is stated in the wiki (twin), so colouring is locked to his in the prompt itself — not left to the generator",
+    ],
     image: "assets/images/characters/otylia-jalgori-tobu.jpg",
   },
   {
@@ -152,8 +156,10 @@ const briefs = [
     ],
     clothing: "Formal heir dress of Gondiar client nobility — rich but not Celestial-scale robes",
     setting: "Estate salon with livestone architectural hint",
-    prompt: `${STYLE} Portrait of Zelinda Jalgori-Tobu, Uranic aristocratic heir of a client noble family: composed young woman with pragmatic confident expression, subtle neural ports, elegant deep-burgundy formal gown with estate jewellery (not alien bloodstone). Upper-body portrait, warm salon light and subtle livestone wall texture.`,
-    inference: [],
+    prompt: `${STYLE} Portrait of Zelinda Jalgori-Tobu, Uranic aristocratic heir of a client noble family: composed young woman with pragmatic confident expression, subtle neural ports, elegant deep-burgundy formal gown with estate jewellery (not alien bloodstone). She is the elder sister of Finn and Otylia Jalgori-Tobu and shares the family's ancestry and colouring — East Asian features, straight black hair, warm medium skin tone. Upper-body portrait, warm salon light and subtle livestone wall texture.`,
+    inference: [
+      "Sister to Finn and Otylia, so colouring is locked to the family's in the prompt itself — not left to the generator",
+    ],
     image: "assets/images/characters/zelinda-jalgori-tobu.jpg",
   },
 

@@ -174,7 +174,7 @@ idempotent and skips any page that already has `.infobox-image`. `check-images.m
 current counts.
 
 The illustrations are **inferred, not canonical** — no likeness is described in the novel. A full
-review of all 46 is in `docs/visual-briefs/IMAGE-REVIEW.md` (38 pass, 3 query, 5 fail). Four rules
+review of all 46 is in `docs/visual-briefs/IMAGE-REVIEW.md` (37 pass, 3 query, 6 fail). Five rules
 follow, and every one has been violated in shipped assets:
 
 - **No text inside an image.** No caption bars, ranks, house names, service numbers or dates. The
@@ -187,6 +187,11 @@ follow, and every one has been violated in shipped assets:
   public; the negative prompt must exclude brand marks explicitly.
 - **Match the clade body plan.** Heresy Celestials have *four* arms, not six — check the count
   against `heresy-dominion.html` rather than trusting a convincing silhouette.
+- **Related characters must look related, and the constraint goes in the `prompt` string.** Finn,
+  his twin Otylia and his sister Zelinda shipped as three unrelated ancestries. The requirement was
+  written down — in `inference[]`, which is documentation the generator never reads. Only `prompt`
+  reaches the image. Check each subject's infobox for stated kinship, and review families side by
+  side: every one of those three portraits passed on its own.
 - **Anything the novel does not fix goes under "Inference flags"** in the brief, not under
   "Physical / design cues (research)". Hair and eye colour, and any visible hardware, are
   inferences unless a page says otherwise.

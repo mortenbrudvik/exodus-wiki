@@ -25,12 +25,12 @@ Neutral dark space-station backdrop with faint Gondiar green-world glow
 
 ## Inference flags
 
-- Hair/eye colour not fixed in wiki — dark hair, medium-warm skin as default Gondiar client aristocracy
+- Hair/eye colour and ancestry are not fixed in the wiki. The delivered portrait's East Asian colouring is now stated in the prompt so that it is reproducible and so that his twin Otylia and sister Zelinda can be locked to the same family appearance
 
 ## Generation prompt
 
 ```
-Highly detailed cinematic sci-fi encyclopedia illustration, rich textures, sharp focus, painterly digital art with photographic detail, soft volumetric lighting, no text, no watermark, no UI chrome. Portrait of Finn Jalgori-Tobu, a 25-year-old Uranic human aristocrat from a far-future space empire: athletic young man with aristocratic features, subtle neural interface ports at the temples, restless determined eyes, wearing a dark tailored spacer jacket over practical field layers. Client nobility aesthetic, not godlike alien. Upper-body three-quarter portrait, soft starfield and estate architecture behind him.
+Highly detailed cinematic sci-fi encyclopedia illustration, rich textures, sharp focus, painterly digital art with photographic detail, soft volumetric lighting, no text, no watermark, no UI chrome. Portrait of Finn Jalgori-Tobu, a 25-year-old Uranic human aristocrat from a far-future space empire: athletic young man with aristocratic East Asian features, straight black hair and warm medium skin tone, subtle neural interface ports at the temples, restless determined eyes, wearing a dark tailored spacer jacket over practical field layers. Client nobility aesthetic, not godlike alien. Upper-body three-quarter portrait, soft starfield and estate architecture behind him.
 ```
 
 ## Sources

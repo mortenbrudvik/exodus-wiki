@@ -7,16 +7,20 @@ inside a JPEG, so this sweep is the only thing standing between an invented fact
 
 | Verdict | Count | Meaning |
 |---|---:|---|
-| **PASS** | 38 | Consistent with the wiki; safe to keep |
+| **PASS** | 37 | Consistent with the wiki; safe to keep |
 | **QUERY** | 3 | Defensible but worth a decision |
-| **FAIL** | 5 | Contradicts the wiki or carries third-party IP — regenerate |
+| **FAIL** | 6 | Contradicts the wiki or carries third-party IP — regenerate |
+
+> **Judge families together, not image by image.** The first pass reviewed each portrait in
+> isolation and passed the Jalgori-Tobu siblings individually. Side by side they contradict the
+> wiki outright — see failure 6.
 
 Every textual claim found inside an image was checked against the wiki by grep. Counts below are
 page hits across `pages/`.
 
 ---
 
-## FAIL — regenerate these five
+## FAIL — regenerate these six
 
 ### 1. `finn-jalgori-tobu` — caption bar inventing rank and date
 
@@ -76,6 +80,38 @@ The image shows **six arms**, not four — eight limbs against the wiki's six. E
 right (elongated cranium matching "expanded skulls", cool pallor, alien-cut robes), which is why it
 reads as convincing at a glance.
 
+### 6. `otylia-jalgori-tobu` + `zelinda-jalgori-tobu` — siblings with three different ancestries
+
+Finn's infobox states **"Twin of Otylia"**, and the prose repeats it ("His twin sister Otylia",
+"Finn's twin"). Zelinda is his sister and the family heir. The three portraits render:
+
+| Sibling | Relation | As drawn |
+|---|---|---|
+| `finn-jalgori-tobu` | — | East Asian, straight black hair, warm medium skin |
+| `otylia-jalgori-tobu` | **twin** | Fair-skinned, blonde, Northern European features |
+| `zelinda-jalgori-tobu` | sister, heir | Dark-haired, olive/Mediterranean features |
+
+Three siblings of the same two parents, drawn as three unrelated ancestries — and the twin is the
+furthest from him. This is not an inference gap the novel leaves open: the kinship is stated
+canon, and no reading of it produces this.
+
+**Root cause, and it is a process bug rather than a prompting accident.** In
+`write-visual-briefs.mjs` each subject carries `prompt` and `inference` as *separate fields*. Only
+`prompt` reaches the generator; `inference` is documentation. The constraint existed and was
+written down — Otylia's brief says under Physical cues *"Young woman twin to Finn ~25"* and flags
+*"Family resemblance to Finn implied — shared features, different affect"* — but it lived entirely
+in fields the generator never sees. Her prompt said "twin sister" and nothing about resembling
+him. Finn's own flag named "dark hair, medium-warm skin" as the intended default; his prompt said
+only "aristocratic features". Three portraits, three independent samplings.
+
+The source even groups them under a `// —— Jalgori-Tobu family ——` comment. The family was known;
+the requirement just never crossed into the contract.
+
+**Fixed in the briefs.** All three prompts now state the shared family appearance explicitly, with
+Finn's delivered colouring as the anchor so the sisters match him rather than the reverse. The
+images still need regenerating. Note Finn must be regenerated anyway for his caption bar, so the
+anchor and the two sisters should be produced in the same pass.
+
 ---
 
 ## QUERY — your call
@@ -120,7 +156,8 @@ These are consistent with the wiki. Notes are refinements, not defects.
 | `luus` | Reads as an older human woman; the Celestial scale cue is weaker than on Helena or Carolien |
 | `gyvoy-enfoe` | Holographic panel with pseudo-glyphs, against the brief's "no UI chrome" |
 | `dagon`, `terence-wilson-fletcher` | Heavy neon-noir styling, divergent from the README's "cool-neutral palette, encyclopedia seriousness" |
-| `zelinda-jalgori-tobu` | Renaissance-portrait styling rather than "cinematic sci-fi"; canon-clean |
+| `josias-aponi` / `eleanor-aponi` | Grandfather and granddaughter, and they do not read as related either — he is olive/Mediterranean, she is fair European. Two generations and a "long-lived exodus lineage" make this far weaker than the twin case, so it stays a note rather than a failure. Worth locking if either is regenerated |
+| `bekket` / `dagon` | The one family that *works*: Thyra's father and uncle share pale skin, black hair and amber eyes, and Thyra is dark-haired like her father |
 
 Clean with nothing to add: `acelynn`, `avone-valerio`, `bekket`, `carolien-amaia`, `clavissa`,
 `dejean`, `inessa-pierina`, `lord-gahiji`, `lord-jolav`, `medusa`, `ramona-ursule`, `sahdiah`,
@@ -140,6 +177,11 @@ Clean with nothing to add: `acelynn`, `avone-valerio`, `bekket`, `carolien-amaia
   bars, and nothing addressed real-world logos at all.
 - **Partial accuracy is the trap.** Neusch's caption is half right. A reviewer skimming for
   nonsense would pass it.
+- **`inference[]` is documentation; `prompt` is the contract.** The sibling failure was written
+  down correctly in the brief and still happened, because the note lived in a field the generator
+  never reads. Anything that must hold in the image belongs in the prompt string.
+- **Per-image review misses per-family defects.** Every sibling portrait passed on its own. Judge
+  related characters side by side, and check the stated kinship in each infobox before signing off.
 
 ## Fixing
 

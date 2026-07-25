@@ -40,7 +40,12 @@ See individual `*.md` briefs in this folder. Filenames match page slugs.
 ## Review
 
 `check-images.mjs` cannot see inside a JPEG, so delivered assets are checked by eye. All 46 were
-reviewed on 25 July 2026 — results in [IMAGE-REVIEW.md](IMAGE-REVIEW.md): 38 pass, 3 query, 5 fail.
+reviewed on 25 July 2026 — results in [IMAGE-REVIEW.md](IMAGE-REVIEW.md): 37 pass, 3 query, 6 fail.
+
+**`inference[]` in `write-visual-briefs.mjs` is documentation — only `prompt` reaches the
+generator.** Anything that must hold in the delivered image goes in the prompt string. Family
+resemblance is the case that already failed this way: Finn, his twin Otylia and his sister Zelinda
+shipped as three unrelated ancestries even though the briefs recorded the requirement.
 
 Every canon-breaking defect found was **text burned into the image**. Caption bars invented houses,
 ranks and dates (`House Veyl`, `3rd Scion`, `2784.4`, `c. 478 Post-Collapse`) that appear nowhere in
