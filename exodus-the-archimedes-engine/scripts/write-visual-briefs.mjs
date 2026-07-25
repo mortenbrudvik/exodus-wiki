@@ -12,7 +12,12 @@ const outDir = path.join(__dirname, "..", "docs", "visual-briefs");
 const STYLE =
   "Highly detailed cinematic sci-fi encyclopedia illustration, rich textures, sharp focus, painterly digital art with photographic detail, soft volumetric lighting, no text, no watermark, no UI chrome.";
 
-/** @typedef {{ slug: string, title: string, kind: 'character'|'ship', clade: string, role: string, cues: string[], clothing: string, setting: string, prompt: string, inference: string[], image: string }} Brief */
+/**
+ * `sources` is optional and overrides the generic two-bullet default. Set it whenever a brief
+ * cites a specific page or chapter of the novel — without it the citation lives only in the
+ * generated .md and the next run of this script silently discards it.
+ */
+/** @typedef {{ slug: string, title: string, kind: 'character'|'ship', clade: string, role: string, cues: string[], clothing: string, setting: string, prompt: string, inference: string[], sources?: string[], image: string }} Brief */
 
 /** @type {Brief[]} */
 const briefs = [
@@ -543,6 +548,12 @@ const briefs = [
       "Skin tone and exact eye arrangement not fixed by the novel",
       "Pronouns she/her (reader-confirmed)",
     ],
+    sources: [
+      "Book 1 ch. 31 (five eyes / primary biological body / nurture chamber) — reader-confirmed",
+      "Book 1 (multi-body architecture, mind partition, bodymorph, gravity form) — reader-confirmed",
+      "Wiki `pages/characters/sahdiah.html`, `pages/factions/talloch-te-dominion.html`",
+      "Fandom Talloch-Te Dominion — agrees on the multi-body clade, but the book is the authority",
+    ],
     image: "assets/images/characters/sahdiah.jpg",
   },
 
@@ -664,6 +675,11 @@ const briefs = [
     prompt: `${STYLE} Exterior plate of the Arcadia’s Moon, an atypical Traveler charter starship: open geodesic sphere of golden metallic trusses enclosing exactly eight sky-blue ovoid elements that can move around inside the sphere and reconfigure their alignment depending on flight status. Warm gold lattice cage, smooth sky-blue ovoid modules with subtle metallic sheen, not a conventional freighter and not a navy capital. Three-quarter view in deep space near a ringed gas giant. Absolutely no text of any kind: no captions, no labels, no lettering, no logos, no brand marks, no hull names, no UI chrome, no watermarks.`,
     inference: [
       "Sky-blue ovoid colour is secondary paraphrase (Fandom); novel p. 241 does not fix colour — keep colour out of article prose",
+    ],
+    sources: [
+      "Wiki article `pages/locations/arcadias-moon.html`",
+      "Book 1 p. 241 (geodesic golden trusses + eight ovoids that slide inside the sphere) — see `docs/external-sources-research.md`",
+      "Sky-blue: secondary paraphrase only; used in art, not in article prose",
     ],
     image: "assets/images/ships/arcadias-moon.jpg",
   },
@@ -794,8 +810,12 @@ ${b.prompt}
 
 ## Sources
 
-- Wiki article \`pages/${b.kind === "ship" ? "locations" : "characters"}/${b.slug}.html\`
-- Clade grammar: \`docs/visual-briefs/README.md\`, faction pages (Celestials / Uranics / Travelers / Heresy)
+${(b.sources ?? [
+  `Wiki article \`pages/${b.kind === "ship" ? "locations" : "characters"}/${b.slug}.html\``,
+  "Clade grammar: `docs/visual-briefs/README.md`, faction pages (Celestials / Uranics / Travelers / Heresy)",
+])
+  .map((s) => `- ${s}`)
+  .join("\n")}
 `;
 }
 
