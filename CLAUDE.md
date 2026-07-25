@@ -35,15 +35,16 @@ the JSON `fetch` only runs if that script is missing — search behaves the same
 over HTTP anyway for realistic relative-link behaviour.
 
 ```bash
-# The three checks in the repo. Run all three after ANY change to pages, the index, search.js,
-# or the images.
+# The four checks in the repo. Run all four after ANY change to pages, the index, search.js,
+# the images, or the SEO block.
 cd exodus-the-archimedes-engine
 node scripts/check-wiki.mjs         # structure, chrome, voice, name drift, generator sync
 node scripts/check-search-rank.mjs  # search folding and ranking
 node scripts/check-images.mjs       # brief, asset and infobox-markup coverage for every image
+node scripts/check-seo.mjs          # descriptions, canonicals, social tags, sitemap, robots.txt
 ```
 
-All three exit non-zero on failure. `check-wiki.mjs` additionally prints advisory **warnings** that
+All four exit non-zero on failure. `check-wiki.mjs` additionally prints advisory **warnings** that
 deliberately do not fail the run (possible name drift, thin pages without a stub notice, orphans,
 index titles disagreeing with their `h1`) — 8 thin-page warnings are the expected baseline.
 
@@ -52,6 +53,35 @@ cannot see *inside* a JPEG. Nothing burned into an image (captions, dates, title
 checkable, so image content is reviewed by eye. See "Illustrations" below.
 
 `check-wiki.mjs --quiet` suppresses the per-check progress lines. There is no linter or formatter.
+
+## Findability (SEO)
+
+The site is public and meant to be found. Every indexed page carries a `<!-- seo:start -->` …
+`<!-- seo:end -->` block with a meta description, an absolute `rel="canonical"`, Open Graph and
+Twitter-card tags. `sitemap.xml` and `robots.txt` live at the **site root**, not the book root.
+
+`scripts/lib/seo.mjs` is the single source of that block. Three consumers call it, so they cannot
+drift — and `check-wiki.mjs` re-renders the generators, so a mismatch fails the build:
+
+| Producer | Covers |
+|---|---|
+| `scripts/apply-seo.mjs` | the 62 hand-authored pages (idempotent; rewrites the marked region) |
+| `gen-celestials.mjs` / `gen-dominions.mjs` | the 25 generated pages, via the same `seoRegion()` |
+| `scripts/gen-sitemap.mjs` | site-root `sitemap.xml` + `robots.txt` |
+
+Descriptions are **derived from the `summary` field in `search-index.json`**, plus a shared tagline
+naming the book and author. So a summary is now doing two jobs — search snippet and search-engine
+description — and editing one updates both after `apply-seo.mjs` re-runs. Never hand-edit inside the
+seo markers; edit the summary or `lib/seo.mjs` and re-run.
+
+`search.html` is `noindex,follow` and excluded from the sitemap: a search-results page is thin,
+duplicate-by-construction content. Site-wide URLs are absolute and hardcoded to
+`https://mortenbrudvik.github.io/my-books` in `lib/seo.mjs` — that constant is the one place to
+change if the domain ever does.
+
+The two generators write different line endings (celestials CRLF, dominions LF) and normalize the
+whole page at write time, because `seoRegion()` joins with `\n`. Don't "fix" either to match the
+other.
 
 ## The generated-pages trap
 
@@ -81,7 +111,7 @@ migrations. They guard against re-application and are now no-ops; leave them alo
 
 ## Sync invariants
 
-Adding, renaming or removing a page means touching **four or five** things:
+Adding, renaming or removing a page means touching **six or seven** things:
 
 1. The `.html` file (copy `templates/article.html`; set `data-root` to `../` or `../../`).
 2. Its category hub — every page must be reachable from `pages/<category>/index.html`.
@@ -89,6 +119,11 @@ Adding, renaming or removing a page means touching **four or five** things:
 4. `assets/data/search-index.js` — the `file://` fallback, which must be **content-identical** to
    the JSON. Safest approach: mutate the JSON, then write both files from the same in-memory object.
 5. The generator, if the page is one of the 25.
+6. `node scripts/apply-seo.mjs` — inserts the page's description/canonical/social block. It reads
+   the summary from step 3, so do it after the index, not before.
+7. `node scripts/gen-sitemap.mjs` — re-lists the site so crawlers see the new page.
+
+Steps 6 and 7 are both idempotent, so re-running them over an unchanged site is a no-op.
 
 `data-root` is not decoration: `search.js` reads `document.body.getAttribute("data-root")` to
 resolve index and result paths from nested folders. A wrong value silently breaks search on that
