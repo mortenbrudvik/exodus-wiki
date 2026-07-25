@@ -1,7 +1,5 @@
 # https://mortenbrudvik.github.io/exodus-wiki/
 User-agent: *
 Allow: /
-Disallow: /docs/
-Disallow: /exodus-the-archimedes-engine/docs/
 
 Sitemap: https://mortenbrudvik.github.io/exodus-wiki/sitemap.xml

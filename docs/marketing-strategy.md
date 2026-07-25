@@ -7,7 +7,7 @@
 
 **Status:** strategy only. This document does not run campaigns, change wiki product code, buy ads, or claim official endorsement. A human maintainer executes outreach by hand.
 
-**This file is public.** It is committed to a public repository and deployed with the site. It is written to be read by every community it names, and nothing in it should need to be private. Compiled 25 July 2026 — re-sequence whenever a date inside this file has passed.
+**This file is public.** Maintainer docs are excluded from the published website, but this is a public repository and anyone can read this file on GitHub — including every community it names. It is written on that assumption, and nothing in it should need to be private. Compiled 25 July 2026 — re-sequence whenever a date inside this file has passed.
 
 **Companion research:** in-repo franchise landscape is inventoried in [`exodus-the-archimedes-engine/docs/external-sources-research.md`](../exodus-the-archimedes-engine/docs/external-sources-research.md). Live product framing lives in the root [`README.md`](../README.md).
 

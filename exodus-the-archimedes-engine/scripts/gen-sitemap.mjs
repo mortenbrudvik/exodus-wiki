@@ -37,15 +37,13 @@ ${urls.map((u) => `  <url><loc>${u}</loc></url>`).join("\n")}
 </urlset>
 `;
 
-// Maintainer docs ship with the site because the Pages workflow uploads the repo root
-// verbatim. They are working notes, not reader content, so keep them out of search results
-// rather than letting them compete with articles. This hides nothing — the repository is
-// public and every one of these files is readable on GitHub.
+// No Disallow rules here, deliberately. Crawlers fetch robots.txt from the host root
+// only, and this is a project site — the file deployed at ${SITE}/robots.txt is never
+// consulted for crawl directives, so any rule written here would be decorative. Maintainer
+// docs are kept off the site by pages.yml, which prunes them before upload.
 const robots = `# ${SITE}/
 User-agent: *
 Allow: /
-Disallow: /docs/
-Disallow: /${BOOK}/docs/
 
 Sitemap: ${SITE}/sitemap.xml
 `;

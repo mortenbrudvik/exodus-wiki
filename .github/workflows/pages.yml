@@ -25,6 +25,14 @@ jobs:
         uses: actions/checkout@v4
       - name: Configure Pages
         uses: actions/configure-pages@v5
+      - name: Drop maintainer docs from the published site
+        # The artifact is the repo root verbatim, so working notes would ship as
+        # crawlable pages. robots.txt cannot exclude them: crawlers only read the
+        # host-root robots.txt, and this is a project site at /exodus-wiki/, so the
+        # one deployed here is never consulted. Excluding at publish time is the
+        # only mechanism that actually works. Affects the runner's checkout only —
+        # the files stay in the repository, which is public and stays that way.
+        run: rm -rf docs exodus-the-archimedes-engine/docs
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
