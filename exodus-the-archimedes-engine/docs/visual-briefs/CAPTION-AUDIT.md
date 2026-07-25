@@ -18,7 +18,7 @@ is non-blank; it cannot read what is drawn or written inside a JPEG, so nothing 
 
 Mark the box once checked. Record the verdict inline so a later pass does not repeat the work.
 
-**Progress: 6 of 44 reviewed · 2 confirmed failures.**
+**Progress: 6 of 46 reviewed · 2 confirmed failures.**
 
 | ✓ | Slug | Kind | Links | Verdict |
 |---|------|------|-------|---------|
@@ -61,11 +61,13 @@ Mark the box once checked. Record the verdict inline so a later pass does not re
 | [ ] | `valdier` | character | [image](../../assets/images/characters/valdier.jpg) · [page](../../pages/characters/valdier.html) |  |
 | [ ] | `zelinda-jalgori-tobu` | character | [image](../../assets/images/characters/zelinda-jalgori-tobu.jpg) · [page](../../pages/characters/zelinda-jalgori-tobu.html) |  |
 | [ ] | `zuberi-dulcina` | character | [image](../../assets/images/characters/zuberi-dulcina.jpg) · [page](../../pages/characters/zuberi-dulcina.html) |  |
+| [ ] | `aeacus` | ship | [image](../../assets/images/ships/aeacus.jpg) · [page](../../pages/locations/aeacus.html) |  |
 | [ ] | `alumata` | ship | [image](../../assets/images/ships/alumata.jpg) · [page](../../pages/locations/alumata.html) |  |
 | [ ] | `arcadias-moon` | ship | [image](../../assets/images/ships/arcadias-moon.jpg) · [page](../../pages/locations/arcadias-moon.html) |  |
 | [x] | `arkship-diligent` | ship | [image](../../assets/images/ships/arkship-diligent.jpg) · [page](../../pages/locations/arkship-diligent.html) | **PASS** — No caption. Reads as a city-scale generation arkship. |
 | [ ] | `cybeles-eagle` | ship | [image](../../assets/images/ships/cybeles-eagle.jpg) · [page](../../pages/locations/cybeles-eagle.html) |  |
 | [ ] | `lestari` | ship | [image](../../assets/images/ships/lestari.jpg) · [page](../../pages/locations/lestari.html) |  |
+| [ ] | `polkadav` | ship | [image](../../assets/images/ships/polkadav.jpg) · [page](../../pages/locations/polkadav.html) |  |
 
 ## Fixing a failure
 

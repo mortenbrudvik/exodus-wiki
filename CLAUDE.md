@@ -40,7 +40,7 @@ over HTTP anyway for realistic relative-link behaviour.
 cd exodus-the-archimedes-engine
 node scripts/check-wiki.mjs         # structure, chrome, voice, name drift, generator sync
 node scripts/check-search-rank.mjs  # search folding and ranking
-node scripts/check-images.mjs       # brief, asset and infobox-markup coverage for all 44 images
+node scripts/check-images.mjs       # brief, asset and infobox-markup coverage for every image
 ```
 
 All three exit non-zero on failure. `check-wiki.mjs` additionally prints advisory **warnings** that
@@ -166,10 +166,12 @@ These are enforced conventions, not suggestions, and past passes have violated t
 
 ## Illustrations
 
-44 infobox images live under `assets/images/{characters,ships}/`, each backed by a maintainer brief
-in `docs/visual-briefs/`. Characters come in at 3:4, ships at 16:9. The 18 Celestial portraits are
-emitted by `gen-celestials.mjs`; the other 26 were placed by `scripts/inject-infobox-images.mjs`,
-which is idempotent and skips any page that already has `.infobox-image`.
+Infobox images live under `assets/images/{characters,ships}/`, each backed by a maintainer brief in
+`docs/visual-briefs/` and listed in that folder's `index.json`. Characters come in at 3:4, ships at
+16:9. Celestial portraits are emitted by `gen-celestials.mjs` — the generated-pages trap applies, so
+never hand-edit those; every other page is served by `scripts/inject-infobox-images.mjs`, which is
+idempotent and skips any page that already has `.infobox-image`. `check-images.mjs` prints the
+current counts.
 
 The illustrations are **inferred, not canonical** — no likeness is described in the novel. Two rules
 follow, and both have been violated before:
