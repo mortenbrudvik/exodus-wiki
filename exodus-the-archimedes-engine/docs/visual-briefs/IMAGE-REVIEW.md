@@ -7,13 +7,36 @@ inside a JPEG, so this sweep is the only thing standing between an invented fact
 
 | Verdict | Count | Meaning |
 |---|---:|---|
-| **PASS** | 37 | Consistent with the wiki; safe to keep |
-| **QUERY** | 3 | Defensible but worth a decision |
-| **FAIL** | 6 | Contradicts the wiki or carries third-party IP — regenerate |
+| **PASS** | 46 | After regen (25 July 2026 evening): prior 6 FAIL + 3 QUERY replaced |
+| **QUERY** | 0 | Cleared by regen |
+| **FAIL** | 0 | Cleared by regen |
+
+Historical first-pass tally (before regen): 37 pass · 3 query · 6 fail. Detail of that pass is kept below for process lessons; **shipped files are the regenerations** listed under [Regeneration log](#regeneration-log).
 
 > **Judge families together, not image by image.** The first pass reviewed each portrait in
 > isolation and passed the Jalgori-Tobu siblings individually. Side by side they contradict the
 > wiki outright — see failure 6.
+
+## Regeneration log
+
+**2026-07-25 (post-review).** Regenerated all six FAIL and three QUERY subjects with a widened
+no-text constraint (*no caption bars, name plates, lettering, logos, brand marks*). Olomo
+prompt states *exactly four arms / two legs*. Jalgori-Tobu sisters produced via `image_edit`
+chained from the new Finn portrait so ancestry matches.
+
+| Slug | Prior defect | Regen check |
+|---|---|---|
+| `finn-jalgori-tobu` | Invented caption / date | No caption; East Asian family anchor |
+| `thyra` | Invented caption / calendar | No caption; bloodstone queen |
+| `neusch` | Top caption, House Veyl, age | No caption |
+| `olomo` | Six arms vs four | Four arms visible, expanded skull |
+| `otylia-jalgori-tobu` | Chanel logos + non-matching twin | Teal coat, East Asian twin of Finn, no logos |
+| `zelinda-jalgori-tobu` | Non-matching sister | Burgundy heir dress, same family colouring |
+| `eleanor-aponi` | CYCLE 9 name tape | Blank tapes; no rank lettering |
+| `marcellu` | MARCE-17 marking | Clean suit, no serial |
+| `asahi-iryna` | Empire-like cog emblem | Crystal bloodstone ornament only |
+
+No HTML path changes; same `assets/images/characters/<slug>.jpg` targets.
 
 Every textual claim found inside an image was checked against the wiki by grep. Counts below are
 page hits across `pages/`.
