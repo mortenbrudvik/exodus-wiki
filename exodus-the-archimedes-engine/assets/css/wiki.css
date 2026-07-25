@@ -40,6 +40,13 @@
   --font: var(--sans);
 }
 
+/* The light tokens are declared twice on purpose. Once for an explicit reader
+   choice, and once behind prefers-color-scheme for readers who have not chosen —
+   including readers with JavaScript off, who never get the data-theme stamp.
+   Plain CSS has no way to share one declaration block between a selector and a
+   media query, and honouring the OS preference without JS is worth 20 lines.
+   Keep the two blocks identical. */
+
 [data-theme="light"] {
   color-scheme: light;
 
@@ -64,6 +71,34 @@
   --info-bg: #edf5fa;
   --info-line: #bcd9e9;
   --shot-bg: #0c1018;
+}
+
+@media (prefers-color-scheme: light) {
+  :root:not([data-theme]) {
+    color-scheme: light;
+
+    --bg: #f7f8fa;
+    --panel: #ffffff;
+    --raised: #eef1f5;
+    --line: #dde2e9;
+    --line-soft: #e8ecf1;
+    --text: #151a21;
+    --lead-text: #0d1116;
+    --muted: #5a6472;
+    --dim: #7b8593;
+    --accent: #10627a;
+    --accent-dim: #8fc0cd;
+    --accent-soft: rgba(16, 98, 122, 0.07);
+    --visited: #6b4a8c;
+    --visited-dim: #c3aed6;
+    --warn: #8a5d10;
+    --warn-bg: #fdf6e6;
+    --warn-line: #e4c98c;
+    --info: #1c5f86;
+    --info-bg: #edf5fa;
+    --info-line: #bcd9e9;
+    --shot-bg: #0c1018;
+  }
 }
 
 *,

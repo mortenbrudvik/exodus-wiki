@@ -17,6 +17,7 @@ const shell = (title, bodyMain, relPath) => `<!DOCTYPE html>
 ${seoRegion(relPath)}
   <link rel="stylesheet" href="../../assets/css/wiki.css">
   <link rel="icon" href="../../assets/icons/favicon.svg" type="image/svg+xml">
+  <script>(function(){try{var t=localStorage.getItem("wiki-theme");if(t==="light"||t==="dark")document.documentElement.setAttribute("data-theme",t)}catch(e){}})();</script>
 </head>
 <body data-root="../../">
   <a class="skip-link" href="#main-content">Skip to content</a>
@@ -28,6 +29,7 @@ ${seoRegion(relPath)}
       <button type="submit">Search</button>
       <div class="search-dropdown" hidden></div>
     </form>
+    <button type="button" class="theme-toggle" data-theme-toggle hidden>Theme</button>
   </header>
   <div class="layout">
     <aside class="sidebar" id="site-sidebar">
@@ -54,6 +56,7 @@ ${bodyMain}
   <script src="../../assets/data/search-index.js"></script>
   <script src="../../assets/js/search.js"></script>
   <script src="../../assets/js/lightbox.js"></script>
+  <script src="../../assets/js/theme.js"></script>
 </body>
 </html>
 `;

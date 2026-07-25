@@ -9,6 +9,7 @@
        here from the page's index summary; the second re-lists the site. -->
   <link rel="stylesheet" href="{{ROOT}}assets/css/wiki.css">
   <link rel="icon" href="{{ROOT}}assets/icons/favicon.svg" type="image/svg+xml">
+  <script>(function(){try{var t=localStorage.getItem("wiki-theme");if(t==="light"||t==="dark")document.documentElement.setAttribute("data-theme",t)}catch(e){}})();</script>
 </head>
 <body data-root="{{ROOT}}">
   <a class="skip-link" href="#main-content">Skip to content</a>
@@ -20,6 +21,7 @@
       <button type="submit">Search</button>
       <div class="search-dropdown" hidden></div>
     </form>
+    <button type="button" class="theme-toggle" data-theme-toggle hidden>Theme</button>
   </header>
   <div class="layout">
     <aside class="sidebar" id="site-sidebar">
@@ -71,5 +73,6 @@
   <script src="{{ROOT}}assets/data/search-index.js"></script>
   <script src="{{ROOT}}assets/js/search.js"></script>
   <script src="{{ROOT}}assets/js/lightbox.js"></script>
+  <script src="{{ROOT}}assets/js/theme.js"></script>
 </body>
 </html>
