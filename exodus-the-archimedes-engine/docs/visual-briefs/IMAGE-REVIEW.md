@@ -29,7 +29,7 @@ chained from the new Finn portrait so ancestry matches.
 | `finn-jalgori-tobu` | Invented caption / date | No caption; East Asian family anchor |
 | `thyra` | Invented caption / calendar | No caption; bloodstone queen |
 | `neusch` | Top caption, House Veyl, age | No caption |
-| `olomo` | Six arms vs four | Four arms visible, expanded skull |
+| `olomo` | Six arms vs four (then five on first regen) | **Re-regen:** exactly four arms + two legs, expanded skull |
 | `otylia-jalgori-tobu` | Chanel logos + non-matching twin | Teal coat, East Asian twin of Finn, no logos |
 | `zelinda-jalgori-tobu` | Non-matching sister | Burgundy heir dress, same family colouring |
 | `eleanor-aponi` | CYCLE 9 name tape | Blank tapes; no rank lettering |
