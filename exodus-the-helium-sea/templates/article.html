@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{{TITLE}} — Helium Sea Wiki</title>
+  <!-- Add the page to assets/data/search-index.json, then run `node scripts/apply-seo.mjs`
+       and `node scripts/gen-sitemap.mjs`. The first inserts the seo:start/seo:end block
+       here from the page's index summary; the second re-lists the site. -->
+  <!-- No ?v= token here on purpose: scripts/stamp-assets.mjs adds one to this
+       and to every script below, derived from each file's contents. Run it last. -->
+  <link rel="stylesheet" href="{{ROOT}}assets/css/wiki.css">
+  <link rel="icon" href="{{ROOT}}assets/icons/favicon.svg" type="image/svg+xml">
+  <script>(function(){try{var t=localStorage.getItem("wiki-theme");if(t==="light"||t==="dark")document.documentElement.setAttribute("data-theme",t)}catch(e){}})();</script>
+</head>
+<body data-root="{{ROOT}}">
+  <a class="skip-link" href="#main-content">Skip to content</a>
+  <header class="site-header">
+    <button type="button" class="menu-toggle" aria-expanded="false" aria-controls="site-sidebar">Menu</button>
+    <a class="site-title" href="{{ROOT}}index.html">Helium Sea Wiki</a>
+    <form class="search-form" action="{{ROOT}}search.html" method="get" role="search">
+      <input class="search-input" type="search" name="q" placeholder="Search wiki…" autocomplete="off" aria-label="Search">
+      <button type="submit">Search</button>
+      <div class="search-dropdown" hidden></div>
+    </form>
+    <button type="button" class="theme-toggle" data-theme-toggle hidden>Theme</button>
+  </header>
+  <div class="layout">
+    <aside class="sidebar" id="site-sidebar">
+      <!-- The link order is fixed: check-wiki.mjs fails if any page's nav labels
+           differ from the rest. scripts/regroup-nav.mjs is the source of truth —
+           change the groups there and re-run it, then mirror the result here. -->
+      <nav aria-label="Wiki">
+        <p class="nav-label">This wiki</p>
+        <ul>
+          <li><a href="{{ROOT}}index.html">Main Page</a></li>
+          <li><a href="{{ROOT}}pages/book.html">Book</a></li>
+        </ul>
+        <p class="nav-label">Elsewhere</p>
+        <ul>
+          <li><a href="{{ROOT}}../index.html">All book wikis</a></li>
+        </ul>
+      </nav>
+    </aside>
+    <main class="content" id="main-content">
+      <article class="article">
+        <header>
+          <h1>{{TITLE}}</h1>
+        </header>
+        <!-- Optional: <p class="stub-notice"><strong>Stub:</strong> expand when more is known.</p> -->
+        <aside class="infobox">
+          <h2>{{TITLE}}</h2>
+          <dl>
+            <dt>Type</dt>
+            <dd>…</dd>
+          </dl>
+        </aside>
+        <p class="lead">Lead paragraph (2–4 sentences).</p>
+        <section>
+          <h2>Background</h2>
+          <p>…</p>
+        </section>
+        <section>
+          <h2>Role in the story</h2>
+          <p>…</p>
+        </section>
+        <footer class="article-footer categories">
+          Categories:
+          <a href="{{CATEGORY_HREF}}">{{CATEGORY_NAME}}</a>
+        </footer>
+      </article>
+    </main>
+  </div>
+  <script src="{{ROOT}}assets/data/search-index.js"></script>
+  <script src="{{ROOT}}assets/js/search.js"></script>
+  <script src="{{ROOT}}assets/js/lightbox.js"></script>
+  <script src="{{ROOT}}assets/js/theme.js"></script>
+</body>
+</html>

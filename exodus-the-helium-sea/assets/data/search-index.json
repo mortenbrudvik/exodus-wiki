@@ -1,0 +1,54 @@
+[
+  {
+    "title": "Main Page",
+    "path": "index.html",
+    "category": "Main",
+    "summary": "Reading companion for Exodus: The Helium Sea — structure in place, article coverage not yet written",
+    "keywords": [
+      "home",
+      "start",
+      "wiki"
+    ]
+  },
+  {
+    "title": "Search",
+    "path": "search.html",
+    "category": "Search",
+    "summary": "Full search results",
+    "keywords": [
+      "find"
+    ]
+  },
+  {
+    "title": "Exodus: The Helium Sea",
+    "path": "pages/book.html",
+    "category": "Book",
+    "summary": "Book overview: publication facts for the novel that concludes the Exodus duology",
+    "keywords": [
+      "hamilton",
+      "peter f. hamilton",
+      "peter hamilton",
+      "novel",
+      "overview",
+      "publication",
+      "helium sea",
+      "2026",
+      "space opera",
+      "exodus game",
+      "archimedes engine"
+    ]
+  },
+  {
+    "title": "Sources and provenance",
+    "path": "pages/sources.html",
+    "category": "Sources",
+    "summary": "What this wiki verifies, what it reconstructs, and how far coverage currently extends",
+    "keywords": [
+      "sources",
+      "provenance",
+      "verification",
+      "coverage",
+      "spoilers"
+    ]
+  }
+]
