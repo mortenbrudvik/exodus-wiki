@@ -62,16 +62,23 @@ export function pageUrl(relPath) {
 }
 
 /**
- * Social image for a page: its own illustration when it has one, else the site icon.
- * Character and ship slugs match their page slugs.
+ * Where a page directory's illustrations may live. Image slugs match page slugs, so the
+ * only ambiguity is pages/locations/, which holds both places and named ships.
  */
+const IMAGE_DIRS = {
+  characters: ["characters"],
+  locations: ["locations", "ships"],
+  factions: ["factions"],
+  technology: ["technology"],
+};
+
+/** Social image for a page: its own illustration when it has one, else the site icon. */
 export function imageUrl(relPath) {
   const slug = path.basename(relPath, ".html");
-  for (const [dir, kind] of [["characters", "characters"], ["locations", "ships"]]) {
-    if (relPath.includes(`pages/${dir}/`)) {
-      const rel = `assets/images/${kind}/${slug}.jpg`;
-      if (fs.existsSync(path.join(bookRoot, rel))) return `${SITE}/${BOOK}/${rel}`;
-    }
+  const m = relPath.match(/^pages\/([^/]+)\//);
+  for (const kind of (m && IMAGE_DIRS[m[1]]) || []) {
+    const rel = `assets/images/${kind}/${slug}.jpg`;
+    if (fs.existsSync(path.join(bookRoot, rel))) return `${SITE}/${BOOK}/${rel}`;
   }
   return `${SITE}/assets/icons/icon-512.png`;
 }
