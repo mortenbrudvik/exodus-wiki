@@ -280,23 +280,40 @@ HTTP 200 (following redirects, browser user-agent).
 | thisguise recap dates are reverse-engineered from dialogue, not the book’s timeline | confirmed, quoted in §3.1 |
 
 **25 July 2026 — “nightweid”, checked against the book’s own text.** The wiki used the term three
-times as an unglossed hazard. Searching the authorized Google Books preview (§1) returns in-book
-snippets across **pp. 557–601**: leathery wings rooted between the shoulder blades, hairless grey skin,
-a permanently open circular mouth ringed with fangs, bulging multifaceted insect eyes, arms and a
-torso, chasing “its prey” down a tunnel, and massing as a “nightweid swarm” / “the flock closing fast”.
-The articles now gloss them as **swarming winged predators** — creature, flying, hunting, en masse —
-and nothing more.
+times as an unglossed hazard. An in-book search of the authorized Google Books preview (§1) returns
+**exactly seven snippets — pp. 557, 581, 591, 598, 599, 600, 601** — establishing animate creatures
+(“its arms… its torso”, p. 600; “It stopped struggling”, p. 601), predatory (“to claw at thin air as if
+that alone could pull its prey closer”, p. 600, plus the tunnel chase at 598–599), and massing
+(“nightweid swarm”, p. 591; “he could make out the flock closing fast”, p. 599). The articles now gloss
+them as **swarming winged predators** and nothing more.
 
-Rejected in the same check, and worth recording so it is not re-proposed:
+Two separate queries fill in “winged”, and the distinction matters:
 
-- **“Awakened avians”**, the fan-wiki classification. `avian` does not appear in the book; `Awakened`
-  appears elsewhere (p. 88 defines it as neurologically enhanced, enlarged, command-following Earth
-  animals) but nowhere in the nightweid sequence. The described anatomy is bat-like, not bird-like, and
-  the novel pointedly withholds a taxonomy in-scene — p. 581 has a character ask “What are they?” and
-  get “Let’s not find out, yeah?”
+- `avian` → **pp. 549–550**, the Kingsnest briefing that opens this descent: “When you start sailing
+  deep looking for artifacts, there are some avian predators you need to steer clear of. Maybe a few
+  rogue airboats, too.” Same conversation as p. 557’s “nightweid, who stand eternal vigil… few airboats
+  ever return.”
+- `hairless gray skin` → **p. 589**: “…stretched tight over its skeleton, revealing long cords of muscle
+  bunching and contracting along its back. They powered leathery wings rooted between its shoulder
+  blades.” **This snippet does not contain the word “nightweid.”** It sits inside the sequence, so
+  reading it as a nightweid is inference from position — strong, but not direct attestation.
+
+Rejected, and worth recording so it is not re-proposed:
+
+- **“Awakened avians”**, the fan-wiki classification. `Awakened` is the novel’s own term (p. 88:
+  neurologically enhanced, enlarged, command-following animals) but appears nowhere in pp. 557–601 —
+  its hits are eagles, hounds, crocodiles and lions elsewhere. `avian` **is** the book’s word for these
+  hazards (pp. 549–550, above), so an earlier note here claiming otherwise was wrong. It still stays out
+  of the gloss: what p. 589 describes is leathery-winged and insect-eyed, bat-shaped rather than
+  bird-shaped, so “avians” would read as wrong to anyone holding the book. The novel also withholds a
+  taxonomy in-scene — p. 581, “What are they?” / “Let’s not find out, yeah?”
 - **Capitalising the term.** Both fan wikis write “Nightweid”; the novel lowercases it mid-sentence
   (p. 598, “The nightweid will catch up with us…”), which is also this wiki’s existing house style.
 - **“Swarms of several thousand.”** Fan-sourced only; not confirmed in any returned snippet.
+
+**Do not read a zero result as absence.** This index is unreliable in one direction only: it returned
+nothing for `leathery wings` and `hairless gray skin` on repeated attempts despite both being on p. 589,
+which it had just returned. Hits are trustworthy; misses are not. Retry before concluding anything.
 | thisguise spelling drift | only `Dilligent` confirmed |
 | Expanded Universe: TTRPG titles, free character sheet, *Secret Level* “EXODUS: Odyssey” | confirmed |
 | PRH: publisher, 17 Sep 2024, 928 pages | confirmed |

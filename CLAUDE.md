@@ -43,7 +43,7 @@ node scripts/check-search-rank.mjs  # search folding and ranking
 
 Both exit non-zero on failure. `check-wiki.mjs` additionally prints advisory **warnings** that
 deliberately do not fail the run (possible name drift, thin pages without a stub notice, orphans,
-index titles disagreeing with their `h1`) — 9 thin-page warnings are the expected baseline.
+index titles disagreeing with their `h1`) — 8 thin-page warnings are the expected baseline.
 
 `check-wiki.mjs --quiet` suppresses the per-check progress lines. There is no linter or formatter.
 
