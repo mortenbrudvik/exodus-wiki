@@ -9,8 +9,9 @@
  *
  * Cards are applied per hub, by image coverage — a grid where most tiles are
  * letter-plates reads as broken images, so a hub only gets cards when most of
- * its entries have art (see COVERAGE_FLOOR). Factions, at 4 images across 14
- * pages, deliberately keeps its list.
+ * its entries have art (see COVERAGE_FLOOR). Factions was the one hub the floor
+ * held back, at 4 images across 14 pages; later passes took it to 13 across 15,
+ * so all four hubs carry cards now. The floor still gates any new hub.
  *
  * The card is NOT one big anchor. Hub descriptions contain their own links, and
  * nesting <a> inside <a> is invalid, so the image and name form one link and the

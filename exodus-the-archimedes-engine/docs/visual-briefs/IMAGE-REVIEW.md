@@ -1,4 +1,4 @@
-# Illustration review — all 59 images against the book
+# Illustration review — 74 illustrations against the book, 59 signed off
 
 **Reviewed:** 25 July 2026 · every image opened and judged by eye · **74 of 74 briefed**
 

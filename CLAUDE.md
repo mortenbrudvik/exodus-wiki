@@ -16,7 +16,7 @@ Two wikis, only one of them published:
 
 | Folder | Book | State |
 |---|---|---|
-| `exodus-the-archimedes-engine/` | *Exodus: The Archimedes Engine* (2024) | Live — 87 pages, 59 illustrations |
+| `exodus-the-archimedes-engine/` | *Exodus: The Archimedes Engine* (2024) | Live — 87 pages, 74 illustrations |
 | `exodus-the-helium-sea/` | *Exodus: The Helium Sea* (2026) | Scaffold — 4 pages, no article coverage, **pruned from the deploy** |
 
 See "The unpublished second wiki" below before touching the Helium Sea folder.
@@ -156,7 +156,7 @@ migrations. They guard against re-application and are now no-ops; leave them alo
 
 ## Sync invariants
 
-Adding, renaming or removing a page means touching **eleven** things:
+Adding, renaming or removing a page means touching **twelve** things:
 
 1. The `.html` file (copy `templates/article.html`; set `data-root` to `../` or `../../`).
 2. Its category hub — every page must be reachable from `pages/<category>/index.html`.
@@ -372,11 +372,30 @@ Characters are 3:4; everything else is 16:9. `check-images.mjs` prints the curre
 | `build-hub-cards.mjs` | the card grids on category hubs, with a monogram plate where art is missing |
 | `lib/connections.mjs` + `build-connections.mjs` | the derived Connections strip |
 
-Two rules those last two encode, both deliberate:
+**The briefs are generated too, and nothing checks them.** Every `docs/visual-briefs/<slug>.md` and
+`index.json` is written by the two `write-*-visual-briefs.mjs` scripts, so hand-editing a `.md` is
+reverted the next time one runs — the generated-pages trap again, except `check-wiki.mjs` does not
+re-render these, so the loss is silent. Edit the brief object in the script.
+
+- **Book citations go in the optional `sources` field**, which overrides the generic two-bullet
+  Sources section. Without it a citation like "ch. 31" or "p. 241" survives only in the generated
+  `.md` and disappears on the next run. `sahdiah.md` and `arcadias-moon.md` are the two that carry
+  book citations today.
+- **Run `write-visual-briefs.mjs` before `write-extra-visual-briefs.mjs`, always.** The second
+  merges the places, technology and faction subjects into the same `index.json`; the first rewrites
+  that file from scratch. Running the first alone silently drops ~240 lines and 30-odd subjects,
+  which then fails `check-images.mjs`.
+- **Known drift:** `aeacus.md` and `polkadav.md` hold committed `prompt`, `setting`, `clothing` and
+  `role` text the generator cannot currently reproduce, so a run today reverts them. Sync the script
+  to the committed briefs before relying on a clean regeneration.
+
+Two rules the last two scripts in that table encode, both deliberate:
 
 - **Hubs get cards only where most entries are illustrated** (`COVERAGE_FLOOR`, currently 60%). A
-  grid of mostly letter-plates reads as broken images, so factions — 4 images across 14 pages —
-  keeps its list while characters, locations and technology get cards.
+  grid of mostly letter-plates reads as broken images. Factions was the one hub the floor held back,
+  at 4 images across 14 pages; later passes took it to 13 across 15, so all four hubs carry cards
+  today. The floor still gates any new hub, and `build-hub-cards.mjs` prints the percentage when it
+  keeps one as a list.
 - **Connections are derived from the infobox, never hand-written.** A chip is any `<dd>` link to a
   character page that has a portrait; its `<dt>` becomes the label. So there is no field to maintain
   and the strip cannot contradict the infobox — but it also only knows what the infobox knows, which
@@ -385,10 +404,14 @@ Two rules those last two encode, both deliberate:
 All the injectors are idempotent and skip pages that already carry the markup.
 
 The illustrations are **inferred, not canonical** — no likeness is described in the novel.
-`docs/visual-briefs/IMAGE-REVIEW.md` records a by-eye review of all 59: the first 46 all pass after
-regeneration, and the 13 second-pass subjects came back 12 pass / 1 query / 0 fail. **Every new
-illustration needs adding to that review — `check-images.mjs` cannot see inside a JPEG**, so an
-unreviewed asset is an unverified claim on a public page.
+`docs/visual-briefs/IMAGE-REVIEW.md` records the by-eye review, in three passes: 46 characters and
+ships, then 13 places, technology and factions — **all 59 of those pass** after regeneration — and a
+third pass of 15 remaining entity pages that are installed and spot-checked for text and clade traps
+but **still awaiting a full eye-pass**. Individual regenerations are logged with dates below them.
+All 74 subjects are named in the file; 59 are signed off. **Every new illustration needs adding to
+that review — `check-images.mjs` cannot see inside a JPEG**, so an unreviewed asset is an unverified
+claim on a public page. To check the invariant rather than trusting this paragraph, confirm every
+slug in `index.json` appears in `IMAGE-REVIEW.md`.
 
 Five rules follow, and every one has been violated in shipped assets:
 
