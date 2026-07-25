@@ -10,14 +10,14 @@ Two passes, reviewed separately:
 | Pass | Subjects | Result |
 |---|---|---|
 | **First** — characters and ships | 46 | 37 pass · 3 query · 6 fail → **all 46 pass** after regeneration |
-| **Second** — places, technology, factions | 13 | **12 pass · 1 query · 0 fail** |
+| **Second** — places, technology, factions | 13 | 12 pass · 1 query · 0 fail → **all 13 pass** after Heresy regen |
 
 The second pass is written up under [Second pass](#second-pass--places-technology-and-factions);
 everything below it concerns the first.
 
 | Verdict | Count | Meaning |
 |---|---:|---|
-| **PASS** | 46 | After regen (25 July 2026 evening): prior 6 FAIL + 3 QUERY replaced |
+| **PASS** | 59 | First pass 46 after regen; second pass 13 after Heresy regen |
 | **QUERY** | 0 | Cleared by regen |
 | **FAIL** | 0 | Cleared by regen |
 
@@ -31,7 +31,7 @@ Historical first-pass tally (before regen): 37 pass · 3 query · 6 fail. Detail
 
 ## Second pass — places, technology and factions
 
-**Reviewed 25 July 2026 · 13 subjects · 12 pass · 1 query · 0 fail.**
+**Reviewed 25 July 2026 · 13 subjects · 12 pass · 1 query · 0 fail → all 13 pass after regen.**
 
 **No burned-in text anywhere. No real-world logos. No clade contradictions.** That is the headline,
 because it is exactly what the first pass failed on. `write-extra-visual-briefs.mjs` appends a
@@ -39,21 +39,18 @@ because it is exactly what the first pass failed on. `write-extra-visual-briefs.
 captions, no labels, no lettering, no logos, no brand marks, no map names, no UI chrome, no
 watermarks"* — and across 13 images it held. The fix worked.
 
-### QUERY — `faction/heresy-dominion`
+### QUERY (cleared) — `faction/heresy-dominion`
 
-Canon-clean, but it is **not the image its brief asked for**. The brief specifies *"a vast spindly
-hexapod Celestial silhouette (exactly four arms, two legs) before a huge research wall"* — the
-delivered plate is a capital warship in a hangar, with the only figures small, robed and too distant
-to count limbs.
+**Prior defect:** canon-clean hangar plate of a capital warship, but **not the image its brief
+asked for**. The brief specifies a vast spindly hexapod Celestial (exactly four arms, two legs)
+before a huge research warship; the first delivery buried the only figures as small robed silhouettes
+too distant to count limbs. Consequence: the Heresy body plan was illustrated nowhere except
+Olomo's portrait.
 
-Nothing in it contradicts the wiki: `heresy-dominion.html` says the Heresy field *"large individual
-warships"* whose *"individual hulls carry heavy defensive systems because the Heresy fields fewer
-traditional war fleets"*, and that they outscale Crown hulls like the *Alumata*. So it passes on
-accuracy and fails only on intent.
-
-The consequence is worth naming: the Heresy body plan — the four-arm hexapod build that was drawn
-wrong on Olomo and had to be regenerated twice — is now illustrated **nowhere except Olomo's
-portrait**. The one plate meant to establish the clade visually does not show it.
+**Regen (25 July 2026):** re-composed via `image_edit` from the Olomo portrait (body-plan anchor)
+plus the prior hangar plate (ship/environment). Foreground hexapod shows **exactly four arms and
+two legs**; research warship remains in cool blue dock light behind. No caption bars, logos, or
+invented labels. **PASS.**
 
 ### PASS — with observations
 
@@ -71,17 +68,19 @@ portrait**. The one plate meant to establish the clade visually does not show it
 | `faction/celestials` | Tall elegant figures, bloodstone jewellery, livestone terrace — textbook clade grammar |
 | `faction/crown-dominion` | Palace mountain complex, georing, fleet, crystalline house heraldry. **Five** banners are shown; the Crown has **six** royal systems, so if banners read as houses, one is missing |
 | `faction/travelers` | Salvage yard, worn freighter hulls, EVA crews mid-repair. The ring **gate** is canon-supported — the wiki has *"multi-decade gate hops"* and Tinaja's *"Gate of Heaven"* — so it is not the FTL-portal contradiction it first looks like |
+| `faction/heresy-dominion` | **PASS after regen.** Foreground hexapod (four arms, two legs) establishes the clade; research warship behind. Body plan chained from Olomo |
 
 ### What the second pass says
 
 - **The widened negative prompt is doing real work.** Zero text across 13 images, against three
   caption bars in 46 on the first pass.
-- **Briefs can be silently ignored.** Heresy passed every automated check and reads well, yet the
-  generator simply did not draw what was asked. Nothing but a human comparing brief to asset catches
-  that — `check-images.mjs` sees a file of the right name and size.
-- **Cross-image consistency held** where it mattered: Dolod against the Archimedes Engine, and
-  Mindline against Makaio. Worth checking deliberately, since the first pass failed exactly there
-  with the Jalgori-Tobu siblings.
+- **Briefs can be silently ignored.** Heresy passed every automated check and read well on the
+  first delivery, yet the generator simply did not draw what was asked. Nothing but a human
+  comparing brief to asset catches that — `check-images.mjs` sees a file of the right name and size.
+  Cleared by re-gen with an explicit body-plan reference image.
+- **Cross-image consistency held** where it mattered: Dolod against the Archimedes Engine,
+  Mindline against Makaio, and (after regen) Heresy against Olomo. Worth checking deliberately,
+  since the first pass failed exactly there with the Jalgori-Tobu siblings.
 
 ---
 
@@ -103,8 +102,9 @@ chained from the new Finn portrait so ancestry matches.
 | `eleanor-aponi` | CYCLE 9 name tape | Blank tapes; no rank lettering |
 | `marcellu` | MARCE-17 marking | Clean suit, no serial |
 | `asahi-iryna` | Empire-like cog emblem | Crystal bloodstone ornament only |
+| `heresy-dominion` | Ship hangar only; hexapod clade not shown | Four-arm hexapod foreground + research warship; chained from Olomo |
 
-No HTML path changes; same `assets/images/characters/<slug>.jpg` targets.
+No HTML path changes; same `assets/images/…/<slug>.jpg` targets.
 
 Every textual claim found inside an image was checked against the wiki by grep. Counts below are
 page hits across `pages/`.

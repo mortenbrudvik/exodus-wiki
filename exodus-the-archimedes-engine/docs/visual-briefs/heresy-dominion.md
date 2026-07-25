@@ -15,7 +15,7 @@
 ## Inference flags
 
 - Visual inference where the book is silent; no invented labels, dates, or place-names in the image.
-- Shipped plate emphasises a **Heresy research warship** in dock rather than a close hexapod figure, to avoid arm-count errors that plagued character-scale hexapod gens.
+- Foreground hexapod is clade-representative, not a named individual; body plan chained from the Olomo portrait so arm count stays at four arms + two legs.
 
 ## Generation prompt
 
