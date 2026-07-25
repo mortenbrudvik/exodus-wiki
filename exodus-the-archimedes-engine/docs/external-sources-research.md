@@ -20,6 +20,7 @@ Research inventory of public sources useful for this wiki. Compiled **25 July 20
 | The novel itself | Plot, names, relationships, tech, locations | Sole authority. Long quotations avoided on the wiki. |
 | In-book “Timeline of the Centauri Cluster” | Macro history (Exodus era → Elohim → Crown Dominion → Present era) | Printed in the novel’s **front matter**, not an appendix. Public transcriptions exist (see §3) as convenience indexes only. Note the Wikipedia article does not mention it, so the transcription thread and reader reviews are the only public evidence — confirm against a physical copy before treating any transcribed year as book-sourced. |
 | Audiobook (John Lee) | Same text, different medium | Simultaneous release with print/ebook. |
+| [Google Books publisher preview](https://books.google.com/books?id=T01PEQAAQBAJ) (Random House ebook, volume `T01PEQAAQBAJ`) | **Checking a single word or phrase against the book’s own text** | The authorized preview answers in-book searches with real page-numbered snippets — the cheapest legitimate route to primary text when you do not have the book open. Append `&q=<term>`. Two cautions: the Books **API** returns HTTP 429 once its daily quota is gone while the volume viewer still works, and the index throws **false negatives** (`the`, `wing` and exact phrases visible on a returned page can all come back empty), so absence of a hit is never evidence of absence. |
 
 **Rule:** if a web recap and the book disagree, the book wins.
 
@@ -179,6 +180,15 @@ records only that the framing is contested, with no interval asserted.
 Do not treat Fandom as authoritative for novel-specific names or plot. Use it for shared-setting
 vocabulary (Celestials, archons, Travelers), then verify in the book.
 
+**These two wikis are one lineage, not two witnesses.** Checked 25 July 2026 via both MediaWiki APIs:
+`exodusgame.wiki` pages are verbatim copies of the Fandom articles, reference markup included. The
+Fandom creature articles sampled were each written by a single editor in one sitting with no citation,
+and the novel `<ref>` was added months later in a sitewide sweep — so “cites only the novel” is a
+retroactive blanket attribution, not a page-level sourcing claim. Two of these agreeing tells you
+nothing. They are still useful: where one could be checked against the book, its *description* proved a
+careful, near-verbatim paraphrase. It is the **classification** wrapped around the description that is
+the editor’s own and that has repeatedly failed verification.
+
 ---
 
 ## 6. Reviews (publication reception only)
@@ -268,6 +278,25 @@ HTTP 200 (following redirects, browser user-agent).
 | Wikipedia: maintenance tags present | confirmed (`non-primary source needed`, `better source needed`) |
 | Wikipedia: novel called “a narrative prequel” to the game | confirmed; it does **not** say before or after |
 | thisguise recap dates are reverse-engineered from dialogue, not the book’s timeline | confirmed, quoted in §3.1 |
+
+**25 July 2026 — “nightweid”, checked against the book’s own text.** The wiki used the term three
+times as an unglossed hazard. Searching the authorized Google Books preview (§1) returns in-book
+snippets across **pp. 557–601**: leathery wings rooted between the shoulder blades, hairless grey skin,
+a permanently open circular mouth ringed with fangs, bulging multifaceted insect eyes, arms and a
+torso, chasing “its prey” down a tunnel, and massing as a “nightweid swarm” / “the flock closing fast”.
+The articles now gloss them as **swarming winged predators** — creature, flying, hunting, en masse —
+and nothing more.
+
+Rejected in the same check, and worth recording so it is not re-proposed:
+
+- **“Awakened avians”**, the fan-wiki classification. `avian` does not appear in the book; `Awakened`
+  appears elsewhere (p. 88 defines it as neurologically enhanced, enlarged, command-following Earth
+  animals) but nowhere in the nightweid sequence. The described anatomy is bat-like, not bird-like, and
+  the novel pointedly withholds a taxonomy in-scene — p. 581 has a character ask “What are they?” and
+  get “Let’s not find out, yeah?”
+- **Capitalising the term.** Both fan wikis write “Nightweid”; the novel lowercases it mid-sentence
+  (p. 598, “The nightweid will catch up with us…”), which is also this wiki’s existing house style.
+- **“Swarms of several thousand.”** Fan-sourced only; not confirmed in any returned snippet.
 | thisguise spelling drift | only `Dilligent` confirmed |
 | Expanded Universe: TTRPG titles, free character sheet, *Secret Level* “EXODUS: Odyssey” | confirmed |
 | PRH: publisher, 17 Sep 2024, 928 pages | confirmed |

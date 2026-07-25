@@ -56,6 +56,11 @@ const EXPECTED = [
   ["space opera", "pages/book.html"],
   ["hell welcomes careful drivers", "pages/characters/elsbeth-mcquillan.html"],
   ["boksrock", "pages/locations/boksrock.html"],
+  // Hazard vocabulary belongs to the page that actually describes the encounter, not to the
+  // technology the scene happens to be about: "nightweid" used to land on the Archimedes Engine
+  // page, which never mentions them.
+  ["nightweid", "pages/characters/elsbeth-mcquillan.html"],
+  ["saberstones", "pages/characters/elsbeth-mcquillan.html"],
 ];
 for (const [q, path] of EXPECTED) {
   const hits = rankResults(realIndex, q);

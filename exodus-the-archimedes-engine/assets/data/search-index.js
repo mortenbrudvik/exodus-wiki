@@ -385,6 +385,7 @@ window.WIKI_SEARCH_INDEX = [
       "hoa quinzu",
       "tank",
       "saberstones",
+      "nightweid",
       "hell welcomes careful drivers",
       "diligent"
     ]
@@ -803,8 +804,7 @@ window.WIKI_SEARCH_INDEX = [
       "boksrock",
       "kingsnest",
       "orbit",
-      "terraforming",
-      "nightweid"
+      "terraforming"
     ]
   },
   {
