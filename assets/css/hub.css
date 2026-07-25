@@ -175,16 +175,19 @@ a:focus-visible {
   padding: 0;
 }
 
-@media (min-width: 44rem) {
+/* Two up only once a card can hold a cover and a readable column of text
+   beside it. Below that the covers would squeeze the blurb to a ribbon. */
+@media (min-width: 52rem) {
   .card-grid {
     grid-template-columns: repeat(2, 1fr);
   }
 }
 
 .book-card {
-  display: flex;
-  flex-direction: column;
-  gap: 0.7rem;
+  display: grid;
+  grid-template-columns: 8.5rem minmax(0, 1fr);
+  gap: 1.25rem;
+  align-items: start;
   min-width: 0;
   padding: 1.35rem 1.45rem 1.45rem;
   background: var(--panel);
@@ -197,6 +200,47 @@ a:focus-visible {
 .book-card:focus-within {
   border-color: var(--accent-dim);
   background: var(--raised);
+}
+
+.book-card__body {
+  display: flex;
+  flex-direction: column;
+  gap: 0.7rem;
+  min-width: 0;
+}
+
+/* ---- cover ----
+   The jacket keeps its own colours in both themes: a book is an object sitting on
+   the page, not a surface that follows it. The ratio is the slot's, not the file's
+   — jackets vary, and a row of covers that do not share a baseline looks broken. */
+.book-card__cover {
+  position: relative;
+  display: block;
+  aspect-ratio: 2 / 3;
+  overflow: hidden;
+  border: 0;
+  border-radius: 0.15rem 0.35rem 0.35rem 0.15rem;
+  background: #05080e;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.4), inset 0 0 0 1px rgba(143, 192, 205, 0.14);
+}
+
+/* The board edge, so it reads as a book rather than a tile. */
+.book-card__cover::after {
+  content: "";
+  position: absolute;
+  inset: 0 auto 0 0;
+  width: 5px;
+  background: linear-gradient(to right, rgba(0, 0, 0, 0.5), rgba(255, 255, 255, 0.06));
+  pointer-events: none;
+}
+
+.book-card__cover img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;
 }
 
 .book-card__title {
@@ -291,6 +335,12 @@ a:focus-visible {
   margin: 0;
 }
 
+.site-footer__credit {
+  margin-top: 0.5rem;
+  font-size: 0.8rem;
+  max-width: 44rem;
+}
+
 /* Headings that label a region for assistive tech without appearing on screen. */
 .visually-hidden {
   position: absolute;
@@ -325,4 +375,11 @@ video {
   .intro h1 {
     font-size: 2.1rem;
   }
+
+  .book-card {
+    grid-template-columns: 6.5rem minmax(0, 1fr);
+    gap: 1rem;
+    padding: 1.1rem 1.15rem 1.25rem;
+  }
+
 }

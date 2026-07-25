@@ -49,16 +49,31 @@
       <ul class="card-grid">
         <li>
           <article class="book-card">
-            <h3 class="book-card__title">
-              <a href="exodus-the-archimedes-engine/index.html">Exodus: The Archimedes Engine</a>
-            </h3>
-            <p class="book-card__meta">Peter F. Hamilton · 2024</p>
-            <p class="book-card__blurb">
-              Full-spoiler companion for characters, locations, factions, technology, timeline,
-              and plot in the Centauri Cluster prequel novel.
-            </p>
-            <p class="book-card__spoiler">Full spoilers</p>
-            <a class="book-card__cta" href="exodus-the-archimedes-engine/index.html">Open wiki</a>
+            <!-- The publisher's jacket, reproduced at the low resolution Wikipedia
+                 hosts it at (256x389) to identify the edition this wiki covers. It is
+                 copyrighted and non-free; provenance is recorded on the wiki's sources
+                 page. It is the only image on this site not made for it.
+                 aria-hidden + tabindex="-1" because the title beside it links to the
+                 same page — without them every card is two identical tab stops, and a
+                 screen reader reads the destination twice. -->
+            <a class="book-card__cover" href="exodus-the-archimedes-engine/index.html"
+               aria-hidden="true" tabindex="-1">
+              <img src="assets/covers/exodus-the-archimedes-engine.jpg" alt=""
+                   width="256" height="389" loading="lazy" decoding="async">
+            </a>
+
+            <div class="book-card__body">
+              <h3 class="book-card__title">
+                <a href="exodus-the-archimedes-engine/index.html">Exodus: The Archimedes Engine</a>
+              </h3>
+              <p class="book-card__meta">Peter F. Hamilton · 2024</p>
+              <p class="book-card__blurb">
+                Full-spoiler companion for characters, locations, factions, technology, timeline,
+                and plot in the Centauri Cluster prequel novel.
+              </p>
+              <p class="book-card__spoiler">Full spoilers</p>
+              <a class="book-card__cta" href="exodus-the-archimedes-engine/index.html">Open wiki</a>
+            </div>
           </article>
         </li>
       </ul>
@@ -67,6 +82,10 @@
 
   <footer class="site-footer">
     <p>Personal use. Each wiki works from the filesystem or over HTTP — search ships with the pages.</p>
+    <p class="site-footer__credit">
+      Cover art remains the copyright of its publisher and is shown to identify the edition —
+      see <a href="exodus-the-archimedes-engine/pages/sources.html">sources and provenance</a>.
+    </p>
   </footer>
 </body>
 </html>
