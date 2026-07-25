@@ -1,7 +1,7 @@
 {
-  "name": "Book Wikis",
-  "short_name": "Book Wikis",
-  "description": "Personal full-spoiler reading-companion wikis",
+  "name": "Exodus Reading Companions",
+  "short_name": "Exodus",
+  "description": "Full-spoiler reading companions for Peter F. Hamilton’s Exodus novels",
   "start_url": "./",
   "scope": "./",
   "display": "standalone",

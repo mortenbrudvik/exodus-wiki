@@ -2,7 +2,7 @@
 
 Personal full-spoiler reading companion in plain HTML.
 
-Part of the [Book Wikis](../index.html) collection (parent hub: `../index.html`).
+Part of the [Exodus reading companions](../index.html) hub (parent hub: `../index.html`).
 
 ## Open the wiki
 
