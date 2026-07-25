@@ -3,7 +3,9 @@ import path from "path";
 import { fileURLToPath } from "url";
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
-const dir = path.join(__dirname, "..", "pages", "characters");
+// WIKI_OUT_DIR lets check-wiki.mjs render into a scratch directory to prove the
+// committed pages still match what this script produces.
+const dir = process.env.WIKI_OUT_DIR || path.join(__dirname, "..", "pages", "characters");
 
 const shell = (title, bodyMain) => `<!DOCTYPE html>
 <html lang="en">

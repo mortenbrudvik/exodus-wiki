@@ -33,13 +33,17 @@ Prefer HTTP over `file://`: search `fetch`es its JSON index. A JS fallback index
 `file://` degrades rather than breaking.
 
 ```bash
-# The only test in the repo. Run after ANY change to pages, the search index, or search.js.
-cd exodus-the-archimedes-engine && node scripts/check-search-rank.mjs
+# The two checks in the repo. Run both after ANY change to pages, the index, or search.js.
+cd exodus-the-archimedes-engine
+node scripts/check-wiki.mjs         # structure, chrome, voice, name drift, generator sync
+node scripts/check-search-rank.mjs  # search folding and ranking
 ```
 
-It asserts query normalisation, ~15 ranking outcomes against the real index, that every index entry
-points at an existing file, that no path is indexed twice, and that the two index files are
-identical. There is no linter, formatter, or other test framework.
+Both exit non-zero on failure. `check-wiki.mjs` additionally prints advisory **warnings** that
+deliberately do not fail the run (possible name drift, thin pages without a stub notice, orphans,
+index titles disagreeing with their `h1`) — 9 thin-page warnings are the expected baseline.
+
+`check-wiki.mjs --quiet` suppresses the per-check progress lines. There is no linter or formatter.
 
 ## The generated-pages trap
 
@@ -58,10 +62,11 @@ edit the generator's template literal or infobox tuple array and re-run it:
 node scripts/gen-celestials.mjs && node scripts/gen-dominions.mjs
 ```
 
-The generators are the source of truth and currently reproduce all 25 pages byte-for-byte. To verify
-no drift after editing, copy each generator to a temp dir with its `const dir = …` line pointed at a
-scratch directory, run it, and diff against `pages/`. Any sitewide sweep over `pages/*.html` must be
-mirrored into both generators or it will be lost.
+The generators are the source of truth and currently reproduce all 25 pages byte-for-byte.
+`check-wiki.mjs` enforces this: it re-renders both generators into a scratch directory (via the
+`WIKI_OUT_DIR` env override they accept) and fails if any committed page differs. Any sitewide sweep
+over `pages/*.html` must be mirrored into both generators, or the next run reverts it — and the
+check will tell you.
 
 `scripts/add-dominions-nav*.mjs` and `scripts/fix-dominions-nav-sidebar.mjs` are spent one-shot
 migrations. They guard against re-application and are now no-ops; leave them alone.

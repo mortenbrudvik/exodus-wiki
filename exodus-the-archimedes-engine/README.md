@@ -42,12 +42,24 @@ Editing those HTML files directly works until the next run, which silently rever
 ## Check the wiki
 
 ```bash
-node scripts/check-search-rank.mjs
+node scripts/check-wiki.mjs         # structure, chrome, voice, name drift, generator sync
+node scripts/check-search-rank.mjs  # search behaviour and ranking
 ```
 
-Asserts that every index entry points at a real file, that the JSON index and the `file://`
-fallback script are identical, and that a set of real queries still ranks the right article
-first. Add a case there whenever you add an alias or an alternate spelling.
+Both exit non-zero on failure, so they work as a pre-commit gate.
+
+`check-wiki.mjs` fails the run on: broken internal links, a page missing from a category hub
+or from the search index, the two index files diverging, a wrong `data-root`, missing skip
+link / `#main-content` / search scripts, a misplaced `aria-current`, sourcing meta-commentary
+in article prose, and any generated page that no longer matches its generator.
+
+It also prints **warnings**, which never fail the run because they need judgement: pages whose
+spelling looks like a stray variant of an established name, thin pages with no stub notice,
+orphans, and index titles that disagree with their `h1`.
+
+`check-search-rank.mjs` asserts query folding, ~15 ranking outcomes against the real index,
+that every entry points at a real file, and JSON/JS parity. Add a case whenever you add an
+alias or an alternate spelling.
 
 ## Conventions
 
