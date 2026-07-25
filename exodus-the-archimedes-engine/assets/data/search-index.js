@@ -942,7 +942,7 @@ window.WIKI_SEARCH_INDEX = [
     "title": "Sources and provenance",
     "path": "pages/sources.html",
     "category": "Main",
-    "summary": "Where this wiki comes from; which parts are reconstructed rather than canon",
+    "summary": "Where this wiki comes from; publication references; secondary verification aids; reconstructed timeline and chapter labels",
     "keywords": [
       "sources",
       "provenance",
@@ -951,7 +951,10 @@ window.WIKI_SEARCH_INDEX = [
       "reconstructed",
       "canon",
       "accuracy",
-      "about"
+      "about",
+      "secondary sources",
+      "franchise",
+      "chronology"
     ]
   },
   {

@@ -143,6 +143,25 @@ These are enforced conventions, not suggestions, and past passes have violated t
 - **`Uranic` and `Celestial`** are clade names — always capitalised, like a nationality.
 - **DRY**: link rather than restating the same plot beat at length on several pages.
 
+## External sources (Exodus wiki)
+
+Public materials useful for verification — publishers, official franchise pages, interviews, fan
+recaps, parallel wikis, and what *not* to use — are inventoried in:
+
+`exodus-the-archimedes-engine/docs/external-sources-research.md`
+
+That file is a **maintainer reference**, not article copy. Reader-facing provenance stays on
+`exodus-the-archimedes-engine/pages/sources.html`, which summarises the same rules and links to the
+research doc.
+
+When expanding lore from outside the novel:
+
+1. Prefer the book; secondary sources only cross-check names, order, or franchise vocabulary.
+2. Do not merge game-era / TTRPG framing into novel articles unless the book supports it.
+3. Do not use unauthorized full-text dumps of the novel.
+4. Put any new “we checked X” notes on `pages/sources.html` (and optionally extend the research
+   markdown), never in character/location/faction/technology prose.
+
 ## Repo etiquette
 
 Per a standing user preference recorded in `docs/superpowers/plans/`, **do not run `git commit`**

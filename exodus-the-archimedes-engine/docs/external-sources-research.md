@@ -1,0 +1,292 @@
+# External sources research — *Exodus: The Archimedes Engine*
+
+Research inventory of public sources useful for this wiki. Compiled **25 July 2026**.
+
+**How to use this file**
+
+- Working reference for authors and agents. The live reader-facing summary is
+  [`pages/sources.html`](../pages/sources.html).
+- The **novel** remains the only authority for story content. Everything below is either
+  publication/franchise fact, or a **secondary** aid for verification.
+- Per editorial rules: do not discuss secondary sources inside in-universe article prose.
+  Put provenance notes only on `pages/sources.html`.
+
+---
+
+## 1. Primary canon (always wins)
+
+| Source | Use for | Notes |
+|---|---|---|
+| The novel itself | Plot, names, relationships, tech, locations | Sole authority. Long quotations avoided on the wiki. |
+| In-book “Timeline of the Centauri Cluster” | Macro history (Exodus era → Elohim → Crown Dominion → Present era) | Printed in the novel’s **front matter**, not an appendix. Public transcriptions exist (see §3) as convenience indexes only. Note the Wikipedia article does not mention it, so the transcription thread and reader reviews are the only public evidence — confirm against a physical copy before treating any transcribed year as book-sourced. |
+| Audiobook (John Lee) | Same text, different medium | Simultaneous release with print/ebook. |
+
+**Rule:** if a web recap and the book disagree, the book wins.
+
+---
+
+## 2. Official franchise (shared universe, not novel plot)
+
+These are **official** but often describe the **game-era** setting (~41,500 AD “present”), which
+is not the same narrative slice as Hamilton’s duology. See §5 for chronology caveats.
+
+### 2.1 Official site
+
+| URL | What it gives |
+|---|---|
+| [Expanded Universe](https://www.exodusgame.com/en-US/expanded-universe) | Novels, TTRPG books, *Secret Level* episode index |
+| [News hub](https://www.exodusgame.com/en-US/news) | Hamilton deal, free chapters, Helium Sea, Encyclopedia |
+| [Novel launch post](https://www.exodusgame.com/en-US/news/peter-f-hamilton-latest-novel-exodus-the-archimedes-engine) | Official blurb / positioning |
+| [Random House agreement](https://www.exodusgame.com/en-US/news/agreement-with-random-house-worlds-for-exodus-game) | Two novels commissioned |
+| [Helium Sea announcement](https://www.exodusgame.com/en-US/news/exodus-the-helium-sea-peter-f-hamiltons-stunning-conclusion-arrives-june-16-2026) | Sequel date (16 June 2026) |
+| [Traveler’s Guide: Celestial Remnants](https://www.exodusgame.com/en-US/travelers-guide/celestial-remnants) | Official voice on Celestials, Dominions (Crown), Remnants, Ghosts, Travelers, Lidon/Détenir, Formation Wars — **game framing** |
+
+**Also official, worldbuilding-heavy**
+
+- **EXODUS Traveler’s Handbook**, **Creature Catalog**, **Chronicles of Melayu** — all three confirmed
+  as titles on the Expanded Universe page. An **Encyclopedia** is referred to there as a companion
+  book but is not listed as a purchasable item.
+- Free official character sheet PDF, downloadable from the Expanded Universe page (this is *not* the
+  Traveler’s Guide, which is separate web material — see the table above)
+- **Adrian Tchaikovsky’s** involvement is *unverified*: he does not appear anywhere on the Expanded
+  Universe page. The dual-author framing comes from the Polygon piece in §4. Do not state it as
+  official until confirmed from an official source.
+
+### 2.2 Publishers
+
+| Source | Use for |
+|---|---|
+| [Penguin Random House — Archimedes Engine](https://www.penguinrandomhouse.com/books/674426/exodus-the-archimedes-engine-by-peter-f-hamilton/) | US pub date, page count, blurb |
+| [PRH — The Helium Sea](https://www.penguinrandomhouse.com/books/674427/exodus-the-helium-sea-by-peter-hamilton/) | Sequel metadata |
+| [Pan Macmillan / Tor UK](https://www.panmacmillan.com/authors/peter-f-hamilton/exodus-the-archimedes-engine/9781529073737) | UK edition |
+| [Tor UK two-novel deal](https://trade.panmacmillan.com/tor-uk-to-publish-two-novels-from-peter-f-hamilton-exploring-exodus-from-archetype-entertainment/) | UK deal / Archetype tie-in |
+
+### 2.3 Screen and other media
+
+| Source | Use for |
+|---|---|
+| **Secret Level — “Exodus: Odyssey”** (Amazon Prime) | Traveler culture, time-dilation tone; **not** a plot recap of *Archimedes Engine* |
+| Official socials (`@EXODUSGameOfficial`) | Trailers, Celestial explainers (marketing, not novel continuity) |
+
+**Wiki caution:** Franchise material can enrich the Book page and franchise context. Do **not**
+silently merge game-era Traveler doctrine into novel character articles unless the book supports it.
+
+---
+
+## 3. Best secondary sources for this novel’s plot and cast
+
+### 3.1 thisguise timeline and verbose recap (strongest free spoiler recap)
+
+**[Exodus: Archimedes Engine timeline and recap](https://thisguise.wtf/blog/2025/02/05/exodus-archimedes-engine-timeline-and-recap/)** (5 Feb 2025)
+
+Why it matters for this wiki:
+
+- Same reconstructed year scheme (`~42,3xx`) as `pages/timeline.html`
+- Explicitly notes years are reverse-engineered from “N years ago” dialogue
+- Dense beat-by-beat for Finn / *Diligent*, Terence, Thyra trials, ZPZ salvage, Kingsnest, Dolod, Boksrock
+- Mermaid sources linked for diagrams
+
+**Caveats:** Fan reconstruction, and it says so itself — its dates note reads “Dates are
+approximations, based on ‘`N` years ago’ references to specific events cited by characters”, i.e.
+the same method as this wiki, *not* the book’s printed timeline. Spelling drift: **`Dilligent`**
+is confirmed throughout (should be *Diligent*). Cross-check any name taken from this recap against
+this wiki’s canonical spellings before use.
+
+### 3.2 Wikipedia
+
+**[Exodus: The Archimedes Engine](https://en.wikipedia.org/wiki/Exodus:_The_Archimedes_Engine)**
+
+Useful sections:
+
+- Publication facts (928 pp, 17 Sep 2024, Random House Worlds, John Lee audiobook)
+- High-level plot synopsis
+- Character lists under these exact headings: Jalgori-Tobu Family, Arkship *Diligent* Crew,
+  Imperial Celestials, Humans of the Crown Dominion, Travelers (30 names in total)
+- Reception citations (for `sources.html` / Book real-world notes only)
+
+**Caveats:** Confirmed to carry maintenance tags — inline `[non-primary source needed]` and
+`[better source needed]`, plus the category “Articles lacking reliable references from March 2025”.
+Plot summary flattens causality. Good as a **checklist of who should have a page**, weak as sole
+plot authority.
+
+**Roster cross-check (25 July 2026).** All 30 Wikipedia names are covered by this wiki, which has 40
+character pages. Four are covered inside a related article rather than a dedicated one: Mary Kathleen
+Jalgori-Tobu (43rd Marchioness of Santa Rosa) and Marquis Lamik Louis Kandaol on the family pages,
+Jimena on Terence's, and Uzoma Enfoe on *Lestari* / Gyvoy Enfoe. Everett Callan Mathias is likewise
+named in prose only. That is a defensible editorial choice, not a gap — but it is the reason the
+Wikipedia roster is worth re-running as a checklist after any future expansion.
+
+### 3.3 Reddit — timeline dump from the book
+
+**[r/PeterFHamilton — Timeline of the Centauri Cluster](https://www.reddit.com/r/PeterFHamilton/comments/1fl14ud/exodus_the_timeline_of_the_centauri_cluster/)**
+
+User transcription of the novel’s timeline chapter (2170 AD → 41,500 Present Era). Useful for:
+
+- Elohim / Gates of Heaven
+- Crown Dominion founding (Kelowan, Verak, Wynid, Bassa, Nizinsk, Cheluli)
+- Helium Sea nova (31,430)
+- Zuberi war / Imperial Accord (35,118–35,127)
+
+Also points at the game Fandom timeline. Treat as a convenience copy of book text, not independent canon.
+
+### 3.4 Discussion threads (disambiguation, not canon)
+
+| Thread | Value |
+|---|---|
+| [r/PeterFHamilton discussion (Sept 2024)](https://www.reddit.com/r/PeterFHamilton/comments/1e1qduv/exodus_the_archimedes_engine_discussion_thread/) | Official synopsis; book vs game chronology debate |
+| [r/exodus — prequel timing](https://www.reddit.com/r/exodus/comments/1p5pied/the_books_are_a_prequel_prove_me_wrong/) | Hamilton interview timestamps on relative chronology |
+
+---
+
+## 4. Interviews (author and studio intent)
+
+Worth logging for **franchise / process**, not for inventing plot beats.
+
+| Interview | Why useful |
+|---|---|
+| [Space.com — Hamilton (May 2025)](https://www.space.com/entertainment/exodus-the-archimedes-engine-author-peter-f-hamilton-talks-building-a-brand-new-sci-fi-video-game-universe-for-exodus-exclusive) | Collab with Archetype/WotC; no FTL; no non-terrestrial aliens; Imperial Celestials as book focus; Kingsnest description; books as prequels; Helium Sea status |
+| [Space.com — Helium Sea interview](https://www.space.com/entertainment/space-books/exodus-the-helium-sea-author-peter-f-hamilton-talks-universe-crafting-and-finishing-the-story-in-this-second-prequel-novel-for-sci-fi-rpg-exodus-exclusive) | Sequel / closing the duology |
+| [IGN exclusive — Hamilton](https://www.ign.com/articles/exclusive-exodus-interview-peter-f-hamilton-archimedes-engine-bioware-mass-effect-halo-rpg) | Often cited re: book timing vs game |
+| [Forbidden Planet TV — Hamilton intro](https://www.youtube.com/watch?v=eXy7EUDaqqM) | Reportedly the source for “~150 years after the game” (~2:54–3:00) — **unverified, see below** |
+| [SFFWorld interview (Jun 2025)](https://www.sffworld.com/2025/06/interview-with-peter-f-hamilton-3/) | Post-hardback / paperback cycle |
+| [Polygon — Karpyshyn / narrative (Dec 2025)](https://www.polygon.com/exodus-preview-narrative-story/) | Studio view: Hamilton + Tchaikovsky as dual canon writers; joint worldbuilding |
+
+### Chronology inconsistency (document once; do not invent a fix)
+
+The publisher, the game site and Wikipedia all call the novels **prequels**, which describes release
+order. Separately, readers have reported Hamilton saying in interviews that the novels sit
+**after** the game's present by something on the order of a century — the figure circulating is
+"~150 years", attributed to the Forbidden Planet TV appearance around 2:54–3:00.
+
+**Status: unverified.** That timestamp has not been checked against the video, and the Space.com
+interview page truncates before any chronology statement. Do not repeat the interval as fact
+anywhere, and do not "fix" the apparent conflict with the prequel label.
+
+Rules: treat **the novel's internal timeline** as binding for story years; treat Hamilton's
+statements as author intent on franchise order; treat marketing copy as fallible. `pages/sources.html`
+records only that the framing is contested, with no interval asserted.
+
+---
+
+## 5. Fan / parallel wikis
+
+| Wiki | Role |
+|---|---|
+| [Exodus Game Fandom](https://exodus-game.fandom.com/) — esp. [Timeline](https://exodus-game.fandom.com/wiki/Exodus_Timeline), [Celestials](https://exodus-game.fandom.com/wiki/Celestials), book stub | Game-universe glossary; some book citations; quality varies |
+| [exodusgame.wiki](https://exodusgame.wiki/wiki/Celestial) | Smaller alternate fan wiki |
+| **This project** (`exodus-the-archimedes-engine/`) | Full-spoiler *novel* companion — different job than game wikis |
+
+Do not treat Fandom as authoritative for novel-specific names or plot. Use it for shared-setting
+vocabulary (Celestials, archons, Travelers), then verify in the book.
+
+---
+
+## 6. Reviews (publication reception only)
+
+These belong on `sources.html` / Book real-world sections, **never** inside character, location,
+faction, or technology prose.
+
+| Outlet | Link |
+|---|---|
+| SFFWorld | https://www.sffworld.com/2024/09/exodus-the-archimedes-machine-by-peter-f-hamilton/ |
+| BookFrenzi | https://www.bookfrenzi.com/science-fiction/exodus-the-archimedes-engine-is-a-compelling-space-opera-review/ |
+| San Francisco Book Review | https://sanfranciscobookreview.com/product/exodus-the-archimedes-engine/ |
+| Library Journal | cited via Wikipedia |
+| New Scientist (“Hard stuff”) | cited via Wikipedia / ProQuest |
+| Strange Horizons | https://strangehorizons.com/wordpress/non-fiction/exodus-the-archimedes-engine-by-peter-f-hamilton/ |
+| The Wertzone | https://thewertzone.blogspot.com/2025/01/exodus-archimedes-engine-by-peter-f.html |
+| FanFiAddict | https://fanfiaddict.com/review-exodus-the-archimedes-engine-book-1-of-the-archimedes-engine-duology-by-peter-f-hamilton/ |
+| Out of This World Reviews | https://outofthisworldrev.blogspot.com/2024/07/book-review-exodus-archimedes-engine-by.html |
+| Goodreads | https://www.goodreads.com/book/show/205774097-exodus (community discussion only) |
+
+---
+
+## 7. What is not a good source for wiki articles
+
+| Type | Why |
+|---|---|
+| SoBrief / AI “book summary” sites | Condensed; often wrong on endgame detail |
+| Unauthorized full-text dumps (git repos, pirate sites) | Copyright infringement; do not use or link |
+| Spoiler-free blurbs alone | Missing almost all of what a full-spoiler wiki needs |
+| Game trailers / creature shorts | Flavour, not novel continuity |
+
+---
+
+## 8. Practical priority list for this wiki
+
+**Already on `pages/sources.html` (publication facts):**  
+PRH, Wikipedia pub facts, Tor UK deal, Exodus Game RH agreement, Helium Sea date, game Wikipedia.
+
+**Highest value secondary / verification aids:**
+
+1. **thisguise recap** — fan reconstruction for timeline cross-check, not canon  
+2. **In-book timeline** (cite novel; public transcriptions as convenience only)  
+3. **Official Traveler’s Guide pages** — franchise vocabulary, with game-vs-book boundary  
+4. **Hamilton interviews** (Space.com + FP TV / IGN) — collaboration, no FTL, Celestial design, chronology caveat  
+5. **Expanded Universe / TTRPG Encyclopedia** — shared setting; flag as multi-media canon  
+6. **Tchaikovsky site fiction** — adjacent canon only  
+7. **Wikipedia character list** — completeness checklist against Characters hub  
+8. **Helium Sea** (novel + PRH) — sequel stubs without inventing
+
+**Workflow**
+
+1. Seed and verify articles from the **novel**.  
+2. Use thisguise + Wikipedia character list as “did we miss a beat/name?” checklists.  
+3. Keep franchise/game material only where real-world vs reconstructed is already distinguished.  
+4. Keep all “we used X secondary source” discussion on **`pages/sources.html`** only.
+
+---
+
+## 9. Honest inventory of the public landscape
+
+There is **no** high-quality dedicated novel wiki online comparable to this project. Public plot
+depth bottoms out at:
+
+1. The book  
+2. thisguise’s recap  
+3. Wikipedia’s character dump  
+4. Shared-universe game lore (official site + Fandom + TTRPG)
+
+Everything else is reviews, interviews, or marketing.
+
+---
+
+## 10. Verification log
+
+What has actually been checked, as opposed to compiled. Anything not listed here is an
+inventory entry awaiting confirmation, not a verified fact.
+
+**25 July 2026 — reachability.** All 34 URLs in this file and in `pages/sources.html` returned
+HTTP 200 (following redirects, browser user-agent).
+
+**25 July 2026 — content confirmed by fetching the page:**
+
+| Claim | Result |
+|---|---|
+| Wikipedia character lists and their exact headings | confirmed, 30 names |
+| Wikipedia: audiobook narrated by John Lee, simultaneous release | confirmed |
+| Wikipedia: maintenance tags present | confirmed (`non-primary source needed`, `better source needed`) |
+| Wikipedia: novel called “a narrative prequel” to the game | confirmed; it does **not** say before or after |
+| thisguise recap dates are reverse-engineered from dialogue, not the book’s timeline | confirmed, quoted in §3.1 |
+| thisguise spelling drift | only `Dilligent` confirmed |
+| Expanded Universe: TTRPG titles, free character sheet, *Secret Level* “EXODUS: Odyssey” | confirmed |
+| PRH: publisher, 17 Sep 2024, 928 pages | confirmed |
+| Wikipedia roster vs this wiki’s Characters hub | all 30 covered; 40 pages here |
+
+**Not verified — do not treat as fact:**
+
+- The “~150 years after the game” interval and its Forbidden Planet TV timestamp (§4).
+- Adrian Tchaikovsky’s contribution to the TTRPG line (§2).
+- The in-book timeline’s contents, including any specific year taken from the Reddit
+  transcription. The timeline’s *existence* in the front matter is supported by reader reviews
+  but not by any official page.
+- The game-era “~41,500 AD present” figure in §2.
+
+---
+
+## 11. Maintenance
+
+- Re-check live URLs when editing `pages/sources.html` claims; update the verification date there.
+- When *The Helium Sea* work begins, extend this file with a sibling section rather than overwriting
+  Archimedes Engine findings.
+- Do not commit full novel text or large verbatim copyrighted extracts into this repo.
