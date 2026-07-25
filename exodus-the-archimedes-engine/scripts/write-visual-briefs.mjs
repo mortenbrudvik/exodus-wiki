@@ -508,7 +508,9 @@ const briefs = [
     clothing: "Hardline archon uniform-robes in black and Wynid crimson",
     setting: "Fleet command antechamber",
     prompt: `${STYLE} Portrait of Asahi-Iryna, hardline Imperial Celestial archon: tall post-human figure with severe expression, black and crimson archon uniform-robes, crystalline accents, elongated proportions. Ruthless oversight. Upper-body portrait, cold fleet light.`,
-    inference: ["Gender presentation as androgynous-elegant Celestial unless wiki specifies; page name reads feminine — present as woman"],
+    inference: [
+      "Gender presentation as androgynous-elegant Celestial unless wiki specifies; page name reads feminine — present as woman. **Unverified: this is a guess from the name, not from the text.** Dejean was inferred male the same way and the novel makes her a woman — confirm against the book before regenerating.",
+    ],
     image: "assets/images/characters/asahi-iryna.jpg",
   },
   {
@@ -521,7 +523,9 @@ const briefs = [
     clothing: "Celestial navy general armour — angular plates, rank glyphs (no readable text), dark steel-blue",
     setting: "Occupation HQ / navy bridge",
     prompt: `${STYLE} Portrait of General Avone-Valerio, Imperial Celestial navy commander: tall post-human military leader with cold commanding face, angular steel-blue navy armour plates, rank ornaments without text. Occupation authority. Upper-body portrait, harsh navy bridge light.`,
-    inference: ["Presented as masculine general"],
+    inference: [
+      "Presented as masculine general. **Unverified: this is a guess from the name, not from the text.** Dejean was inferred male the same way and the novel makes her a woman — confirm against the book before regenerating.",
+    ],
     image: "assets/images/characters/avone-valerio.jpg",
   },
   {
@@ -534,7 +538,9 @@ const briefs = [
     clothing: "Verak chief-archon robes — indigo and silver, mindline crest",
     setting: "Imperial Palace Verak wing",
     prompt: `${STYLE} Portrait of Acelynn, Chief Archon to the Verak queen and imperial throne: tall post-human Celestial with composed political expression, indigo and silver archon robes, mindline crest jewellery. Senior crown mindline. Upper-body portrait, palace light.`,
-    inference: ["Present as woman per name convention in wiki"],
+    inference: [
+      "Present as woman per name convention in wiki. **Unverified: this is a guess from the name, not from the text.** Dejean was inferred male the same way and the novel makes her a woman — confirm against the book before regenerating.",
+    ],
     image: "assets/images/characters/acelynn.jpg",
   },
   {
@@ -577,7 +583,9 @@ const briefs = [
     clothing: "Court mourning-leaning greys with bloodstone tear-jewellery",
     setting: "Court public gallery",
     prompt: `${STYLE} Portrait of Malquilvo, Imperial Celestial court parent in mourning and accusation: tall post-human figure with anguished stern expression, grey court robes, crystalline tear-like bloodstone jewellery. Tragic court politics. Upper-body portrait, cold public-gallery light.`,
-    inference: ["Present as masculine parent figure"],
+    inference: [
+      "Present as masculine parent figure. **Unverified: this is a guess from the name, not from the text.** Dejean was inferred male the same way and the novel makes her a woman — confirm against the book before regenerating.",
+    ],
     image: "assets/images/characters/malquilvo.jpg",
   },
   {
@@ -908,7 +916,11 @@ ${b.setting}
 
 ## Inference flags
 
-${b.inference.length ? b.inference.map((i) => `- ${i}`).join("\n") : "- None — cues grounded in wiki article + clade grammar."}
+${
+  b.inference.length
+    ? b.inference.map((i) => `- ${i}`).join("\n")
+    : "- **Everything visual here is inference.** No physical description has been recovered for this subject; the cues above are derived from role and clade grammar, not from the novel's text. That is not the same as the novel being silent — it means nobody has found a description yet."
+}
 
 ## Generation prompt
 

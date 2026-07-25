@@ -24,7 +24,7 @@ Court public gallery
 
 ## Inference flags
 
-- Present as masculine parent figure
+- Present as masculine parent figure. **Unverified: this is a guess from the name, not from the text.** Dejean was inferred male the same way and the novel makes her a woman — confirm against the book before regenerating.
 
 ## Generation prompt
 

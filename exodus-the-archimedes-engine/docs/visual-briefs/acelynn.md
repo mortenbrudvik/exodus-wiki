@@ -24,7 +24,7 @@ Imperial Palace Verak wing
 
 ## Inference flags
 
-- Present as woman per name convention in wiki
+- Present as woman per name convention in wiki. **Unverified: this is a guess from the name, not from the text.** Dejean was inferred male the same way and the novel makes her a woman — confirm against the book before regenerating.
 
 ## Generation prompt
 

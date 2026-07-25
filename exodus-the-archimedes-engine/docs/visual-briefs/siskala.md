@@ -24,7 +24,7 @@ Palace guard corridor
 
 ## Inference flags
 
-- None — cues grounded in wiki article + clade grammar.
+- **Everything visual here is inference.** No physical description has been recovered for this subject; the cues above are derived from role and clade grammar, not from the novel's text. That is not the same as the novel being silent — it means nobody has found a description yet.
 
 ## Generation prompt
 

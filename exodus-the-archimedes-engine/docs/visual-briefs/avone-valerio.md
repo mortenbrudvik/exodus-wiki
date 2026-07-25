@@ -24,7 +24,7 @@ Occupation HQ / navy bridge
 
 ## Inference flags
 
-- Presented as masculine general
+- Presented as masculine general. **Unverified: this is a guess from the name, not from the text.** Dejean was inferred male the same way and the novel makes her a woman — confirm against the book before regenerating.
 
 ## Generation prompt
 
