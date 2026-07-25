@@ -161,7 +161,8 @@ const dominions = [
     infobox: [
       ["Type", "Celestial dominion — nomadic / trader culture"],
       ["Also styled", "Talloch-Te; Tallach-Te (variant spelling)"],
-      ["Profile", "Traders and shipbuilders; physically likened to the nomadic Mara Yama"],
+      ["Profile", "Traders and shipbuilders; multi-body Celestials; physically likened to the nomadic Mara Yama"],
+      ["Body plan", "Primary + secondary bodies; mind partition/re-integration; bodymorph; five-eyed primary form (Sahdiah)"],
       ["Known archon", "<a href=\"../characters/sahdiah.html\">Sahdiah</a>"],
       ["Crown alignment", "Aligned with Verak Royal House / <a href=\"../characters/carolien-amaia.html\">Carolien-Amaia</a>"],
       ["Economic edge", "Largest ship fabrication industry within ~20 light-years"],
@@ -170,21 +171,21 @@ const dominions = [
     lead: `The <strong>Talloch-Te Dominion</strong> is a nomadic, trade-focused <a href="celestials.html">Celestial</a> power whose archon <a href="../characters/sahdiah.html">Sahdiah</a> uses <a href="travelers.html">Traveler</a> cutouts to keep “random factors” out of Cluster politics. In the novel it is the Great Game counterweight to Heresy–Wynid friendship: Verak’s empress-era helium ambitions point toward Talloch-Te shipyards and scoop capacity.`,
     sections: [
       {
-        h2: "Traders, ships, and nomad image",
+        h2: "Traders, multi-body architecture, and nomad image",
         paras: [
-          `The Talloch-Te are careful traders rather than open conquerors, with body plans and lifestyle comparable to the space-citadel nomadism of the Mara Yama. They consume large amounts of helium-3 and can supply scoopships and hulls at scale.`,
+          `The Talloch-Te are careful traders rather than open conquerors, and they distance themselves from Mara Yama atrocities while sharing a related nomad body-plan family. Each individual keeps a primary biological body and multiple secondary bodies, can move parts or all of a mind between them, and can re-integrate into the primary when needed. They bodymorph — including a “gravity form” humans usually find less disturbing than their other shapes. Sahdiah’s primary body has five eyes and is tended in a nurture chamber. The dominion consumes large amounts of helium-3 and can supply scoopships and hulls at scale.`,
         ],
       },
       {
         h2: "Verak alignment and the HeSea",
         paras: [
-          `Wynid aligns with the Heresy, and Verak with Talloch-Te. If iron-exotic Dolod cheapens Anoosha ore (Verak asset), Carolien as empress might favour Talloch-Te access to the Crown’s HeSea monopoly — a policy other queens would treat as Accord-breaking. Sahdiah’s intelligence work sits inside that economic war even when he never holds a Crown throne.`,
+          `Wynid aligns with the Heresy, and Verak with Talloch-Te. If iron-exotic Dolod cheapens Anoosha ore (Verak asset), Carolien as empress might favour Talloch-Te access to the Crown’s HeSea monopoly — a policy other queens would treat as Accord-breaking. Sahdiah’s intelligence work sits inside that economic war even when she never holds a Crown throne.`,
         ],
       },
       {
         h2: "Traveler deniability and Dolod",
         paras: [
-          `Sahdiah tasks <a href="../characters/marcellu.html">Marcellu</a> and Andino to stop the <em>Diligent</em> from acquiring a ZPZ generator; after Marcellu’s murder he tasks <a href="../characters/medusa.html">Medusa</a> and later races Dolod when warned of Gyvoy imposture. Talloch-Te power in the novel is felt through archon errands and Traveler logistics more than through open fleet battles at Kelowan.`,
+          `Sahdiah tasks <a href="../characters/marcellu.html">Marcellu</a> and Andino to stop the <em>Diligent</em> from acquiring a ZPZ generator; after Marcellu’s murder she tasks <a href="../characters/medusa.html">Medusa</a> and later races Dolod when warned of Gyvoy imposture. Talloch-Te power in the novel is felt through archon errands and Traveler logistics more than through open fleet battles at Kelowan.`,
         ],
       },
     ],

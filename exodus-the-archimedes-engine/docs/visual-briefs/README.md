@@ -16,7 +16,7 @@ Maintainer-only notes for original encyclopedia illustrations. **Not** reader-fa
 |---|---|---|
 | **Imperial Celestial** | Tall elegant humanoids (queens up to ~3 m; elongated proportions); post-human beauty; athanasia culture | Court robes, bloodstone jewellery/growths that eventually entomb a host; neural mindline status; livestone architecture hints |
 | **Heresy Celestial** | ~3 m spindly **hexapods** — two legs, four arms, expanded skulls, cooler body temperature | Alien-refined robes/armour for multi-limb anatomy; research/archon severity |
-| **Talloch-Te archon** | Still Celestial (not baseline); trader-dominion status more than a unique body-plan claim in the novel | Merchant-archon finery; deniable-ops cool rather than Crown court pomp |
+| **Talloch-Te archon** | Multi-body Celestials (primary + secondary bodies; mind partition); **five eyes** on Sahdiah’s primary body; bodymorph / gravity form; not Crown two-eyed humanoid, not Heresy hexapod | Merchant-archon finery; nurture-chamber / ship-linked presence; deniable-ops cool |
 | **Uranic** | Fully human appearance; intermediate status; neural interface ports subtle at temples/neck | Client aristocracy — Gondiar estate / ministerial dress, elegant but subordinate to Celestial scale |
 | **Baseline / Diligent** | Late-arkship humans; Earth-exodus memory culture | Shipboard uniforms, practical field kit, settler politics |
 | **Traveler / mercenary** | Baseline or mixed human | Worn ship gear, salvage harnesses, deniable commercial dress |

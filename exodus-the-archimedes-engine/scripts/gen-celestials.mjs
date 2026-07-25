@@ -161,16 +161,17 @@ const celestials = [
     infobox: [
       ["Role", "Archon of the Talloch-Te (nomad trader dominion)"],
       ["Affiliation", "<a href=\"../factions/celestials.html\">Celestials</a> (Talloch-Te)"],
+      ["Body", "Primary biological body with five eyes; multi-body Talloch-Te architecture"],
       ["Crown alignment", "Verak / <a href=\"carolien-amaia.html\">Carolien-Amaia</a> orbit (helium &amp; shipbuilding)"],
       ["Assets", "<a href=\"marcellu.html\">Marcellu</a>; <a href=\"medusa.html\">Medusa</a>; tasking via <a href=\"andino.html\">Andino</a>"],
       ["Agenda", "Suppress ZPZ “random factors”; investigate Marcellu’s murder; Dolod endgame"],
     ],
-    lead: `<strong>Sahdiah</strong> is the Talloch-Te archon who uses Traveler logistics as deniable sensors — ordering interference against the <a href="../locations/arkship-diligent.html"><em>Diligent</em></a>’s ZPZ bid, tasking <a href="medusa.html">Medusa</a> after Marcellu’s death, and burning for <a href="../locations/dolod.html">Dolod</a> when Medusa’s message reaches him.`,
+    lead: `<strong>Sahdiah</strong> is the Talloch-Te archon who uses Traveler logistics as deniable sensors — ordering interference against the <a href="../locations/arkship-diligent.html"><em>Diligent</em></a>’s ZPZ bid, tasking <a href="medusa.html">Medusa</a> after Marcellu’s death, and burning for <a href="../locations/dolod.html">Dolod</a> when Medusa’s message reaches her.`,
     sections: [
       {
-        h2: "Talloch-Te and Crown politics",
+        h2: "Talloch-Te body and Crown politics",
         paras: [
-          `Talloch-Te is a major ship-fabrication dominion and a heavy helium-3 consumer. Verak aligns with Talloch-Te, and Wynid with Heresy. Sahdiah is the Talloch-Te intelligence face of that rivalry.`,
+          `Talloch-Te Celestials are not Crown-style two-eyed humanoids. Sahdiah’s primary biological body has five eyes; when the Dolod problem closes in, that body opens all five inside its nurture chamber. Like other Talloch-Te, she works a multi-body architecture — a primary body, secondary bodies that can carry partitioned mind, and the ability to re-integrate — and can bodymorph, including a “gravity form” humans find less disturbing than her other shapes. The dominion is also a major ship-fabrication power and a heavy helium-3 consumer. Verak aligns with Talloch-Te, and Wynid with Heresy; Sahdiah is the Talloch-Te intelligence face of that rivalry.`,
         ],
       },
       {
@@ -182,7 +183,7 @@ const celestials = [
       {
         h2: "Endgame convergence",
         paras: [
-          `Medusa’s late message sends Sahdiah toward Dolod. He and Olomo trade accusations before realizing neither authored the Engine crisis. Asahi-Iryna is later dispatched after both foreign archons and the fleeing arkship.`,
+          `Medusa’s late message sends Sahdiah toward Dolod. She and Olomo trade accusations before realizing neither authored the Engine crisis. Asahi-Iryna is later dispatched after both foreign archons and the fleeing arkship.`,
         ],
       },
     ],
@@ -192,6 +193,7 @@ const celestials = [
       '<a href="marcellu.html">Marcellu</a>',
       '<a href="andino.html">Andino</a>',
       '<a href="asahi-iryna.html">Asahi-Iryna</a>',
+      '<a href="../factions/talloch-te-dominion.html">Talloch-Te Dominion</a>',
     ],
   },
   {

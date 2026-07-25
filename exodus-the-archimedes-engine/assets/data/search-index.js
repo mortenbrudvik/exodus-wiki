@@ -1044,7 +1044,7 @@ window.WIKI_SEARCH_INDEX = [
     "title": "Sahdiah",
     "path": "pages/characters/sahdiah.html",
     "category": "Characters",
-    "summary": "Talloch-Te archon; ZPZ denial; Medusa tasking; Dolod endgame",
+    "summary": "Talloch-Te archon; five-eyed primary body; ZPZ denial; Medusa tasking; Dolod endgame",
     "keywords": [
       "sahdiah",
       "talloch",
@@ -1052,7 +1052,9 @@ window.WIKI_SEARCH_INDEX = [
       "archon",
       "medusa",
       "traveler",
-      "celestials"
+      "celestials",
+      "five eyes",
+      "nurture chamber"
     ]
   },
   {
@@ -1395,7 +1397,7 @@ window.WIKI_SEARCH_INDEX = [
     "title": "Talloch-Te Dominion",
     "path": "pages/factions/talloch-te-dominion.html",
     "category": "Factions",
-    "summary": "Nomad trader/shipbuilder dominion; Sahdiah; Verak ally; ZPZ politics",
+    "summary": "Nomad multi-body traders; Sahdiah; Verak ally; ZPZ politics",
     "keywords": [
       "talloch",
       "talloch-te",
@@ -1476,3 +1478,4 @@ window.WIKI_SEARCH_INDEX = [
     ]
   }
 ]
+;

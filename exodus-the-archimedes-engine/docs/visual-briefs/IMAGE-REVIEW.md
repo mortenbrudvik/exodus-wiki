@@ -167,6 +167,11 @@ contradicted p. 241. **PASS** on architecture; no text.
 fix colour — article prose still omits it). Smoother capsule elements inside the golden cage; count
 reads ~eight under perspective. **PASS** as illustration of the atypical hull.
 
+**2026-07-25 (Sahdiah five eyes).** Regenerated portrait after ch. 31 confirmation: primary biological
+body with **exactly five eyes**, elongated non-Crown face, merchant-archon finery, nurture-chamber
+context. Prior plate was a two-eyed humanoid and wrong for the clade. Pronouns corrected she/her in
+generators. **PASS** — eye count verified by eye.
+
 | Slug | Prior defect | Regen check |
 |---|---|---|
 | `finn-jalgori-tobu` | Invented caption / date | No caption; East Asian family anchor |

@@ -532,14 +532,17 @@ const briefs = [
     clade: "Talloch-Te Celestial archon",
     role: "Archon of Talloch-Te nomad trader dominion; Traveler tasking",
     cues: [
-      "Celestial archon of trader dominion",
-      "Deniable-ops cool rather than Crown pomp",
-      "Humanoid Celestial (not Heresy hexapod) unless book says otherwise — wiki does not assign hexapod to Talloch-Te",
+      "Primary biological body has exactly five eyes (ch. 31)",
+      "Multi-body Talloch-Te architecture; gravity form for human-facing presence",
+      "Not Crown two-eyed humanoid; not Heresy hexapod",
     ],
     clothing: "Merchant-archon finery — bronze, void-black, ship-sigil jewellery",
-    setting: "Trader flagship observation lounge",
-    prompt: `${STYLE} Portrait of Sahdiah, Talloch-Te Celestial trader archon: tall elegant post-human with calculating merchant eyes, bronze and void-black merchant-archon finery, subtle crystalline accents, elongated proportions. Deniable power, not Crown court pomp. Upper-body portrait, warm ship-lounge light against stars.`,
-    inference: ["Body plan: humanoid Celestial (Talloch-Te not described as hexapod in wiki)"],
+    setting: "Nurture-chamber light on trader flagship",
+    prompt: `${STYLE} Upper-body portrait of Sahdiah, Talloch-Te Celestial archon: a non-human post-human trader intelligence whose primary biological body has exactly five eyes — count carefully: five eyes only, arranged on an elongated alien face, not a two-eyed human. Soft gravity-form silhouette that is still somewhat humanoid but clearly not Imperial Crown beauty and not a Heresy hexapod — no extra arms. Cool merchant-archon presence, bronze and void-black trader finery, subtle ship-sigil jewellery, calculating expression. Setting: dim shipboard nurture-chamber light with soft biotech housing glow behind her. Deniable power, not court pomp. Absolutely no text, no captions, no labels, no lettering, no logos, no brand marks, no watermarks, no UI chrome.`,
+    inference: [
+      "Skin tone and exact eye arrangement not fixed by the novel",
+      "Pronouns she/her (reader-confirmed)",
+    ],
     image: "assets/images/characters/sahdiah.jpg",
   },
 

@@ -1,0 +1,262 @@
+- generic [active] [ref=f23e1]:
+  - link "Skip to content" [ref=f23e2] [cursor=pointer]:
+    - /url: "#main-content"
+  - banner [ref=f23e3]:
+    - button "Menu" [ref=f23e4] [cursor=pointer]
+    - link "Archimedes Engine Wiki" [ref=f23e5] [cursor=pointer]:
+      - /url: ../../index.html
+    - search [ref=f23e6]:
+      - searchbox "Search" [ref=f23e7]
+      - button "Search" [ref=f23e8] [cursor=pointer]
+    - button "Switch to light theme" [ref=f23e9] [cursor=pointer]: Light
+  - main [ref=f23e11]:
+    - article [ref=f23e12]:
+      - heading "Arcadia’s Moon" [level=1] [ref=f23e14]
+      - complementary [ref=f23e15]:
+        - heading [level=2] [ref=f23e16]:
+          - emphasis [ref=f23e17]: Arcadia’s Moon
+        - button "View full Arcadia’s Moon" [ref=f23e18]:
+          - img "Arcadia’s Moon" [ref=f23e19]
+        - heading [level=2] [ref=f23e20]:
+          - emphasis [ref=f23e21]: Infinite Totality
+        - button "View full Infinite Totality disguise shell" [ref=f23e22]:
+          - img "Infinite Totality disguise shell" [ref=f23e23]
+        - generic [ref=f23e24]:
+          - term [ref=f23e25]: Type
+          - definition [ref=f23e26]: Traveler starship; deniable charter hull
+          - term [ref=f23e27]: Hull
+          - definition [ref=f23e28]: "Atypical Traveler architecture: geodesic sphere of golden trusses enclosing eight repositionable ovoid elements"
+          - term [ref=f23e29]: Captain
+          - definition [ref=f23e30]:
+            - link "Andino" [ref=f23e31] [cursor=pointer]:
+              - /url: ../characters/andino.html
+          - term [ref=f23e32]: Affiliation
+          - definition [ref=f23e33]:
+            - link "Travelers" [ref=f23e34] [cursor=pointer]:
+              - /url: ../factions/travelers.html
+            - text: ; contracted by
+            - link "Talloch-Te" [ref=f23e35] [cursor=pointer]:
+              - /url: ../factions/talloch-te-dominion.html
+            - text: interests
+          - term [ref=f23e36]: Disguise hull
+          - definition [ref=f23e37]:
+            - emphasis [ref=f23e38]: Infinite Totality
+          - term [ref=f23e39]: Charterers
+          - definition [ref=f23e40]:
+            - link "Marcellu" [ref=f23e41] [cursor=pointer]:
+              - /url: ../characters/marcellu.html
+            - text: ; archon
+            - link "Sahdiah" [ref=f23e42] [cursor=pointer]:
+              - /url: ../characters/sahdiah.html
+          - term [ref=f23e43]: Notable passengers
+          - definition [ref=f23e44]:
+            - link "Medusa" [ref=f23e45] [cursor=pointer]:
+              - /url: ../characters/medusa.html
+            - text: ;
+            - link "Josias Aponi" [ref=f23e46] [cursor=pointer]:
+              - /url: ../characters/josias-aponi.html
+            - text: ;
+            - link "Liliana" [ref=f23e47] [cursor=pointer]:
+              - /url: ../characters/liliana.html
+            - text: ;
+            - link "Toše" [ref=f23e48] [cursor=pointer]:
+              - /url: ../characters/tose.html
+          - term [ref=f23e49]: Endgame
+          - definition [ref=f23e50]:
+            - text: Vectors toward Capo Frois with the
+            - emphasis [ref=f23e51]: Diligent
+      - paragraph [ref=f23e52]:
+        - text: The
+        - strong [ref=f23e53]:
+          - emphasis [ref=f23e54]: Arcadia’s Moon
+        - text: is
+        - link "Andino" [ref=f23e55] [cursor=pointer]:
+          - /url: ../characters/andino.html
+        - text: ’s Traveler starship and the novel’s second most important vessel after the
+        - link [ref=f23e56] [cursor=pointer]:
+          - /url: arkship-diligent.html
+          - emphasis [ref=f23e57]: Diligent
+        - text: . It carries archon errands, an assassin, a fugitive agitator, and finally a demonstration of force — a single charter hull threading nearly every deniable operation in the book, usually under someone else’s name.
+      - generic [ref=f23e58]:
+        - heading "A deniable hull in the Great Game" [level=2] [ref=f23e59]
+        - paragraph [ref=f23e60]:
+          - text: Traveler ships exist in the gap between Celestial dominions, and the
+          - emphasis [ref=f23e61]: Arcadia’s Moon
+          - text: "is the primary on-page example: a working starship whose captain sells passage, salvage muscle, and silence to whoever charters it. Celestial archons use exactly this kind of hull as a deniable sensor — reach without fingerprints."
+          - link "Sahdiah" [ref=f23e62] [cursor=pointer]:
+            - /url: ../characters/sahdiah.html
+          - text: of the
+          - link "Talloch-Te" [ref=f23e63] [cursor=pointer]:
+            - /url: ../factions/talloch-te-dominion.html
+          - text: works through it repeatedly, and the ship’s willingness to fly under false identity is part of what it is selling.
+        - paragraph [ref=f23e64]:
+          - text: Its first significant job is interdiction.
+          - link "Marcellu" [ref=f23e65] [cursor=pointer]:
+            - /url: ../characters/marcellu.html
+          - text: flies to meet Sahdiah aboard the ship with a brief to keep the
+          - emphasis [ref=f23e66]: Diligent
+          - text: from acquiring a
+          - link "ZPZ generator" [ref=f23e67] [cursor=pointer]:
+            - /url: ../technology/zpz-generator.html
+          - text: . At Terrik Papuan the
+          - emphasis [ref=f23e68]: Arcadia’s Moon
+          - text: tails the
+          - link [ref=f23e69] [cursor=pointer]:
+            - /url: lestari.html
+            - emphasis [ref=f23e70]: Lestari
+          - text: carrying
+          - link "Finn" [ref=f23e71] [cursor=pointer]:
+            - /url: ../characters/finn-jalgori-tobu.html
+          - text: and
+          - link "Ellie" [ref=f23e72] [cursor=pointer]:
+            - /url: ../characters/eleanor-aponi.html
+          - text: ; fire is exchanged and ghost fleets assault the salvage. The interdiction fails, but the ship comes out of it embedded in the plot.
+      - generic [ref=f23e73]:
+        - heading "Carrying Medusa, carrying Josias" [level=2] [ref=f23e74]
+        - paragraph [ref=f23e75]:
+          - text: After
+          - link "Liliana" [ref=f23e76] [cursor=pointer]:
+            - /url: ../characters/liliana.html
+          - text: kills Marcellu with a cherenkov blade, Andino takes
+          - link "Medusa" [ref=f23e77] [cursor=pointer]:
+            - /url: ../characters/medusa.html
+          - text: aboard under summons from Sahdiah, who suspects
+          - link "Olomo" [ref=f23e78] [cursor=pointer]:
+            - /url: ../characters/olomo.html
+          - text: and sets her to investigate the murder. The ship is where a human-scale killer is handed an inter-archon blame game — the hinge that sends Medusa into
+          - link "Gondiar" [ref=f23e79] [cursor=pointer]:
+            - /url: gondiar.html
+          - text: ’s gang networks and eventually into
+          - link "Terence" [ref=f23e80] [cursor=pointer]:
+            - /url: ../characters/terence-wilson-fletcher.html
+          - text: ’s custody.
+        - paragraph [ref=f23e81]:
+          - text: Later it becomes an escape vehicle. When warrants and ghost units move on the Jalgori-Tobus after
+          - link "Josias" [ref=f23e82] [cursor=pointer]:
+            - /url: ../characters/josias-aponi.html
+          - text: ’s mass strike broadcast, Josias flees Gondiar with Liliana and
+          - link "Toše" [ref=f23e83] [cursor=pointer]:
+            - /url: ../characters/tose.html
+          - text: aboard the
+          - emphasis [ref=f23e84]: Arcadia’s Moon
+          - text: ", running as the"
+          - strong [ref=f23e85]:
+            - emphasis [ref=f23e86]: Infinite Totality
+          - text: . The same hull that was hired to suppress the human rebellion is now carrying its most public voice out of reach.
+        - paragraph [ref=f23e87]:
+          - text: The
+          - emphasis [ref=f23e88]: Infinite Totality
+          - text: is a false hull rather than a false name. The
+          - emphasis [ref=f23e89]: Arcadia’s Moon
+          - text: "does not share the usual Traveler freighter lines: its true shape is a geodesic sphere of golden trusses containing eight ovoid elements that move around inside the sphere and reconfigure their alignment with the ship’s flight status — so concealing it means burying that silhouette. A Lidon astroengineering firm builds the answer to order: a shell fuselage, a cone whose base flares into a sphere, drawn from ultrabonded fibre hunted out of that planet’s ruined geo-ring. The ship flies inside the shell and sheds it once it has served, leaving the casing split in half and hinged open."
+        - paragraph [ref=f23e90]:
+          - text: The disguise holds well enough to be sold.
+          - link "Terence" [ref=f23e91] [cursor=pointer]:
+            - /url: ../characters/terence-wilson-fletcher.html
+          - text: tries to charter the
+          - emphasis [ref=f23e92]: Infinite Totality
+          - text: as an unrelated vessel to get the Jalgori-Tobus clear, and finds the berth already empty. Even watchers keeping the
+          - emphasis [ref=f23e93]: Arcadia’s Moon
+          - text: on a standing list need a drone to observe the covering before they know the two names are one hull.
+      - generic [ref=f23e94]:
+        - heading "Dolod, Capo Frois, and the antimatter demonstration" [level=2] [ref=f23e95]
+        - paragraph [ref=f23e96]:
+          - text: At
+          - link "Dolod" [ref=f23e97] [cursor=pointer]:
+            - /url: dolod.html
+          - text: the
+          - emphasis [ref=f23e98]: Arcadia’s Moon
+          - text: observes
+          - link "Gyvoy" [ref=f23e99] [cursor=pointer]:
+            - /url: ../characters/gyvoy-enfoe.html
+          - text: ’s operation on the
+          - link "Archimedes Engine" [ref=f23e100] [cursor=pointer]:
+            - /url: ../technology/archimedes-engine.html
+          - text: infrastructure, and when the crisis breaks it runs with the arkship rather than against it. The novel’s final beats send both the
+          - emphasis [ref=f23e101]: Diligent
+          - text: and the
+          - emphasis [ref=f23e102]: Arcadia’s Moon
+          - text: vectoring toward Capo Frois — the region
+          - link "Helena-Thyra" [ref=f23e103] [cursor=pointer]:
+            - /url: ../characters/thyra.html
+          - text: ’s hardline court has been talking about annexing.
+        - paragraph [ref=f23e104]: "Andino’s closing intent gives the ship its last and largest role: a demonstration of a ~120,000 kt antimatter device near Capo Frois. A Traveler charter that began the book taking contracts to suppress a technology ends it threatening a dominion frontier with one."
+      - generic [ref=f23e105]:
+        - heading "See also" [level=2] [ref=f23e106]
+        - list [ref=f23e107]:
+          - listitem [ref=f23e108]:
+            - link "Andino" [ref=f23e109] [cursor=pointer]:
+              - /url: ../characters/andino.html
+          - listitem [ref=f23e110]:
+            - link [ref=f23e111] [cursor=pointer]:
+              - /url: arkship-diligent.html
+              - text: Arkship
+              - emphasis [ref=f23e112]: Diligent
+          - listitem [ref=f23e113]:
+            - link [ref=f23e114] [cursor=pointer]:
+              - /url: lestari.html
+              - emphasis [ref=f23e115]: Lestari
+          - listitem [ref=f23e116]:
+            - link "Medusa" [ref=f23e117] [cursor=pointer]:
+              - /url: ../characters/medusa.html
+          - listitem [ref=f23e118]:
+            - link "Marcellu" [ref=f23e119] [cursor=pointer]:
+              - /url: ../characters/marcellu.html
+          - listitem [ref=f23e120]:
+            - link "Sahdiah" [ref=f23e121] [cursor=pointer]:
+              - /url: ../characters/sahdiah.html
+          - listitem [ref=f23e122]:
+            - link "Travelers" [ref=f23e123] [cursor=pointer]:
+              - /url: ../factions/travelers.html
+          - listitem [ref=f23e124]:
+            - link "ZPZ generator" [ref=f23e125] [cursor=pointer]:
+              - /url: ../technology/zpz-generator.html
+      - generic [ref=f23e126]:
+        - heading "Connections" [level=2] [ref=f23e127]
+        - list [ref=f23e128]:
+          - listitem [ref=f23e129]:
+            - link "Captain Andino" [ref=f23e130] [cursor=pointer]:
+              - /url: ../characters/andino.html
+              - generic [ref=f23e131]:
+                - generic [ref=f23e132]: Captain
+                - generic [ref=f23e133]: Andino
+          - listitem [ref=f23e134]:
+            - link "Charterer Marcellu" [ref=f23e135] [cursor=pointer]:
+              - /url: ../characters/marcellu.html
+              - generic [ref=f23e136]:
+                - generic [ref=f23e137]: Charterer
+                - generic [ref=f23e138]: Marcellu
+          - listitem [ref=f23e139]:
+            - link "Charterer Sahdiah" [ref=f23e140] [cursor=pointer]:
+              - /url: ../characters/sahdiah.html
+              - generic [ref=f23e141]:
+                - generic [ref=f23e142]: Charterer
+                - generic [ref=f23e143]: Sahdiah
+          - listitem [ref=f23e144]:
+            - link "Notable passenger Medusa" [ref=f23e145] [cursor=pointer]:
+              - /url: ../characters/medusa.html
+              - generic [ref=f23e146]:
+                - generic [ref=f23e147]: Notable passenger
+                - generic [ref=f23e148]: Medusa
+          - listitem [ref=f23e149]:
+            - link "Notable passenger Josias Aponi" [ref=f23e150] [cursor=pointer]:
+              - /url: ../characters/josias-aponi.html
+              - generic [ref=f23e151]:
+                - generic [ref=f23e152]: Notable passenger
+                - generic [ref=f23e153]: Josias Aponi
+          - listitem [ref=f23e154]:
+            - link "Notable passenger Liliana" [ref=f23e155] [cursor=pointer]:
+              - /url: ../characters/liliana.html
+              - generic [ref=f23e156]:
+                - generic [ref=f23e157]: Notable passenger
+                - generic [ref=f23e158]: Liliana
+          - listitem [ref=f23e159]:
+            - link "Notable passenger Toše" [ref=f23e160] [cursor=pointer]:
+              - /url: ../characters/tose.html
+              - generic [ref=f23e161]:
+                - generic [ref=f23e162]: Notable passenger
+                - generic [ref=f23e163]: Toše
+      - generic [ref=f23e164]:
+        - text: "Categories:"
+        - link "Locations" [ref=f23e165] [cursor=pointer]:
+          - /url: index.html
