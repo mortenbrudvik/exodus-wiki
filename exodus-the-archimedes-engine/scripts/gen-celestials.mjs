@@ -2,6 +2,7 @@ import fs from "fs";
 import path from "path";
 import { fileURLToPath } from "url";
 import { seoRegion } from "./lib/seo.mjs";
+import { buildNav } from "./regroup-nav.mjs";
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 // WIKI_OUT_DIR lets check-wiki.mjs render into a scratch directory to prove the
@@ -33,21 +34,7 @@ ${seoRegion(relPath)}
   </header>
   <div class="layout">
     <aside class="sidebar" id="site-sidebar">
-      <nav aria-label="Wiki">
-        <ul>
-          <li><a href="../../../index.html">All book wikis</a></li>
-          <li><a href="../../index.html">Main Page</a></li>
-          <li><a href="../book.html">Book</a></li>
-          <li><a href="index.html">Characters</a></li>
-          <li><a href="../locations/index.html">Locations</a></li>
-          <li><a href="../factions/index.html">Factions</a></li>
-          <li><a href="../factions/dominions-roster.html">Dominions</a></li>
-          <li><a href="../technology/index.html">Technology</a></li>
-          <li><a href="../timeline.html">Timeline</a></li>
-          <li><a href="../plot.html">Plot</a></li>
-          <li><a href="../chapters.html">Chapters</a></li>
-        </ul>
-      </nav>
+${buildNav("../../", relPath)}
     </aside>
     <main class="content" id="main-content">
 ${bodyMain}
