@@ -113,7 +113,8 @@ const celestials = [
       ["Brief", "Kelowan-system intelligence; later Wynid oversight until hardline purge"],
       ["Affiliation", "<a href=\"../factions/celestials.html\">Imperial Celestials</a>; Wynid / Crown Dominion"],
       ["Ship", "<em><a href=\"../locations/alumata.html\">Alumata</a></em>"],
-      ["Successor hosts", "Faraji (selected son); residual Makaio-Spirit in <a href=\"terence-wilson-fletcher.html\">Terence</a>"],
+      ["Successor host", "Faraji (selected son)"],
+      ["Aspect transfer", "Makaio-Spirit carried by <a href=\"terence-wilson-fletcher.html\">Terence</a>"],
       ["Son / ally", "Neusch (neural gifts; continues investigation)"],
     ],
     lead: `<strong>Makaio</strong> is a multi-host Wynid archon mindline — <strong>Makaio-Yalbo</strong> in the prologue, later <strong>Makaio-Faraji</strong> — whose spycraft spans the Dolod warning, Gondiar intelligence, and a dying neural transfer into detective <a href="terence-wilson-fletcher.html">Terence Wilson-Fletcher</a>.`,
@@ -136,7 +137,7 @@ const celestials = [
         h2: "Gondiar, loyalty tests, and death",
         paras: [
           `Makaio-Faraji uses Terence as a human instrument. He extends a Wynid loyalty-test invitation during Thyra’s first combat trial, holds later meetings on the <em><a href="../locations/alumata.html">Alumata</a></em>, and suspects that <a href="gyvoy-enfoe.html">Gyvoy</a>/Bopbe networks may touch Mara Yama interests. Under hardline <a href="thyra.html">Helena-Thyra</a>, Uulana-Shoigu fires him from Wynid oversight and winds down his Gondiar task force.`,
-          `<a href="tose.html">Toše</a> snipes him at the Governor’s mansion. Dying, he neurally transfers an aspect of himself into Terence — the <strong>Makaio-Spirit</strong> — which activates protocols with Neusch and drives the late Gyvoy / Diligent / Dolod manhunt.`,
+          `<a href="tose.html">Toše</a> snipes him at the Governor’s mansion. Dying, he neurally transfers an aspect of himself into Terence — the <strong>Makaio-Spirit</strong> — which activates protocols with <a href="neusch.html">Neusch</a> and drives the late Gyvoy / <em>Diligent</em> / Dolod manhunt.`,
         ],
       },
     ],
@@ -159,7 +160,7 @@ const celestials = [
       ["Assets", "<a href=\"marcellu.html\">Marcellu</a>; <a href=\"medusa.html\">Medusa</a>; tasking via <a href=\"andino.html\">Andino</a>"],
       ["Agenda", "Suppress ZPZ “random factors”; investigate Marcellu’s murder; Dolod endgame"],
     ],
-    lead: `<strong>Sahdiah</strong> is the Talloch-Te archon who uses Traveler logistics as deniable sensors — ordering interference against the <a href="../locations/arkship-diligent.html"><em>Diligent</em></a>’s ZPZ bid, tasking <a href="medusa.html">Medusa</a> after Marcellu’s death, and burning for <a href="../locations/dolod.html">Dolod</a> when Terence’s warning reaches him.`,
+    lead: `<strong>Sahdiah</strong> is the Talloch-Te archon who uses Traveler logistics as deniable sensors — ordering interference against the <a href="../locations/arkship-diligent.html"><em>Diligent</em></a>’s ZPZ bid, tasking <a href="medusa.html">Medusa</a> after Marcellu’s death, and burning for <a href="../locations/dolod.html">Dolod</a> when Medusa’s message reaches him.`,
     sections: [
       {
         h2: "Talloch-Te and Crown politics",
@@ -203,13 +204,13 @@ const celestials = [
       {
         h2: "Consort and father",
         paras: [
-          `Jolav is Helena’s consort and Clavissa’s father, distinct from <a href="bekket.html">Bekket</a>’s liaison that produces Thyra. He represents the court family line that loses when Bekket’s daughter seizes the mindline.`,
+          `Jolav is Helena’s consort and Clavissa’s father; Thyra comes from Helena’s separate liaison with <a href="bekket.html">Bekket</a>. He represents the court family line that loses when Bekket’s daughter seizes the mindline.`,
         ],
       },
       {
         h2: "Opposition under Helena-Thyra",
         paras: [
-          `Clavissa confides distrust of Thyra to Jolav. When Thyra’s fleet leaves early for Kelowan, Jolav asks Clavissa to spy and points her to Neusch. He joins Gahiji and Makaio as residual elites map Uulana-Shoigu’s infiltration.`,
+          `Clavissa confides distrust of Thyra to Jolav. When Thyra’s fleet leaves early for Kelowan, Jolav asks Clavissa to spy and points her to <a href="neusch.html">Neusch</a>. He joins Gahiji and <a href="makaio.html">Makaio</a> as residual elites map Uulana-Shoigu’s infiltration.`,
         ],
       },
     ],
@@ -218,6 +219,7 @@ const celestials = [
       '<a href="clavissa.html">Clavissa</a>',
       '<a href="bekket.html">Bekket</a>',
       '<a href="lord-gahiji.html">Lord Gahiji</a>',
+      '<a href="neusch.html">Neusch</a>',
     ],
   },
   {
@@ -234,7 +236,7 @@ const celestials = [
       {
         h2: "Tiger Guard and new life",
         paras: [
-          `Imperial Celestial culture routes some offspring into mindline candidacy and others into “new life” careers. Siskala’s Tiger Guard majorate places her as a key military figure around Helena’s household and honor formations. She speaks less on the page than Thyra or Clavissa, and her importance is the institutional armed continuity of Wynid queenship.`,
+          `Imperial Celestial culture routes some offspring into mindline candidacy and others into “new life” careers. As a major of the Royal Tiger Guard she is a key military figure around Helena’s household and honor formations, and the armed continuity of Wynid queenship runs through those formations rather than through the mindline.`,
         ],
       },
     ],
@@ -258,7 +260,7 @@ const celestials = [
       {
         h2: "Verak’s chief operator",
         paras: [
-          `While detailed archon scenes often follow Wynid and foreign peers, Acelynn is the named institutional mind beside the rotating Empress. Carolien’s Gondiar crackdown, Kelowan fleet exercises, and collapse under kestrel-sprite sabotage all pass through Verak/imperial staff structures Acelynn represents.`,
+          `Acelynn holds at Verak the office <a href="lord-gahiji.html">Lord Gahiji</a> holds at Wynid: Chief Archon to a Now and Forever Queen, running the court’s institutional business while she carries the mindline. When <a href="carolien-amaia.html">Carolien-Amaia</a> takes the rotating empress throne, that court business becomes imperial business.`,
         ],
       },
     ],
@@ -306,14 +308,14 @@ const celestials = [
     infobox: [
       ["Title", "Now and Forever Queen of Cheluli"],
       ["Affiliation", "<a href=\"../factions/crown-dominion.html\">Crown Dominion</a>"],
-      ["Also listed as", "Inessa (mindline originator name)"],
+      ["Also known as", "Inessa (mindline originator name)"],
     ],
-    lead: `<strong>Inessa-Pierina</strong> is the Now and Forever Queen of <strong>Cheluli</strong>, one of the Crown Dominion’s peer queens. Cheluli is a full royal seat, though the novel stages fewer scenes at her court than at Wynid, Verak, or Nizinsk.`,
+    lead: `<strong>Inessa-Pierina</strong> is the Now and Forever Queen of <strong>Cheluli</strong>, one of the Crown Dominion’s peer queens. Cheluli is a full royal seat, one of the five royal houses remaining under the Imperial Accord after Zuberi’s extinction.`,
     sections: [
       {
         h2: "Peer queen of the Accord",
         paras: [
-          `The Dominion’s balance depends on multiple Now and Forever Queens rotating the empress role and massing fleets at Kelowan. Inessa is the major mindline queen of Cheluli; her private policies stay offstage.`,
+          `The Dominion’s balance depends on multiple Now and Forever Queens rotating the empress role and massing fleets at Kelowan. Inessa is the major mindline queen of Cheluli, and one of the votes that decides which way the Accord leans when <a href="thyra.html">Helena-Thyra</a> pushes the hardline.`,
         ],
       },
     ],
@@ -372,7 +374,7 @@ const celestials = [
       {
         h2: "Echoes in the novel",
         paras: [
-          `Zuberi’s palace mountain becomes the Imperial Palace. QIX (Queen In Exile) underworld sentiment keeps her name politically radioactive. Helena preserves Accord founding memories to prevent a Zuberi-style return.`,
+          `Zuberi’s palace mountain becomes the Imperial Palace. QIX (Queen In Exile) underworld sentiment keeps her name politically radioactive. Survivors of her family are rumored to remain, linked to Malakbel. Helena preserves Accord founding memories to prevent a Zuberi-style return.`,
         ],
       },
     ],
@@ -397,7 +399,7 @@ const celestials = [
       {
         h2: "Uulana-Lyon: investigator",
         paras: [
-          `After Binji kills Lyon’s daughter Delfina, Uulana-Lyon suspects Bekket and Thyra. His Uixic inquiry ends in slowball assassination; he glimpses cloned-looking gallery figures before death. The wreck is discarded at Tonobo.`,
+          `After Lyon’s daughter Delfina dies in the Binji survival trial, Uulana-Lyon suspects <a href="bekket.html">Bekket</a> and <a href="thyra.html">Thyra</a>. His Uixic inquiry ends in slowball assassination; he glimpses cloned-looking gallery figures before death. The wreck is discarded at Tonobo.`,
         ],
       },
       {
@@ -470,7 +472,7 @@ const celestials = [
     infobox: [
       ["Role", "Archon; replaces Makaio’s Wynid oversight under hardliners"],
       ["Affiliation", "Wynid / Crown hardline apparatus under Helena-Thyra"],
-      ["Endgame task", "Dispatched after the <em>Diligent</em>, Olomo, and Sahdiah"],
+      ["Endgame task", "Dispatched after the <a href=\"../locations/arkship-diligent.html\"><em>Diligent</em></a>, Olomo, and Sahdiah"],
     ],
     lead: `<strong>Asahi-Iryna</strong> is the archon who takes Wynid-related oversight after Makaio-Faraji is fired, and who is later ordered to pursue the fleeing <em>Diligent</em> and foreign archons during the Dolod endgame.`,
     sections: [
@@ -486,6 +488,7 @@ const celestials = [
       '<a href="thyra.html">Thyra</a>',
       '<a href="olomo.html">Olomo</a>',
       '<a href="sahdiah.html">Sahdiah</a>',
+      '<a href="../locations/arkship-diligent.html">Arkship Diligent</a>',
     ],
   },
   {
@@ -498,12 +501,12 @@ const celestials = [
       ["Theater", "<a href=\"../locations/gondiar.html\">Gondiar</a> lockdown"],
       ["Mindline", "Avone (minor)"],
     ],
-    lead: `<strong>General Avone-Valerio</strong> commands the hardline navy fleet that locks down Gondiar after Makaio’s murder — ghost units, awakened animals, navy HQ in Jalgori-Tobu spaces, and the occupation that radicalizes the liberation crisis.`,
+    lead: `<strong>General Avone-Valerio</strong> commands the hardline navy fleet that locks down Gondiar after Makaio’s murder — ghost units, awakened animals, navy HQ in <a href="finn-jalgori-tobu.html">Jalgori-Tobu</a> spaces, and the occupation that radicalizes the liberation crisis.`,
     sections: [
       {
         h2: "Gondiar occupation",
         paras: [
-          `Manipulated by Uulana-Shoigu, Empress <a href="carolien-amaia.html">Carolien-Amaia</a> dispatches Avone-Valerio. Josias’s strike broadcast, airstrikes killing the Marchioness, and the family’s flight all occur under this occupation.`,
+          `Manipulated by Uulana-Shoigu, Empress <a href="carolien-amaia.html">Carolien-Amaia</a> dispatches Avone-Valerio. <a href="josias-aponi.html">Josias</a>’s strike broadcast, airstrikes killing the Marchioness of Santa Rosa, and the Jalgori-Tobu flight from Zetian Palace all occur under this occupation.`,
         ],
       },
     ],
@@ -511,6 +514,7 @@ const celestials = [
       '<a href="carolien-amaia.html">Carolien-Amaia</a>',
       '<a href="uulana.html">Uulana</a>',
       '<a href="josias-aponi.html">Josias Aponi</a>',
+      '<a href="finn-jalgori-tobu.html">Finn Jalgori-Tobu</a>',
     ],
   },
   {
@@ -518,24 +522,24 @@ const celestials = [
     title: "Dagon",
     h1: "Dagon",
     infobox: [
-      ["Nature", "Celestial-grade operator; offworld contact / imposture network"],
+      ["Nature", "Celestial operator; offworld contact / imposture network"],
       ["Covers", "Operates the <a href=\"gyvoy-enfoe.html\">Gyvoy Enfoe</a> imposture"],
       ["Family reveal", "Thyra’s uncle"],
       ["Affiliation", "<a href=\"bekket.html\">Bekket</a> / Guillrameo extended network"],
       ["Human investigation", "Terence ordered not to pursue; later core manhunt target"],
     ],
-    lead: `<strong>Dagon</strong> is the offworld Celestial-linked operator who enters Santa Rosa gang networks as <a href="gyvoy-enfoe.html">Gyvoy Enfoe</a>’s contact, operates the Gyvoy imposture that steers the Engine plot, and is revealed as <a href="thyra.html">Thyra</a>’s uncle.`,
+    lead: `<strong>Dagon</strong> is the offworld Celestial operator who enters Santa Rosa gang networks as <a href="gyvoy-enfoe.html">Gyvoy Enfoe</a>’s contact, operates the Gyvoy imposture that steers the Engine plot, and is revealed as <a href="thyra.html">Thyra</a>’s uncle.`,
     sections: [
       {
         h2: "Crime-network entry point",
         paras: [
-          `In Terence’s early case, Younes must introduce Dagon to Gyvoy. Younes dies and Colvin immolates. <a href="zelinda-jalgori-tobu.html">Zelinda</a> conveys the Governor’s order not to pursue Dagon.`,
+          `In <a href="terence-wilson-fletcher.html">Terence</a>’s early case, Lieutenant Colvin orders Younes to introduce Dagon to <a href="gyvoy-enfoe.html">Gyvoy</a>. The surveillance fails, Younes is murdered, and Colvin self-immolates in custody. <a href="zelinda-jalgori-tobu.html">Zelinda</a> conveys the Governor’s order not to pursue Dagon.`,
         ],
       },
       {
         h2: "Imposture and Dolod",
         paras: [
-          `Late investigation finds <a href="gyvoy-enfoe.html">Gyvoy</a>’s body as a discarded shell. Ellie recovers forced induction-pad memories. Dagon is Thyra’s uncle, binding Engine manipulation to Bekket’s dynasty war.`,
+          `Late investigation finds <a href="gyvoy-enfoe.html">Gyvoy</a>’s body as a discarded shell. <a href="eleanor-aponi.html">Ellie</a> recovers suppressed memories of Gyvoy forcing <a href="finn-jalgori-tobu.html">Finn</a>’s induction pad. Dagon is Thyra’s uncle, binding Engine manipulation to Bekket’s dynasty war.`,
         ],
       },
     ],
@@ -557,7 +561,7 @@ const celestials = [
       ["Orders", "Capture the <em>Diligent</em> during Dolod / Boksrock crisis"],
       ["Mindline", "Radwarno (minor)"],
     ],
-    lead: `<strong>Commander Radwarno</strong> leads Verak fleet elements at Kelowan. <a href="thyra.html">Helena-Thyra</a> orders him to capture the <em>Diligent</em> once the Engine crisis breaks — a capture that fails when Finn’s ZPZ/anchor escape accelerates the arkship away.`,
+    lead: `<strong>Commander Radwarno</strong> leads Verak fleet elements at Kelowan. <a href="thyra.html">Helena-Thyra</a> orders him to capture the <a href="../locations/arkship-diligent.html"><em>Diligent</em></a> once the Engine crisis breaks — a capture that fails when <a href="finn-jalgori-tobu.html">Finn</a>’s ZPZ/anchor escape accelerates the arkship away.`,
     sections: [
       {
         h2: "Capture order and miss",
@@ -570,6 +574,7 @@ const celestials = [
       '<a href="thyra.html">Thyra</a>',
       '<a href="carolien-amaia.html">Carolien-Amaia</a>',
       '<a href="asahi-iryna.html">Asahi-Iryna</a>',
+      '<a href="../locations/arkship-diligent.html">Arkship Diligent</a>',
     ],
   },
   {
@@ -580,14 +585,14 @@ const celestials = [
       ["Relation", "Son of Makaio-Faraji; recipient of neural gifts"],
       ["Role", "Continues Makaio protocols after assassination"],
       ["Affiliation", "Wynid archon household; residual opposition"],
-      ["Endgame", "Uixic investigation; provides Terence the <em>Aecus</em>; aids Clavissa"],
+      ["Endgame", "Lends Terence the ship <em>Aecus</em>; aids Clavissa"],
     ],
     lead: `<strong>Neusch</strong> is a son of Makaio-Faraji who receives neural gifts before the archon’s death. When the Makaio-Spirit activates inside Terence, Neusch becomes the living continuation of Makaio’s work.`,
     sections: [
       {
         h2: "Heir of a spymaster line",
         paras: [
-          `Neusch provides Terence the <em>Aecus</em>, shares information with Clavissa, and carries residual requests to dig into Bekket-network crimes. He is Celestial youth pressed into adult Great Game residue.`,
+          `Neusch lends Terence the ship <em>Aecus</em>, shares information with Clavissa, and carries residual requests to dig into Bekket-network crimes. He inherits his father’s contacts without his father’s rank, and works them inside a court that has already purged the Makaio line.`,
         ],
       },
     ],
@@ -612,7 +617,7 @@ const celestials = [
       {
         h2: "Trial collateral",
         paras: [
-          `Thyra uses non-awakened bloodlines to kill sisters including Valeri while “saving” Clavissa for optics. Malquilvo’s protest ends in death; Uulana-Lyon’s parallel suspicion survives longer only to die offworld.`,
+          `Thyra uses non-awakened bloodlines to kill sisters including Valeri while “saving” Clavissa for optics. Malquilvo’s protest ends in his death; <a href="uulana.html">Uulana-Lyon</a>, who pursues the same suspicion, survives longer and is assassinated offworld on his Uixic inquiry.`,
         ],
       },
     ],

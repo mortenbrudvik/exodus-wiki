@@ -217,7 +217,7 @@ const dominions = [
       {
         h2: "What the novel does not resolve",
         paras: [
-          `The book does not deliver a full Mara Yama invasion POV. Their narrative function is pressure: they make hardline expansion and fleet theater legible, and they keep Capo Frois / Hoa Quinzu on the strategic map when the <em>Diligent</em> flees. How much Mara Yama activity is real, and how much is inflated by Bekket-network politics, is never resolved.`,
+          `The book does not deliver a full Mara Yama invasion POV. Their narrative function is pressure: they make hardline expansion and fleet theater legible, and they keep Capo Frois / Hoa Quinzu on the strategic map when the <em>Diligent</em> flees. How much Mara Yama activity is real, and how much is inflated by <a href="../characters/bekket.html">Bekket</a>-network politics, is never resolved.`,
         ],
       },
     ],
@@ -310,7 +310,7 @@ const dominions = [
     title: "Elohim",
     h1: "Elohim",
     infobox: [
-      ["Type", "Ancient Celestial / post-human civilization (Dawn Era)"],
+      ["Type", "Ancient Dawn Era civilization; predates human arrival in the Cluster"],
       ["Era", "Dawn / early Cluster terraforming ages — long before Crown Accord"],
       ["Legacy tech", "<a href=\"../technology/archimedes-engine.html\">Archimedes Engines</a>; Eden-world planetary engineering"],
       ["Book role", "Deep past that explains Dolod’s mobility and habitable-world abundance"],
@@ -334,7 +334,6 @@ const dominions = [
     seeAlso: [
       '<a href="../technology/archimedes-engine.html">Archimedes Engine</a>',
       '<a href="../locations/dolod.html">Dolod</a>',
-      '<a href="celestials.html">Celestials</a>',
       '<a href="travelers.html">Travelers</a>',
     ],
   },
