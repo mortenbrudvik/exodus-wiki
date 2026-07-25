@@ -1,5 +1,5 @@
-# https://mortenbrudvik.github.io/my-books/
+# https://mortenbrudvik.github.io/exodus-wiki/
 User-agent: *
 Allow: /
 
-Sitemap: https://mortenbrudvik.github.io/my-books/sitemap.xml
+Sitemap: https://mortenbrudvik.github.io/exodus-wiki/sitemap.xml

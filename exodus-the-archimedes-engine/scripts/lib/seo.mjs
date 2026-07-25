@@ -15,7 +15,7 @@ import { fileURLToPath } from "url";
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const bookRoot = path.join(__dirname, "..", "..");
 
-export const SITE = "https://mortenbrudvik.github.io/my-books";
+export const SITE = "https://mortenbrudvik.github.io/exodus-wiki";
 export const BOOK = "exodus-the-archimedes-engine";
 export const SITE_NAME = "Exodus Wiki";
 export const BOOK_TITLE = "Exodus: The Archimedes Engine";

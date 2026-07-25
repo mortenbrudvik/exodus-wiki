@@ -76,7 +76,7 @@ seo markers; edit the summary or `lib/seo.mjs` and re-run.
 
 `search.html` is `noindex,follow` and excluded from the sitemap: a search-results page is thin,
 duplicate-by-construction content. Site-wide URLs are absolute and hardcoded to
-`https://mortenbrudvik.github.io/my-books` in `lib/seo.mjs` — that constant is the one place to
+`https://mortenbrudvik.github.io/exodus-wiki` in `lib/seo.mjs` — that constant is the one place to
 change if the domain ever does.
 
 The two generators write different line endings (celestials CRLF, dominions LF) and normalize the
@@ -166,7 +166,7 @@ one:
   `style="grid-template-columns: 1fr"`.
 - `.hub-list` is a CSS grid, not multi-column, so multi-line entries never split across the gutter.
 
-Relative links only — everything must work under `https://<user>.github.io/my-books/`. Book wikis
+Relative links only — everything must work under `https://<user>.github.io/exodus-wiki/`. Book wikis
 reach the hub via `../index.html` from a wiki root, with one more `../` per nesting level.
 
 ## Editorial conventions
