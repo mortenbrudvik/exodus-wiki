@@ -1,6 +1,6 @@
 {
   "style": "Highly detailed cinematic sci-fi encyclopedia illustration, rich textures, sharp focus, painterly digital art with photographic detail, soft volumetric lighting, no text, no watermark, no UI chrome.",
-  "count": 44,
+  "count": 46,
   "subjects": [
     {
       "slug": "finn-jalgori-tobu",
@@ -353,6 +353,22 @@
       "image": "assets/images/ships/lestari.jpg",
       "prompt": "Highly detailed cinematic sci-fi encyclopedia illustration, rich textures, sharp focus, painterly digital art with photographic detail, soft volumetric lighting, no text, no watermark, no UI chrome. Exterior plate of the Lestari, an Enfoe dynasty commercial starship: robust mid-large freighter with cargo spines, commercial markings without readable text, bronze-and-dark hull, Traveler-adjacent working commerce aesthetic. Three-quarter view in deep space with open cargo-bay light spill.",
       "clade": "Enfoe commercial starship"
+    },
+    {
+      "slug": "polkadav",
+      "title": "Polkadav",
+      "kind": "ship",
+      "image": "assets/images/ships/polkadav.jpg",
+      "clade": "Human/Uranic transport · rendezvous hull",
+      "prompt": "Highly detailed cinematic sci-fi encyclopedia illustration, rich textures, sharp focus, painterly digital art with photographic detail, soft volumetric lighting, no text, no watermark, no UI chrome. Exterior plate of the Polkadav, a mid-size human transport and rendezvous hull used for aristocratic family evacuation: sleek private passenger transport with refined dark-bronze and cream plating, passenger windows, docking collar for arkship rendezvous, not a warship and not a generation arkship. Three-quarter view climbing from planetary orbit with atmosphere limb glow, ready for deep-space rendezvous."
+    },
+    {
+      "slug": "aeacus",
+      "title": "Aeacus",
+      "kind": "ship",
+      "image": "assets/images/ships/aeacus.jpg",
+      "clade": "Crown/Wynid Celestial household hull",
+      "prompt": "Highly detailed cinematic sci-fi encyclopedia illustration, rich textures, sharp focus, painterly digital art with photographic detail, soft volumetric lighting, no text, no watermark, no UI chrome. Exterior plate of the Aeacus, a compact Crown Imperial Celestial household ship lent to a human investigator: elegant elongated pearlescent silver-violet hull with livestone-like plating, refined personal yacht lines smaller than a capital or freighter, subtle glowing spinal ridge, Wynid archon-household craft. Three-quarter view against deep starfield, cool luminous lighting."
     }
   ]
 }

@@ -30,6 +30,8 @@ Maintainer-only notes for original encyclopedia illustrations. **Not** reader-fa
 | *Alumata* | Sleek Crown **archon ship** — elegant, intelligence yacht, smaller than Heresy capital hulls |
 | *Cybele’s Eagle* | Compact **deniable passenger** transport — civilian lines, not navy |
 | *Lestari* | Enfoe **commercial** starship — dynasty freighter, Traveler-adjacent commerce |
+| *Polkadav* | Mid **transport / rendezvous** hull — Jalgori-Tobu family evacuation to the *Diligent* |
+| *Aeacus* | Compact Crown **household Celestial** hull — lent by Neusch to Terence |
 
 ## Coverage list
 

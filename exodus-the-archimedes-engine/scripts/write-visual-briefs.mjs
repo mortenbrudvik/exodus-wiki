@@ -707,6 +707,45 @@ const briefs = [
     inference: [],
     image: "assets/images/ships/lestari.jpg",
   },
+  {
+    slug: "polkadav",
+    title: "Polkadav",
+    kind: "ship",
+    clade: "Human / Uranic transport · rendezvous hull",
+    role: "Evacuates the Jalgori-Tobus from Gondiar to rendezvous with the Diligent",
+    cues: [
+      "Transport / rendezvous hull, not navy capital or generation arkship",
+      "Family escape vessel for Uranic client aristocracy",
+      "Parallel flight path to Arcadia's Moon / Infinite Totality",
+      "Mid-size private transport with docking collar for arkship rendezvous",
+    ],
+    clothing: "n/a",
+    setting: "Climbing from planetary orbit toward deep-space rendezvous",
+    prompt: `${STYLE} Exterior plate of the Polkadav, a mid-size human transport and rendezvous hull used for aristocratic family evacuation: sleek private passenger transport with refined dark-bronze and cream plating, passenger windows, docking collar for arkship rendezvous, not a warship and not a generation arkship. Three-quarter view climbing from planetary orbit with atmosphere limb glow, ready for deep-space rendezvous.`,
+    inference: [
+      "Exact hull lines not in the novel — mid private transport between civilian yacht and freighter",
+    ],
+    image: "assets/images/ships/polkadav.jpg",
+  },
+  {
+    slug: "aeacus",
+    title: "Aeacus",
+    kind: "ship",
+    clade: "Crown / Wynid Celestial household hull",
+    role: "Lent by Neusch to Terence Wilson-Fletcher after Makaio-Faraji’s assassination",
+    cues: [
+      "Celestial hull from Wynid archon household of Makaio-Faraji",
+      "Material support for human detective carrying Makaio-Spirit",
+      "Crown design language related to but distinct from Alumata — more compact loaner",
+    ],
+    clothing: "n/a",
+    setting: "Against starfield, cool luminous Crown aesthetic",
+    prompt: `${STYLE} Exterior plate of the Aeacus, a compact Crown Imperial Celestial household ship lent to a human investigator: elegant elongated pearlescent silver-violet hull with livestone-like plating, refined personal yacht lines smaller than a capital or freighter, subtle glowing spinal ridge, Wynid archon-household craft. Three-quarter view against deep starfield, cool luminous lighting.`,
+    inference: [
+      "Exact silhouette not in the novel — smaller refined Celestial craft in Crown archon design family",
+    ],
+    image: "assets/images/ships/aeacus.jpg",
+  },
 ];
 
 function renderBrief(b) {
