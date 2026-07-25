@@ -1,29 +1,46 @@
 (function (window, document) {
   "use strict";
 
-  // Fold diacritics so ASCII typing finds accented names ("tose" → "Toše").
+  // Fold case, diacritics and punctuation so ASCII typing finds the real spelling:
+  // "tose" matches Toše, "helena chione" matches Helena-Chione, "cybeles eagle"
+  // matches Cybele’s Eagle. Queries and index fields both pass through here, so the
+  // two always normalize the same way.
   function fold(s) {
     s = String(s || "").toLowerCase();
-    return s.normalize ? s.normalize("NFD").replace(/[\u0300-\u036f]/g, "") : s;
+    if (s.normalize) s = s.normalize("NFD").replace(/[̀-ͯ]/g, "");
+    return s
+      .replace(/[‘’`´']/g, "")
+      .replace(/[^a-z0-9]+/g, " ")
+      .trim();
   }
 
   function normalizeQuery(q) {
-    return fold(String(q || "").trim());
+    return fold(q);
   }
 
+  // Ranking, highest first: exact title, exact keyword (an alias names its own subject, so it
+  // must beat an incidental page whose longer title merely contains the query), title prefix,
+  // title substring, keyword substring, summary substring.
   function scoreEntry(entry, q) {
     if (!q) return 0;
     var score = 0;
     var title = fold(entry.title);
     var summary = fold(entry.summary);
     var keywords = Array.isArray(entry.keywords) ? entry.keywords : [];
-    if (title.indexOf(q) !== -1) score += 100;
+    if (title === q) score += 250;
+    else if (title.indexOf(q) === 0) score += 125;
+    else if (title.indexOf(q) !== -1) score += 100;
+    var best = 0;
     for (var i = 0; i < keywords.length; i++) {
-      if (fold(keywords[i]).indexOf(q) !== -1) {
-        score += 40;
-        break;
-      }
+      var kw = fold(keywords[i]);
+      if (!kw) continue;
+      if (kw === q) best = Math.max(best, 150);
+      else if (kw.indexOf(q) !== -1) best = Math.max(best, 40);
     }
+    score += best;
+    // When the query extends the title ("makaio faraji" over Makaio), this is the subject
+    // page rather than one that merely mentions the name — outrank the incidental mention.
+    if (title && title !== q && q.indexOf(title + " ") === 0) score += 15;
     if (summary.indexOf(q) !== -1) score += 10;
     return score;
   }
@@ -198,10 +215,16 @@
 
     backdrop.addEventListener("click", function () {
       setOpen(false);
+      btn.focus();
     });
 
+    // Closing the drawer hides whatever held focus, so hand focus back to the toggle —
+    // otherwise the next Tab restarts from the top of the page.
     document.addEventListener("keydown", function (e) {
-      if (e.key === "Escape") setOpen(false);
+      if (e.key !== "Escape") return;
+      if (!sidebar.classList.contains("is-open")) return;
+      setOpen(false);
+      btn.focus();
     });
   }
 

@@ -7,6 +7,7 @@
   <link rel="stylesheet" href="assets/css/wiki.css">
 </head>
 <body data-root="./">
+  <a class="skip-link" href="#main-content">Skip to content</a>
   <header class="site-header">
     <button type="button" class="menu-toggle" aria-expanded="false" aria-controls="site-sidebar">Menu</button>
     <a class="site-title" href="index.html">Exodus Wiki</a>
@@ -21,7 +22,7 @@
       <nav aria-label="Wiki">
         <ul>
           <li><a href="../index.html">All book wikis</a></li>
-          <li><a href="index.html">Main Page</a></li>
+          <li><a href="index.html" aria-current="page">Main Page</a></li>
           <li><a href="pages/book.html">Book</a></li>
           <li><a href="pages/characters/index.html">Characters</a></li>
           <li><a href="pages/locations/index.html">Locations</a></li>
@@ -34,21 +35,21 @@
         </ul>
       </nav>
     </aside>
-    <main class="content">
-      <article class="article" style="grid-template-columns: 1fr;">
+    <main class="content" id="main-content">
+      <article class="article article--wide">
         <header>
           <h1>Main Page</h1>
         </header>
 
         <div class="spoiler-banner" role="note">
-          <strong>Spoilers:</strong> This wiki assumes you have finished <em>Exodus: The Archimedes Engine</em>. Articles contain full spoilers.
+          <strong>Spoilers:</strong> This wiki covers all of <em>Exodus: The Archimedes Engine</em>, including the ending. Articles contain full spoilers.
         </div>
 
         <p class="lead">
           This is a personal full-spoiler reading companion for Peter F. Hamilton’s 2024 novel
           <em>Exodus: The Archimedes Engine</em> — a space-opera set in the far-future Centauri Cluster
-          and a narrative prequel for the <em>Exodus</em> game universe. Use it to look up people, places,
-          factions, technology, timeline, and plot after (or while) reading.
+          and a narrative prequel for the <em>Exodus</em> game universe. It covers people, places,
+          factions, technology, timeline, and plot.
         </p>
 
         <section>
@@ -67,23 +68,29 @@
         <section>
           <h2>Browse by category</h2>
           <ul>
-            <li><a href="pages/book.html">Book</a></li>
-            <li><a href="pages/characters/index.html">Characters</a></li>
-            <li><a href="pages/locations/index.html">Locations</a></li>
-            <li><a href="pages/factions/index.html">Factions</a></li>
-            <li><a href="pages/technology/index.html">Technology</a></li>
-            <li><a href="pages/timeline.html">Timeline</a></li>
-            <li><a href="pages/plot.html">Plot</a></li>
-            <li><a href="pages/chapters.html">Chapters</a></li>
+            <li><a href="pages/characters/index.html">Characters</a> — the full cast, grouped by ship, court, and faction</li>
+            <li><a href="pages/locations/index.html">Locations</a> — systems, worlds, and named ships</li>
+            <li><a href="pages/factions/index.html">Factions</a> — Celestials, Dominions, Uranics, Travelers, liberation</li>
+            <li><a href="pages/technology/index.html">Technology</a> — engines, mindlines, drives, livestone</li>
+          </ul>
+          <p>Two roster pages give the wider picture behind the named figures:</p>
+          <ul>
+            <li><a href="pages/characters/celestials-roster.html">Celestials roster</a> — how Celestial double names work, plus every named queen, consort, and archon</li>
+            <li><a href="pages/factions/dominions-roster.html">Dominions roster</a> — what a Dominion is, and which royal houses sit inside the Crown</li>
           </ul>
         </section>
 
         <section>
           <h2>About this wiki</h2>
           <p>
-            Articles are encyclopedic own-words summaries drawn from public lore. Long novel quotations
-            are avoided. Secondary topics may appear as short stubs until expanded. Header search works
-            best when the site is opened through a local static server (see the project README).
+            Articles are encyclopedic original summaries written for this wiki. Long novel quotations
+            are avoided. Secondary topics may appear as short stubs until expanded. The
+            <a href="pages/timeline.html">Timeline</a> years and the
+            <a href="pages/chapters.html">chapter</a> divisions are reconstructed working labels rather than
+            the novel’s own dates and table of contents — see
+            <a href="pages/sources.html">Sources and provenance</a> for what is verified and what is not.
+            Header search works best when the site is opened through a local static server (see the project
+            README).
           </p>
         </section>
       </article>

@@ -1,5 +1,4 @@
-import { readFileSync } from "node:fs";
-import { pathToFileURL } from "node:url";
+import { existsSync, readFileSync } from "node:fs";
 import vm from "node:vm";
 
 const code = readFileSync(new URL("../assets/js/search.js", import.meta.url), "utf8");
@@ -29,4 +28,68 @@ assert(ranked[0].title === "Archimedes Engine", "best match first");
 assert(resolvePath("../../", "pages/book.html") === "../../pages/book.html", "resolvePath joins root");
 assert(resolvePath("./", "/pages/book.html") === "./pages/book.html", "strips leading slash");
 
-console.log("check-search-rank: OK");
+// Folding drops case, diacritics and punctuation on both sides of the comparison, so a name
+// typed with a space, without an apostrophe, or without its accent still finds the article.
+assert(normalizeQuery("Helena-Chione") === "helena chione", "hyphen folds to space");
+assert(normalizeQuery("Cybele’s Eagle") === "cybeles eagle", "apostrophe is dropped");
+assert(normalizeQuery("Toše") === "tose", "diacritic folds to ASCII");
+assert(normalizeQuery("  Peter F. Hamilton ") === "peter f hamilton", "punctuation folds");
+
+// Ranking regressions: each query must land on the article that is actually about it, not on a
+// page that merely mentions the name. Guards the alias/prefix weighting in scoreEntry.
+const realIndex = JSON.parse(
+  readFileSync(new URL("../assets/data/search-index.json", import.meta.url), "utf8")
+);
+const EXPECTED = [
+  ["helena chione", "pages/characters/helena-chione.html"],
+  ["makaio-faraji", "pages/characters/makaio.html"],
+  ["uulana-shoigu", "pages/characters/uulana.html"],
+  ["jolav-dabny", "pages/characters/lord-jolav.html"],
+  ["malquilvo-beaumont", "pages/characters/malquilvo.html"],
+  ["helena-thyra", "pages/characters/thyra.html"],
+  ["celestials", "pages/factions/celestials.html"],
+  ["tose", "pages/characters/tose.html"],
+  ["minsterialis", "pages/characters/finn-jalgori-tobu.html"],
+  ["terrik papuan", "pages/technology/zpz-generator.html"],
+  ["cybele's eagle", "pages/locations/cybeles-eagle.html"],
+  ["peter hamilton", "pages/book.html"],
+  ["space opera", "pages/book.html"],
+  ["hell welcomes careful drivers", "pages/characters/elsbeth-mcquillan.html"],
+  ["boksrock", "pages/locations/boksrock.html"],
+];
+for (const [q, path] of EXPECTED) {
+  const hits = rankResults(realIndex, q);
+  assert(hits.length > 0, `query "${q}" returns no results`);
+  assert(
+    hits[0].path === path,
+    `query "${q}" should rank ${path} first, got ${hits[0].path}`
+  );
+}
+
+// Queries that must reach the individual Dominion pages, not just the roster.
+const dominionHits = rankResults(realIndex, "dominions").map((h) => h.path);
+for (const p of ["pages/factions/heresy-dominion.html", "pages/factions/elohim.html"]) {
+  assert(dominionHits.includes(p), `"dominions" should reach ${p}`);
+}
+
+// Every entry must resolve to a file that exists, and no path may be indexed twice.
+const seen = new Set();
+for (const e of realIndex) {
+  assert(!seen.has(e.path), `duplicate index path: ${e.path}`);
+  seen.add(e.path);
+  const abs = new URL("../" + e.path, import.meta.url);
+  assert(existsSync(abs), `index entry points at a missing file: ${e.path}`);
+  assert(e.title && e.category && e.summary && e.keywords?.length, `incomplete entry: ${e.path}`);
+}
+
+// The JSON index and the file:// fallback script must never drift apart.
+const jsSrc = readFileSync(new URL("../assets/data/search-index.js", import.meta.url), "utf8");
+const jsIndex = JSON.parse(jsSrc.replace(/^[\s\S]*?=\s*/, "").replace(/;?\s*$/, ""));
+assert(
+  JSON.stringify(jsIndex) === JSON.stringify(realIndex),
+  "search-index.js and search-index.json are out of sync"
+);
+
+console.log(
+  `check-search-rank: OK (${realIndex.length} entries, ${EXPECTED.length} ranking assertions)`
+);

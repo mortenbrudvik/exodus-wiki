@@ -29,7 +29,13 @@
       "novel",
       "overview",
       "publication",
-      "archimedes"
+      "archimedes",
+      "peter f. hamilton",
+      "peter hamilton",
+      "2024",
+      "space opera",
+      "prequel",
+      "exodus game"
     ]
   },
   {
@@ -100,7 +106,9 @@
       "anoosha",
       "traveler",
       "gyvoy",
-      "dolod"
+      "dolod",
+      "minsterialis",
+      "ministerialis"
     ]
   },
   {
@@ -148,7 +156,6 @@
       "helena",
       "chione",
       "helena-chione",
-      "helena-thyra",
       "queen",
       "wynid",
       "empress",
@@ -248,7 +255,8 @@
       "josias",
       "ministerialis",
       "laurella",
-      "dushan"
+      "dushan",
+      "minsterialis"
     ]
   },
   {
@@ -372,13 +380,13 @@
       "elsbeth",
       "mcquillan",
       "kajval",
-      "drive",
       "dropship",
       "kingsnest",
       "hoa quinzu",
-      "hell welcomes",
       "tank",
-      "saberstones"
+      "saberstones",
+      "hell welcomes careful drivers",
+      "diligent"
     ]
   },
   {
@@ -401,7 +409,7 @@
     "title": "Bekket",
     "path": "pages/characters/bekket.html",
     "category": "Characters",
-    "summary": "Bekket Oneshot of Uixic; Thyra’s father; Guillrameo; master of court under Helena-Thyra",
+    "summary": "Bekket Oneshot of Uixic; Thyra’s father; Guillrameo; Master of the Court under Helena-Thyra",
     "keywords": [
       "bekket",
       "oneshot",
@@ -413,7 +421,9 @@
       "uixic",
       "guillrameo",
       "iuntin",
-      "dagon"
+      "dagon",
+      "iuntin-detlef",
+      "bekket oneshot"
     ]
   },
   {
@@ -441,7 +451,13 @@
       "empress",
       "imperial accord",
       "queens",
-      "verak"
+      "verak",
+      "bassa",
+      "nizinsk",
+      "cheluli",
+      "wynid",
+      "kelowan",
+      "royal seats"
     ]
   },
   {
@@ -506,7 +522,7 @@
     "title": "Dolod",
     "path": "pages/locations/dolod.html",
     "category": "Locations",
-    "summary": "Iron exotic gas giant; Archimedes Engine; trajectory and Boksrock crisis",
+    "summary": "Iron exotic gas giant moved by an Engine; Boksrock trajectory crisis; endgame stage",
     "keywords": [
       "dolod",
       "gas giant",
@@ -528,7 +544,8 @@
       "land deal",
       "ministerialis",
       "colonists",
-      "diligent"
+      "diligent",
+      "minsterialis"
     ]
   },
   {
@@ -544,7 +561,25 @@
       "josias",
       "ellie",
       "dejean",
-      "generation ship"
+      "generation ship",
+      "gath",
+      "gath refit"
+    ]
+  },
+  {
+    "title": "Boksrock",
+    "path": "pages/locations/boksrock.html",
+    "category": "Locations",
+    "summary": "Body the Dolod Engine redirects momentum toward; trajectory crisis that topples the Empress",
+    "keywords": [
+      "boksrock",
+      "momentum transfer",
+      "anchor ships",
+      "dolod",
+      "kelowan",
+      "archimedes engine",
+      "trajectory",
+      "endgame"
     ]
   },
   {
@@ -666,7 +701,8 @@
       "tinaja",
       "scoopships",
       "dominions roster",
-      "peer"
+      "peer",
+      "dominions"
     ]
   },
   {
@@ -767,7 +803,8 @@
       "boksrock",
       "kingsnest",
       "orbit",
-      "terraforming"
+      "terraforming",
+      "nightweid"
     ]
   },
   {
@@ -807,7 +844,7 @@
     "title": "ZPZ generator",
     "path": "pages/technology/zpz-generator.html",
     "category": "Technology",
-    "summary": "Drive/power plant sought for Diligent; salvage race and endgame field",
+    "summary": "Drive and power plant sought for the Diligent; Terrik Papuan salvage race; endgame field coupling",
     "keywords": [
       "zpz",
       "generator",
@@ -817,7 +854,8 @@
       "salvage",
       "andino",
       "terrik",
-      "field"
+      "field",
+      "terrik papuan"
     ]
   },
   {
@@ -901,6 +939,22 @@
     ]
   },
   {
+    "title": "Sources and provenance",
+    "path": "pages/sources.html",
+    "category": "Main",
+    "summary": "Where this wiki comes from; which parts are reconstructed rather than canon",
+    "keywords": [
+      "sources",
+      "provenance",
+      "references",
+      "citations",
+      "reconstructed",
+      "canon",
+      "accuracy",
+      "about"
+    ]
+  },
+  {
     "title": "Celestials roster",
     "path": "pages/characters/celestials-roster.html",
     "category": "Characters",
@@ -919,7 +973,7 @@
     "title": "Makaio",
     "path": "pages/characters/makaio.html",
     "category": "Characters",
-    "summary": "Wynid archon mindline Yalbo→Faraji; Dolod warning; Makaio-Spirit in Terence",
+    "summary": "Wynid archon mindline across hosts Makaio-Yalbo then Makaio-Faraji; Dolod warning; Makaio-Spirit in Terence",
     "keywords": [
       "makaio",
       "yalbo",
@@ -927,7 +981,10 @@
       "archon",
       "alumata",
       "spymaster",
-      "makaio-spirit"
+      "makaio-spirit",
+      "makaio-faraji",
+      "makaio-yalbo",
+      "celestials"
     ]
   },
   {
@@ -941,20 +998,22 @@
       "talloch-te",
       "archon",
       "medusa",
-      "traveler"
+      "traveler",
+      "celestials"
     ]
   },
   {
     "title": "Lord Jolav",
     "path": "pages/characters/lord-jolav.html",
     "category": "Characters",
-    "summary": "Helena consort; Clavissa father; residual opposition under Thyra",
+    "summary": "Jolav-Dabny: Helena’s consort and Clavissa’s father; residual opposition under Thyra",
     "keywords": [
       "jolav",
       "jolav-dabny",
       "consort",
       "clavissa",
-      "wynid"
+      "wynid",
+      "celestials"
     ]
   },
   {
@@ -967,7 +1026,8 @@
       "tiger guard",
       "new life",
       "wynid",
-      "military"
+      "military",
+      "celestials"
     ]
   },
   {
@@ -979,7 +1039,8 @@
       "acelynn",
       "verak",
       "chief archon",
-      "carolien"
+      "carolien",
+      "celestials"
     ]
   },
   {
@@ -992,7 +1053,8 @@
       "ursule",
       "ramona-ursule",
       "nizinsk",
-      "queen"
+      "queen",
+      "celestials"
     ]
   },
   {
@@ -1005,7 +1067,8 @@
       "pierina",
       "inessa-pierina",
       "cheluli",
-      "queen"
+      "queen",
+      "celestials"
     ]
   },
   {
@@ -1018,7 +1081,8 @@
       "luus-kinza",
       "luus-marcela",
       "bassa",
-      "empress"
+      "empress",
+      "celestials"
     ]
   },
   {
@@ -1031,7 +1095,8 @@
       "dulcina",
       "zuberi-dulcina",
       "kelowan",
-      "accord"
+      "accord",
+      "celestials"
     ]
   },
   {
@@ -1045,7 +1110,12 @@
       "shoigu",
       "iuntin",
       "guillrameo",
-      "infiltration"
+      "infiltration",
+      "uulana-shoigu",
+      "uulana-lyon",
+      "iuntin-detlef",
+      "celestials",
+      "slowball"
     ]
   },
   {
@@ -1058,7 +1128,9 @@
       "mimir",
       "master of the court",
       "helena",
-      "father"
+      "father",
+      "valdier-mimir",
+      "celestials"
     ]
   },
   {
@@ -1070,7 +1142,8 @@
       "stethos",
       "thierry",
       "datamaster",
-      "wynid"
+      "wynid",
+      "celestials"
     ]
   },
   {
@@ -1083,7 +1156,8 @@
       "iryna",
       "asahi-iryna",
       "archon",
-      "pursuit"
+      "pursuit",
+      "celestials"
     ]
   },
   {
@@ -1097,7 +1171,8 @@
       "avone-valerio",
       "general",
       "gondiar",
-      "navy"
+      "navy",
+      "celestials"
     ]
   },
   {
@@ -1110,7 +1185,8 @@
       "gyvoy",
       "imposture",
       "uncle",
-      "thyra"
+      "thyra",
+      "celestials"
     ]
   },
   {
@@ -1123,7 +1199,8 @@
       "verak",
       "commander",
       "diligent",
-      "fleet"
+      "fleet",
+      "celestials"
     ]
   },
   {
@@ -1135,7 +1212,8 @@
       "neusch",
       "makaio",
       "aecus",
-      "neural gifts"
+      "neural gifts",
+      "celestials"
     ]
   },
   {
@@ -1148,7 +1226,9 @@
       "beaumont",
       "binji",
       "valeri",
-      "trial"
+      "trial",
+      "malquilvo-beaumont",
+      "celestials"
     ]
   },
   {
@@ -1231,7 +1311,15 @@
       "talloch",
       "mara yama",
       "gomatu",
-      "crown"
+      "crown",
+      "capo frois",
+      "hoa quinzu",
+      "kajval",
+      "kingsnest",
+      "tinaja",
+      "hesea",
+      "lidon",
+      "pouli"
     ]
   },
   {
@@ -1245,7 +1333,8 @@
       "olomo",
       "hexapod",
       "dominion",
-      "tinaja"
+      "tinaja",
+      "dominions"
     ]
   },
   {
@@ -1259,7 +1348,8 @@
       "tallach",
       "sahdiah",
       "traders",
-      "shipbuilding"
+      "shipbuilding",
+      "dominions"
     ]
   },
   {
@@ -1273,7 +1363,8 @@
       "yama",
       "nomad",
       "citadel",
-      "threat"
+      "threat",
+      "dominions"
     ]
   },
   {
@@ -1286,7 +1377,8 @@
       "dyson",
       "dolod",
       "jk67b",
-      "megastructure"
+      "megastructure",
+      "dominions"
     ]
   },
   {
@@ -1298,7 +1390,8 @@
       "uthara",
       "annexation",
       "capo frois",
-      "thyra"
+      "thyra",
+      "dominions"
     ]
   },
   {
@@ -1310,7 +1403,8 @@
       "ratarajan",
       "hoa quinzu",
       "kajval",
-      "warning"
+      "warning",
+      "dominions"
     ]
   },
   {
@@ -1323,7 +1417,8 @@
       "dawn",
       "archimedes",
       "eden",
-      "terraform"
+      "terraform",
+      "dominions"
     ]
   }
 ]
