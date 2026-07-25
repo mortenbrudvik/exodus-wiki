@@ -164,16 +164,15 @@ When expanding lore from outside the novel:
 
 ## Repo etiquette
 
-**Committing is pre-authorised** for this repo (owner, 25 July 2026) — you do not need to ask each
-time. This supersedes the older "do not run `git commit`" note in
+**Committing and pushing are both pre-authorised** for this repo (owner, 25 July 2026) — you do not
+need to ask. This supersedes the older "do not run `git commit`" note in
 `docs/superpowers/plans/2026-07-23-book-wikis-hub.md`, which is a historical record.
 
-Two caveats that still hold:
+Pushing `main` publishes to a public website in about a minute, so:
 
-- Run both checks before committing. They exist to be a gate.
-- **Pushing `main` publishes to a public website** within about a minute. That is an outward-facing
-  action, so treat "commit freely" as covering local history, and confirm before pushing anything the
-  owner has not already reviewed.
+- Run both checks before you commit. They are the gate that replaces asking.
+- Prefer several focused commits over one sweeping one; the history is the only review trail.
+- After pushing, confirm the Pages run went green (`gh run list --limit 1`) rather than assuming it.
 
 `core.autocrlf=true` on this machine, so mixed CRLF/LF working-tree files produce clean diffs; don't
 "fix" line endings or add a `.gitattributes` for them.
