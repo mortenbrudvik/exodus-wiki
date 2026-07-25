@@ -92,6 +92,11 @@ const EXPECTED = [
   // reach the page that says so rather than an article that merely contains one.
   ["illustrations", "pages/sources.html"],
   ["portraits", "pages/sources.html"],
+  // Clade body-plan vocabulary. The eye count belongs to the archon who has it, while the
+  // multi-body architecture belongs to the dominion page that explains it rather than to her.
+  ["five eyes", "pages/characters/sahdiah.html"],
+  ["nurture chamber", "pages/characters/sahdiah.html"],
+  ["multi-body", "pages/factions/talloch-te-dominion.html"],
 ];
 for (const [q, path] of EXPECTED) {
   const hits = rankResults(realIndex, q);
