@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Mockup 5 — Atlas — Archimedes Engine Wiki</title>
+<style>
+/* ============================================================
+   MOCKUP 5 — "ATLAS"
+   Thesis: 59 commissioned illustrations exist and each one is
+   seen exactly once, in a 240px box, by a reader who already
+   found the page. Lead with them. The picture is the way in.
+   Palette  bone #FAFAFA · ink #101215 · deep #0E1114
+            muted #5D646C · rule #E3E5E8 · teal #16545F
+   Type     heavy tight sans display · Charter/Georgia body
+   Layout   hero band · key-facts strip · narrow reading column
+            · hub as large tiles with an A–Z jump bar
+   Signature  the hero band, and the film strip that ends it
+   ============================================================ */
+
+.mk-bar{position:fixed;top:0;left:0;right:0;height:38px;background:#11131a;color:#c9cedb;display:flex;align-items:center;gap:.15rem;padding:0 .75rem;font:500 12px/1 system-ui,sans-serif;z-index:9999;letter-spacing:.02em}
+.mk-bar strong{color:#fff;font-weight:600;margin-right:.6rem;white-space:nowrap}
+.mk-bar a,.mk-bar label{color:#8fa6c8;text-decoration:none;padding:.4rem .5rem;border-radius:4px;cursor:pointer;white-space:nowrap}
+.mk-bar a:hover,.mk-bar label:hover{background:#1c2333;color:#fff}
+.mk-bar .mk-sp{margin-left:auto}
+.mk-views>input[name=v]{position:absolute;width:1px;height:1px;opacity:0;pointer-events:none}
+.view{display:none}
+#v-a:checked~.mk-frame .view--article{display:block}
+#v-h:checked~.mk-frame .view--hub{display:block}
+#v-a:checked~.mk-bar label[for=v-a],#v-h:checked~.mk-bar label[for=v-h]{background:#243049;color:#fff}
+
+:root{
+  --bone:#fafafa; --surface:#ffffff; --ink:#101215; --deep:#0e1114;
+  --muted:#5d646c; --faint:#8d949c; --rule:#e3e5e8; --teal:#16545f; --teal-lt:#2e7b87;
+  --disp:"Segoe UI",system-ui,-apple-system,"Helvetica Neue",Arial,sans-serif;
+  --body:Charter,"Bitstream Charter","Iowan Old Style","Palatino Linotype",Georgia,serif;
+  --util:"Segoe UI",system-ui,sans-serif;
+}
+*,*::before,*::after{box-sizing:border-box}
+body{margin:0;padding-top:38px;background:var(--bone);color:var(--ink);font-family:var(--body);font-size:18.5px;line-height:1.66;-webkit-font-smoothing:antialiased}
+a{color:var(--teal);text-underline-offset:2px;text-decoration-thickness:1px}
+a:visited{color:#5d4a76}
+:focus-visible{outline:2px solid var(--teal);outline-offset:2px}
+img{max-width:100%}
+
+/* ---- header ---- */
+.hdr{position:sticky;top:38px;z-index:40;display:flex;align-items:center;gap:1.2rem;padding:.7rem 1.6rem;
+  background:rgba(250,250,250,.9);backdrop-filter:blur(10px);border-bottom:1px solid var(--rule);font-family:var(--util)}
+.brand{font-family:var(--disp);font-size:.9rem;font-weight:700;letter-spacing:-.005em;text-transform:uppercase;
+  color:var(--ink);text-decoration:none;margin-right:auto}
+.brand i{font-style:normal;color:var(--teal)}
+.hdr nav{display:flex;gap:1.15rem;font-size:.85rem}
+.hdr nav a{color:var(--muted);text-decoration:none}
+.hdr nav a:hover,.hdr nav a[aria-current=page]{color:var(--ink)}
+.hdr input{font:inherit;font-size:.85rem;padding:.4rem .7rem;border:1px solid var(--rule);border-radius:99px;width:12rem;background:var(--surface)}
+
+/* ---- THE SIGNATURE: hero band ----
+   The subject's own illustration, blurred and darkened, becomes the band;
+   the picture itself is shown whole at its native ratio. Portraits are 3:4
+   and would be decapitated by a full-bleed crop, so nothing is cropped —
+   the band adapts to the picture instead of the other way round. */
+.hero{position:relative;background:var(--deep);overflow:hidden;isolation:isolate}
+.hero-bg{position:absolute;inset:-4rem;background-size:cover;background-position:50% 32%;
+  filter:blur(34px) saturate(.65);opacity:.55;z-index:-1}
+.hero::after{content:"";position:absolute;inset:0;z-index:-1;
+  background:linear-gradient(to right,rgba(14,17,20,.94) 30%,rgba(14,17,20,.55) 70%,rgba(14,17,20,.35))}
+.hero-in{position:relative;max-width:78rem;margin:0 auto;padding:2.6rem 1.6rem;
+  display:grid;grid-template-columns:minmax(0,1fr) auto;gap:1rem 3rem;align-items:center}
+.eyebrow{font-family:var(--util);font-size:.7rem;font-weight:700;letter-spacing:.16em;text-transform:uppercase;
+  color:#8ed3dd;margin:0 0 .55rem}
+.hero h1{font-family:var(--disp);font-size:clamp(2.4rem,5.2vw,4rem);line-height:.98;letter-spacing:-.035em;
+  font-weight:700;color:#fff;margin:0 0 .6rem}
+.hero .sub{font-family:var(--util);font-size:1.02rem;line-height:1.45;color:#ccd4da;max-width:38rem;margin:0}
+.hero figure{margin:0;width:13.5rem}
+.hero figure img{display:block;width:100%;aspect-ratio:3/4;object-fit:cover;border-radius:4px;
+  box-shadow:0 12px 34px rgba(0,0,0,.5)}
+.hero figcaption{font-family:var(--util);font-size:.6rem;line-height:1.45;letter-spacing:.03em;
+  color:rgba(255,255,255,.5);margin-top:.45rem}
+@media(max-width:760px){.hero-in{grid-template-columns:1fr}.hero figure{width:10rem;order:-1}}
+
+/* ---- key-facts strip ---- */
+.facts{background:var(--surface);border-bottom:1px solid var(--rule)}
+.facts-in{max-width:78rem;margin:0 auto;padding:.95rem 1.6rem;display:flex;flex-wrap:wrap;gap:1.6rem 2.6rem;font-family:var(--util)}
+.facts div{min-width:0}
+.facts dt{font-size:.62rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--faint);margin-bottom:.15rem}
+.facts dd{margin:0;font-size:.92rem;line-height:1.35;font-weight:500}
+.facts dd a{text-decoration:none;border-bottom:1px solid var(--rule)}
+.facts dd a:hover{border-bottom-color:var(--teal)}
+
+/* ---- reading column ---- */
+.read{max-width:40rem;margin:0 auto;padding:2.8rem 1.6rem 1rem}
+.notice{font-family:var(--util);font-size:.85rem;line-height:1.5;color:var(--muted);
+  border-left:3px solid var(--teal);padding:.15rem 0 .15rem .9rem;margin:0 0 1.9rem}
+.notice b{color:var(--ink)}
+.lead{font-size:1.24rem;line-height:1.52;margin:0 0 1.9rem}
+h2{font-family:var(--disp);font-size:1.35rem;font-weight:700;letter-spacing:-.018em;margin:2.6rem 0 .7rem}
+p{margin:0 0 1.15rem}
+.seealso{list-style:none;padding:0;margin:0;font-family:var(--util);font-size:.95rem}
+.seealso li{padding:.45rem 0;border-bottom:1px solid var(--rule)}
+.seealso a{text-decoration:none;font-weight:600}
+.seealso a:hover{text-decoration:underline}
+
+/* ---- film strip ---- */
+.strip{background:var(--surface);border-top:1px solid var(--rule);margin-top:3rem;padding:2.2rem 0 2.6rem}
+.strip-in{max-width:78rem;margin:0 auto;padding:0 1.6rem}
+.strip h2{margin:0 0 1.1rem;font-size:.72rem;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:var(--faint);font-family:var(--util)}
+.strip ul{list-style:none;margin:0;padding:0 0 .4rem;display:flex;gap:1rem;overflow-x:auto;scroll-snap-type:x proximity}
+.strip li{flex:0 0 11rem;scroll-snap-align:start}
+.strip a{display:block;text-decoration:none}
+.strip img{display:block;width:100%;aspect-ratio:4/5;object-fit:cover;object-position:50% 16%;background:var(--deep);border-radius:3px}
+.strip .nm{display:block;font-family:var(--util);font-size:.9rem;font-weight:600;color:var(--ink);margin-top:.5rem;line-height:1.25}
+.strip .rl{display:block;font-family:var(--util);font-size:.76rem;color:var(--muted);line-height:1.35}
+.strip a:hover .nm{color:var(--teal)}
+.cats{max-width:78rem;margin:0 auto;padding:1.4rem 1.6rem 4rem;font-family:var(--util);font-size:.82rem;color:var(--muted)}
+.cats a{margin-left:.5rem}
+
+/* ---- hub ---- */
+.hub-hero{background:var(--deep);color:#fff;padding:3rem 1.6rem 2.4rem}
+.hub-hero div{max-width:78rem;margin:0 auto}
+.hub-hero h1{font-family:var(--disp);font-size:clamp(2.6rem,6vw,4.4rem);line-height:.98;letter-spacing:-.035em;font-weight:700;margin:0 0 .7rem}
+.hub-hero p{font-family:var(--util);font-size:1.05rem;color:#c9d1d7;max-width:46rem;margin:0}
+.az{position:sticky;top:calc(38px + 3.15rem);z-index:30;background:rgba(250,250,250,.94);backdrop-filter:blur(8px);
+  border-bottom:1px solid var(--rule)}
+.az-in{max-width:78rem;margin:0 auto;padding:.55rem 1.6rem;display:flex;flex-wrap:wrap;gap:.1rem;font-family:var(--util)}
+.az a{font-size:.78rem;font-weight:600;color:var(--muted);text-decoration:none;padding:.2rem .42rem;border-radius:4px}
+.az a:hover{background:var(--surface);color:var(--teal)}
+.az a[aria-disabled=true]{color:#c3c8cd;pointer-events:none}
+.hub-body{max-width:78rem;margin:0 auto;padding:2.4rem 1.6rem 5rem}
+.grp{margin-bottom:3.2rem}
+.grp h2{font-family:var(--disp);font-size:1.5rem;font-weight:700;letter-spacing:-.02em;margin:0 0 .25rem}
+.grp .gsub{font-family:var(--util);font-size:.88rem;color:var(--muted);margin:0 0 1.3rem;padding-bottom:.7rem;border-bottom:1px solid var(--rule)}
+.tiles{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(auto-fill,minmax(11.5rem,1fr));gap:1.6rem 1.2rem}
+.tile a{display:block;text-decoration:none}
+.tile img{display:block;width:100%;aspect-ratio:4/5;object-fit:cover;object-position:50% 15%;background:var(--deep);border-radius:3px;
+  transition:filter .18s ease}
+.tile a:hover img{filter:brightness(1.06)}
+.tile .nm{display:block;font-family:var(--disp);font-size:1.05rem;font-weight:700;letter-spacing:-.012em;color:var(--ink);margin-top:.6rem;line-height:1.2}
+.tile a:hover .nm{color:var(--teal)}
+.tile .rl{display:block;font-family:var(--util);font-size:.82rem;line-height:1.4;color:var(--muted);margin-top:.15rem}
+@media(prefers-reduced-motion:reduce){.tile img{transition:none}}
+@media(max-width:640px){.hdr nav{display:none}.facts-in{gap:1rem 1.6rem}}
+</style>
+</head>
+<body>
+<div class="mk-views">
+<input type="radio" name="v" id="v-a" checked><input type="radio" name="v" id="v-h">
+<div class="mk-bar">
+  <strong>5 / 5 · Atlas</strong>
+  <label for="v-a">Article</label><label for="v-h">Hub</label>
+  <span class="mk-sp"></span>
+  <a href="04-plate.html">‹ Plate</a><a href="index.html">All mockups</a>
+</div>
+
+<div class="mk-frame">
+<!-- ==================== ARTICLE ==================== -->
+<div class="view view--article">
+  <header class="hdr">
+    <a class="brand" href="#">Archimedes <i>Engine</i> Wiki</a>
+    <nav><a href="#" aria-current="page">Characters</a><a href="#">Locations</a><a href="#">Factions</a><a href="#">Technology</a><a href="#">Timeline</a><a href="#">Plot</a></nav>
+    <input type="search" placeholder="Search…" aria-label="Search">
+  </header>
+
+  <div class="hero">
+    <div class="hero-bg" style="background-image:url(../../exodus-the-archimedes-engine/assets/images/characters/finn-jalgori-tobu.jpg)"></div>
+    <div class="hero-in">
+      <div>
+        <p class="eyebrow">Characters · Uranic · House Jalgori-Tobu</p>
+        <h1>Finn Jalgori-Tobu</h1>
+        <p class="sub">Second son of a client house, Minsterialis of Hafnir, and the hand that finally works an Archimedes Engine.</p>
+      </div>
+      <figure>
+        <img src="../../exodus-the-archimedes-engine/assets/images/characters/finn-jalgori-tobu.jpg" alt="Finn Jalgori-Tobu">
+        <figcaption>Inferred illustration — no likeness is described in the novel</figcaption>
+      </figure>
+    </div>
+  </div>
+
+  <div class="facts">
+    <dl class="facts-in">
+      <div><dt>Full name</dt><dd>Finbar Charles Louis Griffin Jalgori-Tobu</dd></div>
+      <div><dt>Age at intro</dt><dd>~25</dd></div>
+      <div><dt>Clade</dt><dd>Human · <a href="#">Uranic</a></dd></div>
+      <div><dt>Office</dt><dd>Minsterialis of Hafnir</dd></div>
+      <div><dt>Home</dt><dd><a href="#">Gondiar</a> / <a href="#">Hafnir</a></dd></div>
+      <div><dt>Ship</dt><dd><a href="#"><em>Diligent</em></a></dd></div>
+      <div><dt>Overlord</dt><dd><a href="#">Crown Dominion</a></dd></div>
+    </dl>
+  </div>
+
+  <article class="read">
+    <p class="notice"><b>Full spoilers.</b> This article covers the whole novel, including the ending.</p>
+
+    <p class="lead"><strong>Finbar (Finn) Charles Louis Griffin Jalgori-Tobu</strong> is a ~25-year-old <a href="#">Uranic</a> aristocrat from <a href="#">Gondiar</a> and the adventure-thread protagonist of <em>Exodus: The Archimedes Engine</em>. Restless under Crown Dominion client-rule, he survives a mercenary dump over <a href="#">Anoosha</a>, bonds with the late arkship <a href="#"><em>Diligent</em></a>, and becomes a driving force behind seizing and using an <a href="#">Archimedes Engine</a> on <a href="#">Dolod</a> — for human liberation, and under <a href="#">Gyvoy Enfoe</a>’s manipulation.</p>
+
+    <h2>Background</h2>
+    <p>Finn is the second son of the Jalgori-Tobu family, client rulers who administer human society on Gondiar for the <a href="#">Celestials</a> of the <a href="#">Crown Dominion</a>. As Minsterialis of <a href="#">Hafnir</a>, he holds land and status, but he longs to travel space as a <a href="#">Traveler</a> rather than settle into the family’s proxy-government role. Earth is only a history footnote to him — he is born into Celestial client order, not the exodus memory that still shapes Diligent humans. Like other Uranics, he carries <a href="#">neural interfaces</a> that let him work Celestial materials such as <a href="#">livestone</a>.</p>
+    <p>His twin sister <a href="#">Otylia</a> (Minsterialis of Serki) is a more institutional counterweight: she manages family and ministerial politics while Finn drifts toward adventure and, later, open resistance. Older siblings include heir <a href="#">Zelinda</a> and brother Everett Callan Mathias.</p>
+
+    <h2>Anoosha and the Diligent alliance</h2>
+    <p>The novel opens with Finn bound and thrown from a plane over the Camurdy Mountains on Anoosha after a failed heist involving the mercenary <a href="#">Liliana</a>. Injured, he shapes livestone into shelter until he is found by <a href="#">Eleanor (Ellie) Aponi</a> and her grandfather <a href="#">Josias Aponi</a>, who have crash-landed from the newly arrived arkship <em>Diligent</em>.</p>
+    <p>Finn and Josias strike a bargain: land at Hafnir for the <em>Diligent</em>’s settlers in exchange for Finn’s path off-world. Finn and Ellie later travel to recover the arkship and pursue a <a href="#">ZPZ generator</a> so the ship can operate as a true deep-space vessel.</p>
+
+    <h2>ZPZ, the Engine, and the endgame</h2>
+    <p>Finn’s long arc takes him through salvage at Terrik Papuan, clashes with Traveler interests (including captain <a href="#">Andino</a> of <em><a href="#">Arcadia’s Moon</a></em>), a dangerous extraction on Kajval, and the hunt for Archimedes Engine operating software at Kingsnest. Gyvoy Enfoe steers him toward using an Engine on Dolod to keep the gas giant from settling usefully into the <a href="#">Kelowan</a> system — framed as a blow for <a href="#">human liberation</a>.</p>
+    <p>On Dolod, Gyvoy’s influence and Finn’s grief over Crown violence push the crisis to a head. He issues Engine commands that redirect momentum transfers toward Boksrock; later he engineers a second transfer that accelerates the <em>Diligent</em> via an anchor ship and its ZPZ field, allowing the arkship to flee toward Capo Frois. Ellie recovers suppressed memories of Gyvoy’s non-consensual interface with Finn’s induction pad, exposing the manipulation behind the operation.</p>
+  </article>
+
+  <!-- SIGNATURE: film strip -->
+  <section class="strip">
+    <div class="strip-in">
+      <h2>People in this story</h2>
+      <ul>
+        <li><a href="#"><img src="../../exodus-the-archimedes-engine/assets/images/characters/eleanor-aponi.jpg" alt=""><span class="nm">Eleanor Aponi</span><span class="rl">Finds him on Anoosha</span></a></li>
+        <li><a href="#"><img src="../../exodus-the-archimedes-engine/assets/images/characters/josias-aponi.jpg" alt=""><span class="nm">Josias Aponi</span><span class="rl">The bargain at Hafnir</span></a></li>
+        <li><a href="#"><img src="../../exodus-the-archimedes-engine/assets/images/characters/gyvoy-enfoe.jpg" alt=""><span class="nm">Gyvoy Enfoe</span><span class="rl">Steers him to the Engine</span></a></li>
+        <li><a href="#"><img src="../../exodus-the-archimedes-engine/assets/images/characters/otylia-jalgori-tobu.jpg" alt=""><span class="nm">Otylia Jalgori-Tobu</span><span class="rl">His twin</span></a></li>
+        <li><a href="#"><img src="../../exodus-the-archimedes-engine/assets/images/characters/liliana.jpg" alt=""><span class="nm">Liliana</span><span class="rl">The failed heist</span></a></li>
+        <li><a href="#"><img src="../../exodus-the-archimedes-engine/assets/images/characters/dejean.jpg" alt=""><span class="nm">Dejean</span><span class="rl">Captain of the <em>Diligent</em></span></a></li>
+        <li><a href="#"><img src="../../exodus-the-archimedes-engine/assets/images/characters/andino.jpg" alt=""><span class="nm">Andino</span><span class="rl">Rival Traveler captain</span></a></li>
+      </ul>
+    </div>
+  </section>
+  <footer class="cats">Categories:<a href="#">Characters</a><a href="#">Uranics</a><a href="#">Crown Dominion</a></footer>
+</div>
+
+<!-- ==================== HUB ==================== -->
+<div class="view view--hub">
+  <header class="hdr">
+    <a class="brand" href="#">Archimedes <i>Engine</i> Wiki</a>
+    <nav><a href="#" aria-current="page">Characters</a><a href="#">Locations</a><a href="#">Factions</a><a href="#">Technology</a><a href="#">Timeline</a><a href="#">Plot</a></nav>
+    <input type="search" placeholder="Search…" aria-label="Search">
+  </header>
+
+  <div class="hub-hero"><div>
+    <p class="eyebrow">Category · 40 articles</p>
+    <h1>Characters</h1>
+    <p>Uranic aristocrats and rebels, arkship settlers, Celestial royalty and archons, Travelers, and those caught between Dominion order and human liberation. Full spoilers throughout.</p>
+  </div></div>
+
+  <nav class="az" aria-label="Jump to letter"><div class="az-in">
+    <a href="#">A</a><a href="#">B</a><a href="#">C</a><a href="#">D</a><a href="#">E</a><a href="#" aria-disabled="true">F</a>
+    <a href="#">G</a><a href="#">H</a><a href="#">I</a><a href="#" aria-disabled="true">J</a><a href="#" aria-disabled="true">K</a><a href="#">L</a>
+    <a href="#">M</a><a href="#">N</a><a href="#">O</a><a href="#">P</a><a href="#" aria-disabled="true">Q</a><a href="#">R</a>
+    <a href="#">S</a><a href="#">T</a><a href="#">U</a><a href="#">V</a><a href="#">W</a><a href="#" aria-disabled="true">X</a>
+    <a href="#" aria-disabled="true">Y</a><a href="#">Z</a>
+  </div></nav>
+
+  <div class="hub-body">
+    <section class="grp">
+      <h2>Arkship <em>Diligent</em></h2>
+      <p class="gsub">The late arrival out of Earth, and the people who argue about what it is for</p>
+      <ul class="tiles">
+        <li class="tile"><a href="#"><img src="../../exodus-the-archimedes-engine/assets/images/characters/josias-aponi.jpg" alt=""><span class="nm">Josias Aponi</span><span class="rl">Owner; orator who turns settlement into liberation politics</span></a></li>
+        <li class="tile"><a href="#"><img src="../../exodus-the-archimedes-engine/assets/images/characters/eleanor-aponi.jpg" alt=""><span class="nm">Eleanor Aponi</span><span class="rl">Lieutenant; finds Finn and runs the salvage expeditions</span></a></li>
+        <li class="tile"><a href="#"><img src="../../exodus-the-archimedes-engine/assets/images/characters/dejean.jpg" alt=""><span class="nm">Dejean</span><span class="rl">Captain; counterweight to Josias’s politics</span></a></li>
+        <li class="tile"><a href="#"><img src="../../exodus-the-archimedes-engine/assets/images/characters/elsbeth-mcquillan.jpg" alt=""><span class="nm">Elsbeth McQuillan</span><span class="rl">Armour commander on the Kajval dropship raid</span></a></li>
+      </ul>
+    </section>
+
+    <section class="grp">
+      <h2>Gondiar: the Jalgori-Tobus and the law</h2>
+      <p class="gsub">A client house administering a world it does not own</p>
+      <ul class="tiles">
+        <li class="tile"><a href="#"><img src="../../exodus-the-archimedes-engine/assets/images/characters/finn-jalgori-tobu.jpg" alt=""><span class="nm">Finn Jalgori-Tobu</span><span class="rl">Minsterialis of Hafnir; the adventure thread’s protagonist</span></a></li>
+        <li class="tile"><a href="#"><img src="../../exodus-the-archimedes-engine/assets/images/characters/otylia-jalgori-tobu.jpg" alt=""><span class="nm">Otylia Jalgori-Tobu</span><span class="rl">Finn’s twin; Minsterialis of Serki; marries Josias</span></a></li>
+        <li class="tile"><a href="#"><img src="../../exodus-the-archimedes-engine/assets/images/characters/zelinda-jalgori-tobu.jpg" alt=""><span class="nm">Zelinda Jalgori-Tobu</span><span class="rl">Eldest sister and heir; the institutional face of Uranic rule</span></a></li>
+        <li class="tile"><a href="#"><img src="../../exodus-the-archimedes-engine/assets/images/characters/terence-wilson-fletcher.jpg" alt=""><span class="nm">Terence Wilson-Fletcher</span><span class="rl">Santa Rosa detective; later carries the Makaio-Spirit</span></a></li>
+        <li class="tile"><a href="#"><img src="../../exodus-the-archimedes-engine/assets/images/characters/neusch.jpg" alt=""><span class="nm">Neusch</span><span class="rl">Carries the archon’s neural gifts and continues his work</span></a></li>
+      </ul>
+    </section>
+
+    <section class="grp">
+      <h2>The Now and Forever Queens</h2>
+      <p class="gsub">Celestial royalty, and the mindlines that outlive the women who hold them</p>
+      <ul class="tiles">
+        <li class="tile"><a href="#"><img src="../../exodus-the-archimedes-engine/assets/images/characters/helena-chione.jpg" alt=""><span class="nm">Helena-Chione</span><span class="rl">Queen of Wynid; her mindline is usurped</span></a></li>
+        <li class="tile"><a href="#"><img src="../../exodus-the-archimedes-engine/assets/images/characters/carolien-amaia.jpg" alt=""><span class="nm">Carolien-Amaia</span><span class="rl">Queen of Verak; holds the rotating imperial throne</span></a></li>
+        <li class="tile"><a href="#"><img src="../../exodus-the-archimedes-engine/assets/images/characters/luus.jpg" alt=""><span class="nm">Luus</span><span class="rl">Queen of Bassa; the Empress who steps down</span></a></li>
+        <li class="tile"><a href="#"><img src="../../exodus-the-archimedes-engine/assets/images/characters/ramona-ursule.jpg" alt=""><span class="nm">Ramona-Ursule</span><span class="rl">Queen of Nizinsk; hosts Thyra’s politics trial</span></a></li>
+      </ul>
+    </section>
+  </div>
+</div>
+</div>
+</div>
+</body>
+</html>

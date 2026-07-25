@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Five visual directions — Archimedes Engine Wiki</title>
+<style>
+:root{
+  --bg:#f7f7f8; --card:#fff; --ink:#15181d; --muted:#5c646f; --faint:#8b939e;
+  --rule:#e0e3e7; --link:#1b4d8f; --warn:#9a6b12;
+  --sans:"Segoe UI",system-ui,-apple-system,Roboto,sans-serif;
+  --serif:Charter,"Bitstream Charter","Iowan Old Style","Palatino Linotype",Georgia,serif;
+  --mono:ui-monospace,"Cascadia Mono",Consolas,monospace;
+}
+@media(prefers-color-scheme:dark){:root{--bg:#14161a;--card:#1a1d22;--ink:#e2e5ea;--muted:#9aa3ae;--faint:#79828e;--rule:#2b3037;--link:#7fb2ee;--warn:#dcb257}}
+*,*::before,*::after{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--serif);font-size:18px;line-height:1.65}
+a{color:var(--link)}
+.wrap{max-width:58rem;margin:0 auto;padding:3.5rem 1.5rem 5rem}
+.eyebrow{font-family:var(--sans);font-size:.7rem;font-weight:700;letter-spacing:.15em;text-transform:uppercase;color:var(--faint);margin:0 0 .6rem}
+h1{font-size:2.6rem;line-height:1.1;letter-spacing:-.025em;font-weight:600;margin:0 0 .7rem}
+.lead{font-size:1.15rem;color:var(--muted);margin:0 0 2.5rem;max-width:44rem}
+h2{font-family:var(--sans);font-size:.75rem;font-weight:700;letter-spacing:.15em;text-transform:uppercase;
+  color:var(--faint);margin:3rem 0 1rem;padding-bottom:.45rem;border-bottom:1px solid var(--rule)}
+p{margin:0 0 1rem}
+
+.found{list-style:none;margin:0;padding:0;display:grid;gap:.55rem}
+.found li{display:grid;grid-template-columns:1.5rem 1fr;gap:.7rem;font-size:.98rem}
+.found li::before{content:"→";color:var(--warn);font-family:var(--sans);font-weight:700}
+
+.dirs{list-style:none;margin:0;padding:0;display:grid;gap:1.1rem}
+.dir{background:var(--card);border:1px solid var(--rule);border-radius:10px;padding:1.3rem 1.5rem 1.4rem;
+  border-left:4px solid var(--sw,var(--rule))}
+.dir-h{display:flex;align-items:baseline;gap:.7rem;flex-wrap:wrap;margin-bottom:.5rem}
+.dir-n{font-family:var(--mono);font-size:.72rem;font-weight:700;letter-spacing:.1em;color:var(--faint)}
+.dir h3{font-size:1.35rem;letter-spacing:-.015em;font-weight:600;margin:0}
+.dir h3 a{text-decoration:none;color:var(--ink)}
+.dir h3 a:hover{color:var(--link);text-decoration:underline}
+.dir .bet{font-family:var(--sans);font-size:.87rem;color:var(--muted);margin:0 0 .8rem}
+.dir dl{margin:0;display:grid;grid-template-columns:5.5rem 1fr;gap:.3rem .9rem;font-size:.9rem}
+.dir dt{font-family:var(--sans);font-size:.62rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--faint);padding-top:.3rem}
+.dir dd{margin:0}
+.dir .go{display:inline-block;margin-top:1rem;font-family:var(--sans);font-size:.85rem;font-weight:600;
+  text-decoration:none;color:var(--sw);border:1px solid var(--rule);border-radius:6px;padding:.4rem .85rem}
+.dir .go:hover{border-color:var(--sw)}
+.sw{display:inline-flex;gap:.22rem;margin-left:auto}
+.sw i{width:.85rem;height:.85rem;border-radius:2px;border:1px solid rgba(0,0,0,.12)}
+
+.note{font-family:var(--sans);font-size:.9rem;line-height:1.55;color:var(--muted);
+  background:var(--card);border:1px solid var(--rule);border-radius:10px;padding:1.1rem 1.3rem}
+.note b{color:var(--ink)}
+.note ul{margin:.6rem 0 0;padding-left:1.1rem}
+.note li{margin-bottom:.3rem}
+code{font-family:var(--mono);font-size:.86em;background:var(--bg);border:1px solid var(--rule);border-radius:3px;padding:.05em .35em}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <p class="eyebrow">Design exploration · 25 July 2026</p>
+  <h1>Five visual directions</h1>
+  <p class="lead">Each mockup shows the same two real pages — the Finn Jalgori-Tobu article and the Characters hub — so they can be compared directly. Use the <strong>Article / Hub</strong> switch in the black bar at the top of each.</p>
+
+  <h2>What the current design gets wrong</h2>
+  <ul class="found">
+    <li>Nothing on the page says which book this is. The chrome would suit a corporate intranet equally well.</li>
+    <li>Prose reads as blue noise — on the Finn article roughly one word in six is a link, all in saturated <code>#0b57d0</code>.</li>
+    <li>No dark mode, on a site about a novel most people read at night.</li>
+    <li>59 illustrations exist. A reader sees each one exactly once, in a 240&nbsp;px box, only after already finding the page. No hub shows a single face.</li>
+    <li>Long articles have no table of contents and no sense of position.</li>
+    <li>The 11-item sidebar is one flat list — "Chapters" sits at the same level as "All book wikis".</li>
+    <li>Category hubs are walls of bullets. Characters is 40 names in three columns of grey text.</li>
+    <li>A row-gap bug leaves ~55&nbsp;px of dead space between every <code>h1</code> and its lead paragraph.</li>
+  </ul>
+
+  <h2>The five</h2>
+  <ol class="dirs">
+    <li class="dir" style="--sw:#1b4d8f">
+      <div class="dir-h"><span class="dir-n">01</span><h3><a href="01-vector.html">Vector</a></h3>
+        <span class="sw"><i style="background:#fcfcfb"></i><i style="background:#1b4d8f"></i><i style="background:#9a6b12"></i><i style="background:#16181d"></i></span></div>
+      <p class="bet">The wiki's only job is reading. Spend everything on measure, hierarchy and orientation; wear no costume at all.</p>
+      <dl>
+        <dt>Layout</dt><dd>Grouped sidebar · 68<span>ch</span> serif column · right rail carrying a sticky section index above the infobox</dd>
+        <dt>Signature</dt><dd>The section index that tracks where you are in the article</dd>
+        <dt>Costs</dt><dd>It is the least distinctive of the five. Nothing about it says <em>Exodus</em>.</dd>
+      </dl>
+      <a class="go" href="01-vector.html">Open Vector →</a>
+    </li>
+
+    <li class="dir" style="--sw:#6b4e2e">
+      <div class="dir-h"><span class="dir-n">02</span><h3><a href="02-armorial.html">Armorial</a></h3>
+        <span class="sw"><i style="background:#e7e9ed"></i><i style="background:#6b4e2e"></i><i style="background:#7a2e3c"></i><i style="background:#a67c2e"></i></span></div>
+      <p class="bet">The spine of the novel is dynastic — houses, Dominions, queens, consorts, mindline succession. Build the wiki like a peerage, and let every subject wear its allegiance.</p>
+      <dl>
+        <dt>Layout</dt><dd>Allegiance spine in the house colour · tinted title plate with a geometric sigil · the infobox unboxed into a ruled armorial entry</dd>
+        <dt>Signature</dt><dd>The house rail — succession drawn as a diagram instead of listed as a field</dd>
+        <dt>Costs</dt><dd>Needs a colour and a sigil assigned per house, which is new data to maintain. Works beautifully for Celestials and Uranics, awkwardly for Travelers and technology pages.</dd>
+      </dl>
+      <a class="go" href="02-armorial.html">Open Armorial →</a>
+    </li>
+
+    <li class="dir" style="--sw:#4fc3d9">
+      <div class="dir-h"><span class="dir-n">03</span><h3><a href="03-starfield.html">Starfield</a></h3>
+        <span class="sw"><i style="background:#0a0e14"></i><i style="background:#1a2431"></i><i style="background:#4fc3d9"></i><i style="background:#e8b25c"></i></span></div>
+      <p class="bet">Space opera, read at night, with 59 dark illustrations going unused. Make dark the default rather than an afterthought, and let the pictures carry the page.</p>
+      <dl>
+        <dt>Layout</dt><dd>Dossier panel with a full-bleed portrait · monospace for every datum · hub as a portrait card grid</dd>
+        <dt>Signature</dt><dd>The connections strip — "who moved him", as faces rather than a See-also list</dd>
+        <dt>Costs</dt><dd>Long prose on dark is harder for some readers, so the light theme has to be equally good, not a fallback. Relationship labels are new data per character.</dd>
+      </dl>
+      <a class="go" href="03-starfield.html">Open Starfield →</a>
+    </li>
+
+    <li class="dir" style="--sw:#1d5e7a">
+      <div class="dir-h"><span class="dir-n">04</span><h3><a href="04-plate.html">Plate</a></h3>
+        <span class="sw"><i style="background:#f5f6f7"></i><i style="background:#22262b"></i><i style="background:#1d5e7a"></i><i style="background:#a4552c"></i></span></div>
+      <p class="bet">Hamilton is an engineer's writer, and the pages are so densely cross-linked the prose disappears. Treat the wiki as a technical manual and pull the references out of the sentence into the margin.</p>
+      <dl>
+        <dt>Layout</dt><dd>Fixed 62<span>ch</span> measure with a permanent apparatus column · hub as a dense sortable index table</dd>
+        <dt>Signature</dt><dd>Margin references — the body text carries superscripts, and each one is resolved with a gloss in the margin</dd>
+        <dt>Costs</dt><dd>The biggest bet here, and building it exposed the real limit: <strong>margin notes only stay beside their sentence if their density matches the prose.</strong> At 19 notes the margin ran a screen ahead of the text; trimmed to 11 it holds. So this direction caps how much can be cross-referenced — which is either the whole point or a serious constraint, depending on your view. Every reference also needs a hand-written one-line gloss, and on mobile the margin collapses inline.</dd>
+      </dl>
+      <a class="go" href="04-plate.html">Open Plate →</a>
+    </li>
+
+    <li class="dir" style="--sw:#16545f">
+      <div class="dir-h"><span class="dir-n">05</span><h3><a href="05-atlas.html">Atlas</a></h3>
+        <span class="sw"><i style="background:#fafafa"></i><i style="background:#0e1114"></i><i style="background:#16545f"></i><i style="background:#8ed3dd"></i></span></div>
+      <p class="bet">The illustrations are the most striking thing the wiki owns and they are buried. Lead with them: the picture is the way in.</p>
+      <dl>
+        <dt>Layout</dt><dd>Hero band with the subject image · key-facts strip instead of a side infobox · narrow 40<span>rem</span> reading column · hub as large tiles behind an A–Z jump bar</dd>
+        <dt>Signature</dt><dd>The hero band, and the film strip of people that closes the article</dd>
+        <dt>Costs</dt><dd>The first build cropped a 3:4 portrait into a wide band and decapitated it, so the band now shows the picture whole against a blurred copy of itself — no crop decision per subject, but it means the hero is atmosphere rather than a full-bleed image. Pages without an illustration still need a designed fallback, and the first line of prose sits below the fold.</dd>
+      </dl>
+      <a class="go" href="05-atlas.html">Open Atlas →</a>
+    </li>
+  </ol>
+
+  <h2>Constraints every direction respects</h2>
+  <div class="note">
+    <ul>
+      <li><b>No build step, no dependencies.</b> All five are plain CSS with system font stacks — nothing is fetched from a CDN, and every page still works over <code>file://</code>.</li>
+      <li><b>The 25 generated pages.</b> Whichever direction wins, the markup change has to be mirrored into <code>gen-celestials.mjs</code> and <code>gen-dominions.mjs</code> or the next run reverts it.</li>
+      <li><b>Page chrome invariants.</b> Skip link, <code>data-root</code>, favicon, the title suffix and <code>aria-current</code> are all checked by <code>check-wiki.mjs</code>; the mockups keep them in mind but do not implement the full chrome.</li>
+      <li><b>Illustration provenance</b> stays reader-facing on <code>sources.html</code>, never in article prose. Directions 3 and 5 lean hard on the images, so the "inferred, not canonical" caption has to travel with them.</li>
+    </ul>
+    <p style="margin:1rem 0 0"><b>These are mockups, not implementations.</b> They live in <code>docs/</code>, which <code>pages.yml</code> deletes before publishing, so nothing here ships to the live site.</p>
+  </div>
+</div>
+</body>
+</html>

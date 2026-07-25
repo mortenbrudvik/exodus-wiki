@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Mockup 1 — Vector — Archimedes Engine Wiki</title>
+<style>
+/* ============================================================
+   MOCKUP 1 — "VECTOR"
+   Thesis: the wiki's only job is reading. Spend everything on
+   measure, hierarchy and orientation. No costume.
+   Palette  paper #FCFCFB · ink #16181D · muted #5A6270
+            rule #DFE3E8 · link #1B4D8F · ochre #9A6B12
+   Type     Charter/Georgia serif body 18px/1.65 at 68ch
+            Segoe UI utility, tracked small caps for labels
+   Layout   grouped nav · centred article · right rail with
+            sticky section index above the infobox
+   Signature  the section index that tracks where you are
+   ============================================================ */
+
+/* ---- mockup chrome (not part of the design) ---- */
+.mk-bar{position:fixed;top:0;left:0;right:0;height:38px;background:#11131a;color:#c9cedb;display:flex;align-items:center;gap:.15rem;padding:0 .75rem;font:500 12px/1 system-ui,sans-serif;z-index:9999;letter-spacing:.02em}
+.mk-bar strong{color:#fff;font-weight:600;margin-right:.6rem;white-space:nowrap}
+.mk-bar a,.mk-bar label{color:#8fa6c8;text-decoration:none;padding:.4rem .5rem;border-radius:4px;cursor:pointer;white-space:nowrap}
+.mk-bar a:hover,.mk-bar label:hover{background:#1c2333;color:#fff}
+.mk-bar .mk-sp{margin-left:auto}
+.mk-views>input[name=v]{position:absolute;width:1px;height:1px;opacity:0;pointer-events:none}
+.mk-views>input[name=v]:focus-visible+label,.mk-bar label:focus-within{outline:2px solid #6ea8ff;outline-offset:1px}
+.view{display:none}
+#v-a:checked~.mk-frame .view--article{display:block}
+#v-h:checked~.mk-frame .view--hub{display:block}
+#v-a:checked~.mk-bar label[for=v-a],#v-h:checked~.mk-bar label[for=v-h]{background:#243049;color:#fff}
+
+/* ---- design tokens ---- */
+:root{
+  --paper:#fcfcfb; --surface:#ffffff; --ink:#16181d; --muted:#5a6270;
+  --rule:#dfe3e8; --rule-soft:#edeff2; --link:#1b4d8f; --link-visited:#5c3d7a;
+  --ochre:#9a6b12; --ochre-bg:#fdf6e6; --tint:#f1f4f8;
+  --serif:Charter,"Bitstream Charter","Iowan Old Style","Palatino Linotype",Georgia,serif;
+  --sans:"Segoe UI",system-ui,-apple-system,Roboto,sans-serif;
+  --measure:68ch;
+}
+[data-theme=dark]{
+  --paper:#14161a; --surface:#1a1d23; --ink:#e3e6ea; --muted:#9aa4b2;
+  --rule:#2c3138; --rule-soft:#23272e; --link:#7fb2ee; --link-visited:#b699d8;
+  --ochre:#e0b44f; --ochre-bg:#2a2312; --tint:#1f242c;
+}
+*,*::before,*::after{box-sizing:border-box}
+body{margin:0;padding-top:38px;background:var(--paper);color:var(--ink);font-family:var(--serif);font-size:18px;line-height:1.65;-webkit-font-smoothing:antialiased}
+a{color:var(--link);text-decoration-thickness:1px;text-underline-offset:2px}
+a:visited{color:var(--link-visited)}
+
+/* ---- header ---- */
+.hdr{position:sticky;top:38px;z-index:40;display:flex;align-items:center;gap:1rem;
+  padding:.6rem 1.25rem;background:var(--surface);border-bottom:1px solid var(--rule);font-family:var(--sans)}
+.brand{font-size:.95rem;font-weight:600;letter-spacing:.01em;color:var(--ink);text-decoration:none;margin-right:auto;display:flex;align-items:center;gap:.55rem}
+.brand .glyph{width:22px;height:22px;flex:none}
+.srch{position:relative;flex:0 1 22rem;display:flex}
+.srch input{flex:1;font:inherit;font-size:.9rem;padding:.45rem .7rem .45rem 2rem;border:1px solid var(--rule);border-radius:6px;background:var(--paper);color:var(--ink)}
+.srch svg{position:absolute;left:.6rem;top:50%;transform:translateY(-50%);opacity:.5}
+.tgl{font:inherit;font-size:.85rem;padding:.4rem .65rem;border:1px solid var(--rule);border-radius:6px;background:var(--paper);color:var(--muted);cursor:pointer}
+.tgl:hover{color:var(--ink)}
+
+/* ---- shell ---- */
+.shell{display:grid;grid-template-columns:14.5rem minmax(0,1fr);align-items:start}
+.nav{position:sticky;top:calc(38px + 3.1rem);height:calc(100vh - 38px - 3.1rem);overflow-y:auto;
+  padding:1.4rem .9rem 3rem;border-right:1px solid var(--rule);font-family:var(--sans);font-size:.9rem}
+.nav-group+.nav-group{margin-top:1.35rem}
+.nav-label{font-size:.68rem;font-weight:700;letter-spacing:.11em;text-transform:uppercase;color:var(--muted);padding:0 .55rem;margin-bottom:.35rem}
+.nav ul{list-style:none;margin:0;padding:0}
+.nav a{display:block;padding:.32rem .55rem;border-radius:5px;text-decoration:none;color:var(--ink)}
+.nav a:visited{color:var(--ink)}
+.nav a:hover{background:var(--tint)}
+.nav a[aria-current=page]{background:var(--tint);font-weight:600;box-shadow:inset 2px 0 0 var(--link)}
+
+.main{padding:2.2rem 2rem 5rem;display:grid;grid-template-columns:minmax(0,var(--measure)) 15.5rem;gap:0 2.75rem;justify-content:center}
+.col-a{min-width:0}
+.rail{position:sticky;top:calc(38px + 4.5rem);font-family:var(--sans);font-size:.85rem}
+
+/* ---- article ---- */
+h1{font-size:2.35rem;line-height:1.12;letter-spacing:-.018em;font-weight:600;margin:0 0 .3rem}
+.kicker{font-family:var(--sans);font-size:.7rem;font-weight:700;letter-spacing:.13em;text-transform:uppercase;color:var(--muted);margin:0 0 .5rem}
+.byline{font-family:var(--sans);font-size:.83rem;color:var(--muted);padding-bottom:1rem;border-bottom:1px solid var(--rule);margin:0 0 1.5rem}
+.lead{font-size:1.16rem;line-height:1.55;margin:0 0 1.6rem}
+h2{font-size:1.3rem;font-weight:600;letter-spacing:-.01em;margin:2.4rem 0 .6rem;padding-bottom:.3rem;border-bottom:1px solid var(--rule-soft);scroll-margin-top:7rem}
+p{margin:0 0 1.05rem}
+.notice{font-family:var(--sans);font-size:.87rem;line-height:1.5;background:var(--ochre-bg);border-left:3px solid var(--ochre);padding:.7rem .95rem;margin:0 0 1.6rem;border-radius:0 5px 5px 0}
+.notice strong{color:var(--ochre)}
+.seealso{list-style:none;padding:0;margin:.4rem 0 0;display:grid;grid-template-columns:1fr 1fr;gap:.3rem 1.5rem;font-size:.97rem}
+.cats{margin-top:2.6rem;padding-top:.85rem;border-top:1px solid var(--rule);font-family:var(--sans);font-size:.85rem;color:var(--muted)}
+.cats a{margin-left:.4rem}
+
+/* ---- section index (the signature) ---- */
+.toc{border-left:2px solid var(--rule);padding-left:.9rem;margin-bottom:1.75rem}
+.toc-h{font-size:.68rem;font-weight:700;letter-spacing:.11em;text-transform:uppercase;color:var(--muted);margin:0 0 .5rem}
+.toc ol{list-style:none;margin:0;padding:0;counter-reset:s}
+.toc li{position:relative;margin:0 0 .28rem}
+.toc a{display:block;padding:.12rem 0;text-decoration:none;color:var(--muted);line-height:1.35}
+.toc a:hover{color:var(--ink)}
+.toc a.on{color:var(--ink);font-weight:600}
+.toc a.on::before{content:"";position:absolute;left:-.95rem;top:.28rem;bottom:.28rem;width:2px;background:var(--link);border-radius:1px}
+
+/* ---- infobox ---- */
+.ibox{border:1px solid var(--rule);border-radius:8px;overflow:hidden;background:var(--surface)}
+.ibox figure{margin:0;background:#0c1018}
+.ibox img{display:block;width:100%;aspect-ratio:3/4;object-fit:cover}
+.ibox figcaption{font-size:.72rem;color:var(--muted);padding:.4rem .8rem;border-bottom:1px solid var(--rule)}
+.ibox dl{margin:0;padding:.85rem .9rem 1rem}
+.ibox dt{font-size:.65rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);margin-top:.8rem}
+.ibox dt:first-child{margin-top:0}
+.ibox dd{margin:.1rem 0 0;font-family:var(--serif);font-size:.92rem;line-height:1.42}
+
+/* ---- hub ---- */
+.hub-intro{max-width:var(--measure)}
+.groups{margin-top:2.2rem;display:grid;gap:2.4rem}
+.group>h2{margin-top:0}
+.roster{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(auto-fill,minmax(19rem,1fr));gap:.15rem 2.5rem}
+.roster li{display:grid;grid-template-columns:2.5rem 1fr;gap:.7rem;align-items:start;padding:.5rem 0;border-bottom:1px solid var(--rule-soft)}
+.roster img{width:2.5rem;height:2.5rem;border-radius:50%;object-fit:cover;object-position:50% 18%;background:#0c1018}
+.roster b{display:block;font-weight:600;font-size:.98rem}
+.roster b a{text-decoration:none}
+.roster b a:hover{text-decoration:underline}
+.roster span{display:block;font-family:var(--sans);font-size:.82rem;line-height:1.4;color:var(--muted)}
+
+@media(max-width:1100px){.main{grid-template-columns:minmax(0,1fr);max-width:44rem;margin:0 auto}.rail{position:static;display:grid;grid-template-columns:1fr 1fr;gap:1.5rem;margin-bottom:2rem}}
+@media(max-width:860px){.shell{grid-template-columns:1fr}.nav{display:none}.rail{grid-template-columns:1fr}}
+@media(prefers-reduced-motion:no-preference){html{scroll-behavior:smooth}}
+</style>
+</head>
+<body>
+<div class="mk-views">
+<input type="radio" name="v" id="v-a" checked><input type="radio" name="v" id="v-h">
+<div class="mk-bar">
+  <strong>1 / 5 · Vector</strong>
+  <label for="v-a">Article</label><label for="v-h">Hub</label>
+  <span class="mk-sp"></span>
+  <a href="index.html">All mockups</a>
+  <a href="02-armorial.html">Armorial ›</a>
+</div>
+
+<div class="mk-frame">
+<!-- ==================== ARTICLE ==================== -->
+<div class="view view--article">
+  <header class="hdr">
+    <a class="brand" href="#">
+      <svg class="glyph" viewBox="0 0 24 24" fill="none" aria-hidden="true"><circle cx="12" cy="12" r="9" stroke="currentColor" stroke-width="1.4"/><path d="M3 15.5h18" stroke="currentColor" stroke-width="1.4"/><path d="M12 3c3 4.2 3 13.8 0 18M12 3C9 7.2 9 16.8 12 21" stroke="currentColor" stroke-width="1.1" opacity=".55"/></svg>
+      Archimedes Engine Wiki</a>
+    <div class="srch">
+      <svg width="14" height="14" viewBox="0 0 16 16" fill="none" aria-hidden="true"><circle cx="7" cy="7" r="4.5" stroke="currentColor" stroke-width="1.5"/><path d="M10.5 10.5 14 14" stroke="currentColor" stroke-width="1.5"/></svg>
+      <input type="search" placeholder="Search 87 articles…" aria-label="Search">
+    </div>
+    <button class="tgl" onclick="document.documentElement.dataset.theme=document.documentElement.dataset.theme==='dark'?'':'dark'">Dark</button>
+  </header>
+
+  <div class="shell">
+    <aside class="nav">
+      <div class="nav-group">
+        <p class="nav-label">This wiki</p>
+        <ul>
+          <li><a href="#">Main page</a></li>
+          <li><a href="#">The book</a></li>
+          <li><a href="#">Sources</a></li>
+        </ul>
+      </div>
+      <div class="nav-group">
+        <p class="nav-label">Articles</p>
+        <ul>
+          <li><a href="#" aria-current="page">Characters</a></li>
+          <li><a href="#">Locations</a></li>
+          <li><a href="#">Factions</a></li>
+          <li><a href="#">Technology</a></li>
+        </ul>
+      </div>
+      <div class="nav-group">
+        <p class="nav-label">Reading the novel</p>
+        <ul>
+          <li><a href="#">Plot summary</a></li>
+          <li><a href="#">Chapters</a></li>
+          <li><a href="#">Timeline</a></li>
+        </ul>
+      </div>
+      <div class="nav-group">
+        <p class="nav-label">Rosters</p>
+        <ul>
+          <li><a href="#">Celestials</a></li>
+          <li><a href="#">Dominions</a></li>
+        </ul>
+      </div>
+      <div class="nav-group">
+        <p class="nav-label">Elsewhere</p>
+        <ul><li><a href="#">All book wikis</a></li></ul>
+      </div>
+    </aside>
+
+    <main class="main">
+      <div class="col-a">
+        <p class="kicker">Characters · Uranic</p>
+        <h1>Finn Jalgori-Tobu</h1>
+        <p class="byline">Adventure-thread protagonist · appears throughout</p>
+
+        <p class="notice"><strong>Full spoilers.</strong> This article covers the whole novel, including the ending.</p>
+
+        <p class="lead"><strong>Finbar (Finn) Charles Louis Griffin Jalgori-Tobu</strong> is a ~25-year-old <a href="#">Uranic</a> aristocrat from <a href="#">Gondiar</a> and the adventure-thread protagonist of <em>Exodus: The Archimedes Engine</em>. Restless under Crown Dominion client-rule, he survives a mercenary dump over <a href="#">Anoosha</a>, bonds with the late arkship <a href="#"><em>Diligent</em></a>, and becomes a driving force behind seizing and using an <a href="#">Archimedes Engine</a> on <a href="#">Dolod</a> — for human liberation, and under <a href="#">Gyvoy Enfoe</a>’s manipulation.</p>
+
+        <section><h2 id="s1">Background</h2>
+        <p>Finn is the second son of the Jalgori-Tobu family, client rulers who administer human society on Gondiar for the <a href="#">Celestials</a> of the <a href="#">Crown Dominion</a>. As Minsterialis of <a href="#">Hafnir</a>, he holds land and status, but he longs to travel space as a <a href="#">Traveler</a> rather than settle into the family’s proxy-government role. Earth is only a history footnote to him — he is born into Celestial client order, not the exodus memory that still shapes Diligent humans. Like other Uranics, he carries <a href="#">neural interfaces</a> that let him work Celestial materials such as <a href="#">livestone</a>.</p>
+        <p>His twin sister <a href="#">Otylia</a> (Minsterialis of Serki) is a more institutional counterweight: she manages family and ministerial politics while Finn drifts toward adventure and, later, open resistance. Older siblings include heir <a href="#">Zelinda Maryann Richelle</a> and brother Everett Callan Mathias.</p></section>
+
+        <section><h2 id="s2">Anoosha and the Diligent alliance</h2>
+        <p>The novel opens with Finn bound and thrown from a plane over the Camurdy Mountains on Anoosha after a failed heist involving the mercenary <a href="#">Liliana</a>. Injured, he shapes livestone into shelter until he is found by <a href="#">Eleanor (Ellie) Aponi</a> and her grandfather <a href="#">Josias Aponi</a>, who have crash-landed from the newly arrived arkship <em>Diligent</em>.</p>
+        <p>Finn and Josias strike a bargain: land at Hafnir for the <em>Diligent</em>’s settlers in exchange for Finn’s path off-world. Back on Gondiar the family accepts the settlement deal as economically useful; Finn and Ellie later travel to recover the arkship and pursue a <a href="#">ZPZ generator</a> so the ship can operate as a true deep-space vessel.</p></section>
+
+        <section><h2 id="s3">ZPZ, the Engine, and the endgame</h2>
+        <p>Finn’s long arc takes him through salvage at Terrik Papuan, clashes with Traveler interests (including captain <a href="#">Andino</a> of <em><a href="#">Arcadia’s Moon</a></em>), a dangerous extraction on Kajval, and the hunt for Archimedes Engine operating software at Kingsnest. Gyvoy Enfoe steers him toward using an Engine on Dolod to keep the gas giant from settling usefully into the <a href="#">Kelowan</a> system — framed as a blow for <a href="#">human liberation</a>.</p>
+        <p>On Dolod, Gyvoy’s influence and Finn’s grief over Crown violence push the crisis to a head. Finn issues Engine commands that redirect momentum transfers toward Boksrock rather than a simple Kelowan-denial plan; later he engineers a second transfer that accelerates the <em>Diligent</em> via an anchor ship and its ZPZ field, allowing the arkship to flee toward Capo Frois. Ellie recovers suppressed memories of Gyvoy’s non-consensual interface with Finn’s induction pad, exposing the manipulation behind the operation.</p></section>
+
+        <section><h2 id="s4">See also</h2>
+        <ul class="seealso">
+          <li><a href="#">Eleanor Aponi</a></li><li><a href="#">Josias Aponi</a></li>
+          <li><a href="#">Otylia Jalgori-Tobu</a></li><li><a href="#">Terence Wilson-Fletcher</a></li>
+          <li><a href="#">Gyvoy Enfoe</a></li><li><a href="#">Arkship Diligent</a></li>
+        </ul></section>
+
+        <footer class="cats">Categories:<a href="#">Characters</a><a href="#">Uranics</a><a href="#">Crown Dominion</a></footer>
+      </div>
+
+      <aside class="rail">
+        <nav class="toc" aria-label="On this page">
+          <p class="toc-h">On this page</p>
+          <ol>
+            <li><a href="#s1" class="on">Background</a></li>
+            <li><a href="#s2">Anoosha and the Diligent alliance</a></li>
+            <li><a href="#s3">ZPZ, the Engine, and the endgame</a></li>
+            <li><a href="#s4">See also</a></li>
+          </ol>
+        </nav>
+        <div class="ibox">
+          <figure><img src="../../exodus-the-archimedes-engine/assets/images/characters/finn-jalgori-tobu.jpg" alt="Finn Jalgori-Tobu"></figure>
+          <figcaption>Inferred illustration — no likeness is described in the novel.</figcaption>
+          <dl>
+            <dt>Full name</dt><dd>Finbar Charles Louis Griffin Jalgori-Tobu</dd>
+            <dt>Age at introduction</dt><dd>~25</dd>
+            <dt>Affiliation</dt><dd><a href="#">Uranic</a> / Jalgori-Tobu; later <a href="#">Traveler</a>-aspirant</dd>
+            <dt>Role</dt><dd>Protagonist; Minsterialis of Hafnir; Engine operator</dd>
+            <dt>Home</dt><dd><a href="#">Gondiar</a> / <a href="#">Hafnir</a></dd>
+            <dt>Siblings</dt><dd>Twin of <a href="#">Otylia</a>; sister <a href="#">Zelinda</a> (heir); brother Everett</dd>
+          </dl>
+        </div>
+      </aside>
+    </main>
+  </div>
+</div>
+
+<!-- ==================== HUB ==================== -->
+<div class="view view--hub">
+  <header class="hdr">
+    <a class="brand" href="#">
+      <svg class="glyph" viewBox="0 0 24 24" fill="none" aria-hidden="true"><circle cx="12" cy="12" r="9" stroke="currentColor" stroke-width="1.4"/><path d="M3 15.5h18" stroke="currentColor" stroke-width="1.4"/><path d="M12 3c3 4.2 3 13.8 0 18M12 3C9 7.2 9 16.8 12 21" stroke="currentColor" stroke-width="1.1" opacity=".55"/></svg>
+      Archimedes Engine Wiki</a>
+    <div class="srch">
+      <svg width="14" height="14" viewBox="0 0 16 16" fill="none" aria-hidden="true"><circle cx="7" cy="7" r="4.5" stroke="currentColor" stroke-width="1.5"/><path d="M10.5 10.5 14 14" stroke="currentColor" stroke-width="1.5"/></svg>
+      <input type="search" placeholder="Search 87 articles…" aria-label="Search">
+    </div>
+    <button class="tgl" onclick="document.documentElement.dataset.theme=document.documentElement.dataset.theme==='dark'?'':'dark'">Dark</button>
+  </header>
+  <div class="shell">
+    <aside class="nav">
+      <div class="nav-group"><p class="nav-label">This wiki</p><ul><li><a href="#">Main page</a></li><li><a href="#">The book</a></li><li><a href="#">Sources</a></li></ul></div>
+      <div class="nav-group"><p class="nav-label">Articles</p><ul><li><a href="#" aria-current="page">Characters</a></li><li><a href="#">Locations</a></li><li><a href="#">Factions</a></li><li><a href="#">Technology</a></li></ul></div>
+      <div class="nav-group"><p class="nav-label">Reading the novel</p><ul><li><a href="#">Plot summary</a></li><li><a href="#">Chapters</a></li><li><a href="#">Timeline</a></li></ul></div>
+      <div class="nav-group"><p class="nav-label">Rosters</p><ul><li><a href="#">Celestials</a></li><li><a href="#">Dominions</a></li></ul></div>
+    </aside>
+    <main class="main" style="grid-template-columns:minmax(0,66rem)">
+      <div class="col-a">
+        <p class="kicker">Category · 40 articles</p>
+        <h1>Characters</h1>
+        <p class="byline">Grouped by ship, court and faction</p>
+        <div class="hub-intro">
+          <p class="lead">People of <em>Exodus: The Archimedes Engine</em> — Uranic aristocrats and rebels, arkship settlers, Celestial royalty and archons, Travelers, and those caught between Dominion order and human liberation.</p>
+          <p>For Celestial naming conventions, the royal houses, and figures named only in passing, see the <a href="#">Celestials roster</a>.</p>
+        </div>
+        <div class="groups">
+          <section class="group"><h2>Arkship <em>Diligent</em></h2>
+            <ul class="roster">
+              <li><img src="../../exodus-the-archimedes-engine/assets/images/characters/josias-aponi.jpg" alt=""><div><b><a href="#">Josias Aponi</a></b><span>Owner of the <em>Diligent</em>; orator who turns settlement into liberation politics</span></div></li>
+              <li><img src="../../exodus-the-archimedes-engine/assets/images/characters/eleanor-aponi.jpg" alt=""><div><b><a href="#">Eleanor Aponi</a></b><span>His granddaughter; lieutenant who finds Finn and runs the salvage expeditions</span></div></li>
+              <li><img src="../../exodus-the-archimedes-engine/assets/images/characters/dejean.jpg" alt=""><div><b><a href="#">Dejean</a></b><span>Captain of the arkship; professional counterweight to Josias’s politics</span></div></li>
+              <li><img src="../../exodus-the-archimedes-engine/assets/images/characters/elsbeth-mcquillan.jpg" alt=""><div><b><a href="#">Elsbeth McQuillan</a></b><span>Hired armour commander on the Kajval dropship raid</span></div></li>
+            </ul></section>
+          <section class="group"><h2>Gondiar: the Jalgori-Tobus and the law</h2>
+            <ul class="roster">
+              <li><img src="../../exodus-the-archimedes-engine/assets/images/characters/finn-jalgori-tobu.jpg" alt=""><div><b><a href="#">Finn Jalgori-Tobu</a></b><span>Uranic aristocrat; Minsterialis of Hafnir; the adventure thread’s protagonist</span></div></li>
+              <li><img src="../../exodus-the-archimedes-engine/assets/images/characters/otylia-jalgori-tobu.jpg" alt=""><div><b><a href="#">Otylia Jalgori-Tobu</a></b><span>Finn’s twin; Minsterialis of Serki; marries Josias</span></div></li>
+              <li><img src="../../exodus-the-archimedes-engine/assets/images/characters/zelinda-jalgori-tobu.jpg" alt=""><div><b><a href="#">Zelinda Jalgori-Tobu</a></b><span>Eldest sister and heir; the institutional face of Uranic rule</span></div></li>
+              <li><img src="../../exodus-the-archimedes-engine/assets/images/characters/terence-wilson-fletcher.jpg" alt=""><div><b><a href="#">Terence Wilson-Fletcher</a></b><span>Santa Rosa detective; later carries the Makaio-Spirit</span></div></li>
+              <li><img src="../../exodus-the-archimedes-engine/assets/images/characters/neusch.jpg" alt=""><div><b><a href="#">Neusch</a></b><span>Makaio-Faraji’s son; carries the archon’s neural gifts and continues his work</span></div></li>
+            </ul></section>
+          <section class="group"><h2>Now and Forever Queens</h2>
+            <ul class="roster">
+              <li><img src="../../exodus-the-archimedes-engine/assets/images/characters/helena-chione.jpg" alt=""><div><b><a href="#">Helena-Chione</a></b><span>Queen of Wynid; her mindline is usurped to become Helena-Thyra</span></div></li>
+              <li><img src="../../exodus-the-archimedes-engine/assets/images/characters/carolien-amaia.jpg" alt=""><div><b><a href="#">Carolien-Amaia</a></b><span>Queen of Verak; holds the rotating imperial throne through the crisis</span></div></li>
+              <li><img src="../../exodus-the-archimedes-engine/assets/images/characters/luus.jpg" alt=""><div><b><a href="#">Luus</a></b><span>Queen of Bassa; the Empress who hands the throne to Carolien</span></div></li>
+              <li><img src="../../exodus-the-archimedes-engine/assets/images/characters/ramona-ursule.jpg" alt=""><div><b><a href="#">Ramona-Ursule</a></b><span>Queen of Nizinsk; hosts Thyra’s politics trial</span></div></li>
+            </ul></section>
+        </div>
+      </div>
+    </main>
+  </div>
+</div>
+</div>
+</div>
+<script>
+// Section index follows the reader. 12 lines, no library.
+(function(){
+  var links=[].slice.call(document.querySelectorAll('.toc a'));
+  if(!links.length||!('IntersectionObserver'in window))return;
+  var io=new IntersectionObserver(function(es){
+    es.forEach(function(e){
+      if(!e.isIntersecting)return;
+      links.forEach(function(l){l.classList.toggle('on',l.getAttribute('href')==='#'+e.target.id)});
+    });
+  },{rootMargin:'-15% 0px -70% 0px'});
+  document.querySelectorAll('.col-a h2[id]').forEach(function(h){io.observe(h)});
+})();
+</script>
+</body>
+</html>
