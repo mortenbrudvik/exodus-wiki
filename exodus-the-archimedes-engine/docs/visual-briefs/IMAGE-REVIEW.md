@@ -1,9 +1,14 @@
-# Illustration review — all 46 images against the book
+# Illustration review — the 46 character and ship images against the book
 
 **Reviewed:** 25 July 2026 · every image opened and judged by eye · **46 of 46 complete**
 
 `check-images.mjs` proves a file exists and is non-blank. It cannot read what is drawn or written
 inside a JPEG, so this sweep is the only thing standing between an invented fact and the live site.
+
+> **Scope: 46 of 59.** A second illustration pass later added 13 subjects — 5 places, 4 technologies
+> and 4 factions. **None of them has been reviewed by eye**, so nothing has checked them for
+> burned-in text, real-world logos, or contradictions with the wiki. They ship unverified. The
+> failure criteria and method below apply unchanged when that sweep happens.
 
 | Verdict | Count | Meaning |
 |---|---:|---|

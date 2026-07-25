@@ -26,7 +26,9 @@ on the deployed site.
 4. Link from the category hub.
 5. Add the **same** entry to `assets/data/search-index.json` and `assets/data/search-index.js`.
 6. Wikilink related articles.
-7. Run both checks (below). `check-wiki.mjs` catches the sync steps above if you miss one.
+7. Run `node scripts/apply-seo.mjs`, `node scripts/gen-sitemap.mjs` and
+   `node scripts/wire-lightbox-script.mjs` — all idempotent.
+8. Run all five checks (below). They catch the sync steps above if you miss one.
 
 ## Generated pages
 
@@ -46,9 +48,16 @@ Editing those HTML files directly works until the next run, which silently rever
 ```bash
 node scripts/check-wiki.mjs         # structure, chrome, voice, name drift, generator sync
 node scripts/check-search-rank.mjs  # search behaviour and ranking
+node scripts/check-images.mjs       # brief, asset and infobox markup for every illustration
+node scripts/check-seo.mjs          # descriptions, canonicals, social tags, sitemap, robots.txt
+node scripts/check-lightbox.mjs     # WikiLightbox open/close, and that every page loads it
 ```
 
-Both exit non-zero on failure, so they work as a pre-commit gate.
+All five exit non-zero on failure, so they work as a pre-commit gate.
+
+`check-images.mjs` and `check-lightbox.mjs` verify plumbing, not content: they prove an
+illustration exists and is wired up, but nothing automated can read what is *drawn* inside a JPEG.
+That review is by eye — see `docs/visual-briefs/IMAGE-REVIEW.md`.
 
 `check-wiki.mjs` fails the run on: broken internal links, a page missing from a category hub
 or from the search index, the two index files diverging, a wrong `data-root`, missing skip
@@ -60,7 +69,7 @@ It also prints **warnings**, which never fail the run because they need judgemen
 spelling looks like a stray variant of an established name, thin pages with no stub notice,
 orphans, and index titles that disagree with their `h1`.
 
-`check-search-rank.mjs` asserts query folding, ~15 ranking outcomes against the real index,
+`check-search-rank.mjs` asserts query folding, 36 ranking outcomes against the real index,
 that every entry points at a real file, and JSON/JS parity. Add a case whenever you add an
 alias or an alternate spelling.
 

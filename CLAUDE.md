@@ -35,16 +35,17 @@ the JSON `fetch` only runs if that script is missing — search behaves the same
 over HTTP anyway for realistic relative-link behaviour.
 
 ```bash
-# The four checks in the repo. Run all four after ANY change to pages, the index, search.js,
-# the images, or the SEO block.
+# The five checks in the repo. Run all five after ANY change to pages, the index, search.js,
+# the images, the SEO block, or the lightbox.
 cd exodus-the-archimedes-engine
 node scripts/check-wiki.mjs         # structure, chrome, voice, name drift, generator sync
 node scripts/check-search-rank.mjs  # search folding and ranking
 node scripts/check-images.mjs       # brief, asset and infobox-markup coverage for every image
 node scripts/check-seo.mjs          # descriptions, canonicals, social tags, sitemap, robots.txt
+node scripts/check-lightbox.mjs     # WikiLightbox open/close, and that every page loads it
 ```
 
-All four exit non-zero on failure. `check-wiki.mjs` additionally prints advisory **warnings** that
+All five exit non-zero on failure. `check-wiki.mjs` additionally prints advisory **warnings** that
 deliberately do not fail the run (possible name drift, thin pages without a stub notice, orphans,
 index titles disagreeing with their `h1`) — 8 thin-page warnings are the expected baseline.
 
@@ -111,7 +112,7 @@ migrations. They guard against re-application and are now no-ops; leave them alo
 
 ## Sync invariants
 
-Adding, renaming or removing a page means touching **six or seven** things:
+Adding, renaming or removing a page means touching **seven or eight** things:
 
 1. The `.html` file (copy `templates/article.html`; set `data-root` to `../` or `../../`).
 2. Its category hub — every page must be reachable from `pages/<category>/index.html`.
@@ -122,8 +123,10 @@ Adding, renaming or removing a page means touching **six or seven** things:
 6. `node scripts/apply-seo.mjs` — inserts the page's description/canonical/social block. It reads
    the summary from step 3, so do it after the index, not before.
 7. `node scripts/gen-sitemap.mjs` — re-lists the site so crawlers see the new page.
+8. `node scripts/wire-lightbox-script.mjs` — every page that loads `search.js` must also load
+   `lightbox.js`; `check-lightbox.mjs` fails otherwise.
 
-Steps 6 and 7 are both idempotent, so re-running them over an unchanged site is a no-op.
+Steps 6 to 8 are all idempotent, so re-running them over an unchanged site is a no-op.
 
 `data-root` is not decoration: `search.js` reads `document.body.getAttribute("data-root")` to
 resolve index and result paths from nested folders. A wrong value silently breaks search on that
@@ -206,16 +209,28 @@ These are enforced conventions, not suggestions, and past passes have violated t
 
 ## Illustrations
 
-Infobox images live under `assets/images/{characters,ships}/`, each backed by a maintainer brief in
-`docs/visual-briefs/` and listed in that folder's `index.json`. Characters come in at 3:4, ships at
-16:9. Celestial portraits are emitted by `gen-celestials.mjs` — the generated-pages trap applies, so
-never hand-edit those; every other page is served by `scripts/inject-infobox-images.mjs`, which is
-idempotent and skips any page that already has `.infobox-image`. `check-images.mjs` prints the
-current counts.
+Infobox images live under `assets/images/{characters,ships,locations,technology,factions}/`, each
+backed by a maintainer brief in `docs/visual-briefs/` and listed in that folder's `index.json`.
+Characters are 3:4; everything else is 16:9. `check-images.mjs` prints the current counts.
 
-The illustrations are **inferred, not canonical** — no likeness is described in the novel. A full
-review of all 46 is in `docs/visual-briefs/IMAGE-REVIEW.md` (37 pass, 3 query, 6 fail). Five rules
-follow, and every one has been violated in shipped assets:
+| Script | Owns |
+|---|---|
+| `write-visual-briefs.mjs` | briefs for characters and ships |
+| `write-extra-visual-briefs.mjs` | briefs for places, tech and factions; merges into the same `index.json` |
+| `gen-celestials.mjs` / `gen-dominions.mjs` | images on the 25 generated pages — the generated-pages trap applies, never hand-edit those |
+| `inject-infobox-images.mjs` | character and ship images on hand-authored pages |
+| `inject-extra-images.mjs` | place, tech and faction images on hand-authored pages |
+| `wire-lightbox-script.mjs` | ensures every page loading `search.js` also loads `lightbox.js` |
+
+All the injectors are idempotent and skip pages that already carry the markup.
+
+The illustrations are **inferred, not canonical** — no likeness is described in the novel.
+`docs/visual-briefs/IMAGE-REVIEW.md` records a full by-eye review of the original 46 (now all
+passing after regeneration). **The 13 second-pass subjects — the places, technology and factions —
+have never been reviewed by eye.** `check-images.mjs` cannot see inside a JPEG, so nothing has
+verified them against the rules below.
+
+Five rules follow, and every one has been violated in shipped assets:
 
 - **No text inside an image.** No caption bars, ranks, house names, service numbers or dates. The
   briefs already specify "no text, no watermark, no UI chrome"; assets shipped with captions anyway,
@@ -266,7 +281,7 @@ need to ask. This supersedes the older "do not run `git commit`" note in
 
 Pushing `main` publishes to a public website in about a minute, so:
 
-- Run both checks before you commit. They are the gate that replaces asking.
+- Run all five checks before you commit. They are the gate that replaces asking.
 - Prefer several focused commits over one sweeping one; the history is the only review trail.
 - After pushing, confirm the Pages run went green (`gh run list --limit 1`) rather than assuming it.
 
