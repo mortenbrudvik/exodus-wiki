@@ -7,12 +7,13 @@
 | **Clade / type** | Traveler charter starship |
 | **Role** | Andino’s deniable hull; Infinite Totality alias |
 | **Image path** | `assets/images/ships/arcadias-moon.jpg` |
+| **Companion image** | `assets/images/ships/infinite-totality.jpg` — disguise shell (see `infinite-totality.md`) |
 
 ## Physical / design cues (research)
 
-- Mid-size working freighter-explorer
-- Modular containers, salvage arms, deniable civilian lines
-- Not navy capital ship; not arkship-scale
+- True hull (novel): geodesic sphere of golden trusses enclosing eight repositionable ovoids
+- *Infinite Totality* is a separate shell fuselage that hides that silhouette (companion plate)
+- Mid-size working freighter-explorer is the **older brief** still reflected in the primary plate — modular freighter look is inference lagging the article’s p. 241 geometry
 
 ## Clothing / finish
 

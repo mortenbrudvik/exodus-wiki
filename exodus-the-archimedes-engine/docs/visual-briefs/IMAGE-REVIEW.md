@@ -129,6 +129,25 @@ gates (`check-images`, infobox markup, SEO `og:image`) are green for all 74.
 
 ---
 
+## Companion plate — *Infinite Totality* on Arcadia’s Moon
+
+**Generated 25 July 2026 · not a separate entity page.** The *Infinite Totality* is the Lidon-built
+shell fuselage that disguises the *Arcadia’s Moon*, so the plate lives as a second infobox image on
+`pages/locations/arcadias-moon.html` (`assets/images/ships/infinite-totality.jpg`). Brief:
+`docs/visual-briefs/infinite-totality.md`. It is **not** listed in `index.json` as its own subject —
+`check-images` would require a standalone page that must not exist.
+
+| Check | Result |
+|---|---|
+| Form | Cone base flaring into a closed sphere — matches the article and p. 817/book-2 docking shape |
+| Material | Pale ultrabonded fibre casing; geo-ring debris as provenance cue |
+| Text / logos | **None** |
+| Relation | Closed shell only — does not show the golden geodesic true hull (that remains the primary plate’s job, imperfectly) |
+
+**Verdict: PASS** as a companion disguise plate.
+
+---
+
 ## Regeneration log
 
 **2026-07-25 (post-review).** Regenerated all six FAIL and three QUERY subjects with a widened
@@ -137,6 +156,8 @@ prompt states *exactly four arms / two legs*. Jalgori-Tobu sisters produced via 
 chained from the new Finn portrait so ancestry matches.
 
 **2026-07-25 (third pass).** Fifteen new plates for remaining entity pages (see above).
+
+**2026-07-25 (companion).** *Infinite Totality* shell plate on `arcadias-moon.html` — see section above.
 
 | Slug | Prior defect | Regen check |
 |---|---|---|
