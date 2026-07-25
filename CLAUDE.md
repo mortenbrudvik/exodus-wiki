@@ -35,15 +35,21 @@ the JSON `fetch` only runs if that script is missing — search behaves the same
 over HTTP anyway for realistic relative-link behaviour.
 
 ```bash
-# The two checks in the repo. Run both after ANY change to pages, the index, or search.js.
+# The three checks in the repo. Run all three after ANY change to pages, the index, search.js,
+# or the images.
 cd exodus-the-archimedes-engine
 node scripts/check-wiki.mjs         # structure, chrome, voice, name drift, generator sync
 node scripts/check-search-rank.mjs  # search folding and ranking
+node scripts/check-images.mjs       # brief, asset and infobox-markup coverage for all 44 images
 ```
 
-Both exit non-zero on failure. `check-wiki.mjs` additionally prints advisory **warnings** that
+All three exit non-zero on failure. `check-wiki.mjs` additionally prints advisory **warnings** that
 deliberately do not fail the run (possible name drift, thin pages without a stub notice, orphans,
 index titles disagreeing with their `h1`) — 8 thin-page warnings are the expected baseline.
+
+`check-images.mjs` only proves each subject has a brief, a non-blank file and matching markup — it
+cannot see *inside* a JPEG. Nothing burned into an image (captions, dates, titles) is greppable or
+checkable, so image content is reviewed by eye. See "Illustrations" below.
 
 `check-wiki.mjs --quiet` suppresses the per-check progress lines. There is no linter or formatter.
 
@@ -157,6 +163,28 @@ These are enforced conventions, not suggestions, and past passes have violated t
   the noun and `license` for the verb. Two exceptions are proper nouns and stay as they are: the
   **Travelers** faction, and the tie-in title *Creature Catalog* on `pages/sources.html`.
 - **DRY**: link rather than restating the same plot beat at length on several pages.
+
+## Illustrations
+
+44 infobox images live under `assets/images/{characters,ships}/`, each backed by a maintainer brief
+in `docs/visual-briefs/`. Characters come in at 3:4, ships at 16:9. The 18 Celestial portraits are
+emitted by `gen-celestials.mjs`; the other 26 were placed by `scripts/inject-infobox-images.mjs`,
+which is idempotent and skips any page that already has `.infobox-image`.
+
+The illustrations are **inferred, not canonical** — no likeness is described in the novel. Two rules
+follow, and both have been violated before:
+
+- **No text inside an image.** No caption bars, ranks, house names, service numbers or dates. The
+  briefs already specify "no text, no watermark, no UI chrome"; assets have shipped with captions
+  anyway, asserting titles and dates (`2784.4`, `c. 478 Post-Collapse`) that appear nowhere in the
+  wiki and contradict `timeline.html`'s own "years are approximate" caveat. Burned-in text is
+  invented canon that no check can catch — treat a caption bar as a blocking defect.
+- **Anything the novel does not fix goes under "Inference flags"** in the brief, not under
+  "Physical / design cues (research)". Hair and eye colour, and any visible hardware, are
+  inferences unless a page says otherwise.
+
+Reader-facing provenance for the images lives on `pages/sources.html` like all other provenance —
+never in article prose.
 
 ## External sources (Exodus wiki)
 

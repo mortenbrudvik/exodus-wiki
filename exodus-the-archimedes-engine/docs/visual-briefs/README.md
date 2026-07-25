@@ -37,6 +37,13 @@ Maintainer-only notes for original encyclopedia illustrations. **Not** reader-fa
 
 See individual `*.md` briefs in this folder. Filenames match page slugs.
 
+## Review
+
+`check-images.mjs` cannot see inside a JPEG, so delivered assets are checked by eye against
+[CAPTION-AUDIT.md](CAPTION-AUDIT.md). Burned-in text is the failure that matters most: assets have
+shipped with caption bars asserting ranks and dates that appear nowhere in the wiki, which the
+"no text, no watermark" line above is meant to prevent.
+
 ## Image paths
 
 - Characters → `assets/images/characters/<slug>.jpg`
