@@ -71,6 +71,23 @@ const EXPECTED = [
   ["gath", "pages/factions/changelings.html"],
   ["moaksha", "pages/factions/changelings.html"],
   ["rekaul", "pages/factions/changelings.html"],
+  // Two-word proper nouns must be indexed in full. Matching is query-as-substring-of-keyword,
+  // so a bare head ("zetian", "camurdy", "helium") answers the one-word query but leaves the
+  // longer, more natural query with nothing to match.
+  ["zetian palace", "pages/locations/gondiar.html"],
+  ["zetian", "pages/locations/gondiar.html"],
+  ["camurdy mountains", "pages/locations/anoosha.html"],
+  ["camurdy", "pages/locations/anoosha.html"],
+  ["helium sea", "pages/factions/crown-dominion.html"],
+  ["helium", "pages/factions/crown-dominion.html"],
+  ["cherenkov blade", "pages/characters/marcellu.html"],
+  // Vocabulary that carried no keyword at all: each is used across many pages but belongs to
+  // the one that defines it.
+  ["ghost units", "pages/factions/celestials.html"],
+  ["kinnox", "pages/locations/kelowan.html"],
+  // Indexed under the full name so the bare forename still matches as a substring.
+  ["everett", "pages/characters/finn-jalgori-tobu.html"],
+  ["everett callan mathias", "pages/characters/finn-jalgori-tobu.html"],
 ];
 for (const [q, path] of EXPECTED) {
   const hits = rankResults(realIndex, q);

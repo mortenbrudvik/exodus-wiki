@@ -35,7 +35,8 @@ window.WIKI_SEARCH_INDEX = [
       "2024",
       "space opera",
       "prequel",
-      "exodus game"
+      "exodus game",
+      "helium sea"
     ]
   },
   {
@@ -108,7 +109,8 @@ window.WIKI_SEARCH_INDEX = [
       "gyvoy",
       "dolod",
       "minsterialis",
-      "ministerialis"
+      "ministerialis",
+      "everett callan mathias"
     ]
   },
   {
@@ -350,7 +352,8 @@ window.WIKI_SEARCH_INDEX = [
       "anoosha",
       "lidon",
       "bekket",
-      "cybele"
+      "cybele",
+      "cherenkov blade"
     ]
   },
   {
@@ -473,7 +476,9 @@ window.WIKI_SEARCH_INDEX = [
       "helium",
       "imperial",
       "palace",
-      "boksrock"
+      "boksrock",
+      "kinnox",
+      "helium sea"
     ]
   },
   {
@@ -502,7 +507,8 @@ window.WIKI_SEARCH_INDEX = [
       "mountains",
       "crash",
       "rescue",
-      "livestone"
+      "livestone",
+      "camurdy mountains"
     ]
   },
   {
@@ -516,7 +522,8 @@ window.WIKI_SEARCH_INDEX = [
       "jalgori",
       "client",
       "zetian",
-      "crackdown"
+      "crackdown",
+      "zetian palace"
     ]
   },
   {
@@ -719,7 +726,8 @@ window.WIKI_SEARCH_INDEX = [
       "scoopships",
       "dominions roster",
       "peer",
-      "dominions"
+      "dominions",
+      "helium sea"
     ]
   },
   {
@@ -742,7 +750,8 @@ window.WIKI_SEARCH_INDEX = [
       "bloodstone",
       "rider",
       "remnant",
-      "mara yama"
+      "mara yama",
+      "ghost units"
     ]
   },
   {
@@ -823,7 +832,8 @@ window.WIKI_SEARCH_INDEX = [
       "tinaja",
       "engine",
       "infiltration",
-      "gyvoy"
+      "gyvoy",
+      "ghost units"
     ]
   },
   {
@@ -873,7 +883,8 @@ window.WIKI_SEARCH_INDEX = [
       "anoosha",
       "camurdy",
       "shelter",
-      "finn"
+      "finn",
+      "camurdy mountains"
     ]
   },
   {
@@ -1311,7 +1322,8 @@ window.WIKI_SEARCH_INDEX = [
       "cherenkov",
       "pana-seak",
       "anoosha",
-      "talloch-te"
+      "talloch-te",
+      "cherenkov blade"
     ]
   },
   {
