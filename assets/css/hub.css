@@ -1,20 +1,75 @@
-/* Book Wikis hub — library portal (distinct from per-book wiki themes) */
+/* Book wikis hub — the library doorway.
+   Shares the Starfield tokens with exodus-the-archimedes-engine/assets/css/wiki.css
+   so the hub and the wiki read as one site. The two files are separate on purpose:
+   a book wiki must stay self-contained, and the hub must not depend on any one
+   book's assets. Keep the palettes in step by hand.
+
+   There is no theme button here. The hub is a doorway you pass through in a
+   couple of seconds, and the toggle lives where the reading happens. It still
+   honours a choice made in a wiki: same origin, same localStorage key, and the
+   inline stamp in index.html applies it before first paint. */
+
 :root {
-  --hub-bg: #0f1419;
-  --hub-surface: #1a2332;
-  --hub-surface-elevated: #243044;
-  --hub-text: #e8eef6;
-  --hub-muted: #9aa8bc;
-  --hub-border: #334155;
-  --hub-accent: #5b9fd4;
-  --hub-accent-hover: #7eb6e0;
-  --hub-spoiler-bg: #3d2e14;
-  --hub-spoiler-text: #f0d78c;
-  --hub-spoiler-border: #8a6a28;
-  --hub-content-max: 56rem;
-  --hub-font: system-ui, -apple-system, "Segoe UI", Roboto, Ubuntu, Cantarell, "Noto Sans", sans-serif;
-  --hub-radius: 0.5rem;
-  --hub-focus: #7eb6e0;
+  color-scheme: dark;
+
+  --bg: #0a0e14;
+  --panel: #111823;
+  --raised: #1a2431;
+  --line: #22303f;
+  --text: #dce3ed;
+  --muted: #8493a8;
+  --dim: #5f6e83;
+  --accent: #4fc3d9;
+  --accent-dim: #2b7f92;
+  --accent-soft: rgba(79, 195, 217, 0.1);
+  --warn: #e8b25c;
+  --warn-bg: rgba(232, 178, 92, 0.07);
+  --warn-line: rgba(232, 178, 92, 0.24);
+
+  --content-max: 56rem;
+  --radius: 0.55rem;
+  --sans: "Segoe UI", system-ui, -apple-system, Roboto, Ubuntu, Cantarell, "Noto Sans", sans-serif;
+  --mono: ui-monospace, "Cascadia Mono", "SFMono-Regular", Consolas, "Liberation Mono", monospace;
+}
+
+/* Declared twice, as in wiki.css: once for an explicit choice, once for readers
+   who have not made one — including readers with JavaScript off. Keep identical. */
+[data-theme="light"] {
+  color-scheme: light;
+
+  --bg: #f7f8fa;
+  --panel: #ffffff;
+  --raised: #eef1f5;
+  --line: #dde2e9;
+  --text: #151a21;
+  --muted: #5a6472;
+  --dim: #7b8593;
+  --accent: #10627a;
+  --accent-dim: #8fc0cd;
+  --accent-soft: rgba(16, 98, 122, 0.07);
+  --warn: #8a5d10;
+  --warn-bg: #fdf6e6;
+  --warn-line: #e4c98c;
+}
+
+@media (prefers-color-scheme: light) {
+  :root:not([data-theme]) {
+    color-scheme: light;
+
+    --bg: #f7f8fa;
+    --panel: #ffffff;
+    --raised: #eef1f5;
+    --line: #dde2e9;
+    --text: #151a21;
+    --muted: #5a6472;
+    --dim: #7b8593;
+    --accent: #10627a;
+    --accent-dim: #8fc0cd;
+    --accent-soft: rgba(16, 98, 122, 0.07);
+    --warn: #8a5d10;
+    --warn-bg: #fdf6e6;
+    --warn-line: #e4c98c;
+  }
 }
 
 *,
@@ -31,78 +86,84 @@ body {
   margin: 0;
   min-height: 100vh;
   min-height: 100dvh;
-  font-family: var(--hub-font);
-  color: var(--hub-text);
-  background: var(--hub-bg);
-  line-height: 1.55;
+  font-family: var(--sans);
+  font-size: 1.125rem;
+  color: var(--text);
+  background: var(--bg);
+  line-height: 1.72;
+  -webkit-font-smoothing: antialiased;
   padding-left: env(safe-area-inset-left, 0);
   padding-right: env(safe-area-inset-right, 0);
 }
 
 a {
-  color: var(--hub-accent);
+  color: var(--accent);
+  text-decoration: none;
+  border-bottom: 1px solid var(--accent-dim);
 }
 
 a:hover {
-  color: var(--hub-accent-hover);
+  border-bottom-color: var(--accent);
 }
 
 a:focus-visible {
-  outline: 2px solid var(--hub-focus);
+  outline: 2px solid var(--accent);
   outline-offset: 2px;
 }
 
 .site-header {
   display: flex;
   align-items: center;
-  padding: 1rem 1.25rem;
-  padding-top: calc(1rem + env(safe-area-inset-top, 0px));
-  background: var(--hub-surface);
-  border-bottom: 1px solid var(--hub-border);
+  padding: 0.9rem 1.25rem;
+  padding-top: calc(0.9rem + env(safe-area-inset-top, 0px));
+  background: var(--panel);
+  border-bottom: 1px solid var(--line);
   position: sticky;
   top: 0;
   z-index: 10;
 }
 
 .site-title {
-  font-weight: 700;
-  font-size: 1.125rem;
+  font-size: 0.98rem;
+  font-weight: 600;
   letter-spacing: 0.02em;
-  color: var(--hub-text);
-  text-decoration: none;
+  color: var(--text);
+  border: 0;
 }
 
 .site-title:visited {
-  color: var(--hub-text);
+  color: var(--text);
 }
 
 .site-title:hover {
-  color: var(--hub-accent-hover);
+  color: var(--accent);
 }
 
 .layout {
-  max-width: var(--hub-content-max);
+  max-width: var(--content-max);
   margin: 0 auto;
-  padding: 2rem 1.25rem 3rem;
+  padding: 3rem 1.25rem 3rem;
   padding-bottom: calc(3rem + env(safe-area-inset-bottom, 0px));
 }
 
 .intro {
-  margin-bottom: 2rem;
+  margin-bottom: 2.6rem;
 }
 
 .intro h1 {
-  margin: 0 0 0.75rem;
-  font-size: 1.75rem;
-  font-weight: 700;
-  line-height: 1.25;
+  margin: 0 0 0.8rem;
+  font-size: 2.6rem;
+  line-height: 1.08;
+  letter-spacing: -0.025em;
+  font-weight: 600;
 }
 
 .intro .lead {
   margin: 0;
-  color: var(--hub-muted);
-  font-size: 1.05rem;
-  max-width: 40rem;
+  color: var(--muted);
+  font-size: 1.1rem;
+  line-height: 1.6;
+  max-width: 42rem;
 }
 
 .card-grid {
@@ -114,13 +175,7 @@ a:focus-visible {
   padding: 0;
 }
 
-@media (min-width: 40rem) {
-  .card-grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
-}
-
-@media (min-width: 56rem) {
+@media (min-width: 44rem) {
   .card-grid {
     grid-template-columns: repeat(2, 1fr);
   }
@@ -129,52 +184,57 @@ a:focus-visible {
 .book-card {
   display: flex;
   flex-direction: column;
-  gap: 0.75rem;
+  gap: 0.7rem;
   min-width: 0;
-  padding: 1.25rem 1.35rem;
-  background: var(--hub-surface);
-  border: 1px solid var(--hub-border);
-  border-radius: var(--hub-radius);
-  transition: border-color 0.15s ease, background 0.15s ease;
+  padding: 1.35rem 1.45rem 1.45rem;
+  background: var(--panel);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  transition: border-color 0.16s ease, background 0.16s ease;
 }
 
 .book-card:hover,
 .book-card:focus-within {
-  border-color: var(--hub-accent);
-  background: var(--hub-surface-elevated);
+  border-color: var(--accent-dim);
+  background: var(--raised);
 }
 
 .book-card__title {
   margin: 0;
-  font-size: 1.2rem;
-  font-weight: 700;
-  line-height: 1.3;
+  font-size: 1.25rem;
+  font-weight: 600;
+  letter-spacing: -0.012em;
+  line-height: 1.25;
 }
 
 .book-card__title a {
-  color: var(--hub-text);
-  text-decoration: none;
+  color: var(--text);
+  border: 0;
 }
 
 .book-card__title a:visited {
-  color: var(--hub-text);
+  color: var(--text);
 }
 
 .book-card__title a:hover {
-  color: var(--hub-accent-hover);
+  color: var(--accent);
 }
 
 .book-card__meta {
   margin: 0;
-  font-size: 0.9rem;
-  color: var(--hub-muted);
+  font-family: var(--mono);
+  font-size: 0.7rem;
+  letter-spacing: 0.11em;
+  text-transform: uppercase;
+  color: var(--dim);
 }
 
 .book-card__blurb {
   margin: 0;
   flex: 1;
-  color: var(--hub-text);
+  color: var(--muted);
   font-size: 0.95rem;
+  line-height: 1.55;
 }
 
 .book-card__spoiler {
@@ -182,14 +242,15 @@ a:focus-visible {
   align-self: flex-start;
   margin: 0;
   padding: 0.2rem 0.55rem;
-  font-size: 0.75rem;
-  font-weight: 600;
-  letter-spacing: 0.03em;
+  font-family: var(--mono);
+  font-size: 0.66rem;
+  font-weight: 700;
+  letter-spacing: 0.11em;
   text-transform: uppercase;
-  color: var(--hub-spoiler-text);
-  background: var(--hub-spoiler-bg);
-  border: 1px solid var(--hub-spoiler-border);
-  border-radius: 0.25rem;
+  color: var(--warn);
+  background: var(--warn-bg);
+  border: 1px solid var(--warn-line);
+  border-radius: 0.3rem;
 }
 
 .book-card__cta {
@@ -197,33 +258,33 @@ a:focus-visible {
   align-items: center;
   justify-content: center;
   align-self: flex-start;
-  margin-top: 0.25rem;
+  margin-top: 0.35rem;
   min-height: 2.75rem;
-  padding: 0.55rem 1rem;
+  padding: 0.55rem 1.05rem;
   font-size: 0.95rem;
   font-weight: 600;
-  color: var(--hub-bg);
-  background: var(--hub-accent);
-  border-radius: 0.35rem;
-  text-decoration: none;
+  color: var(--accent);
+  background: var(--accent-soft);
+  border: 1px solid var(--accent-dim);
+  border-radius: 0.4rem;
 }
 
 .book-card__cta:visited {
-  color: var(--hub-bg);
+  color: var(--accent);
 }
 
 .book-card__cta:hover {
-  color: var(--hub-bg);
-  background: var(--hub-accent-hover);
+  color: var(--accent);
+  border-color: var(--accent);
 }
 
 .site-footer {
-  max-width: var(--hub-content-max);
+  max-width: var(--content-max);
   margin: 0 auto;
   padding: 0 1.25rem 2rem;
   padding-bottom: calc(2rem + env(safe-area-inset-bottom, 0px));
   font-size: 0.875rem;
-  color: var(--hub-muted);
+  color: var(--dim);
 }
 
 .site-footer p {
@@ -248,4 +309,20 @@ svg,
 video {
   max-width: 100%;
   height: auto;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .book-card {
+    transition: none;
+  }
+}
+
+@media (max-width: 720px) {
+  body {
+    font-size: 1.0625rem;
+  }
+
+  .intro h1 {
+    font-size: 2.1rem;
+  }
 }
