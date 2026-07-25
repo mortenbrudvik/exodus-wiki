@@ -490,10 +490,19 @@ img {
 /* Timeline and Chapters are mostly three-column tables, which a 66ch prose
    measure squeezes into a column of wrapped fragments. Those pages get a wider
    measure — their prose is a short intro, not long-form reading, so the usual
-   argument for a narrow measure does not apply. */
-.article:has(.wiki-table) {
-  grid-template-columns: minmax(0, 82ch) 17rem;
-  max-width: calc(82ch + 21rem);
+   argument for a narrow measure does not apply.
+
+   Two guards, both learned the hard way. The min-width query is required, not
+   tidiness: :has() raises specificity above the plain `.article` rule that
+   collapses to one column at 1100px, so without it this kept a 17rem sidebar
+   track on a 390px phone and squeezed the infobox to 23px. And :not() keeps it
+   off .article--wide — sources.html has a table but no infobox, and it was
+   getting an empty 272px column reserved beside its content. */
+@media (min-width: 1101px) {
+  .article:not(.article--wide):has(.wiki-table) {
+    grid-template-columns: minmax(0, 82ch) 17rem;
+    max-width: calc(82ch + 21rem);
+  }
 }
 
 /* Hubs, rosters, and the Main Page carry no infobox: one full-width column. */
@@ -1151,10 +1160,60 @@ body.lightbox-open {
     gap: 1.2rem 0.8rem;
   }
 
-  .wiki-table {
+  /* Tables stack into labelled blocks rather than scrolling sideways. Chapters
+     is four columns; at 343px that wrapped its prose to two or three words a
+     line, and horizontal scrolling is a poor way to read a paragraph. Each cell
+     names its own column via data-label (scripts/label-table-cells.mjs), which
+     is why this survives tables of 2, 3 and 4 columns alike. */
+  .wiki-table,
+  .wiki-table tbody,
+  .wiki-table tr,
+  .wiki-table td {
     display: block;
-    overflow-x: auto;
-    -webkit-overflow-scrolling: touch;
+    width: auto;
+  }
+
+  .wiki-table thead {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+  }
+
+  .wiki-table tr {
+    padding: 0.85rem 0;
+    border-bottom: 1px solid var(--line);
+  }
+
+  .wiki-table tr:last-child {
+    border-bottom: 0;
+  }
+
+  .wiki-table td {
+    border: 0;
+    padding: 0 0 0.2rem;
+  }
+
+  .wiki-table td[data-label]::before {
+    content: attr(data-label);
+    display: block;
+    margin: 0.6rem 0 0.1rem;
+    font-family: var(--mono);
+    font-size: 0.6rem;
+    font-weight: 700;
+    letter-spacing: 0.13em;
+    text-transform: uppercase;
+    color: var(--dim);
+  }
+
+  .wiki-table td:first-child[data-label]::before {
+    margin-top: 0;
+  }
+
+  .wiki-table tbody tr:hover {
+    background: none;
   }
 }
 

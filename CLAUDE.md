@@ -140,7 +140,9 @@ Adding, renaming or removing a page means touching **eleven** things:
     the earlier steps insert. See "Cache-busting" below.
 
 If the page belongs to a category hub that shows cards, also run
-`node scripts/build-hub-cards.mjs`.
+`node scripts/build-hub-cards.mjs`. If it carries a `.wiki-table`, run
+`node scripts/label-table-cells.mjs` — every body cell needs a `data-label` naming its column, or
+the table cannot stack on a phone (see below).
 
 Steps 6 to 12 are all idempotent, so re-running them over an unchanged site is a no-op. Order
 matters twice: run the generators **before** the sweeps (the sweeps skip generated pages precisely
@@ -223,6 +225,21 @@ Two cascade traps, both already sprung once:
   tab order. A ring with a negative `outline-offset` lands on arbitrary photo content — teal on a
   dark space scene measured 1.0:1. Let the global `:focus-visible` ring sit outside, against a
   known surface.
+- **`:has()` raises specificity, and specificity beats media queries.** `.article:has(.wiki-table)`
+  (0,2,0) silently outranked both the plain `.article` rule that collapses to one column at 1100px
+  and `.article--wide` (both 0,1,0). Result: a 17rem sidebar track on a 390px phone with the
+  infobox crushed to 23px, and a phantom empty column on `sources.html`. Any `:has()` layout rule
+  needs its own `min-width` query and, where relevant, a `:not(.article--wide)` guard.
+
+### Tables on a phone
+
+`.wiki-table` stacks into labelled blocks below 720px instead of scrolling sideways — Chapters is
+four columns, and at 343px it wrapped prose to two or three words a line. Each `<td>` carries
+`data-label` with its column heading, written by `scripts/label-table-cells.mjs` and surfaced with
+`content: attr(data-label)`. It is done in markup rather than CSS because the three table-bearing
+pages have different column counts (timeline 3, chapters 4, sources 2 and 3), so nothing
+position-based works across all of them, and CSS cannot read another element's text. All three are
+hand-authored, so no generator mirrors this.
 
 ## Search architecture
 
