@@ -20,7 +20,7 @@ Research inventory of public sources useful for this wiki. Compiled **25 July 20
 | The novel itself | Plot, names, relationships, tech, locations | Sole authority. Long quotations avoided on the wiki. |
 | In-book “Timeline of the Centauri Cluster” | Macro history (Exodus era → Elohim → Crown Dominion → Present era) | Printed in the novel’s **front matter**, not an appendix. Public transcriptions exist (see §3) as convenience indexes only. Note the Wikipedia article does not mention it, so the transcription thread and reader reviews are the only public evidence — confirm against a physical copy before treating any transcribed year as book-sourced. |
 | Audiobook (John Lee) | Same text, different medium | Simultaneous release with print/ebook. |
-| [Google Books publisher preview](https://books.google.com/books?id=T01PEQAAQBAJ) (Random House ebook, volume `T01PEQAAQBAJ`) | **Checking a single word or phrase against the book’s own text** | The authorized preview answers in-book searches with real page-numbered snippets — the cheapest legitimate route to primary text when you do not have the book open. Append `&q=<term>`; the snippets live in a `search_results` JSON blob in the page source, not in the rendered HTML, so fetch the raw page rather than relying on a reader-mode tool. **It is rate-limited, and it fails silently** — no error, no 429, just an empty result set. Measured 25 July 2026: the identical URL returned its seven snippets twice, then returned nothing for roughly ten consecutive requests, then recovered after about 150 seconds of no traffic. (The Books *API* is separate and does return a plain HTTP 429 on quota.) A miss therefore means nothing. Space requests out, and retry before concluding a term is absent. |
+| [Google Books publisher preview](https://books.google.com/books?id=T01PEQAAQBAJ) (Random House ebook, volume `T01PEQAAQBAJ`) | **Checking a single word or phrase against the book’s own text** | The authorized preview answers in-book searches with real page-numbered snippets — the cheapest legitimate route to primary text when you do not have the book open. Append `&q=<term>`; the snippets live in a `search_results` JSON blob in the page source, not in the rendered HTML, so fetch the raw page rather than relying on a reader-mode tool. **It is rate-limited, and it fails silently** — no error, no 429, just an empty result set. Measured 25 July 2026: the identical URL returned its seven snippets twice, then returned nothing for roughly ten consecutive requests, then recovered after about 150 seconds of no traffic. (The Books *API* is separate and does return a plain HTTP 429 on quota.) A miss therefore means nothing. Space requests out, and retry before concluding a term is absent. **A second, unrelated failure mode: a phrase query containing an apostrophe returns nothing at all**, with either the straight `'` or the curly `’`. `"Arcadia's Moon"` came back empty on four attempts across two volumes, while the bare word `Arcadia` returned nine snippets on the first try. Search a distinctive bare word, not a possessive phrase — and note this failure is indistinguishable from the rate-limited one, so it will read as absence if you are not expecting it. |
 
 **Rule:** if a web recap and the book disagree, the book wins.
 
@@ -321,6 +321,28 @@ twice, then nothing at all for about ten requests, then recovered after roughly 
 Hits are trustworthy; misses are not — which is exactly the trap an earlier draft of this entry fell
 into when it read a zero result for `avian` as proof the word was absent from the book.
 
+**25 July 2026 — the *Infinite Totality*, checked against the book’s own text.** The wiki recorded it as
+a “known alias” of the *Arcadia’s Moon*. It is a physical disguise, and the novel says so outright at
+**p. 805**: “That is because the *Arcadia’s Moon* is now disguised. My drone observed it being covered in
+a shell fuselage, custom manufactured by a Lidon astroengineering enterprise.” Corroborating hits:
+**p. 817**, the cone-and-sphere structure “split in half and hinged open”; **p. 863**, which ties the
+“*Totality* shell” to that same Lidon firm sending ships into “the ruined geo-ring that encircled the
+planet” to “hunt out an unbroken length of ultrabonded fiber”; **pp. 766 and 805**, Terence trying to
+charter the *Infinite Totality* as an unrelated vessel and finding it gone. **p. 241** supplies the real
+hull the shell hides — “a geodesic sphere of golden trusses containing eight ovoid elements that could
+slide around the interior of the sphere”. `pages/locations/arcadias-moon.html` now says shell, not alias.
+
+A note for §5, since this is a rare case where a fan wiki could be checked line by line: the Fandom
+*description* of the *Arcadia’s Moon* is a near-verbatim paraphrase of p. 241, embroidering only
+“sky-blue”. What misled was again the **classification** — its spacecraft index lists *Infinite Totality*
+as a separate ship, with the correction buried in a spoiler-blurred line at the foot of that ship’s own
+article. Exactly the failure mode §5 already describes.
+
+**25 July 2026 — Andino’s pronouns.** The wiki used he/his in two sentences on
+`pages/characters/andino.html`. Book 1 genders Andino at **p. 700**: “Andino and her crew of semi-android
+biomech freaks have only one loyalty: money. She won’t care what mission she flies or who charters her,
+as long as she gets paid.” Corrected on that evidence. No other page assigned Andino a pronoun.
+
 **Not verified — do not treat as fact:**
 
 - The “~150 years after the game” interval and its Forbidden Planet TV timestamp (§4).
@@ -332,9 +354,31 @@ into when it read a zero result for `avian` as proof the word was absent from th
 
 ---
 
-## 11. Maintenance
+## 11. *The Helium Sea* (book 2) — sibling findings
+
+The sibling section §12 calls for. Everything above concerns *The Archimedes Engine*; keep book 2
+findings here so neither overwrites the other.
+
+| Source | Notes |
+|---|---|
+| [Google Books preview](https://books.google.com/books?id=9EeHEQAAQBAJ), volume `9EeHEQAAQBAJ` | Searchable, same `&q=` mechanism and same silent-failure behaviour as §1. **One difference that matters: snippets carry no printed page numbers.** The blob returns preview tokens (`PT47`, `PT475`) where book 1 returns `PA764` alongside a real `page_number`. Book 2 findings therefore cannot be cited to a page the way book 1’s can — quote the snippet instead. |
+
+**25 July 2026 — the *Infinite Totality* is the same shell in book 2.** Checked because the two names
+appear to dock with each other, which would contradict book 1’s account of one hull wearing another’s
+identity. They do dock, and it does not contradict: “THEY WATCHED THE ARCADIA’S MOON dock with the
+Infinite Totality, which closed its fuselage around it.” The shell waits on a holding orbit, the ship
+flies into it — recognized on approach by the same golden geodesic sphere and eight ovoids as book 1’s
+p. 241 — and book 2 names it a “*Totality* camouflage shell” outright. Book 1’s account is intact, and
+the docking is literal rather than evidence of a second vessel.
+
+Nothing further from book 2 is recorded here while the novel is still being read. Per the rule in
+“The unpublished second wiki” (CLAUDE.md), none of it belongs in book 1’s pages either.
+
+---
+
+## 12. Maintenance
 
 - Re-check live URLs when editing `pages/sources.html` claims; update the verification date there.
-- When *The Helium Sea* work begins, extend this file with a sibling section rather than overwriting
-  Archimedes Engine findings.
+- Keep *The Helium Sea* findings in the §11 sibling section rather than overwriting Archimedes Engine
+  findings.
 - Do not commit full novel text or large verbatim copyrighted extracts into this repo.
