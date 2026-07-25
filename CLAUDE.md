@@ -136,13 +136,44 @@ Adding, renaming or removing a page means touching **eleven** things:
     the page. `check-wiki.mjs` fails if any page's nav labels differ from the rest.
 11. `node scripts/build-connections.mjs` — the derived Connections strip, for pages whose infobox
     links three or more illustrated character pages.
+12. `node scripts/stamp-assets.mjs` — **run this last.** It rewrites the CSS and JS references that
+    the earlier steps insert. See "Cache-busting" below.
 
 If the page belongs to a category hub that shows cards, also run
 `node scripts/build-hub-cards.mjs`.
 
-Steps 6 to 11 are all idempotent, so re-running them over an unchanged site is a no-op. Order
-matters in one place only: run the generators **before** the sweeps, never after — the sweeps skip
-generated pages precisely because the generators already produce the same markup.
+Steps 6 to 12 are all idempotent, so re-running them over an unchanged site is a no-op. Order
+matters twice: run the generators **before** the sweeps (the sweeps skip generated pages precisely
+because the generators already produce the same markup), and run `stamp-assets.mjs` **after
+everything else**.
+
+## Cache-busting
+
+Every reference to `wiki.css`, `hub.css`, `search.js`, `lightbox.js`, `theme.js` and
+`search-index.js` carries `?v=<hash>`, where the hash is the first 8 hex of a SHA-256 of that
+file's own contents. `scripts/lib/assets.mjs` computes it; `scripts/stamp-assets.mjs` applies it;
+both generators import `assetV` so the 25 generated pages agree.
+
+Why it exists: GitHub Pages serves HTML and CSS alike with `Cache-Control: max-age=600`, and the
+two are fetched at different moments. Without a token, for up to ten minutes after a deploy a
+reader can get new markup on a stylesheet cached before it — which strips the grouped nav to bare
+paragraphs, kills dark mode, and leaves the theme toggle inert. This happened to a real reader on
+25 July 2026.
+
+Things worth knowing before touching it:
+
+- **Per-asset hashes, not one site-wide version.** Editing `wiki.css` rewrites one line across 88
+  pages; editing `theme.js` leaves the stylesheet alone. There is nothing to remember to bump.
+- **Hashes are computed on LF-normalised content**, because `core.autocrlf` would otherwise flip
+  every token on checkout.
+- **`file://` still works.** Verified in headless Chrome against a real article: the versioned
+  `lightbox.js` and `theme.js` both executed from disk, and a versioned stylesheet applies. Chrome
+  ignores the query when resolving a `file:` path.
+- **`check-wiki.mjs` strips `?…` before resolving links.** Without that the link check fails on
+  every page.
+- **What it does not fix:** cached *old* HTML asking for an old token still gets a matched pair —
+  stale but coherent, and it self-heals inside the same ten minutes. No URL scheme closes that
+  direction, because the token lives in the HTML.
 
 `data-root` is not decoration: `search.js` reads `document.body.getAttribute("data-root")` to
 resolve index and result paths from nested folders. A wrong value silently breaks search on that

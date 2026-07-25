@@ -4,6 +4,7 @@ import { fileURLToPath } from "url";
 import { seoRegion } from "./lib/seo.mjs";
 import { buildNav } from "./regroup-nav.mjs";
 import { buildConnections } from "./lib/connections.mjs";
+import { assetV } from "./lib/assets.mjs";
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 // WIKI_OUT_DIR lets check-wiki.mjs render into a scratch directory to prove the
@@ -17,7 +18,7 @@ const shell = (title, bodyMain, relPath) => `<!DOCTYPE html>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>${title} — Archimedes Engine Wiki</title>
 ${seoRegion(relPath)}
-  <link rel="stylesheet" href="../../assets/css/wiki.css">
+  <link rel="stylesheet" href="../../assets/css/wiki.css?v=${assetV("assets/css/wiki.css")}">
   <link rel="icon" href="../../assets/icons/favicon.svg" type="image/svg+xml">
   <script>(function(){try{var t=localStorage.getItem("wiki-theme");if(t==="light"||t==="dark")document.documentElement.setAttribute("data-theme",t)}catch(e){}})();</script>
 </head>
@@ -41,10 +42,10 @@ ${buildNav("../../", relPath)}
 ${bodyMain}
     </main>
   </div>
-  <script src="../../assets/data/search-index.js"></script>
-  <script src="../../assets/js/search.js"></script>
-  <script src="../../assets/js/lightbox.js"></script>
-  <script src="../../assets/js/theme.js"></script>
+  <script src="../../assets/data/search-index.js?v=${assetV("assets/data/search-index.js")}"></script>
+  <script src="../../assets/js/search.js?v=${assetV("assets/js/search.js")}"></script>
+  <script src="../../assets/js/lightbox.js?v=${assetV("assets/js/lightbox.js")}"></script>
+  <script src="../../assets/js/theme.js?v=${assetV("assets/js/theme.js")}"></script>
 </body>
 </html>
 `;

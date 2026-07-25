@@ -62,7 +62,9 @@ for (const p of pages) {
     for (const m of src.matchAll(attrRe)) {
       const target = m[1];
       if (/^(https?:|mailto:|#|data:)/.test(target)) continue;
-      const [file] = target.split("#");
+      // Strip the fragment AND the cache-busting query: assets carry ?v=<hash>
+      // (see scripts/stamp-assets.mjs), and the file on disk has no such suffix.
+      const [file] = target.split("#")[0].split("?");
       if (!file) continue;
       const abs = path.resolve(dir, file).replace(/\\/g, "/");
       if (!fs.existsSync(abs)) fail("links", `${rel(p)} -> ${label}="${target}" does not exist`);
