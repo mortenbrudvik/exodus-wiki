@@ -46,13 +46,18 @@ function inject(html, { slug, title, kind, image }) {
   const cls = kind === "ship" ? "infobox-image infobox-image--ship" : "infobox-image";
   const wh = kind === "ship" ? 'width="640" height="360"' : 'width="320" height="427"';
   const alt = title.replace(/"/g, "&quot;");
-  const block = `          <div class="${cls}">
-            <img src="${rel}" alt="${alt}" ${wh} loading="lazy">
-          </div>
-`;
+  // Pages are CRLF in this working tree; match whatever the file uses so the block does not
+  // introduce mixed endings.
+  const eol = html.includes("\r\n") ? "\r\n" : "\n";
+  const block =
+    `          <div class="${cls}">` + eol +
+    `            <img src="${rel}" alt="${alt}" ${wh} loading="lazy">` + eol +
+    `          </div>` + eol;
 
-  // After the first <h2>…</h2> inside the infobox (title line).
-  const re = /(<aside class="infobox">\s*<h2>[\s\S]*?<\/h2>\s*)/;
+  // After the first <h2>…</h2> inside the infobox (title line). The capture stops at the line
+  // break: a trailing \s* would swallow the indent belonging to the next tag, which is what put
+  // the block at 20 spaces and left <dl> in column 0.
+  const re = /(<aside class="infobox">\s*<h2>[\s\S]*?<\/h2>\r?\n)/;
   if (!re.test(html)) {
     return { html, changed: false, error: "no infobox h2 match" };
   }
