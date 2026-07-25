@@ -17,7 +17,7 @@ const bookRoot = path.join(__dirname, "..", "..");
 
 export const SITE = "https://mortenbrudvik.github.io/exodus-wiki";
 export const BOOK = "exodus-the-archimedes-engine";
-export const SITE_NAME = "Exodus Wiki";
+export const SITE_NAME = "Archimedes Engine Wiki";
 export const BOOK_TITLE = "Exodus: The Archimedes Engine";
 export const AUTHOR = "Peter F. Hamilton";
 

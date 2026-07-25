@@ -13,7 +13,7 @@ const shell = (title, bodyMain, relPath) => `<!DOCTYPE html>
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>${title} — Exodus Wiki</title>
+  <title>${title} — Archimedes Engine Wiki</title>
 ${seoRegion(relPath)}
   <link rel="stylesheet" href="../../assets/css/wiki.css">
   <link rel="icon" href="../../assets/icons/favicon.svg" type="image/svg+xml">
@@ -22,7 +22,7 @@ ${seoRegion(relPath)}
   <a class="skip-link" href="#main-content">Skip to content</a>
   <header class="site-header">
     <button type="button" class="menu-toggle" aria-expanded="false" aria-controls="site-sidebar">Menu</button>
-    <a class="site-title" href="../../index.html">Exodus Wiki</a>
+    <a class="site-title" href="../../index.html">Archimedes Engine Wiki</a>
     <form class="search-form" action="../../search.html" method="get" role="search">
       <input class="search-input" type="search" name="q" placeholder="Search wiki…" autocomplete="off" aria-label="Search">
       <button type="submit">Search</button>

@@ -154,6 +154,11 @@ one:
 
 - `<a class="skip-link" href="#main-content">` as the first child of `<body>`, and
   `id="main-content"` on `<main class="content">`.
+- `<title>… — Archimedes Engine Wiki</title>` and the header `site-title` reading **Archimedes
+  Engine Wiki**. `check-wiki.mjs` fails on any other suffix. The **hub** at the site root is
+  "Exodus" — each book wiki is named for its own book, not the universe, so *Helium Sea* can sit
+  beside this one without either claiming to be the whole thing. `SITE_NAME` in `lib/seo.mjs`
+  carries the same string into `og:site_name`.
 - `<link rel="icon" href="…assets/icons/favicon.svg" type="image/svg+xml">` in the `<head>`, with the
   same `../` depth as the stylesheet. `check-wiki.mjs` resolves that href and fails if it does not
   land on a non-empty file.

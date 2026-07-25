@@ -1,5 +1,5 @@
 /**
- * Structural and editorial checks for the Exodus wiki.
+ * Structural and editorial checks for the Archimedes Engine wiki.
  *
  *   node scripts/check-wiki.mjs           # run everything
  *   node scripts/check-wiki.mjs --quiet   # failures and warnings only
@@ -49,7 +49,7 @@ const ORPHAN_OK = new Set(["search.html"]);
 const NO_FOOTER_OK = new Set(["index.html", "search.html"]);
 const NO_LEAD_OK = new Set(["search.html"]);
 
-note(`\nExodus wiki checks — ${pages.length} pages\n${"=".repeat(46)}`);
+note(`\nArchimedes Engine wiki checks — ${pages.length} pages\n${"=".repeat(46)}`);
 
 /* ------------------------------------------------------------------ *
  * 1. Link integrity and orphans
@@ -168,7 +168,7 @@ for (const p of pages) {
   if (!/assets\/data\/search-index\.js/.test(src)) fail("chrome", `${r} does not load the index fallback`);
   if (!/assets\/js\/search\.js/.test(src)) fail("chrome", `${r} does not load search.js`);
   if (!/assets\/js\/lightbox\.js/.test(src)) fail("chrome", `${r} does not load lightbox.js`);
-  if (!/<title>[^<]*— Exodus Wiki<\/title>/.test(src)) fail("chrome", `${r} title is not "… — Exodus Wiki"`);
+  if (!/<title>[^<]*— Archimedes Engine Wiki<\/title>/.test(src)) fail("chrome", `${r} title is not "… — Archimedes Engine Wiki"`);
 
   // Favicon: every page must link a real icon asset with depth-correct relative href.
   const iconHref = (src.match(/<link[^>]+rel="icon"[^>]*>/) || [])[0];

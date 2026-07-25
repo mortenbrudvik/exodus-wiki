@@ -39,7 +39,7 @@ A small **hub** lists the Exodus novels covered so far. Each book is a self-cont
 
 | Wiki | Book | Folder |
 |------|------|--------|
-| [Exodus Wiki](https://mortenbrudvik.github.io/exodus-wiki/exodus-the-archimedes-engine/) | *Exodus: The Archimedes Engine* (2024) | [`exodus-the-archimedes-engine/`](exodus-the-archimedes-engine/) |
+| [Archimedes Engine Wiki](https://mortenbrudvik.github.io/exodus-wiki/exodus-the-archimedes-engine/) | *Exodus: The Archimedes Engine* (2024) | [`exodus-the-archimedes-engine/`](exodus-the-archimedes-engine/) |
 | *planned* | *Exodus: The Helium Sea* (2026) | — |
 
 Categories in a book wiki: characters, locations, factions, technology, timeline, plot, chapters.
