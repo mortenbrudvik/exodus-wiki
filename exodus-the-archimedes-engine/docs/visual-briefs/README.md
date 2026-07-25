@@ -14,12 +14,27 @@ Maintainer-only notes for original encyclopedia illustrations. **Not** reader-fa
 
 | Clade | Body plan / cues | Dress / tech |
 |---|---|---|
-| **Imperial Celestial** | Tall elegant humanoids (queens up to ~3 m; elongated proportions); post-human beauty; athanasia culture | Court robes, bloodstone jewellery/growths that eventually entomb a host; neural mindline status; livestone architecture hints |
-| **Heresy Celestial** | ~3 m spindly **hexapods** — two legs, four arms, expanded skulls, cooler body temperature | Alien-refined robes/armour for multi-limb anatomy; research/archon severity |
+| **Imperial Celestial** | Tall elegant humanoids (queens up to ~3 m; elongated proportions, long limbs); post-human beauty; athanasia culture. **Both sexes carry a marsupial womb**; a child is near full height by seven (over 2 m) and only broadens after ten, when puberty triggers the womb's final growth phase. **Hair and skin colour vary freely within a line** — a queen's daughters share only her eye colour | Court robes and togas, bloodstone jewellery/growths that eventually entomb a host; neural induction pad in the **palm**, connection patch at the **top of the spine**; livestone architecture hints |
+| **Heresy Celestial** | ~3 m spindly **hexapods** — two legs, four arms, **four eyes that blink in unison**. Skull **extended into cones on both sides, level with the shoulders**, housing an inflated brain; the low body temperature exists to keep it from overheating. Skin **almost reptilian**, wrapped tight enough to read as an **exoskeleton, in blues and greens**. **The arm pairs differ**: the upper ends in four elongated three-jointed fingers and a thumb, the lower dangles like stiff rope with bulbous elbows and a simple **triple claw** | Multilayered robes cut for multi-limb anatomy, lower arms left hanging free; research/archon severity |
 | **Talloch-Te archon** | Multi-body Celestials (primary + secondary bodies; mind partition); **five eyes** on Sahdiah’s primary body; bodymorph / gravity form; not Crown two-eyed humanoid, not Heresy hexapod | Merchant-archon finery; nurture-chamber / ship-linked presence; deniable-ops cool |
 | **Uranic** | Fully human appearance; intermediate status; neural interface ports subtle at temples/neck | Client aristocracy — Gondiar estate / ministerial dress, elegant but subordinate to Celestial scale |
 | **Baseline / Diligent** | Late-arkship humans; Earth-exodus memory culture | Shipboard uniforms, practical field kit, settler politics |
 | **Traveler / mercenary** | Baseline or mixed human | Worn ship gear, salvage harnesses, deniable commercial dress |
+
+### Bloodstone is turquoise and gold, not ruby
+
+A recurring error in the delivered art. Bloodstone is a **calcium-like biotech** the wearer directs,
+and the novel fixes its palette: growths are "embellished … with faint hues of turquoise and gold",
+a queen wears "modest gold-and-turquoise bloodstone ornamentations", and an archon who cares little
+for court decorum wears "a cap of black and green curlicues". Nothing in the book is red — the
+real-world mineral called bloodstone is green flecked with red, and the generator appears to have
+followed the mineral rather than the text. Several portraits ship with crimson and magenta crystal
+sprays; treat that as a defect on regeneration.
+
+It also **immobilises**. At full growth it covers the skull and cheeks, leaves only mouth, nose and
+eyes clear, throws out a crown of scalloped horns, brocades the body in a lacework under the toga,
+and "prevented any significant facial expression". A late-stage host should look rigid, not
+bejewelled.
 
 ## Ship classes
 

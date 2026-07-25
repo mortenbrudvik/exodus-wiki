@@ -9,6 +9,18 @@ import { fileURLToPath } from "url";
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const outDir = path.join(__dirname, "..", "docs", "visual-briefs");
 
+/**
+ * `STYLE_BASE` carries no negative clause. `STYLE` appends the original short one.
+ * `NO_TEXT` is the widened negative adopted after the first review pass found caption bars,
+ * invented house names and a real-world brand logo burned into delivered art — use it for any
+ * brief being regenerated, and never remove it from one that already has it.
+ */
+const STYLE_BASE =
+  "Highly detailed cinematic sci-fi encyclopedia illustration, rich textures, sharp focus, painterly digital art with photographic detail, soft volumetric lighting.";
+
+const NO_TEXT =
+  "Absolutely no text, no captions, no labels, no lettering, no logos, no brand marks, no watermarks, no UI chrome.";
+
 const STYLE =
   "Highly detailed cinematic sci-fi encyclopedia illustration, rich textures, sharp focus, painterly digital art with photographic detail, soft volumetric lighting, no text, no watermark, no UI chrome.";
 
@@ -17,7 +29,7 @@ const STYLE =
  * cites a specific page or chapter of the novel — without it the citation lives only in the
  * generated .md and the next run of this script silently discards it.
  */
-/** @typedef {{ slug: string, title: string, kind: 'character'|'ship', clade: string, role: string, cues: string[], clothing: string, setting: string, prompt: string, inference: string[], sources?: string[], image: string }} Brief */
+/** @typedef {{ slug: string, title: string, kind: 'character'|'ship', clade: string, role: string, cues: string[], clothing: string, setting: string, prompt: string, inference: string[], sources?: string[], image: string, companionImage?: string }} Brief */
 
 /** @type {Brief[]} */
 const briefs = [
@@ -49,14 +61,21 @@ const briefs = [
     clade: "Baseline late-arkship human (~23)",
     role: "Diligent lieutenant; Finn’s field partner; Josias’s granddaughter",
     cues: [
+      "**Heart-shaped face with a fringe of dark hair** — stated at her first appearance",
       "Young woman ~23, competent military bearing",
       "Baseline human (no Celestial elongation, no bloodstone)",
       "Shipboard practicality over court beauty",
     ],
     clothing: "Late-arkship lieutenant uniform — functional jumpsuit/harness with Diligent crew insignia hints, utility straps",
     setting: "Arkship corridor lighting, cool metal bulkheads",
-    prompt: `${STYLE} Portrait of Eleanor Ellie Aponi, a skilled 23-year-old lieutenant from a late-arriving human generation arkship: competent young woman with practical military bearing, baseline human features, short practical hair, wearing a functional grey-blue arkship lieutenant uniform with harness straps. Field partner energy, not court fashion. Upper-body portrait, cool bulkhead lighting.`,
-    inference: ["Exact hair colour not specified — brown/dark practical cut"],
+    prompt: `${STYLE} Portrait of Eleanor Ellie Aponi, a skilled 23-year-old lieutenant from a late-arriving human generation arkship: competent young woman with a distinctly heart-shaped face and a fringe of dark hair, practical military bearing, baseline human features, wearing a functional grey-blue arkship lieutenant uniform with harness straps. Field partner energy, not court fashion. Upper-body portrait, cool bulkhead lighting.`,
+    inference: [
+      "Hair length is not fixed — the book says only 'a fringe of dark hair spilling out from the hood'. Colour is canon; the crop is not",
+    ],
+    sources: [
+      "Novel, ch. 2 (Finn's rescue): “a heart-shaped face with a fringe of dark hair spilling out from the hood”",
+      "Wiki article `pages/characters/eleanor-aponi.html`",
+    ],
     image: "assets/images/characters/eleanor-aponi.jpg",
   },
   {
@@ -66,14 +85,21 @@ const briefs = [
     clade: "Baseline late-arkship human (~51 intro)",
     role: "Owner-orator of Diligent; liberation agitator; Regal Democrats president",
     cues: [
+      "**The thickest beard Finn had ever seen** — his single stated feature, and non-negotiable",
+      "**Grey-blue eyes**, and the most judgmental Finn has ever met",
       "Middle-aged man ~50s, forceful orator presence",
       "Political fire rather than soldier physique",
-      "Baseline human settler culture",
     ],
     clothing: "Formal arkship-owner coat over practical layers — half statesman, half settler politician",
     setting: "Assembly-hall lighting with arkship windows",
-    prompt: `${STYLE} Portrait of Josias Aponi, a 51-year-old human arkship owner and fiery political orator: middle-aged man with intense determined expression, greying temples, strong jaw, wearing a formal dark owner’s coat over practical settler layers. Liberation agitator energy. Upper-body portrait, warm assembly-hall light and arkship viewport glow.`,
-    inference: [],
+    prompt: `${STYLE} Portrait of Josias Aponi, a 51-year-old human arkship owner and fiery political orator: middle-aged man with a huge, thick, full grey-flecked beard covering his jaw and chest, piercing grey-blue eyes with a judgmental stare, wearing a formal dark owner’s coat over practical settler layers. Liberation agitator energy. Upper-body portrait, warm assembly-hall light and arkship viewport glow. No text, no lettering, no graffiti, no slogans, no signage, no insignia text anywhere in frame.`,
+    inference: [
+      "Hair colour and skin tone are not fixed by the novel — only the beard and the grey-blue eyes are",
+    ],
+    sources: [
+      "Novel, ch. 2: “He had the thickest beard Finn had ever seen” and “The gray-blue eyes that stared down at him were the most judgmental he’d ever known”",
+      "Wiki article `pages/characters/josias-aponi.html`",
+    ],
     image: "assets/images/characters/josias-aponi.jpg",
   },
   {
@@ -83,14 +109,21 @@ const briefs = [
     clade: "Baseline late-arkship human (59)",
     role: "Captain of arkship Diligent",
     cues: [
+      "**Dejean is a woman** — she/her throughout; she calls herself “one happy old lady”",
+      "**Grey hair**, and by the later chapters a noticeably haggard face",
       "Fifty-nine-year-old professional ship captain",
       "Weathered competence, steady not theatrical",
-      "Shipboard hierarchy face of the Diligent",
     ],
     clothing: "Arkship captain’s uniform — clean lines, rank tabs, practical belt kit",
     setting: "Bridge console glow",
-    prompt: `${STYLE} Portrait of Captain Dejean, a 59-year-old professional captain of a human generation arkship: weathered middle-aged man with calm competent expression, short greying hair, wearing a clean grey arkship captain’s uniform with subtle rank tabs. Steady professional, not politician. Upper-body portrait, cool bridge console lighting.`,
-    inference: [],
+    prompt: `${STYLE} Portrait of Captain Dejean, a 59-year-old woman commanding a human generation arkship: weathered older woman with grey hair, a lined careworn face and a calm competent expression, wearing a clean grey arkship captain’s uniform with subtle rank tabs. Steady professional, not politician. Upper-body portrait, cool bridge console lighting. No text, no lettering, no name plate, no insignia text anywhere in frame.`,
+    inference: [
+      "Skin tone and hair length are not fixed by the novel — her sex, her grey hair and the haggard face are",
+    ],
+    sources: [
+      "Novel: “Dejean placed her hand on a panel… ‘Palm ID lock,’ she told him”; “seeing her with gray hair and a face that was noticeably haggard”; “You’ve made me one happy old lady”",
+      "Wiki article `pages/characters/dejean.html`",
+    ],
     image: "assets/images/characters/dejean.jpg",
   },
   {
@@ -100,14 +133,21 @@ const briefs = [
     clade: "Baseline human specialist",
     role: "Owner-commander of tank Hell Welcomes Careful Drivers; drive-team boss",
     cues: [
+      "**Her eyes are light-grey cymech spheres** — replaced, not organic, and blank enough that Ellie cannot read her expression from them",
       "Fearless ground-combat specialist",
       "Tank commander grit, not court elegance",
-      "Hired heavy-mobility professional",
     ],
     clothing: "Armoured tanker coveralls, headset, gauntlets; dust and carbon scoring",
     setting: "Dim vehicle bay / red combat interior light",
-    prompt: `${STYLE} Portrait of Elsbeth McQuillan, fearless tank commander of Hell Welcomes Careful Drivers: tough woman in armoured tanker coveralls and headset, gauntlets, carbon scoring on gear, confident battlefield expression. Ground-war specialist aesthetic. Upper-body portrait, red-tinged vehicle-bay lighting.`,
-    inference: ["Age/look not specified — mid-thirties to forties professional"],
+    prompt: `${STYLE} Portrait of Elsbeth McQuillan, fearless tank commander of Hell Welcomes Careful Drivers: tough woman in armoured tanker coveralls and headset, gauntlets, carbon scoring on gear, confident battlefield expression — and in place of natural eyes, two smooth featureless light-grey mechanical spheres set in her sockets, unreadable. Ground-war specialist aesthetic. Upper-body portrait, red-tinged vehicle-bay lighting.`,
+    inference: [
+      "Age, hair and skin tone are not stated — mid-thirties to forties professional",
+      "The cymech eyes are the one fixed feature and must survive regeneration",
+    ],
+    sources: [
+      "Novel, p. 452: “Her eyes were light gray cymech spheres, so Ellie couldn’t tell if she was…” — named in the next line by Binopal as “Elsbeth McQuillan… just about the finest drive team boss we got”",
+      "Wiki article `pages/characters/elsbeth-mcquillan.html`",
+    ],
     image: "assets/images/characters/elsbeth-mcquillan.jpg",
   },
   {
@@ -176,15 +216,24 @@ const briefs = [
     clade: "Imperial Celestial queen (~3 m humanoid scale)",
     role: "Now and Forever Queen of Wynid; next-in-line empress",
     cues: [
-      "Tall elegant post-human woman — elongated regal proportions",
-      "Athanasy / mindline sovereign presence",
-      "Court fashion includes bloodstone growths/jewellery",
+      "**Intense green eyes** — her line’s one shared feature; her daughters inherit exactly this and nothing else",
+      "**Three metres tall, the tallest of her court** — her datamaster at 2.5 m is explicitly shorter",
+      "**Modest gold-and-turquoise bloodstone ornamentations**, worn deliberately restrained and kept level",
+      "Tall elegant post-human woman — elongated regal proportions, long limbs",
       "Strategic calm, not Thyra’s hardline cruelty",
     ],
-    clothing: "Imperial queen’s robes of pale gold and ivory with crystalline bloodstone accents along collar and arms",
+    clothing:
+      "Court dress restrained by queenly choice — modest gold-and-turquoise bloodstone ornamentation. Her Coronation regalia is separate and far grander: nanoactive armour thinner than skin under an emerald polonaise robe embroidered with gold and platinum that glows from within",
     setting: "Wynid court livestone hall, cool luminous architecture",
-    prompt: `${STYLE} Portrait of Helena-Chione, Imperial Celestial Now and Forever Queen of Wynid: extremely tall elegant post-human woman with elongated regal proportions, luminous pale skin, serene strategic expression, wearing ivory-and-gold queen’s robes with crystalline bloodstone jewellery growing along collar and wrists. Godlike court beauty. Upper-body portrait emphasizing height, soft livestone palace glow.`,
-    inference: ["Exact face not described — serene post-human beauty as clade default"],
+    prompt: `${STYLE} Portrait of Helena-Chione, Imperial Celestial Now and Forever Queen of Wynid: extremely tall elegant post-human woman with elongated regal proportions and long limbs, luminous pale skin, striking intense green eyes, serene strategic expression, wearing an emerald polonaise robe embroidered with glowing gold and platinum thread, with modest gold-and-turquoise bloodstone ornamentation at the collar. Godlike court beauty, restrained rather than gaudy. Upper-body portrait emphasizing height, soft livestone palace glow.`,
+    inference: [
+      "Face shape and skin tone are not described — serene post-human beauty as clade default",
+      "Hair is not stated for her specifically; her daughters have “a variety of hair and skin colors”, so the clade is not uniformly bald",
+    ],
+    sources: [
+      "Novel, prologue/ch. 1: “at three meters she was the tallest of her court”; “her modest gold-and-turquoise bloodstone ornamentations”; daughters “sharing the same intense green eyes”; Coronation regalia “an emerald polonaise robe embroidered with gold and platinum thread”",
+      "Wiki article `pages/characters/helena-chione.html`",
+    ],
     image: "assets/images/characters/helena-chione.jpg",
   },
   {
@@ -196,13 +245,18 @@ const briefs = [
     cues: [
       "Younger Celestial woman than Helena; congregant-trial survivor",
       "Hardline cunning, ruthless eyes",
-      "Same tall Imperial humanoid clade",
-      "Bloodstone / court power symbols after usurpation",
+      "**She has hair, worn long and dressed** — braided or bound into tresses, not bald",
+      "**Congregant hair styling is functional**: tresses are bound around her bloodstone spurs to keep them out of the way, and braids are arranged to leave the neural pad at the nape of her neck exposed",
+      "As a daughter of Helena’s line she should carry the family’s **intense green eyes**",
     ],
     clothing: "Sharp black-and-crimson royal armour-robes, bloodstone crown-collar, military severity",
     setting: "Throne-side shadow with fleet viewport",
-    prompt: `${STYLE} Portrait of Thyra as Helena-Thyra, Imperial Celestial usurper queen: tall post-human young woman with elongated elegant features, cold ruthless intelligent eyes, wearing sharp black and crimson armour-robes with a crystalline bloodstone collar-crown. Hardline power. Upper-body portrait, dramatic side lighting and fleet viewport glow.`,
-    inference: ["Youth vs Helena — younger adult Celestial"],
+    prompt: `${STYLE} Portrait of Thyra as Helena-Thyra, Imperial Celestial usurper queen: tall post-human young woman with elongated elegant features and cold ruthless intense green eyes, her long hair dressed in artful braids bound around the bloodstone spurs at her head and drawn up to leave the neural pad at the nape of her neck exposed, wearing sharp black and crimson armour-robes with a crystalline bloodstone collar-crown. Hardline power. Upper-body portrait, dramatic side lighting and fleet viewport glow.`,
+    inference: [
+      "Youth vs Helena — younger adult Celestial",
+      "The braid/spur/nape-pad styling comes from preview snippets whose surrounding sentence is cut; it is certainly congregant court styling, and most likely hers. Treat it as clade-safe rather than uniquely Thyra",
+      "Green eyes are inherited from Helena’s line by the daughters described at the Coronation, not stated for Thyra by name",
+    ],
     image: "assets/images/characters/thyra.jpg",
   },
   {
@@ -318,11 +372,23 @@ const briefs = [
     kind: "character",
     clade: "Imperial Celestial archon",
     role: "Chief Archon to Helena-Chione; political acumen",
-    cues: ["Senior male Celestial statesman", "Court mind, not battlefield glory", "Tall Imperial humanoid"],
-    clothing: "Chief-archon formal robes in Wynid blue-grey with mindline sigils",
+    cues: [
+      "**Grey-and-silver robes of state that hang “like badly fitting curtains”** — he wears them badly, and the queen privately smiles at it",
+      "**Deliberately minimal bloodstone**: a headdress spur that is “little more than a cap of black and green curlicues”, concealing his spine connection patch",
+      "Under-decorated on purpose — he pays minimal observance to court decorum and is senior enough to get away with it",
+      "Senior male Celestial statesman; court mind, not battlefield glory",
+    ],
+    clothing: "Grey-and-silver robes of state, ill-fitting; small black-and-green bloodstone cap over the spine patch",
     setting: "Council chamber",
-    prompt: `${STYLE} Portrait of Lord Gahiji, Chief Archon to an Imperial Celestial queen: tall post-human older man with shrewd political eyes, blue-grey archon robes, subtle crystalline accents, elongated proportions. Statesman not soldier. Upper-body portrait, cool council light.`,
-    inference: ["Age as senior advisor"],
+    prompt: `${STYLE} Portrait of Lord Gahiji-Calder, Chief Archon to an Imperial Celestial queen: tall post-human older man with shrewd political eyes and elongated proportions, wearing grey-and-silver robes of state that hang loose and ill-fitting like badly hung curtains, and only a small cap of black-and-green bloodstone curlicues on his head instead of a grand headdress. Deliberately under-dressed for court. Statesman not soldier. Upper-body portrait, cool council light.`,
+    inference: [
+      "Face and skin tone not described",
+      "The novel styles him **Gahiji-Calder**; the wiki page title is `Lord Gahiji`",
+    ],
+    sources: [
+      "Novel, ch. 1: “his gray-and-silver robes of state hanging like badly fitting curtains”; “His bloodstone headdress spur was little more than a cap of black and green curlicues that concealed his spine connection patch”",
+      "Wiki article `pages/characters/lord-gahiji.html`",
+    ],
     image: "assets/images/characters/lord-gahiji.jpg",
   },
   {
@@ -358,14 +424,22 @@ const briefs = [
     clade: "Imperial Celestial datamaster",
     role: "Court datamaster permanently interfaced for Helena-Chione",
     cues: [
-      "Information officer look — interface-heavy",
-      "Permanently connected to networks",
-      "Tall Imperial humanoid with visible neural hardware",
+      "**Scarlet-and-grey robes flaring out into a high collar** that almost touches the bloodstone on his skull",
+      "**Bloodstone petals embellishing his skull** — calcium swirls, not machinery, and they cover the permanent connection bulb melded with the neural interface patch at the top of his spine",
+      "**Two and a half metres tall** — explicitly shorter than his three-metre queen",
+      "Permanently connected to networks; information-officer stillness",
     ],
-    clothing: "Datamaster habit — slim tech robes, glowing neural filaments at skull and neck",
+    clothing: "Scarlet-and-grey robes with a wide flared collar; bloodstone petals over the crown and spine patch",
     setting: "Data-hall soft hologlyphs (no readable text)",
-    prompt: `${STYLE} Portrait of Lord Stethos-Thierry, Imperial Celestial court datamaster: tall post-human man with calm vacant-focused expression, slim tech robes, glowing neural filaments and interface hardware along scalp and neck. Permanently networked. Upper-body portrait, cool holographic bokeh without readable text.`,
-    inference: [],
+    prompt: `${STYLE} Portrait of Lord Stethos-Thierry, Imperial Celestial court datamaster: post-human man two and a half metres tall with calm vacant-focused expression, wearing scarlet-and-grey robes that flare out into a tall stiff collar rising almost to his head, his skull embellished with swirled petals of pale bloodstone that cover a connection bulb at the nape of his spine. Organic crystalline growth, not metal machinery. Upper-body portrait, cool holographic bokeh without readable text.`,
+    inference: [
+      "Face, skin tone and hair are not described",
+      "The delivered portrait renders his interface as metal implants and fibre-optic cable; the novel makes it bloodstone",
+    ],
+    sources: [
+      "Novel, ch. 1: “At two and a half meters tall he was shorter than his queen… His scarlet-and-gray robes flared out into a collar that almost touched the bloodstone petals that embellished his skull. The calcium swirls… covered the permanent connection bulb melded with the neural interface patch at the top of his spine”",
+      "Wiki article `pages/characters/stethos-thierry.html`",
+    ],
     image: "assets/images/characters/stethos-thierry.jpg",
   },
   {
@@ -392,14 +466,23 @@ const briefs = [
     clade: "Imperial Celestial archon (multi-host mindline)",
     role: "Spymaster of Helena-Chione; Makaio-Yalbo → Makaio-Faraji",
     cues: [
-      "Male archon intelligence officer",
-      "Bloodstone fashion and athanasia culture (prologue host)",
-      "Tall Imperial humanoid; spycraft severity",
+      "**Terminal-stage bloodstone**: after eighteen months of growth it covers most of his skull and cheeks, leaving only mouth, nose and eyes clear",
+      "**A crown of scalloped horns** wound out from that base, curling around each other, in faint hues of turquoise and gold",
+      "**The rest of the body brocaded under a formal toga**, bloodstone spreading along the limbs in a lacework pattern that is making movement difficult",
+      "**The bloodstone prevents any significant facial expression**, and shrouds the neck so he can barely incline his head",
     ],
-    clothing: "Spymaster archon coat — charcoal with bloodstone growths on shoulders, mindline pin",
+    clothing: "Formal toga over bloodstone lacework; the growth, not the cloth, is the costume",
     setting: "Shipboard intelligence suite (Alumata feel)",
-    prompt: `${STYLE} Portrait of Makaio, Imperial Celestial archon spymaster: tall post-human man with piercing analytical eyes, charcoal intelligence coat, crystalline bloodstone growths on shoulders, elongated regal proportions. Multi-host mindline power. Upper-body portrait, dim shipboard intelligence-suite light.`,
-    inference: ["Composite of host line — Faraji-era adult male host"],
+    prompt: `${STYLE} Portrait of Makaio-Yalbo, Imperial Celestial archon spymaster near the end of his host body: tall post-human man whose skull and cheeks are almost entirely encased in pale calcium-like bloodstone, leaving only his mouth, nose and piercing eyes uncovered, with a crown of scalloped horns curling around one another above it, faintly tinted turquoise and gold; his neck and body are brocaded with the same growth in a lacework pattern beneath a formal toga. Rigid, expressionless, immensely powerful. Upper-body portrait, dim shipboard intelligence-suite light.`,
+    inference: [
+      "This is the **Yalbo** host at the end of its life. The grown **Faraji** host is described separately: “an easy two and a half meters high, with a flattish face and wide, gold-tinged eyes”. Either is defensible for the portrait — pick one and say which",
+      "Yalbo's skin tone is not described; Faraji's eyes are",
+    ],
+    sources: [
+      "Novel, prologue: “expanding to cover most of his skull and cheeks, leaving only his mouth, nose, and eyes unencumbered. From that base a crown of scalloped horns had wound their way out… with faint hues of turquoise and gold. The rest of his body, beneath the formal toga he wore, was equally brocaded by growths of bloodstone”; “The bloodstone prevented any significant facial expression”",
+      "Novel, p. 225 (adult Faraji host): “Makaio-Faraji was an easy two and a half meters high, with a flattish face and wide, gold-tinged eyes”",
+      "Wiki article `pages/characters/makaio.html`",
+    ],
     image: "assets/images/characters/makaio.jpg",
   },
   {
@@ -519,15 +602,23 @@ const briefs = [
     clade: "Heresy Celestial hexapod (~3 m)",
     role: "Archon of the Heresy Dominion",
     cues: [
-      "CRITICAL: spindly hexapod — two legs, FOUR arms, expanded skull",
-      "~3 metres tall, lower body temperature vibe (cool skin tones)",
-      "Not humanoid Crown form — clearly non-baseline post-human",
-      "Research/intelligence severity",
+      "CRITICAL: spindly hexapod — two legs, FOUR arms, close to three metres tall",
+      "**CRITICAL: FOUR EYES**, which blink simultaneously. The delivered portrait has two — this is a canon defect, not a style choice",
+      "**The two arm pairs are not alike.** The top set ends in a near-standard hand: four fingers and a thumb, but elongated with three joints apiece. The lower set dangles from the robe like inflexible rope with bulbous elbows, ending in a simple triple claw",
+      "**Skull extended into cones on both sides, level with the shoulders** — the brain is inflated, not merely enlarged, and the low body temperature exists to stop it overheating",
+      "**Skin almost reptilian**, wrapped so tightly it reads as an exoskeleton, shaded with subtle hues of blue *and green*",
+      "Multilayered robe; neural induction pad in the palm for greeting",
     ],
-    clothing: "Multi-limb archon vestments designed for four arms; dark research-lab finery",
+    clothing: "Multilayered archon robe cut for four arms; the lower pair hangs free of it",
     setting: "Large Heresy ship interior with cool blue light",
-    prompt: `${STYLE} Portrait of Olomo, archon of the Heresy Dominion: a towering three-metre spindly hexapod post-human with TWO legs and FOUR long arms, expanded elongated skull, cool pale-blue skin, intelligent severe face, wearing multi-limb dark research robes tailored for four arms. Clearly non-humanoid Celestial. Upper body showing all four arms, cool blue starship light.`,
-    inference: [],
+    prompt: `${STYLE} Portrait of Olomo, archon of the Heresy Dominion: a towering three-metre spindly post-human with TWO legs and FOUR long slim arms, and FOUR EYES set in his face that blink together. Both sides of his skull extend into long cones reaching out level with his shoulders, housing an inflated brain. His skin is almost reptilian, wrapped so tightly over him it looks like an exoskeleton, shaded in subtle blues and greens. His upper pair of hands have four elongated three-jointed fingers and a thumb; his lower pair of arms hang from the robe like stiff ropes with bulbous elbows, ending in simple triple claws. He wears a multilayered dark robe. Clearly non-humanoid Celestial. Upper body showing all four arms and all four eyes, cool blue starship light.`,
+    inference: [
+      "Robe colour is not stated — dark research finery is the wiki’s inference",
+    ],
+    sources: [
+      "Novel, prologue: “close to three meters tall thanks to a spindly body and six long, slim limbs—two legs and four arms”; “The hand was close to standard in that it had four fingers and a thumb, though the elongated fingers had three joints apiece. His lower set of arms dangled out of the robe like inflexible ropes with bulbous elbows, and their hands were a simple triple claw arrangement”; “both sides of the skull were extended cones that came out level with his shoulders. Skin, such as it was, was almost reptilian, and wrapped his body so tightly it could easily be mistaken for an exoskeleton shaded with subtle hues of blue and green”; “Olomo’s four eyes blinked simultaneously”",
+      "Wiki article `pages/characters/olomo.html`",
+    ],
     image: "assets/images/characters/olomo.jpg",
   },
   {
@@ -537,22 +628,24 @@ const briefs = [
     clade: "Talloch-Te Celestial archon",
     role: "Archon of Talloch-Te nomad trader dominion; Traveler tasking",
     cues: [
-      "Primary biological body has exactly five eyes (ch. 31)",
-      "Multi-body Talloch-Te architecture; gravity form for human-facing presence",
-      "Not Crown two-eyed humanoid; not Heresy hexapod",
+      "**Primary biological body has five eyes** (book ch. 31 — confirmed)",
+      "Multi-body Talloch-Te architecture: primary body, secondary bodies, mind partition/re-integration",
+      "Can bodymorph; “gravity form” is the less-disturbing human-facing shape",
+      "Not Imperial Crown two-eyed beauty; not Heresy hexapod (four arms)",
+      "Nurture chamber context for the primary body",
+      "Pronouns: she/her (confirmed from reading)",
     ],
-    clothing: "Merchant-archon finery — bronze, void-black, ship-sigil jewellery",
-    setting: "Nurture-chamber light on trader flagship",
-    prompt: `${STYLE} Upper-body portrait of Sahdiah, Talloch-Te Celestial archon: a non-human post-human trader intelligence whose primary biological body has exactly five eyes — count carefully: five eyes only, arranged on an elongated alien face, not a two-eyed human. Soft gravity-form silhouette that is still somewhat humanoid but clearly not Imperial Crown beauty and not a Heresy hexapod — no extra arms. Cool merchant-archon presence, bronze and void-black trader finery, subtle ship-sigil jewellery, calculating expression. Setting: dim shipboard nurture-chamber light with soft biotech housing glow behind her. Deniable power, not court pomp. Absolutely no text, no captions, no labels, no lettering, no logos, no brand marks, no watermarks, no UI chrome.`,
+    clothing: "Merchant-archon finery — bronze, void-black, ship-sigil jewellery (inference on cut and colour)",
+    setting: "Nurture-chamber light on a trader flagship; upper-body portrait",
+    prompt: `${STYLE_BASE} Upper-body portrait of Sahdiah, Talloch-Te Celestial archon: a non-human post-human trader intelligence whose primary biological body has exactly five eyes — count carefully: five eyes only, arranged on an elongated alien face, not a two-eyed human. Soft gravity-form silhouette that is still somewhat humanoid but clearly not Imperial Crown beauty and not a Heresy hexapod — no extra arms. Cool merchant-archon presence, bronze and void-black trader finery, subtle ship-sigil jewellery, calculating expression. Setting: dim shipboard nurture-chamber light with soft biotech housing glow behind her. Deniable power, not court pomp. ${NO_TEXT}`,
     inference: [
-      "Skin tone and exact eye arrangement not fixed by the novel",
-      "Pronouns she/her (reader-confirmed)",
+      "Skin tone, exact five-eye arrangement, and finery colour are not fixed by the novel — only eye count and multi-body clade are",
+      "Gravity-form still reads as portraitable rather than fully non-humanoid horror (book distinguishes gravity form as less disturbing)",
     ],
     sources: [
       "Book 1 ch. 31 (five eyes / primary biological body / nurture chamber) — reader-confirmed",
-      "Book 1 (multi-body architecture, mind partition, bodymorph, gravity form) — reader-confirmed",
       "Wiki `pages/characters/sahdiah.html`, `pages/factions/talloch-te-dominion.html`",
-      "Fandom Talloch-Te Dominion — agrees on the multi-body clade, but the book is the authority",
+      "Fandom Talloch-Te Dominion (multi-body, bodymorph, gravity form — cross-check against the novel)",
     ],
     image: "assets/images/characters/sahdiah.jpg",
   },
@@ -663,18 +756,21 @@ const briefs = [
     slug: "arcadias-moon",
     title: "Arcadia’s Moon",
     kind: "ship",
-    clade: "Traveler charter starship",
-    role: "Andino’s deniable hull; flies inside the Infinite Totality shell",
+    clade: "Traveler charter starship (atypical architecture)",
+    role: "Andino’s deniable hull; flies inside the *Infinite Totality* shell",
+    companionImage:
+      "`assets/images/ships/infinite-totality.jpg` — disguise shell (see `infinite-totality.md`)",
     cues: [
-      "Atypical Traveler architecture — not freighter lines",
-      "Geodesic sphere of golden trusses",
-      "Eight ovoid elements that reconfigure by flight status",
+      "True hull (novel p. 241 / wiki): a **geodesic sphere of golden trusses** containing **eight ovoid elements** that move around inside the sphere and reconfigure their alignment depending on flight status",
+      "**Atypical** for a Traveler spacecraft — not conventional freighter/salvage lines",
+      "Silhouette is unmistakable enough that concealing it requires a full shell fuselage (*Infinite Totality*)",
     ],
     clothing: "n/a",
-    setting: "Near a gas giant ring, three-quarter view",
-    prompt: `${STYLE} Exterior plate of the Arcadia’s Moon, an atypical Traveler charter starship: open geodesic sphere of golden metallic trusses enclosing exactly eight sky-blue ovoid elements that can move around inside the sphere and reconfigure their alignment depending on flight status. Warm gold lattice cage, smooth sky-blue ovoid modules with subtle metallic sheen, not a conventional freighter and not a navy capital. Three-quarter view in deep space near a ringed gas giant. Absolutely no text of any kind: no captions, no labels, no lettering, no logos, no brand marks, no hull names, no UI chrome, no watermarks.`,
+    setting: "Three-quarter view near a ringed gas giant; golden lattice and interior ovoids both readable",
+    prompt: `${STYLE_BASE} Exterior plate of the Arcadia’s Moon, an atypical Traveler charter starship: open geodesic sphere of golden metallic trusses enclosing exactly eight sky-blue ovoid elements that can move around inside the sphere and reconfigure their alignment depending on flight status. Warm gold lattice cage, smooth sky-blue ovoid modules with subtle metallic sheen, not a conventional freighter and not a navy capital. Three-quarter view in deep space near a ringed gas giant. Absolutely no text of any kind: no captions, no labels, no lettering, no logos, no brand marks, no hull names, no UI chrome, no watermarks.`,
     inference: [
-      "Sky-blue ovoid colour is secondary paraphrase (Fandom); novel p. 241 does not fix colour — keep colour out of article prose",
+      "**Ovoid colour:** the novel does not fix a colour (p. 241). Secondary paraphrase (Fandom) adds “sky-blue”; the illustration uses sky-blue for that reason. Article prose deliberately omits the colour so it cannot invent a book fact",
+      "Surface finish of the ovoids (smooth capsule vs panelled pod) is not fixed by the novel",
     ],
     sources: [
       "Wiki article `pages/locations/arcadias-moon.html`",
@@ -739,18 +835,24 @@ const briefs = [
     title: "Polkadav",
     kind: "ship",
     clade: "Human / Uranic transport · rendezvous hull",
-    role: "Evacuates the Jalgori-Tobus from Gondiar to rendezvous with the Diligent",
+    role: "Evacuates the Jalgori-Tobus from Gondiar to rendezvous with the *Diligent*",
     cues: [
-      "Transport / rendezvous hull, not navy capital or generation arkship",
-      "Family escape vessel for Uranic client aristocracy",
-      "Parallel flight path to Arcadia's Moon / Infinite Totality",
-      "Mid-size private transport with docking collar for arkship rendezvous",
+      "Transport / rendezvous hull (wiki Type), not a navy capital and not a generation arkship",
+      "Family escape vessel for Uranic client aristocracy after the mass-strike crackdown",
+      "Parallel flight path to Andino’s disguised *Arcadia’s Moon* / *Infinite Totality*",
+      "Practical passenger transport with enough capacity for Zelinda, Otylia and household, refined enough for estate nobility",
     ],
-    clothing: "n/a",
-    setting: "Climbing from planetary orbit toward deep-space rendezvous",
-    prompt: `${STYLE} Exterior plate of the Polkadav, a mid-size human transport and rendezvous hull used for aristocratic family evacuation: sleek private passenger transport with refined dark-bronze and cream plating, passenger windows, docking collar for arkship rendezvous, not a warship and not a generation arkship. Three-quarter view climbing from planetary orbit with atmosphere limb glow, ready for deep-space rendezvous.`,
+    clothing: "n/a (ship exterior plate)",
+    setting:
+      "Three-quarter exterior view leaving a planetary atmosphere / upper orbit toward deep space, rendezvous-scale (mid hull, not megastructure)",
+    prompt: `${STYLE.replace(/.$/, "")}, no caption. Exterior plate of the Polkadav, a mid-size human transport and rendezvous hull used for aristocratic family evacuation: sleek private passenger transport with refined dark-bronze and cream plating, passenger windows, docking collar for arkship rendezvous, not a warship and not a generation arkship. Three-quarter view climbing from planetary orbit with atmosphere limb glow, ready for deep-space rendezvous.`,
     inference: [
-      "Exact hull lines not in the novel — mid private transport between civilian yacht and freighter",
+      "Exact hull lines not described in the novel — mid-size private transport aesthetic between civilian yacht and freighter, Gondiar client-class polish rather than Traveler salvage grit or Crown livestone elegance",
+    ],
+    sources: [
+      "Wiki article `pages/locations/polkadav.html`",
+      "Locations hub Ships & vessels list",
+      "Clade grammar: `docs/visual-briefs/README.md` (baseline/Uranic transport vs Traveler vs Celestial)",
     ],
     image: "assets/images/ships/polkadav.jpg",
   },
@@ -761,15 +863,21 @@ const briefs = [
     clade: "Crown / Wynid Celestial household hull",
     role: "Lent by Neusch to Terence Wilson-Fletcher after Makaio-Faraji’s assassination",
     cues: [
-      "Celestial hull from Wynid archon household of Makaio-Faraji",
-      "Material support for human detective carrying Makaio-Spirit",
-      "Crown design language related to but distinct from Alumata — more compact loaner",
+      "Celestial hull from the Wynid archon household of Makaio-Faraji",
+      "Material support for a human detective carrying the Makaio-Spirit — not Terence’s own ship",
+      "Same late-turn support register as residual Makaio protocols (Neusch)",
+      "Should read as Crown Celestial design language (elegant, livestone-adjacent), related to but distinct from *Alumata* (intelligence yacht of the archon himself) — more compact personal/household loaner",
     ],
-    clothing: "n/a",
-    setting: "Against starfield, cool luminous Crown aesthetic",
-    prompt: `${STYLE} Exterior plate of the Aeacus, a compact Crown Imperial Celestial household ship lent to a human investigator: elegant elongated pearlescent silver-violet hull with livestone-like plating, refined personal yacht lines smaller than a capital or freighter, subtle glowing spinal ridge, Wynid archon-household craft. Three-quarter view against deep starfield, cool luminous lighting.`,
+    clothing: "n/a (ship exterior plate)",
+    setting: "Three-quarter exterior against starfield; cool luminous Crown aesthetic",
+    prompt: `${STYLE.replace(/.$/, "")}, no caption. Exterior plate of the Aeacus, a compact Crown Imperial Celestial household ship lent to a human investigator: elegant elongated pearlescent silver-violet hull with livestone-like plating, refined personal yacht lines smaller than a capital or freighter, subtle glowing spinal ridge, Wynid archon-household craft. Three-quarter view against deep starfield, cool luminous lighting.`,
     inference: [
-      "Exact silhouette not in the novel — smaller refined Celestial craft in Crown archon design family",
+      "Exact silhouette not in the novel — visual inference: smaller refined Celestial craft in the same design family as Crown archon ships, not Heresy-scale and not human freighter",
+    ],
+    sources: [
+      "Wiki article `pages/locations/aeacus.html`",
+      "Locations hub Ships & vessels list",
+      "Related: Makaio / Neusch / *Alumata* (Crown archon design family)",
     ],
     image: "assets/images/ships/aeacus.jpg",
   },
@@ -784,7 +892,7 @@ function renderBrief(b) {
 | **Kind** | ${b.kind} |
 | **Clade / type** | ${b.clade} |
 | **Role** | ${b.role} |
-| **Image path** | \`${b.image}\` |
+| **Image path** | \`${b.image}\` |${b.companionImage ? `\n| **Companion image** | ${b.companionImage} |` : ""}
 
 ## Physical / design cues (research)
 

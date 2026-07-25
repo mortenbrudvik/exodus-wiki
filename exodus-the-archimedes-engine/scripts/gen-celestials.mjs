@@ -114,6 +114,7 @@ const celestials = [
     h1: "Makaio",
     infobox: [
       ["Mindline name", "Makaio-Yalbo → Makaio-Faraji (host succession)"],
+      ["Appearance", "As Yalbo, bloodstone covers skull and cheeks — mouth, nose and eyes clear — under a crown of scalloped horns in turquoise and gold, the body brocaded beneath a formal toga; it stiffens him and blocks facial expression. As Faraji, ~2.5&nbsp;m, a flattish face and wide gold-tinged eyes"],
       ["Role", "Archon / spymaster of Queen <a href=\"helena-chione.html\">Helena-Chione</a> of Wynid"],
       ["Brief", "Kelowan-system intelligence; later Wynid oversight until hardline purge"],
       ["Affiliation", "<a href=\"../factions/celestials.html\">Imperial Celestials</a>; Wynid / Crown Dominion"],

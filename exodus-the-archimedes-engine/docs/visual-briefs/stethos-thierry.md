@@ -10,13 +10,14 @@
 
 ## Physical / design cues (research)
 
-- Information officer look — interface-heavy
-- Permanently connected to networks
-- Tall Imperial humanoid with visible neural hardware
+- **Scarlet-and-grey robes flaring out into a high collar** that almost touches the bloodstone on his skull
+- **Bloodstone petals embellishing his skull** — calcium swirls, not machinery, and they cover the permanent connection bulb melded with the neural interface patch at the top of his spine
+- **Two and a half metres tall** — explicitly shorter than his three-metre queen
+- Permanently connected to networks; information-officer stillness
 
 ## Clothing / finish
 
-Datamaster habit — slim tech robes, glowing neural filaments at skull and neck
+Scarlet-and-grey robes with a wide flared collar; bloodstone petals over the crown and spine patch
 
 ## Setting / composition
 
@@ -24,15 +25,16 @@ Data-hall soft hologlyphs (no readable text)
 
 ## Inference flags
 
-- None — cues grounded in wiki article + clade grammar.
+- Face, skin tone and hair are not described
+- The delivered portrait renders his interface as metal implants and fibre-optic cable; the novel makes it bloodstone
 
 ## Generation prompt
 
 ```
-Highly detailed cinematic sci-fi encyclopedia illustration, rich textures, sharp focus, painterly digital art with photographic detail, soft volumetric lighting, no text, no watermark, no UI chrome. Portrait of Lord Stethos-Thierry, Imperial Celestial court datamaster: tall post-human man with calm vacant-focused expression, slim tech robes, glowing neural filaments and interface hardware along scalp and neck. Permanently networked. Upper-body portrait, cool holographic bokeh without readable text.
+Highly detailed cinematic sci-fi encyclopedia illustration, rich textures, sharp focus, painterly digital art with photographic detail, soft volumetric lighting, no text, no watermark, no UI chrome. Portrait of Lord Stethos-Thierry, Imperial Celestial court datamaster: post-human man two and a half metres tall with calm vacant-focused expression, wearing scarlet-and-grey robes that flare out into a tall stiff collar rising almost to his head, his skull embellished with swirled petals of pale bloodstone that cover a connection bulb at the nape of his spine. Organic crystalline growth, not metal machinery. Upper-body portrait, cool holographic bokeh without readable text.
 ```
 
 ## Sources
 
+- Novel, ch. 1: “At two and a half meters tall he was shorter than his queen… His scarlet-and-gray robes flared out into a collar that almost touched the bloodstone petals that embellished his skull. The calcium swirls… covered the permanent connection bulb melded with the neural interface patch at the top of his spine”
 - Wiki article `pages/characters/stethos-thierry.html`
-- Clade grammar: `docs/visual-briefs/README.md`, faction pages (Celestials / Uranics / Travelers / Heresy)

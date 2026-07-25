@@ -377,6 +377,13 @@ Characters are 3:4; everything else is 16:9. `check-images.mjs` prints the curre
 reverted the next time one runs — the generated-pages trap again, except `check-wiki.mjs` does not
 re-render these, so the loss is silent. Edit the brief object in the script.
 
+This has already cost work once: `sahdiah`, `arcadias-moon`, `aeacus` and `polkadav` were hand-edited
+to richer text than the generator held, and the next run flattened all four. If you suspect it,
+`git diff docs/visual-briefs/` straight after running the script — anything you did not intend to
+touch that changed is content the script does not know about. Recover it with
+`git show HEAD:<path>`, port it into the brief object, re-run, and confirm the diff is empty. Two
+fields exist because of that recovery: `sources` (per-brief citations) and `companionImage`.
+
 - **Book citations go in the optional `sources` field**, which overrides the generic two-bullet
   Sources section. Without it a citation like "ch. 31" or "p. 241" survives only in the generated
   `.md` and disappears on the next run. `sahdiah.md` and `arcadias-moon.md` are the two that carry

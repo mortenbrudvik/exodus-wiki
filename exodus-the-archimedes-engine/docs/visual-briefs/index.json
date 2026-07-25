@@ -15,7 +15,7 @@
       "title": "Eleanor Aponi",
       "kind": "character",
       "image": "assets/images/characters/eleanor-aponi.jpg",
-      "prompt": "Highly detailed cinematic sci-fi encyclopedia illustration, rich textures, sharp focus, painterly digital art with photographic detail, soft volumetric lighting, no text, no watermark, no UI chrome. Portrait of Eleanor Ellie Aponi, a skilled 23-year-old lieutenant from a late-arriving human generation arkship: competent young woman with practical military bearing, baseline human features, short practical hair, wearing a functional grey-blue arkship lieutenant uniform with harness straps. Field partner energy, not court fashion. Upper-body portrait, cool bulkhead lighting.",
+      "prompt": "Highly detailed cinematic sci-fi encyclopedia illustration, rich textures, sharp focus, painterly digital art with photographic detail, soft volumetric lighting, no text, no watermark, no UI chrome. Portrait of Eleanor Ellie Aponi, a skilled 23-year-old lieutenant from a late-arriving human generation arkship: competent young woman with a distinctly heart-shaped face and a fringe of dark hair, practical military bearing, baseline human features, wearing a functional grey-blue arkship lieutenant uniform with harness straps. Field partner energy, not court fashion. Upper-body portrait, cool bulkhead lighting.",
       "clade": "Baseline late-arkship human (~23)"
     },
     {
@@ -23,7 +23,7 @@
       "title": "Josias Aponi",
       "kind": "character",
       "image": "assets/images/characters/josias-aponi.jpg",
-      "prompt": "Highly detailed cinematic sci-fi encyclopedia illustration, rich textures, sharp focus, painterly digital art with photographic detail, soft volumetric lighting, no text, no watermark, no UI chrome. Portrait of Josias Aponi, a 51-year-old human arkship owner and fiery political orator: middle-aged man with intense determined expression, greying temples, strong jaw, wearing a formal dark owner’s coat over practical settler layers. Liberation agitator energy. Upper-body portrait, warm assembly-hall light and arkship viewport glow.",
+      "prompt": "Highly detailed cinematic sci-fi encyclopedia illustration, rich textures, sharp focus, painterly digital art with photographic detail, soft volumetric lighting, no text, no watermark, no UI chrome. Portrait of Josias Aponi, a 51-year-old human arkship owner and fiery political orator: middle-aged man with a huge, thick, full grey-flecked beard covering his jaw and chest, piercing grey-blue eyes with a judgmental stare, wearing a formal dark owner’s coat over practical settler layers. Liberation agitator energy. Upper-body portrait, warm assembly-hall light and arkship viewport glow. No text, no lettering, no graffiti, no slogans, no signage, no insignia text anywhere in frame.",
       "clade": "Baseline late-arkship human (~51 intro)"
     },
     {
@@ -31,7 +31,7 @@
       "title": "Dejean",
       "kind": "character",
       "image": "assets/images/characters/dejean.jpg",
-      "prompt": "Highly detailed cinematic sci-fi encyclopedia illustration, rich textures, sharp focus, painterly digital art with photographic detail, soft volumetric lighting, no text, no watermark, no UI chrome. Portrait of Captain Dejean, a 59-year-old professional captain of a human generation arkship: weathered middle-aged man with calm competent expression, short greying hair, wearing a clean grey arkship captain’s uniform with subtle rank tabs. Steady professional, not politician. Upper-body portrait, cool bridge console lighting.",
+      "prompt": "Highly detailed cinematic sci-fi encyclopedia illustration, rich textures, sharp focus, painterly digital art with photographic detail, soft volumetric lighting, no text, no watermark, no UI chrome. Portrait of Captain Dejean, a 59-year-old woman commanding a human generation arkship: weathered older woman with grey hair, a lined careworn face and a calm competent expression, wearing a clean grey arkship captain’s uniform with subtle rank tabs. Steady professional, not politician. Upper-body portrait, cool bridge console lighting. No text, no lettering, no name plate, no insignia text anywhere in frame.",
       "clade": "Baseline late-arkship human (59)"
     },
     {
@@ -39,7 +39,7 @@
       "title": "Elsbeth McQuillan",
       "kind": "character",
       "image": "assets/images/characters/elsbeth-mcquillan.jpg",
-      "prompt": "Highly detailed cinematic sci-fi encyclopedia illustration, rich textures, sharp focus, painterly digital art with photographic detail, soft volumetric lighting, no text, no watermark, no UI chrome. Portrait of Elsbeth McQuillan, fearless tank commander of Hell Welcomes Careful Drivers: tough woman in armoured tanker coveralls and headset, gauntlets, carbon scoring on gear, confident battlefield expression. Ground-war specialist aesthetic. Upper-body portrait, red-tinged vehicle-bay lighting.",
+      "prompt": "Highly detailed cinematic sci-fi encyclopedia illustration, rich textures, sharp focus, painterly digital art with photographic detail, soft volumetric lighting, no text, no watermark, no UI chrome. Portrait of Elsbeth McQuillan, fearless tank commander of Hell Welcomes Careful Drivers: tough woman in armoured tanker coveralls and headset, gauntlets, carbon scoring on gear, confident battlefield expression — and in place of natural eyes, two smooth featureless light-grey mechanical spheres set in her sockets, unreadable. Ground-war specialist aesthetic. Upper-body portrait, red-tinged vehicle-bay lighting.",
       "clade": "Baseline human specialist"
     },
     {
@@ -71,7 +71,7 @@
       "title": "Helena-Chione",
       "kind": "character",
       "image": "assets/images/characters/helena-chione.jpg",
-      "prompt": "Highly detailed cinematic sci-fi encyclopedia illustration, rich textures, sharp focus, painterly digital art with photographic detail, soft volumetric lighting, no text, no watermark, no UI chrome. Portrait of Helena-Chione, Imperial Celestial Now and Forever Queen of Wynid: extremely tall elegant post-human woman with elongated regal proportions, luminous pale skin, serene strategic expression, wearing ivory-and-gold queen’s robes with crystalline bloodstone jewellery growing along collar and wrists. Godlike court beauty. Upper-body portrait emphasizing height, soft livestone palace glow.",
+      "prompt": "Highly detailed cinematic sci-fi encyclopedia illustration, rich textures, sharp focus, painterly digital art with photographic detail, soft volumetric lighting, no text, no watermark, no UI chrome. Portrait of Helena-Chione, Imperial Celestial Now and Forever Queen of Wynid: extremely tall elegant post-human woman with elongated regal proportions and long limbs, luminous pale skin, striking intense green eyes, serene strategic expression, wearing an emerald polonaise robe embroidered with glowing gold and platinum thread, with modest gold-and-turquoise bloodstone ornamentation at the collar. Godlike court beauty, restrained rather than gaudy. Upper-body portrait emphasizing height, soft livestone palace glow.",
       "clade": "Imperial Celestial queen (~3 m humanoid scale)"
     },
     {
@@ -79,7 +79,7 @@
       "title": "Thyra",
       "kind": "character",
       "image": "assets/images/characters/thyra.jpg",
-      "prompt": "Highly detailed cinematic sci-fi encyclopedia illustration, rich textures, sharp focus, painterly digital art with photographic detail, soft volumetric lighting, no text, no watermark, no UI chrome. Portrait of Thyra as Helena-Thyra, Imperial Celestial usurper queen: tall post-human young woman with elongated elegant features, cold ruthless intelligent eyes, wearing sharp black and crimson armour-robes with a crystalline bloodstone collar-crown. Hardline power. Upper-body portrait, dramatic side lighting and fleet viewport glow.",
+      "prompt": "Highly detailed cinematic sci-fi encyclopedia illustration, rich textures, sharp focus, painterly digital art with photographic detail, soft volumetric lighting, no text, no watermark, no UI chrome. Portrait of Thyra as Helena-Thyra, Imperial Celestial usurper queen: tall post-human young woman with elongated elegant features and cold ruthless intense green eyes, her long hair dressed in artful braids bound around the bloodstone spurs at her head and drawn up to leave the neural pad at the nape of her neck exposed, wearing sharp black and crimson armour-robes with a crystalline bloodstone collar-crown. Hardline power. Upper-body portrait, dramatic side lighting and fleet viewport glow.",
       "clade": "Imperial Celestial congregant → queen (Helena-Thyra)"
     },
     {
@@ -143,7 +143,7 @@
       "title": "Lord Gahiji",
       "kind": "character",
       "image": "assets/images/characters/lord-gahiji.jpg",
-      "prompt": "Highly detailed cinematic sci-fi encyclopedia illustration, rich textures, sharp focus, painterly digital art with photographic detail, soft volumetric lighting, no text, no watermark, no UI chrome. Portrait of Lord Gahiji, Chief Archon to an Imperial Celestial queen: tall post-human older man with shrewd political eyes, blue-grey archon robes, subtle crystalline accents, elongated proportions. Statesman not soldier. Upper-body portrait, cool council light.",
+      "prompt": "Highly detailed cinematic sci-fi encyclopedia illustration, rich textures, sharp focus, painterly digital art with photographic detail, soft volumetric lighting, no text, no watermark, no UI chrome. Portrait of Lord Gahiji-Calder, Chief Archon to an Imperial Celestial queen: tall post-human older man with shrewd political eyes and elongated proportions, wearing grey-and-silver robes of state that hang loose and ill-fitting like badly hung curtains, and only a small cap of black-and-green bloodstone curlicues on his head instead of a grand headdress. Deliberately under-dressed for court. Statesman not soldier. Upper-body portrait, cool council light.",
       "clade": "Imperial Celestial archon"
     },
     {
@@ -167,7 +167,7 @@
       "title": "Lord Stethos-Thierry",
       "kind": "character",
       "image": "assets/images/characters/stethos-thierry.jpg",
-      "prompt": "Highly detailed cinematic sci-fi encyclopedia illustration, rich textures, sharp focus, painterly digital art with photographic detail, soft volumetric lighting, no text, no watermark, no UI chrome. Portrait of Lord Stethos-Thierry, Imperial Celestial court datamaster: tall post-human man with calm vacant-focused expression, slim tech robes, glowing neural filaments and interface hardware along scalp and neck. Permanently networked. Upper-body portrait, cool holographic bokeh without readable text.",
+      "prompt": "Highly detailed cinematic sci-fi encyclopedia illustration, rich textures, sharp focus, painterly digital art with photographic detail, soft volumetric lighting, no text, no watermark, no UI chrome. Portrait of Lord Stethos-Thierry, Imperial Celestial court datamaster: post-human man two and a half metres tall with calm vacant-focused expression, wearing scarlet-and-grey robes that flare out into a tall stiff collar rising almost to his head, his skull embellished with swirled petals of pale bloodstone that cover a connection bulb at the nape of his spine. Organic crystalline growth, not metal machinery. Upper-body portrait, cool holographic bokeh without readable text.",
       "clade": "Imperial Celestial datamaster"
     },
     {
@@ -183,7 +183,7 @@
       "title": "Makaio",
       "kind": "character",
       "image": "assets/images/characters/makaio.jpg",
-      "prompt": "Highly detailed cinematic sci-fi encyclopedia illustration, rich textures, sharp focus, painterly digital art with photographic detail, soft volumetric lighting, no text, no watermark, no UI chrome. Portrait of Makaio, Imperial Celestial archon spymaster: tall post-human man with piercing analytical eyes, charcoal intelligence coat, crystalline bloodstone growths on shoulders, elongated regal proportions. Multi-host mindline power. Upper-body portrait, dim shipboard intelligence-suite light.",
+      "prompt": "Highly detailed cinematic sci-fi encyclopedia illustration, rich textures, sharp focus, painterly digital art with photographic detail, soft volumetric lighting, no text, no watermark, no UI chrome. Portrait of Makaio-Yalbo, Imperial Celestial archon spymaster near the end of his host body: tall post-human man whose skull and cheeks are almost entirely encased in pale calcium-like bloodstone, leaving only his mouth, nose and piercing eyes uncovered, with a crown of scalloped horns curling around one another above it, faintly tinted turquoise and gold; his neck and body are brocaded with the same growth in a lacework pattern beneath a formal toga. Rigid, expressionless, immensely powerful. Upper-body portrait, dim shipboard intelligence-suite light.",
       "clade": "Imperial Celestial archon (multi-host mindline)"
     },
     {
@@ -255,7 +255,7 @@
       "title": "Olomo",
       "kind": "character",
       "image": "assets/images/characters/olomo.jpg",
-      "prompt": "Highly detailed cinematic sci-fi encyclopedia illustration, rich textures, sharp focus, painterly digital art with photographic detail, soft volumetric lighting, no text, no watermark, no UI chrome. Portrait of Olomo, archon of the Heresy Dominion: a towering three-metre spindly hexapod post-human with TWO legs and FOUR long arms, expanded elongated skull, cool pale-blue skin, intelligent severe face, wearing multi-limb dark research robes tailored for four arms. Clearly non-humanoid Celestial. Upper body showing all four arms, cool blue starship light.",
+      "prompt": "Highly detailed cinematic sci-fi encyclopedia illustration, rich textures, sharp focus, painterly digital art with photographic detail, soft volumetric lighting, no text, no watermark, no UI chrome. Portrait of Olomo, archon of the Heresy Dominion: a towering three-metre spindly post-human with TWO legs and FOUR long slim arms, and FOUR EYES set in his face that blink together. Both sides of his skull extend into long cones reaching out level with his shoulders, housing an inflated brain. His skin is almost reptilian, wrapped so tightly over him it looks like an exoskeleton, shaded in subtle blues and greens. His upper pair of hands have four elongated three-jointed fingers and a thumb; his lower pair of arms hang from the robe like stiff ropes with bulbous elbows, ending in simple triple claws. He wears a multilayered dark robe. Clearly non-humanoid Celestial. Upper body showing all four arms and all four eyes, cool blue starship light.",
       "clade": "Heresy Celestial hexapod (~3 m)"
     },
     {
@@ -328,7 +328,7 @@
       "kind": "ship",
       "image": "assets/images/ships/arcadias-moon.jpg",
       "prompt": "Highly detailed cinematic sci-fi encyclopedia illustration, rich textures, sharp focus, painterly digital art with photographic detail, soft volumetric lighting. Exterior plate of the Arcadia’s Moon, an atypical Traveler charter starship: open geodesic sphere of golden metallic trusses enclosing exactly eight sky-blue ovoid elements that can move around inside the sphere and reconfigure their alignment depending on flight status. Warm gold lattice cage, smooth sky-blue ovoid modules with subtle metallic sheen, not a conventional freighter and not a navy capital. Three-quarter view in deep space near a ringed gas giant. Absolutely no text of any kind: no captions, no labels, no lettering, no logos, no brand marks, no hull names, no UI chrome, no watermarks.",
-      "clade": "Traveler charter starship"
+      "clade": "Traveler charter starship (atypical architecture)"
     },
     {
       "slug": "alumata",
@@ -359,16 +359,16 @@
       "title": "Polkadav",
       "kind": "ship",
       "image": "assets/images/ships/polkadav.jpg",
-      "clade": "Human/Uranic transport · rendezvous hull",
-      "prompt": "Highly detailed cinematic sci-fi encyclopedia illustration, rich textures, sharp focus, painterly digital art with photographic detail, soft volumetric lighting, no text, no watermark, no UI chrome. Exterior plate of the Polkadav, a mid-size human transport and rendezvous hull used for aristocratic family evacuation: sleek private passenger transport with refined dark-bronze and cream plating, passenger windows, docking collar for arkship rendezvous, not a warship and not a generation arkship. Three-quarter view climbing from planetary orbit with atmosphere limb glow, ready for deep-space rendezvous."
+      "prompt": "Highly detailed cinematic sci-fi encyclopedia illustration, rich textures, sharp focus, painterly digital art with photographic detail, soft volumetric lighting, no text, no watermark, no UI chrome, no caption. Exterior plate of the Polkadav, a mid-size human transport and rendezvous hull used for aristocratic family evacuation: sleek private passenger transport with refined dark-bronze and cream plating, passenger windows, docking collar for arkship rendezvous, not a warship and not a generation arkship. Three-quarter view climbing from planetary orbit with atmosphere limb glow, ready for deep-space rendezvous.",
+      "clade": "Human / Uranic transport · rendezvous hull"
     },
     {
       "slug": "aeacus",
       "title": "Aeacus",
       "kind": "ship",
       "image": "assets/images/ships/aeacus.jpg",
-      "clade": "Crown/Wynid Celestial household hull",
-      "prompt": "Highly detailed cinematic sci-fi encyclopedia illustration, rich textures, sharp focus, painterly digital art with photographic detail, soft volumetric lighting, no text, no watermark, no UI chrome. Exterior plate of the Aeacus, a compact Crown Imperial Celestial household ship lent to a human investigator: elegant elongated pearlescent silver-violet hull with livestone-like plating, refined personal yacht lines smaller than a capital or freighter, subtle glowing spinal ridge, Wynid archon-household craft. Three-quarter view against deep starfield, cool luminous lighting."
+      "prompt": "Highly detailed cinematic sci-fi encyclopedia illustration, rich textures, sharp focus, painterly digital art with photographic detail, soft volumetric lighting, no text, no watermark, no UI chrome, no caption. Exterior plate of the Aeacus, a compact Crown Imperial Celestial household ship lent to a human investigator: elegant elongated pearlescent silver-violet hull with livestone-like plating, refined personal yacht lines smaller than a capital or freighter, subtle glowing spinal ridge, Wynid archon-household craft. Three-quarter view against deep starfield, cool luminous lighting.",
+      "clade": "Crown / Wynid Celestial household hull"
     },
     {
       "slug": "gondiar",

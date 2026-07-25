@@ -116,7 +116,7 @@ const dominions = [
     image: "heresy-dominion.jpg",
     infobox: [
       ["Type", "Celestial dominion (peer of the Crown)"],
-      ["Clade", "<a href=\"celestials.html\">Heresy Celestials</a> — tall hexapods (~3&nbsp;m; four arms, two legs)"],
+      ["Clade", "<a href=\"celestials.html\">Heresy Celestials</a> — tall hexapods (~3&nbsp;m; four arms, two legs, four eyes)"],
       ["Known archon", "<a href=\"../characters/olomo.html\">Olomo</a>"],
       ["Crown alignment", "Favourable / occasional ally of Wynid Royal House"],
       ["Lifespan culture", "Centuries-scale lives; Crown mindline Celestials call them “children”"],
@@ -128,7 +128,7 @@ const dominions = [
       {
         h2: "People and self-image",
         paras: [
-          `Heresy citizens are close to three metres tall with spindly six-limb builds (two legs, four arms), lower body temperatures, and expanded skulls. Their ships can outscale Crown counterparts such as the <em><a href="../locations/alumata.html">Alumata</a></em>; individual hulls carry heavy defensive systems because the Heresy fields fewer traditional war fleets.`,
+          `Heresy citizens are close to three metres tall with spindly six-limb builds (two legs, four arms) and four eyes that blink in unison. The skull extends into cones reaching level with the shoulders, housing an inflated brain; the clade’s low body temperature exists to stop it overheating. Skin is almost reptilian, wrapped tight enough to be mistaken for an exoskeleton and shaded in blues and greens. The two arm pairs differ — the upper ends in four elongated three-jointed fingers and a thumb, the lower dangles like inflexible rope with bulbous elbows and a simple triple claw. Their ships can outscale Crown counterparts such as the <em><a href="../locations/alumata.html">Alumata</a></em>; individual hulls carry heavy defensive systems because the Heresy fields fewer traditional war fleets.`,
           `Heresy culture claims greater distance from baseline human stock than the Crown. Imperial Celestials retort that without mindline immortality Heresy lives are short (a few centuries) and therefore “childish.” The rivalry is cultural as much as strategic.`,
         ],
       },

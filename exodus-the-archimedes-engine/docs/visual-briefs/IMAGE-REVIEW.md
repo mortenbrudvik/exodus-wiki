@@ -1,9 +1,16 @@
-# Illustration review — 74 illustrations against the book, 59 signed off
+# Illustration review — 74 illustrations against the book, 53 signed off
 
-**Reviewed:** 25 July 2026 · every image opened and judged by eye · **74 of 74 briefed**
+**Reviewed:** 25–26 July 2026 · every image opened and judged by eye · **74 of 74 briefed**
 
 `check-images.mjs` proves a file exists and is non-blank. It cannot read what is drawn or written
 inside a JPEG, so this sweep is the only thing standing between an invented fact and the live site.
+
+> **Fourth pass (25–26 July 2026) — six portraits now FAIL against recovered book text.**
+> Every earlier pass judged the art against *the briefs*. The briefs turned out to be vaguer than
+> the novel: most character appearance cues were derived from role and clade grammar, not from any
+> description in the book. Re-reading the authorized publisher excerpt recovered real descriptions
+> for eight characters, and six shipped portraits contradict them. See
+> [Fourth pass](#fourth-pass--art-checked-against-recovered-book-text).
 
 Three passes, reviewed separately:
 
@@ -18,10 +25,10 @@ everything below it concerns the first. Third-pass slugs are listed under [Third
 
 | Verdict | Count | Meaning |
 |---|---:|---|
-| **PASS** | 59 | First pass 46 after regen; second pass 13 after Heresy regen |
+| **PASS** | 53 | First and second pass, after regen, less the six re-opened by the fourth pass |
 | **THIRD (pending full eye-pass)** | 15 | Files + markup installed; spot-checked for text/clade traps |
 | **QUERY** | 0 | Cleared by regen |
-| **FAIL** | 0 | Cleared by regen |
+| **FAIL** | 6 | **Open.** `dejean`, `olomo`, `josias-aponi`, `stethos-thierry`, `helena-chione`, `eleanor-aponi` — contradict book text recovered in the fourth pass |
 
 Historical first-pass tally (before regen): 37 pass · 3 query · 6 fail. Detail of that pass is kept below for process lessons; **shipped files are the regenerations** listed under [Regeneration log](#regeneration-log).
 
@@ -30,6 +37,107 @@ Historical first-pass tally (before regen): 37 pass · 3 query · 6 fail. Detail
 > wiki outright — see failure 6.
 
 ---
+
+## Fourth pass — art checked against recovered book text
+
+**Reviewed 25–26 July 2026 · 8 subjects with newly recovered descriptions · 6 fail · 2 pass.**
+
+The three earlier passes asked "does the image match the brief?" This one asks "does the brief match
+the book?" — and for characters the answer was mostly no. The briefs' `cues` were built from each
+subject's *role* plus the clade grammar table, so a portrait could pass every check while
+contradicting a sentence printed in the novel.
+
+Source for all of it is the **authorized Penguin Random House excerpt**
+(`https://sites.prh.com/exodusexcerpt`), which is the book's own opening text, plus page-numbered
+snippets from the publisher preview. Quotations are recorded in the `sources` field of each brief.
+
+### FAIL — `dejean`: wrong sex
+
+The novel's captain of the *Diligent* is a woman — "Dejean placed **her** hand on a panel… 'Palm ID
+lock,' **she** told him"; "seeing **her** with gray hair and a face that was noticeably haggard";
+"You've made me **one happy old lady**." The brief asked for a "weathered middle-aged man", the
+portrait delivers one, and `dejean.html` used *he/his* in two places. Brief and page are corrected;
+**the portrait must be regenerated.**
+
+This is the same class of defect as the Sahdiah pronoun error, and it survived three review passes
+because nothing in the pipeline ever checked a character's sex against the text.
+
+### FAIL — `olomo`: two eyes, should be four
+
+"Olomo's **four eyes** blinked simultaneously" — stated twice. The portrait has two. The first pass
+caught this figure shipping with six then five arms and stopped once the arm count was right;
+nobody counted eyes, because the brief never mentioned them.
+
+Three further mismatches from the same paragraph, none previously recorded anywhere:
+
+- Skull should be **"extended cones that came out level with his shoulders"**. The portrait has a
+  single smooth swept-back dome.
+- Skin should be **"almost reptilian… mistaken for an exoskeleton shaded with subtle hues of blue
+  and green"**. The portrait is smooth grey-blue with no green and no reptilian texture.
+- **The arm pairs differ.** Upper hands have "four fingers and a thumb… elongated fingers had three
+  joints apiece"; the lower arms "dangled out of the robe like inflexible ropes with bulbous elbows,
+  and their hands were a simple **triple claw**". The portrait draws four similar arms.
+
+### FAIL — `josias-aponi`: no beard, wrong eyes, burned-in text
+
+"He had **the thickest beard Finn had ever seen**" and "**The gray-blue eyes** that stared down at
+him were the most judgmental he'd ever known." The portrait is clean-shaven with dark brown eyes —
+it contradicts the only two physical facts the novel gives him.
+
+It also carries **burned-in text**, which the earlier passes were supposed to have eliminated:
+graffiti reading `FREE…` / `HOL…` on the wall behind him, and `AR..7 LIBE_ATION` stencilled on his
+shirt pocket. Plus an invented sunburst emblem on the collar and breast. Invented slogans on a
+liberation politician are exactly the kind of fabricated canon the no-text rule exists to prevent.
+
+### FAIL — `stethos-thierry`: contradicts its own wiki page
+
+The novel gives him "**scarlet-and-gray robes** flared out into a collar that almost touched the
+**bloodstone petals** that embellished his skull", covering "the permanent connection bulb melded
+with the neural interface patch at the top of his spine", at "**two and a half meters tall**".
+
+`stethos-thierry.html` already records all of this correctly. The portrait shows **dark grey-black
+robes with a flat collar** and renders the interface as **metal implants and fibre-optic cable** —
+no scarlet, no bloodstone. The image and the page it sits on disagree, on the live site.
+
+### FAIL — `helena-chione`: wrong eyes, wrong bloodstone
+
+"Other than sharing the same **intense green eyes**…" — the daughters' one inherited feature, so it
+is hers. The portrait has pale blue-grey eyes. Her bloodstone is "**modest gold-and-turquoise**";
+the portrait covers her in an elaborate spray of **crimson and magenta** crystal. Both the colour
+and the word *modest* are wrong.
+
+### FAIL — `eleanor-aponi`: burned-in text (re-opened)
+
+Dark hair is correct — "a fringe of **dark hair** spilling out from the hood" — which also retires
+the brief's old inference flag claiming her hair colour was unspecified. Her face reads square
+rather than the stated **heart-shaped**, which is arguable.
+
+Not arguable: the bulkhead behind her carries a stencilled **`C.O…`**. The first pass logged a
+"uniform name tape" on this image under QUERY and the regeneration did not clear lettering from the
+background.
+
+### PASS — `makaio`, and the clade grammar behind it
+
+Not re-generated, but the brief was badly under-specified and is now fixed. The novel's bloodstone
+is not jewellery: over eighteen months it grows "to cover most of his skull and cheeks, leaving only
+his mouth, nose, and eyes unencumbered", throws out "a crown of **scalloped horns**… curling around
+each other… with faint hues of **turquoise and gold**", brocades the body "beneath the formal toga"
+in a lacework, and **"prevented any significant facial expression"**. A late-stage host should look
+entombed and rigid.
+
+### What this pass says about the process
+
+- **A brief that was never checked against the book is not evidence.** Three review passes
+  validated the images against briefs that nobody had validated against the novel. "Cues
+  grounded in wiki article + clade grammar" appeared in the `inference` field of most characters and
+  meant, in practice, *derived from their job title*.
+- **Count what the text counts.** Arms were counted because the brief said FOUR ARMS in capitals.
+  Eyes were not, because the brief was silent. Anything numbered in the novel belongs in the prompt
+  as a number.
+- **Bloodstone is turquoise and gold.** The real-world mineral is green flecked with red, and the
+  generator followed the mineral. Several portraits ship with red crystal.
+- **Burned-in text is not fixed.** Two of six images in this pass carry lettering, on a site whose
+  own review doc calls that a blocking defect.
 
 ## Second pass — places, technology and factions
 

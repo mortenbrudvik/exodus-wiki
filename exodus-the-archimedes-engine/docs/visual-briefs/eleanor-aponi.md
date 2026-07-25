@@ -10,6 +10,7 @@
 
 ## Physical / design cues (research)
 
+- **Heart-shaped face with a fringe of dark hair** — stated at her first appearance
 - Young woman ~23, competent military bearing
 - Baseline human (no Celestial elongation, no bloodstone)
 - Shipboard practicality over court beauty
@@ -24,15 +25,15 @@ Arkship corridor lighting, cool metal bulkheads
 
 ## Inference flags
 
-- Exact hair colour not specified — brown/dark practical cut
+- Hair length is not fixed — the book says only 'a fringe of dark hair spilling out from the hood'. Colour is canon; the crop is not
 
 ## Generation prompt
 
 ```
-Highly detailed cinematic sci-fi encyclopedia illustration, rich textures, sharp focus, painterly digital art with photographic detail, soft volumetric lighting, no text, no watermark, no UI chrome. Portrait of Eleanor Ellie Aponi, a skilled 23-year-old lieutenant from a late-arriving human generation arkship: competent young woman with practical military bearing, baseline human features, short practical hair, wearing a functional grey-blue arkship lieutenant uniform with harness straps. Field partner energy, not court fashion. Upper-body portrait, cool bulkhead lighting.
+Highly detailed cinematic sci-fi encyclopedia illustration, rich textures, sharp focus, painterly digital art with photographic detail, soft volumetric lighting, no text, no watermark, no UI chrome. Portrait of Eleanor Ellie Aponi, a skilled 23-year-old lieutenant from a late-arriving human generation arkship: competent young woman with a distinctly heart-shaped face and a fringe of dark hair, practical military bearing, baseline human features, wearing a functional grey-blue arkship lieutenant uniform with harness straps. Field partner energy, not court fashion. Upper-body portrait, cool bulkhead lighting.
 ```
 
 ## Sources
 
+- Novel, ch. 2 (Finn's rescue): “a heart-shaped face with a fringe of dark hair spilling out from the hood”
 - Wiki article `pages/characters/eleanor-aponi.html`
-- Clade grammar: `docs/visual-briefs/README.md`, faction pages (Celestials / Uranics / Travelers / Heresy)
