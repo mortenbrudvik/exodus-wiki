@@ -53,6 +53,7 @@ ${bodyMain}
   </div>
   <script src="../../assets/data/search-index.js"></script>
   <script src="../../assets/js/search.js"></script>
+  <script src="../../assets/js/lightbox.js"></script>
 </body>
 </html>
 `;

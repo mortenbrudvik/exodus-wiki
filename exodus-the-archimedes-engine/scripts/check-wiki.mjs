@@ -167,6 +167,7 @@ for (const p of pages) {
   if (!/<meta name="viewport"/.test(src)) fail("chrome", `${r} has no viewport meta`);
   if (!/assets\/data\/search-index\.js/.test(src)) fail("chrome", `${r} does not load the index fallback`);
   if (!/assets\/js\/search\.js/.test(src)) fail("chrome", `${r} does not load search.js`);
+  if (!/assets\/js\/lightbox\.js/.test(src)) fail("chrome", `${r} does not load lightbox.js`);
   if (!/<title>[^<]*— Exodus Wiki<\/title>/.test(src)) fail("chrome", `${r} title is not "… — Exodus Wiki"`);
 
   // Favicon: every page must link a real icon asset with depth-correct relative href.
