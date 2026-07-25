@@ -156,6 +156,7 @@ const dominions = [
     file: "talloch-te-dominion.html",
     title: "Talloch-Te Dominion",
     h1: "Talloch-Te Dominion",
+    image: "talloch-te-dominion.jpg",
     infobox: [
       ["Type", "Celestial dominion — nomadic / trader culture"],
       ["Also styled", "Talloch-Te; Tallach-Te (variant spelling)"],
@@ -198,6 +199,7 @@ const dominions = [
     file: "mara-yama.html",
     title: "Mara Yama",
     h1: "Mara Yama",
+    image: "mara-yama.jpg",
     infobox: [
       ["Type", "Celestial dominion / threat culture (nomadic)"],
       ["Lifestyle", "Massive space citadels; no conventional planetary “homeworld”"],
@@ -238,6 +240,7 @@ const dominions = [
     file: "gomatu-dominion.html",
     title: "Gomatu Dominion",
     h1: "Gomatu Dominion",
+    image: "gomatu-dominion.jpg",
     infobox: [
       ["Type", "Celestial dominion"],
       ["Notable project", "Megastructure / Dyson sphere under construction"],
@@ -265,6 +268,7 @@ const dominions = [
     file: "uthara-dominion.html",
     title: "Uthara Dominion",
     h1: "Uthara Dominion",
+    image: "uthara-dominion.jpg",
     infobox: [
       ["Type", "Celestial dominion (annexation target in hardline plans)"],
       ["Book role", "Named with Capo Frois as region Thyra proposes to annex"],
@@ -289,6 +293,7 @@ const dominions = [
     file: "ratarajan-dominion.html",
     title: "Ratarajan Dominion",
     h1: "Ratarajan Dominion",
+    image: "ratarajan-dominion.jpg",
     infobox: [
       ["Type", "Celestial dominion"],
       ["Book theatre", "Hoa Quinzu system — warns <em>Diligent</em> of Mara Yama presence"],
@@ -314,6 +319,7 @@ const dominions = [
     file: "elohim.html",
     title: "Elohim",
     h1: "Elohim",
+    image: "elohim.jpg",
     infobox: [
       ["Type", "Ancient Dawn Era civilization; predates human arrival in the Cluster"],
       ["Era", "Dawn / early Cluster terraforming ages — long before Crown Accord"],

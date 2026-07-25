@@ -1,23 +1,25 @@
 # Illustration review — all 59 images against the book
 
-**Reviewed:** 25 July 2026 · every image opened and judged by eye · **59 of 59 complete**
+**Reviewed:** 25 July 2026 · every image opened and judged by eye · **74 of 74 briefed**
 
 `check-images.mjs` proves a file exists and is non-blank. It cannot read what is drawn or written
 inside a JPEG, so this sweep is the only thing standing between an invented fact and the live site.
 
-Two passes, reviewed separately:
+Three passes, reviewed separately:
 
 | Pass | Subjects | Result |
 |---|---|---|
 | **First** — characters and ships | 46 | 37 pass · 3 query · 6 fail → **all 46 pass** after regeneration |
 | **Second** — places, technology, factions | 13 | 12 pass · 1 query · 0 fail → **all 13 pass** after Heresy regen |
+| **Third** — remaining entity pages | 15 | Generated and wired 25 July 2026 evening; eye-pass required before claiming ship-quality |
 
 The second pass is written up under [Second pass](#second-pass--places-technology-and-factions);
-everything below it concerns the first.
+everything below it concerns the first. Third-pass slugs are listed under [Third pass](#third-pass--remaining-entity-pages).
 
 | Verdict | Count | Meaning |
 |---|---:|---|
 | **PASS** | 59 | First pass 46 after regen; second pass 13 after Heresy regen |
+| **THIRD (pending full eye-pass)** | 15 | Files + markup installed; spot-checked for text/clade traps |
 | **QUERY** | 0 | Cleared by regen |
 | **FAIL** | 0 | Cleared by regen |
 
@@ -96,12 +98,45 @@ posed Heresy figure would separate the clade plate from the character portrait.
 
 ---
 
+## Third pass — remaining entity pages
+
+**Generated 25 July 2026 evening · 15 subjects · fills every entity page that previously had an
+infobox and no plate.** Briefs live in `write-extra-visual-briefs.mjs`; generator-owned faction
+pages take `image:` in `gen-dominions.mjs`. Hubs updated so monograms become real shots where a
+file exists (factions hub crosses the card floor at ~81%).
+
+| Slug | Kind | Spot-check notes |
+|---|---|---|
+| `wynid` | location | Pearlescent royal-seat complex; no text |
+| `boksrock` | location | Rocky body under Engine-like beams; no text |
+| `centauri-cluster` | location | Dense starfield + habitat rings; no text |
+| `crown-dominion-systems` | location | Multi-system vista with capital georing; no map labels |
+| `entropy-drive` | technology | Propulsion core in bay; no gauge numbers |
+| `neural-interface` | technology | Implant / induction-pad study; no brand marks |
+| `uranics` | faction | Client aristocrats + livestone orbs (first draft used Edison bulbs — discarded) |
+| `elohim` | faction | Dawn Engine rings around terraforming world; first draft had hull script — cleaned |
+| `changelings` | faction | Gath-like labour + beetle transport forms; industrial yard |
+| `human-liberation` | faction | Arkship assembly rally; no readable slogans |
+| `mara-yama` | faction | Dark space citadel + gas giant fleet |
+| `talloch-te-dominion` | faction | Shipyard / habitat cluster fabrication |
+| `gomatu-dominion` | faction | Partial Dyson lattice under construction |
+| `ratarajan-dominion` | faction | Patrol station near gas giant (faint parchment border — not lettering) |
+| `uthara-dominion` | faction | Contested frontier habitats under fleet sky |
+
+**Still needs a full side-by-side eye-pass** like the first two (especially family-free, but
+cross-check Elohim vs Archimedes Engine / Dolod consistency, and Talloch-Te vs Travelers). Structural
+gates (`check-images`, infobox markup, SEO `og:image`) are green for all 74.
+
+---
+
 ## Regeneration log
 
 **2026-07-25 (post-review).** Regenerated all six FAIL and three QUERY subjects with a widened
 no-text constraint (*no caption bars, name plates, lettering, logos, brand marks*). Olomo
 prompt states *exactly four arms / two legs*. Jalgori-Tobu sisters produced via `image_edit`
 chained from the new Finn portrait so ancestry matches.
+
+**2026-07-25 (third pass).** Fifteen new plates for remaining entity pages (see above).
 
 | Slug | Prior defect | Regen check |
 |---|---|---|

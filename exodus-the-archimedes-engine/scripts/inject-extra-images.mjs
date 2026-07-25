@@ -12,7 +12,15 @@ const index = JSON.parse(
   fs.readFileSync(path.join(root, "docs", "visual-briefs", "index.json"), "utf8")
 );
 
-const GEN_FACTIONS = new Set(["heresy-dominion"]); // gen-dominions.mjs
+const GEN_FACTIONS = new Set([
+  "heresy-dominion",
+  "talloch-te-dominion",
+  "mara-yama",
+  "gomatu-dominion",
+  "uthara-dominion",
+  "ratarajan-dominion",
+  "elohim",
+]); // gen-dominions.mjs
 
 function dirFor(kind) {
   if (kind === "location") return "locations";

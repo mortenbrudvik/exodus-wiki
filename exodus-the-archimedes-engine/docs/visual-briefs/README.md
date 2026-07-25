@@ -62,4 +62,5 @@ well as the bottom.
 - Technology → `assets/images/technology/<slug>.jpg` (wide 16:9)
 - Factions → `assets/images/factions/<slug>.jpg` (wide 16:9)
 
-Second-pass illustrated extras (not full category coverage): Gondiar, Kelowan, Dolod, Anoosha, Hafnir; Archimedes Engine, ZPZ, livestone, mindline; Celestials, Heresy Dominion, Travelers, Crown Dominion.
+Second- and third-pass extras now cover **all** location, technology, and faction entity pages
+(not only the original selective shortlist). Characters and ships were already full.

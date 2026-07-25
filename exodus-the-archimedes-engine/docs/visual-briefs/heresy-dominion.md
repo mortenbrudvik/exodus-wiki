@@ -15,7 +15,6 @@
 ## Inference flags
 
 - Visual inference where the book is silent; no invented labels, dates, or place-names in the image.
-- Foreground hexapod is clade-representative, not a named individual; body plan chained from the Olomo portrait so arm count stays at four arms + two legs.
 
 ## Generation prompt
 
