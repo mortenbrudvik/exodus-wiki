@@ -61,6 +61,12 @@ const EXPECTED = [
   // page, which never mentions them.
   ["nightweid", "pages/characters/elsbeth-mcquillan.html"],
   ["saberstones", "pages/characters/elsbeth-mcquillan.html"],
+  // The Changelings page is where the setting's engineered underclass is explained, so the
+  // species names and the drug taken from them resolve there rather than to a passing user.
+  ["changelings", "pages/factions/changelings.html"],
+  ["gath", "pages/factions/changelings.html"],
+  ["moaksha", "pages/factions/changelings.html"],
+  ["rekaul", "pages/factions/changelings.html"],
 ];
 for (const [q, path] of EXPECTED) {
   const hits = rankResults(realIndex, q);

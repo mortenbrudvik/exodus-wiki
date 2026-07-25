@@ -749,6 +749,26 @@ window.WIKI_SEARCH_INDEX = [
     ]
   },
   {
+    "title": "Changelings",
+    "path": "pages/factions/changelings.html",
+    "category": "Factions",
+    "summary": "Peoples engineered sideways into niches; the Gath, the Moaksha, and the source of rekaul",
+    "keywords": [
+      "changelings",
+      "changeling",
+      "gath",
+      "moaksha",
+      "rekaul",
+      "engineered",
+      "niche",
+      "sideways",
+      "remnant era",
+      "underclass",
+      "groflesh",
+      "lokstrips"
+    ]
+  },
+  {
     "title": "Travelers",
     "path": "pages/factions/travelers.html",
     "category": "Factions",
