@@ -1,8 +1,16 @@
-# Book Wikis
+# Book Wikis — full-spoiler reading companions for novels
 
-Personal **full-spoiler** reading companions for novels — plain multi-page HTML wikis you can browse on desktop or add to an iPhone home screen.
+[![Deploy GitHub Pages](https://github.com/mortenbrudvik/my-books/actions/workflows/pages.yml/badge.svg)](https://github.com/mortenbrudvik/my-books/actions/workflows/pages.yml)
+
+Hand-written, **full-spoiler** reading-companion wikis for novels — plain multi-page static HTML with **no build step, no framework and no dependencies**. Browse on desktop or add to an iPhone home screen.
+
+Currently one wiki: **[*Exodus: The Archimedes Engine*](https://mortenbrudvik.github.io/my-books/exodus-the-archimedes-engine/)** by Peter F. Hamilton (2024, Random House Worlds) — **87 pages** covering characters, locations, factions, technology, timeline, plot and chapter summaries, with client-side search, 59 original illustrations, and a [sources page](https://mortenbrudvik.github.io/my-books/exodus-the-archimedes-engine/pages/sources.html) recording what is verified and what is reconstructed.
 
 > **Spoiler warning:** This repository and the live site are **public**. Articles assume you have finished the book.
+
+[![The arkship Diligent](exodus-the-archimedes-engine/assets/images/ships/arkship-diligent.jpg)](https://mortenbrudvik.github.io/my-books/exodus-the-archimedes-engine/pages/locations/arkship-diligent.html)
+
+<sub>The arkship *Diligent* — one of 59 original illustrations made for this wiki. They are **inferred, not canonical**: the novel fixes almost no one's appearance. See [Sources and provenance](https://mortenbrudvik.github.io/my-books/exodus-the-archimedes-engine/pages/sources.html).</sub>
 
 ## Live site
 
