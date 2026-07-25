@@ -14,6 +14,7 @@ const shell = (title, bodyMain) => `<!DOCTYPE html>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>${title} — Exodus Wiki</title>
   <link rel="stylesheet" href="../../assets/css/wiki.css">
+  <link rel="icon" href="../../assets/icons/favicon.svg" type="image/svg+xml">
 </head>
 <body data-root="../../">
   <a class="skip-link" href="#main-content">Skip to content</a>

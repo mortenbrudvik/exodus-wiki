@@ -169,6 +169,24 @@ for (const p of pages) {
   if (!/assets\/js\/search\.js/.test(src)) fail("chrome", `${r} does not load search.js`);
   if (!/<title>[^<]*— Exodus Wiki<\/title>/.test(src)) fail("chrome", `${r} title is not "… — Exodus Wiki"`);
 
+  // Favicon: every page must link a real icon asset with depth-correct relative href.
+  const iconHref = (src.match(/<link[^>]+rel="icon"[^>]*>/) || [])[0];
+  if (!iconHref) {
+    fail("chrome", `${r} has no favicon <link rel="icon">`);
+  } else {
+    const href = (iconHref.match(/href="([^"]+)"/) || [])[1];
+    if (!href) {
+      fail("chrome", `${r} favicon link has no href`);
+    } else {
+      const absIcon = path.resolve(path.dirname(p), href).replace(/\\/g, "/");
+      if (!fs.existsSync(absIcon)) {
+        fail("chrome", `${r} favicon href="${href}" does not resolve to a file`);
+      } else if (fs.statSync(absIcon).size === 0) {
+        fail("chrome", `${r} favicon resolves to an empty file`);
+      }
+    }
+  }
+
   const h1s = [...src.matchAll(/<h1[^>]*>/g)];
   if (h1s.length !== 1) fail("chrome", `${r} has ${h1s.length} h1 elements, expected 1`);
   if (/\{\{[A-Z_]+\}\}/.test(src)) fail("chrome", `${r} still contains a template placeholder`);
