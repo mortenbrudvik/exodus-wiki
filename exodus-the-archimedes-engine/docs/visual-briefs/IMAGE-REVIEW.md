@@ -160,9 +160,12 @@ chained from the new Finn portrait so ancestry matches.
 **2026-07-25 (companion).** *Infinite Totality* shell plate on `arcadias-moon.html` — see section above.
 
 **2026-07-25 (Arcadia’s Moon true hull).** Regenerated primary plate: golden geodesic sphere of trusses
-enclosing eight charcoal-bronze ovoids near a ringed giant. Prior freighter plate had burned-in hull
-lettering and contradicted p. 241 / the article’s own hull field. Flag-like colour patches on one
-module cleaned in a second pass. **PASS** — sphere + ovoid architecture matches the book; no text.
+enclosing interior ovoids near a ringed giant. Prior freighter plate had burned-in hull lettering and
+contradicted p. 241. **PASS** on architecture; no text.
+
+**2026-07-25 (sky-blue ovoids).** Recolour pass to sky-blue ovoids (secondary paraphrase; novel does not
+fix colour — article prose still omits it). Smoother capsule elements inside the golden cage; count
+reads ~eight under perspective. **PASS** as illustration of the atypical hull.
 
 | Slug | Prior defect | Regen check |
 |---|---|---|
