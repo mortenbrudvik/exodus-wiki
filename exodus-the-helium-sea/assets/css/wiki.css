@@ -1,0 +1,1228 @@
+/* Exodus wiki — "Starfield": dark-first, image-led reading companion.
+   See docs/superpowers/specs/2026-07-25-starfield-visual-direction-design.md
+
+   Dark is the default theme, not a fallback; the light theme is held to the same
+   standard. Colour is defined here and nowhere else. No web fonts: every page must
+   still render over file://, so the type is system stacks only. */
+
+:root {
+  color-scheme: dark;
+
+  --bg: #0a0e14;
+  --panel: #111823;
+  --raised: #1a2431;
+  --line: #293849;
+  --control-line: #5b6671;
+  --line-soft: #1a2532;
+  --text: #dce3ed;
+  --lead-text: #eaf0f8;
+  --muted: #8493a8;
+  --dim: #7f8b9c;
+  --accent: #4fc3d9;
+  --accent-dim: #2b7f92;
+  --accent-soft: rgba(79, 195, 217, 0.1);
+  --visited: #a99adc;
+  --visited-dim: #5b4f80;
+  --warn: #e8b25c;
+  --warn-bg: rgba(232, 178, 92, 0.07);
+  --warn-line: rgba(232, 178, 92, 0.24);
+  --info: #7fb8d8;
+  --info-bg: rgba(127, 184, 216, 0.08);
+  --info-line: rgba(127, 184, 216, 0.24);
+  --shot-bg: #05080c;
+
+  --sidebar-width: 15rem;
+  --content-max: 66ch;
+  --header-h: 3.4rem;
+  --radius: 0.55rem;
+
+  --sans: "Segoe UI", system-ui, -apple-system, Roboto, Ubuntu, Cantarell, "Noto Sans", sans-serif;
+  --mono: ui-monospace, "Cascadia Mono", "SFMono-Regular", Consolas, "Liberation Mono", monospace;
+  --font: var(--sans);
+}
+
+/* The light tokens are declared twice on purpose. Once for an explicit reader
+   choice, and once behind prefers-color-scheme for readers who have not chosen —
+   including readers with JavaScript off, who never get the data-theme stamp.
+   Plain CSS has no way to share one declaration block between a selector and a
+   media query, and honouring the OS preference without JS is worth 20 lines.
+   Keep the two blocks identical. */
+
+[data-theme="light"] {
+  color-scheme: light;
+
+  --bg: #f7f8fa;
+  --panel: #ffffff;
+  --raised: #eef1f5;
+  --line: #d6dce4;
+  --control-line: #8b8e93;
+  --line-soft: #e8ecf1;
+  --text: #151a21;
+  --lead-text: #0d1116;
+  --muted: #5a6472;
+  --dim: #666e7a;
+  --accent: #10627a;
+  --accent-dim: #8fc0cd;
+  --accent-soft: rgba(16, 98, 122, 0.07);
+  --visited: #6b4a8c;
+  --visited-dim: #c3aed6;
+  --warn: #8a5d10;
+  --warn-bg: #fdf6e6;
+  --warn-line: #e4c98c;
+  --info: #1c5f86;
+  --info-bg: #edf5fa;
+  --info-line: #bcd9e9;
+  --shot-bg: #0c1018;
+}
+
+@media (prefers-color-scheme: light) {
+  :root:not([data-theme]) {
+    color-scheme: light;
+
+    --bg: #f7f8fa;
+    --panel: #ffffff;
+    --raised: #eef1f5;
+    --line: #d6dce4;
+    --control-line: #8b8e93;
+    --line-soft: #e8ecf1;
+    --text: #151a21;
+    --lead-text: #0d1116;
+    --muted: #5a6472;
+    --dim: #666e7a;
+    --accent: #10627a;
+    --accent-dim: #8fc0cd;
+    --accent-soft: rgba(16, 98, 122, 0.07);
+    --visited: #6b4a8c;
+    --visited-dim: #c3aed6;
+    --warn: #8a5d10;
+    --warn-bg: #fdf6e6;
+    --warn-line: #e4c98c;
+    --info: #1c5f86;
+    --info-bg: #edf5fa;
+    --info-line: #bcd9e9;
+    --shot-bg: #0c1018;
+  }
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 16px;
+}
+
+body {
+  margin: 0;
+  font-family: var(--font);
+  font-size: 1.125rem;
+  color: var(--text);
+  background: var(--bg);
+  line-height: 1.72;
+  -webkit-font-smoothing: antialiased;
+}
+
+a {
+  color: var(--accent);
+  text-decoration: none;
+  border-bottom: 1px solid var(--accent-dim);
+}
+
+a:hover {
+  border-bottom-color: var(--accent);
+}
+
+a:visited {
+  color: var(--visited);
+  border-bottom-color: var(--visited-dim);
+}
+
+:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
+}
+
+code {
+  font-family: var(--mono);
+  font-size: 0.88em;
+  background: var(--raised);
+  border-radius: 3px;
+  padding: 0.08em 0.35em;
+}
+
+img {
+  max-width: 100%;
+}
+
+/* Keyboard users can jump the header and the 11-item nav. Visible only when focused. */
+.skip-link {
+  position: absolute;
+  left: -9999px;
+  top: 0;
+  z-index: 60;
+}
+
+.skip-link:focus {
+  left: 0;
+  display: inline-block;
+  margin: 0.5rem;
+  padding: 0.5rem 0.75rem;
+  background: var(--panel);
+  border: 2px solid var(--accent);
+  border-radius: 0.35rem;
+  color: var(--text);
+}
+
+/* ---------------------------------------------------------------- header */
+
+.site-header {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.75rem 1rem;
+  padding: 0.65rem 1.25rem;
+  min-height: var(--header-h);
+  background: var(--panel);
+  border-bottom: 1px solid var(--line);
+  position: sticky;
+  top: 0;
+  z-index: 20;
+}
+
+.site-title {
+  font-size: 0.98rem;
+  font-weight: 600;
+  letter-spacing: 0.005em;
+  color: var(--text);
+  border: 0;
+  margin-right: auto;
+}
+
+.site-title:visited {
+  color: var(--text);
+}
+
+.site-title:hover {
+  color: var(--accent);
+}
+
+.menu-toggle {
+  display: none;
+  border: 1px solid var(--control-line);
+  background: var(--raised);
+  color: var(--text);
+  padding: 0.4rem 0.75rem;
+  border-radius: 0.4rem;
+  cursor: pointer;
+  font: inherit;
+  font-size: 0.9rem;
+}
+
+.menu-toggle:hover {
+  border-color: var(--accent-dim);
+}
+
+/* The theme toggle is a real button whose name says what it will do; theme.js
+   rewrites the label and aria-label when the theme changes. */
+.theme-toggle {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.4rem;
+  min-height: 2.1rem;
+  padding: 0.35rem 0.7rem;
+  border: 1px solid var(--control-line);
+  background: var(--raised);
+  color: var(--muted);
+  border-radius: 0.4rem;
+  cursor: pointer;
+  font: inherit;
+  font-size: 0.82rem;
+}
+
+/* The button ships with the hidden attribute so it never appears without the
+   JavaScript that gives it meaning — but `hidden` is only a UA rule, and the
+   author `display: inline-flex` above outranks it. Without this the toggle is
+   visible and inert for every reader with JS off. Same trap the lightbox
+   already guards against further down. */
+.theme-toggle[hidden] {
+  display: none;
+}
+
+.theme-toggle:hover {
+  color: var(--text);
+  border-color: var(--accent-dim);
+}
+
+.theme-toggle svg {
+  width: 1rem;
+  height: 1rem;
+  flex: none;
+}
+
+/* ---------------------------------------------------------------- search */
+
+.search-form {
+  position: relative;
+  display: flex;
+  gap: 0.35rem;
+  min-width: min(100%, 18rem);
+  flex: 1 1 14rem;
+  max-width: 22rem;
+}
+
+/* --control-line, not --line: a form field has to be findable as a control.
+   The decorative hairline is under 1.4:1 against the header it sits on, which
+   is fine for a divider and not fine for the edge of an input. */
+.search-input {
+  flex: 1;
+  min-width: 0;
+  padding: 0.45rem 0.65rem;
+  border: 1px solid var(--control-line);
+  border-radius: 0.4rem;
+  background: var(--bg);
+  color: var(--text);
+  font: inherit;
+  font-size: 0.9rem;
+}
+
+.search-input::placeholder {
+  color: var(--dim);
+}
+
+.search-form button {
+  padding: 0.45rem 0.8rem;
+  border: 1px solid var(--accent-dim);
+  background: var(--accent-soft);
+  color: var(--accent);
+  border-radius: 0.4rem;
+  cursor: pointer;
+  font: inherit;
+  font-size: 0.9rem;
+  font-weight: 600;
+}
+
+.search-form button:hover {
+  border-color: var(--accent);
+}
+
+.search-dropdown {
+  display: none;
+  position: absolute;
+  top: calc(100% + 0.3rem);
+  left: 0;
+  right: 0;
+  background: var(--panel);
+  border: 1px solid var(--line);
+  border-radius: 0.5rem;
+  box-shadow: 0 12px 34px rgba(0, 0, 0, 0.45);
+  max-height: 20rem;
+  overflow: auto;
+  z-index: 30;
+}
+
+.search-dropdown.is-open {
+  display: block;
+}
+
+.search-hit {
+  display: block;
+  padding: 0.6rem 0.8rem;
+  border: 0;
+  border-bottom: 1px solid var(--line-soft);
+  color: inherit;
+}
+
+.search-hit:last-child {
+  border-bottom: 0;
+}
+
+.search-hit:hover,
+.search-hit:focus {
+  background: var(--raised);
+}
+
+.search-hit .hit-title {
+  font-weight: 600;
+  color: var(--accent);
+}
+
+/* Unscoped so the full results page styles its summary lines like the dropdown does. */
+.hit-meta {
+  font-size: 0.86rem;
+  line-height: 1.5;
+  color: var(--muted);
+}
+
+#search-results ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+#search-results li {
+  margin-bottom: 0.9rem;
+}
+
+.search-empty,
+.search-error {
+  padding: 0.75rem;
+  color: var(--muted);
+}
+
+/* ---------------------------------------------------------------- shell */
+
+.layout {
+  display: grid;
+  grid-template-columns: var(--sidebar-width) minmax(0, 1fr);
+  gap: 0;
+  min-height: calc(100vh - var(--header-h));
+}
+
+/* The sidebar stretches so its divider runs the full height of the page; the nav
+   inside it is what sticks. Making the sidebar itself sticky leaves the rule
+   ending wherever the link list happens to stop. */
+.sidebar {
+  background: var(--bg);
+  border-right: 1px solid var(--line);
+  padding: 1.35rem 0.8rem 2.5rem;
+  font-size: 0.92rem;
+}
+
+.sidebar nav {
+  position: sticky;
+  top: calc(var(--header-h) + 1.35rem);
+  max-height: calc(100vh - var(--header-h) - 3rem);
+  overflow-y: auto;
+}
+
+.sidebar nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.sidebar nav a {
+  display: block;
+  padding: 0.34rem 0.6rem;
+  border: 0;
+  border-radius: 0.35rem;
+  color: var(--text);
+}
+
+.sidebar nav a:visited {
+  color: var(--text);
+}
+
+.sidebar nav a:hover {
+  background: var(--raised);
+  color: var(--text);
+}
+
+/* The current page is a persistent state, so it must not look like a passing hover. */
+.sidebar nav a[aria-current="page"] {
+  background: var(--raised);
+  font-weight: 600;
+  box-shadow: inset 2px 0 0 var(--accent);
+}
+
+/* Group labels sit above each run of links. Added by the nav sweep; the rule is
+   harmless on pages that do not have them yet. */
+.sidebar .nav-label {
+  font-family: var(--mono);
+  font-size: 0.63rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--dim);
+  padding: 0 0.6rem;
+  margin: 1.35rem 0 0.3rem;
+}
+
+.sidebar .nav-label:first-child {
+  margin-top: 0;
+}
+
+.content {
+  padding: 2.2rem 2rem 5rem;
+}
+
+/* ---------------------------------------------------------------- article */
+
+/* grid-auto-rows: min-content keeps every row at its content height, so the tall
+   infobox spanning column 2 can no longer inflate the rows in column 1. That
+   inflation was the ~55px of dead space between every h1 and its lead. */
+.article {
+  max-width: calc(var(--content-max) + 21rem);
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: minmax(0, var(--content-max)) 17rem;
+  grid-auto-rows: min-content;
+  gap: 0 3rem;
+  align-items: start;
+  justify-content: center;
+}
+
+.article > header,
+.article > .lead,
+.article > section,
+.article > .stub-notice,
+.article > .spoiler-banner,
+.article > .article-footer,
+.article > .categories,
+.article > .connections,
+.article > p,
+.article > div,
+.article > ul,
+.article > ol {
+  grid-column: 1;
+}
+
+.article > .infobox {
+  grid-column: 2;
+  grid-row: 1 / span 200;
+  position: sticky;
+  top: calc(var(--header-h) + 1.5rem);
+  align-self: start;
+}
+
+/* Timeline and Chapters are mostly three-column tables, which a 66ch prose
+   measure squeezes into a column of wrapped fragments. Those pages get a wider
+   measure — their prose is a short intro, not long-form reading, so the usual
+   argument for a narrow measure does not apply.
+
+   Two guards, both learned the hard way. The min-width query is required, not
+   tidiness: :has() raises specificity above the plain `.article` rule that
+   collapses to one column at 1100px, so without it this kept a 17rem sidebar
+   track on a 390px phone and squeezed the infobox to 23px. And :not() keeps it
+   off .article--wide — sources.html has a table but no infobox, and it was
+   getting an empty 272px column reserved beside its content. */
+@media (min-width: 1101px) {
+  .article:not(.article--wide):has(.wiki-table) {
+    grid-template-columns: minmax(0, 82ch) 17rem;
+    max-width: calc(82ch + 21rem);
+  }
+}
+
+/* Hubs, rosters, and the Main Page carry no infobox: one full-width column. */
+.article--wide {
+  grid-template-columns: minmax(0, 1fr);
+  max-width: 74rem;
+}
+
+.article > header {
+  margin-bottom: 1.4rem;
+}
+
+.article h1 {
+  margin: 0;
+  font-size: 2.5rem;
+  line-height: 1.08;
+  letter-spacing: -0.025em;
+  font-weight: 600;
+}
+
+.lead {
+  font-size: 1.15rem;
+  line-height: 1.62;
+  color: var(--lead-text);
+  margin: 0 0 1.8rem;
+}
+
+.article section h2 {
+  font-family: var(--mono);
+  font-size: 0.74rem;
+  font-weight: 600;
+  letter-spacing: 0.17em;
+  text-transform: uppercase;
+  color: var(--dim);
+  margin: 2.6rem 0 0.85rem;
+  display: flex;
+  align-items: center;
+  gap: 0.9rem;
+  scroll-margin-top: calc(var(--header-h) + 1rem);
+}
+
+.article section h2::after {
+  content: "";
+  flex: 1;
+  height: 1px;
+  background: var(--line);
+}
+
+.article section h3 {
+  font-size: 1.05rem;
+  font-weight: 600;
+  margin: 1.5rem 0 0.4rem;
+}
+
+.article p {
+  margin: 0 0 1.1rem;
+}
+
+.article ul,
+.article ol {
+  padding-left: 1.2rem;
+}
+
+.article li {
+  margin-bottom: 0.35rem;
+}
+
+/* ---------------------------------------------------------------- infobox */
+
+.infobox {
+  background: var(--panel);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  overflow: hidden;
+  font-size: 0.92rem;
+}
+
+/* The h2 is the subject's name repeated; the portrait already says who this is,
+   so it becomes a quiet label rather than a second title. */
+.infobox h2 {
+  margin: 0;
+  padding: 0.7rem 0.95rem 0;
+  font-family: var(--mono);
+  font-size: 0.64rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--dim);
+  text-align: left;
+}
+
+.infobox-image {
+  position: relative;
+  margin: 0 0 0.2rem;
+  background: var(--shot-bg);
+}
+
+.infobox h2 + .infobox-image {
+  margin-top: 0.7rem;
+}
+
+.infobox-image img {
+  display: block;
+  width: 100%;
+  height: auto;
+  vertical-align: middle;
+  object-fit: cover;
+  aspect-ratio: 3 / 4;
+}
+
+.infobox-image--ship img,
+.infobox-image--wide img {
+  aspect-ratio: 16 / 9;
+}
+
+.infobox-image--zoomable {
+  cursor: zoom-in;
+}
+
+/* No outline-offset override here on purpose. lightbox.js puts these images in
+   the tab order, and a ring drawn inside the frame sits on arbitrary photo
+   content — teal on a dark space scene measured as low as 1.0:1. The global
+   :focus-visible ring lands outside the image, against a known surface. */
+
+.infobox dl {
+  margin: 0;
+  padding: 0.85rem 0.95rem 1.05rem;
+}
+
+.infobox dt {
+  font-family: var(--mono);
+  font-weight: 700;
+  margin-top: 0.9rem;
+  color: var(--dim);
+  font-size: 0.62rem;
+  text-transform: uppercase;
+  letter-spacing: 0.13em;
+}
+
+.infobox dt:first-child {
+  margin-top: 0;
+}
+
+.infobox dd {
+  margin: 0.15rem 0 0;
+  line-height: 1.5;
+}
+
+/* ------------------------------------------------- connections (generated) */
+
+.connections {
+  margin-top: 3rem;
+  padding-top: 1.4rem;
+  border-top: 1px solid var(--line);
+}
+
+.connections h2 {
+  font-family: var(--mono);
+  font-size: 0.74rem;
+  font-weight: 600;
+  letter-spacing: 0.17em;
+  text-transform: uppercase;
+  color: var(--dim);
+  margin: 0 0 1rem;
+}
+
+.connections ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(9.5rem, 1fr));
+  gap: 0.7rem;
+}
+
+.connections li {
+  margin: 0;
+}
+
+.connections a {
+  display: block;
+  border: 1px solid var(--line);
+  border-radius: 0.6rem;
+  overflow: hidden;
+  background: var(--panel);
+  transition: border-color 0.16s ease, transform 0.16s ease;
+}
+
+.connections a:hover {
+  border-color: var(--accent-dim);
+  transform: translateY(-2px);
+}
+
+.connections img {
+  display: block;
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+  object-position: 50% 16%;
+  background: var(--shot-bg);
+}
+
+.connections .conn-who {
+  display: block;
+  padding: 0.5rem 0.6rem 0.6rem;
+}
+
+.connections .conn-rel {
+  display: block;
+  font-family: var(--mono);
+  font-size: 0.58rem;
+  letter-spacing: 0.13em;
+  text-transform: uppercase;
+  color: var(--accent);
+  margin-bottom: 0.15rem;
+}
+
+.connections .conn-name {
+  display: block;
+  font-size: 0.86rem;
+  font-weight: 600;
+  color: var(--text);
+  line-height: 1.25;
+}
+
+/* ---------------------------------------------------------------- notices */
+
+.spoiler-banner {
+  background: var(--warn-bg);
+  border: 1px solid var(--warn-line);
+  border-radius: var(--radius);
+  padding: 0.7rem 0.95rem;
+  margin: 0 0 1.7rem;
+  font-size: 0.9rem;
+  line-height: 1.55;
+  color: var(--warn);
+}
+
+.spoiler-banner strong {
+  font-weight: 600;
+}
+
+.stub-notice {
+  background: var(--info-bg);
+  border: 1px solid var(--info-line);
+  border-radius: var(--radius);
+  padding: 0.65rem 0.9rem;
+  margin: 0 0 1.6rem;
+  font-size: 0.9rem;
+  line-height: 1.55;
+  color: var(--info);
+}
+
+.categories {
+  margin-top: 2.8rem;
+  padding-top: 0.9rem;
+  border-top: 1px solid var(--line);
+  font-family: var(--mono);
+  font-size: 0.7rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--dim);
+}
+
+.categories a {
+  margin-left: 0.55rem;
+  border: 0;
+  color: var(--muted);
+}
+
+.categories a:hover {
+  color: var(--accent);
+}
+
+/* ---------------------------------------------------------------- tables */
+
+.wiki-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 1rem 0 1.4rem;
+  font-size: 0.95rem;
+}
+
+.wiki-table th,
+.wiki-table td {
+  border-bottom: 1px solid var(--line);
+  padding: 0.55rem 0.7rem;
+  text-align: left;
+  vertical-align: top;
+}
+
+.wiki-table th {
+  font-family: var(--mono);
+  font-size: 0.62rem;
+  font-weight: 700;
+  letter-spacing: 0.13em;
+  text-transform: uppercase;
+  color: var(--dim);
+  border-bottom-color: var(--muted);
+  white-space: nowrap;
+}
+
+.wiki-table tbody tr:hover {
+  background: var(--panel);
+}
+
+/* ---------------------------------------------------------------- hubs */
+
+/* Grid rather than CSS columns, so a group is never split across the gutter. */
+.hub-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
+  gap: 0 2.5rem;
+  align-items: start;
+}
+
+.hub-list > section {
+  min-width: 0;
+}
+
+.hub-list ul {
+  margin-top: 0.3rem;
+  padding-left: 1.2rem;
+}
+
+.hub-list li {
+  margin-bottom: 0.4rem;
+}
+
+/* A card hub stacks its groups full width; the cards do the flowing, not the
+   groups. Left as the multi-column list grid, each group would get one narrow
+   lane and the cards inside it would be enormous. */
+.hub-list--cards {
+  grid-template-columns: minmax(0, 1fr);
+  gap: 2.75rem 0;
+}
+
+/* A hub that shows faces. The card is two elements, not one anchor: hub
+   descriptions carry their own links, and an <a> cannot contain an <a>. So the
+   picture and the name are the link, and the description sits beside it. */
+.hub-cards {
+  list-style: none;
+  margin: 0.6rem 0 0;
+  padding: 0;
+  display: grid;
+  gap: 1.5rem 1.1rem;
+}
+
+.hub-cards--portrait {
+  grid-template-columns: repeat(auto-fill, minmax(11rem, 1fr));
+}
+
+.hub-cards--wide {
+  grid-template-columns: repeat(auto-fill, minmax(15rem, 1fr));
+}
+
+.hub-card {
+  margin: 0;
+  min-width: 0;
+}
+
+.hub-card__link {
+  display: block;
+  border: 0;
+}
+
+.hub-card__shot {
+  display: block;
+  overflow: hidden;
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  background: var(--shot-bg);
+  transition: border-color 0.16s ease;
+}
+
+.hub-card__shot img {
+  display: block;
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+.hub-cards--portrait .hub-card__shot img {
+  aspect-ratio: 3 / 4;
+}
+
+.hub-cards--wide .hub-card__shot img {
+  aspect-ratio: 16 / 9;
+}
+
+/* Entries the illustrations do not cover get a letter plate rather than a gap
+   or a stand-in image — nothing is invented, and the grid stays regular. */
+.hub-card__shot--mono {
+  display: grid;
+  place-items: center;
+  background: var(--raised);
+  color: var(--dim);
+  font-size: 2.6rem;
+  font-weight: 600;
+  line-height: 1;
+}
+
+.hub-cards--portrait .hub-card__shot--mono {
+  aspect-ratio: 3 / 4;
+}
+
+.hub-cards--wide .hub-card__shot--mono {
+  aspect-ratio: 16 / 9;
+}
+
+.hub-card__name {
+  display: block;
+  margin-top: 0.55rem;
+  font-size: 1rem;
+  font-weight: 600;
+  line-height: 1.25;
+  color: var(--text);
+}
+
+.hub-card__link:hover .hub-card__shot {
+  border-color: var(--accent-dim);
+}
+
+.hub-card__link:hover .hub-card__name {
+  color: var(--accent);
+}
+
+.hub-card__role {
+  margin: 0.2rem 0 0;
+  font-size: 0.87rem;
+  line-height: 1.45;
+  color: var(--muted);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .hub-card__shot {
+    transition: none;
+  }
+}
+
+/* ---------------------------------------------------------------- lightbox */
+
+.wiki-lightbox {
+  position: fixed;
+  inset: 0;
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1.5rem;
+  box-sizing: border-box;
+}
+
+.wiki-lightbox[hidden] {
+  display: none !important;
+}
+
+.wiki-lightbox__backdrop {
+  position: absolute;
+  inset: 0;
+  background: rgba(4, 6, 10, 0.92);
+  cursor: zoom-out;
+}
+
+.wiki-lightbox__figure {
+  position: relative;
+  z-index: 1;
+  margin: 0;
+  max-width: min(96vw, 1400px);
+  max-height: 92vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.wiki-lightbox__img {
+  display: block;
+  max-width: 96vw;
+  max-height: 92vh;
+  width: auto;
+  height: auto;
+  object-fit: contain;
+  border-radius: 0.3rem;
+  box-shadow: 0 8px 44px rgba(0, 0, 0, 0.6);
+  background: var(--shot-bg);
+}
+
+.wiki-lightbox__close {
+  position: absolute;
+  top: 0.75rem;
+  right: 0.75rem;
+  z-index: 2;
+  width: 2.5rem;
+  height: 2.5rem;
+  border: 0;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.12);
+  color: #fff;
+  font-size: 1.6rem;
+  line-height: 1;
+  cursor: pointer;
+}
+
+.wiki-lightbox__close:hover,
+.wiki-lightbox__close:focus {
+  background: rgba(255, 255, 255, 0.22);
+  outline: 2px solid #fff;
+  outline-offset: 2px;
+}
+
+body.lightbox-open {
+  overflow: hidden;
+}
+
+/* ---------------------------------------------------------------- responsive */
+
+@media (max-width: 1100px) {
+  .article {
+    grid-template-columns: minmax(0, 1fr);
+    max-width: 46rem;
+  }
+
+  .article > .infobox {
+    grid-column: 1;
+    grid-row: auto;
+    order: -1;
+    position: static;
+    margin-bottom: 1.8rem;
+  }
+
+  .hub-list {
+    grid-template-columns: minmax(0, 1fr);
+  }
+}
+
+@media (max-width: 720px) {
+  body {
+    font-size: 1.0625rem;
+  }
+
+  .site-header {
+    padding-top: calc(0.65rem + env(safe-area-inset-top, 0px));
+    padding-left: calc(1rem + env(safe-area-inset-left, 0px));
+    padding-right: calc(1rem + env(safe-area-inset-right, 0px));
+  }
+
+  .menu-toggle {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 2.75rem;
+    min-width: 2.75rem;
+    padding: 0.45rem 0.75rem;
+  }
+
+  .site-title {
+    flex: 1 1 auto;
+    min-width: 0;
+  }
+
+  .theme-toggle {
+    min-height: 2.75rem;
+  }
+
+  .search-form {
+    flex: 1 1 100%;
+    max-width: none;
+    min-width: 0;
+    order: 3;
+  }
+
+  .search-input {
+    min-height: 2.75rem;
+    font-size: 1rem;
+  }
+
+  .search-form button {
+    min-height: 2.75rem;
+  }
+
+  .search-dropdown {
+    max-height: min(20rem, 50vh);
+    left: 0;
+    right: 0;
+  }
+
+  .layout {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .sidebar {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    width: min(18rem, 86vw);
+    max-height: none;
+    z-index: 40;
+    background: var(--panel);
+    border-right: 1px solid var(--line);
+    padding-top: calc(1rem + env(safe-area-inset-top, 0px));
+    padding-bottom: calc(2rem + env(safe-area-inset-bottom, 0px));
+    overflow-y: auto;
+    box-shadow: 4px 0 28px rgba(0, 0, 0, 0.4);
+  }
+
+  .sidebar.is-open {
+    display: block;
+  }
+
+  .sidebar nav {
+    position: static;
+    max-height: none;
+    overflow-y: visible;
+  }
+
+  .sidebar nav a {
+    padding: 0.7rem 0.75rem;
+    min-height: 2.75rem;
+  }
+
+  .sidebar-backdrop {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background: rgba(4, 6, 10, 0.6);
+    z-index: 35;
+  }
+
+  .sidebar-backdrop.is-open {
+    display: block;
+  }
+
+  body.nav-open {
+    overflow: hidden;
+  }
+
+  .content {
+    padding: 1.6rem 1rem 3rem;
+    padding-left: calc(1rem + env(safe-area-inset-left, 0px));
+    padding-right: calc(1rem + env(safe-area-inset-right, 0px));
+    padding-bottom: calc(3rem + env(safe-area-inset-bottom, 0px));
+  }
+
+  .article h1 {
+    font-size: 2rem;
+  }
+
+  /* One full-width 3:4 portrait is most of a phone screen, so force two up.
+     A percentage inside repeat(auto-fill, minmax()) does not resolve reliably,
+     which is why this is a breakpoint rather than a min(). */
+  .hub-cards--portrait {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 1.2rem 0.8rem;
+  }
+
+  /* Tables stack into labelled blocks rather than scrolling sideways. Chapters
+     is four columns; at 343px that wrapped its prose to two or three words a
+     line, and horizontal scrolling is a poor way to read a paragraph. Each cell
+     names its own column via data-label (scripts/label-table-cells.mjs), which
+     is why this survives tables of 2, 3 and 4 columns alike. */
+  .wiki-table,
+  .wiki-table tbody,
+  .wiki-table tr,
+  .wiki-table td {
+    display: block;
+    width: auto;
+  }
+
+  .wiki-table thead {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+  }
+
+  .wiki-table tr {
+    padding: 0.85rem 0;
+    border-bottom: 1px solid var(--line);
+  }
+
+  .wiki-table tr:last-child {
+    border-bottom: 0;
+  }
+
+  .wiki-table td {
+    border: 0;
+    padding: 0 0 0.2rem;
+  }
+
+  .wiki-table td[data-label]::before {
+    content: attr(data-label);
+    display: block;
+    margin: 0.6rem 0 0.1rem;
+    font-family: var(--mono);
+    font-size: 0.6rem;
+    font-weight: 700;
+    letter-spacing: 0.13em;
+    text-transform: uppercase;
+    color: var(--dim);
+  }
+
+  .wiki-table td:first-child[data-label]::before {
+    margin-top: 0;
+  }
+
+  .wiki-table tbody tr:hover {
+    background: none;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .connections a {
+    transition: none;
+  }
+
+  .connections a:hover {
+    transform: none;
+  }
+}
