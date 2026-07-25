@@ -40,7 +40,10 @@ A small **hub** lists the Exodus novels covered so far. Each book is a self-cont
 | Wiki | Book | Folder |
 |------|------|--------|
 | [Archimedes Engine Wiki](https://mortenbrudvik.github.io/exodus-wiki/exodus-the-archimedes-engine/) | *Exodus: The Archimedes Engine* (2024) | [`exodus-the-archimedes-engine/`](exodus-the-archimedes-engine/) |
-| *planned* | *Exodus: The Helium Sea* (2026) | — |
+| *scaffolded, not published* | *Exodus: The Helium Sea* (2026) | [`exodus-the-helium-sea/`](exodus-the-helium-sea/) |
+
+The Helium Sea folder holds structure and tooling only — no article coverage — and is excluded from
+the deployed site until it has articles. See its [README](exodus-the-helium-sea/README.md).
 
 Categories in a book wiki: characters, locations, factions, technology, timeline, plot, chapters.
 
@@ -56,6 +59,7 @@ Scope is the **novels**. The *Exodus* game shares the setting, but its lore is u
 │   ├── css/hub.css            # Hub styles
 │   └── icons/                 # App icons
 ├── exodus-the-archimedes-engine/   # Example book wiki
+├── exodus-the-helium-sea/          # Scaffold; pruned from the deploy until it has articles
 └── .github/workflows/pages.yml     # GitHub Pages deploy
 ```
 

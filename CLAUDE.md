@@ -12,8 +12,14 @@ Deployed to GitHub Pages from `main` by `.github/workflows/pages.yml`, which upl
 verbatim. **The repository and the live site are public.** Articles assume the reader has finished
 the book.
 
-Currently one wiki: `exodus-the-archimedes-engine/` (*Exodus: The Archimedes Engine*, Peter F.
-Hamilton, 2024).
+Two wikis, only one of them published:
+
+| Folder | Book | State |
+|---|---|---|
+| `exodus-the-archimedes-engine/` | *Exodus: The Archimedes Engine* (2024) | Live — 87 pages, 59 illustrations |
+| `exodus-the-helium-sea/` | *Exodus: The Helium Sea* (2026) | Scaffold — 4 pages, no article coverage, **pruned from the deploy** |
+
+See "The unpublished second wiki" below before touching the Helium Sea folder.
 
 ## Commands
 
@@ -43,6 +49,15 @@ node scripts/check-search-rank.mjs  # search folding and ranking
 node scripts/check-images.mjs       # brief, asset and infobox-markup coverage for every image
 node scripts/check-seo.mjs          # descriptions, canonicals, social tags, sitemap, robots.txt
 node scripts/check-lightbox.mjs     # WikiLightbox open/close, and that every page loads it
+```
+
+```bash
+# The four checks in the Helium Sea wiki. It has no images, so no check-images.mjs.
+cd exodus-the-helium-sea
+node scripts/check-wiki.mjs
+node scripts/check-search-rank.mjs
+node scripts/check-seo.mjs          # asserts this wiki is ABSENT from the sitemap
+node scripts/check-lightbox.mjs
 ```
 
 All five exit non-zero on failure. `check-wiki.mjs` additionally prints advisory **warnings** that
@@ -83,6 +98,30 @@ change if the domain ever does.
 The two generators write different line endings (celestials CRLF, dominions LF) and normalize the
 whole page at write time, because `seoRegion()` joins with `\n`. Don't "fix" either to match the
 other.
+
+## The unpublished second wiki
+
+`exodus-the-helium-sea/` is a scaffold: four pages, no article coverage, because the novel is still
+being read. **Do not write anything about book 2's story into it** — and never into book 1's pages,
+which are a companion to *The Archimedes Engine* and are read by people mid-duology.
+
+It is kept off the live site three ways:
+
+- pruned from the Pages artifact by the `rm -rf` line in `.github/workflows/pages.yml`;
+- absent from the hub `index.html` and from `sitemap.xml`;
+- its own `check-seo.mjs` **fails if any of its URLs appear in the sitemap**. That inversion is
+  deliberate — it is the opposite of book 1's assertion, so accidentally publishing the empty wiki
+  breaks a check instead of going unnoticed.
+
+Four scripts there are adaptations, not copies, and each carries a comment saying so:
+`check-wiki.mjs` (empty hub-category loop and empty `GENERATORS`, both of which hard-fail on files a
+category-less wiki lacks), `apply-seo.mjs` (no generator skip-set), `stamp-assets.mjs` (does not
+stamp the root hub — book 1 owns that line), and `check-lightbox.mjs` (unit test only; the
+structural pass needs `docs/visual-briefs/index.json`).
+
+`gen-sitemap.mjs` is **not** copied. The sitemap is site-wide and book 1 owns it; two copies would
+overwrite each other. Going live means hoisting that script to cover both books — the full sequence
+is in `docs/superpowers/specs/2026-07-25-exodus-helium-sea-scaffold-design.md` §5.
 
 ## The generated-pages trap
 
