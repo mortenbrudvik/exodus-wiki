@@ -1,14 +1,19 @@
-# Illustration review — the 46 character and ship images against the book
+# Illustration review — all 59 images against the book
 
-**Reviewed:** 25 July 2026 · every image opened and judged by eye · **46 of 46 complete**
+**Reviewed:** 25 July 2026 · every image opened and judged by eye · **59 of 59 complete**
 
 `check-images.mjs` proves a file exists and is non-blank. It cannot read what is drawn or written
 inside a JPEG, so this sweep is the only thing standing between an invented fact and the live site.
 
-> **Scope: 46 of 59.** A second illustration pass later added 13 subjects — 5 places, 4 technologies
-> and 4 factions. **None of them has been reviewed by eye**, so nothing has checked them for
-> burned-in text, real-world logos, or contradictions with the wiki. They ship unverified. The
-> failure criteria and method below apply unchanged when that sweep happens.
+Two passes, reviewed separately:
+
+| Pass | Subjects | Result |
+|---|---|---|
+| **First** — characters and ships | 46 | 37 pass · 3 query · 6 fail → **all 46 pass** after regeneration |
+| **Second** — places, technology, factions | 13 | **12 pass · 1 query · 0 fail** |
+
+The second pass is written up under [Second pass](#second-pass--places-technology-and-factions);
+everything below it concerns the first.
 
 | Verdict | Count | Meaning |
 |---|---:|---|
@@ -21,6 +26,64 @@ Historical first-pass tally (before regen): 37 pass · 3 query · 6 fail. Detail
 > **Judge families together, not image by image.** The first pass reviewed each portrait in
 > isolation and passed the Jalgori-Tobu siblings individually. Side by side they contradict the
 > wiki outright — see failure 6.
+
+---
+
+## Second pass — places, technology and factions
+
+**Reviewed 25 July 2026 · 13 subjects · 12 pass · 1 query · 0 fail.**
+
+**No burned-in text anywhere. No real-world logos. No clade contradictions.** That is the headline,
+because it is exactly what the first pass failed on. `write-extra-visual-briefs.mjs` appends a
+`NO_TEXT` clause far stronger than the original art direction — *"absolutely no text of any kind: no
+captions, no labels, no lettering, no logos, no brand marks, no map names, no UI chrome, no
+watermarks"* — and across 13 images it held. The fix worked.
+
+### QUERY — `faction/heresy-dominion`
+
+Canon-clean, but it is **not the image its brief asked for**. The brief specifies *"a vast spindly
+hexapod Celestial silhouette (exactly four arms, two legs) before a huge research wall"* — the
+delivered plate is a capital warship in a hangar, with the only figures small, robed and too distant
+to count limbs.
+
+Nothing in it contradicts the wiki: `heresy-dominion.html` says the Heresy field *"large individual
+warships"* whose *"individual hulls carry heavy defensive systems because the Heresy fields fewer
+traditional war fleets"*, and that they outscale Crown hulls like the *Alumata*. So it passes on
+accuracy and fails only on intent.
+
+The consequence is worth naming: the Heresy body plan — the four-arm hexapod build that was drawn
+wrong on Olomo and had to be regenerated twice — is now illustrated **nowhere except Olomo's
+portrait**. The one plate meant to establish the clade visually does not show it.
+
+### PASS — with observations
+
+| Image | Verdict |
+|---|---|
+| `location/gondiar` | Fertile client agricultural world: estate farmland, a coastal city, ringed giant overhead |
+| `location/kelowan` | Georing and Imperial Palace terraced into mountains, both canon. Composition reads as palace on one body with a ringed world beyond; the wiki puts both at Kelowan |
+| `location/dolod` | Iron-exotic gas giant with ancient Engine spars — and consistent with the separate Archimedes Engine plate, which is easy to get wrong across two images |
+| `location/anoosha` | Mining world: open-pit scars, industrial haze, the Pana-Seak orbital city. The Camurdy terrain reads as mesa and canyon rather than the mountains Finn crashes into |
+| `location/hafnir` | Estates, pale manors and a new settler camp — accurate to Finn's domain taking *Diligent* arrivals. But there is **no science-fictional cue anywhere in frame**; it reads as a present-day farm estate and is stylistically the odd one out |
+| `technology/archimedes-engine` | **Strong.** Ancient megastructure girdling a dark gas giant, matching the Dolod plate |
+| `technology/zpz-generator` | Compact drive core, nested coils, a human for scale in a service bay |
+| `technology/livestone` | Self-shaping silicate mid-reshape into vaulted Celestial corridors — the clearest render of a hard concept |
+| `technology/mindline` | **Strong.** Neural transfer between two Celestial silhouettes with prior-host faces in the stream, consistent with Makaio's portrait. Figures are deliberately faceless, which avoids inventing likenesses. Faint script-like marks in the memory threads are illegible and assert nothing |
+| `faction/celestials` | Tall elegant figures, bloodstone jewellery, livestone terrace — textbook clade grammar |
+| `faction/crown-dominion` | Palace mountain complex, georing, fleet, crystalline house heraldry. **Five** banners are shown; the Crown has **six** royal systems, so if banners read as houses, one is missing |
+| `faction/travelers` | Salvage yard, worn freighter hulls, EVA crews mid-repair. The ring **gate** is canon-supported — the wiki has *"multi-decade gate hops"* and Tinaja's *"Gate of Heaven"* — so it is not the FTL-portal contradiction it first looks like |
+
+### What the second pass says
+
+- **The widened negative prompt is doing real work.** Zero text across 13 images, against three
+  caption bars in 46 on the first pass.
+- **Briefs can be silently ignored.** Heresy passed every automated check and reads well, yet the
+  generator simply did not draw what was asked. Nothing but a human comparing brief to asset catches
+  that — `check-images.mjs` sees a file of the right name and size.
+- **Cross-image consistency held** where it mattered: Dolod against the Archimedes Engine, and
+  Mindline against Makaio. Worth checking deliberately, since the first pass failed exactly there
+  with the Jalgori-Tobu siblings.
+
+---
 
 ## Regeneration log
 

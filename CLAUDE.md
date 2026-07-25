@@ -225,10 +225,10 @@ Characters are 3:4; everything else is 16:9. `check-images.mjs` prints the curre
 All the injectors are idempotent and skip pages that already carry the markup.
 
 The illustrations are **inferred, not canonical** — no likeness is described in the novel.
-`docs/visual-briefs/IMAGE-REVIEW.md` records a full by-eye review of the original 46 (now all
-passing after regeneration). **The 13 second-pass subjects — the places, technology and factions —
-have never been reviewed by eye.** `check-images.mjs` cannot see inside a JPEG, so nothing has
-verified them against the rules below.
+`docs/visual-briefs/IMAGE-REVIEW.md` records a by-eye review of all 59: the first 46 all pass after
+regeneration, and the 13 second-pass subjects came back 12 pass / 1 query / 0 fail. **Every new
+illustration needs adding to that review — `check-images.mjs` cannot see inside a JPEG**, so an
+unreviewed asset is an unverified claim on a public page.
 
 Five rules follow, and every one has been violated in shipped assets:
 
