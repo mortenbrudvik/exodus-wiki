@@ -88,6 +88,10 @@ const EXPECTED = [
   // Indexed under the full name so the bare forename still matches as a substring.
   ["everett", "pages/characters/finn-jalgori-tobu.html"],
   ["everett callan mathias", "pages/characters/finn-jalgori-tobu.html"],
+  // The infobox illustrations are inferred, not canonical, so a reader looking for them must
+  // reach the page that says so rather than an article that merely contains one.
+  ["illustrations", "pages/sources.html"],
+  ["portraits", "pages/sources.html"],
 ];
 for (const [q, path] of EXPECTED) {
   const hits = rankResults(realIndex, q);

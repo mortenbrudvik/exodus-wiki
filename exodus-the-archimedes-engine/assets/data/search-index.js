@@ -1001,7 +1001,10 @@ window.WIKI_SEARCH_INDEX = [
       "about",
       "secondary sources",
       "franchise",
-      "chronology"
+      "chronology",
+      "illustrations",
+      "images",
+      "portraits"
     ]
   },
   {
