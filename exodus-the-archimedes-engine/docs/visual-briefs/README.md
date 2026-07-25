@@ -26,7 +26,7 @@ Maintainer-only notes for original encyclopedia illustrations. **Not** reader-fa
 | Hull | Class read |
 |---|---|
 | *Diligent* | Massive late-human **generation arkship** — city-scale modules, colony decks, utilitarian megastructure |
-| *Arcadia’s Moon* | Mid-size **Traveler charter** hull — modular, deniable, working freighter-explorer |
+| *Arcadia’s Moon* | Mid-size **Traveler charter** — golden geodesic sphere of trusses with eight interior ovoids; deniable (disguised as *Infinite Totality*) |
 | *Alumata* | Sleek Crown **archon ship** — elegant, intelligence yacht, smaller than Heresy capital hulls |
 | *Cybele’s Eagle* | Compact **deniable passenger** transport — civilian lines, not navy |
 | *Lestari* | Enfoe **commercial** starship — dynasty freighter, Traveler-adjacent commerce |

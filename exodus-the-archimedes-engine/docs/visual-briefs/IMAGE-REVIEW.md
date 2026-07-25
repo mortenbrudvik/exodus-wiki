@@ -142,9 +142,9 @@ shell fuselage that disguises the *Arcadia’s Moon*, so the plate lives as a se
 | Form | Cone base flaring into a closed sphere — matches the article and p. 817/book-2 docking shape |
 | Material | Pale ultrabonded fibre casing; geo-ring debris as provenance cue |
 | Text / logos | **None** |
-| Relation | Closed shell only — does not show the golden geodesic true hull (that remains the primary plate’s job, imperfectly) |
+| Relation | Closed shell only — true hull is the regenerated primary plate (golden geodesic + eight ovoids) |
 
-**Verdict: PASS** as a companion disguise plate.
+**Verdict: PASS** as a companion disguise plate. Pair with the primary plate: sphere vs closed cone-sphere shell.
 
 ---
 
@@ -158,6 +158,11 @@ chained from the new Finn portrait so ancestry matches.
 **2026-07-25 (third pass).** Fifteen new plates for remaining entity pages (see above).
 
 **2026-07-25 (companion).** *Infinite Totality* shell plate on `arcadias-moon.html` — see section above.
+
+**2026-07-25 (Arcadia’s Moon true hull).** Regenerated primary plate: golden geodesic sphere of trusses
+enclosing eight charcoal-bronze ovoids near a ringed giant. Prior freighter plate had burned-in hull
+lettering and contradicted p. 241 / the article’s own hull field. Flag-like colour patches on one
+module cleaned in a second pass. **PASS** — sphere + ovoid architecture matches the book; no text.
 
 | Slug | Prior defect | Regen check |
 |---|---|---|
@@ -306,7 +311,7 @@ These are consistent with the wiki. Notes are refinements, not defects.
 | `liliana` | Carries a glowing purple blade — the cherenkov blade she kills Marcellu with |
 | `elsbeth-mcquillan` | Shoulder patch reads *Hell welcomes careful drivers* — **canon**, it is an indexed keyword on her page |
 | `andino` | Shoulder patch reads `TRAVELER`, correctly using the faction's American-spelling proper noun |
-| `arcadias-moon`, `lestari` | Hull names lettered on the hull; both canon-correct |
+| `arcadias-moon`, `lestari` | Hull names lettered on the hull; both canon-correct (*Arcadia’s Moon* later regenerated to the geodesic true hull with no lettering — see regeneration log) |
 | `josias-aponi` | Background graffiti is garbled but reads "FREE"/"LIBERATION", thematically right for a liberation orator |
 | `polkadav` | Passengers visible in the windows — apt for the Jalgori-Tobu evacuation hull |
 | `cybeles-eagle` | Eagle emblem on the tail; civilian airliner lines, correctly "not navy" |
