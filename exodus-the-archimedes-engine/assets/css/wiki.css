@@ -799,6 +799,117 @@ img {
   margin-bottom: 0.4rem;
 }
 
+/* A card hub stacks its groups full width; the cards do the flowing, not the
+   groups. Left as the multi-column list grid, each group would get one narrow
+   lane and the cards inside it would be enormous. */
+.hub-list--cards {
+  grid-template-columns: minmax(0, 1fr);
+  gap: 2.75rem 0;
+}
+
+/* A hub that shows faces. The card is two elements, not one anchor: hub
+   descriptions carry their own links, and an <a> cannot contain an <a>. So the
+   picture and the name are the link, and the description sits beside it. */
+.hub-cards {
+  list-style: none;
+  margin: 0.6rem 0 0;
+  padding: 0;
+  display: grid;
+  gap: 1.5rem 1.1rem;
+}
+
+.hub-cards--portrait {
+  grid-template-columns: repeat(auto-fill, minmax(11rem, 1fr));
+}
+
+.hub-cards--wide {
+  grid-template-columns: repeat(auto-fill, minmax(15rem, 1fr));
+}
+
+.hub-card {
+  margin: 0;
+  min-width: 0;
+}
+
+.hub-card__link {
+  display: block;
+  border: 0;
+}
+
+.hub-card__shot {
+  display: block;
+  overflow: hidden;
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  background: var(--shot-bg);
+  transition: border-color 0.16s ease;
+}
+
+.hub-card__shot img {
+  display: block;
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+.hub-cards--portrait .hub-card__shot img {
+  aspect-ratio: 3 / 4;
+}
+
+.hub-cards--wide .hub-card__shot img {
+  aspect-ratio: 16 / 9;
+}
+
+/* Entries the illustrations do not cover get a letter plate rather than a gap
+   or a stand-in image — nothing is invented, and the grid stays regular. */
+.hub-card__shot--mono {
+  display: grid;
+  place-items: center;
+  background: var(--raised);
+  color: var(--dim);
+  font-size: 2.6rem;
+  font-weight: 600;
+  line-height: 1;
+}
+
+.hub-cards--portrait .hub-card__shot--mono {
+  aspect-ratio: 3 / 4;
+}
+
+.hub-cards--wide .hub-card__shot--mono {
+  aspect-ratio: 16 / 9;
+}
+
+.hub-card__name {
+  display: block;
+  margin-top: 0.55rem;
+  font-size: 1rem;
+  font-weight: 600;
+  line-height: 1.25;
+  color: var(--text);
+}
+
+.hub-card__link:hover .hub-card__shot {
+  border-color: var(--accent-dim);
+}
+
+.hub-card__link:hover .hub-card__name {
+  color: var(--accent);
+}
+
+.hub-card__role {
+  margin: 0.2rem 0 0;
+  font-size: 0.87rem;
+  line-height: 1.45;
+  color: var(--muted);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .hub-card__shot {
+    transition: none;
+  }
+}
+
 /* ---------------------------------------------------------------- lightbox */
 
 .wiki-lightbox {
