@@ -11,12 +11,13 @@
   --bg: #0a0e14;
   --panel: #111823;
   --raised: #1a2431;
-  --line: #22303f;
+  --line: #293849;
+  --control-line: #5b6671;
   --line-soft: #1a2532;
   --text: #dce3ed;
   --lead-text: #eaf0f8;
   --muted: #8493a8;
-  --dim: #5f6e83;
+  --dim: #7f8b9c;
   --accent: #4fc3d9;
   --accent-dim: #2b7f92;
   --accent-soft: rgba(79, 195, 217, 0.1);
@@ -53,12 +54,13 @@
   --bg: #f7f8fa;
   --panel: #ffffff;
   --raised: #eef1f5;
-  --line: #dde2e9;
+  --line: #d6dce4;
+  --control-line: #8b8e93;
   --line-soft: #e8ecf1;
   --text: #151a21;
   --lead-text: #0d1116;
   --muted: #5a6472;
-  --dim: #7b8593;
+  --dim: #666e7a;
   --accent: #10627a;
   --accent-dim: #8fc0cd;
   --accent-soft: rgba(16, 98, 122, 0.07);
@@ -80,12 +82,13 @@
     --bg: #f7f8fa;
     --panel: #ffffff;
     --raised: #eef1f5;
-    --line: #dde2e9;
+    --line: #d6dce4;
+    --control-line: #8b8e93;
     --line-soft: #e8ecf1;
     --text: #151a21;
     --lead-text: #0d1116;
     --muted: #5a6472;
-    --dim: #7b8593;
+    --dim: #666e7a;
     --accent: #10627a;
     --accent-dim: #8fc0cd;
     --accent-soft: rgba(16, 98, 122, 0.07);
@@ -207,7 +210,7 @@ img {
 
 .menu-toggle {
   display: none;
-  border: 1px solid var(--line);
+  border: 1px solid var(--control-line);
   background: var(--raised);
   color: var(--text);
   padding: 0.4rem 0.75rem;
@@ -230,13 +233,22 @@ img {
   gap: 0.4rem;
   min-height: 2.1rem;
   padding: 0.35rem 0.7rem;
-  border: 1px solid var(--line);
+  border: 1px solid var(--control-line);
   background: var(--raised);
   color: var(--muted);
   border-radius: 0.4rem;
   cursor: pointer;
   font: inherit;
   font-size: 0.82rem;
+}
+
+/* The button ships with the hidden attribute so it never appears without the
+   JavaScript that gives it meaning — but `hidden` is only a UA rule, and the
+   author `display: inline-flex` above outranks it. Without this the toggle is
+   visible and inert for every reader with JS off. Same trap the lightbox
+   already guards against further down. */
+.theme-toggle[hidden] {
+  display: none;
 }
 
 .theme-toggle:hover {
@@ -261,11 +273,14 @@ img {
   max-width: 22rem;
 }
 
+/* --control-line, not --line: a form field has to be findable as a control.
+   The decorative hairline is under 1.4:1 against the header it sits on, which
+   is fine for a divider and not fine for the edge of an input. */
 .search-input {
   flex: 1;
   min-width: 0;
   padding: 0.45rem 0.65rem;
-  border: 1px solid var(--line);
+  border: 1px solid var(--control-line);
   border-radius: 0.4rem;
   background: var(--bg);
   color: var(--text);
@@ -598,10 +613,10 @@ img {
   cursor: zoom-in;
 }
 
-.infobox-image--zoomable:focus {
-  outline: 2px solid var(--accent);
-  outline-offset: -2px;
-}
+/* No outline-offset override here on purpose. lightbox.js puts these images in
+   the tab order, and a ring drawn inside the frame sits on arbitrary photo
+   content — teal on a dark space scene measured as low as 1.0:1. The global
+   :focus-visible ring lands outside the image, against a known surface. */
 
 .infobox dl {
   margin: 0;

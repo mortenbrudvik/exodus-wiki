@@ -429,9 +429,16 @@ note(`  generated        ${drift ? "FAIL" : "ok"} (25 pages from 2 scripts)`);
  * 8. Thin pages should say so
  * ------------------------------------------------------------------ */
 const THIN_WORDS = 120;
+/* A category index is a list: its length measures how many articles the category
+ * happens to contain, not how well it covers anything, and a stub notice on one
+ * would be a lie. pages/technology/index.html sits at 119 words purely because
+ * technology has six articles — it fell under the line when the hubs moved to
+ * card markup and lost their " — " separators, which this counter treats as
+ * words. The heuristic is for articles; hubs are exempt. */
+const isCategoryIndex = (r) => /^pages\/[^/]+\/index\.html$/.test(r);
 for (const p of pages) {
   const r = rel(p);
-  if (NO_LEAD_OK.has(r)) continue;
+  if (NO_LEAD_OK.has(r) || isCategoryIndex(r)) continue;
   const body = (html.get(p).split(/<main class="content"[^>]*>/)[1] || "").replace(/<[^>]+>/g, " ");
   const words = body.split(/\s+/).filter(Boolean).length;
   if (words < THIN_WORDS && !/class="stub-notice"/.test(html.get(p))) {

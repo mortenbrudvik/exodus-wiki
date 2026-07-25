@@ -15,7 +15,9 @@
   <meta property="og:image" content="https://mortenbrudvik.github.io/exodus-wiki/assets/icons/icon-512.png">
   <meta name="twitter:card" content="summary_large_image">
   <!-- seo:end -->
-  <meta name="theme-color" content="#0a0e14">
+  <!-- Media-scoped, or the browser chrome contradicts a light page. -->
+  <meta name="theme-color" content="#0a0e14" media="(prefers-color-scheme: dark)">
+  <meta name="theme-color" content="#f7f8fa" media="(prefers-color-scheme: light)">
   <!-- The standard name plus the Apple one: Safari still needs the prefixed
        form, and Chrome now warns that it is deprecated on its own. -->
   <meta name="mobile-web-app-capable" content="yes">

@@ -167,6 +167,32 @@ Dark is the default and light is a full override — neither is a fallback. The 
 - `hub.css` duplicates the palette rather than importing it: a book wiki must stay self-contained,
   and the hub must not depend on any one book's assets. The two are kept in step by hand.
 
+### Contrast floors these tokens have to clear
+
+Both themes, measured against every surface the token actually sits on — `--bg`, `--panel`, and
+`--raised` (the mobile sidebar drawer, which is the binding case and easy to forget):
+
+| Token | Floor | Why |
+|---|---|---|
+| `--dim` | 4.5:1 | It carries *small* text everywhere — section headings at 0.74rem, infobox `dt` at 0.62rem, nav group labels, table headers, the search placeholder. None of it qualifies for the 3:1 large-text allowance. |
+| `--control-line` | 3:1 | WCAG 1.4.11. Used by `.search-input`, `.menu-toggle`, `.theme-toggle` — a form field has to be findable as a control. |
+| `--line` | none | Decorative hairlines and card edges only. Deliberately below 3:1; do not use it on a control. |
+
+`--dim` shipped at 3.43:1 on `--panel` and was corrected to `#7f8b9c` / `#666e7a`, the quietest
+values clearing 4.5:1 on all three surfaces. Re-check with a contrast calculator before changing
+either, and remember `--dim` must stay quieter than `--muted` or the hierarchy inverts.
+
+Two cascade traps, both already sprung once:
+
+- **`hidden` loses to an author `display`.** `.theme-toggle` sets `display: inline-flex`, which
+  outranks the UA `[hidden] { display: none }` — the button shipped visible and inert for readers
+  with JavaScript off. Any element that ships `hidden` needs its own `[hidden]` guard;
+  `.wiki-lightbox` and `.theme-toggle` both carry one.
+- **Never draw a focus ring inside an image.** `lightbox.js` puts every infobox illustration in the
+  tab order. A ring with a negative `outline-offset` lands on arbitrary photo content — teal on a
+  dark space scene measured 1.0:1. Let the global `:focus-visible` ring sit outside, against a
+  known surface.
+
 ## Search architecture
 
 `assets/js/search.js` exposes `window.WikiSearch` and wires the header dropdown, the `search.html`
