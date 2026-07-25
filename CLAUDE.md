@@ -138,8 +138,14 @@ These are enforced conventions, not suggestions, and past passes have violated t
   Wikipedia, addressing the reader, and real-world critical reception inside in-universe articles.
 - **Provenance lives on one page.** `pages/sources.html` is the only home for sourcing,
   verification dates and confidence notes. Article prose does not discuss its own reliability.
-- **Prefer a short accurate stub over invented canon.** Thin pages carry
-  `<p class="stub-notice">`; see `pages/locations/boksrock.html`.
+- **Prefer a short accurate stub over invented canon.** A stub notice marks coverage that is
+  *scope-limited relative to the novel* — the subject has more to it than the article can
+  responsibly say. It is **not** a word-count badge. `pages/locations/boksrock.html` carries one at
+  ~295 words because the novel only ever treats Boksrock as an endgame instrument, and the notice
+  says exactly that. A 100-word generated walk-on that already states everything the novel
+  establishes is **complete, not a stub**, and must not be labelled one — that would imply missing
+  material that does not exist. So thin-but-complete pages outnumbering stub-notice pages is the
+  expected state, not a defect; the 8 thin-page warnings are those pages.
 - **Names** use the spelling on the subject's own page (its `<h1>` and search-index title), reused
   everywhere.
 - **Ship names** are italicised when they mean the hull (`the <em>Diligent</em>'s ZPZ`) and left
