@@ -9,6 +9,15 @@ Maintainer-only notes for original encyclopedia illustrations. **Not** reader-fa
 - **Ships:** Exterior hull plate, three-quarter view, readable silhouette, space or drydock lighting; 16:9 feel.
 - **Unity:** Cool-neutral palette with warm skin/hull accents; encyclopedia seriousness (no comic speech, no UI chrome, no watermark text).
 - **Originality:** Guided by novel + wiki research only. Do not reproduce official EXODUS marketing art.
+- **Period fit — the costume must belong to the era.** The novel is set around 42,000 AD, tens of
+  thousands of years after the Sol exodus, so nothing may borrow a garment from Earth's recent past:
+  no lounge suit, necktie or cravat, no twentieth-century dress collar and cuffs, no trench coat or
+  notch lapels, no dog tags or modern rank chevrons, and no Georgian or Victorian mouldings (dado
+  rails, wainscot, cornices) in a room. Build status and role from **cut, seam, fastening and
+  material** — standing and mandarin collars, asymmetric closures, seamed panels, unfamiliar
+  fabrics. `marcellu` and `gyvoy-enfoe` are the reference plates; `FAR_FUTURE_DRESS` in
+  `write-visual-briefs.mjs` is the clause. This is easy to miss because it is not text, not canon
+  and not clade: ten review passes went by with a man in a suit and tie on a public page.
 - **Naturalism (preferred, owner 26 July 2026):** `carolien-amaia` is the reference plate. Aim for
   restrained and photographic — real skin texture, plain even light, an uncluttered background, and
   one clear focal ornament — over the ornate, gem-encrusted, heavily-patterned look most of the
@@ -115,6 +124,9 @@ part of the record:
   past a `no text` clause the generator read as being about captions.
 - **Compare the delivered image to the prompt that asked for it, by eye, every time.** Nothing else
   in the pipeline can.
+- **Check period fit.** Added as a criterion only at the eleventh pass, after `gyvoy-enfoe` was
+  found wearing a suit and tie. Ten passes had checked text, canon, clade and material and never
+  asked whether the clothes belonged to the era.
 
 **`inference[]` in `write-visual-briefs.mjs` is documentation — only `prompt` reaches the
 generator.** Anything that must hold in the delivered image goes in the prompt string. Family

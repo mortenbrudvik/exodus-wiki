@@ -58,6 +58,16 @@ const BLOODSTONE_GUARD = `any bloodstone visible is in faint turquoise and gold 
  * panels, console readouts and dog tags all shipped past a `no text` clause the generator read as
  * being about captions and watermarks. Naming the *scenery* is what closes it.
  */
+/**
+ * Period fit. Ten passes checked burned-in text, invented heraldry, canon and clade, and never once
+ * asked whether the clothes belonged to the era. Gyvoy Enfoe shipped in a lounge suit and necktie —
+ * an 1860s Western garment — in a story set around 42,000 AD. Marcellu is the counter-example worth
+ * copying: mandarin collar, seamed panels, no lapels, and he still reads as a sharp commercial
+ * operator without borrowing anything from Earth's recent past.
+ */
+const FAR_FUTURE_DRESS =
+  "Costume must belong to the far future, not to Earth's recent past: no lounge suit, no necktie, bow tie or cravat, no dress-shirt collar and cuffs of twentieth-century cut, no trench coat, no notch lapels, no dog tags, rank chevrons or webbing of modern military pattern, and no Georgian or Victorian interior mouldings such as dado rails, wainscot panelling or cornices. Convey status and role through cut, seam, fastening and material instead — standing or mandarin collars, asymmetric closures, seamed panels, unfamiliar fabrics.";
+
 const noTextAnywhere = (badgeException = "") =>
   "Plain even light and an uncluttered background. NO TEXT ANYWHERE IN THE FRAME, on the subject or behind them: no signs, no signage, no neon lettering, no shopfronts, no billboards, no screens, no display panels, no readouts, no holographic interfaces, no console text, no dog tags, no identity discs, no name tapes, no stencilled markings, " +
   (badgeException
@@ -211,7 +221,7 @@ const briefs = [
     ],
     clothing: "Gondiar city detective layers — smart-casual coat, neural-link earpiece optional",
     setting: "Rain-slick Santa Rosa night streets soft-focus",
-    prompt: `${STYLE} Upper-body portrait of Terence Wilson-Fletcher, a 24-year-old detective on a far-future colony city: sharp-eyed young man with a thoughtful intense expression, short neat hair, a dark detective coat over civilian layers, subtle earpiece. Human investigator aesthetic. A rain-wet street at night behind him, thrown far out of focus into soft coloured bokeh with no legible shapes — no shop signs, no neon lettering, no billboards, no screens. ${NO_TEXT_ANYWHERE}`,
+    prompt: `${STYLE} Upper-body portrait of Terence Wilson-Fletcher, a 24-year-old detective on a far-future colony city: sharp-eyed young man with a thoughtful intense expression, short neat hair, a dark weatherproof investigator overcoat cut with a standing collar and seamed panels over civilian layers, subtle earpiece — NOT a trench coat, no notch lapels, no storm flap, no belted waist. ${FAR_FUTURE_DRESS} Human investigator aesthetic. A rain-wet street at night behind him, thrown far out of focus into soft coloured bokeh with no legible shapes — no shop signs, no neon lettering, no billboards, no screens. ${NO_TEXT_ANYWHERE}`,
     inference: ["Exact ethnicity not fixed — mixed urban Gondiar look"],
     image: "assets/images/characters/terence-wilson-fletcher.jpg",
   },
@@ -862,7 +872,7 @@ const briefs = [
     ],
     clothing: "Expensive offworld financier suit, Traveler-adjacent luxury",
     setting: "Deal table with arkship model bokeh",
-    prompt: `${STYLE} Upper-body portrait of Gyvoy Enfoe as the charming offworld financier cover identity: polished human man with a too-smooth confident smile, expensive dark suit with subtle high-tech cufflinks, immaculate hair. Deal-maker who attaches to a liberation project. Warm negotiation-room light in a plain quiet room — no holographic displays, no data panels, no screens, no wrist readouts. ${NO_TEXT_ANYWHERE}`,
+    prompt: `${STYLE} Upper-body portrait of Gyvoy Enfoe as the charming offworld financier cover identity: polished human man with a too-smooth confident smile and immaculate hair, wearing an exquisitely tailored dark coat-tunic with a standing collar and an asymmetric closure — expensive through cut, seam and fabric, with NO lapels, NO necktie and NO dress shirt. ${FAR_FUTURE_DRESS} Deal-maker who attaches to a liberation project. Warm light in a plain quiet room of bare undecorated walls — no dado rail, no wainscot, no cornice, no holographic displays, no data panels, no screens, no wrist readouts. ${NO_TEXT_ANYWHERE}`,
     inference: ["True operator may be Celestial (Dagon network) — illustrate the public Gyvoy face"],
     image: "assets/images/characters/gyvoy-enfoe.jpg",
   },

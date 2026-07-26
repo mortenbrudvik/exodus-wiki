@@ -147,6 +147,45 @@ The prohibition binds to the garment rather than to the bloodstone — "never a 
 Malquilvo's reads "never ruby or crimson**, tear-shaped jewellery**". Fixing this means putting the
 noun inside the constant or ending the clause with punctuation.
 
+## Eleventh pass — period fit, a criterion the first ten never applied
+
+**26 July 2026 · 2 subjects · 2 pass.** Prompted by a question the review process should have asked
+itself ten passes earlier: *does the Gyvoy Enfoe image fit the timeline?*
+
+It did not. He was wearing a **two-piece notch-lapel lounge suit, a four-in-hand necktie and a
+dress shirt with French cuffs**, against a plaster wall with a **wooden dado rail** — a necktie is a
+Western garment from the 1860s and a dado rail is Georgian moulding, in a novel set around
+42,000 AD. It read as a 2020s corporate headshot, and it had passed the ninth pass two hours
+earlier because that pass checked it only for holo-panel text.
+
+**The gap was in the criteria, not the eye.** Every pass so far had asked: is there burned-in text?
+invented heraldry? a canon contradiction? a clade error? the wrong bloodstone? None asked whether
+the clothes belonged to the era. The eighth pass even recorded Toše's dog tags as "twentieth-century
+military iconography" without generalising the point, while a suit and tie sat two portraits away.
+
+| Subject | Was | Now |
+|---|---|---|
+| `gyvoy-enfoe` | Lounge suit, necktie, French cuffs, dado rail | Tailored coat-tunic, **standing collar, asymmetric closure**, no lapels or tie; bare undecorated wall |
+| `terence-wilson-fletcher` | Classic **trench coat** with notch lapels — 1940s noir detective | Weatherproof overcoat with a standing collar and seamed panels; glowing in-ear device |
+
+**`marcellu` is why this was diagnosable.** Regenerated two passes earlier, he wears a mandarin
+collar with seamed panels, no lapels and obviously non-Earth earpiece hardware — and still reads
+instantly as a sharp commercial operator. Setting him beside Gyvoy made the defect obvious and gave
+the fix its target: convey the role through cut and fastening, never by importing the costume.
+
+Neither change costs canon. The novel fixes nothing about what either man wears — Gyvoy's only
+physical fact is that his body is later found to be a shell — so the financier look was inference
+throughout, and there was an anachronism to remove but nothing to preserve.
+
+`FAR_FUTURE_DRESS` now carries the rule, and it is written into the site-wide art direction in
+[README.md](README.md) so the next batch cannot quietly reintroduce it.
+
+**Still worth a look under this criterion:** `tose`. The eighth pass stripped his dog tags,
+stencils and crossed-rifles tattoo, but the silhouette underneath — belt-fed ammunition, a
+contemporary rifle, modern plate carrier — is still twenty-first-century soldier. Not a canon
+contradiction, and he is a human mercenary so hard kit is defensible, but it is the same import
+Gyvoy's suit was.
+
 ## Tenth pass — the seven QUERY portraits cleared. Nothing outstanding.
 
 **26 July 2026 · 7 subjects · 7 pass · 0 fail.** With this pass **all 74 illustrations on the site

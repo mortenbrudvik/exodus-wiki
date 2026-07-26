@@ -442,6 +442,11 @@ Three lessons from those passes are worth carrying into any new art:
 - **Count what the text counts, and check the material as well as the colour.** Olomo shipped with
   the wrong eye count for three passes because the brief never mentioned eyes; bloodstone was fixed
   from red to turquoise while staying a faceted gem, which the novel rules out just as firmly.
+- **Check period fit.** The novel is set around 42,000 AD, so no costume may borrow from
+  Earth's recent past — no suit and tie, no trench coat, no dog tags, no dado rails. Ten review
+  passes missed a man in a lounge suit and necktie because they only ever asked about text,
+  canon, clade and material. `FAR_FUTURE_DRESS` carries the rule; `marcellu` and `gyvoy-enfoe`
+  are the reference plates.
 - **A shared constant is not a shared fix.** The bloodstone clause was described as a one-line
   change to every Celestial brief and reached 6 of 16, and `${BLOODSTONE}` splices mid-noun-phrase
   so the prohibition binds to the garment. Verify a sweep landed rather than assuming it did.
