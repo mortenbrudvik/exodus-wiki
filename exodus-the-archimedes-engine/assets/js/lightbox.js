@@ -121,7 +121,7 @@
   function enhanceTriggers(doc) {
     doc = getDoc(doc);
     if (!doc.querySelectorAll) return;
-    var nodes = doc.querySelectorAll(".infobox-image");
+    var nodes = doc.querySelectorAll(".infobox-image, .look-plate");
     for (var i = 0; i < nodes.length; i++) {
       var box = nodes[i];
       if (box.getAttribute("data-lightbox-ready") === "1") continue;
@@ -134,9 +134,30 @@
         box.setAttribute("aria-label", "View full " + label);
       }
       if (box.classList && box.classList.add) {
-        box.classList.add("infobox-image--zoomable");
+        if (box.classList.contains("look-plate")) {
+          box.classList.add("look-plate--zoomable");
+        } else {
+          box.classList.add("infobox-image--zoomable");
+        }
       }
     }
+  }
+
+  function isLightboxTrigger(node) {
+    if (!node) return false;
+    if (node.classList && node.classList.contains) {
+      return (
+        node.classList.contains("infobox-image") ||
+        node.classList.contains("look-plate")
+      );
+    }
+    if (typeof node.className === "string") {
+      return (
+        node.className.indexOf("infobox-image") !== -1 ||
+        node.className.indexOf("look-plate") !== -1
+      );
+    }
+    return false;
   }
 
   function findInfoboxImage(target, doc) {
@@ -144,24 +165,12 @@
       // Fallback walk for minimal fixtures without Element.closest
       var node = target;
       while (node && node !== doc) {
-        if (
-          node.classList &&
-          node.classList.contains &&
-          node.classList.contains("infobox-image")
-        ) {
-          return node;
-        }
-        if (
-          typeof node.className === "string" &&
-          node.className.indexOf("infobox-image") !== -1
-        ) {
-          return node;
-        }
+        if (isLightboxTrigger(node)) return node;
         node = node.parentNode || node.parentElement;
       }
       return null;
     }
-    return target.closest(".infobox-image");
+    return target.closest(".infobox-image, .look-plate");
   }
 
   function onActivate(box) {

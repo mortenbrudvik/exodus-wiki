@@ -7,16 +7,18 @@
 | **Clade / type** | Human mercenary (Lidon-linked) |
 | **Role** | Deniable operator; opens book dumping Finn; cherenkov blade |
 | **Image path** | `assets/images/characters/liliana.jpg` |
+| **Companion image** | assets/images/characters/liliana-civilian.jpg (coquette); liliana-commercial.jpg (emissary); liliana-disguise.jpg (late pale broader-nose / Antoinette-2burg) |
 
 ## Physical / design cues (research)
 
-- **In the field she wears a lightweight bioware muscle outfit** that makes her “look like a beefed-up wrestler whose skin had been stripped away” — exposed musculature, not plate armour
+- **In the field she wears a lightweight bioware muscle outfit** that makes her “look like a beefed-up wrestler whose skin had been stripped away” — exposed musculature, not plate armour; earthdragon bioware from Lidon
 - Off duty she dresses subdued and dark, and plays the coquette when a job needs it
-- Mercenary face across decades of world-time; Lidon underworld chic
+- Commercial emissary cover on Anoosha: smart high-collar trade dress beside Guillrameo
+- Late disguise (not natural face): much broader nose, skin almost albino pale; alias Antoinette-2burg on the Cybele’s Eagle
 
 ## Clothing / finish
 
-Two distinct looks: the flayed-musculature bioware combat suit, and subdued dark civilian wear with a cherenkov-blade sheath
+Four documented presentations: bioware muscle field kit (infobox); dark civilian/coquette; commercial emissary; late pale broader-nose disguise
 
 ## Setting / composition
 
@@ -24,7 +26,7 @@ Aircraft hatch / Anoosha cloud haze memory
 
 ## Inference flags
 
-- Hair, skin and eye colour are not fixed. The “much broader nose, and a skin that was almost albino it was so pale” in the later chapters is a **disguise she puts on**, not her face
+- Hair, skin and eye colour are not fixed for her natural look. The “much broader nose, and a skin that was almost albino it was so pale” in the later chapters is a **disguise she puts on**, not her face — companion plate `liliana-disguise.jpg`
 
 ## Generation prompt
 
@@ -35,4 +37,4 @@ Highly detailed cinematic sci-fi encyclopedia illustration, rich textures, sharp
 ## Sources
 
 - Novel, p. 58: “Liliana’s lightweight bioware muscle outfit, which made her look like a beefed-up wrestler whose skin had been stripped away”
-- Wiki article `pages/characters/liliana.html`
+- Wiki article `pages/characters/liliana.html` (Looks and covers)

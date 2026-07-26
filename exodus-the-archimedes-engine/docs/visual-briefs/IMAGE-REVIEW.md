@@ -1362,6 +1362,23 @@ Clean with nothing to add: `acelynn`, `avone-valerio`, `bekket`, `carolien-amaia
 
 ---
 
+## Companion plates — Liliana looks (26 July 2026)
+
+Not separate `index.json` subjects: three companion JPEGs beside the existing `liliana` infobox
+portrait, shown in the article’s **Looks and covers** gallery. Identity anchored from the shipped
+muscle-suit plate via image-edit; reviewed by eye against the brief and novel.
+
+| File | Role | Verdict |
+|---|---|---|
+| `liliana.jpg` (infobox) | Field kit — earthdragon bioware muscle suit | **PASS** (prior) |
+| `liliana-civilian.jpg` | Subdued dark civilian / coquette | **PASS** — same face; high-collar far-future dark dress; blade; no text |
+| `liliana-commercial.jpg` | Anoosha commercial emissary | **PASS** — same face; smart high-collar trade dress; no logos |
+| `liliana-disguise.jpg` | Late pale broader-nose mask / Antoinette-2burg | **PASS** — almost-albino skin, clearly broader nose, high standing collar without zip; no text |
+
+Lightbox extended so `.look-plate` opens like `.infobox-image`.
+
+---
+
 ## What this sweep says about the process
 
 - **The clade grammar works.** Where the wiki fixes a trait, the images follow it — bloodstone,
