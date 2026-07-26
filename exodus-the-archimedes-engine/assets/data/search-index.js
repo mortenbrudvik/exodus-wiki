@@ -340,7 +340,7 @@ window.WIKI_SEARCH_INDEX = [
     "title": "Liliana",
     "path": "pages/characters/liliana.html",
     "category": "Characters",
-    "summary": "Lidon mercenary; dumps Finn; kills Marcellu; Gyvoy/Bekket ops; Josias extraction",
+    "summary": "Lidon mercenary; Quinitai mole who dumps Finn; kills Marcellu; Gyvoy/Bekket ops; Josias extraction",
     "keywords": [
       "liliana",
       "mercenary",
@@ -353,7 +353,12 @@ window.WIKI_SEARCH_INDEX = [
       "lidon",
       "bekket",
       "cybele",
-      "cherenkov blade"
+      "cherenkov blade",
+      "quinitai",
+      "antoinette",
+      "antoinette-2burg",
+      "guillrameo",
+      "pana-seak"
     ]
   },
   {
