@@ -72,6 +72,29 @@ bejewelled.
 
 See individual `*.md` briefs in this folder. Filenames match page slugs.
 
+## Generating an image
+
+Nothing in this repo generates images — no script here calls an image model, and the JPEGs arrive
+from outside it. The path used for `carolien-amaia` on 26 July 2026, which is the one to reuse:
+
+**Grok MCP plugin → `grok_generate_image`**, model **`grok-imagine-image-quality`**.
+
+- **The `image` alias is stale and 404s.** It resolves to `grok-2-image-1212`, which the API no
+  longer serves. Name `grok-imagine-image-quality` (or `grok-imagine-image`) explicitly. Check with
+  `grok_models` if that changes again.
+- **Cost is negligible** — about $0.003 an image, so generate 3 and choose, never 1 and hope.
+- **`response_format: "url"` returns temporary links.** Download them immediately (`curl -o`) or
+  they expire. Base64 works too but floods the transcript with a megabyte of data.
+- **The tool takes no size or aspect argument.** Portrait prompts came back 864×1152, which is
+  exactly the 3:4 characters need. **Whether it will produce 16:9 for ships, places, technology and
+  factions is untested** — if it will not, those need a different route or a post-crop.
+
+The loop: take the prompt **verbatim from the brief** (that is the whole point of keeping it there),
+generate three, open every one, install the best, re-run the five checks, and log the verdict in
+[IMAGE-REVIEW.md](IMAGE-REVIEW.md). If the render drops a constraint, do not just retry — move that
+constraint to the front of the prompt, restate it as a prohibition, and **update the brief to the
+wording that actually worked**, so the recorded prompt stays the one that produced the shipped file.
+
 ## Review
 
 `check-images.mjs` cannot see inside a JPEG, so delivered assets are checked by eye. Results are in

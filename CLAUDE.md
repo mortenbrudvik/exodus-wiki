@@ -410,6 +410,14 @@ Two rules the last two scripts in that table encode, both deliberate:
 
 All the injectors are idempotent and skip pages that already carry the markup.
 
+**Nothing in the repo generates the images themselves** — no script calls an image model, and the
+JPEGs arrive from outside it. The route used for `carolien-amaia` is the Grok MCP plugin's
+`grok_generate_image` with model `grok-imagine-image-quality`; the `image` alias is stale and 404s,
+it costs about $0.003 an image so always generate three and choose, and portrait prompts come back
+864×1152, which is the 3:4 characters need. Whether it yields 16:9 for the wide subjects is
+untested. Full loop, including what to do when a render drops a constraint, is under "Generating an
+image" in `docs/visual-briefs/README.md`.
+
 The illustrations are **inferred where the novel is silent — which is most subjects, but not all.**
 Re-reading the authorized publisher excerpt recovered real descriptions for eight characters, so
 check the book before assuming a likeness is free to invent; the briefs were written from role and
