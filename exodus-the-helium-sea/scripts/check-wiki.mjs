@@ -127,10 +127,8 @@ note(`  index            ${failures.some((f) => f.startsWith("index")) ? "FAIL" 
 /* ------------------------------------------------------------------ *
  * 3. Hub coverage — every page reachable from its category hub
  * ------------------------------------------------------------------ */
-// No category hubs yet: this wiki has no article coverage. Add a category name
-// here the moment pages/<category>/index.html exists, or its articles can go
-// unreachable without failing anything.
-for (const category of []) {
+// Category hubs that must list every page under pages/<category>/.
+for (const category of ["factions"]) {
   const hub = `pages/${category}/index.html`;
   const hubSrc = html.get(ROOT + "/" + hub);
   if (!hubSrc) {

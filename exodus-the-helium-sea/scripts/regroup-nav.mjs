@@ -9,7 +9,8 @@
  * nav *labels*, so a hand-edited page fails with "sidebar nav differs across
  * pages".
  *
- * Idempotent: a page that already carries this nav is left alone.
+ * Idempotent: a page whose nav already matches buildNav() is left alone.
+ * Re-run after changing NAV_GROUPS so every page picks up the new labels.
  */
 import fs from "fs";
 import path from "path";
@@ -21,7 +22,14 @@ const SKIP_DIRS = new Set([".git", "docs", "node_modules", "scripts", "assets", 
 
 /** Groups, in render order. Targets are relative to the wiki root. */
 export const NAV_GROUPS = [
-  ["This wiki", [["index.html", "Main Page"], ["pages/book.html", "Book"]]],
+  [
+    "This wiki",
+    [
+      ["index.html", "Main Page"],
+      ["pages/book.html", "Book"],
+    ],
+  ],
+  ["Articles", [["pages/factions/index.html", "Factions"]]],
   // Outside the wiki root: one more ../ than everything else.
   ["Elsewhere", [["../index.html", "All book wikis"]]],
 ];
@@ -72,11 +80,10 @@ function walk(dir, out = []) {
 if (process.argv[1] && import.meta.url === pathToFileURL(process.argv[1]).href) {
   const pages = walk(ROOT).sort();
   let changed = 0;
+  let current = 0;
 
   for (const p of pages) {
     const src = fs.readFileSync(p, "utf8");
-    if (src.includes('class="nav-label"')) continue;
-
     const rel = path.relative(ROOT, p).replace(/\\/g, "/");
     const root = (src.match(/data-root="([^"]*)"/) || [])[1];
     if (root === undefined) {
@@ -88,13 +95,17 @@ if (process.argv[1] && import.meta.url === pathToFileURL(process.argv[1]).href) 
     const nav = buildNav(root, rel).split("\n").join(eol);
     const next = src.replace(/^[ \t]*<nav aria-label="Wiki">[\s\S]*?<\/nav>/m, nav);
     if (next === src) {
-      console.error(`regroup-nav: ${rel} has no sidebar nav to replace`);
-      process.exit(1);
+      if (!/<nav aria-label="Wiki">/.test(src)) {
+        console.error(`regroup-nav: ${rel} has no sidebar nav to replace`);
+        process.exit(1);
+      }
+      current += 1;
+      continue;
     }
 
     fs.writeFileSync(p, next);
     changed += 1;
   }
 
-  console.log(`regroup-nav: ${changed} page(s) regrouped, ${pages.length - changed} already grouped`);
+  console.log(`regroup-nav: ${changed} page(s) regrouped, ${current} already current`);
 }

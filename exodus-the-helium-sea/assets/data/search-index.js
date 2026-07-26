@@ -3,7 +3,7 @@ window.WIKI_SEARCH_INDEX = [
     "title": "Main Page",
     "path": "index.html",
     "category": "Main",
-    "summary": "Structure in place; article coverage not yet written",
+    "summary": "Helium Sea companion; first faction articles underway",
     "keywords": [
       "home",
       "start",
@@ -50,5 +50,35 @@ window.WIKI_SEARCH_INDEX = [
       "coverage",
       "spoilers"
     ]
+  },
+  {
+    "title": "Factions",
+    "path": "pages/factions/index.html",
+    "category": "Factions",
+    "summary": "Celestial dominions and polities named in The Helium Sea",
+    "keywords": [
+      "factions",
+      "dominions",
+      "celestials",
+      "polities"
+    ]
+  },
+  {
+    "title": "Eternal Unanimity Dominion",
+    "path": "pages/factions/eternal-unanimity-dominion.html",
+    "category": "Factions",
+    "summary": "Celestial dominion at the centre of the Centauri Cluster; stub",
+    "keywords": [
+      "eternal unanimity",
+      "unanimity",
+      "eternal unanimity dominion",
+      "celestial",
+      "dominion",
+      "centauri cluster",
+      "quichi",
+      "centre",
+      "center"
+    ]
   }
 ]
+;
