@@ -415,15 +415,25 @@ Re-reading the authorized publisher excerpt recovered real descriptions for eigh
 check the book before assuming a likeness is free to invent; the briefs were written from role and
 clade grammar and are vaguer than the text they claim to follow.
 
-`docs/visual-briefs/IMAGE-REVIEW.md` records the by-eye review across three cohorts of subjects —
-46 characters and ships, 13 places, technology and factions, and 15 remaining entity pages — plus a
-fourth pass re-checking the first cohort against that recovered book text. **All 74 have now had a
-full eye-pass: 67 signed off, 7 open fails** — six portraits that contradict the book, and
-`ratarajan-dominion`, which ships a card-mount border its own prompt forbade. Individual
-regenerations are logged with dates. **Every new illustration needs adding to that review —
-`check-images.mjs` cannot see inside a JPEG**, so an unreviewed asset is an unverified claim on a
-public page. To check the invariant rather than trusting this paragraph, confirm every slug in
-`index.json` appears in `IMAGE-REVIEW.md`.
+`docs/visual-briefs/IMAGE-REVIEW.md` records the by-eye review over six passes: three that checked
+the art against the briefs, two that checked the briefs against the novel and re-opened most of the
+cast, and a sixth that opened the 30 replacement files. **Current state: 74 briefed · 59 signed off ·
+6 query · 9 fail.** Individual regenerations are logged with dates. **Every new illustration needs
+adding to that review — `check-images.mjs` cannot see inside a JPEG**, so an unreviewed asset is an
+unverified claim on a public page. To check the invariant rather than trusting this paragraph,
+confirm every slug in `index.json` appears in `IMAGE-REVIEW.md`.
+
+Three lessons from those passes are worth carrying into any new art:
+
+- **Only `prompt` reaches the generator** — but a correct prompt is not sufficient either. Four
+  replacements contradict a description written into their own `prompt` string, so a delivered
+  image has to be compared against the prompt that asked for it, by eye, every time.
+- **Count what the text counts, and check the material as well as the colour.** Olomo shipped with
+  the wrong eye count for three passes because the brief never mentioned eyes; bloodstone was fixed
+  from red to turquoise while staying a faceted gem, which the novel rules out just as firmly.
+- **A shared constant is not a shared fix.** The bloodstone clause was described as a one-line
+  change to every Celestial brief and reached 6 of 16, and `${BLOODSTONE}` splices mid-noun-phrase
+  so the prohibition binds to the garment. Verify a sweep landed rather than assuming it did.
 
 Five rules follow, and every one has been violated in shipped assets:
 

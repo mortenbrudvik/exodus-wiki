@@ -1,4 +1,4 @@
-# Illustration review — 74 illustrations against the book, 43 signed off
+# Illustration review — 74 illustrations against the book, 59 signed off
 
 **Reviewed:** 25–26 July 2026 · every image opened and judged by eye · **74 of 74 briefed**
 
@@ -33,20 +33,118 @@ everything below it concerns the first. Third-pass slugs are listed under [Third
 
 | Verdict | Count | Meaning |
 |---|---:|---|
-| **PASS** | 43 | First, second and third pass after regen, less everything the fourth and fifth passes re-opened |
-| **QUERY** | 16 | Bloodstone recolour shipped 26 July 2026; still need individual eye-pass after recolour |
-| **FAIL** | 15 | 13 regenerated 26 July 2026 against book text (see regeneration log; re-eye-pass before restoring PASS), plus `andino` and `medusa` found by the fifth pass and **not yet regenerated** |
+| **PASS** | 59 | Signed off, including 16 of the 30 replacements opened in the sixth pass |
+| **QUERY** | 6 | `helena-chione`, `asahi-iryna`, `radwarno`, `uulana`, `malquilvo`, `ramona-ursule` — bloodstone rendered as faceted crystal or set jewellery rather than a matte growth |
+| **FAIL** | 9 | `carolien-amaia`, `inessa-pierina`, `bekket`, `luus`, `zuberi-dulcina`, `siskala`, `avone-valerio` from the sixth pass, plus `andino` and `medusa` still **not regenerated** |
 
-43 + 16 + 15 = 74. The fourth and fifth passes are why the signed-off count fell from 67; nothing
-regressed in the art, the standard it is measured against changed from the briefs to the book.
-Replacement files for the first 13 FAIL subjects, the 16 QUERY Celestials, and
-`factions/celestials.jpg` are on disk as of 26 July 2026. **`andino` and `medusa` are outstanding.**
+59 + 6 + 9 = 74. The signed-off count went 67 → 43 → 59: the fourth and fifth passes changed the
+standard from the briefs to the book, and the [sixth](#sixth-pass--the-30-replacements-opened)
+checked the replacements that answered them. **`andino` and `medusa` remain outstanding.**
 
 Historical first-pass tally (before regen): 37 pass · 3 query · 6 fail. Detail of that pass is kept below for process lessons; **shipped files are the regenerations** listed under [Regeneration log](#regeneration-log).
 
 > **Judge families together, not image by image.** The first pass reviewed each portrait in
 > isolation and passed the Jalgori-Tobu siblings individually. Side by side they contradict the
 > wiki outright — see failure 6.
+
+---
+
+## Sixth pass — the 30 replacements opened
+
+**26 July 2026 · all 30 regenerated files opened · 17 pass · 6 query · 7 fail.**
+
+Every replacement judged against the recovered book text, the clade grammar, and — new to this pass
+— **its own generation prompt**, so a miss can be attributed to the brief or to the render.
+
+### The headline fixes, all confirmed by eye
+
+| Subject | What the book demanded | Delivered |
+|---|---|---|
+| `dejean` | a woman, gray hair, haggard, "one happy old lady" | Correct on every count |
+| `olomo` | four eyes, cones level with the shoulders, reptilian blue-green, arm pairs that differ | **Eyes counted: four.** Cones correct, skin correct, lower arms end in a triple claw |
+| `josias-aponi` | thickest beard Finn had seen, gray-blue eyes, no text | Beard and eyes correct; the `FREE…` graffiti and `LIBE_ATION` stencil are gone |
+| `stethos-thierry` | scarlet-and-gray robes, bloodstone petals on the skull, connection bulb at the top of the spine | All three present; the spine bulb is unmistakable |
+| `makaio` | growth over skull *and cheeks*, crown of scalloped horns, toga, no facial expression | The best plate in the set — entombed and rigid, exactly as described |
+| `lord-gahiji` | robes "like badly fitting curtains", a cap of **black and green curlicues** | Inverted back correctly; the green-curlicue cap is there and the invented eye emblem is gone |
+| `elsbeth-mcquillan` | eyes as "light gray cymech spheres", no text | Blank spheres, and every one of the five lettering defects cleared |
+| `eleanor-aponi` | dark hair, no stencil | Stencil replaced with deliberately blank patches |
+| `thyra`, `valdier` | bloodstone not crimson | Both corrected; Valdier is properly impassive and his collar glyphs are gone |
+| `ratarajan-dominion` | no card mount | Full-bleed now, no readable hull markings |
+
+### FAIL — the prompt was right and the render ignored it
+
+A failure mode the earlier passes never saw. In these four the brief carries the recovered
+description **in the `prompt` string**, where it does reach the generator, and the image contradicts
+it anyway. Nothing in the pipeline compares a delivered image to the prompt that asked for it.
+
+| Subject | Prompt asks for | Image delivers |
+|---|---|---|
+| `carolien-amaia` | "glossy raven-black hair hanging straight almost to her waist"; indigo and platinum robes | **Bald.** Cream and teal robes |
+| `inessa-pierina` | "a wide starburst of **ORANGE** bloodstone horns radiating outward like a crude, heavy sculpture" | Turquoise shoulder clusters and a delicate circlet. The one queen the novel makes orange got the generic turquoise |
+| `bekket` | "long unkempt **auburn** hair falling loose… deliberately less groomed than everyone around him" | Neat, slicked-back **black** hair |
+| `luus` | "a beguilingly young, almost girlish face" | A lined, middle-aged face |
+
+`inessa-pierina` is the sharpest case: her orange is the evidence the fifth pass used to prove
+bloodstone colour is per-wearer, and the replacement recoloured her to the default anyway.
+
+### FAIL — new burned-in text and invented heraldry
+
+The fourth pass cleared lettering from three portraits. Three different ones have since acquired it.
+
+- **`zuberi-dulcina`** — six discrete gold **runic glyphs** float in the background, plus a large
+  invented sunburst emblem on the wall. Her prompt ends "no text, no watermark". Her bloodstone is
+  also faceted crystal despite the prompt saying "not faceted gemstone".
+- **`siskala`** — a **tiger's head** device repeated on both pauldrons, chest, belt buckle and
+  helmet, with tiger faces on the wall behind and a tiger-tail motif on the sash. Nothing in the
+  wiki gives Siskala a tiger. This is invented house heraldry at the scale the no-text rule exists
+  to prevent.
+- **`avone-valerio`** — blue plaques with inscription-like marks on the collar and chest. The whole
+  figure also reads as a Warhammer 40,000 space marine: crested helm-hair, ornate pauldrons, spiked
+  sunburst device.
+- *(`bekket` again)* — spread-eagle heraldic banners behind him, an Earth heraldic form invented for
+  the setting.
+
+### QUERY — bloodstone is the right colour and the wrong material
+
+The recolour worked: **no red or crimson bloodstone anywhere in the 30.** But the README's other
+half — "a matte calcium-like growth of the body, never a faceted cut gem" — did not land.
+
+`asahi-iryna`, `radwarno`, `uulana` and `zuberi-dulcina` render it as **faceted, glowing crystal
+prisms**; `helena-chione`, `luus`, `lord-jolav` and `clavissa` as **polished cabochons set in gold**
+— removable jewellery, the exact reading the Makaio finding ruled out. `helena-chione` also still
+misses "**modest**": she is the most heavily ornamented figure in the set.
+
+`malquilvo` weeps green fluid from eyes and mouth. That looks like a prompt artefact — see the
+splice bug below, which renders his clause as "…never ruby or crimson, tear-shaped jewellery".
+
+### Two defects in the prompt machinery, not the art
+
+**1. The bloodstone clause reached 6 of 16 briefs.** The fourth pass called the fix "a one-line
+change to every Celestial brief's prompt". Ten of the sixteen never got it:
+
+`clavissa`, `lord-jolav`, `siskala`, `neusch`, `asahi-iryna`, `avone-valerio`, `acelynn`,
+`radwarno`, `dagon`, `uulana`.
+
+All ten came out turquoise anyway, so the tally looks fixed — but it is fixed **by luck, not by
+instruction**, and any regeneration can put the red back. `asahi-iryna`'s prompt still asks for
+"crystalline accents", which is precisely what it delivered.
+
+**2. `${BLOODSTONE}` is spliced mid-noun-phrase.** The constant ends "…and never ruby or crimson",
+and every call site appends a noun, so the rendered prompts read:
+
+> …not faceted gemstone, and never ruby or crimson **mantle** / **crown** / **diadem** /
+> **cuff ornaments** / **collar**
+
+The prohibition binds to the garment rather than to the bloodstone — "never a crimson mantle" — and
+Malquilvo's reads "never ruby or crimson**, tear-shaped jewellery**". Fixing this means putting the
+noun inside the constant or ending the clause with punctuation.
+
+### Clade drift on the three military Celestials
+
+`avone-valerio`, `radwarno` and `siskala` are all "Imperial Celestial" in their own briefs, but all
+three read as ordinary weathered human soldiers — no elongation, no post-human beauty, human skin
+and proportions. Height is not testable in an upper-body crop, so this is a QUERY on style rather
+than a countable contradiction, but three for three is a pattern.
 
 ---
 

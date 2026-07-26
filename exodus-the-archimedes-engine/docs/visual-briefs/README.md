@@ -67,12 +67,24 @@ See individual `*.md` briefs in this folder. Filenames match page slugs.
 ## Review
 
 `check-images.mjs` cannot see inside a JPEG, so delivered assets are checked by eye. Results are in
-[IMAGE-REVIEW.md](IMAGE-REVIEW.md). **All 74 subjects have now had a full eye-pass: 67 signed off,
-7 open fails.** The first sweep of 46, on 25 July 2026, came back 37 pass / 3 query / 6 fail and
-those fails were regenerated; a second pass cleared 13 places, technology and factions; the third
-pass of 15 entity pages was completed on 26 July 2026 — 14 pass, and `ratarajan-dominion` fails for
-shipping a card-mount border its own prompt forbade. A fourth pass then re-opened six first-pass
-portraits that contradict book text recovered from the publisher excerpt.
+[IMAGE-REVIEW.md](IMAGE-REVIEW.md). **Current state: 74 briefed · 59 signed off · 6 query · 9 fail.**
+
+Six passes so far. The first three checked the art against the briefs; the fourth and fifth checked
+the briefs against the novel and re-opened most of the cast; the sixth opened the 30 replacement
+files. That sixth pass confirmed the big fixes — Olomo's four eyes, Makaio's entombing growth,
+Dejean's sex, and every burned-in caption the fourth pass listed — and **no red bloodstone survives
+anywhere**. What it also found:
+
+- Four portraits contradict a description that *is* in their own prompt (`carolien-amaia` bald
+  against "raven hair almost to her waist"; `inessa-pierina` turquoise against **ORANGE**; `bekket`
+  neat black against "long unkempt auburn"; `luus` middle-aged against "beguilingly young").
+- New invented heraldry and lettering in `zuberi-dulcina`, `siskala`, `avone-valerio`, `bekket`.
+- Bloodstone is the right colour but often the wrong **material** — faceted crystal or set
+  jewellery rather than a matte growth.
+- The bloodstone clause reached only **6 of the 16** Celestial briefs, and `${BLOODSTONE}` splices
+  mid-phrase so the prohibition binds to the garment ("never ruby or crimson *mantle*").
+
+`andino` and `medusa` are still not regenerated.
 
 **`inference[]` in `write-visual-briefs.mjs` is documentation — only `prompt` reaches the
 generator.** Anything that must hold in the delivered image goes in the prompt string. Family
