@@ -33,7 +33,7 @@ Throne-side shadow with fleet viewport
 ## Generation prompt
 
 ```
-Highly detailed cinematic sci-fi encyclopedia illustration, rich textures, sharp focus, painterly digital art with photographic detail, soft volumetric lighting, no text, no watermark, no UI chrome. Portrait of Thyra as Helena-Thyra, Imperial Celestial usurper queen: tall post-human young woman with elongated elegant features and cold ruthless intense green eyes, her long hair dressed in artful braids bound around the bloodstone spurs at her head and drawn up to leave the neural pad at the nape of her neck exposed, wearing sharp black and crimson armour-robes with a turquoise-and-gold calcium bloodstone (never red, never ruby) collar-crown. Hardline power. Upper-body portrait, dramatic side lighting and fleet viewport glow.
+Highly detailed cinematic sci-fi encyclopedia illustration, rich textures, sharp focus, painterly digital art with photographic detail, soft volumetric lighting, no text, no watermark, no UI chrome. Portrait of Thyra as Helena-Thyra, Imperial Celestial usurper queen: tall post-human young woman with elongated elegant features and cold ruthless intense green eyes, her long hair dressed in artful braids bound around the bloodstone spurs at her head and drawn up to leave the neural pad at the nape of her neck exposed, wearing sharp black and crimson armour-robes with a matte calcium-growth bloodstone in faint turquoise and gold — a bone-like growth of the body, not faceted gemstone, and never ruby or crimson collar-crown. Hardline power. Upper-body portrait, dramatic side lighting and fleet viewport glow.
 ```
 
 ## Sources

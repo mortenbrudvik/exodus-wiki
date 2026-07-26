@@ -21,12 +21,24 @@ Maintainer-only notes for original encyclopedia illustrations. **Not** reader-fa
 | **Baseline / Diligent** | Late-arkship humans; Earth-exodus memory culture | Shipboard uniforms, practical field kit, settler politics |
 | **Traveler / mercenary** | Baseline or mixed human | Worn ship gear, salvage harnesses, deniable commercial dress |
 
-### Bloodstone is turquoise and gold, not ruby
+### Bloodstone is a growth, not a gemstone — and its colour varies
+
+**Corrected 26 July 2026.** An earlier draft of this section said flatly "bloodstone is turquoise and
+gold". That is right for Makaio-Yalbo and Helena-Chione and wrong as a general rule: Gahiji-Calder's
+is "black and green curlicues", and Inessa-Pierina's is "a starburst of **orange** bloodstone horns".
+Colour is per-wearer, so take it from the character's own brief and only fall back to turquoise-and-gold
+where the novel is silent.
+
+What holds across every wearer is the *material*: a matte calcium-like growth of the body, never a
+faceted cut gem, and nowhere in the text ruby or crimson.
+
+### The original note, still accurate on the red
 
 A recurring error in the delivered art. Bloodstone is a **calcium-like biotech** the wearer directs,
-and the novel fixes its palette: growths are "embellished … with faint hues of turquoise and gold",
-a queen wears "modest gold-and-turquoise bloodstone ornamentations", and an archon who cares little
-for court decorum wears "a cap of black and green curlicues". Nothing in the book is red — the
+and the novel names a colour each time: growths "embellished … with faint hues of turquoise and gold",
+a queen in "modest gold-and-turquoise bloodstone ornamentations", an archon who cares little for
+court decorum in "a cap of black and green curlicues", and a blunter queen under "a starburst of
+orange bloodstone horns". Nothing in the book is red — the
 real-world mineral called bloodstone is green flecked with red, and the generator appears to have
 followed the mineral rather than the text. Several portraits ship with crimson and magenta crystal
 sprays; treat that as a defect on regeneration.

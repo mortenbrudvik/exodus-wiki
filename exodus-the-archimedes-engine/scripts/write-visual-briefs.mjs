@@ -21,6 +21,16 @@ const STYLE_BASE =
 const NO_TEXT =
   "Absolutely no text, no captions, no labels, no lettering, no logos, no brand marks, no watermarks, no UI chrome.";
 
+/**
+ * Bloodstone is a **calcium-like biotech growth**, not jewellery, and the generator kept drawing it
+ * as faceted ruby crystal — the colour of the real-world mineral rather than of the thing in the
+ * book. Colour varies by wearer and is stated per character where the novel gives it: turquoise and
+ * gold (Makaio, Helena-Chione), black and green (Gahiji), orange (Inessa-Pierina). Nothing in the
+ * text is ruby or crimson. This constant is the default for wearers the novel does not colour.
+ */
+const BLOODSTONE =
+  "matte calcium-growth bloodstone in faint turquoise and gold — a bone-like growth of the body, not faceted gemstone, and never ruby or crimson";
+
 const STYLE =
   "Highly detailed cinematic sci-fi encyclopedia illustration, rich textures, sharp focus, painterly digital art with photographic detail, soft volumetric lighting, no text, no watermark, no UI chrome.";
 
@@ -251,7 +261,7 @@ const briefs = [
     ],
     clothing: "Sharp black-and-crimson royal armour-robes, bloodstone crown-collar, military severity",
     setting: "Throne-side shadow with fleet viewport",
-    prompt: `${STYLE} Portrait of Thyra as Helena-Thyra, Imperial Celestial usurper queen: tall post-human young woman with elongated elegant features and cold ruthless intense green eyes, her long hair dressed in artful braids bound around the bloodstone spurs at her head and drawn up to leave the neural pad at the nape of her neck exposed, wearing sharp black and crimson armour-robes with a turquoise-and-gold calcium bloodstone (never red, never ruby) collar-crown. Hardline power. Upper-body portrait, dramatic side lighting and fleet viewport glow.`,
+    prompt: `${STYLE} Portrait of Thyra as Helena-Thyra, Imperial Celestial usurper queen: tall post-human young woman with elongated elegant features and cold ruthless intense green eyes, her long hair dressed in artful braids bound around the bloodstone spurs at her head and drawn up to leave the neural pad at the nape of her neck exposed, wearing sharp black and crimson armour-robes with a ${BLOODSTONE} collar-crown. Hardline power. Upper-body portrait, dramatic side lighting and fleet viewport glow.`,
     inference: [
       "Youth vs Helena — younger adult Celestial",
       "The braid/spur/nape-pad styling comes from preview snippets whose surrounding sentence is cut; it is certainly congregant court styling, and most likely hers. Treat it as clade-safe rather than uniquely Thyra",
@@ -283,14 +293,22 @@ const briefs = [
     clade: "Imperial Celestial empress / Verak queen",
     role: "Now and Forever Queen of Verak holding rotating imperial throne",
     cues: [
-      "Peak Imperial Celestial sovereign at Kelowan Palace",
-      "Empress-scale presence, tall humanoid",
-      "Sixty-year imperial term dignity",
+      "**Her host body is seventeen years old** at the Coronation — young, not matronly, whatever the sixty-year term implies",
+      "**Glossy raven hair hanging almost to her waist**",
+      "**A long face, with skin so white she could pass for albino**",
+      "Peak Imperial Celestial sovereign at Kelowan Palace; empress-scale presence",
     ],
     clothing: "Imperial palace regalia — deep indigo and platinum, heavy bloodstone mantle",
     setting: "Imperial Palace mountain-engulfing architecture suggestion",
-    prompt: `${STYLE} Portrait of Carolien-Amaia, Imperial Celestial empress of the Crown Dominion: extremely tall regal post-human woman with commanding calm expression, deep indigo and platinum imperial robes, heavy turquoise-and-gold calcium bloodstone (never red, never ruby) mantle, elongated proportions. Peak court authority. Upper-body portrait, grand palace light.`,
-    inference: [],
+    prompt: `${STYLE} Portrait of Carolien-Amaia, Imperial Celestial empress of the Crown Dominion: extremely tall regal post-human woman whose host body is only seventeen years old — a strikingly young, long face with skin so white she could almost be albino, and glossy raven-black hair hanging straight almost to her waist. Commanding calm expression, deep indigo and platinum imperial robes, heavy ${BLOODSTONE} mantle, elongated proportions. Absolute authority worn on a teenager's face. Upper-body portrait, grand palace light.`,
+    inference: [
+      "Eye colour is not stated for her",
+      "The unsettling gap between a seventeen-year-old host and an empress of the Crown Dominion is the point of the description — do not age her up",
+    ],
+    sources: [
+      "Novel, p. 67: “Her new host body was young: seventeen years. Glossy raven hair hung almost to her waist, framing a long face with skin so white she could have been albino”",
+      "Wiki article `pages/characters/carolien-amaia.html`",
+    ],
     image: "assets/images/characters/carolien-amaia.jpg",
   },
   {
@@ -299,11 +317,22 @@ const briefs = [
     kind: "character",
     clade: "Imperial Celestial queen (Bassa)",
     role: "Now and Forever Queen of Bassa; prior empress at coronation hinge",
-    cues: ["Peer queen of Crown Accord", "Imperial humanoid tall form", "Handing-throne elder dignity"],
+    cues: [
+      "**A beguilingly young face** — the narration notes how wrong a smile of triumph looks on it",
+      "Peer queen of Crown Accord; Imperial humanoid tall form",
+      "Politically the senior hand, whatever the face suggests",
+    ],
     clothing: "Bassa royal colours — emerald and gold court robes with bloodstone diadem",
     setting: "Coronation-era court",
-    prompt: `${STYLE} Portrait of Luus, Imperial Celestial Now and Forever Queen of Bassa: tall elegant post-human sovereign woman, mature dignified expression, emerald and gold robes with turquoise-and-gold calcium bloodstone (never red, never ruby) diadem. Peer queen handing imperial rotation. Upper-body portrait, ceremonial light.`,
-    inference: ["Mature relative to younger congregants"],
+    prompt: `${STYLE} Portrait of Luus-Marcela, Imperial Celestial Now and Forever Queen of Bassa: tall elegant post-human sovereign woman with a beguilingly young, almost girlish face carrying an expression of hard political triumph that does not belong on it. Emerald and gold robes with ${BLOODSTONE} diadem. Peer queen handing imperial rotation. Upper-body portrait, ceremonial light.`,
+    inference: [
+      "Hair and eye colour are not stated for her",
+      "The 'dark olive skin and classic titian hair, cropped short' in the same passage belongs to **a princess Luus selected to taunt the empress**, not to Luus — do not attribute it to her",
+    ],
+    sources: [
+      "Novel, p. 68: “Luus-Marcela sat beside Helena-Chione and awarded Zuberi-Dulcina’s skeleton an undisguised smile of triumph that looked so wrong on such a beguilingly young face”",
+      "Wiki article `pages/characters/luus.html`",
+    ],
     image: "assets/images/characters/luus.jpg",
   },
   {
@@ -312,11 +341,22 @@ const briefs = [
     kind: "character",
     clade: "Imperial Celestial queen (Cheluli)",
     role: "Now and Forever Queen of Cheluli",
-    cues: ["Peer queen seat under Imperial Accord", "Tall Imperial humanoid"],
-    clothing: "Cheluli court white-and-copper robes, bloodstone shoulder growths",
+    cues: [
+      "**Her head is framed by a starburst of orange bloodstone horns**, which the narration likens to a crude sculpture",
+      "Growls rather than speaks in council — the least polished of the peer queens",
+      "Peer queen seat under Imperial Accord; tall Imperial humanoid",
+    ],
+    clothing: "Cheluli court white-and-copper robes, under a radiating orange bloodstone headpiece",
     setting: "Formal queen portrait backdrop",
-    prompt: `${STYLE} Portrait of Inessa-Pierina, Imperial Celestial queen of Cheluli: tall post-human regal woman, composed expression, white and copper court robes with turquoise-and-gold calcium bloodstone (never red, never ruby) shoulder ornaments. Peer queen. Upper-body portrait, cool ceremonial lighting.`,
-    inference: [],
+    prompt: `${STYLE} Portrait of Inessa-Pierina, Imperial Celestial queen of Cheluli: tall post-human regal woman whose head is framed by a wide starburst of ORANGE bloodstone horns radiating outward like a crude, heavy sculpture — matte calcium growth, not faceted gemstone. Blunt, impatient expression, white and copper court robes. Peer queen, least polished of them. Upper-body portrait, cool ceremonial lighting.`,
+    inference: [
+      "Hair, skin and eye colour are not stated — the orange horns are, and they are the one thing that distinguishes her silhouette",
+      "Her orange is why the shared `BLOODSTONE` default says colour varies: it is not turquoise-and-gold for everyone",
+    ],
+    sources: [
+      "Novel, p. 68: “Her head was framed by a starburst of orange bloodstone horns, resembling a crude sculpture…”",
+      "Wiki article `pages/characters/inessa-pierina.html`",
+    ],
     image: "assets/images/characters/inessa-pierina.jpg",
   },
   {
@@ -328,7 +368,7 @@ const briefs = [
     cues: ["Peer queen; trial-host authority", "Tall Imperial humanoid"],
     clothing: "Nizinsk court amethyst and silver robes, judicial bloodstone staff-collar",
     setting: "Politics-trial chamber light",
-    prompt: `${STYLE} Portrait of Ramona-Ursule, Imperial Celestial queen of Nizinsk: tall post-human woman with sharp assessing eyes, amethyst and silver robes, turquoise-and-gold calcium bloodstone (never red, never ruby) collar. Host of multi-dominion politics trial. Upper-body portrait, cool chamber light.`,
+    prompt: `${STYLE} Portrait of Ramona-Ursule, Imperial Celestial queen of Nizinsk: tall post-human woman with sharp assessing eyes, amethyst and silver robes, ${BLOODSTONE} collar. Host of multi-dominion politics trial. Upper-body portrait, cool chamber light.`,
     inference: [],
     image: "assets/images/characters/ramona-ursule.jpg",
   },
@@ -345,8 +385,15 @@ const briefs = [
     ],
     clothing: "War-era Imperial armour-robes in blackened gold, cracked bloodstone crown",
     setting: "Dim historical haze, ruined glory",
-    prompt: `${STYLE} Portrait of Zuberi-Dulcina, historical Imperial Celestial queen of Kelowan: tall post-human war sovereign with tragic commanding expression, blackened-gold armour robes, cracked turquoise-and-gold calcium bloodstone (never red, never ruby) crown. Fallen empire grandeur. Upper-body portrait, smoky dramatic light.`,
-    inference: ["Historical reconstruction — no contemporary portrait in book"],
+    prompt: `${STYLE} Portrait of Zuberi-Dulcina, historical Imperial Celestial queen of Kelowan: tall post-human war sovereign with tragic commanding expression, blackened-gold armour robes, cracked ${BLOODSTONE} crown. Fallen empire grandeur. Upper-body portrait, smoky dramatic light.`,
+    inference: [
+      "Historical reconstruction — the novel gives no portrait of her alive",
+      "**Her skeleton is physically present** in the Council of the Empress chamber, and Luus-Marcela smiles at it in triumph. A memorial plate of the displayed remains would be better sourced than this imagined living portrait",
+    ],
+    sources: [
+      "Novel, p. 68: “Luus-Marcela… awarded Zuberi-Dulcina’s skeleton an undisguised smile of triumph”",
+      "Wiki article `pages/characters/zuberi-dulcina.html`",
+    ],
     image: "assets/images/characters/zuberi-dulcina.jpg",
   },
   {
@@ -356,14 +403,21 @@ const briefs = [
     clade: "Imperial Celestial lord (Uixic / Zuberi-linked)",
     role: "Father of Thyra (“Oneshot”); power behind Helena-Thyra court",
     cues: [
-      "Male Imperial Celestial court figure",
-      "Mocked as Oneshot for single-child siring vs clutch norms",
-      "Political schemer presence",
+      "**Long auburn hair, mildly unkempt**, which gives him “a slightly wild appearance” unlike the rest of the court",
+      "**Tall, but not quite Helena-Chione's height** — so under three metres",
+      "**A young count** when Helena takes him; “hardly her usual type”",
+      "Mocked as Oneshot for single-child siring vs clutch norms; political schemer",
     ],
     clothing: "Dark court suit with bloodstone cuff growths, Uixic noble cut",
     setting: "Shadowed court corridor",
-    prompt: `${STYLE} Portrait of Lord Bekket, Imperial Celestial court schemer and father of a usurper queen: tall elegant post-human man with calculating half-smile, dark tailored court suit, turquoise-and-gold calcium bloodstone (never red, never ruby) cuff ornaments. Political manipulator. Upper-body portrait, shadowed corridor light.`,
-    inference: [],
+    prompt: `${STYLE} Portrait of Lord Bekket, Imperial Celestial court schemer and father of a usurper queen: a young post-human man, tall but not the tallest, with long unkempt auburn hair falling loose to give him a slightly wild, un-courtly look, and a calculating half-smile. Dark tailored court suit, ${BLOODSTONE} cuff ornaments. Deliberately less groomed than everyone around him. Upper-body portrait, shadowed corridor light.`,
+    inference: [
+      "Eye colour and skin tone are not stated — the auburn hair, its unkempt length and his youth are",
+    ],
+    sources: [
+      "Novel, p. 56: “He was tall, if not quite her height. His auburn hair was long and mildly unkempt, which gave him a slightly wild appearance so different from the other…”; p. 70: “The young count was hardly her usual type”",
+      "Wiki article `pages/characters/bekket.html`",
+    ],
     image: "assets/images/characters/bekket.jpg",
   },
   {
@@ -413,7 +467,7 @@ const briefs = [
     cues: ["Older generation of Wynid protocol", "Master of Court formality", "Tall Imperial humanoid elder"],
     clothing: "Heavy Master of the Court robes, protocol staff-collar of bloodstone",
     setting: "Coronation introduction chamber",
-    prompt: `${STYLE} Portrait of Lord Valdier, elderly Imperial Celestial Master of the Court and royal father: tall post-human elder man with formal austere expression, heavy ceremonial robes, turquoise-and-gold calcium bloodstone (never red, never ruby) protocol collar. Old-guard court. Upper-body portrait, formal gold light.`,
+    prompt: `${STYLE} Portrait of Lord Valdier, elderly Imperial Celestial Master of the Court and royal father: tall post-human elder man with formal austere expression, heavy ceremonial robes, ${BLOODSTONE} protocol collar. Old-guard court. Upper-body portrait, formal gold light.`,
     inference: [],
     image: "assets/images/characters/valdier.jpg",
   },
@@ -582,7 +636,7 @@ const briefs = [
     cues: ["Grief and accusation at court", "Tall Imperial humanoid", "Secondary court presence"],
     clothing: "Court mourning-leaning greys with bloodstone tear-jewellery",
     setting: "Court public gallery",
-    prompt: `${STYLE} Portrait of Malquilvo, Imperial Celestial court parent in mourning and accusation: tall post-human figure with anguished stern expression, grey court robes, turquoise-and-gold calcium bloodstone (never red, never ruby), tear-shaped jewellery. Tragic court politics. Upper-body portrait, cold public-gallery light.`,
+    prompt: `${STYLE} Portrait of Malquilvo, Imperial Celestial court parent in mourning and accusation: tall post-human figure with anguished stern expression, grey court robes, ${BLOODSTONE}, tear-shaped jewellery. Tragic court politics. Upper-body portrait, cold public-gallery light.`,
     inference: [
       "Present as masculine parent figure. **Unverified: this is a guess from the name, not from the text.** Dejean was inferred male the same way and the novel makes her a woman — confirm against the book before regenerating.",
     ],
@@ -665,11 +719,23 @@ const briefs = [
     kind: "character",
     clade: "Traveler human captain",
     role: "Captain of Arcadia’s Moon",
-    cues: ["Ship captain of deniable Traveler hull", "Enigmatic allegiance", "Working spacer, not court"],
+    cues: [
+      "**Andino is a woman** — she/her throughout, as her wiki article already has it",
+      "**She has no eyes.** “Small black lens tubes protruded from the sockets”, and they whirr audibly as they focus",
+      "**Slim pistons on either side of her neck**, which extend when she raises her head",
+      "Heavily rebuilt: the viewpoint character wonders “what percentage of her skin” is still her own",
+      "Working spacer, not court; enigmatic allegiance",
+    ],
     clothing: "Traveler captain’s worn coat, harness, ship-tag jewellery",
     setting: "Arcadia’s Moon bridge",
-    prompt: `${STYLE} Portrait of Andino, Traveler starship captain of Arcadia’s Moon: experienced human spacer with enigmatic half-smile, weathered captain’s coat and harness, practical short hair. Independent freighter-explorer captain. Upper-body portrait, warm bridge instrument glow.`,
-    inference: [],
+    prompt: `${STYLE} Portrait of Andino, Traveler starship captain of Arcadia’s Moon: a weathered woman, heavily cybernetic — in place of eyes, small black mechanical lens tubes protrude from her empty sockets, and slim metal pistons run up either side of her neck. Much of her visible skin reads as synthetic. Worn captain’s coat and harness. Independent, unreadable, formidable. Upper-body portrait, warm bridge instrument glow. ${NO_TEXT}`,
+    inference: [
+      "Hair, age and the exact extent of the synthetic skin are not described — the lens tubes, the neck pistons and her sex are",
+    ],
+    sources: [
+      "Novel, p. 243: “…eyes; instead small black lens tubes protruded from the sockets. He didn’t know what percentage of her skin…”; p. 297: “Andino raise her head, the slim pistons on either side of her neck extending slowly”; p. 430: “The captain’s eye lens tubes whirred smoothly”",
+      "Wiki article `pages/characters/andino.html`",
+    ],
     image: "assets/images/characters/andino.jpg",
   },
   {
@@ -691,11 +757,21 @@ const briefs = [
     kind: "character",
     clade: "Human assassin / operative",
     role: "Assassin; Marcellu’s right hand then Sahdiah asset",
-    cues: ["Ruthless field assassin", "Human-scale killer", "Dangerous calm"],
-    clothing: "Black tactical bodysuit with knife harness, minimal reflective strips",
+    cues: [
+      "**Black skin** — the novel dresses her in “tight leather as black as her skin”",
+      "**Rainbow hair in long braids threaded with mech filament, which writhe like serpents.** This is where the name comes from and the one thing the portrait cannot omit",
+      "Ruthless field assassin; dangerous calm; habitually half an hour late",
+    ],
+    clothing: "Tight black leather, matched to her skin; knife harness",
     setting: "Dark corridor / ship berth",
-    prompt: `${STYLE} Portrait of Medusa, ruthless human field assassin: sharp-featured woman with cold calm eyes, black tactical bodysuit and knife harness, short practical hair. Professional killer. Upper-body portrait, dark corridor rim light.`,
-    inference: [],
+    prompt: `${STYLE} Portrait of Medusa, ruthless human field assassin: a striking Black woman with deep black skin, wearing tight black leather that matches it, and long rainbow-coloured braids shot through with fine mechanical threads so that they stir and coil of their own accord like a nest of serpents. Cold calm expression, knife harness. Professional killer. Upper-body portrait, dark corridor rim light. ${NO_TEXT}`,
+    inference: [
+      "Face shape and age are not described — her skin, her hair and her clothing are",
+    ],
+    sources: [
+      "Novel, p. 427: “a vision in tight leather as black as her skin; rainbow hair sprouting long braids with integral mech threads that made them writhe like serpents”",
+      "Wiki article `pages/characters/medusa.html`",
+    ],
     image: "assets/images/characters/medusa.jpg",
   },
   {
@@ -704,11 +780,22 @@ const briefs = [
     kind: "character",
     clade: "Human mercenary (Lidon-linked)",
     role: "Deniable operator; opens book dumping Finn; cherenkov blade",
-    cues: ["Mercenary face across decades of world-time", "Lidon underworld chic", "Dangerous competence"],
-    clothing: "Stylish mercenary coat over light armour, cherenkov-blade sheath on hip",
+    cues: [
+      "**In the field she wears a lightweight bioware muscle outfit** that makes her “look like a beefed-up wrestler whose skin had been stripped away” — exposed musculature, not plate armour",
+      "Off duty she dresses subdued and dark, and plays the coquette when a job needs it",
+      "Mercenary face across decades of world-time; Lidon underworld chic",
+    ],
+    clothing:
+      "Two distinct looks: the flayed-musculature bioware combat suit, and subdued dark civilian wear with a cherenkov-blade sheath",
     setting: "Aircraft hatch / Anoosha cloud haze memory",
-    prompt: `${STYLE} Portrait of Liliana, Lidon-linked human mercenary: striking woman with cool professional expression, stylish dark mercenary coat over light armour, exotic blade sheath on hip. Deniable operator chic. Upper-body portrait, windy hatch light and cloud haze.`,
-    inference: [],
+    prompt: `${STYLE} Portrait of Liliana, Lidon-linked human mercenary: striking woman with cool professional expression, wearing a close-fitting lightweight bioware muscle suit whose sculpted fibre bundles read like exposed anatomy — as though a powerfully built wrestler had been skinned — with an exotic blade sheath at the hip. Deniable operator, unsettling to look at. Upper-body portrait, windy hatch light and cloud haze.`,
+    inference: [
+      "Hair, skin and eye colour are not fixed. The “much broader nose, and a skin that was almost albino it was so pale” in the later chapters is a **disguise she puts on**, not her face",
+    ],
+    sources: [
+      "Novel, p. 58: “Liliana’s lightweight bioware muscle outfit, which made her look like a beefed-up wrestler whose skin had been stripped away”",
+      "Wiki article `pages/characters/liliana.html`",
+    ],
     image: "assets/images/characters/liliana.jpg",
   },
   {

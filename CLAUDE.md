@@ -62,7 +62,7 @@ node scripts/check-lightbox.mjs
 
 All five exit non-zero on failure. `check-wiki.mjs` additionally prints advisory **warnings** that
 deliberately do not fail the run (possible name drift, thin pages without a stub notice, orphans,
-index titles disagreeing with their `h1`) — 8 thin-page warnings are the expected baseline.
+index titles disagreeing with their `h1`) — 7 thin-page warnings are the expected baseline.
 
 `check-images.mjs` only proves each subject has a brief, a non-blank file and matching markup — it
 cannot see *inside* a JPEG. Nothing burned into an image (captions, dates, titles) is greppable or
@@ -342,7 +342,7 @@ These are enforced conventions, not suggestions, and past passes have violated t
   says exactly that. A 100-word generated walk-on that already states everything the novel
   establishes is **complete, not a stub**, and must not be labelled one — that would imply missing
   material that does not exist. So thin-but-complete pages outnumbering stub-notice pages is the
-  expected state, not a defect; the 8 thin-page warnings are those pages.
+  expected state, not a defect; the 7 thin-page warnings are those pages.
 - **Names** use the spelling on the subject's own page (its `<h1>` and search-index title), reused
   everywhere.
 - **Ship names** are italicised when they mean the hull (`the <em>Diligent</em>'s ZPZ`) and left

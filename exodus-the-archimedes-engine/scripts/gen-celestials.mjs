@@ -315,6 +315,7 @@ const celestials = [
     h1: "Inessa-Pierina",
     infobox: [
       ["Title", "Now and Forever Queen of Cheluli"],
+      ["Appearance", "Head framed by a starburst of orange bloodstone horns, likened to a crude sculpture"],
       ["Affiliation", "<a href=\"../factions/crown-dominion.html\">Crown Dominion</a>"],
       ["Also known as", "Inessa (mindline originator name)"],
     ],

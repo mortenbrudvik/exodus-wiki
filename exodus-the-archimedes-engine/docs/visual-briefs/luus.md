@@ -10,9 +10,9 @@
 
 ## Physical / design cues (research)
 
-- Peer queen of Crown Accord
-- Imperial humanoid tall form
-- Handing-throne elder dignity
+- **A beguilingly young face** — the narration notes how wrong a smile of triumph looks on it
+- Peer queen of Crown Accord; Imperial humanoid tall form
+- Politically the senior hand, whatever the face suggests
 
 ## Clothing / finish
 
@@ -24,15 +24,16 @@ Coronation-era court
 
 ## Inference flags
 
-- Mature relative to younger congregants
+- Hair and eye colour are not stated for her
+- The 'dark olive skin and classic titian hair, cropped short' in the same passage belongs to **a princess Luus selected to taunt the empress**, not to Luus — do not attribute it to her
 
 ## Generation prompt
 
 ```
-Highly detailed cinematic sci-fi encyclopedia illustration, rich textures, sharp focus, painterly digital art with photographic detail, soft volumetric lighting, no text, no watermark, no UI chrome. Portrait of Luus, Imperial Celestial Now and Forever Queen of Bassa: tall elegant post-human sovereign woman, mature dignified expression, emerald and gold robes with turquoise-and-gold calcium bloodstone (never red, never ruby) diadem. Peer queen handing imperial rotation. Upper-body portrait, ceremonial light.
+Highly detailed cinematic sci-fi encyclopedia illustration, rich textures, sharp focus, painterly digital art with photographic detail, soft volumetric lighting, no text, no watermark, no UI chrome. Portrait of Luus-Marcela, Imperial Celestial Now and Forever Queen of Bassa: tall elegant post-human sovereign woman with a beguilingly young, almost girlish face carrying an expression of hard political triumph that does not belong on it. Emerald and gold robes with matte calcium-growth bloodstone in faint turquoise and gold — a bone-like growth of the body, not faceted gemstone, and never ruby or crimson diadem. Peer queen handing imperial rotation. Upper-body portrait, ceremonial light.
 ```
 
 ## Sources
 
+- Novel, p. 68: “Luus-Marcela sat beside Helena-Chione and awarded Zuberi-Dulcina’s skeleton an undisguised smile of triumph that looked so wrong on such a beguilingly young face”
 - Wiki article `pages/characters/luus.html`
-- Clade grammar: `docs/visual-briefs/README.md`, faction pages (Celestials / Uranics / Travelers / Heresy)

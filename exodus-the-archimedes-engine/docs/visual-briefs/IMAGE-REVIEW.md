@@ -1,24 +1,25 @@
-# Illustration review — 74 illustrations against the book, 45 signed off
+# Illustration review — 74 illustrations against the book, 43 signed off
 
 **Reviewed:** 25–26 July 2026 · every image opened and judged by eye · **74 of 74 briefed**
 
 `check-images.mjs` proves a file exists and is non-blank. It cannot read what is drawn or written
 inside a JPEG, so this sweep is the only thing standing between an invented fact and the live site.
 
-> **Fourth pass (25–26 July 2026) — twelve portraits FAIL and sixteen more are QUERY.**
+> **Fourth and fifth passes (25–26 July 2026) — fifteen portraits FAIL and sixteen more are QUERY.**
 > Every earlier pass judged the art against *the briefs*. The briefs turned out to be vaguer than
 > the novel: most character appearance cues were derived from role and clade grammar, not from any
-> description in the book. Re-reading the authorized publisher excerpt recovered real descriptions,
-> and twelve shipped portraits contradict them.
+> description in the book. The [fourth pass](#fourth-pass--art-checked-against-recovered-book-text)
+> read the authorized publisher excerpt and found twelve contradictions; the
+> [fifth](#fifth-pass--the-rest-of-the-cast-searched-rather-than-read) searched the whole novel for
+> the characters the excerpt never reaches, and found two more plus eight fresh descriptions.
 >
-> One defect is **systemic, not per-image**: the novel's bloodstone is turquoise and gold, and every
-> Celestial portrait opened so far renders it as **red or crimson gemstone** — five for five on the
-> first sample, seven for seven once Carolien-Amaia and Valdier were checked. The sixteen Celestial
-> portraits not yet individually recounted come from the same generator and the same brief wording,
-> so they are **QUERY, not PASS**. See
-> [Fourth pass](#fourth-pass--art-checked-against-recovered-book-text).
+> One defect is **systemic, not per-image**: bloodstone is a matte calcium growth of the body whose
+> colour the novel sets per wearer — turquoise and gold, black and green, orange — and never a cut
+> red gem. Every Celestial portrait opened renders it as **ruby or crimson crystal**, seven for
+> seven. The sixteen Celestial portraits not individually recounted come from the same generator and
+> the same brief wording, so they are **QUERY, not PASS**.
 
-Three cohorts of subjects, reviewed separately; a fourth pass then re-checked the first cohort's
+Three cohorts of subjects, reviewed separately; two later passes then re-checked the first cohort's
 portraits against recovered book text:
 
 | Pass | Subjects | Result |
@@ -32,20 +33,92 @@ everything below it concerns the first. Third-pass slugs are listed under [Third
 
 | Verdict | Count | Meaning |
 |---|---:|---|
-| **PASS** | 45 | First, second and third pass after regen, less everything the fourth pass re-opened |
-| **QUERY** | 16 | Bloodstone recolour shipped 26 July 2026 (turquoise/gold); still need individual eye-pass after recolour |
-| **FAIL** | 13 | **Art regenerated 26 July 2026** against book text — see regeneration log; re-eye-pass before restoring PASS tallies |
+| **PASS** | 43 | First, second and third pass after regen, less everything the fourth and fifth passes re-opened |
+| **QUERY** | 16 | Bloodstone recolour shipped 26 July 2026; still need individual eye-pass after recolour |
+| **FAIL** | 15 | 13 regenerated 26 July 2026 against book text (see regeneration log; re-eye-pass before restoring PASS), plus `andino` and `medusa` found by the fifth pass and **not yet regenerated** |
 
-45 + 16 + 13 = 74. The fourth pass is the reason the signed-off count fell from 67; nothing regressed
-in the art, the standard it is measured against changed from the briefs to the book. Replacement
-files for all 13 FAIL subjects, the 16 QUERY Celestials, and `factions/celestials.jpg` are on disk
-as of 26 July 2026.
+43 + 16 + 15 = 74. The fourth and fifth passes are why the signed-off count fell from 67; nothing
+regressed in the art, the standard it is measured against changed from the briefs to the book.
+Replacement files for the first 13 FAIL subjects, the 16 QUERY Celestials, and
+`factions/celestials.jpg` are on disk as of 26 July 2026. **`andino` and `medusa` are outstanding.**
 
 Historical first-pass tally (before regen): 37 pass · 3 query · 6 fail. Detail of that pass is kept below for process lessons; **shipped files are the regenerations** listed under [Regeneration log](#regeneration-log).
 
 > **Judge families together, not image by image.** The first pass reviewed each portrait in
 > isolation and passed the Jalgori-Tobu siblings individually. Side by side they contradict the
 > wiki outright — see failure 6.
+
+---
+
+## Fifth pass — the rest of the cast, searched rather than read
+
+**26 July 2026 · a 156-query sweep of the publisher preview, covering all 39 characters · 2 new FAIL
+· 8 new descriptions recovered · 1 earlier claim of mine corrected.**
+
+The fourth pass used the free PRH excerpt, which is the novel's opening and therefore only covers the
+characters who appear early. This pass searched the whole book — every character's name paired with
+*hair*, *eyes*, *face* and *skin* against the publisher preview — to reach the rest of the cast. Two
+portraits that had passed every previous review turned out to contradict the text badly.
+
+### FAIL — `andino`: drawn as a man, with eyes
+
+Andino is a **woman** — "he valued **her** so", "**she** knew that", "Andino raise **her** head". Her
+own article already uses she/her. The portrait is a man, so the image contradicts the page it sits
+on. This is the second Dejean-class sex error found in two days, and the pipeline still has nothing
+that would catch a third.
+
+She is also extensively rebuilt, and none of it is drawn:
+
+- **She has no eyes.** "…eyes; instead **small black lens tubes protruded from the sockets**", and
+  they "whirred smoothly" as they focus. The portrait has ordinary human eyes.
+- **"The slim pistons on either side of her neck extending slowly."** The portrait's neck is bare.
+- The viewpoint character wonders "what percentage of **her skin**" is still hers.
+
+Plus a shoulder patch reading `TRAVELER`, and invented crescent and wing insignia.
+
+### FAIL — `medusa`: the name is a description, and the portrait ignores it
+
+"A vision in tight leather **as black as her skin**; **rainbow hair sprouting long braids with
+integral mech threads that made them writhe like serpents**."
+
+The portrait is a pale woman with cropped black hair. It misses her skin colour and it misses the
+serpent-braids — which is not a detail but the reason she is called Medusa. The leather is right.
+
+### Recovered descriptions for eight more characters
+
+None of these had any physical description in their brief before this pass; none of their portraits
+had anything to be checked against. All are now in the briefs with citations, and the notable ones
+are on the articles.
+
+| Subject | What the novel actually says |
+|---|---|
+| `carolien-amaia` | Host body **seventeen years old**; "glossy raven hair hung almost to her waist, framing a long face with skin so white she could have been albino" |
+| `bekket` | "Tall, if not quite her height. His **auburn hair was long and mildly unkempt**, which gave him a slightly wild appearance so different from the other…"; a young count |
+| `inessa-pierina` | "Her head was framed by a **starburst of orange bloodstone horns**, resembling a crude sculpture" |
+| `luus` | "Such a **beguilingly young face**" — a triumphant smile looks wrong on it |
+| `zuberi-dulcina` | Present in the council chamber **as a skeleton**, which Luus-Marcela smiles at |
+| `liliana` | A "lightweight **bioware muscle outfit**… like a beefed-up wrestler whose skin had been stripped away" |
+| `valdier` | A face that "remained perfectly impassive"; his daughter admires his poise |
+| `elsbeth-mcquillan` | (fourth pass) eyes are "light gray cymech spheres" |
+
+Two attribution traps in that passage, both avoided and both recorded in the briefs so nobody walks
+into them later. The "dark olive skin and classic titian hair, cropped short… elfin appearance" on
+p. 68 belongs to **a princess Luus selected to taunt the empress**, not to Luus. And Liliana's
+"broader nose, and a skin that was almost albino it was so pale" in the late chapters is **a
+disguise she puts on**, alongside Terence's and Josias's — not her face.
+
+### Correction — bloodstone is not always turquoise and gold
+
+The fourth pass concluded "bloodstone is turquoise and gold" and I put "never red, never ruby" into
+nine prompts on that basis. Inessa-Pierina's **orange** horns show the positive half of that claim
+was too strong: colour is per-wearer — turquoise and gold, black and green, orange.
+
+The negative half stands. Nothing in the novel is ruby or crimson, and the material is consistently
+a matte calcium growth rather than a cut gem. The prompts now route through one `BLOODSTONE`
+constant that says exactly that, and characters the novel colours individually override it.
+
+That is the fourth-pass lesson turning up again one level higher: a rule inferred from two examples
+is a sample, not a rule, and it wants checking against a third before it goes into nine prompts.
 
 ---
 

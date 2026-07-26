@@ -10,13 +10,13 @@
 
 ## Physical / design cues (research)
 
-- Mercenary face across decades of world-time
-- Lidon underworld chic
-- Dangerous competence
+- **In the field she wears a lightweight bioware muscle outfit** that makes her “look like a beefed-up wrestler whose skin had been stripped away” — exposed musculature, not plate armour
+- Off duty she dresses subdued and dark, and plays the coquette when a job needs it
+- Mercenary face across decades of world-time; Lidon underworld chic
 
 ## Clothing / finish
 
-Stylish mercenary coat over light armour, cherenkov-blade sheath on hip
+Two distinct looks: the flayed-musculature bioware combat suit, and subdued dark civilian wear with a cherenkov-blade sheath
 
 ## Setting / composition
 
@@ -24,15 +24,15 @@ Aircraft hatch / Anoosha cloud haze memory
 
 ## Inference flags
 
-- **Everything visual here is inference.** No physical description has been recovered for this subject; the cues above are derived from role and clade grammar, not from the novel's text. That is not the same as the novel being silent — it means nobody has found a description yet.
+- Hair, skin and eye colour are not fixed. The “much broader nose, and a skin that was almost albino it was so pale” in the later chapters is a **disguise she puts on**, not her face
 
 ## Generation prompt
 
 ```
-Highly detailed cinematic sci-fi encyclopedia illustration, rich textures, sharp focus, painterly digital art with photographic detail, soft volumetric lighting, no text, no watermark, no UI chrome. Portrait of Liliana, Lidon-linked human mercenary: striking woman with cool professional expression, stylish dark mercenary coat over light armour, exotic blade sheath on hip. Deniable operator chic. Upper-body portrait, windy hatch light and cloud haze.
+Highly detailed cinematic sci-fi encyclopedia illustration, rich textures, sharp focus, painterly digital art with photographic detail, soft volumetric lighting, no text, no watermark, no UI chrome. Portrait of Liliana, Lidon-linked human mercenary: striking woman with cool professional expression, wearing a close-fitting lightweight bioware muscle suit whose sculpted fibre bundles read like exposed anatomy — as though a powerfully built wrestler had been skinned — with an exotic blade sheath at the hip. Deniable operator, unsettling to look at. Upper-body portrait, windy hatch light and cloud haze.
 ```
 
 ## Sources
 
+- Novel, p. 58: “Liliana’s lightweight bioware muscle outfit, which made her look like a beefed-up wrestler whose skin had been stripped away”
 - Wiki article `pages/characters/liliana.html`
-- Clade grammar: `docs/visual-briefs/README.md`, faction pages (Celestials / Uranics / Travelers / Heresy)
