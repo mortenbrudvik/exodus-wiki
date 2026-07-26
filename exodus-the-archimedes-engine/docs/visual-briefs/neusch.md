@@ -29,7 +29,7 @@ Quiet investigation chamber
 ## Generation prompt
 
 ```
-Highly detailed cinematic sci-fi encyclopedia illustration, rich textures, sharp focus, painterly digital art with photographic detail, soft volumetric lighting, no text, no watermark, no UI chrome. Portrait of Neusch, young Imperial Celestial son of a spymaster archon: tall young post-human man with intense focused eyes, dark slim coat, glowing neural-gift collar, elongated proportions. any bloodstone visible is a bone-like matte growth of the body, never a cut, faceted or polished gemstone, never set in metal like jewellery, and never ruby or crimson. Investigator heir energy. Upper-body portrait, cool chamber light.
+Highly detailed cinematic sci-fi encyclopedia illustration, rich textures, sharp focus, painterly digital art with photographic detail, soft volumetric lighting, no text, no watermark, no UI chrome. Portrait of Neusch, young Imperial Celestial son of a spymaster archon: tall young post-human man with intense focused eyes, dark slim coat, glowing neural-gift collar, elongated proportions. any bloodstone visible is a bone-like matte porous growth of the body, never a cut, faceted or polished gemstone, never set in metal like jewellery, and never ruby or crimson. Investigator heir energy. Upper-body portrait, cool chamber light.
 ```
 
 ## Sources

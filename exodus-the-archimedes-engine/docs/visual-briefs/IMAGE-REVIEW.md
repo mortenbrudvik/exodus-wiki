@@ -33,11 +33,11 @@ everything below it concerns the first. Third-pass slugs are listed under [Third
 
 | Verdict | Count | Meaning |
 |---|---:|---|
-| **PASS** | 59 | Signed off, including 17 of the 30 replacements opened in the sixth pass |
+| **PASS** | 60 | Signed off, including 17 of the 30 replacements opened in the sixth pass and `carolien-amaia` regenerated after it |
 | **QUERY** | 7 | `helena-chione`, `asahi-iryna`, `radwarno`, `uulana`, `malquilvo`, `ramona-ursule` — bloodstone as faceted crystal or set jewellery rather than a matte growth — plus `siskala`, whose canon tiger badge is over-rendered |
-| **FAIL** | 8 | `carolien-amaia`, `inessa-pierina`, `bekket`, `luus`, `zuberi-dulcina`, `avone-valerio` from the sixth pass, plus `andino` and `medusa` still **not regenerated** |
+| **FAIL** | 7 | `inessa-pierina`, `bekket`, `luus`, `zuberi-dulcina`, `avone-valerio` from the sixth pass, plus `andino` and `medusa` still **not regenerated** |
 
-59 + 7 + 8 = 74. The signed-off count went 67 → 43 → 59: the fourth and fifth passes changed the
+60 + 7 + 7 = 74. The signed-off count went 67 → 43 → 59: the fourth and fifth passes changed the
 standard from the briefs to the book, and the [sixth](#sixth-pass--the-30-replacements-opened)
 checked the replacements that answered them. **`andino` and `medusa` remain outstanding.**
 
@@ -146,6 +146,35 @@ and every call site appends a noun, so the rendered prompts read:
 The prohibition binds to the garment rather than to the bloodstone — "never a crimson mantle" — and
 Malquilvo's reads "never ruby or crimson**, tear-shaped jewellery**". Fixing this means putting the
 noun inside the constant or ending the clause with punctuation.
+
+### PASS — `carolien-amaia` regenerated, 26 July 2026
+
+**First subject rebuilt against the repaired prompt machinery, and the first shipped by a different
+image model** — `grok-imagine-image-quality` via the Grok MCP plugin, 5 candidates at $0.015 total,
+864×1152 (the site's 3:4). Recorded because provenance matters: every other plate on the site came
+from a different generator.
+
+Verified by eye against the recovered text: **hair is glossy raven-black, straight, hanging to the
+waist** (it was bald); skin near-albino; **face is unmistakably adolescent**; robes deep indigo with
+platinum; background plain marble with no heraldry, crowns, banners or murals; no text and no brand
+marks anywhere. **PASS.**
+
+The bloodstone is the part worth keeping: a matte, porous, lobed turquoise-and-gold growth spreading
+over both shoulders — visibly *of the body*, not a gem and not set in metal. That is the first plate
+on the site to render the material correctly, and it came from the reworded clause rather than from
+anything subject-specific. "Porous" is now folded into `BLOODSTONE_MATERIAL` because it is what made
+the difference.
+
+**The first attempt failed, and how it failed is the useful part.** Sent the committed prompt
+verbatim, two candidates: both fixed the hair and the bloodstone and both drew a gaunt woman of about
+forty, against a prompt that said "host body is only seventeen years old". The age instruction was
+buried mid-sentence between two other clauses. Front-loading it — `SHE IS SEVENTEEN YEARS OLD:`
+followed by the concrete negatives it must avoid — fixed it in one round, three for three.
+
+So the sixth pass's "prompt was right and the render ignored it" class is **partly a placement
+problem**. Being present in the prompt is not enough; a constraint the model keeps dropping has to
+be moved to the front and stated as a prohibition, not only as a fact. `luus` fails for the same
+reason ("beguilingly young" buried mid-clause) and should get the same treatment.
 
 ### Prompt fixes applied after the sixth pass
 

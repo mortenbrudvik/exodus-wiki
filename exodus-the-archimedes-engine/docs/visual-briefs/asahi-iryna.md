@@ -29,7 +29,7 @@ Fleet command antechamber
 ## Generation prompt
 
 ```
-Highly detailed cinematic sci-fi encyclopedia illustration, rich textures, sharp focus, painterly digital art with photographic detail, soft volumetric lighting, no text, no watermark, no UI chrome. Portrait of Asahi-Iryna, hardline Imperial Celestial archon: tall post-human figure with severe expression, black and crimson archon uniform-robes, a severe shoulder spur of calcium-growth bloodstone in faint turquoise and gold — a bone-like matte growth of the body, never a cut, faceted or polished gemstone, never set in metal like jewellery, and never ruby or crimson, elongated proportions. Ruthless oversight. Upper-body portrait, cold fleet light.
+Highly detailed cinematic sci-fi encyclopedia illustration, rich textures, sharp focus, painterly digital art with photographic detail, soft volumetric lighting, no text, no watermark, no UI chrome. Portrait of Asahi-Iryna, hardline Imperial Celestial archon: tall post-human figure with severe expression, black and crimson archon uniform-robes, a severe shoulder spur of calcium-growth bloodstone in faint turquoise and gold — a bone-like matte porous growth of the body, never a cut, faceted or polished gemstone, never set in metal like jewellery, and never ruby or crimson, elongated proportions. Ruthless oversight. Upper-body portrait, cold fleet light.
 ```
 
 ## Sources

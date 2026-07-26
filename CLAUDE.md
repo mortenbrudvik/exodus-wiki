@@ -417,8 +417,8 @@ clade grammar and are vaguer than the text they claim to follow.
 
 `docs/visual-briefs/IMAGE-REVIEW.md` records the by-eye review over six passes: three that checked
 the art against the briefs, two that checked the briefs against the novel and re-opened most of the
-cast, and a sixth that opened the 30 replacement files. **Current state: 74 briefed · 59 signed off ·
-7 query · 8 fail.** Individual regenerations are logged with dates. **Every new illustration needs
+cast, and a sixth that opened the 30 replacement files. **Current state: 74 briefed · 60 signed off ·
+7 query · 7 fail.** Individual regenerations are logged with dates. **Every new illustration needs
 adding to that review — `check-images.mjs` cannot see inside a JPEG**, so an unreviewed asset is an
 unverified claim on a public page. To check the invariant rather than trusting this paragraph,
 confirm every slug in `index.json` appears in `IMAGE-REVIEW.md`.
@@ -427,7 +427,10 @@ Three lessons from those passes are worth carrying into any new art:
 
 - **Only `prompt` reaches the generator** — but a correct prompt is not sufficient either. Four
   replacements contradict a description written into their own `prompt` string, so a delivered
-  image has to be compared against the prompt that asked for it, by eye, every time.
+  image has to be compared against the prompt that asked for it, by eye, every time. Where a model
+  keeps dropping a constraint, **placement fixes it**: move it to the front and state it as a
+  prohibition rather than a fact. That turned Carolien-Amaia from a 40-year-old into a 17-year-old
+  in one round after the buried version had failed twice.
 - **Count what the text counts, and check the material as well as the colour.** Olomo shipped with
   the wrong eye count for three passes because the brief never mentioned eyes; bloodstone was fixed
   from red to turquoise while staying a faceted gem, which the novel rules out just as firmly.

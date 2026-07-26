@@ -29,7 +29,7 @@ Palace guard corridor
 ## Generation prompt
 
 ```
-Highly detailed cinematic sci-fi encyclopedia illustration, rich textures, sharp focus, painterly digital art with photographic detail, soft volumetric lighting, no text, no watermark, no UI chrome. Portrait of Major Siskala of the Wynid Royal Tiger Guard: tall athletic Imperial Celestial woman warrior, sharp professional expression, dark gold and black guard armour carrying one small tiger-head unit badge and no other repeated emblem, helmet under arm. any bloodstone visible is a bone-like matte growth of the body, never a cut, faceted or polished gemstone, never set in metal like jewellery, and never ruby or crimson. Court military, not queen. Upper-body portrait, cool corridor light.
+Highly detailed cinematic sci-fi encyclopedia illustration, rich textures, sharp focus, painterly digital art with photographic detail, soft volumetric lighting, no text, no watermark, no UI chrome. Portrait of Major Siskala of the Wynid Royal Tiger Guard: tall athletic Imperial Celestial woman warrior, sharp professional expression, dark gold and black guard armour carrying one small tiger-head unit badge and no other repeated emblem, helmet under arm. any bloodstone visible is a bone-like matte porous growth of the body, never a cut, faceted or polished gemstone, never set in metal like jewellery, and never ruby or crimson. Court military, not queen. Upper-body portrait, cool corridor light.
 ```
 
 ## Sources

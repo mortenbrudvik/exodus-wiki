@@ -43,7 +43,7 @@ const NO_TEXT =
  * pass came back the right colour and the wrong material.
  */
 const BLOODSTONE_MATERIAL =
-  "a bone-like matte growth of the body, never a cut, faceted or polished gemstone, never set in metal like jewellery, and never ruby or crimson";
+  "a bone-like matte porous growth of the body, never a cut, faceted or polished gemstone, never set in metal like jewellery, and never ruby or crimson";
 
 const bloodstone = (item, colour = "faint turquoise and gold") =>
   `a ${item} of calcium-growth bloodstone in ${colour} — ${BLOODSTONE_MATERIAL}`;
@@ -319,7 +319,7 @@ const briefs = [
     ],
     clothing: "Imperial palace regalia — deep indigo and platinum, heavy bloodstone mantle",
     setting: "Imperial Palace mountain-engulfing architecture suggestion",
-    prompt: `${STYLE} Portrait of Carolien-Amaia, Imperial Celestial empress of the Crown Dominion: extremely tall regal post-human woman whose host body is only seventeen years old — a strikingly young, long face with skin so white she could almost be albino, and glossy raven-black hair hanging straight almost to her waist. Commanding calm expression, deep indigo and platinum imperial robes, ${bloodstone("heavy mantle")}, elongated proportions. Absolute authority worn on a teenager's face. Upper-body portrait, grand palace light.`,
+    prompt: `${STYLE} Upper-body portrait of Carolien-Amaia, Imperial Celestial empress of the Crown Dominion. SHE IS SEVENTEEN YEARS OLD: the face must be an adolescent girl's — smooth unlined youthful skin, soft round cheeks, no age lines, no gauntness, not a middle-aged or mature woman. A strikingly young long face, skin so white she could almost be albino, and glossy raven-black hair hanging straight almost to her waist. Calm commanding expression — absolute imperial authority worn on a teenager's face, and that contrast is the point of the picture. Deep indigo and platinum imperial robes, ${bloodstone("heavy mantle")}, elongated post-human proportions. Plain grand palace light, uncluttered background, no heraldic emblems, no crowns, no repeated motifs, no banners, no portraits or murals behind her.`,
     inference: [
       "Eye colour is not stated for her",
       "The unsettling gap between a seventeen-year-old host and an empress of the Crown Dominion is the point of the description — do not age her up",

@@ -67,7 +67,7 @@ See individual `*.md` briefs in this folder. Filenames match page slugs.
 ## Review
 
 `check-images.mjs` cannot see inside a JPEG, so delivered assets are checked by eye. Results are in
-[IMAGE-REVIEW.md](IMAGE-REVIEW.md). **Current state: 74 briefed · 59 signed off · 7 query · 8 fail.**
+[IMAGE-REVIEW.md](IMAGE-REVIEW.md). **Current state: 74 briefed · 60 signed off · 7 query · 7 fail.**
 
 Six passes so far. The first three checked the art against the briefs; the fourth and fifth checked
 the briefs against the novel and re-opened most of the cast; the sixth opened the 30 replacement
@@ -78,6 +78,8 @@ anywhere**. What it also found:
 - Four portraits contradict a description that *is* in their own prompt (`carolien-amaia` bald
   against "raven hair almost to her waist"; `inessa-pierina` turquoise against **ORANGE**; `bekket`
   neat black against "long unkempt auburn"; `luus` middle-aged against "beguilingly young").
+  `carolien-amaia` has since been fixed, and the fix was **placement**: the buried constraint had to
+  move to the front of the prompt and be restated as a prohibition before the model would honour it.
 - New invented heraldry and lettering in `zuberi-dulcina`, `siskala`, `avone-valerio`, `bekket`.
 - Bloodstone is the right colour but often the wrong **material** — faceted crystal or set
   jewellery rather than a matte growth.

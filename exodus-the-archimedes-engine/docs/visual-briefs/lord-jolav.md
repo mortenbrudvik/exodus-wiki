@@ -29,7 +29,7 @@ Private court anteroom
 ## Generation prompt
 
 ```
-Highly detailed cinematic sci-fi encyclopedia illustration, rich textures, sharp focus, painterly digital art with photographic detail, soft volumetric lighting, no text, no watermark, no UI chrome. Portrait of Lord Jolav, Imperial Celestial consort to a queen: tall elegant post-human man with restrained worried dignity, silver-black consort robes, a subtle collar ornament of calcium-growth bloodstone in faint turquoise and gold — a bone-like matte growth of the body, never a cut, faceted or polished gemstone, never set in metal like jewellery, and never ruby or crimson. Quiet opposition energy. Upper-body portrait, soft anteroom light.
+Highly detailed cinematic sci-fi encyclopedia illustration, rich textures, sharp focus, painterly digital art with photographic detail, soft volumetric lighting, no text, no watermark, no UI chrome. Portrait of Lord Jolav, Imperial Celestial consort to a queen: tall elegant post-human man with restrained worried dignity, silver-black consort robes, a subtle collar ornament of calcium-growth bloodstone in faint turquoise and gold — a bone-like matte porous growth of the body, never a cut, faceted or polished gemstone, never set in metal like jewellery, and never ruby or crimson. Quiet opposition energy. Upper-body portrait, soft anteroom light.
 ```
 
 ## Sources
