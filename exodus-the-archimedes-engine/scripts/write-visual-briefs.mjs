@@ -110,6 +110,12 @@ const briefs = [
     inference: [
       "Hair/eye colour and ancestry are not fixed in the wiki. The delivered portrait's East Asian colouring is now stated in the prompt so that it is reproducible and so that his twin Otylia and sister Zelinda can be locked to the same family appearance",
     ],
+    sources: [
+      "**The novel gives Finn no physical description** — verified 26 July 2026 against the authorized Penguin Random House excerpt (his own opening POV chapters), the fifth pass's 156-query sweep of the publisher preview, and secondary sources. He is described through action only. Every feature of the portrait is therefore inference; do not \"restore\" a book likeness that does not exist",
+      "What the novel does fix: 25 years old, third son of the Jalgori-Tobu family, Minsterialis of Hafnir, a uranic with neural interfaces, and **twin of Otylia** — so the two must be locked to one ancestry and colouring",
+      "Wiki article `pages/characters/finn-jalgori-tobu.html`",
+      "Clade grammar: `docs/visual-briefs/README.md`, faction pages (Celestials / Uranics / Travelers / Heresy)",
+    ],
     image: "assets/images/characters/finn-jalgori-tobu.jpg",
   },
   {

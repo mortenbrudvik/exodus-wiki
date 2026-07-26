@@ -35,5 +35,7 @@ Highly detailed cinematic sci-fi encyclopedia illustration, rich textures, sharp
 
 ## Sources
 
+- **The novel gives Finn no physical description** — verified 26 July 2026 against the authorized Penguin Random House excerpt (his own opening POV chapters), the fifth pass's 156-query sweep of the publisher preview, and secondary sources. He is described through action only. Every feature of the portrait is therefore inference; do not "restore" a book likeness that does not exist
+- What the novel does fix: 25 years old, third son of the Jalgori-Tobu family, Minsterialis of Hafnir, a uranic with neural interfaces, and **twin of Otylia** — so the two must be locked to one ancestry and colouring
 - Wiki article `pages/characters/finn-jalgori-tobu.html`
 - Clade grammar: `docs/visual-briefs/README.md`, faction pages (Celestials / Uranics / Travelers / Heresy)
