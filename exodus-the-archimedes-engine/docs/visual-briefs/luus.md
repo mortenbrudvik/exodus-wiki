@@ -29,7 +29,7 @@ Coronation-era court
 ## Generation prompt
 
 ```
-Highly detailed cinematic sci-fi encyclopedia illustration, rich textures, sharp focus, painterly digital art with photographic detail, soft volumetric lighting, no text, no watermark, no UI chrome. Portrait of Luus, Imperial Celestial Now and Forever Queen of Bassa: tall elegant post-human sovereign woman, mature dignified expression, emerald and gold robes with crystalline bloodstone diadem. Peer queen handing imperial rotation. Upper-body portrait, ceremonial light.
+Highly detailed cinematic sci-fi encyclopedia illustration, rich textures, sharp focus, painterly digital art with photographic detail, soft volumetric lighting, no text, no watermark, no UI chrome. Portrait of Luus, Imperial Celestial Now and Forever Queen of Bassa: tall elegant post-human sovereign woman, mature dignified expression, emerald and gold robes with turquoise-and-gold calcium bloodstone (never red, never ruby) diadem. Peer queen handing imperial rotation. Upper-body portrait, ceremonial light.
 ```
 
 ## Sources

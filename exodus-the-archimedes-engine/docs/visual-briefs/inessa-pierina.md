@@ -28,7 +28,7 @@ Formal queen portrait backdrop
 ## Generation prompt
 
 ```
-Highly detailed cinematic sci-fi encyclopedia illustration, rich textures, sharp focus, painterly digital art with photographic detail, soft volumetric lighting, no text, no watermark, no UI chrome. Portrait of Inessa-Pierina, Imperial Celestial queen of Cheluli: tall post-human regal woman, composed expression, white and copper court robes with crystalline bloodstone shoulder ornaments. Peer queen. Upper-body portrait, cool ceremonial lighting.
+Highly detailed cinematic sci-fi encyclopedia illustration, rich textures, sharp focus, painterly digital art with photographic detail, soft volumetric lighting, no text, no watermark, no UI chrome. Portrait of Inessa-Pierina, Imperial Celestial queen of Cheluli: tall post-human regal woman, composed expression, white and copper court robes with turquoise-and-gold calcium bloodstone (never red, never ruby) shoulder ornaments. Peer queen. Upper-body portrait, cool ceremonial lighting.
 ```
 
 ## Sources

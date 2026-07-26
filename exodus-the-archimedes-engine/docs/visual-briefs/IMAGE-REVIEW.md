@@ -1,15 +1,21 @@
-# Illustration review — 74 illustrations against the book, 67 signed off
+# Illustration review — 74 illustrations against the book, 45 signed off
 
 **Reviewed:** 25–26 July 2026 · every image opened and judged by eye · **74 of 74 briefed**
 
 `check-images.mjs` proves a file exists and is non-blank. It cannot read what is drawn or written
 inside a JPEG, so this sweep is the only thing standing between an invented fact and the live site.
 
-> **Fourth pass (25–26 July 2026) — six portraits now FAIL against recovered book text.**
+> **Fourth pass (25–26 July 2026) — twelve portraits FAIL and sixteen more are QUERY.**
 > Every earlier pass judged the art against *the briefs*. The briefs turned out to be vaguer than
 > the novel: most character appearance cues were derived from role and clade grammar, not from any
-> description in the book. Re-reading the authorized publisher excerpt recovered real descriptions
-> for eight characters, and six shipped portraits contradict them. See
+> description in the book. Re-reading the authorized publisher excerpt recovered real descriptions,
+> and twelve shipped portraits contradict them.
+>
+> One defect is **systemic, not per-image**: the novel's bloodstone is turquoise and gold, and every
+> Celestial portrait opened so far renders it as **red or crimson gemstone** — five for five on the
+> first sample, seven for seven once Carolien-Amaia and Valdier were checked. The sixteen Celestial
+> portraits not yet individually recounted come from the same generator and the same brief wording,
+> so they are **QUERY, not PASS**. See
 > [Fourth pass](#fourth-pass--art-checked-against-recovered-book-text).
 
 Three cohorts of subjects, reviewed separately; a fourth pass then re-checked the first cohort's
@@ -26,9 +32,12 @@ everything below it concerns the first. Third-pass slugs are listed under [Third
 
 | Verdict | Count | Meaning |
 |---|---:|---|
-| **PASS** | 67 | First and second pass after regen, plus 14 of the third, less the six re-opened by the fourth pass |
-| **QUERY** | 0 | Cleared by regen |
-| **FAIL** | 7 | **Open.** `dejean`, `olomo`, `josias-aponi`, `stethos-thierry`, `helena-chione`, `eleanor-aponi` — contradict book text recovered in the fourth pass; `ratarajan-dominion` — card-mount border, found in the third-pass eye-pass |
+| **PASS** | 45 | First, second and third pass after regen, less everything the fourth pass re-opened |
+| **QUERY** | 16 | Imperial Celestial portraits not yet individually recounted. Every one checked so far has red bloodstone, and these share the generator and brief wording — assume the same until each is opened |
+| **FAIL** | 13 | **Open.** `dejean`, `olomo`, `josias-aponi`, `stethos-thierry`, `helena-chione`, `eleanor-aponi`, `makaio`, `lord-gahiji`, `elsbeth-mcquillan`, `thyra`, `carolien-amaia`, `valdier` — contradict book text recovered in the fourth pass; `ratarajan-dominion` — card-mount border, found in the third-pass eye-pass |
+
+45 + 16 + 13 = 74. The fourth pass is the reason the signed-off count fell from 67; nothing regressed
+in the art, the standard it is measured against changed from the briefs to the book.
 
 Historical first-pass tally (before regen): 37 pass · 3 query · 6 fail. Detail of that pass is kept below for process lessons; **shipped files are the regenerations** listed under [Regeneration log](#regeneration-log).
 
@@ -40,7 +49,12 @@ Historical first-pass tally (before regen): 37 pass · 3 query · 6 fail. Detail
 
 ## Fourth pass — art checked against recovered book text
 
-**Reviewed 25–26 July 2026 · 8 subjects with newly recovered descriptions · 6 fail · 2 pass.**
+**Reviewed 25–26 July 2026 · 13 portraits opened · 12 fail · 1 pass · 16 more left QUERY.**
+
+> **Correction to this section's own first draft.** It originally read "8 subjects · 6 fail · 2 pass"
+> and marked `makaio` PASS. That was written from the *brief* rather than from the image — the
+> Makaio portrait had not been opened. When it was, it failed. Five further portraits with recovered
+> descriptions had also never been eye-checked. The lesson of this pass applied to the pass itself.
 
 The three earlier passes asked "does the image match the brief?" This one asks "does the brief match
 the book?" — and for characters the answer was mostly no. The briefs' `cues` were built from each
@@ -116,14 +130,92 @@ Not arguable: the bulkhead behind her carries a stencilled **`C.O…`**. The fir
 "uniform name tape" on this image under QUERY and the regeneration did not clear lettering from the
 background.
 
-### PASS — `makaio`, and the clade grammar behind it
+### FAIL — `makaio`: bloodstone drawn as shoulder jewellery
 
-Not re-generated, but the brief was badly under-specified and is now fixed. The novel's bloodstone
-is not jewellery: over eighteen months it grows "to cover most of his skull and cheeks, leaving only
-his mouth, nose, and eyes unencumbered", throws out "a crown of **scalloped horns**… curling around
-each other… with faint hues of **turquoise and gold**", brocades the body "beneath the formal toga"
-in a lacework, and **"prevented any significant facial expression"**. A late-stage host should look
-entombed and rigid.
+The novel's bloodstone is not jewellery. Over eighteen months it grows "to cover most of his skull
+and cheeks, leaving only his mouth, nose, and eyes unencumbered", throws out "a crown of **scalloped
+horns**… curling around each other… with faint hues of **turquoise and gold**", brocades the body
+"beneath the formal toga" in a lacework, and **"prevented any significant facial expression"**.
+
+The portrait gives him a completely bare face, a mobile expressive one at that, a tailored coat
+rather than a toga, and puts the bloodstone entirely in **two crimson crystal epaulettes**. It is
+the one reading the text rules out: decorative, removable, and on the shoulders. A late-stage Yalbo
+should look entombed and rigid.
+
+Read instead as the grown **Faraji** host it still fails — that host is "an easy two and a half
+meters high, with a **flattish face and wide, gold-tinged eyes**", and the portrait's face is narrow
+with dark eyes.
+
+### FAIL — `lord-gahiji`: the portrait inverts his defining trait
+
+He is the courtier who **cannot be bothered with court dress**: "gray-and-silver robes of state
+hanging like badly fitting curtains", and a bloodstone headdress spur "little more than **a cap of
+black and green curlicues**" over his spine patch, because "her chief archon had always paid minimal
+observance to court decorum".
+
+The portrait makes him the most opulently dressed figure in the character set — immaculately
+tailored pale blue-lilac robes, lilac and aqua gemstones set across every panel, silver chains, and
+**no headdress at all**. Wrong colour, wrong fit, missing the one ornament he does wear, and it
+reverses the characterisation the description exists to carry. It also invents an **eye emblem** on
+the pendant, a symbol that appears nowhere in the wiki.
+
+### FAIL — `elsbeth-mcquillan`: organic eyes, and text on the uniform
+
+Her one fixed feature is that her eyes are **"light gray cymech spheres"** — replaced, blank, and
+specifically unreadable, which is the point: Ellie cannot tell where she is looking. The portrait
+gives her ordinary hazel eyes with a warm, readable expression.
+
+It also carries the heaviest **burned-in text** of any image on the site: a shoulder patch reading
+`HELL WELCO… CARE…UL DRIVERS`, `McQ` stencilled on the chest plate, tally marks, and lettering on
+the headset. The tank's name is canon; rendering it as legible embroidery is not, and the no-text
+rule exists precisely so the art cannot assert typography the book never describes.
+
+### FAIL — `thyra`: braids right, bloodstone wrong
+
+The braiding is correct and worth keeping — congregant hair is bound up and dressed, matching the
+recovered "hair was artfully arranged in braids" and the tresses bound around bloodstone spurs.
+
+But the crown and collar are **crimson crystal**, and her line's bloodstone is turquoise and gold.
+Her eyes are pale blue where Helena's daughters "shar[e] the same intense green eyes" — that one is
+a QUERY rather than a FAIL, since the green is stated for the daughters at the Coronation and not
+for Thyra by name.
+
+### FAIL — `carolien-amaia` and `valdier`: sampled, and both red
+
+Opened only to test whether the bloodstone-colour defect was systemic. Both wear large **red and
+crimson crystal** mantles. Carolien-Amaia's cloak is clasped with an invented **serpent** motif;
+Valdier's collar plates carry small glyph-like markings that read as lettering.
+
+### PASS — `sahdiah`
+
+**Five eyes, counted: five.** One at the centre of the brow and two on each side. Given that Olomo
+shipped with the wrong eye count and nobody noticed for three passes, this one was worth recounting,
+and it holds. No Crown two-eyed face, no Heresy extra arms, clade-correct.
+
+*Observation, not a defect:* the shoulder plates and robe carry engraved glyph-like marks, and two
+pendants are recognisable **anchors**. The glyphs read as alien ornament rather than legible text,
+so they clear the no-text rule, but an Earth maritime anchor on a Talloch-Te trader is an odd
+import. Worth a look on any future regen.
+
+### The systemic one — bloodstone is red across the whole clade
+
+Every Celestial portrait opened in this pass renders bloodstone as **red or crimson faceted
+gemstone**: `helena-chione`, `makaio`, `thyra`, `carolien-amaia`, `valdier`, and — in lilac and aqua
+rather than red, but equally wrong — `lord-gahiji`. Seven for seven.
+
+The novel never once makes it red. It is "a calcium-like biotech" in "faint hues of **turquoise and
+gold**"; a queen wears "modest **gold-and-turquoise** bloodstone ornamentations"; an under-dressed
+archon wears "a cap of **black and green** curlicues". The real-world mineral called bloodstone is
+green flecked with red, and the generator appears to have followed the mineral instead of the text.
+
+Consequence for the tally: the **sixteen** Imperial Celestial portraits not individually opened here
+share the generator and the same brief wording, so they are recorded as **QUERY**, not PASS. That is
+a prediction, not a verdict — each still needs opening — but on a 7/7 sample it is the honest
+default. They are `clavissa`, `luus`, `inessa-pierina`, `ramona-ursule`, `zuberi-dulcina`, `bekket`,
+`lord-jolav`, `siskala`, `neusch`, `asahi-iryna`, `avone-valerio`, `acelynn`, `radwarno`, `dagon`,
+`malquilvo`, `uulana`.
+
+Fixing this is a one-line change to every Celestial brief's prompt, not a per-image judgement call.
 
 ### What this pass says about the process
 
@@ -135,9 +227,16 @@ entombed and rigid.
   Eyes were not, because the brief was silent. Anything numbered in the novel belongs in the prompt
   as a number.
 - **Bloodstone is turquoise and gold.** The real-world mineral is green flecked with red, and the
-  generator followed the mineral. Several portraits ship with red crystal.
-- **Burned-in text is not fixed.** Two of six images in this pass carry lettering, on a site whose
-  own review doc calls that a blocking defect.
+  generator followed the mineral. Every Celestial portrait opened has red crystal — 7 for 7.
+- **Burned-in text is not fixed.** Three of the thirteen images in this pass carry lettering, on a
+  site whose own review doc calls that a blocking defect.
+- **A verdict written from the brief is not a verdict.** This section's first draft passed `makaio`
+  without opening `makaio.jpg`, in a pass whose entire subject was the gap between briefs and
+  reality. If an image has not been opened, its row is QUERY, never PASS.
+- **Sample before you tally.** The bloodstone error was first written up as six unlucky portraits.
+  Opening two more Celestials at random made it 7/7 and turned a list of incidents into one
+  generator-level defect with a one-line fix. Check whether a defect is per-image before counting it
+  per-image.
 
 ## Second pass — places, technology and factions
 

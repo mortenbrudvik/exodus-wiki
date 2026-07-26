@@ -29,7 +29,7 @@ Dim historical haze, ruined glory
 ## Generation prompt
 
 ```
-Highly detailed cinematic sci-fi encyclopedia illustration, rich textures, sharp focus, painterly digital art with photographic detail, soft volumetric lighting, no text, no watermark, no UI chrome. Portrait of Zuberi-Dulcina, historical Imperial Celestial queen of Kelowan: tall post-human war sovereign with tragic commanding expression, blackened-gold armour robes, cracked crystalline bloodstone crown. Fallen empire grandeur. Upper-body portrait, smoky dramatic light.
+Highly detailed cinematic sci-fi encyclopedia illustration, rich textures, sharp focus, painterly digital art with photographic detail, soft volumetric lighting, no text, no watermark, no UI chrome. Portrait of Zuberi-Dulcina, historical Imperial Celestial queen of Kelowan: tall post-human war sovereign with tragic commanding expression, blackened-gold armour robes, cracked turquoise-and-gold calcium bloodstone (never red, never ruby) crown. Fallen empire grandeur. Upper-body portrait, smoky dramatic light.
 ```
 
 ## Sources

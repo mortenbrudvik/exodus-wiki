@@ -28,7 +28,7 @@ Politics-trial chamber light
 ## Generation prompt
 
 ```
-Highly detailed cinematic sci-fi encyclopedia illustration, rich textures, sharp focus, painterly digital art with photographic detail, soft volumetric lighting, no text, no watermark, no UI chrome. Portrait of Ramona-Ursule, Imperial Celestial queen of Nizinsk: tall post-human woman with sharp assessing eyes, amethyst and silver robes, crystalline bloodstone collar. Host of multi-dominion politics trial. Upper-body portrait, cool chamber light.
+Highly detailed cinematic sci-fi encyclopedia illustration, rich textures, sharp focus, painterly digital art with photographic detail, soft volumetric lighting, no text, no watermark, no UI chrome. Portrait of Ramona-Ursule, Imperial Celestial queen of Nizinsk: tall post-human woman with sharp assessing eyes, amethyst and silver robes, turquoise-and-gold calcium bloodstone (never red, never ruby) collar. Host of multi-dominion politics trial. Upper-body portrait, cool chamber light.
 ```
 
 ## Sources

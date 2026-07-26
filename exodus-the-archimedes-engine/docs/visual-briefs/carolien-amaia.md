@@ -29,7 +29,7 @@ Imperial Palace mountain-engulfing architecture suggestion
 ## Generation prompt
 
 ```
-Highly detailed cinematic sci-fi encyclopedia illustration, rich textures, sharp focus, painterly digital art with photographic detail, soft volumetric lighting, no text, no watermark, no UI chrome. Portrait of Carolien-Amaia, Imperial Celestial empress of the Crown Dominion: extremely tall regal post-human woman with commanding calm expression, deep indigo and platinum imperial robes, heavy crystalline bloodstone mantle, elongated proportions. Peak court authority. Upper-body portrait, grand palace light.
+Highly detailed cinematic sci-fi encyclopedia illustration, rich textures, sharp focus, painterly digital art with photographic detail, soft volumetric lighting, no text, no watermark, no UI chrome. Portrait of Carolien-Amaia, Imperial Celestial empress of the Crown Dominion: extremely tall regal post-human woman with commanding calm expression, deep indigo and platinum imperial robes, heavy turquoise-and-gold calcium bloodstone (never red, never ruby) mantle, elongated proportions. Peak court authority. Upper-body portrait, grand palace light.
 ```
 
 ## Sources

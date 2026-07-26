@@ -29,7 +29,7 @@ Shadowed court corridor
 ## Generation prompt
 
 ```
-Highly detailed cinematic sci-fi encyclopedia illustration, rich textures, sharp focus, painterly digital art with photographic detail, soft volumetric lighting, no text, no watermark, no UI chrome. Portrait of Lord Bekket, Imperial Celestial court schemer and father of a usurper queen: tall elegant post-human man with calculating half-smile, dark tailored court suit, crystalline bloodstone cuff ornaments. Political manipulator. Upper-body portrait, shadowed corridor light.
+Highly detailed cinematic sci-fi encyclopedia illustration, rich textures, sharp focus, painterly digital art with photographic detail, soft volumetric lighting, no text, no watermark, no UI chrome. Portrait of Lord Bekket, Imperial Celestial court schemer and father of a usurper queen: tall elegant post-human man with calculating half-smile, dark tailored court suit, turquoise-and-gold calcium bloodstone (never red, never ruby) cuff ornaments. Political manipulator. Upper-body portrait, shadowed corridor light.
 ```
 
 ## Sources
