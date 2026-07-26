@@ -149,7 +149,7 @@ noun inside the constant or ending the clause with punctuation.
 
 ## Eleventh pass — period fit, a criterion the first ten never applied
 
-**26 July 2026 · 2 subjects · 2 pass.** Prompted by a question the review process should have asked
+**26 July 2026 · 3 subjects · 3 pass.** Prompted by a question the review process should have asked
 itself ten passes earlier: *does the Gyvoy Enfoe image fit the timeline?*
 
 It did not. He was wearing a **two-piece notch-lapel lounge suit, a four-in-hand necktie and a
@@ -180,11 +180,19 @@ throughout, and there was an anachronism to remove but nothing to preserve.
 `FAR_FUTURE_DRESS` now carries the rule, and it is written into the site-wide art direction in
 [README.md](README.md) so the next batch cannot quietly reintroduce it.
 
-**Still worth a look under this criterion:** `tose`. The eighth pass stripped his dog tags,
-stencils and crossed-rifles tattoo, but the silhouette underneath — belt-fed ammunition, a
-contemporary rifle, modern plate carrier — is still twenty-first-century soldier. Not a canon
-contradiction, and he is a human mercenary so hard kit is defensible, but it is the same import
-Gyvoy's suit was.
+**`tose` — done in the same pass, one layer down.** The eighth pass had stripped his dog tags,
+stencils and crossed-rifles tattoo, but the silhouette underneath was still twenty-first-century
+soldier: belt-fed brass ammunition, a contemporary rifle, a modern plate carrier over webbing. He
+now wears sealed segmented plate with a high gorget and a back-mounted unit, carries a long heavy
+weapon of no recognisable present-day pattern, and has no cartridge belts or magazine pouches at all.
+
+The weapon is deliberately left **unnamed and abstract**. The wiki establishes exactly one weapon
+technology in the whole novel — the *cherenkov blade*, and that is Liliana's — so specifying a
+plasma, rail or coil weapon would have invented a tech the book never mentions. "A long, heavy,
+unfamiliar thing of no recognisable present-day pattern" removes the anachronism without asserting
+anything.
+
+That makes three subjects corrected under the period criterion, all three verified by eye.
 
 ## Tenth pass — the seven QUERY portraits cleared. Nothing outstanding.
 

@@ -855,7 +855,7 @@ const briefs = [
     cues: ["Heavy-weapons and sniper mercenary", "Physical bulk vs Liliana’s quiet style", "Field grit"],
     clothing: "Combat harness, ammo webbing, sniper-support kit, scarred armour plates",
     setting: "Roofline / Governor’s mansion lawn distance",
-    prompt: `${STYLE} Upper-body portrait of Toše, heavy-weapons mercenary and sniper: rugged muscular man with a grim focused expression, plain unmarked combat harness and scarred armour plates, ammo webbing, short beard stubble. NO TWENTIETH-CENTURY SOLDIER ICONOGRAPHY: no dog tags, no identity discs, no stencilled unit numbers, no rank chevrons, no crossed-weapon or skull tattoos or patches. Loud half of a deniable duo, harsh daylight and dust. ${NO_TEXT_ANYWHERE}`,
+    prompt: `${STYLE} Upper-body portrait of Toše, heavy-weapons mercenary and sniper: rugged muscular man with a grim focused expression, scarred unmarked armour plates and a plain harness, short beard stubble. HIS KIT IS FAR-FUTURE, NOT MODERN MILITARY: no brass cartridges, no belt-fed ammunition, no magazine pouches or webbing of twenty-first-century pattern, no modern plate carrier, and no contemporary assault-rifle or sniper-rifle silhouette. His weapon is a long, heavy, unfamiliar thing of no recognisable present-day pattern, plain and unmarked. ${FAR_FUTURE_DRESS} NO TWENTIETH-CENTURY SOLDIER ICONOGRAPHY: no dog tags, no identity discs, no stencilled unit numbers, no rank chevrons, no crossed-weapon or skull tattoos or patches. Loud half of a deniable duo, harsh daylight and dust. ${NO_TEXT_ANYWHERE}`,
     inference: [],
     image: "assets/images/characters/tose.jpg",
   },
