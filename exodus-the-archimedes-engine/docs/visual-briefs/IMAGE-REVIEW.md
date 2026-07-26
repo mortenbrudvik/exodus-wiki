@@ -1370,8 +1370,8 @@ muscle-suit plate via image-edit; reviewed by eye against the brief and novel.
 
 | File | Role | Verdict |
 |---|---|---|
-| `liliana.jpg` (infobox) | Field kit — earthdragon bioware muscle suit | **PASS** — compact charged cherenkov blade (blue-violet edge), not machete; regen 26 July 2026 |
-| `liliana-civilian.jpg` | Subdued dark civilian / coquette | **PASS** — same face; short powered knife in tech sheath with Cherenkov edge; regen 26 July 2026 |
+| `liliana.jpg` (infobox) | Field kit — earthdragon bioware muscle suit | **PASS** — cherenkov blade fully sheathed, point down; regen 26 July 2026 |
+| `liliana-civilian.jpg` | Subdued dark civilian / coquette | **PASS** — same face; fully sheathed hip carry, no bare edge; regen 26 July 2026 |
 | `liliana-commercial.jpg` | Anoosha commercial emissary | **PASS** — same face; smart high-collar trade dress; no logos |
 | `liliana-disguise.jpg` | Late pale broader-nose mask / Antoinette-2burg | **PASS** — almost-albino skin, clearly broader nose, high standing collar without zip; no text |
 
