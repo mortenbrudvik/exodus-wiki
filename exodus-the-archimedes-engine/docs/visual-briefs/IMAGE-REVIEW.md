@@ -147,6 +147,53 @@ The prohibition binds to the garment rather than to the bloodstone — "never a 
 Malquilvo's reads "never ruby or crimson**, tear-shaped jewellery**". Fixing this means putting the
 noun inside the constant or ending the clause with punctuation.
 
+## Thirteenth pass — Finn's description exists, and a correction to how it was checked
+
+**26 July 2026 · 3 subjects · 3 pass.** Owner supplied text from the **full novel** describing Finn
+Jalgori-Tobu. An entry committed here hours earlier claimed the novel gives him **no** physical
+description. That entry was wrong, and how it got written matters more than what it said.
+
+### The method failure
+
+The "no description" claim was produced by fetching the publisher excerpt through an automated
+summariser, which reported that Finn is described "through action only". That result was recorded as
+**verified**. It was not verification: it was a small model's summary of a page, presented as if the
+page had been read. The novel describes his *"freezing skin"* during the high-altitude fall — which
+is the opening sequence, inside the very excerpt that was supposedly checked.
+
+This is the same error the fourth pass was created to stop, wearing different clothes. That pass
+found verdicts written from briefs instead of images and made the rule *"if an image has not been
+opened, its row is QUERY, never PASS."* The equivalent here: **an automated "nothing found" is
+unproven, never verified absence.** A search that returns nothing tells you the search returned
+nothing.
+
+### What the novel actually fixes
+
+- **Fair, pale, light-pigmented skin** — his "freezing skin" is called out during high-altitude
+  atmospheric exposure.
+- **His immediate family share identical intense green eyes.** So Finn, Otylia and Zelinda all have
+  them — a second family in the book with a shared eye colour, alongside Helena-Chione's line.
+- **Quiescent bloodstone buds and node connections embedded at the temples and running along the
+  skull** — integrated biotech that lets him link Celestial technology.
+- The broader uranic nobility spans a wide variety of hair and skin colours, so pale skin is the
+  **Jalgori-Tobu family** trait, not a clade rule.
+
+### Consequences, all three corrected
+
+| Subject | Was | Now |
+|---|---|---|
+| `finn-jalgori-tobu` | Warm medium skin, dark eyes, chunky black tech ports at the temples | Fair pale skin, intense green eyes, turquoise-and-gold bloodstone buds with gold node connections |
+| `otylia-jalgori-tobu` | Locked to Finn's *warm medium* colouring, dark eyes | Same corrections; twin lock preserved, now locking to the right colouring |
+| `zelinda-jalgori-tobu` | Same warm medium lock, dark eyes | Same corrections |
+
+**The clade table was wrong about the whole Uranic clade, not just Finn.** It read "neural interface
+ports subtle at temples/neck", which is why all three siblings shipped with metal sockets. The
+interface is **bloodstone** — dormant calcium-growth nodes of the body. Corrected for the clade.
+
+The twin lock did its job in the wrong direction: because Otylia and Zelinda were explicitly locked
+to Finn's colouring, one wrong inference propagated to three portraits. A shared constant is
+leverage in both directions.
+
 ## Twelfth pass — Helena-Chione's line, judged as a family
 
 **26 July 2026 · 3 subjects · 3 pass.** Prompted by another question the process should have asked

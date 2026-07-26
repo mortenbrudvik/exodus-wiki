@@ -442,6 +442,11 @@ Three lessons from those passes are worth carrying into any new art:
 - **Count what the text counts, and check the material as well as the colour.** Olomo shipped with
   the wrong eye count for three passes because the brief never mentioned eyes; bloodstone was fixed
   from red to turquoise while staying a faceted gem, which the novel rules out just as firmly.
+- **An automated "nothing found" is unproven, never verified absence.** A summarising fetch over
+  the publisher excerpt reported that the novel never describes Finn, and that was recorded as
+  verified. The novel describes his "freezing skin" in the opening — inside the very text
+  supposedly checked. Reading a summary is not reading the source, exactly as writing a verdict
+  from a brief is not reviewing an image.
 - **Judge families side by side, and default to resemblance.** Any feature the novel fixes for a
   line is mandatory for every member; where the book is silent, relatives should still match.
   This has failed twice — the Jalgori-Tobu siblings shipped as three ancestries, and three of
