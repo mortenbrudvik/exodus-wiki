@@ -1,6 +1,6 @@
-# Illustration review — 74 illustrations against the book, 59 signed off
+# Illustration review — 76 illustrations against the book, 61 signed off
 
-**Reviewed:** 25–26 July 2026 · every image opened and judged by eye · **74 of 74 briefed**
+**Reviewed:** 25–26 July 2026 · every image opened and judged by eye · **76 of 76 briefed**
 
 `check-images.mjs` proves a file exists and is non-blank. It cannot read what is drawn or written
 inside a JPEG, so this sweep is the only thing standing between an invented fact and the live site.
@@ -1114,6 +1114,36 @@ reads ~eight under perspective. **PASS** as illustration of the atypical hull.
 body with **exactly five eyes**, elongated non-Crown face, merchant-archon finery, nurture-chamber
 context. Prior plate was a two-eyed humanoid and wrong for the clade. Pronouns corrected she/her in
 generators. **PASS** — eye count verified by eye.
+
+**2026-07-26 (Uixic and Guillrameo — two new subjects).** First plates for the two pages added with
+the Uixic / Guillrameo conspiracy thread. Three candidates each via `grok-imagine-image-quality`,
+all six opened by eye and zoomed before choosing.
+
+**This run settles the README's open question: the model returns 16:9.** All six candidates came
+back 1280x720, matching every other wide plate on the site exactly. Wide subjects need no post-crop
+and no separate route.
+
+| Subject | Chosen | Verdict |
+|---|---|---|
+| `uixic` | candidate 2 of 3 | **PASS.** Scattered walled compounds across emptied uplands, a grass-roofed hall half-sunk into a slope, iridescent sprite filaments in the stratosphere. No palace, ring, megacity or crowd — the prohibition the prompt front-loads. Hazard chevrons on the hall door are markings, not text. A lattice transmission pylon sits at the right frame edge; contemporary, but utility infrastructure and small enough to note rather than reject |
+| `guillrameo` | candidate 2 of 3 | **PASS.** Near-identical faces repeated down an alcove row, elongated crania and long necks, rough provincial stone. Bloodstone is a matte porous growth erupting from cheek and throat in pale turquoise and gold — the material rule and the colour rule both hold. Standing collar, asymmetric closure, single toggle: no lapels, no button row, no C20 collar or cuffs. No text |
+
+Two candidates were rejected for defects the full-frame view did not show, which is the argument for
+zooming every time:
+
+- **`uixic` candidate 1** — the strongest composition of the three, rejected at zoom for **stencilled
+  orange lettering on both roller-shutter doors**. Burned-in text is blocking. It was also the most
+  present-day of the three: roller shutters, HVAC units and a brick flue.
+- **`uixic` candidate 3** — crenellated walls, tiled roofs and red banner pennants. A Roman fort in a
+  story set around 42,000 AD, and the pennants edge toward invented heraldry. The period rule is not
+  only about costume.
+- **`guillrameo` candidate 1** — best limb elongation and the best light, but its bloodstone read as
+  applied jewellery clusters at shoulder and cuff rather than a growth of the body, and it carried a
+  centred button row. **`guillrameo` candidate 3** was the weakest on clade: near-ordinary human
+  proportions, and green bloodstone rather than turquoise-and-gold.
+
+Both prompts are recorded in the briefs exactly as generated, so the shipped file and the recorded
+prompt are the same string.
 
 **2026-07-26 (fourth-pass regen).** Regenerated all 13 open FAILs against recovered book text, then
 recoloured bloodstone on the 16 QUERY Imperial Celestials (plus `factions/celestials.jpg`) from red

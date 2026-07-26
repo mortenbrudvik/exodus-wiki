@@ -16,7 +16,7 @@ Two wikis, only one of them published:
 
 | Folder | Book | State |
 |---|---|---|
-| `exodus-the-archimedes-engine/` | *Exodus: The Archimedes Engine* (2024) | Live — 87 pages, 74 illustrations |
+| `exodus-the-archimedes-engine/` | *Exodus: The Archimedes Engine* (2024) | Live — 89 pages, 76 illustrations |
 | `exodus-the-helium-sea/` | *Exodus: The Helium Sea* (2026) | Scaffold — 4 pages, no article coverage, **pruned from the deploy** |
 
 See "The unpublished second wiki" below before touching the Helium Sea folder.
@@ -392,9 +392,16 @@ fields exist because of that recovery: `sources` (per-brief citations) and `comp
   merges the places, technology and faction subjects into the same `index.json`; the first rewrites
   that file from scratch. Running the first alone silently drops ~240 lines and 30-odd subjects,
   which then fails `check-images.mjs`.
-- **Known drift:** `aeacus.md` and `polkadav.md` hold committed `prompt`, `setting`, `clothing` and
-  `role` text the generator cannot currently reproduce, so a run today reverts them. Sync the script
-  to the committed briefs before relying on a clean regeneration.
+- **The drift is gone — verify, don't assume.** This entry used to warn that `aeacus.md` and
+  `polkadav.md` held committed text the generator could not reproduce. Re-checked 26 July 2026: both
+  generators now rebuild all 76 briefs byte-for-byte, `git diff docs/visual-briefs/` after a run is
+  empty. Keep running that diff anyway — it is the only thing that would catch the drift returning,
+  because nothing in `check-wiki.mjs` re-renders these.
+- **Shared prompt clauses live in `scripts/lib/prompt-parts.mjs`** — `CELESTIAL_BODY`,
+  `FAR_FUTURE_DRESS`, `BLOODSTONE_MATERIAL`, `BLOODSTONE_GUARD`. Both generators import them. They
+  were local to `write-visual-briefs.mjs`, which has **no main guard**, so importing that file
+  executes it and rewrites `index.json` from scratch — which is why the extras generator used to
+  restate the clade rule inline instead. Add a new shared clause to the lib, never to one generator.
 
 Two rules the last two scripts in that table encode, both deliberate:
 
@@ -414,8 +421,9 @@ All the injectors are idempotent and skip pages that already carry the markup.
 JPEGs arrive from outside it. The route used for `carolien-amaia` is the Grok MCP plugin's
 `grok_generate_image` with model `grok-imagine-image-quality`; the `image` alias is stale and 404s,
 it costs about $0.003 an image so always generate three and choose, and portrait prompts come back
-864×1152, which is the 3:4 characters need. Whether it yields 16:9 for the wide subjects is
-untested. Full loop, including what to do when a render drops a constraint, is under "Generating an
+864×1152, which is the 3:4 characters need. It **also returns 16:9** for wide subjects — six
+candidates came back 1280×720 on 26 July 2026, so places, factions, ships and tech need no
+post-crop. Full loop, including what to do when a render drops a constraint, is under "Generating an
 image" in `docs/visual-briefs/README.md`.
 
 The illustrations are **inferred where the novel is silent — which is most subjects, but not all.**
@@ -425,7 +433,7 @@ clade grammar and are vaguer than the text they claim to follow.
 
 `docs/visual-briefs/IMAGE-REVIEW.md` records the by-eye review over six passes: three that checked
 the art against the briefs, two that checked the briefs against the novel and re-opened most of the
-cast, and a sixth that opened the 30 replacement files. **Current state: 74 briefed · 74 signed off ·
+cast, and a sixth that opened the 30 replacement files. **Current state: 76 briefed · 76 signed off ·
 0 query · 0 fail** — every illustration opened by eye and judged against the novel. Individual regenerations are logged with dates. **Every new illustration needs
 adding to that review — `check-images.mjs` cannot see inside a JPEG**, so an unreviewed asset is an
 unverified claim on a public page. To check the invariant rather than trusting this paragraph,

@@ -5,6 +5,7 @@
 import fs from "fs";
 import path from "path";
 import { fileURLToPath } from "url";
+import { CELESTIAL_BODY, BLOODSTONE_GUARD, FAR_FUTURE_DRESS } from "./lib/prompt-parts.mjs";
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const outDir = path.join(__dirname, "..", "docs", "visual-briefs");
@@ -269,6 +270,28 @@ const extras = [
     role: "Named in Helena-Thyra expansion plans with Capo Frois",
     image: "assets/images/factions/uthara-dominion.jpg",
     prompt: `${STYLE} Culture plate for the Uthara Dominion: a contested Celestial frontier world and orbital habitats under tense multi-polity sky, distant fleet silhouettes suggesting annexation pressure, refined but less secure architecture than Crown capitals, amber dusk and wariness, no readable banners. Geopolitical pawn aesthetic. ${NO_TEXT}`,
+  },
+  // —— Fourth pass: the Uixic / Guillrameo conspiracy thread ——
+  // Both subjects are defined by being *unremarkable on purpose*, which is the constraint the
+  // generator is most likely to drop — every other plate in this file asks for grandeur or scale.
+  // So each prompt opens with the prohibition rather than burying it, per the lesson in README.
+  {
+    slug: "uixic",
+    title: "Uixic",
+    kind: "location",
+    clade: "Provincial planet / Crown Dominion",
+    role: "Bekket’s countship; kestrel-sprite manufacture; the fatal inquiry",
+    image: "assets/images/locations/uixic.jpg",
+    prompt: `${STYLE} NEVER A CAPITAL WORLD: no palace, no orbital ring, no megacity, no towers, no crowds, no fleet. Wide 16:9 establishing landscape plate of Uixic, a quiet provincial planet of a far-future empire, seen from a low hillside: remote walled estate compounds scattered far apart across emptied grey-green uplands, one discreet windowless low-rise industrial hall half-sunk into a slope, and high above, a faint iridescent shimmer in the stratosphere where microscopic surveillance clouds drift. Cold overcast light, long shadows, wide empty distances, the sense of land taken in an old war and never resettled. Understated and watchful, not grand. ${NO_TEXT}`,
+  },
+  {
+    slug: "guillrameo",
+    title: "Guillrameo network",
+    kind: "faction",
+    clade: "Clandestine Imperial Celestial house",
+    role: "Bekket’s family network; substituted identities; assassination",
+    image: "assets/images/factions/guillrameo.jpg",
+    prompt: `${STYLE} THE FIGURES MUST BE NEAR-IDENTICAL TO ONE ANOTHER — the same face and build repeated down the row, deliberately uncanny, not a varied crowd of individuals. Wide 16:9 culture plate for the Guillrameo network: a long private gallery inside a shuttered provincial estate, viewed from a doorway in deep shadow, with a row of tall Imperial Celestial figures standing motionless in alcoves along one wall, evenly spaced, lit from high slot windows. ${CELESTIAL_BODY} They wear plain dark high-collared house robes with asymmetric closures and seamed panels — deliberately austere, no court finery. ${FAR_FUTURE_DRESS} ${BLOODSTONE_GUARD}. Cold grey daylight, dust in the air, provincial stone rather than pearlescent palace livestone. Conspiratorial stillness and dread, no violence shown. ${NO_TEXT}`,
   },
 ];
 

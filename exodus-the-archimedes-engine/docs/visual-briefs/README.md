@@ -100,8 +100,11 @@ from outside it. The path used for `carolien-amaia` on 26 July 2026, which is th
 - **`response_format: "url"` returns temporary links.** Download them immediately (`curl -o`) or
   they expire. Base64 works too but floods the transcript with a megabyte of data.
 - **The tool takes no size or aspect argument.** Portrait prompts came back 864×1152, which is
-  exactly the 3:4 characters need. **Whether it will produce 16:9 for ships, places, technology and
-  factions is untested** — if it will not, those need a different route or a post-crop.
+  exactly the 3:4 characters need. **It also returns 16:9 for the wide subjects** — settled on
+  26 July 2026, when all six `uixic` / `guillrameo` candidates came back 1280×720, matching every
+  other wide plate on the site. No post-crop and no separate route needed. The aspect follows the
+  prompt's own framing language ("upper-body portrait" versus "wide 16:9 establishing plate"), so
+  keep saying which one you want.
 
 The loop: take the prompt **verbatim from the brief** (that is the whole point of keeping it there),
 generate three, open every one, install the best, re-run the five checks, and log the verdict in
@@ -112,7 +115,7 @@ wording that actually worked**, so the recorded prompt stays the one that produc
 ## Review
 
 `check-images.mjs` cannot see inside a JPEG, so delivered assets are checked by eye. Results are in
-[IMAGE-REVIEW.md](IMAGE-REVIEW.md). **Current state: 74 briefed · 74 signed off · 0 query · 0 fail.** Every illustration on the site has
+[IMAGE-REVIEW.md](IMAGE-REVIEW.md). **Current state: 76 briefed · 76 signed off · 0 query · 0 fail.** Every illustration on the site has
 been opened by eye and judged against the novel. Reached 26 July 2026 over ten passes.
 
 The first three checked the art against the briefs; the fourth and fifth checked the briefs against

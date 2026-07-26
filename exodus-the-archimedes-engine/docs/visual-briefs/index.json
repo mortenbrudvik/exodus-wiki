@@ -1,6 +1,6 @@
 {
   "style": "Highly detailed cinematic sci-fi encyclopedia illustration, rich textures, sharp focus, painterly digital art with photographic detail, soft volumetric lighting, no text, no watermark, no UI chrome.",
-  "count": 74,
+  "count": 76,
   "subjects": [
     {
       "slug": "finn-jalgori-tobu",
@@ -593,6 +593,22 @@
       "image": "assets/images/factions/uthara-dominion.jpg",
       "prompt": "Highly detailed cinematic sci-fi encyclopedia illustration, rich textures, sharp focus, painterly digital art with photographic detail, soft volumetric lighting. Culture plate for the Uthara Dominion: a contested Celestial frontier world and orbital habitats under tense multi-polity sky, distant fleet silhouettes suggesting annexation pressure, refined but less secure architecture than Crown capitals, amber dusk and wariness, no readable banners. Geopolitical pawn aesthetic. Absolutely no text of any kind: no captions, no labels, no lettering, no logos, no brand marks, no map names, no UI chrome, no watermarks.",
       "clade": "Celestial dominion; annexation target"
+    },
+    {
+      "slug": "uixic",
+      "title": "Uixic",
+      "kind": "location",
+      "image": "assets/images/locations/uixic.jpg",
+      "prompt": "Highly detailed cinematic sci-fi encyclopedia illustration, rich textures, sharp focus, painterly digital art with photographic detail, soft volumetric lighting. NEVER A CAPITAL WORLD: no palace, no orbital ring, no megacity, no towers, no crowds, no fleet. Wide 16:9 establishing landscape plate of Uixic, a quiet provincial planet of a far-future empire, seen from a low hillside: remote walled estate compounds scattered far apart across emptied grey-green uplands, one discreet windowless low-rise industrial hall half-sunk into a slope, and high above, a faint iridescent shimmer in the stratosphere where microscopic surveillance clouds drift. Cold overcast light, long shadows, wide empty distances, the sense of land taken in an old war and never resettled. Understated and watchful, not grand. Absolutely no text of any kind: no captions, no labels, no lettering, no logos, no brand marks, no map names, no UI chrome, no watermarks.",
+      "clade": "Provincial planet / Crown Dominion"
+    },
+    {
+      "slug": "guillrameo",
+      "title": "Guillrameo network",
+      "kind": "faction",
+      "image": "assets/images/factions/guillrameo.jpg",
+      "prompt": "Highly detailed cinematic sci-fi encyclopedia illustration, rich textures, sharp focus, painterly digital art with photographic detail, soft volumetric lighting. THE FIGURES MUST BE NEAR-IDENTICAL TO ONE ANOTHER — the same face and build repeated down the row, deliberately uncanny, not a varied crowd of individuals. Wide 16:9 culture plate for the Guillrameo network: a long private gallery inside a shuttered provincial estate, viewed from a doorway in deep shadow, with a row of tall Imperial Celestial figures standing motionless in alcoves along one wall, evenly spaced, lit from high slot windows. This is an Imperial Celestial, not an ordinary human: unnaturally tall with elongated proportions, long limbs and a long neck, refined post-human features and bearing — never an ordinary human build, face or posture. They wear plain dark high-collared house robes with asymmetric closures and seamed panels — deliberately austere, no court finery. Costume must belong to the far future, not to Earth's recent past: no lounge suit, no necktie, bow tie or cravat, no dress-shirt collar and cuffs of twentieth-century cut, no trench coat, no notch lapels, no dog tags, rank chevrons or webbing of modern military pattern, and no Georgian or Victorian interior mouldings such as dado rails, wainscot panelling or cornices. Convey status and role through cut, seam, fastening and material instead — standing or mandarin collars, asymmetric closures, seamed panels, unfamiliar fabrics. any bloodstone visible is in faint turquoise and gold — pale blue-green and gold only, a bone-like matte porous growth of the body, never a cut, faceted or polished gemstone, never set in metal like jewellery, and never red, rust, ruby, scarlet or crimson. Cold grey daylight, dust in the air, provincial stone rather than pearlescent palace livestone. Conspiratorial stillness and dread, no violence shown. Absolutely no text of any kind: no captions, no labels, no lettering, no logos, no brand marks, no map names, no UI chrome, no watermarks.",
+      "clade": "Clandestine Imperial Celestial house"
     }
   ]
 }
