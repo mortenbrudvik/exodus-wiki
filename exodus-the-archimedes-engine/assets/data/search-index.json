@@ -706,6 +706,24 @@
     ]
   },
   {
+    "title": "Uixic",
+    "path": "pages/locations/uixic.html",
+    "category": "Locations",
+    "summary": "Provincial Crown world; Bekket’s countship; kestrel sprites; the inquiry that kills Uulana-Lyon",
+    "keywords": [
+      "uixic",
+      "bekket",
+      "guillrameo",
+      "banishment campaign",
+      "kiu",
+      "provincial",
+      "countship",
+      "iuntin-detlef",
+      "crown dominion",
+      "estates"
+    ]
+  },
+  {
     "title": "Crown Dominion",
     "path": "pages/factions/crown-dominion.html",
     "category": "Factions",
@@ -834,6 +852,29 @@
       "infiltration",
       "gyvoy",
       "ghost units"
+    ]
+  },
+  {
+    "title": "Guillrameo network",
+    "path": "pages/factions/guillrameo.html",
+    "category": "Factions",
+    "summary": "Bekket’s clandestine Uixic house; Thyra’s paternal line; substituted identities; Uulana-Lyon’s murder",
+    "keywords": [
+      "guillrameo",
+      "guillrameo network",
+      "house guillrameo",
+      "bekket",
+      "uixic",
+      "thyra",
+      "iuntin-detlef",
+      "iuntin",
+      "uulana-shoigu",
+      "shoigu",
+      "dagon",
+      "infiltration",
+      "imposture",
+      "clandestine",
+      "assassination"
     ]
   },
   {

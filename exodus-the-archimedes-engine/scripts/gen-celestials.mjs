@@ -400,7 +400,7 @@ const celestials = [
     infobox: [
       ["Figures", "Uulana-Lyon (investigator); Uulana-Shoigu (infiltrated chief archon)"],
       ["Relation", "Consort line / court parent; Lyon’s daughter Delfina dies in trials"],
-      ["Shoigu true operator", "Iuntin-Detlef of Bekket’s Guillrameo network"],
+      ["Shoigu true operator", "Iuntin-Detlef of Bekket’s <a href=\"../factions/guillrameo.html\">Guillrameo network</a>"],
       ["Affiliation", "Wynid court → hardline machinery under Helena-Thyra"],
     ],
     lead: `<strong>Uulana</strong> names a Wynid political cluster: <strong>Uulana-Lyon</strong>, who investigates Bekket and dies in a slowball ambush, and <strong>Uulana-Shoigu</strong> — Iuntin-Detlef wearing a stolen identity as chief archon under <a href="thyra.html">Helena-Thyra</a>.`,
@@ -408,7 +408,7 @@ const celestials = [
       {
         h2: "Uulana-Lyon: investigator",
         paras: [
-          `After Lyon’s daughter Delfina dies in the Binji survival trial, Uulana-Lyon suspects <a href="bekket.html">Bekket</a> and <a href="thyra.html">Thyra</a>. His Uixic inquiry ends in slowball assassination; he glimpses cloned-looking gallery figures before death. The wreck is discarded at Tonobo.`,
+          `After Lyon’s daughter Delfina dies in the Binji survival trial, Uulana-Lyon suspects <a href="bekket.html">Bekket</a> and <a href="thyra.html">Thyra</a>. His <a href="../locations/uixic.html">Uixic</a> inquiry ends in slowball assassination; he glimpses cloned-looking gallery figures before death. The wreck is discarded at Tonobo.`,
         ],
       },
       {
@@ -534,7 +534,7 @@ const celestials = [
       ["Nature", "Celestial operator; offworld contact / imposture network"],
       ["Covers", "Operates the <a href=\"gyvoy-enfoe.html\">Gyvoy Enfoe</a> imposture"],
       ["Family reveal", "Thyra’s uncle"],
-      ["Affiliation", "<a href=\"bekket.html\">Bekket</a> / Guillrameo extended network"],
+      ["Affiliation", "<a href=\"bekket.html\">Bekket</a> / <a href=\"../factions/guillrameo.html\">Guillrameo</a> extended network"],
       ["Human investigation", "Terence ordered not to pursue; later core manhunt target"],
     ],
     lead: `<strong>Dagon</strong> is the offworld Celestial operator who enters Santa Rosa gang networks as <a href="gyvoy-enfoe.html">Gyvoy Enfoe</a>’s contact, operates the Gyvoy imposture that steers the Engine plot, and is revealed as <a href="thyra.html">Thyra</a>’s uncle.`,
@@ -601,7 +601,7 @@ const celestials = [
       {
         h2: "Heir of a spymaster line",
         paras: [
-          `Neusch lends Terence the ship <em>Aeacus</em>, shares information with Clavissa, and carries residual requests to dig into Bekket-network crimes. He inherits his father’s contacts without his father’s rank, and works them inside a court that has already purged the Makaio line.`,
+          `Neusch lends Terence the ship <em>Aeacus</em>, shares information with Clavissa, and carries residual requests to dig into <a href="../factions/guillrameo.html">Guillrameo network</a> crimes. He inherits his father’s contacts without his father’s rank, and works them inside a court that has already purged the Makaio line.`,
         ],
       },
     ],
@@ -626,7 +626,7 @@ const celestials = [
       {
         h2: "Trial collateral",
         paras: [
-          `Thyra uses non-awakened bloodlines to kill sisters including Valeri while “saving” Clavissa for optics. Malquilvo’s protest ends in his death; <a href="uulana.html">Uulana-Lyon</a>, who pursues the same suspicion, survives longer and is assassinated offworld on his Uixic inquiry.`,
+          `Thyra uses non-awakened bloodlines to kill sisters including Valeri while “saving” Clavissa for optics. Malquilvo’s protest ends in his death; <a href="uulana.html">Uulana-Lyon</a>, who pursues the same suspicion, survives longer and is assassinated offworld on his <a href="../locations/uixic.html">Uixic</a> inquiry.`,
         ],
       },
     ],

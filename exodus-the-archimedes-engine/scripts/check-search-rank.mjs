@@ -102,6 +102,15 @@ const EXPECTED = [
   ["five eyes", "pages/characters/sahdiah.html"],
   ["nurture chamber", "pages/characters/sahdiah.html"],
   ["multi-body", "pages/factions/talloch-te-dominion.html"],
+  // Bekket's provincial world and the clandestine house that operates from it. Both are named
+  // across the court and investigation threads without having had a page of their own, so the
+  // queries used to land on whichever character page happened to mention them.
+  ["uixic", "pages/locations/uixic.html"],
+  ["banishment campaign", "pages/locations/uixic.html"],
+  ["kiu", "pages/locations/uixic.html"],
+  ["guillrameo", "pages/factions/guillrameo.html"],
+  ["guillrameo network", "pages/factions/guillrameo.html"],
+  ["house guillrameo", "pages/factions/guillrameo.html"],
 ];
 for (const [q, path] of EXPECTED) {
   const hits = rankResults(realIndex, q);

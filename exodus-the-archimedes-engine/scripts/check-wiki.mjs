@@ -285,6 +285,11 @@ const fold = (s) =>
 const DELIBERATE = new Set([
   "tallach te", // the Talloch-Te article documents this second spelling itself
   "tallach", // ...and the bare element appears in that same sentence
+  // Ordinary English promoted into the proper-noun vocabulary by a page title or a common
+  // infobox label, not name drift: the "Guillrameo network" title establishes "network", and
+  // the "Origin" infobox rows establish "origin".
+  "networked",
+  "original",
 ]);
 
 const vocabulary = new Set();
