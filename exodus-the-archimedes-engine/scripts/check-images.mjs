@@ -36,16 +36,30 @@ function pageDirForKind(kind) {
   if (kind === "character") return "characters";
   if (kind === "ship" || kind === "location") return "locations";
   if (kind === "technology") return "technology";
-  if (kind === "faction") return "factions";
+  if (kind === "faction" || kind === "hub") return "factions";
   return null;
 }
+
+/**
+ * `hub` subjects are index pages, not subjects with an infobox.
+ *
+ * dominions-roster.html is `article--wide` with no infobox — the same shape as
+ * celestials-roster.html — so its plate lives on the category hub's card instead of on the page.
+ * Without this kind the asset would be invisible to the check: faction pages are only ever reached
+ * through index.json, so an unlisted image is never verified at all, and CLAUDE.md is explicit that
+ * an unreviewed asset is an unverified claim on a public page.
+ *
+ * The rule is therefore the same as any other subject except for where the markup must appear:
+ * the parent hub carries the <img>, not the subject page.
+ */
+const HUB_KINDS = new Set(["hub"]);
 
 function imagePathFor(kind, slug) {
   if (kind === "character") return `assets/images/characters/${slug}.jpg`;
   if (kind === "ship") return `assets/images/ships/${slug}.jpg`;
   if (kind === "location") return `assets/images/locations/${slug}.jpg`;
   if (kind === "technology") return `assets/images/technology/${slug}.jpg`;
-  if (kind === "faction") return `assets/images/factions/${slug}.jpg`;
+  if (kind === "faction" || kind === "hub") return `assets/images/factions/${slug}.jpg`;
   return null;
 }
 
@@ -123,11 +137,32 @@ function checkSubject({ slug, kind }) {
     );
   }
 
+  const imgSrc = imageRel.replace(/\\/g, "/");
+
+  if (HUB_KINDS.has(kind)) {
+    // The plate belongs to the category hub's card for this page, not to the page itself.
+    const hubRel = path.join("pages", pageSub, "index.html");
+    const hubHtml = fs.readFileSync(path.join(root, hubRel), "utf8");
+    if (!hubHtml.includes(`${slug}.html`)) {
+      errors.push(`${slug}: not linked from ${hubRel}`);
+    }
+    if (!hubHtml.includes(imgSrc)) {
+      errors.push(`${slug}: ${hubRel} card does not show ${imageRel}`);
+    }
+    const html = fs.readFileSync(pageAbs, "utf8");
+    if (html.includes("infobox-image")) {
+      errors.push(
+        `${slug}: has .infobox-image markup — it is kind "hub", so either drop the markup or change the kind`
+      );
+    }
+    return;
+  }
+
   const html = fs.readFileSync(pageAbs, "utf8");
   if (!html.includes("infobox-image")) {
     errors.push(`${slug}: page lacks .infobox-image markup`);
   }
-  if (!html.includes(imageRel.replace(/\\/g, "/"))) {
+  if (!html.includes(imgSrc)) {
     errors.push(`${slug}: page img src does not include ${imageRel}`);
   }
 }
@@ -142,7 +177,12 @@ for (const slug of discoverShipSlugs()) {
   required.set(slug, "ship");
 }
 for (const s of index.subjects) {
-  if (s.kind === "location" || s.kind === "technology" || s.kind === "faction") {
+  if (
+    s.kind === "location" ||
+    s.kind === "technology" ||
+    s.kind === "faction" ||
+    HUB_KINDS.has(s.kind)
+  ) {
     required.set(s.slug, s.kind);
   }
 }
@@ -187,6 +227,7 @@ const plurals = {
   location: "locations",
   technology: "technologies",
   faction: "factions",
+  hub: "hub pages",
 };
 const summary = Object.entries(counts)
   .map(([k, n]) => `${n} ${n === 1 ? k : plurals[k] || k + "s"}`)

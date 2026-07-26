@@ -115,7 +115,7 @@ wording that actually worked**, so the recorded prompt stays the one that produc
 ## Review
 
 `check-images.mjs` cannot see inside a JPEG, so delivered assets are checked by eye. Results are in
-[IMAGE-REVIEW.md](IMAGE-REVIEW.md). **Current state: 76 briefed · 76 signed off · 0 query · 0 fail.** Every illustration on the site has
+[IMAGE-REVIEW.md](IMAGE-REVIEW.md). **Current state: 77 briefed · 77 signed off · 0 query · 0 fail.** Every illustration on the site has
 been opened by eye and judged against the novel. Reached 26 July 2026 over ten passes.
 
 The first three checked the art against the briefs; the fourth and fifth checked the briefs against

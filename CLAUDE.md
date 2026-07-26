@@ -16,7 +16,7 @@ Two wikis, only one of them published:
 
 | Folder | Book | State |
 |---|---|---|
-| `exodus-the-archimedes-engine/` | *Exodus: The Archimedes Engine* (2024) | Live — 89 pages, 76 illustrations |
+| `exodus-the-archimedes-engine/` | *Exodus: The Archimedes Engine* (2024) | Live — 89 pages, 77 illustrations |
 | `exodus-the-helium-sea/` | *Exodus: The Helium Sea* (2026) | Scaffold — 4 pages, no article coverage, **pruned from the deploy** |
 
 See "The unpublished second wiki" below before touching the Helium Sea folder.
@@ -417,6 +417,15 @@ Two rules the last two scripts in that table encode, both deliberate:
 
 All the injectors are idempotent and skip pages that already carry the markup.
 
+**`kind: "hub"` illustrates an index page that has no infobox.** `pages/factions/dominions-roster.html`
+is `article--wide` with no infobox, like `pages/characters/celestials-roster.html`, so there is
+nowhere on it to inject a plate. Its illustration lives on the **factions hub card** instead, and
+`check-images.mjs` inverts its usual rule for the kind: the parent `pages/<dir>/index.html` must show
+the image, and the subject page must **not** carry `.infobox-image`. `inject-extra-images.mjs` skips
+the kind entirely. Without it the asset would be unverifiable — faction pages are only ever reached
+through `index.json`, so an image that is not a listed subject is never checked at all.
+`celestials-roster.html` is the other candidate and is still unillustrated.
+
 **Nothing in the repo generates the images themselves** — no script calls an image model, and the
 JPEGs arrive from outside it. The route used for `carolien-amaia` is the Grok MCP plugin's
 `grok_generate_image` with model `grok-imagine-image-quality`; the `image` alias is stale and 404s,
@@ -433,7 +442,7 @@ clade grammar and are vaguer than the text they claim to follow.
 
 `docs/visual-briefs/IMAGE-REVIEW.md` records the by-eye review over six passes: three that checked
 the art against the briefs, two that checked the briefs against the novel and re-opened most of the
-cast, and a sixth that opened the 30 replacement files. **Current state: 76 briefed · 76 signed off ·
+cast, and a sixth that opened the 30 replacement files. **Current state: 77 briefed · 77 signed off ·
 0 query · 0 fail** — every illustration opened by eye and judged against the novel. Individual regenerations are logged with dates. **Every new illustration needs
 adding to that review — `check-images.mjs` cannot see inside a JPEG**, so an unreviewed asset is an
 unverified claim on a public page. To check the invariant rather than trusting this paragraph,

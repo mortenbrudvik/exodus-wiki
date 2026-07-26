@@ -1,6 +1,6 @@
-# Illustration review — 76 illustrations against the book, 61 signed off
+# Illustration review — 77 illustrations against the book, 62 signed off
 
-**Reviewed:** 25–26 July 2026 · every image opened and judged by eye · **76 of 76 briefed**
+**Reviewed:** 25–26 July 2026 · every image opened and judged by eye · **77 of 77 briefed**
 
 `check-images.mjs` proves a file exists and is non-blank. It cannot read what is drawn or written
 inside a JPEG, so this sweep is the only thing standing between an invented fact and the live site.
@@ -1114,6 +1114,33 @@ reads ~eight under perspective. **PASS** as illustration of the atypical hull.
 body with **exactly five eyes**, elongated non-Crown face, merchant-archon finery, nurture-chamber
 context. Prior plate was a two-eyed humanoid and wrong for the clade. Pronouns corrected she/her in
 generators. **PASS** — eye count verified by eye.
+
+**2026-07-26 (Dominions roster — hub-card plate).** The roster page is `article--wide` with no
+infobox, like `celestials-roster.html`, so on the owner's call the plate lives on the factions hub
+card and the page itself is unchanged. Briefed as the new `kind: "hub"`, which `check-images.mjs`
+now enforces from the other direction: the parent hub must show the image and the page must **not**
+carry infobox markup. Both failure paths were tested by breaking them deliberately.
+
+**Round one failed on all three candidates and was not rerolled.** The prompt put "a heavy angular
+research warship in cold blue light" in the list and then asked that none of the polities dominate.
+Every candidate made that ship the hero of the frame in glossy game key-art blue, against the
+README's cool-neutral encyclopedia direction — and two of the three burned pseudo-text and a dark
+emblem into its hull, invisible at full frame and unmistakable at 3x.
+
+The fix was the prompt, per the rule in the README: the vessel was **removed from the brief
+entirely** (it was both the hero problem and the text carrier), the no-foreground-ship constraint
+moved to the front as a prohibition, and the palette stated positively — *gunmetal, pale gold, void
+black, cold starlight* — as well as negatively, since "never saturated" alone had left the default
+magenta nebula in place. The brief holds the corrected wording, so the recorded prompt is the one
+that produced the shipped file.
+
+| Subject | Chosen | Verdict |
+|---|---|---|
+| `dominions-roster` | round 2, candidate 3 of 3 | **PASS.** Four polities readable by silhouette alone and widely separated: a ringed capital world with slender orbital towers, a partial Dyson lattice with construction debris around a warm star, an armoured nomad citadel, and the colossal spars of a derelict planet-moving engine. No hero vessel, no saturated nebula, sober cool-neutral palette. Citadel and spars both zoomed to 4x: no lettering, no insignia, no emblem |
+
+Round-two runners-up: candidate 1 rendered the capital as a domed station rather than a world and
+gave the citadel a bright exhaust plume that read as propulsion; candidate 2 split the planet and
+its orbital towers into two unrelated objects and was sparse to the point of empty.
 
 **2026-07-26 (Uixic and Guillrameo — two new subjects).** First plates for the two pages added with
 the Uixic / Guillrameo conspiracy thread. Three candidates each via `grok-imagine-image-quality`,

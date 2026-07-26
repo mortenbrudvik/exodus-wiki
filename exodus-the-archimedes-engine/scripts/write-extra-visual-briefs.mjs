@@ -284,6 +284,23 @@ const extras = [
     image: "assets/images/locations/uixic.jpg",
     prompt: `${STYLE} NEVER A CAPITAL WORLD: no palace, no orbital ring, no megacity, no towers, no crowds, no fleet. Wide 16:9 establishing landscape plate of Uixic, a quiet provincial planet of a far-future empire, seen from a low hillside: remote walled estate compounds scattered far apart across emptied grey-green uplands, one discreet windowless low-rise industrial hall half-sunk into a slope, and high above, a faint iridescent shimmer in the stratosphere where microscopic surveillance clouds drift. Cold overcast light, long shadows, wide empty distances, the sense of land taken in an old war and never resettled. Understated and watchful, not grand. ${NO_TEXT}`,
   },
+  // `kind: "hub"` is deliberate and is not a faction. Dominions roster is an index page with no
+  // infobox (article--wide, like celestials-roster.html), so its plate lives on the factions hub
+  // card rather than on the page itself. check-images.mjs knows this kind and checks the parent
+  // hub for the image reference instead of looking for .infobox-image on the page.
+  {
+    slug: "dominions-roster",
+    title: "Dominions roster",
+    kind: "hub",
+    clade: "Index of peer polities",
+    role: "All Dominions and peer powers, with the Crown’s member seats",
+    image: "assets/images/factions/dominions-roster.jpg",
+    // First round put a warship in the foreground and asked for "none dominating". All three
+    // candidates made that ship the hero in glossy game-key-art blue, and two burned pseudo-text
+    // and an emblem into its hull. The vessel is gone from the prompt entirely and the palette is
+    // now stated positively as well as negatively — a prohibition alone left the default in place.
+    prompt: `${STYLE} NO SINGLE HERO SHIP AND NO FOREGROUND VESSEL: nothing in close-up, no ship filling the frame, no hull markings, no glowing window strips, no insignia. NO LABELS OF ANY KIND — not a diagram, not a chart and not a map: no lettering, no call-outs, no leader lines, no borders drawn across space. Wide 16:9 panorama of the rival Celestial powers of the Centauri Cluster, all of them FAR AWAY and small against a deep star field, each polity readable only by the silhouette of its works: a georinged imperial capital world with slender orbital towers at left; a partial Dyson-sphere lattice under construction around a distant bright star; a drifting armoured nomad citadel; and the colossal spars of an ancient derelict planet-moving engine along the right horizon. Vast empty distances between them, none dominating the frame. Restrained cool-neutral palette — gunmetal, pale gold, void black and cold starlight; never saturated pink, magenta, teal or green nebula. Sober encyclopedia plate, not game key art. Peer powers in uneasy balance. ${NO_TEXT}`,
+  },
   {
     slug: "guillrameo",
     title: "Guillrameo network",
