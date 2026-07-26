@@ -55,10 +55,12 @@ See individual `*.md` briefs in this folder. Filenames match page slugs.
 ## Review
 
 `check-images.mjs` cannot see inside a JPEG, so delivered assets are checked by eye. Results are in
-[IMAGE-REVIEW.md](IMAGE-REVIEW.md). The first sweep of 46, on 25 July 2026, came back 37 pass / 3
-query / 6 fail; the six fails were regenerated and now pass, and a second pass cleared 13 places,
-technology and factions. That is 59 signed off. The 15 third-pass entity pages are installed and
-spot-checked but **still need a full eye-pass**.
+[IMAGE-REVIEW.md](IMAGE-REVIEW.md). **All 74 subjects have now had a full eye-pass: 67 signed off,
+7 open fails.** The first sweep of 46, on 25 July 2026, came back 37 pass / 3 query / 6 fail and
+those fails were regenerated; a second pass cleared 13 places, technology and factions; the third
+pass of 15 entity pages was completed on 26 July 2026 — 14 pass, and `ratarajan-dominion` fails for
+shipping a card-mount border its own prompt forbade. A fourth pass then re-opened six first-pass
+portraits that contradict book text recovered from the publisher excerpt.
 
 **`inference[]` in `write-visual-briefs.mjs` is documentation — only `prompt` reaches the
 generator.** Anything that must hold in the delivered image goes in the prompt string. Family

@@ -410,15 +410,20 @@ Two rules the last two scripts in that table encode, both deliberate:
 
 All the injectors are idempotent and skip pages that already carry the markup.
 
-The illustrations are **inferred, not canonical** — no likeness is described in the novel.
-`docs/visual-briefs/IMAGE-REVIEW.md` records the by-eye review, in three passes: 46 characters and
-ships, then 13 places, technology and factions — **all 59 of those pass** after regeneration — and a
-third pass of 15 remaining entity pages that are installed and spot-checked for text and clade traps
-but **still awaiting a full eye-pass**. Individual regenerations are logged with dates below them.
-All 74 subjects are named in the file; 59 are signed off. **Every new illustration needs adding to
-that review — `check-images.mjs` cannot see inside a JPEG**, so an unreviewed asset is an unverified
-claim on a public page. To check the invariant rather than trusting this paragraph, confirm every
-slug in `index.json` appears in `IMAGE-REVIEW.md`.
+The illustrations are **inferred where the novel is silent — which is most subjects, but not all.**
+Re-reading the authorized publisher excerpt recovered real descriptions for eight characters, so
+check the book before assuming a likeness is free to invent; the briefs were written from role and
+clade grammar and are vaguer than the text they claim to follow.
+
+`docs/visual-briefs/IMAGE-REVIEW.md` records the by-eye review across three cohorts of subjects —
+46 characters and ships, 13 places, technology and factions, and 15 remaining entity pages — plus a
+fourth pass re-checking the first cohort against that recovered book text. **All 74 have now had a
+full eye-pass: 67 signed off, 7 open fails** — six portraits that contradict the book, and
+`ratarajan-dominion`, which ships a card-mount border its own prompt forbade. Individual
+regenerations are logged with dates. **Every new illustration needs adding to that review —
+`check-images.mjs` cannot see inside a JPEG**, so an unreviewed asset is an unverified claim on a
+public page. To check the invariant rather than trusting this paragraph, confirm every slug in
+`index.json` appears in `IMAGE-REVIEW.md`.
 
 Five rules follow, and every one has been violated in shipped assets:
 

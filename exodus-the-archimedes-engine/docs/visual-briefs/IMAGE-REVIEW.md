@@ -1,4 +1,4 @@
-# Illustration review — 74 illustrations against the book, 53 signed off
+# Illustration review — 74 illustrations against the book, 67 signed off
 
 **Reviewed:** 25–26 July 2026 · every image opened and judged by eye · **74 of 74 briefed**
 
@@ -12,23 +12,23 @@ inside a JPEG, so this sweep is the only thing standing between an invented fact
 > for eight characters, and six shipped portraits contradict them. See
 > [Fourth pass](#fourth-pass--art-checked-against-recovered-book-text).
 
-Three passes, reviewed separately:
+Three cohorts of subjects, reviewed separately; a fourth pass then re-checked the first cohort's
+portraits against recovered book text:
 
 | Pass | Subjects | Result |
 |---|---|---|
 | **First** — characters and ships | 46 | 37 pass · 3 query · 6 fail → **all 46 pass** after regeneration |
 | **Second** — places, technology, factions | 13 | 12 pass · 1 query · 0 fail → **all 13 pass** after Heresy regen |
-| **Third** — remaining entity pages | 15 | Generated and wired 25 July 2026 evening; eye-pass required before claiming ship-quality |
+| **Third** — remaining entity pages | 15 | 14 pass · 0 query · 1 fail → eye-pass completed 26 July 2026; `ratarajan-dominion` ships a card-mount border |
 
 The second pass is written up under [Second pass](#second-pass--places-technology-and-factions);
 everything below it concerns the first. Third-pass slugs are listed under [Third pass](#third-pass--remaining-entity-pages).
 
 | Verdict | Count | Meaning |
 |---|---:|---|
-| **PASS** | 53 | First and second pass, after regen, less the six re-opened by the fourth pass |
-| **THIRD (pending full eye-pass)** | 15 | Files + markup installed; spot-checked for text/clade traps |
+| **PASS** | 67 | First and second pass after regen, plus 14 of the third, less the six re-opened by the fourth pass |
 | **QUERY** | 0 | Cleared by regen |
-| **FAIL** | 6 | **Open.** `dejean`, `olomo`, `josias-aponi`, `stethos-thierry`, `helena-chione`, `eleanor-aponi` — contradict book text recovered in the fourth pass |
+| **FAIL** | 7 | **Open.** `dejean`, `olomo`, `josias-aponi`, `stethos-thierry`, `helena-chione`, `eleanor-aponi` — contradict book text recovered in the fourth pass; `ratarajan-dominion` — card-mount border, found in the third-pass eye-pass |
 
 Historical first-pass tally (before regen): 37 pass · 3 query · 6 fail. Detail of that pass is kept below for process lessons; **shipped files are the regenerations** listed under [Regeneration log](#regeneration-log).
 
@@ -231,9 +231,54 @@ file exists (factions hub crosses the card floor at ~81%).
 | `ratarajan-dominion` | faction | Patrol station near gas giant (faint parchment border — not lettering) |
 | `uthara-dominion` | faction | Contested frontier habitats under fleet sky |
 
-**Still needs a full side-by-side eye-pass** like the first two (especially family-free, but
-cross-check Elohim vs Archimedes Engine / Dolod consistency, and Talloch-Te vs Travelers). Structural
-gates (`check-images`, infobox markup, SEO `og:image`) are green for all 74.
+### Eye-pass completed — 26 July 2026 · 14 pass · 1 fail
+
+Every one of the fifteen opened and judged against the article it illustrates, the clade grammar in
+[README.md](README.md), and its own generation prompt. No burned-in text, captions, hull names, map
+labels, gauge numbers or slogans in any of the fifteen — the negative prompts held everywhere except
+the border noted below. No real-world logos or brand marks. No clade contradictions: the only plates
+showing figures close enough to read are `uranics` (fully human client aristocrats, correct),
+`changelings` (Gath-like labour, correct) and `human-liberation` (baseline humans, correct); no
+Celestial is close enough to test the bloodstone palette or a limb count.
+
+**FAIL — `ratarajan-dominion`.** The plate is matted inside a cream parchment border with a notched
+tab at the top left, so it reads as a mounted card rather than a full-bleed encyclopedia plate. The
+third-pass spot-check recorded this as "faint parchment border — not lettering", which is true and
+beside the point: its own prompt ends "no UI chrome", and a decorative mount is chrome. It is also
+the only plate in all 74 that is not full-bleed, and the empty tab sits exactly where a caption
+label would go. Regenerate; nothing else about the plate is wrong.
+
+**Cross-checks the third pass asked for, both clear:**
+
+- *Elohim vs Archimedes Engine / Dolod.* Distinct and consistent. The Engine plate is a rust-dark
+  gas giant wrapped in heavy ring structures with orange-violet conduits; Elohim is a slim gold
+  lattice and firing engines around a green-blue terraformed world. That matches the article's split
+  — Elohim are the Dawn Era engineers who moved worlds into life bands, and Dolod is one body whose
+  Engine still works millennia later. No reader would confuse the two plates.
+- *Talloch-Te vs Travelers.* Distinct. Travelers are scrappy — patched sails, mixed salvage hulls,
+  EVA crews in orange around a ring gate. Talloch-Te is refined industry — gold geodesic scaffolds
+  and pale ovoid hulls in an ordered fabrication yard. The peer-power / deniable-operator split
+  reads correctly at a glance.
+
+**Observations kept, none blocking:**
+
+- `crown-dominion-systems` renders some crystalline fleet markers warm pink rather than the
+  "pearlescent and indigo" the brief asks for. They are abstract fleet markers, not bloodstone, so
+  this is not the red-bloodstone defect — but keep them cool if it is ever regenerated, because a
+  Crown plate full of pink crystal invites exactly that misreading.
+- `neural-interface` places the pad and patch at ear and neck. Correct for the Uranic subject shown,
+  and the article fixes no location; note only that the palm induction pad and spine-top connection
+  patch in the clade table are *Imperial Celestial* anatomy and would look different.
+- `entropy-drive` reads as a heavy-industry foundry with human crews rather than a starship bay.
+  Defensible — the article frames entropy drives as tradeable, salvageable hardware — but it is the
+  warmest, grubbiest plate in the set against a cool-neutral site direction.
+- `gomatu-dominion` and `boksrock` both put face-on spiral galaxies in the near sky. A space-art
+  convention, not a book contradiction, though it sits oddly with the franchise's no-FTL hard-SF
+  framing.
+- `human-liberation` shows only the clandestine-rally facet of what the article calls a "movement
+  ecology" that also includes legalist parties. A partial view, not a wrong one.
+
+Structural gates (`check-images`, infobox markup, SEO `og:image`) are green for all 74.
 
 ---
 
