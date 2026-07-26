@@ -264,6 +264,13 @@ asked for **fair with a tint of red**, and the shipped plate is now a pale, ligh
 warm rosy-coppery undertone. The paler skin also makes the burnt-orange horns read more distinctly,
 so the contrast note in the prompt was flipped from "brighter than her skin" to "deeper than it".
 
+**Posture and bearing, third revision.** The plate came back hunched, with a face that read merely
+unrefined. The cause was in my own wording: "blunt, impatient expression" and "the least polished
+of the peer queens" were being read as *low-born* rather than *unbothered with court manners*. The
+prompt now separates the two — squared shoulders, straight back, chin level, strong noble bone
+structure and royal authority, with the bluntness sitting **on** that face as manner. She is the
+least polished of the peers in behaviour, never the least noble in bearing.
+
 **The red skin is a preference, and legitimate.** Nothing in the novel fixes her colouring; she is
 Queen of Cheluli, a peer house with no relatives among the illustrated subjects, so there is no
 family lock to respect and no canon to contradict. Recorded as owner inference, not as a book fact.
