@@ -29,7 +29,7 @@ Court public gallery
 ## Generation prompt
 
 ```
-Highly detailed cinematic sci-fi encyclopedia illustration, rich textures, sharp focus, painterly digital art with photographic detail, soft volumetric lighting, no text, no watermark, no UI chrome. Portrait of Malquilvo, Imperial Celestial court parent in mourning and accusation: tall post-human figure with anguished stern expression, grey court robes, matte calcium-growth bloodstone in faint turquoise and gold — a bone-like growth of the body, not faceted gemstone, and never ruby or crimson, tear-shaped jewellery. Tragic court politics. Upper-body portrait, cold public-gallery light.
+Highly detailed cinematic sci-fi encyclopedia illustration, rich textures, sharp focus, painterly digital art with photographic detail, soft volumetric lighting, no text, no watermark, no UI chrome. Portrait of Malquilvo, Imperial Celestial court parent in mourning and accusation: tall post-human figure with anguished stern expression, grey court robes, a set of tear-shaped mourning spurs of calcium-growth bloodstone in faint turquoise and gold — a bone-like matte growth of the body, never a cut, faceted or polished gemstone, never set in metal like jewellery, and never ruby or crimson. Tragic court politics. Upper-body portrait, cold public-gallery light.
 ```
 
 ## Sources

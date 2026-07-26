@@ -29,7 +29,7 @@ Occupation HQ / navy bridge
 ## Generation prompt
 
 ```
-Highly detailed cinematic sci-fi encyclopedia illustration, rich textures, sharp focus, painterly digital art with photographic detail, soft volumetric lighting, no text, no watermark, no UI chrome. Portrait of General Avone-Valerio, Imperial Celestial navy commander: tall post-human military leader with cold commanding face, angular steel-blue navy armour plates, rank ornaments without text. Occupation authority. Upper-body portrait, harsh navy bridge light.
+Highly detailed cinematic sci-fi encyclopedia illustration, rich textures, sharp focus, painterly digital art with photographic detail, soft volumetric lighting, no text, no watermark, no UI chrome. Portrait of General Avone-Valerio, Imperial Celestial navy commander: tall post-human military leader with cold commanding face, angular steel-blue navy armour plates, plain rank ornaments bearing no lettering, inscriptions, plaques or repeated emblems. any bloodstone visible is a bone-like matte growth of the body, never a cut, faceted or polished gemstone, never set in metal like jewellery, and never ruby or crimson. Occupation authority. Upper-body portrait, harsh navy bridge light.
 ```
 
 ## Sources

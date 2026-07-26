@@ -29,7 +29,7 @@ Santa Rosa underworld night
 ## Generation prompt
 
 ```
-Highly detailed cinematic sci-fi encyclopedia illustration, rich textures, sharp focus, painterly digital art with photographic detail, soft volumetric lighting, no text, no watermark, no UI chrome. Portrait of Dagon, Imperial Celestial covert operator posing in human underworld networks: tall elegant man with predatory calm eyes, layered dark merchant coat over subtle high-tech under-armour, elongated post-human proportions barely hidden. Dual-face spy. Upper-body portrait, neon underworld bokeh.
+Highly detailed cinematic sci-fi encyclopedia illustration, rich textures, sharp focus, painterly digital art with photographic detail, soft volumetric lighting, no text, no watermark, no UI chrome. Portrait of Dagon, Imperial Celestial covert operator posing in human underworld networks: tall elegant man with predatory calm eyes, layered dark merchant coat over subtle high-tech under-armour, elongated post-human proportions barely hidden. any bloodstone visible is a bone-like matte growth of the body, never a cut, faceted or polished gemstone, never set in metal like jewellery, and never ruby or crimson. Dual-face spy. Upper-body portrait, neon underworld bokeh.
 ```
 
 ## Sources

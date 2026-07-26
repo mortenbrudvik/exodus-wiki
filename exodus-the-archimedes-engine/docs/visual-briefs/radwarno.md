@@ -29,7 +29,7 @@ Kelowan fleet formation viewport
 ## Generation prompt
 
 ```
-Highly detailed cinematic sci-fi encyclopedia illustration, rich textures, sharp focus, painterly digital art with photographic detail, soft volumetric lighting, no text, no watermark, no UI chrome. Portrait of Commander Radwarno, Verak Imperial Celestial fleet officer: tall post-human man with stern focused expression, dark navy armour-coat with helium-blue accents, elongated proportions. Fleet capture authority. Upper-body portrait, starfield fleet light.
+Highly detailed cinematic sci-fi encyclopedia illustration, rich textures, sharp focus, painterly digital art with photographic detail, soft volumetric lighting, no text, no watermark, no UI chrome. Portrait of Commander Radwarno, Verak Imperial Celestial fleet officer: tall post-human man with stern focused expression, dark navy armour-coat with helium-blue accents, elongated proportions. any bloodstone visible is a bone-like matte growth of the body, never a cut, faceted or polished gemstone, never set in metal like jewellery, and never ruby or crimson. Fleet capture authority. Upper-body portrait, starfield fleet light.
 ```
 
 ## Sources

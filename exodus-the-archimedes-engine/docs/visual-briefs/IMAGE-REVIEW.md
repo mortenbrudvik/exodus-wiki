@@ -33,13 +33,18 @@ everything below it concerns the first. Third-pass slugs are listed under [Third
 
 | Verdict | Count | Meaning |
 |---|---:|---|
-| **PASS** | 59 | Signed off, including 16 of the 30 replacements opened in the sixth pass |
-| **QUERY** | 6 | `helena-chione`, `asahi-iryna`, `radwarno`, `uulana`, `malquilvo`, `ramona-ursule` — bloodstone rendered as faceted crystal or set jewellery rather than a matte growth |
-| **FAIL** | 9 | `carolien-amaia`, `inessa-pierina`, `bekket`, `luus`, `zuberi-dulcina`, `siskala`, `avone-valerio` from the sixth pass, plus `andino` and `medusa` still **not regenerated** |
+| **PASS** | 59 | Signed off, including 17 of the 30 replacements opened in the sixth pass |
+| **QUERY** | 7 | `helena-chione`, `asahi-iryna`, `radwarno`, `uulana`, `malquilvo`, `ramona-ursule` — bloodstone as faceted crystal or set jewellery rather than a matte growth — plus `siskala`, whose canon tiger badge is over-rendered |
+| **FAIL** | 8 | `carolien-amaia`, `inessa-pierina`, `bekket`, `luus`, `zuberi-dulcina`, `avone-valerio` from the sixth pass, plus `andino` and `medusa` still **not regenerated** |
 
-59 + 6 + 9 = 74. The signed-off count went 67 → 43 → 59: the fourth and fifth passes changed the
+59 + 7 + 8 = 74. The signed-off count went 67 → 43 → 59: the fourth and fifth passes changed the
 standard from the briefs to the book, and the [sixth](#sixth-pass--the-30-replacements-opened)
 checked the replacements that answered them. **`andino` and `medusa` remain outstanding.**
+
+**The prompt machinery is now fixed** (26 July 2026) — see
+[Prompt fixes](#prompt-fixes-applied-after-the-sixth-pass). No image has been regenerated against
+it yet, so every QUERY and FAIL above still stands; the fixes change what the *next* render is
+asked for.
 
 Historical first-pass tally (before regen): 37 pass · 3 query · 6 fail. Detail of that pass is kept below for process lessons; **shipped files are the regenerations** listed under [Regeneration log](#regeneration-log).
 
@@ -94,10 +99,13 @@ The fourth pass cleared lettering from three portraits. Three different ones hav
 - **`zuberi-dulcina`** — six discrete gold **runic glyphs** float in the background, plus a large
   invented sunburst emblem on the wall. Her prompt ends "no text, no watermark". Her bloodstone is
   also faceted crystal despite the prompt saying "not faceted gemstone".
-- **`siskala`** — a **tiger's head** device repeated on both pauldrons, chest, belt buckle and
-  helmet, with tiger faces on the wall behind and a tiger-tail motif on the sash. Nothing in the
-  wiki gives Siskala a tiger. This is invented house heraldry at the scale the no-text rule exists
-  to prevent.
+- **`siskala` — QUERY, not FAIL. Correction to this section's own first draft**, which read
+  "nothing in the wiki gives Siskala a tiger". That was wrong and checkable: she is **Major of the
+  Wynid Royal Tiger Guard** on her own page, the roster, her hub card and her meta description, and
+  her prompt already asked for a "subtle tiger motif". The emblem is canon. What is wrong is the
+  dose — a tiger's head on both pauldrons, chest, belt buckle and helmet, tiger faces on the wall
+  behind, and a tiger-tail motif on the sash. Over-rendering a real unit badge, not inventing one.
+  *(Lesson, again: check the wiki before calling something invented.)*
 - **`avone-valerio`** — blue plaques with inscription-like marks on the collar and chest. The whole
   figure also reads as a Warhammer 40,000 space marine: crested helm-hair, ornate pauldrons, spiked
   sunburst device.
@@ -138,6 +146,40 @@ and every call site appends a noun, so the rendered prompts read:
 The prohibition binds to the garment rather than to the bloodstone — "never a crimson mantle" — and
 Malquilvo's reads "never ruby or crimson**, tear-shaped jewellery**". Fixing this means putting the
 noun inside the constant or ending the clause with punctuation.
+
+### Prompt fixes applied after the sixth pass
+
+**26 July 2026 · `write-visual-briefs.mjs` · no images regenerated yet.** Both machinery defects are
+closed, and the five prompts that were asking for the wrong material outright are corrected.
+
+**1. `BLOODSTONE` is now a function, so the noun sits inside the clause.** It was a bare string that
+call sites suffixed, so `${BLOODSTONE} mantle` rendered as "…and never ruby or crimson **mantle**".
+`bloodstone("heavy mantle")` now renders the ornament first and leaves the prohibition terminal.
+The material wording is also stronger, because "not faceted gemstone" alone did not stop either
+faceted prisms or cabochons set in gold: **"never a cut, faceted or polished gemstone, never set in
+metal like jewellery, and never ruby or crimson."** Colour is a second argument, defaulting to
+turquoise-and-gold only where the novel is silent — Inessa-Pierina's ORANGE and Gahiji's black-and-
+green are spelled out in their own prompts and untouched.
+
+**2. Coverage is 16 of 16, verified rather than assumed.** Ten briefs never had the clause. Five of
+those were actively asking for the defect — `clavissa` and `lord-jolav` requested "crystalline
+jewellery", `asahi-iryna` and `uulana` "crystalline accents", `acelynn` "mindline crest jewellery" —
+which is why those four render as faceted crystal and set gems. They now request a named bloodstone
+growth. The other five (`siskala`, `neusch`, `avone-valerio`, `radwarno`, `dagon`) may legitimately
+wear none, so they carry `BLOODSTONE_GUARD`: *"any bloodstone visible is …"*, which forbids the red
+gem default without forcing an ornament onto a figure the novel never gives one.
+
+Three prompts got a targeted fix for a sixth-pass defect at the same time:
+
+| Subject | Change |
+|---|---|
+| `helena-chione` | Colour and "modest" were already right and were ignored; the material clause was missing entirely. Now "a modest, restrained collar ornament of calcium-growth bloodstone in gold and turquoise — …" |
+| `siskala` | "subtle tiger motif" → "one small tiger-head unit badge and no other repeated emblem", against six of them |
+| `avone-valerio` | "rank ornaments without text" → "plain rank ornaments bearing no lettering, inscriptions, plaques or repeated emblems" |
+
+What this does **not** fix is the sixth pass's largest finding: four portraits contradict a
+description already sitting in their own prompt. No wording change addresses that, because the
+instruction was already there and correct. It needs a compare-image-to-prompt step at review time.
 
 ### Clade drift on the three military Celestials
 

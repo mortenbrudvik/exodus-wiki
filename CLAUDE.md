@@ -418,7 +418,7 @@ clade grammar and are vaguer than the text they claim to follow.
 `docs/visual-briefs/IMAGE-REVIEW.md` records the by-eye review over six passes: three that checked
 the art against the briefs, two that checked the briefs against the novel and re-opened most of the
 cast, and a sixth that opened the 30 replacement files. **Current state: 74 briefed · 59 signed off ·
-6 query · 9 fail.** Individual regenerations are logged with dates. **Every new illustration needs
+7 query · 8 fail.** Individual regenerations are logged with dates. **Every new illustration needs
 adding to that review — `check-images.mjs` cannot see inside a JPEG**, so an unreviewed asset is an
 unverified claim on a public page. To check the invariant rather than trusting this paragraph,
 confirm every slug in `index.json` appears in `IMAGE-REVIEW.md`.

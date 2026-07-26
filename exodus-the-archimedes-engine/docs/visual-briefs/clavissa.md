@@ -29,7 +29,7 @@ Quieter court gallery light
 ## Generation prompt
 
 ```
-Highly detailed cinematic sci-fi encyclopedia illustration, rich textures, sharp focus, painterly digital art with photographic detail, soft volumetric lighting, no text, no watermark, no UI chrome. Portrait of Clavissa, Imperial Celestial congregant daughter of a queen: tall elegant post-human young woman with careful wary expression, silver-blue court robes, modest crystalline jewellery, elongated proportions. Survivor of succession culture, not the usurper. Upper-body portrait, soft gallery light.
+Highly detailed cinematic sci-fi encyclopedia illustration, rich textures, sharp focus, painterly digital art with photographic detail, soft volumetric lighting, no text, no watermark, no UI chrome. Portrait of Clavissa, Imperial Celestial congregant daughter of a queen: tall elegant post-human young woman with careful wary expression, silver-blue court robes, a modest collar ornament of calcium-growth bloodstone in faint turquoise and gold — a bone-like matte growth of the body, never a cut, faceted or polished gemstone, never set in metal like jewellery, and never ruby or crimson, elongated proportions. Survivor of succession culture, not the usurper. Upper-body portrait, soft gallery light.
 ```
 
 ## Sources

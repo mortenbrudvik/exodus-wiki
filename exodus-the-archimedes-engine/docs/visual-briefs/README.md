@@ -67,7 +67,7 @@ See individual `*.md` briefs in this folder. Filenames match page slugs.
 ## Review
 
 `check-images.mjs` cannot see inside a JPEG, so delivered assets are checked by eye. Results are in
-[IMAGE-REVIEW.md](IMAGE-REVIEW.md). **Current state: 74 briefed · 59 signed off · 6 query · 9 fail.**
+[IMAGE-REVIEW.md](IMAGE-REVIEW.md). **Current state: 74 briefed · 59 signed off · 7 query · 8 fail.**
 
 Six passes so far. The first three checked the art against the briefs; the fourth and fifth checked
 the briefs against the novel and re-opened most of the cast; the sixth opened the 30 replacement
@@ -81,8 +81,10 @@ anywhere**. What it also found:
 - New invented heraldry and lettering in `zuberi-dulcina`, `siskala`, `avone-valerio`, `bekket`.
 - Bloodstone is the right colour but often the wrong **material** — faceted crystal or set
   jewellery rather than a matte growth.
-- The bloodstone clause reached only **6 of the 16** Celestial briefs, and `${BLOODSTONE}` splices
-  mid-phrase so the prohibition binds to the garment ("never ruby or crimson *mantle*").
+- The bloodstone clause reached only **6 of the 16** Celestial briefs, and `${BLOODSTONE}` spliced
+  mid-phrase so the prohibition bound to the garment ("never ruby or crimson *mantle*"). **Both are
+  now fixed** — `bloodstone()` puts the ornament inside the clause, coverage is 16 of 16, and the
+  five prompts that asked for "crystalline jewellery" ask for a growth. No image regenerated yet.
 
 `andino` and `medusa` are still not regenerated.
 
