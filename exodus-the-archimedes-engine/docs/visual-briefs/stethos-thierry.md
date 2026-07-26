@@ -31,7 +31,7 @@ Data-hall soft hologlyphs (no readable text)
 ## Generation prompt
 
 ```
-Highly detailed cinematic sci-fi encyclopedia illustration, rich textures, sharp focus, painterly digital art with photographic detail, soft volumetric lighting, no text, no watermark, no UI chrome. Portrait of Lord Stethos-Thierry, Imperial Celestial court datamaster: post-human man two and a half metres tall with calm vacant-focused expression, wearing scarlet-and-grey robes that flare out into a tall stiff collar rising almost to his head, his skull embellished with swirled petals of pale bloodstone that cover a connection bulb at the nape of his spine. Organic crystalline growth, not metal machinery. Upper-body portrait, cool holographic bokeh without readable text.
+Highly detailed cinematic sci-fi encyclopedia illustration, rich textures, sharp focus, painterly digital art with photographic detail, soft volumetric lighting, no text, no watermark, no UI chrome. Portrait of Lord Stethos-Thierry, Imperial Celestial court datamaster. This is an Imperial Celestial, not an ordinary human: unnaturally tall with elongated proportions, long limbs and a long neck, refined post-human features and bearing — never an ordinary human build, face or posture. Post-human man two and a half metres tall with calm vacant-focused expression, wearing scarlet-and-grey robes that flare out into a tall stiff collar rising almost to his head, his skull embellished with swirled petals of pale bloodstone that cover a connection bulb at the nape of his spine. Organic crystalline growth, not metal machinery. Upper-body portrait, cool holographic bokeh without readable text.
 ```
 
 ## Sources

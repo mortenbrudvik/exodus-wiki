@@ -442,6 +442,12 @@ Three lessons from those passes are worth carrying into any new art:
 - **Count what the text counts, and check the material as well as the colour.** Olomo shipped with
   the wrong eye count for three passes because the brief never mentioned eyes; bloodstone was fixed
   from red to turquoise while staying a faceted gem, which the novel rules out just as firmly.
+- **Fix clade-level defects at the clade, and re-open old passes when a standard tightens.** The
+  Celestial body plan was front-loaded per subject four times before being swept across all 23
+  briefs — the clause was identical each time, only the discovery repeated. Separately, four
+  subjects passed in the sixth pass on bloodstone colour were never re-judged as the material,
+  background-text and period rules arrived, so a "74/74 signed off" tally was really 69. A row
+  is only as good as the standard it was judged against.
 - **An automated "nothing found" is unproven, never verified absence.** A summarising fetch over
   the publisher excerpt reported that the novel never describes Finn, and that was recorded as
   verified. The novel describes his "freezing skin" in the opening — inside the very text

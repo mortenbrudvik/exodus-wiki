@@ -147,6 +147,49 @@ The prohibition binds to the garment rather than to the bloodstone — "never a 
 Malquilvo's reads "never ruby or crimson**, tear-shaped jewellery**". Fixing this means putting the
 noun inside the constant or ending the clause with punctuation.
 
+## Fifteenth pass — sweep the Celestial body plan, and four subjects left on stale standards
+
+**26 July 2026 · 19 briefs swept · 4 subjects regenerated · 4 pass.**
+
+### The sweep
+
+The Imperial Celestial body plan had been front-loaded **per subject, four separate times** —
+`avone-valerio`, `radwarno`, `siskala`, `inessa-pierina` — each time only after a portrait shipped
+looking like an ordinary human. Of 23 Imperial Celestial briefs, **only those 4 carried it**.
+`CELESTIAL_BODY` now does, in all 23, verified by script rather than by eye. It deliberately states
+no height so subjects the novel *does* fix — Helena at three metres, Stethos-Thierry at two and a
+half — keep theirs.
+
+Applying a fix per-subject when it belongs to a clade cost four regenerations. The clause is the
+same in every case; only the discovery was repeated.
+
+### What the sweep exposed
+
+Checking the four Celestials never assessed for body plan turned up something worse than clade
+drift. **`acelynn`, `dagon`, `lord-jolav` and `neusch` were all still judged by sixth-pass
+standards.** They were marked PASS then on bloodstone *colour*, and three standards have tightened
+since — material ("never set in metal like jewellery"), background text, and period fit. None had
+been re-judged.
+
+| Subject | Failing under current standards | Now |
+|---|---|---|
+| `acelynn` | Bloodstone set in gold filigree; a large gilded halo-arch behind her head | Porous turquoise-and-gold crest growing from the skull; plain ground |
+| `lord-jolav` | Turquoise cabochons in gold — collar, earrings, pendant, cuffs; Georgian pilasters, gilt panels and classical drapery | A single porous shoulder growth; completely bare wall |
+| `dagon` | Bloodstone in gold filigree on the lapels | Growth on collar, shoulder and hands; neon fully defocused |
+| `neusch` | Bloodstone **floating free in the air** behind him; a glyph ring reading as an alien alphabet | Growth on his own body; plain wall, no ring |
+
+All four are also now properly elongated, which was the thing the sweep set out to fix and turned
+out to be the least of it.
+
+### Correction to the tenth pass
+
+That pass recorded **74/74 signed off**. It should not have. Five subjects had been passed in the
+sixth pass on colour alone and were never re-opened as the standard moved — `clavissa` (fixed
+incidentally in the twelfth pass) plus these four. A tally is only as good as the standard its
+oldest row was judged against, and this ledger did not track that. **When a standard tightens, every
+row passed under the old one becomes QUERY until re-opened** — the tenth pass should have said 69,
+not 74.
+
 ## Fourteenth pass — `inessa-pierina`: clade drift, and a red-skinned queen
 
 **26 July 2026 · 1 subject · 1 pass.** Owner: *"does not look very celestial, make skin colour more

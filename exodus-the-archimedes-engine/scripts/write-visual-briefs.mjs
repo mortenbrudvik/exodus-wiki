@@ -65,6 +65,16 @@ const BLOODSTONE_GUARD = `any bloodstone visible is in faint turquoise and gold 
  * copying: mandarin collar, seamed panels, no lapels, and he still reads as a sharp commercial
  * operator without borrowing anything from Earth's recent past.
  */
+/**
+ * Imperial Celestial body plan. Applied per-subject four separate times — avone-valerio, radwarno,
+ * siskala, inessa-pierina — each after a portrait shipped reading as an ordinary human. Swept across
+ * every Imperial Celestial brief so there is no fifth instance. Deliberately states no height, so
+ * subjects with one fixed in the novel (Helena at three metres, Stethos-Thierry at two and a half)
+ * keep it.
+ */
+const CELESTIAL_BODY =
+  "This is an Imperial Celestial, not an ordinary human: unnaturally tall with elongated proportions, long limbs and a long neck, refined post-human features and bearing — never an ordinary human build, face or posture.";
+
 const FAR_FUTURE_DRESS =
   "Costume must belong to the far future, not to Earth's recent past: no lounge suit, no necktie, bow tie or cravat, no dress-shirt collar and cuffs of twentieth-century cut, no trench coat, no notch lapels, no dog tags, rank chevrons or webbing of modern military pattern, and no Georgian or Victorian interior mouldings such as dado rails, wainscot panelling or cornices. Convey status and role through cut, seam, fastening and material instead — standing or mandarin collars, asymmetric closures, seamed panels, unfamiliar fabrics.";
 
@@ -291,7 +301,7 @@ const briefs = [
     clothing:
       "Court dress restrained by queenly choice — modest gold-and-turquoise bloodstone ornamentation. Her Coronation regalia is separate and far grander: nanoactive armour thinner than skin under an emerald polonaise robe embroidered with gold and platinum that glows from within",
     setting: "Wynid court livestone hall, cool luminous architecture",
-    prompt: `${STYLE} Upper-body portrait of Helena-Chione, Imperial Celestial Now and Forever Queen of Wynid. HER BLOODSTONE IS MODEST AND RESTRAINED: one small collar ornament only — not a crown, not a tiara, not a spray, not a matching suite of necklace, earrings and bracelets. She is the least ornamented queen at court, and that restraint is the point. Extremely tall elegant post-human woman with elongated regal proportions and long limbs, luminous pale skin, striking intense green eyes, serene strategic expression, wearing an emerald polonaise robe embroidered with glowing gold and platinum thread, with ${bloodstone("modest, restrained collar ornament", "gold and turquoise")}. Godlike court beauty, restrained rather than gaudy, emphasizing height, soft livestone palace glow. ${NO_TEXT_ANYWHERE}`,
+    prompt: `${STYLE} Upper-body portrait of Helena-Chione, Imperial Celestial Now and Forever Queen of Wynid. ${CELESTIAL_BODY} HER BLOODSTONE IS MODEST AND RESTRAINED: one small collar ornament only — not a crown, not a tiara, not a spray, not a matching suite of necklace, earrings and bracelets. She is the least ornamented queen at court, and that restraint is the point. Extremely tall elegant post-human woman with elongated regal proportions and long limbs, luminous pale skin, striking intense green eyes, serene strategic expression, wearing an emerald polonaise robe embroidered with glowing gold and platinum thread, with ${bloodstone("modest, restrained collar ornament", "gold and turquoise")}. Godlike court beauty, restrained rather than gaudy, emphasizing height, soft livestone palace glow. ${NO_TEXT_ANYWHERE}`,
     inference: [
       "Face shape and skin tone are not described — serene post-human beauty as clade default",
       "Hair is not stated for her specifically; her daughters have “a variety of hair and skin colors”, so the clade is not uniformly bald",
@@ -317,7 +327,7 @@ const briefs = [
     ],
     clothing: "Sharp black-and-crimson royal armour-robes, bloodstone crown-collar, military severity",
     setting: "Throne-side shadow with fleet viewport",
-    prompt: `${STYLE} Portrait of Thyra as Helena-Thyra, Imperial Celestial usurper queen and daughter of Helena-Chione: tall post-human young woman with elongated elegant features, a long neck, luminous pale skin of the Wynid royal line and cold ruthless intense green eyes, her long dark hair dressed in artful braids bound around the bloodstone spurs at her head and drawn up to leave the neural pad at the nape of her neck exposed, wearing sharp black and crimson armour-robes with ${bloodstone("collar-crown")}. Hardline power. Upper-body portrait, dramatic side lighting and fleet viewport glow.`,
+    prompt: `${STYLE} Portrait of Thyra as Helena-Thyra, Imperial Celestial usurper queen and daughter of Helena-Chione. ${CELESTIAL_BODY} Tall post-human young woman with elongated elegant features, a long neck, luminous pale skin of the Wynid royal line and cold ruthless intense green eyes, her long dark hair dressed in artful braids bound around the bloodstone spurs at her head and drawn up to leave the neural pad at the nape of her neck exposed, wearing sharp black and crimson armour-robes with ${bloodstone("collar-crown")}. Hardline power. Upper-body portrait, dramatic side lighting and fleet viewport glow.`,
     inference: [
       "Youth vs Helena — younger adult Celestial",
       "The braid/spur/nape-pad styling comes from preview snippets whose surrounding sentence is cut; it is certainly congregant court styling, and most likely hers. Treat it as clade-safe rather than uniquely Thyra",
@@ -338,7 +348,7 @@ const briefs = [
     ],
     clothing: "Softer court dress than Thyra — silver-blue congregant robes, modest bloodstone accents",
     setting: "Quieter court gallery light",
-    prompt: `${STYLE} Upper-body portrait of Clavissa, Imperial Celestial congregant daughter of Queen Helena-Chione. SHE HAS HER MOTHER’S INTENSE GREEN EYES: vivid green, the one feature every daughter of Helena inherits — not grey, not blue. Tall elegant post-human young woman with elongated proportions and a long neck, luminous pale skin of the Wynid royal line, careful wary expression, silver-blue court robes, ${bloodstone("modest collar ornament")}, elongated proportions. Survivor of succession culture, not the usurper, soft gallery light. ${NO_TEXT_ANYWHERE}`,
+    prompt: `${STYLE} Upper-body portrait of Clavissa, Imperial Celestial congregant daughter of Queen Helena-Chione. ${CELESTIAL_BODY} SHE HAS HER MOTHER’S INTENSE GREEN EYES: vivid green, the one feature every daughter of Helena inherits — not grey, not blue. Tall elegant post-human young woman with elongated proportions and a long neck, luminous pale skin of the Wynid royal line, careful wary expression, silver-blue court robes, ${bloodstone("modest collar ornament")}, elongated proportions. Survivor of succession culture, not the usurper, soft gallery light. ${NO_TEXT_ANYWHERE}`,
     inference: [],
     image: "assets/images/characters/clavissa.jpg",
   },
@@ -356,7 +366,7 @@ const briefs = [
     ],
     clothing: "Imperial palace regalia — deep indigo and platinum, heavy bloodstone mantle",
     setting: "Imperial Palace mountain-engulfing architecture suggestion",
-    prompt: `${STYLE} Upper-body portrait of Carolien-Amaia, Imperial Celestial empress of the Crown Dominion. SHE IS SEVENTEEN YEARS OLD: the face must be an adolescent girl's — smooth unlined youthful skin, soft round cheeks, no age lines, no gauntness, not a middle-aged or mature woman. A strikingly young long face, skin so white she could almost be albino, and glossy raven-black hair hanging straight almost to her waist. Calm commanding expression — absolute imperial authority worn on a teenager's face, and that contrast is the point of the picture. Deep indigo and platinum imperial robes, ${bloodstone("heavy mantle")}, elongated post-human proportions. Plain grand palace light, uncluttered background, no heraldic emblems, no crowns, no repeated motifs, no banners, no portraits or murals behind her.`,
+    prompt: `${STYLE} Upper-body portrait of Carolien-Amaia, Imperial Celestial empress of the Crown Dominion. ${CELESTIAL_BODY} SHE IS SEVENTEEN YEARS OLD: the face must be an adolescent girl's — smooth unlined youthful skin, soft round cheeks, no age lines, no gauntness, not a middle-aged or mature woman. A strikingly young long face, skin so white she could almost be albino, and glossy raven-black hair hanging straight almost to her waist. Calm commanding expression — absolute imperial authority worn on a teenager's face, and that contrast is the point of the picture. Deep indigo and platinum imperial robes, ${bloodstone("heavy mantle")}, elongated post-human proportions. Plain grand palace light, uncluttered background, no heraldic emblems, no crowns, no repeated motifs, no banners, no portraits or murals behind her.`,
     inference: [
       "Eye colour is not stated for her",
       "The unsettling gap between a seventeen-year-old host and an empress of the Crown Dominion is the point of the description — do not age her up",
@@ -380,7 +390,7 @@ const briefs = [
     ],
     clothing: "Bassa royal colours — emerald and gold court robes with bloodstone diadem",
     setting: "Coronation-era court",
-    prompt: `${STYLE} Upper-body portrait of Luus-Marcela, Imperial Celestial Now and Forever Queen of Bassa. SHE HAS THE FACE OF A GIRL OF ABOUT SEVENTEEN: smooth unlined youthful skin, soft round cheeks, no age lines, no crow's feet, no gauntness, not a middle-aged or mature woman. On that beguilingly young, almost girlish face she wears an expression of hard political triumph that does not belong on it, and that contrast is the point of the picture. Tall elegant post-human sovereign, emerald and gold robes with ${bloodstone("diadem")}. Plain even light, uncluttered background, no heraldic emblems, no crests, no repeated motifs, no banners, no murals, no floating symbols or runes.`,
+    prompt: `${STYLE} Upper-body portrait of Luus-Marcela, Imperial Celestial Now and Forever Queen of Bassa. ${CELESTIAL_BODY} SHE HAS THE FACE OF A GIRL OF ABOUT SEVENTEEN: smooth unlined youthful skin, soft round cheeks, no age lines, no crow's feet, no gauntness, not a middle-aged or mature woman. On that beguilingly young, almost girlish face she wears an expression of hard political triumph that does not belong on it, and that contrast is the point of the picture. Tall elegant post-human sovereign, emerald and gold robes with ${bloodstone("diadem")}. Plain even light, uncluttered background, no heraldic emblems, no crests, no repeated motifs, no banners, no murals, no floating symbols or runes.`,
     inference: [
       "Hair and eye colour are not stated for her",
       "The 'dark olive skin and classic titian hair, cropped short' in the same passage belongs to **a princess Luus selected to taunt the empress**, not to Luus — do not attribute it to her",
@@ -424,7 +434,7 @@ const briefs = [
     cues: ["Peer queen; trial-host authority", "Tall Imperial humanoid"],
     clothing: "Nizinsk court amethyst and silver robes, judicial bloodstone staff-collar",
     setting: "Politics-trial chamber light",
-    prompt: `${STYLE} Portrait of Ramona-Ursule, Imperial Celestial queen of Nizinsk: tall post-human woman with sharp assessing eyes, amethyst and silver robes, ${bloodstone("collar")}. Host of multi-dominion politics trial, cool chamber light. ${NO_TEXT_ANYWHERE}`,
+    prompt: `${STYLE} Portrait of Ramona-Ursule, Imperial Celestial queen of Nizinsk. ${CELESTIAL_BODY} Tall post-human woman with sharp assessing eyes, amethyst and silver robes, ${bloodstone("collar")}. Host of multi-dominion politics trial, cool chamber light. ${NO_TEXT_ANYWHERE}`,
     inference: [],
     image: "assets/images/characters/ramona-ursule.jpg",
   },
@@ -441,7 +451,7 @@ const briefs = [
     ],
     clothing: "War-era Imperial armour-robes in blackened gold, cracked bloodstone crown",
     setting: "Dim historical haze, ruined glory",
-    prompt: `${STYLE} Upper-body portrait of Zuberi-Dulcina, historical Imperial Celestial queen of Kelowan. ABSOLUTELY NO SYMBOLS ANYWHERE: no runes, no glyphs, no floating characters, no sunburst or star emblems, no heraldry, no inscriptions, no lettering of any kind, in the air or on the walls or on her armour. Tall post-human war sovereign with a tragic commanding expression, blackened-gold armour robes, ${bloodstone("cracked crown")}. Fallen empire grandeur, smoky dramatic light, plain uncluttered background.`,
+    prompt: `${STYLE} Upper-body portrait of Zuberi-Dulcina, historical Imperial Celestial queen of Kelowan. ${CELESTIAL_BODY} ABSOLUTELY NO SYMBOLS ANYWHERE: no runes, no glyphs, no floating characters, no sunburst or star emblems, no heraldry, no inscriptions, no lettering of any kind, in the air or on the walls or on her armour. Tall post-human war sovereign with a tragic commanding expression, blackened-gold armour robes, ${bloodstone("cracked crown")}. Fallen empire grandeur, smoky dramatic light, plain uncluttered background.`,
     inference: [
       "Historical reconstruction — the novel gives no portrait of her alive",
       "**Her skeleton is physically present** in the Council of the Empress chamber, and Luus-Marcela smiles at it in triumph. A memorial plate of the displayed remains would be better sourced than this imagined living portrait",
@@ -466,7 +476,7 @@ const briefs = [
     ],
     clothing: "Dark court suit with bloodstone cuff growths, Uixic noble cut",
     setting: "Shadowed court corridor",
-    prompt: `${STYLE} Upper-body portrait of Lord Bekket, Imperial Celestial court schemer and father of a usurper queen. HIS HAIR IS LONG, LOOSE, UNKEMPT AND AUBURN: coppery red-brown, falling well past his collar and deliberately untidy — not black, not dark brown, not short, not slicked back, not tied up. It gives him a slightly wild, un-courtly look, deliberately less groomed than everyone around him. A young post-human man, tall but not the tallest, with a calculating half-smile. Dark tailored court suit, ${bloodstone("pair of cuff ornaments")}. Plain even light, uncluttered background, no heraldic emblems, no crests, no repeated motifs, no banners, no murals, no floating symbols or runes.`,
+    prompt: `${STYLE} Upper-body portrait of Lord Bekket, Imperial Celestial court schemer and father of a usurper queen. ${CELESTIAL_BODY} HIS HAIR IS LONG, LOOSE, UNKEMPT AND AUBURN: coppery red-brown, falling well past his collar and deliberately untidy — not black, not dark brown, not short, not slicked back, not tied up. It gives him a slightly wild, un-courtly look, deliberately less groomed than everyone around him. A young post-human man, tall but not the tallest, with a calculating half-smile. Dark tailored court suit, ${bloodstone("pair of cuff ornaments")}. Plain even light, uncluttered background, no heraldic emblems, no crests, no repeated motifs, no banners, no murals, no floating symbols or runes.`,
     inference: [
       "Eye colour and skin tone are not stated — the auburn hair, its unkempt length and his youth are",
     ],
@@ -490,7 +500,7 @@ const briefs = [
     ],
     clothing: "Grey-and-silver robes of state, ill-fitting; small black-and-green bloodstone cap over the spine patch",
     setting: "Council chamber",
-    prompt: `${STYLE} Portrait of Lord Gahiji-Calder, Chief Archon to an Imperial Celestial queen: tall post-human older man with shrewd political eyes and elongated proportions, wearing grey-and-silver robes of state that hang loose and ill-fitting like badly hung curtains, and only a small cap of black-and-green bloodstone curlicues on his head instead of a grand headdress. Deliberately under-dressed for court. Statesman not soldier. Upper-body portrait, cool council light.`,
+    prompt: `${STYLE} Portrait of Lord Gahiji-Calder, Chief Archon to an Imperial Celestial queen. ${CELESTIAL_BODY} Tall post-human older man with shrewd political eyes and elongated proportions, wearing grey-and-silver robes of state that hang loose and ill-fitting like badly hung curtains, and only a small cap of black-and-green bloodstone curlicues on his head instead of a grand headdress. Deliberately under-dressed for court. Statesman not soldier. Upper-body portrait, cool council light.`,
     inference: [
       "Face and skin tone not described",
       "The novel styles him **Gahiji-Calder**; the wiki page title is `Lord Gahiji`",
@@ -510,7 +520,7 @@ const briefs = [
     cues: ["Male consort of queen", "Quiet opposition after coup", "Tall Imperial humanoid"],
     clothing: "Consort court dress — restrained silver-black, bloodstone wedding band ornaments",
     setting: "Private court anteroom",
-    prompt: `${STYLE} Portrait of Lord Jolav, Imperial Celestial consort to a queen: tall elegant post-human man with restrained worried dignity, silver-black consort robes, ${bloodstone("subtle collar ornament")}. Quiet opposition energy. Upper-body portrait, soft anteroom light.`,
+    prompt: `${STYLE} Portrait of Lord Jolav, Imperial Celestial consort to a queen. ${CELESTIAL_BODY} Tall elegant post-human man with restrained worried dignity, silver-black consort robes, ${bloodstone("subtle collar ornament")}. Quiet opposition energy, soft anteroom light against a plain bare wall. ${FAR_FUTURE_DRESS} ${NO_TEXT_ANYWHERE}`,
     inference: [],
     image: "assets/images/characters/lord-jolav.jpg",
   },
@@ -523,7 +533,7 @@ const briefs = [
     cues: ["Older generation of Wynid protocol", "Master of Court formality", "Tall Imperial humanoid elder"],
     clothing: "Heavy Master of the Court robes, protocol staff-collar of bloodstone",
     setting: "Coronation introduction chamber",
-    prompt: `${STYLE} Portrait of Lord Valdier, elderly Imperial Celestial Master of the Court and royal father: tall post-human elder man with formal austere expression, heavy ceremonial robes, ${bloodstone("protocol collar")}. Old-guard court. Upper-body portrait, formal gold light.`,
+    prompt: `${STYLE} Portrait of Lord Valdier, elderly Imperial Celestial Master of the Court and royal father. ${CELESTIAL_BODY} Tall post-human elder man with formal austere expression, heavy ceremonial robes, ${bloodstone("protocol collar")}. Old-guard court. Upper-body portrait, formal gold light.`,
     inference: [],
     image: "assets/images/characters/valdier.jpg",
   },
@@ -541,7 +551,7 @@ const briefs = [
     ],
     clothing: "Scarlet-and-grey robes with a wide flared collar; bloodstone petals over the crown and spine patch",
     setting: "Data-hall soft hologlyphs (no readable text)",
-    prompt: `${STYLE} Portrait of Lord Stethos-Thierry, Imperial Celestial court datamaster: post-human man two and a half metres tall with calm vacant-focused expression, wearing scarlet-and-grey robes that flare out into a tall stiff collar rising almost to his head, his skull embellished with swirled petals of pale bloodstone that cover a connection bulb at the nape of his spine. Organic crystalline growth, not metal machinery. Upper-body portrait, cool holographic bokeh without readable text.`,
+    prompt: `${STYLE} Portrait of Lord Stethos-Thierry, Imperial Celestial court datamaster. ${CELESTIAL_BODY} Post-human man two and a half metres tall with calm vacant-focused expression, wearing scarlet-and-grey robes that flare out into a tall stiff collar rising almost to his head, his skull embellished with swirled petals of pale bloodstone that cover a connection bulb at the nape of his spine. Organic crystalline growth, not metal machinery. Upper-body portrait, cool holographic bokeh without readable text.`,
     inference: [
       "Face, skin tone and hair are not described",
       "The delivered portrait renders his interface as metal implants and fibre-optic cable; the novel makes it bloodstone",
@@ -583,7 +593,7 @@ const briefs = [
     ],
     clothing: "Formal toga over bloodstone lacework; the growth, not the cloth, is the costume",
     setting: "Shipboard intelligence suite (Alumata feel)",
-    prompt: `${STYLE} Portrait of Makaio-Yalbo, Imperial Celestial archon spymaster near the end of his host body: tall post-human man whose skull and cheeks are almost entirely encased in pale calcium-like bloodstone, leaving only his mouth, nose and piercing eyes uncovered, with a crown of scalloped horns curling around one another above it, faintly tinted turquoise and gold; his neck and body are brocaded with the same growth in a lacework pattern beneath a formal toga. Rigid, expressionless, immensely powerful. Upper-body portrait, dim shipboard intelligence-suite light.`,
+    prompt: `${STYLE} Portrait of Makaio-Yalbo, Imperial Celestial archon spymaster near the end of his host body. ${CELESTIAL_BODY} Tall post-human man whose skull and cheeks are almost entirely encased in pale calcium-like bloodstone, leaving only his mouth, nose and piercing eyes uncovered, with a crown of scalloped horns curling around one another above it, faintly tinted turquoise and gold; his neck and body are brocaded with the same growth in a lacework pattern beneath a formal toga. Rigid, expressionless, immensely powerful. Upper-body portrait, dim shipboard intelligence-suite light.`,
     inference: [
       "This is the **Yalbo** host at the end of its life. The grown **Faraji** host is described separately: “an easy two and a half meters high, with a flattish face and wide, gold-tinged eyes”. Either is defensible for the portrait — pick one and say which",
       "Yalbo's skin tone is not described; Faraji's eyes are",
@@ -604,7 +614,7 @@ const briefs = [
     cues: ["Younger male Celestial of archon line", "Neural gifts visible as interface glow", "Residual opposition"],
     clothing: "Junior archon household attire — dark slim coat, neural-gift collar lights",
     setting: "Quiet investigation chamber",
-    prompt: `${STYLE} Portrait of Neusch, young Imperial Celestial son of a spymaster archon: tall young post-human man with intense focused eyes, dark slim coat, glowing neural-gift collar, elongated proportions. ${BLOODSTONE_GUARD}. Investigator heir energy. Upper-body portrait, cool chamber light.`,
+    prompt: `${STYLE} Portrait of Neusch, young Imperial Celestial son of a spymaster archon. ${CELESTIAL_BODY} Tall young post-human man with intense focused eyes, dark slim coat, glowing neural-gift collar, elongated proportions. ${BLOODSTONE_GUARD}. Investigator heir energy, cool chamber light against a plain bare wall. ${FAR_FUTURE_DRESS} ${NO_TEXT_ANYWHERE}`,
     inference: [],
     image: "assets/images/characters/neusch.jpg",
   },
@@ -617,7 +627,7 @@ const briefs = [
     cues: ["Hardline apparatus archon", "Tall Imperial humanoid", "Navy-adjacent severity"],
     clothing: "Hardline archon uniform-robes in black and Wynid crimson",
     setting: "Fleet command antechamber",
-    prompt: `${STYLE} Portrait of Asahi-Iryna, hardline Imperial Celestial archon: tall post-human figure with severe expression, black and crimson archon uniform-robes, ${bloodstone("severe shoulder spur")}, elongated proportions. Ruthless oversight, cold fleet light. ${NO_TEXT_ANYWHERE}`,
+    prompt: `${STYLE} Portrait of Asahi-Iryna, hardline Imperial Celestial archon. ${CELESTIAL_BODY} Tall post-human figure with severe expression, black and crimson archon uniform-robes, ${bloodstone("severe shoulder spur")}, elongated proportions. Ruthless oversight, cold fleet light. ${NO_TEXT_ANYWHERE}`,
     inference: [
       "Gender presentation as androgynous-elegant Celestial unless wiki specifies; page name reads feminine — present as woman. **Unverified: this is a guess from the name, not from the text.** Dejean was inferred male the same way and the novel makes her a woman — confirm against the book before regenerating.",
     ],
@@ -647,7 +657,7 @@ const briefs = [
     cues: ["Verak counterpart to Gahiji", "Major Crown mindline", "Tall Imperial humanoid"],
     clothing: "Verak chief-archon robes — indigo and silver, mindline crest",
     setting: "Imperial Palace Verak wing",
-    prompt: `${STYLE} Portrait of Acelynn, Chief Archon to the Verak queen and imperial throne: tall post-human Celestial with composed political expression, indigo and silver archon robes, ${bloodstone("mindline crest")}. Senior crown mindline. Upper-body portrait, palace light.`,
+    prompt: `${STYLE} Portrait of Acelynn, Chief Archon to the Verak queen and imperial throne. ${CELESTIAL_BODY} Tall post-human Celestial with composed political expression, indigo and silver archon robes, ${bloodstone("mindline crest")}. Senior crown mindline, palace light. ${FAR_FUTURE_DRESS} ${NO_TEXT_ANYWHERE}`,
     inference: [
       "Present as woman per name convention in wiki. **Unverified: this is a guess from the name, not from the text.** Dejean was inferred male the same way and the novel makes her a woman — confirm against the book before regenerating.",
     ],
@@ -679,7 +689,7 @@ const briefs = [
     ],
     clothing: "Layered deniable merchant coat over Celestial under-armour, half-shadowed face",
     setting: "Santa Rosa underworld night",
-    prompt: `${STYLE} Portrait of Dagon, Imperial Celestial covert operator posing in human underworld networks: tall elegant man with predatory calm eyes, layered dark merchant coat over subtle high-tech under-armour, elongated post-human proportions barely hidden. ${BLOODSTONE_GUARD}. Dual-face spy. Upper-body portrait, neon underworld bokeh.`,
+    prompt: `${STYLE} Portrait of Dagon, Imperial Celestial covert operator posing in human underworld networks. ${CELESTIAL_BODY} Tall elegant man with predatory calm eyes, layered dark merchant coat over subtle high-tech under-armour, elongated post-human proportions barely hidden. ${BLOODSTONE_GUARD}. Dual-face spy, neon underworld bokeh thrown far out of focus with no legible shapes. ${FAR_FUTURE_DRESS} ${NO_TEXT_ANYWHERE}`,
     inference: [],
     image: "assets/images/characters/dagon.jpg",
   },
@@ -692,7 +702,7 @@ const briefs = [
     cues: ["Grief and accusation at court", "Tall Imperial humanoid", "Secondary court presence"],
     clothing: "Court mourning-leaning greys with bloodstone tear-jewellery",
     setting: "Court public gallery",
-    prompt: `${STYLE} Portrait of Malquilvo, Imperial Celestial court parent in mourning and accusation: tall post-human figure with anguished stern expression, grey court robes, ${bloodstone("set of tear-shaped mourning spurs")}. Tragic court politics, cold public-gallery light. ${NO_TEXT_ANYWHERE}`,
+    prompt: `${STYLE} Portrait of Malquilvo, Imperial Celestial court parent in mourning and accusation. ${CELESTIAL_BODY} Tall post-human figure with anguished stern expression, grey court robes, ${bloodstone("set of tear-shaped mourning spurs")}. Tragic court politics, cold public-gallery light. ${NO_TEXT_ANYWHERE}`,
     inference: [
       "Present as masculine parent figure. **Unverified: this is a guess from the name, not from the text.** Dejean was inferred male the same way and the novel makes her a woman — confirm against the book before regenerating.",
     ],
@@ -707,7 +717,7 @@ const briefs = [
     cues: ["Composite page for Uulana political line", "Investigative archon severity", "Tall Imperial humanoid"],
     clothing: "Investigator-archon charcoal robes with hardline crimson lining",
     setting: "Ambush-risk corridor of court",
-    prompt: `${STYLE} Portrait of Uulana as Wynid Imperial Celestial investigator-archon type: tall post-human figure with sharp vigilant eyes, charcoal robes with crimson lining, ${bloodstone("small collar spur")}. Political investigation under threat, tense corridor light. ${NO_TEXT_ANYWHERE}`,
+    prompt: `${STYLE} Portrait of Uulana as Wynid Imperial Celestial investigator-archon type. ${CELESTIAL_BODY} Tall post-human figure with sharp vigilant eyes, charcoal robes with crimson lining, ${bloodstone("small collar spur")}. Political investigation under threat, tense corridor light. ${NO_TEXT_ANYWHERE}`,
     inference: ["Page covers multiple hosts/identities — single composite investigator face"],
     image: "assets/images/characters/uulana.jpg",
   },

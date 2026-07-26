@@ -29,7 +29,7 @@ Coronation introduction chamber
 ## Generation prompt
 
 ```
-Highly detailed cinematic sci-fi encyclopedia illustration, rich textures, sharp focus, painterly digital art with photographic detail, soft volumetric lighting, no text, no watermark, no UI chrome. Portrait of Lord Valdier, elderly Imperial Celestial Master of the Court and royal father: tall post-human elder man with formal austere expression, heavy ceremonial robes, a protocol collar of calcium-growth bloodstone in faint turquoise and gold — a bone-like matte porous growth of the body, never a cut, faceted or polished gemstone, never set in metal like jewellery, and never red, rust, ruby, scarlet or crimson. Old-guard court. Upper-body portrait, formal gold light.
+Highly detailed cinematic sci-fi encyclopedia illustration, rich textures, sharp focus, painterly digital art with photographic detail, soft volumetric lighting, no text, no watermark, no UI chrome. Portrait of Lord Valdier, elderly Imperial Celestial Master of the Court and royal father. This is an Imperial Celestial, not an ordinary human: unnaturally tall with elongated proportions, long limbs and a long neck, refined post-human features and bearing — never an ordinary human build, face or posture. Tall post-human elder man with formal austere expression, heavy ceremonial robes, a protocol collar of calcium-growth bloodstone in faint turquoise and gold — a bone-like matte porous growth of the body, never a cut, faceted or polished gemstone, never set in metal like jewellery, and never red, rust, ruby, scarlet or crimson. Old-guard court. Upper-body portrait, formal gold light.
 ```
 
 ## Sources

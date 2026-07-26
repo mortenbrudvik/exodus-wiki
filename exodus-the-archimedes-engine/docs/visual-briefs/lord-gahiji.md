@@ -31,7 +31,7 @@ Council chamber
 ## Generation prompt
 
 ```
-Highly detailed cinematic sci-fi encyclopedia illustration, rich textures, sharp focus, painterly digital art with photographic detail, soft volumetric lighting, no text, no watermark, no UI chrome. Portrait of Lord Gahiji-Calder, Chief Archon to an Imperial Celestial queen: tall post-human older man with shrewd political eyes and elongated proportions, wearing grey-and-silver robes of state that hang loose and ill-fitting like badly hung curtains, and only a small cap of black-and-green bloodstone curlicues on his head instead of a grand headdress. Deliberately under-dressed for court. Statesman not soldier. Upper-body portrait, cool council light.
+Highly detailed cinematic sci-fi encyclopedia illustration, rich textures, sharp focus, painterly digital art with photographic detail, soft volumetric lighting, no text, no watermark, no UI chrome. Portrait of Lord Gahiji-Calder, Chief Archon to an Imperial Celestial queen. This is an Imperial Celestial, not an ordinary human: unnaturally tall with elongated proportions, long limbs and a long neck, refined post-human features and bearing — never an ordinary human build, face or posture. Tall post-human older man with shrewd political eyes and elongated proportions, wearing grey-and-silver robes of state that hang loose and ill-fitting like badly hung curtains, and only a small cap of black-and-green bloodstone curlicues on his head instead of a grand headdress. Deliberately under-dressed for court. Statesman not soldier. Upper-body portrait, cool council light.
 ```
 
 ## Sources
