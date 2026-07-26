@@ -442,6 +442,11 @@ Three lessons from those passes are worth carrying into any new art:
 - **Count what the text counts, and check the material as well as the colour.** Olomo shipped with
   the wrong eye count for three passes because the brief never mentioned eyes; bloodstone was fixed
   from red to turquoise while staying a faceted gem, which the novel rules out just as firmly.
+- **A book fact belongs to the character it was written about.** Luus has *"a beguilingly young
+  face"* and no age; a prompt here said "a girl of about seventeen", borrowing the seventeen from
+  Carolien-Amaia, whose host body the novel does fix at that. The result was a portrait of a child
+  as a sovereign queen. Borrowing one subject's description to steer another turns canon into
+  invention — and this was introduced by a correction pass, not inherited from an unchecked brief.
 - **A prompt sweep does not fix a shipped image.** Sweeping a clause into every brief closes the
   future hole and leaves the present one: images generated before the clause still fail it. Every
   such image is QUERY until re-opened, and the tally must not move until they are. Luus shipped

@@ -147,6 +147,30 @@ The prohibition binds to the garment rather than to the bloodstone — "never a 
 Malquilvo's reads "never ruby or crimson**, tear-shaped jewellery**". Fixing this means putting the
 noun inside the constant or ending the clause with punctuation.
 
+## Seventeenth pass — `luus`: an age I invented, and the child it produced
+
+**26 July 2026 · 1 subject · 1 pass.** Owner: *"she looks really bad, like a child."* She did, and I
+put her there.
+
+**The novel never gives Luus an age.** It gives her *"a beguilingly young, almost girlish face"* —
+that is all. My prompt said **"the face of a girl of about seventeen"**. That seventeen was imported
+from **Carolien-Amaia**, whose host body the book genuinely does fix at seventeen. I attached one
+character's book fact to another character who has none, then combined it with a bald head, an
+elongated cranium and "soft round cheeks", and shipped a portrait of a sick-looking child as a
+sovereign queen.
+
+This is invented canon of exactly the kind the fourth pass exists to catch — and it is worse than
+the defects that pass found, because those came from briefs nobody had checked, whereas this one was
+introduced *by* a correction pass, in a prompt I wrote, on top of a description I had read.
+
+The prompt now uses the novel's own words and bars the failure mode explicitly: a **grown woman**
+with a beguilingly young face, long hair, an adult jaw, *not* a child, adolescent or prepubescent
+figure — carrying the political triumph the narration says looks wrong on her. `sources` on her
+brief records the fabricated seventeen so nobody reintroduces it.
+
+**Rule:** a book fact belongs to the character it was written about. When one subject's description
+is used to steer another, it stops being canon and becomes invention.
+
 ## Sixteenth pass — the sweep updated prompts, not images
 
 **26 July 2026 · 15 subjects audited · 5 regenerated · 5 pass.** Owner: *"Luus does not at all look
@@ -163,7 +187,7 @@ Auditing all 15 non-regenerated subjects by eye found **five failures**:
 
 | Subject | Failing | Now |
 |---|---|---|
-| `luus` | Ordinary human girl, no elongation | Long neck and elongated cranium, young face kept |
+| `luus` | Ordinary human girl, no elongation | **Corrected twice.** The first retry produced a bald child — see below |
 | `carolien-amaia` | Ordinary human teenager | Strongly elongated, waist-length raven hair, albino pallor |
 | `bekket` | Ordinary young man | Very long neck and narrow frame, unkempt auburn, calculating smirk |
 | `valdier` | Bloodstone as carved plates set in a gold collar | Porous growth at throat and shoulders |
