@@ -147,6 +147,32 @@ The prohibition binds to the garment rather than to the bloodstone — "never a 
 Malquilvo's reads "never ruby or crimson**, tear-shaped jewellery**". Fixing this means putting the
 noun inside the constant or ending the clause with punctuation.
 
+## Fourteenth pass — `inessa-pierina`: clade drift, and a red-skinned queen
+
+**26 July 2026 · 1 subject · 1 pass.** Owner: *"does not look very celestial, make skin colour more
+in the hue of red."* Two separate things, worth keeping apart in the record.
+
+**The clade half is a correction.** She read as an ordinary human woman wearing a headdress. The
+sixth pass identified this drift on `avone-valerio`, `radwarno` and `siskala`; the fix — front-load
+the body plan as a prohibition — was applied to all three and never to her, so she is the fourth
+subject to need it. She is now close to three metres with elongated proportions, a long neck, long
+fingers and refined post-human features: a Celestial, not a human in costume.
+
+**The red skin is a preference, and legitimate.** Nothing in the novel fixes her colouring; she is
+Queen of Cheluli, a peer house with no relatives among the illustrated subjects, so there is no
+family lock to respect and no canon to contradict. Recorded as owner inference, not as a book fact.
+
+**One trap the prompt had to defuse.** Her bloodstone is book-fixed **orange**, and the material rule
+forbids red — so red skin risked either swallowing the orange horns or making the whole head read as
+the red gem that rule exists to prevent. The prompt therefore requires the horns to stay "brighter
+and more saturated than her skin, never blending into it", and repeats "never a red gem". The
+delivered plate keeps them plainly distinct: burnt-orange, matte and porous against oxblood skin.
+
+The starburst is also better than the version it replaces — many crude spikes radiating from the
+skull rather than branching antlers, which is closer to the novel's "starburst … resembling a crude
+sculpture" — and she now carries the blunt impatience that makes her the least polished of the peer
+queens.
+
 ## Thirteenth pass — Finn's description exists, and a correction to how it was checked
 
 **26 July 2026 · 3 subjects · 3 pass.** Owner supplied text from the **full novel** describing Finn
