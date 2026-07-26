@@ -9,6 +9,14 @@ Maintainer-only notes for original encyclopedia illustrations. **Not** reader-fa
 - **Ships:** Exterior hull plate, three-quarter view, readable silhouette, space or drydock lighting; 16:9 feel.
 - **Unity:** Cool-neutral palette with warm skin/hull accents; encyclopedia seriousness (no comic speech, no UI chrome, no watermark text).
 - **Originality:** Guided by novel + wiki research only. Do not reproduce official EXODUS marketing art.
+- **Naturalism (preferred, owner 26 July 2026):** `carolien-amaia` is the reference plate. Aim for
+  restrained and photographic — real skin texture, plain even light, an uncluttered background, and
+  one clear focal ornament — over the ornate, gem-encrusted, heavily-patterned look most of the
+  earlier portraits share. The lever that produced it was explicit subtraction in the prompt: *"plain
+  light, uncluttered background, no heraldic emblems, no crowns, no repeated motifs, no banners, no
+  portraits or murals behind her."* Without those negatives the generator fills space with invented
+  heraldry, which is also where the burned-in-emblem defects keep coming from — so this is a
+  correctness lever, not only a taste one.
 
 ## Clade visual grammar (from wiki canon)
 
