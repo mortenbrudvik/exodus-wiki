@@ -1370,10 +1370,14 @@ muscle-suit plate via image-edit; reviewed by eye against the brief and novel.
 
 | File | Role | Verdict |
 |---|---|---|
-| `liliana.jpg` (infobox) | Field kit — earthdragon bioware muscle suit | **PASS** (prior) |
-| `liliana-civilian.jpg` | Subdued dark civilian / coquette | **PASS** — same face; high-collar far-future dark dress; blade; no text |
+| `liliana.jpg` (infobox) | Field kit — earthdragon bioware muscle suit | **PASS** — compact charged cherenkov blade (blue-violet edge), not machete; regen 26 July 2026 |
+| `liliana-civilian.jpg` | Subdued dark civilian / coquette | **PASS** — same face; short powered knife in tech sheath with Cherenkov edge; regen 26 July 2026 |
 | `liliana-commercial.jpg` | Anoosha commercial emissary | **PASS** — same face; smart high-collar trade dress; no logos |
 | `liliana-disguise.jpg` | Late pale broader-nose mask / Antoinette-2burg | **PASS** — almost-albino skin, clearly broader nose, high standing collar without zip; no text |
+
+**Knife note:** the novel names the *cherenkov blade* and ties it to Marcellu’s murder; a short
+powered knife whose charged edge dematerializes is franchise tech vocabulary used on the article.
+Earlier plates showed a large wrapped survival machete — wrong scale and period. Replaced.
 
 Lightbox extended so `.look-plate` opens like `.infobox-image`.
 
