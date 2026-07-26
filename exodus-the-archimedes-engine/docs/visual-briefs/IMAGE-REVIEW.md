@@ -201,6 +201,11 @@ the body plan as a prohibition — was applied to all three and never to her, so
 subject to need it. She is now close to three metres with elongated proportions, a long neck, long
 fingers and refined post-human features: a Celestial, not a human in costume.
 
+**Refined 26 July 2026:** the first version came back a deep oxblood/terracotta red; the owner
+asked for **fair with a tint of red**, and the shipped plate is now a pale, light complexion with a
+warm rosy-coppery undertone. The paler skin also makes the burnt-orange horns read more distinctly,
+so the contrast note in the prompt was flipped from "brighter than her skin" to "deeper than it".
+
 **The red skin is a preference, and legitimate.** Nothing in the novel fixes her colouring; she is
 Queen of Cheluli, a peer house with no relatives among the illustrated subjects, so there is no
 family lock to respect and no canon to contradict. Recorded as owner inference, not as a book fact.
