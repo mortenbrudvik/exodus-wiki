@@ -33,11 +33,11 @@ everything below it concerns the first. Third-pass slugs are listed under [Third
 
 | Verdict | Count | Meaning |
 |---|---:|---|
-| **PASS** | 67 | Signed off against the book standard. **All 39 characters have now been opened against it** |
-| **QUERY** | 7 | `helena-chione`, `asahi-iryna`, `radwarno`, `uulana`, `malquilvo`, `ramona-ursule` — bloodstone as faceted crystal or set jewellery rather than a matte growth — plus `siskala`, whose canon tiger badge is over-rendered |
-| **FAIL** | 0 | **None open.** The eighth pass's five failures were regenerated the same day and re-verified |
+| **PASS** | 74 | **Every subject on the site is signed off against the book standard.** |
+| **QUERY** | 0 | Cleared by the tenth pass |
+| **FAIL** | 0 | None open |
 
-67 + 7 + 0 = 74. The signed-off count went 67 → 43 → 59: the fourth and fifth passes changed the
+74 + 0 + 0 = 74. Reached 26 July 2026, across ten passes. Nothing is outstanding. The signed-off count went 67 → 43 → 59: the fourth and fifth passes changed the
 standard from the briefs to the book, and the [sixth](#sixth-pass--the-30-replacements-opened)
 checked the replacements that answered them. **`andino` and `medusa` remain outstanding.**
 
@@ -146,6 +146,42 @@ and every call site appends a noun, so the rendered prompts read:
 The prohibition binds to the garment rather than to the bloodstone — "never a crimson mantle" — and
 Malquilvo's reads "never ruby or crimson**, tear-shaped jewellery**". Fixing this means putting the
 noun inside the constant or ending the clause with punctuation.
+
+## Tenth pass — the seven QUERY portraits cleared. Nothing outstanding.
+
+**26 July 2026 · 7 subjects · 7 pass · 0 fail.** With this pass **all 74 illustrations on the site
+are signed off against the book standard**, and no QUERY or FAIL remains.
+
+Every one of these was a *material* complaint rather than a canon contradiction: bloodstone rendered
+as faceted crystal or as cabochons set in gold, where the novel makes it a matte growth of the body.
+All seven had been written before the shared clause named the positive colour and the porous
+material, so all seven cleared on the first attempt with no per-subject retry.
+
+| Subject | Was | Now |
+|---|---|---|
+| `helena-chione` | Elaborate gold-set turquoise suite — crown, collar, earrings, bracelets | **One** small matte growth at the throat and nothing else. "Modest" finally landed |
+| `asahi-iryna` | Faceted glowing crystal shards | A single porous turquoise-and-gold shoulder spur |
+| `radwarno` | Faceted shards, marked plaques, read as a human soldier | Elongated pale Celestial, porous growth, plaques gone |
+| `uulana` | Faceted crystal, circled-cross pendant, gold sigils on the robe | Porous collar spur; pendant and sigils gone |
+| `malquilvo` | Green fluid weeping from eyes and mouth, star brooch | Tear-shaped mourning spurs as a growth; no weeping, no brooch |
+| `ramona-ursule` | Columns of text-like marks in the background, scales-of-justice motif | Plain marble; porous collar; both gone |
+| `siskala` | Tiger device six times over, including on the wall | Two — a chest patch and a belt buckle |
+
+**`helena-chione` is the one to look at.** Her "modest" had been in the prompt and ignored twice.
+Front-loaded as *"HER BLOODSTONE IS MODEST AND RESTRAINED: one small collar ornament only — not a
+crown, not a tiara, not a spray, not a matching suite"* it landed immediately, and she is now
+visibly the least ornamented queen at court, which is what the novel says she is. That makes it
+**five for five** on moving a dropped constraint to the front and restating it as a prohibition.
+
+`siskala` ships two badges rather than the one the prompt asks for — a chest patch and a matching
+belt buckle. Recorded rather than failed: a unit patch plus a belt buckle is ordinary uniform
+practice, and it is nothing like the six-fold saturation that opened the query.
+
+**Observation across the batch:** four of the seven Celestials came back hairless
+(`helena-chione`, `radwarno`, `malquilvo`, and near-shaven `ramona-ursule`). The clade table says
+hair colour "varies freely", so nothing is contradicted, and Thyra's braids, Carolien's waist-length
+black and Bekket's auburn keep variety in the set overall — but the generator clearly reads
+"elongated post-human" as a cue for baldness. Worth steering if the clade starts to look uniform.
 
 ### Ninth pass — the eighth pass's five, regenerated the same day
 

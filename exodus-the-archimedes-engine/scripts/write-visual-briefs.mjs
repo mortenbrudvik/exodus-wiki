@@ -58,8 +58,16 @@ const BLOODSTONE_GUARD = `any bloodstone visible is in faint turquoise and gold 
  * panels, console readouts and dog tags all shipped past a `no text` clause the generator read as
  * being about captions and watermarks. Naming the *scenery* is what closes it.
  */
-const NO_TEXT_ANYWHERE =
-  "Plain even light and an uncluttered background. NO TEXT ANYWHERE IN THE FRAME, on the subject or behind them: no signs, no signage, no neon lettering, no shopfronts, no billboards, no screens, no display panels, no readouts, no holographic interfaces, no console text, no dog tags, no identity discs, no name tapes, no stencilled markings, no unit badges, no insignia, no heraldic emblems, no crests, no repeated motifs, no banners, no murals, no floating symbols or runes, no captions, no labels, no numbers, no logos, no brand marks, no watermarks.";
+const noTextAnywhere = (badgeException = "") =>
+  "Plain even light and an uncluttered background. NO TEXT ANYWHERE IN THE FRAME, on the subject or behind them: no signs, no signage, no neon lettering, no shopfronts, no billboards, no screens, no display panels, no readouts, no holographic interfaces, no console text, no dog tags, no identity discs, no name tapes, no stencilled markings, " +
+  (badgeException
+    ? `no badges, insignia, emblems or crests other than ${badgeException}, `
+    : "no unit badges, no insignia, no heraldic emblems, no crests, ") +
+  "no repeated motifs, no banners, no murals, no floating symbols or runes, no captions, no labels, no numbers, no logos, no brand marks, no watermarks.";
+
+// Siskala is the one subject with a canon device: she is Major of the Wynid Royal Tiger Guard on her
+// own page, so the blanket "no insignia" would delete something the wiki actually establishes.
+const NO_TEXT_ANYWHERE = noTextAnywhere();
 
 const STYLE =
   "Highly detailed cinematic sci-fi encyclopedia illustration, rich textures, sharp focus, painterly digital art with photographic detail, soft volumetric lighting, no text, no watermark, no UI chrome.";
@@ -265,7 +273,7 @@ const briefs = [
     clothing:
       "Court dress restrained by queenly choice — modest gold-and-turquoise bloodstone ornamentation. Her Coronation regalia is separate and far grander: nanoactive armour thinner than skin under an emerald polonaise robe embroidered with gold and platinum that glows from within",
     setting: "Wynid court livestone hall, cool luminous architecture",
-    prompt: `${STYLE} Portrait of Helena-Chione, Imperial Celestial Now and Forever Queen of Wynid: extremely tall elegant post-human woman with elongated regal proportions and long limbs, luminous pale skin, striking intense green eyes, serene strategic expression, wearing an emerald polonaise robe embroidered with glowing gold and platinum thread, with ${bloodstone("modest, restrained collar ornament", "gold and turquoise")}. Godlike court beauty, restrained rather than gaudy. Upper-body portrait emphasizing height, soft livestone palace glow.`,
+    prompt: `${STYLE} Upper-body portrait of Helena-Chione, Imperial Celestial Now and Forever Queen of Wynid. HER BLOODSTONE IS MODEST AND RESTRAINED: one small collar ornament only — not a crown, not a tiara, not a spray, not a matching suite of necklace, earrings and bracelets. She is the least ornamented queen at court, and that restraint is the point. Extremely tall elegant post-human woman with elongated regal proportions and long limbs, luminous pale skin, striking intense green eyes, serene strategic expression, wearing an emerald polonaise robe embroidered with glowing gold and platinum thread, with ${bloodstone("modest, restrained collar ornament", "gold and turquoise")}. Godlike court beauty, restrained rather than gaudy, emphasizing height, soft livestone palace glow. ${NO_TEXT_ANYWHERE}`,
     inference: [
       "Face shape and skin tone are not described — serene post-human beauty as clade default",
       "Hair is not stated for her specifically; her daughters have “a variety of hair and skin colors”, so the clade is not uniformly bald",
@@ -398,7 +406,7 @@ const briefs = [
     cues: ["Peer queen; trial-host authority", "Tall Imperial humanoid"],
     clothing: "Nizinsk court amethyst and silver robes, judicial bloodstone staff-collar",
     setting: "Politics-trial chamber light",
-    prompt: `${STYLE} Portrait of Ramona-Ursule, Imperial Celestial queen of Nizinsk: tall post-human woman with sharp assessing eyes, amethyst and silver robes, ${bloodstone("collar")}. Host of multi-dominion politics trial. Upper-body portrait, cool chamber light.`,
+    prompt: `${STYLE} Portrait of Ramona-Ursule, Imperial Celestial queen of Nizinsk: tall post-human woman with sharp assessing eyes, amethyst and silver robes, ${bloodstone("collar")}. Host of multi-dominion politics trial, cool chamber light. ${NO_TEXT_ANYWHERE}`,
     inference: [],
     image: "assets/images/characters/ramona-ursule.jpg",
   },
@@ -539,7 +547,7 @@ const briefs = [
     ],
     clothing: "Royal Tiger Guard armour — feline-motif plates, dark gold and black, practical helm under arm",
     setting: "Palace guard corridor",
-    prompt: `${STYLE} Portrait of Major Siskala of the Wynid Royal Tiger Guard: tall athletic Imperial Celestial woman warrior, sharp professional expression, dark gold and black guard armour carrying one small tiger-head unit badge and no other repeated emblem, helmet under arm. ${BLOODSTONE_GUARD}. Court military, not queen. Upper-body portrait, cool corridor light.`,
+    prompt: `${STYLE} Portrait of Major Siskala of the Wynid Royal Tiger Guard: tall athletic Imperial Celestial woman warrior, sharp professional expression, dark gold and black guard armour carrying one small tiger-head unit badge and no other repeated emblem, helmet under arm. ${BLOODSTONE_GUARD}. Court military, not queen, cool corridor light. ${noTextAnywhere("the single small tiger-head badge of the Royal Tiger Guard described above")}`,
     inference: [],
     image: "assets/images/characters/siskala.jpg",
   },
@@ -591,7 +599,7 @@ const briefs = [
     cues: ["Hardline apparatus archon", "Tall Imperial humanoid", "Navy-adjacent severity"],
     clothing: "Hardline archon uniform-robes in black and Wynid crimson",
     setting: "Fleet command antechamber",
-    prompt: `${STYLE} Portrait of Asahi-Iryna, hardline Imperial Celestial archon: tall post-human figure with severe expression, black and crimson archon uniform-robes, ${bloodstone("severe shoulder spur")}, elongated proportions. Ruthless oversight. Upper-body portrait, cold fleet light.`,
+    prompt: `${STYLE} Portrait of Asahi-Iryna, hardline Imperial Celestial archon: tall post-human figure with severe expression, black and crimson archon uniform-robes, ${bloodstone("severe shoulder spur")}, elongated proportions. Ruthless oversight, cold fleet light. ${NO_TEXT_ANYWHERE}`,
     inference: [
       "Gender presentation as androgynous-elegant Celestial unless wiki specifies; page name reads feminine — present as woman. **Unverified: this is a guess from the name, not from the text.** Dejean was inferred male the same way and the novel makes her a woman — confirm against the book before regenerating.",
     ],
@@ -636,7 +644,7 @@ const briefs = [
     cues: ["Fleet commander", "Tall Imperial humanoid", "Capture-order severity"],
     clothing: "Verak fleet commander armour-coat, helium-navy colours",
     setting: "Kelowan fleet formation viewport",
-    prompt: `${STYLE} Portrait of Commander Radwarno, Verak Imperial Celestial fleet officer: tall post-human man with stern focused expression, dark navy armour-coat with helium-blue accents, elongated proportions. ${BLOODSTONE_GUARD}. Fleet capture authority. Upper-body portrait, starfield fleet light.`,
+    prompt: `${STYLE} Upper-body portrait of Commander Radwarno, Verak Imperial Celestial fleet officer. HE IS AN IMPERIAL CELESTIAL, NOT A HUMAN SOLDIER: unnaturally tall with elongated limbs and a long neck, pale refined post-human features, no stubble, no scarred human soldier face, no military crest. Stern focused expression, dark navy armour-coat with helium-blue accents, elongated proportions. ${BLOODSTONE_GUARD}. Fleet capture authority, starfield fleet light. ${NO_TEXT_ANYWHERE}`,
     inference: [],
     image: "assets/images/characters/radwarno.jpg",
   },
@@ -666,7 +674,7 @@ const briefs = [
     cues: ["Grief and accusation at court", "Tall Imperial humanoid", "Secondary court presence"],
     clothing: "Court mourning-leaning greys with bloodstone tear-jewellery",
     setting: "Court public gallery",
-    prompt: `${STYLE} Portrait of Malquilvo, Imperial Celestial court parent in mourning and accusation: tall post-human figure with anguished stern expression, grey court robes, ${bloodstone("set of tear-shaped mourning spurs")}. Tragic court politics. Upper-body portrait, cold public-gallery light.`,
+    prompt: `${STYLE} Portrait of Malquilvo, Imperial Celestial court parent in mourning and accusation: tall post-human figure with anguished stern expression, grey court robes, ${bloodstone("set of tear-shaped mourning spurs")}. Tragic court politics, cold public-gallery light. ${NO_TEXT_ANYWHERE}`,
     inference: [
       "Present as masculine parent figure. **Unverified: this is a guess from the name, not from the text.** Dejean was inferred male the same way and the novel makes her a woman — confirm against the book before regenerating.",
     ],
@@ -681,7 +689,7 @@ const briefs = [
     cues: ["Composite page for Uulana political line", "Investigative archon severity", "Tall Imperial humanoid"],
     clothing: "Investigator-archon charcoal robes with hardline crimson lining",
     setting: "Ambush-risk corridor of court",
-    prompt: `${STYLE} Portrait of Uulana as Wynid Imperial Celestial investigator-archon type: tall post-human figure with sharp vigilant eyes, charcoal robes with crimson lining, ${bloodstone("small collar spur")}. Political investigation under threat. Upper-body portrait, tense corridor light.`,
+    prompt: `${STYLE} Portrait of Uulana as Wynid Imperial Celestial investigator-archon type: tall post-human figure with sharp vigilant eyes, charcoal robes with crimson lining, ${bloodstone("small collar spur")}. Political investigation under threat, tense corridor light. ${NO_TEXT_ANYWHERE}`,
     inference: ["Page covers multiple hosts/identities — single composite investigator face"],
     image: "assets/images/characters/uulana.jpg",
   },

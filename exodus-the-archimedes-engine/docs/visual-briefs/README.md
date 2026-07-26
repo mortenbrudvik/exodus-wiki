@@ -98,33 +98,23 @@ wording that actually worked**, so the recorded prompt stays the one that produc
 ## Review
 
 `check-images.mjs` cannot see inside a JPEG, so delivered assets are checked by eye. Results are in
-[IMAGE-REVIEW.md](IMAGE-REVIEW.md). **Current state: 74 briefed · 67 signed off · 7 query · 0 fail.** No FAIL is open, and **all 39
-characters have now been opened against the book standard.** The eighth pass found five failures
-among the characters no later pass had re-judged — four for **background** text (neon signage, holo
-panels) that earlier passes never looked for — and the ninth regenerated all five the same day.
-The seven remaining QUERY portraits carry bloodstone as faceted crystal or set jewellery rather
-than a growth.
+[IMAGE-REVIEW.md](IMAGE-REVIEW.md). **Current state: 74 briefed · 74 signed off · 0 query · 0 fail.** Every illustration on the site has
+been opened by eye and judged against the novel. Reached 26 July 2026 over ten passes.
 
-Six passes so far. The first three checked the art against the briefs; the fourth and fifth checked
-the briefs against the novel and re-opened most of the cast; the sixth opened the 30 replacement
-files. That sixth pass confirmed the big fixes — Olomo's four eyes, Makaio's entombing growth,
-Dejean's sex, and every burned-in caption the fourth pass listed — and **no red bloodstone survives
-anywhere**. What it also found:
+The first three checked the art against the briefs; the fourth and fifth checked the briefs against
+the novel and re-opened most of the cast; the sixth opened the replacements; the seventh through
+tenth regenerated everything still outstanding. Four lessons came out of it, and they are the useful
+part of the record:
 
-- Four portraits contradict a description that *is* in their own prompt (`carolien-amaia` bald
-  against "raven hair almost to her waist"; `inessa-pierina` turquoise against **ORANGE**; `bekket`
-  neat black against "long unkempt auburn"; `luus` middle-aged against "beguilingly young").
-  `carolien-amaia` has since been fixed, and the fix was **placement**: the buried constraint had to
-  move to the front of the prompt and be restated as a prohibition before the model would honour it.
-- New invented heraldry and lettering in `zuberi-dulcina`, `siskala`, `avone-valerio`, `bekket`.
-- Bloodstone is the right colour but often the wrong **material** — faceted crystal or set
-  jewellery rather than a matte growth.
-- The bloodstone clause reached only **6 of the 16** Celestial briefs, and `${BLOODSTONE}` spliced
-  mid-phrase so the prohibition bound to the garment ("never ruby or crimson *mantle*"). **Both are
-  now fixed** — `bloodstone()` puts the ornament inside the clause, coverage is 16 of 16, and the
-  five prompts that asked for "crystalline jewellery" ask for a growth. No image regenerated yet.
-
-`andino` and `medusa` are still not regenerated.
+- **A constraint stated only as a prohibition is weak.** Say what you want, then what you forbid.
+  "Never ruby or crimson" alone produced red bloodstone twice; adding "in faint turquoise and gold"
+  fixed it immediately.
+- **A correct prompt is not sufficient.** Five portraits contradicted a description sitting in their
+  own `prompt` string. Moving it to the front and restating it as a prohibition fixed all five.
+- **Name the scenery, not just the text.** Neon signs, holo panels and console readouts all shipped
+  past a `no text` clause the generator read as being about captions.
+- **Compare the delivered image to the prompt that asked for it, by eye, every time.** Nothing else
+  in the pipeline can.
 
 **`inference[]` in `write-visual-briefs.mjs` is documentation — only `prompt` reaches the
 generator.** Anything that must hold in the delivered image goes in the prompt string. Family
