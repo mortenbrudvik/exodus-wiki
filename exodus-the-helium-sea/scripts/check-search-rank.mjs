@@ -54,6 +54,11 @@ const EXPECTED = [
   ["eternal unanimity dominion", "pages/factions/eternal-unanimity-dominion.html"],
   ["unanimity", "pages/factions/eternal-unanimity-dominion.html"],
   ["factions", "pages/factions/index.html"],
+  ["janton-io", "pages/locations/janton-io.html"],
+  ["janton io", "pages/locations/janton-io.html"],
+  ["janton", "pages/locations/janton-io.html"],
+  ["loox", "pages/locations/janton-io.html"],
+  ["locations", "pages/locations/index.html"],
 ];
 for (const [q, path] of EXPECTED) {
   const hits = rankResults(realIndex, q);

@@ -128,7 +128,7 @@ note(`  index            ${failures.some((f) => f.startsWith("index")) ? "FAIL" 
  * 3. Hub coverage — every page reachable from its category hub
  * ------------------------------------------------------------------ */
 // Category hubs that must list every page under pages/<category>/.
-for (const category of ["factions"]) {
+for (const category of ["factions", "locations"]) {
   const hub = `pages/${category}/index.html`;
   const hubSrc = html.get(ROOT + "/" + hub);
   if (!hubSrc) {

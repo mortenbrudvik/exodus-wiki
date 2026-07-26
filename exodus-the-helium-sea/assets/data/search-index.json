@@ -3,7 +3,7 @@
     "title": "Main Page",
     "path": "index.html",
     "category": "Main",
-    "summary": "Helium Sea companion; first faction articles underway",
+    "summary": "Helium Sea companion; factions and locations stubs underway",
     "keywords": [
       "home",
       "start",
@@ -78,6 +78,38 @@
       "quichi",
       "centre",
       "center"
+    ]
+  },
+  {
+    "title": "Locations",
+    "path": "pages/locations/index.html",
+    "category": "Locations",
+    "summary": "Worlds and habitats named in The Helium Sea",
+    "keywords": [
+      "locations",
+      "worlds",
+      "places",
+      "systems",
+      "habitats"
+    ]
+  },
+  {
+    "title": "Janton-Io",
+    "path": "pages/locations/janton-io.html",
+    "category": "Locations",
+    "summary": "LoOx world; Celestials of extreme low-energy lifestyle; stub",
+    "keywords": [
+      "janton-io",
+      "janton io",
+      "janton",
+      "loox",
+      "low oxygen",
+      "low-ox",
+      "celestial",
+      "world",
+      "lifestyle",
+      "sloth",
+      "panda"
     ]
   }
 ]

@@ -29,7 +29,13 @@ export const NAV_GROUPS = [
       ["pages/book.html", "Book"],
     ],
   ],
-  ["Articles", [["pages/factions/index.html", "Factions"]]],
+  [
+    "Articles",
+    [
+      ["pages/factions/index.html", "Factions"],
+      ["pages/locations/index.html", "Locations"],
+    ],
+  ],
   // Outside the wiki root: one more ../ than everything else.
   ["Elsewhere", [["../index.html", "All book wikis"]]],
 ];

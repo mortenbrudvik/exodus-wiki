@@ -20,9 +20,8 @@ Then open http://localhost:8080/exodus-the-helium-sea/
 ## Coverage status
 
 Article coverage is starting. In addition to Main Page, `pages/book.html`, `pages/sources.html`,
-and `search.html`, the wiki has a **Factions** hub and a stub for the
-**Eternal Unanimity Dominion**. Still pruned from the live site until go-live (§5 of the design
-spec).
+and `search.html`, the wiki has **Factions** (Eternal Unanimity Dominion) and **Locations**
+(Janton-Io) stubs. Still pruned from the live site until go-live (§5 of the design spec).
 
 ## Add a page
 
