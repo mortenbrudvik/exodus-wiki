@@ -193,8 +193,16 @@ Auditing all 15 non-regenerated subjects by eye found **five failures**:
 | `valdier` | Bloodstone as carved plates set in a gold collar | Porous growth at throat and shoulders |
 | `stethos-thierry` | Glyph-like characters on the robe; glowing display cases behind him | Plain robes, plain ground, flared collar and nape bulb intact |
 
-Ten passed the audit unchanged, including `makaio`, `helena-chione`, `thyra`, `clavissa`,
-`asahi-iryna`, `uulana`, `malquilvo`, `ramona-ursule`, `zuberi-dulcina` and `lord-gahiji`.
+Ten were passed in that audit, including `makaio`, `helena-chione`, `thyra`, `clavissa`,
+`asahi-iryna`, `uulana`, `malquilvo`, `ramona-ursule` and `lord-gahiji`.
+
+> **`zuberi-dulcina` was passed here and should not have been.** The owner flagged it immediately
+> afterwards: ordinary human proportions, short neck, no elongation at all. Checking fifteen
+> subjects against a list produced a margin error — a bulk audit is more reliable than no audit and
+> less reliable than opening one image and asking one question. She was regenerated the same day,
+> and given a **dark ashen** complexion at the same time (owner preference; nothing in the novel
+> fixes her colouring). She now has the long neck, elongated skull and refined features the clade
+> requires, with the cracked crown and fallen-empire armour intact.
 
 **Carolien and Luus are the instructive pair.** Both had been regenerated for a *different* reason —
 her hair, her age — and both passed those checks. Neither was ever asked whether she looked like a
