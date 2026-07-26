@@ -400,7 +400,15 @@ military iconography" without generalising the point, while a suit and tie sat t
 | Subject | Was | Now |
 |---|---|---|
 | `gyvoy-enfoe` | Lounge suit, necktie, French cuffs, dado rail | Tailored coat-tunic, **standing collar, asymmetric closure**, no lapels or tie; bare undecorated wall |
-| `terence-wilson-fletcher` | Classic **trench coat** with notch lapels — 1940s noir detective | Weatherproof overcoat with a standing collar and seamed panels; glowing in-ear device |
+| `terence-wilson-fletcher` | Classic **trench coat** with notch lapels — 1940s noir detective | Weatherproof overcoat with a standing collar and seamed panels; glowing in-ear device. **Insufficient — see below** |
+
+> **The Terence fix was only half a fix, corrected 26 July 2026.** Removing the notch lapels left
+> the rest of the outfit contemporary: a knitted **turtleneck** under a **zip-front field jacket
+> with patch pockets**. Present-day menswear with the single most recognisable marker filed off
+> still belongs to the wrong era — the period rule is about the whole garment, not the lapel. He
+> now wears a coat-tunic with a standing collar, an **asymmetric diagonal closure** and unfamiliar
+> fastenings over a smooth high-necked under-tunic, and the prompt bars zips, button rows, patch
+> pockets, knitted roll-necks and parka cuts by name. Skin lightened at owner request.
 
 **`marcellu` is why this was diagnosable.** Regenerated two passes earlier, he wears a mandarin
 collar with seamed panels, no lapels and obviously non-Earth earpiece hardware — and still reads

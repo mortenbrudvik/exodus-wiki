@@ -466,6 +466,10 @@ Three lessons from those passes are worth carrying into any new art:
   line is mandatory for every member; where the book is silent, relatives should still match.
   This has failed twice — the Jalgori-Tobu siblings shipped as three ancestries, and three of
   Helena-Chione's daughters shipped without the green eyes the novel gives all of them.
+- **Check period fit — of the whole garment, not the marker.** Removing a trench coat's notch
+  lapels left Terence in a knitted turtleneck under a zip-front field jacket with patch pockets:
+  present-day menswear with the most recognisable feature filed off. Zips, button rows, patch
+  pockets, roll-necks and parka cuts are as period-bound as the lapel was.
 - **Check period fit.** The novel is set around 42,000 AD, so no costume may borrow from
   Earth's recent past — no suit and tie, no trench coat, no dog tags, no dado rails. Ten review
   passes missed a man in a lounge suit and necktie because they only ever asked about text,
