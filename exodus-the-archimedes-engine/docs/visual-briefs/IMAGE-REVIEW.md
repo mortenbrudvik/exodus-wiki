@@ -33,11 +33,11 @@ everything below it concerns the first. Third-pass slugs are listed under [Third
 
 | Verdict | Count | Meaning |
 |---|---:|---|
-| **PASS** | 67 | Signed off. Includes all eight portraits regenerated 26 July 2026 against the repaired prompts |
+| **PASS** | 62 | Signed off against the book standard |
 | **QUERY** | 7 | `helena-chione`, `asahi-iryna`, `radwarno`, `uulana`, `malquilvo`, `ramona-ursule` — bloodstone as faceted crystal or set jewellery rather than a matte growth — plus `siskala`, whose canon tiger badge is over-rendered |
-| **FAIL** | 0 | **None open.** Every FAIL from the fourth, fifth and sixth passes has been regenerated and re-verified |
+| **FAIL** | 5 | `liliana`, `marcellu`, `tose`, `gyvoy-enfoe`, `terence-wilson-fletcher` — the eighth pass opened the nine characters no later pass had re-judged, and five of them fail |
 
-67 + 7 + 0 = 74. The signed-off count went 67 → 43 → 59: the fourth and fifth passes changed the
+62 + 7 + 5 = 74. The signed-off count went 67 → 43 → 59: the fourth and fifth passes changed the
 standard from the briefs to the book, and the [sixth](#sixth-pass--the-30-replacements-opened)
 checked the replacements that answered them. **`andino` and `medusa` remain outstanding.**
 
@@ -146,6 +146,63 @@ and every call site appends a noun, so the rendered prompts read:
 The prohibition binds to the garment rather than to the bloodstone — "never a crimson mantle" — and
 Malquilvo's reads "never ruby or crimson**, tear-shaped jewellery**". Fixing this means putting the
 noun inside the constant or ending the clause with punctuation.
+
+## Eighth pass — the characters no later pass ever re-judged
+
+**26 July 2026 · 8 subjects · 3 pass · 5 fail.** Prompted by a fair question: *are the rest of the
+character images up to snuff?*
+
+They were not, and the reason is structural. The fourth and fifth passes re-opened portraits **where
+book text had been recovered**, and the sixth opened **the replacements those passes triggered**. A
+character with no recovered description was therefore never re-examined at all — its PASS still came
+from the first pass, judged against a brief nobody had validated, under a no-text rule that only
+looked at the subject. Thirty of the thirty-nine characters have been opened against the current
+standard. `sahdiah` is a thirty-first, opened and passed in the fourth pass. That left **eight**.
+
+| Subject | Verdict | Finding |
+|---|---|---|
+| `finn-jalgori-tobu` | **PASS** | Uranic ports, human scale, family ancestry correct. Ports are chunkier than the clade table's "subtle" — observation only |
+| `otylia-jalgori-tobu` | **PASS** | Matches Finn's ancestry and port design |
+| `zelinda-jalgori-tobu` | **PASS** | Ditto. Her red gems are ordinary jewellery — she is Uranic, so no bloodstone rule applies |
+| `liliana` | **FAIL** | Contradicts recovered book text, plus two invented emblems and glyphs on the blade |
+| `marcellu` | **FAIL** | Background neon signage carrying letterforms |
+| `tose` | **FAIL** | Engraved dog tags, stencilled plate markings, invented crossed-rifles insignia |
+| `gyvoy-enfoe` | **FAIL** | Legible text in the holo-panel and on the wrist display |
+| `terence-wilson-fletcher` | **FAIL** | Dense neon cityscape signage with letterforms throughout |
+
+**Judging the three siblings together, as the first pass failed to.** Finn, Otylia and Zelinda were
+opened side by side: consistent East Asian ancestry, consistent neural-port design, plausible as
+siblings. The family fix from the first pass has held.
+
+### `liliana` — the last unchecked recovered description
+
+The fifth pass recovered eight new descriptions. Seven belonged to subjects that were already FAIL
+and have since been regenerated. The eighth was Liliana's, and her portrait was never opened against
+it, because she was not on any fail list.
+
+The novel puts her in a "lightweight **bioware muscle outfit**… like a beefed-up wrestler whose skin
+had been stripped away" — exposed musculature. Her own brief spells out "**not plate armour**". The
+shipped portrait is a segmented white plate cuirass over a leather jacket: precisely the thing the
+brief rules out. It also carries **two eye emblems** on the chest — the same invented device the
+fourth pass struck off Lord Gahiji — and a row of glyph-like characters engraved along the blade.
+
+### The pattern: text moved to the background
+
+Four of the five failures are **burned-in text nobody was looking for**, because it is not on the
+subject. The first pass hunted caption bars, name tapes and chest stencils and cleaned them up. It
+never looked past the figure. So the site still ships:
+
+- neon shop signs with letterforms behind `marcellu` and `terence-wilson-fletcher`,
+- holographic UI panels with legible lines behind `gyvoy-enfoe`,
+- and `tose`'s dog tags, which are on the subject but read as costume rather than typography.
+
+This is the same defect that appeared on `andino`'s console in the seventh pass, and it has the same
+cause: a generator asked for a "neon city" or a "ship's bridge" fills it with signage, and the
+`no text` clause reads to it as being about captions and watermarks. **The subtraction clause has to
+name the scenery** — no signs, no screens, no readouts, no displays — not just forbid "text".
+
+`tose` also carries a second problem worth naming: dog tags, stencilled plate and a crossed-rifles
+tattoo are twenty-first-century military iconography imported wholesale into the 42nd millennium.
 
 ### Seventh pass — the remaining seven regenerated, 26 July 2026
 

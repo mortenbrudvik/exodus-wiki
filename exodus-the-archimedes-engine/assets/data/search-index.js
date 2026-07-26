@@ -312,7 +312,7 @@ window.WIKI_SEARCH_INDEX = [
       "kelowan",
       "imperial",
       "avone",
-      "kestrel",
+      "kestrel sprites",
       "luus-kinza"
     ]
   },

@@ -98,8 +98,10 @@ wording that actually worked**, so the recorded prompt stays the one that produc
 ## Review
 
 `check-images.mjs` cannot see inside a JPEG, so delivered assets are checked by eye. Results are in
-[IMAGE-REVIEW.md](IMAGE-REVIEW.md). **Current state: 74 briefed · 67 signed off · 7 query · 0 fail.** No FAIL is open; the seven
-remaining QUERY portraits carry bloodstone as faceted crystal or set jewellery rather than a growth.
+[IMAGE-REVIEW.md](IMAGE-REVIEW.md). **Current state: 74 briefed · 62 signed off · 7 query · 5 fail.** The eighth pass opened the eight
+characters no later pass had re-judged and five of them fail — four for **background** text (neon
+signage, holo panels) that earlier passes never looked for, and `liliana` for plate armour where the
+novel gives her exposed bioware musculature.
 
 Six passes so far. The first three checked the art against the briefs; the fourth and fifth checked
 the briefs against the novel and re-opened most of the cast; the sixth opened the 30 replacement

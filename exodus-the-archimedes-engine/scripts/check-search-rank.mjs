@@ -81,6 +81,11 @@ const EXPECTED = [
   ["helium sea", "pages/factions/crown-dominion.html"],
   ["helium", "pages/factions/crown-dominion.html"],
   ["cherenkov blade", "pages/characters/marcellu.html"],
+  // The palace sabotage is named on eight pages but explained on Carolien's, so both the bare
+  // head and the phrase a reader types after chapter 34 have to land there. Indexed as "kestrel"
+  // alone, the natural plural query matched nothing at all.
+  ["kestrel sprites", "pages/characters/carolien-amaia.html"],
+  ["kestrel", "pages/characters/carolien-amaia.html"],
   // Vocabulary that carried no keyword at all: each is used across many pages but belongs to
   // the one that defines it.
   ["ghost units", "pages/factions/celestials.html"],
