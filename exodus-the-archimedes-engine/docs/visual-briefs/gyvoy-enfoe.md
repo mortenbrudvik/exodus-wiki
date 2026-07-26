@@ -29,7 +29,7 @@ Deal table with arkship model bokeh
 ## Generation prompt
 
 ```
-Highly detailed cinematic sci-fi encyclopedia illustration, rich textures, sharp focus, painterly digital art with photographic detail, soft volumetric lighting, no text, no watermark, no UI chrome. Portrait of Gyvoy Enfoe as the charming offworld financier cover identity: polished human man with too-smooth confident smile, expensive dark suit with subtle high-tech cufflinks, immaculate hair. Deal-maker who attaches to a liberation project. Upper-body portrait, warm negotiation-room light.
+Highly detailed cinematic sci-fi encyclopedia illustration, rich textures, sharp focus, painterly digital art with photographic detail, soft volumetric lighting, no text, no watermark, no UI chrome. Upper-body portrait of Gyvoy Enfoe as the charming offworld financier cover identity: polished human man with a too-smooth confident smile, expensive dark suit with subtle high-tech cufflinks, immaculate hair. Deal-maker who attaches to a liberation project. Warm negotiation-room light in a plain quiet room — no holographic displays, no data panels, no screens, no wrist readouts. Plain even light and an uncluttered background. NO TEXT ANYWHERE IN THE FRAME, on the subject or behind them: no signs, no signage, no neon lettering, no shopfronts, no billboards, no screens, no display panels, no readouts, no holographic interfaces, no console text, no dog tags, no identity discs, no name tapes, no stencilled markings, no unit badges, no insignia, no heraldic emblems, no crests, no repeated motifs, no banners, no murals, no floating symbols or runes, no captions, no labels, no numbers, no logos, no brand marks, no watermarks.
 ```
 
 ## Sources

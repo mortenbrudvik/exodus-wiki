@@ -33,11 +33,11 @@ everything below it concerns the first. Third-pass slugs are listed under [Third
 
 | Verdict | Count | Meaning |
 |---|---:|---|
-| **PASS** | 62 | Signed off against the book standard |
+| **PASS** | 67 | Signed off against the book standard. **All 39 characters have now been opened against it** |
 | **QUERY** | 7 | `helena-chione`, `asahi-iryna`, `radwarno`, `uulana`, `malquilvo`, `ramona-ursule` — bloodstone as faceted crystal or set jewellery rather than a matte growth — plus `siskala`, whose canon tiger badge is over-rendered |
-| **FAIL** | 5 | `liliana`, `marcellu`, `tose`, `gyvoy-enfoe`, `terence-wilson-fletcher` — the eighth pass opened the nine characters no later pass had re-judged, and five of them fail |
+| **FAIL** | 0 | **None open.** The eighth pass's five failures were regenerated the same day and re-verified |
 
-62 + 7 + 5 = 74. The signed-off count went 67 → 43 → 59: the fourth and fifth passes changed the
+67 + 7 + 0 = 74. The signed-off count went 67 → 43 → 59: the fourth and fifth passes changed the
 standard from the briefs to the book, and the [sixth](#sixth-pass--the-30-replacements-opened)
 checked the replacements that answered them. **`andino` and `medusa` remain outstanding.**
 
@@ -146,6 +146,31 @@ and every call site appends a noun, so the rendered prompts read:
 The prohibition binds to the garment rather than to the bloodstone — "never a crimson mantle" — and
 Malquilvo's reads "never ruby or crimson**, tear-shaped jewellery**". Fixing this means putting the
 noun inside the constant or ending the clause with punctuation.
+
+### Ninth pass — the eighth pass's five, regenerated the same day
+
+**26 July 2026 · 5 subjects · 5 pass · 0 fail.** All five verified by eye and installed.
+
+| Subject | Now |
+|---|---|
+| `liliana` | **Flayed-anatomy muscle fibre over the whole torso and arms** — no plates, no cuirass, no emblems, plain unmarked blade |
+| `marcellu` | Dim dockside of wet plate, mooring rope and coloured haze — **not one sign** |
+| `tose` | Plain scuffed harness and plates; dog tags, stencils and the crossed-rifles tattoo all gone |
+| `gyvoy-enfoe` | Plain plaster room, warm light; no holo panel, no wrist readout |
+| `terence-wilson-fletcher` | Background thrown entirely to abstract bokeh; no legible shape anywhere in it |
+
+**The scenery clause fixed all four text failures at once, first try.** `NO_TEXT_ANYWHERE` now names
+what to remove rather than what to forbid — *no signs, no signage, no neon lettering, no shopfronts,
+no billboards, no screens, no display panels, no readouts, no holographic interfaces, no console
+text, no dog tags, no identity discs, no name tapes, no stencilled markings…* — and the two prompts
+that had actively invited the defect were rewritten with it: `marcellu`'s "dockside neon" became "lit
+only by diffuse coloured haze and reflections", and `terence`'s "neon-rain city bokeh" became "thrown
+far out of focus into soft coloured bokeh with no legible shapes".
+
+`liliana` is the fourth prompt-was-right-render-ignored-it case and it broke the same way as the
+others: her prompt already described the muscle suit in full, and the render drew plate armour
+regardless. Front-loading it as **"HER FIELD KIT IS A BIOWARE MUSCLE SUIT, NOT ARMOUR"** with the
+explicit negatives fixed it in one round. That is now four for four on this technique.
 
 ## Eighth pass — the characters no later pass ever re-judged
 

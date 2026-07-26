@@ -53,6 +53,14 @@ const bloodstone = (item, colour = "faint turquoise and gold") =>
 // of two — a negative alone leaves the generator free to pick the default it was always picking.
 const BLOODSTONE_GUARD = `any bloodstone visible is in faint turquoise and gold — pale blue-green and gold only, ${BLOODSTONE_MATERIAL}`;
 
+/**
+ * Text the earlier passes never hunted, because it is not on the figure. Neon shop signs, holo UI
+ * panels, console readouts and dog tags all shipped past a `no text` clause the generator read as
+ * being about captions and watermarks. Naming the *scenery* is what closes it.
+ */
+const NO_TEXT_ANYWHERE =
+  "Plain even light and an uncluttered background. NO TEXT ANYWHERE IN THE FRAME, on the subject or behind them: no signs, no signage, no neon lettering, no shopfronts, no billboards, no screens, no display panels, no readouts, no holographic interfaces, no console text, no dog tags, no identity discs, no name tapes, no stencilled markings, no unit badges, no insignia, no heraldic emblems, no crests, no repeated motifs, no banners, no murals, no floating symbols or runes, no captions, no labels, no numbers, no logos, no brand marks, no watermarks.";
+
 const STYLE =
   "Highly detailed cinematic sci-fi encyclopedia illustration, rich textures, sharp focus, painterly digital art with photographic detail, soft volumetric lighting, no text, no watermark, no UI chrome.";
 
@@ -195,7 +203,7 @@ const briefs = [
     ],
     clothing: "Gondiar city detective layers — smart-casual coat, neural-link earpiece optional",
     setting: "Rain-slick Santa Rosa night streets soft-focus",
-    prompt: `${STYLE} Portrait of Terence Wilson-Fletcher, a 24-year-old detective on a far-future colony city: sharp-eyed young man with thoughtful intense expression, short neat hair, wearing a dark detective coat over civilian layers, subtle earpiece. Human investigator aesthetic. Upper-body portrait, cool neon-rain city bokeh behind him.`,
+    prompt: `${STYLE} Upper-body portrait of Terence Wilson-Fletcher, a 24-year-old detective on a far-future colony city: sharp-eyed young man with a thoughtful intense expression, short neat hair, a dark detective coat over civilian layers, subtle earpiece. Human investigator aesthetic. A rain-wet street at night behind him, thrown far out of focus into soft coloured bokeh with no legible shapes — no shop signs, no neon lettering, no billboards, no screens. ${NO_TEXT_ANYWHERE}`,
     inference: ["Exact ethnicity not fixed — mixed urban Gondiar look"],
     image: "assets/images/characters/terence-wilson-fletcher.jpg",
   },
@@ -769,7 +777,7 @@ const briefs = [
     cues: ["Traveler fixer / middleman", "Commercial-deniable look", "Dies by cherenkov blade"],
     clothing: "Sharp commercial spacer suit, too clean for a freighter hand",
     setting: "Dockside negotiation light",
-    prompt: `${STYLE} Portrait of Marcellu, Traveler middleman and archon fixer: slick human man with wary deal-maker expression, sharp commercial spacer suit, subtle high-tech earpiece. Deniable logistics broker. Upper-body portrait, dockside neon.`,
+    prompt: `${STYLE} Upper-body portrait of Marcellu, Traveler middleman and archon fixer: slick human man with a wary deal-maker expression, sharp commercial spacer suit, subtle high-tech earpiece. Deniable logistics broker. A dim dockside at night lit only by diffuse coloured haze and reflections — no shopfronts and no lit signs of any kind. ${NO_TEXT_ANYWHERE}`,
     inference: [],
     image: "assets/images/characters/marcellu.jpg",
   },
@@ -810,7 +818,7 @@ const briefs = [
     clothing:
       "Two distinct looks: the flayed-musculature bioware combat suit, and subdued dark civilian wear with a cherenkov-blade sheath",
     setting: "Aircraft hatch / Anoosha cloud haze memory",
-    prompt: `${STYLE} Portrait of Liliana, Lidon-linked human mercenary: striking woman with cool professional expression, wearing a close-fitting lightweight bioware muscle suit whose sculpted fibre bundles read like exposed anatomy — as though a powerfully built wrestler had been skinned — with an exotic blade sheath at the hip. Deniable operator, unsettling to look at. Upper-body portrait, windy hatch light and cloud haze.`,
+    prompt: `${STYLE} Upper-body portrait of Liliana, Lidon-linked human mercenary. HER FIELD KIT IS A BIOWARE MUSCLE SUIT, NOT ARMOUR: a close-fitting lightweight suit of sculpted fibre bundles that reads as exposed anatomy — as though a powerfully built wrestler had been skinned — with NO plates, NO cuirass, NO rigid armour panels and no emblems anywhere on it. Striking woman with a cool professional expression, an exotic blade sheath at the hip holding a plain unmarked blade. Deniable operator, unsettling to look at. Windy hatch light and cloud haze. ${NO_TEXT_ANYWHERE}`,
     inference: [
       "Hair, skin and eye colour are not fixed. The “much broader nose, and a skin that was almost albino it was so pale” in the later chapters is a **disguise she puts on**, not her face",
     ],
@@ -829,7 +837,7 @@ const briefs = [
     cues: ["Heavy-weapons and sniper mercenary", "Physical bulk vs Liliana’s quiet style", "Field grit"],
     clothing: "Combat harness, ammo webbing, sniper-support kit, scarred armour plates",
     setting: "Roofline / Governor’s mansion lawn distance",
-    prompt: `${STYLE} Portrait of Toše, heavy-weapons mercenary and sniper: rugged muscular man with grim focused expression, combat harness and scarred armour plates, ammo webbing, short beard stubble. Loud half of a deniable duo. Upper-body portrait, harsh daylight and dust.`,
+    prompt: `${STYLE} Upper-body portrait of Toše, heavy-weapons mercenary and sniper: rugged muscular man with a grim focused expression, plain unmarked combat harness and scarred armour plates, ammo webbing, short beard stubble. NO TWENTIETH-CENTURY SOLDIER ICONOGRAPHY: no dog tags, no identity discs, no stencilled unit numbers, no rank chevrons, no crossed-weapon or skull tattoos or patches. Loud half of a deniable duo, harsh daylight and dust. ${NO_TEXT_ANYWHERE}`,
     inference: [],
     image: "assets/images/characters/tose.jpg",
   },
@@ -846,7 +854,7 @@ const briefs = [
     ],
     clothing: "Expensive offworld financier suit, Traveler-adjacent luxury",
     setting: "Deal table with arkship model bokeh",
-    prompt: `${STYLE} Portrait of Gyvoy Enfoe as the charming offworld financier cover identity: polished human man with too-smooth confident smile, expensive dark suit with subtle high-tech cufflinks, immaculate hair. Deal-maker who attaches to a liberation project. Upper-body portrait, warm negotiation-room light.`,
+    prompt: `${STYLE} Upper-body portrait of Gyvoy Enfoe as the charming offworld financier cover identity: polished human man with a too-smooth confident smile, expensive dark suit with subtle high-tech cufflinks, immaculate hair. Deal-maker who attaches to a liberation project. Warm negotiation-room light in a plain quiet room — no holographic displays, no data panels, no screens, no wrist readouts. ${NO_TEXT_ANYWHERE}`,
     inference: ["True operator may be Celestial (Dagon network) — illustrate the public Gyvoy face"],
     image: "assets/images/characters/gyvoy-enfoe.jpg",
   },
