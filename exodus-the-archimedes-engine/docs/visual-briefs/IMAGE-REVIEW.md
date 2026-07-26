@@ -33,11 +33,13 @@ everything below it concerns the first. Third-pass slugs are listed under [Third
 | Verdict | Count | Meaning |
 |---|---:|---|
 | **PASS** | 45 | First, second and third pass after regen, less everything the fourth pass re-opened |
-| **QUERY** | 16 | Imperial Celestial portraits not yet individually recounted. Every one checked so far has red bloodstone, and these share the generator and brief wording — assume the same until each is opened |
-| **FAIL** | 13 | **Open.** `dejean`, `olomo`, `josias-aponi`, `stethos-thierry`, `helena-chione`, `eleanor-aponi`, `makaio`, `lord-gahiji`, `elsbeth-mcquillan`, `thyra`, `carolien-amaia`, `valdier` — contradict book text recovered in the fourth pass; `ratarajan-dominion` — card-mount border, found in the third-pass eye-pass |
+| **QUERY** | 16 | Bloodstone recolour shipped 26 July 2026 (turquoise/gold); still need individual eye-pass after recolour |
+| **FAIL** | 13 | **Art regenerated 26 July 2026** against book text — see regeneration log; re-eye-pass before restoring PASS tallies |
 
 45 + 16 + 13 = 74. The fourth pass is the reason the signed-off count fell from 67; nothing regressed
-in the art, the standard it is measured against changed from the briefs to the book.
+in the art, the standard it is measured against changed from the briefs to the book. Replacement
+files for all 13 FAIL subjects, the 16 QUERY Celestials, and `factions/celestials.jpg` are on disk
+as of 26 July 2026.
 
 Historical first-pass tally (before regen): 37 pass · 3 query · 6 fail. Detail of that pass is kept below for process lessons; **shipped files are the regenerations** listed under [Regeneration log](#regeneration-log).
 
@@ -423,6 +425,30 @@ reads ~eight under perspective. **PASS** as illustration of the atypical hull.
 body with **exactly five eyes**, elongated non-Crown face, merchant-archon finery, nurture-chamber
 context. Prior plate was a two-eyed humanoid and wrong for the clade. Pronouns corrected she/her in
 generators. **PASS** — eye count verified by eye.
+
+**2026-07-26 (fourth-pass regen).** Regenerated all 13 open FAILs against recovered book text, then
+recoloured bloodstone on the 16 QUERY Imperial Celestials (plus `factions/celestials.jpg`) from red
+to **turquoise and gold**.
+
+| Slug | Regen check |
+|---|---|
+| `dejean` | Woman captain, grey hair, haggard; blank name tapes |
+| `olomo` | Four eyes, shoulder-level skull cones, blue-green reptilian skin, four arms |
+| `josias-aponi` | Thick full beard, grey-blue eyes; no graffiti/slogans |
+| `stethos-thierry` | Scarlet-and-grey robes, turquoise-gold bloodstone petals, spine connection bulb |
+| `helena-chione` | Intense green eyes; gold-and-turquoise bloodstone (not crimson) |
+| `eleanor-aponi` | Dark fringe, plain bulkhead; no stencil lettering |
+| `makaio` | Late-stage skull/cheek bloodstone + scalloped horns in turquoise/gold; toga; rigid face |
+| `lord-gahiji` | Ill-fitting grey-silver robes; black-and-green bloodstone cap |
+| `elsbeth-mcquillan` | Light-grey cymech sphere eyes; no uniform lettering |
+| `thyra` | Braids kept; turquoise-gold bloodstone; green eyes |
+| `carolien-amaia` | Turquoise-gold bloodstone; no serpent clasp |
+| `valdier` | Turquoise-gold collar; caption bar removed |
+| `ratarajan-dominion` | Full-bleed plate; parchment card-mount gone |
+| QUERY 16 + `celestials` | Bloodstone recolour pass only (composition retained) |
+
+Fourth-pass FAIL and QUERY tallies should be re-eye-checked before claiming PASS on every row;
+structural gates are green.
 
 | Slug | Prior defect | Regen check |
 |---|---|---|
