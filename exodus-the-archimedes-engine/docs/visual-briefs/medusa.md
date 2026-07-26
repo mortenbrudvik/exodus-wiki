@@ -29,7 +29,7 @@ Dark corridor / ship berth
 ## Generation prompt
 
 ```
-Highly detailed cinematic sci-fi encyclopedia illustration, rich textures, sharp focus, painterly digital art with photographic detail, soft volumetric lighting, no text, no watermark, no UI chrome. Portrait of Medusa, ruthless human field assassin: a striking Black woman with deep black skin, wearing tight black leather that matches it, and long rainbow-coloured braids shot through with fine mechanical threads so that they stir and coil of their own accord like a nest of serpents. Cold calm expression, knife harness. Professional killer. Upper-body portrait, dark corridor rim light. Absolutely no text, no captions, no labels, no lettering, no logos, no brand marks, no watermarks, no UI chrome.
+Highly detailed cinematic sci-fi encyclopedia illustration, rich textures, sharp focus, painterly digital art with photographic detail, soft volumetric lighting, no text, no watermark, no UI chrome. Upper-body portrait of Medusa, ruthless human field assassin. HER SKIN IS DEEP BLACK AND HER LONG BRAIDED HAIR IS RAINBOW-COLOURED: many long braids in vivid rainbow colours, threaded with fine mechanical filament so that they stir and coil of their own accord like a nest of serpents. That hair is why she is called Medusa and it cannot be omitted or muted. A striking Black woman in tight black leather that matches her skin, cold calm expression, knife harness. Professional killer, dark corridor rim light. Plain even light, uncluttered background, no heraldic emblems, no crests, no repeated motifs, no banners, no murals, no floating symbols or runes. Absolutely no text, no captions, no labels, no lettering, no logos, no brand marks, no watermarks, no UI chrome.
 ```
 
 ## Sources

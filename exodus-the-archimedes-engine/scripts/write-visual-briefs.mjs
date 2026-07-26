@@ -43,12 +43,15 @@ const NO_TEXT =
  * pass came back the right colour and the wrong material.
  */
 const BLOODSTONE_MATERIAL =
-  "a bone-like matte porous growth of the body, never a cut, faceted or polished gemstone, never set in metal like jewellery, and never ruby or crimson";
+  "a bone-like matte porous growth of the body, never a cut, faceted or polished gemstone, never set in metal like jewellery, and never red, rust, ruby, scarlet or crimson";
 
 const bloodstone = (item, colour = "faint turquoise and gold") =>
   `a ${item} of calcium-growth bloodstone in ${colour} — ${BLOODSTONE_MATERIAL}`;
 
-const BLOODSTONE_GUARD = `any bloodstone visible is ${BLOODSTONE_MATERIAL}`;
+// The guard must name the colour it DOES want, not only the ones it forbids. Its first version said
+// "never ruby or crimson" and nothing more, and Avone-Valerio came back with a red growth twice out
+// of two — a negative alone leaves the generator free to pick the default it was always picking.
+const BLOODSTONE_GUARD = `any bloodstone visible is in faint turquoise and gold — pale blue-green and gold only, ${BLOODSTONE_MATERIAL}`;
 
 const STYLE =
   "Highly detailed cinematic sci-fi encyclopedia illustration, rich textures, sharp focus, painterly digital art with photographic detail, soft volumetric lighting, no text, no watermark, no UI chrome.";
@@ -343,7 +346,7 @@ const briefs = [
     ],
     clothing: "Bassa royal colours — emerald and gold court robes with bloodstone diadem",
     setting: "Coronation-era court",
-    prompt: `${STYLE} Portrait of Luus-Marcela, Imperial Celestial Now and Forever Queen of Bassa: tall elegant post-human sovereign woman with a beguilingly young, almost girlish face carrying an expression of hard political triumph that does not belong on it. Emerald and gold robes with ${bloodstone("diadem")}. Peer queen handing imperial rotation. Upper-body portrait, ceremonial light.`,
+    prompt: `${STYLE} Upper-body portrait of Luus-Marcela, Imperial Celestial Now and Forever Queen of Bassa. SHE HAS THE FACE OF A GIRL OF ABOUT SEVENTEEN: smooth unlined youthful skin, soft round cheeks, no age lines, no crow's feet, no gauntness, not a middle-aged or mature woman. On that beguilingly young, almost girlish face she wears an expression of hard political triumph that does not belong on it, and that contrast is the point of the picture. Tall elegant post-human sovereign, emerald and gold robes with ${bloodstone("diadem")}. Plain even light, uncluttered background, no heraldic emblems, no crests, no repeated motifs, no banners, no murals, no floating symbols or runes.`,
     inference: [
       "Hair and eye colour are not stated for her",
       "The 'dark olive skin and classic titian hair, cropped short' in the same passage belongs to **a princess Luus selected to taunt the empress**, not to Luus — do not attribute it to her",
@@ -367,7 +370,7 @@ const briefs = [
     ],
     clothing: "Cheluli court white-and-copper robes, under a radiating orange bloodstone headpiece",
     setting: "Formal queen portrait backdrop",
-    prompt: `${STYLE} Portrait of Inessa-Pierina, Imperial Celestial queen of Cheluli: tall post-human regal woman whose head is framed by a wide starburst of ORANGE bloodstone horns radiating outward like a crude, heavy sculpture — matte calcium growth, not faceted gemstone. Blunt, impatient expression, white and copper court robes. Peer queen, least polished of them. Upper-body portrait, cool ceremonial lighting.`,
+    prompt: `${STYLE} Upper-body portrait of Inessa-Pierina, Imperial Celestial queen of Cheluli. HER BLOODSTONE IS ORANGE, NOT TURQUOISE AND NOT GREEN: a wide starburst of burnt-orange bloodstone horns radiating outward all around her head like a crude, heavy, unfinished sculpture — a matte porous calcium growth of the body, never a cut, faceted or polished gemstone, never set in metal like jewellery. Tall post-human regal woman with a blunt, impatient expression, white and copper court robes. The least polished of the peer queens. Plain even light, uncluttered background, no heraldic emblems, no crests, no repeated motifs, no banners, no murals, no floating symbols or runes.`,
     inference: [
       "Hair, skin and eye colour are not stated — the orange horns are, and they are the one thing that distinguishes her silhouette",
       "Her orange is why the shared `BLOODSTONE` default says colour varies: it is not turquoise-and-gold for everyone",
@@ -404,7 +407,7 @@ const briefs = [
     ],
     clothing: "War-era Imperial armour-robes in blackened gold, cracked bloodstone crown",
     setting: "Dim historical haze, ruined glory",
-    prompt: `${STYLE} Portrait of Zuberi-Dulcina, historical Imperial Celestial queen of Kelowan: tall post-human war sovereign with tragic commanding expression, blackened-gold armour robes, ${bloodstone("cracked crown")}. Fallen empire grandeur. Upper-body portrait, smoky dramatic light.`,
+    prompt: `${STYLE} Upper-body portrait of Zuberi-Dulcina, historical Imperial Celestial queen of Kelowan. ABSOLUTELY NO SYMBOLS ANYWHERE: no runes, no glyphs, no floating characters, no sunburst or star emblems, no heraldry, no inscriptions, no lettering of any kind, in the air or on the walls or on her armour. Tall post-human war sovereign with a tragic commanding expression, blackened-gold armour robes, ${bloodstone("cracked crown")}. Fallen empire grandeur, smoky dramatic light, plain uncluttered background.`,
     inference: [
       "Historical reconstruction — the novel gives no portrait of her alive",
       "**Her skeleton is physically present** in the Council of the Empress chamber, and Luus-Marcela smiles at it in triumph. A memorial plate of the displayed remains would be better sourced than this imagined living portrait",
@@ -429,7 +432,7 @@ const briefs = [
     ],
     clothing: "Dark court suit with bloodstone cuff growths, Uixic noble cut",
     setting: "Shadowed court corridor",
-    prompt: `${STYLE} Portrait of Lord Bekket, Imperial Celestial court schemer and father of a usurper queen: a young post-human man, tall but not the tallest, with long unkempt auburn hair falling loose to give him a slightly wild, un-courtly look, and a calculating half-smile. Dark tailored court suit, ${bloodstone("pair of cuff ornaments")}. Deliberately less groomed than everyone around him. Upper-body portrait, shadowed corridor light.`,
+    prompt: `${STYLE} Upper-body portrait of Lord Bekket, Imperial Celestial court schemer and father of a usurper queen. HIS HAIR IS LONG, LOOSE, UNKEMPT AND AUBURN: coppery red-brown, falling well past his collar and deliberately untidy — not black, not dark brown, not short, not slicked back, not tied up. It gives him a slightly wild, un-courtly look, deliberately less groomed than everyone around him. A young post-human man, tall but not the tallest, with a calculating half-smile. Dark tailored court suit, ${bloodstone("pair of cuff ornaments")}. Plain even light, uncluttered background, no heraldic emblems, no crests, no repeated motifs, no banners, no murals, no floating symbols or runes.`,
     inference: [
       "Eye colour and skin tone are not stated — the auburn hair, its unkempt length and his youth are",
     ],
@@ -595,7 +598,7 @@ const briefs = [
     cues: ["Military general of Crown navy", "Ghost units / occupation authority", "Tall Imperial humanoid"],
     clothing: "Celestial navy general armour — angular plates, rank glyphs (no readable text), dark steel-blue",
     setting: "Occupation HQ / navy bridge",
-    prompt: `${STYLE} Portrait of General Avone-Valerio, Imperial Celestial navy commander: tall post-human military leader with cold commanding face, angular steel-blue navy armour plates, plain rank ornaments bearing no lettering, inscriptions, plaques or repeated emblems. ${BLOODSTONE_GUARD}. Occupation authority. Upper-body portrait, harsh navy bridge light.`,
+    prompt: `${STYLE} Upper-body portrait of General Avone-Valerio, Imperial Celestial navy commander. HE IS AN IMPERIAL CELESTIAL, NOT A HUMAN SOLDIER: unnaturally tall with elongated limbs and a long neck, pale refined post-human features, no stubble, no weathered human soldier face, no military crest or mohawk. NO LETTERING OR PLAQUES ANYWHERE: rank is shown by plain unmarked metal, never by inscribed bars, ribbons, badges or repeated emblems. Cold commanding expression, angular steel-blue navy armour plates. ${BLOODSTONE_GUARD}. Plain even light, uncluttered background, no heraldic emblems, no crests, no repeated motifs, no banners, no murals, no floating symbols or runes.`,
     inference: [
       "Presented as masculine general. **Unverified: this is a guess from the name, not from the text.** Dejean was inferred male the same way and the novel makes her a woman — confirm against the book before regenerating.",
     ],
@@ -747,7 +750,7 @@ const briefs = [
     ],
     clothing: "Traveler captain’s worn coat, harness, ship-tag jewellery",
     setting: "Arcadia’s Moon bridge",
-    prompt: `${STYLE} Portrait of Andino, Traveler starship captain of Arcadia’s Moon: a weathered woman, heavily cybernetic — in place of eyes, small black mechanical lens tubes protrude from her empty sockets, and slim metal pistons run up either side of her neck. Much of her visible skin reads as synthetic. Worn captain’s coat and harness. Independent, unreadable, formidable. Upper-body portrait, warm bridge instrument glow. ${NO_TEXT}`,
+    prompt: `${STYLE} Upper-body portrait of Andino, a WOMAN — a female Traveler starship captain, clearly and unambiguously feminine in face and build, not a man. SHE HAS NO EYES: in place of each eye a small black mechanical lens tube protrudes from an empty socket — do not draw human eyes, irises or pupils anywhere on her face. Slim metal pistons run up either side of her neck. A weathered woman, heavily cybernetic, much of her visible skin reading as synthetic. Worn captain’s coat and harness. Independent, unreadable, formidable. Completely plain dark uncluttered background: no console screens, no display panels, no readouts, no instrument text, no signage, no heraldic emblems, no crests, no patches, no repeated motifs. Absolutely no text, no captions, no labels, no lettering, no logos, no brand marks, no watermarks, no UI chrome.`,
     inference: [
       "Hair, age and the exact extent of the synthetic skin are not described — the lens tubes, the neck pistons and her sex are",
     ],
@@ -783,7 +786,7 @@ const briefs = [
     ],
     clothing: "Tight black leather, matched to her skin; knife harness",
     setting: "Dark corridor / ship berth",
-    prompt: `${STYLE} Portrait of Medusa, ruthless human field assassin: a striking Black woman with deep black skin, wearing tight black leather that matches it, and long rainbow-coloured braids shot through with fine mechanical threads so that they stir and coil of their own accord like a nest of serpents. Cold calm expression, knife harness. Professional killer. Upper-body portrait, dark corridor rim light. ${NO_TEXT}`,
+    prompt: `${STYLE} Upper-body portrait of Medusa, ruthless human field assassin. HER SKIN IS DEEP BLACK AND HER LONG BRAIDED HAIR IS RAINBOW-COLOURED: many long braids in vivid rainbow colours, threaded with fine mechanical filament so that they stir and coil of their own accord like a nest of serpents. That hair is why she is called Medusa and it cannot be omitted or muted. A striking Black woman in tight black leather that matches her skin, cold calm expression, knife harness. Professional killer, dark corridor rim light. Plain even light, uncluttered background, no heraldic emblems, no crests, no repeated motifs, no banners, no murals, no floating symbols or runes. Absolutely no text, no captions, no labels, no lettering, no logos, no brand marks, no watermarks, no UI chrome.`,
     inference: [
       "Face shape and age are not described — her skin, her hair and her clothing are",
     ],

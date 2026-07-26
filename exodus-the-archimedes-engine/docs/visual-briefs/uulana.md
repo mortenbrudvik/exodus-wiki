@@ -29,7 +29,7 @@ Ambush-risk corridor of court
 ## Generation prompt
 
 ```
-Highly detailed cinematic sci-fi encyclopedia illustration, rich textures, sharp focus, painterly digital art with photographic detail, soft volumetric lighting, no text, no watermark, no UI chrome. Portrait of Uulana as Wynid Imperial Celestial investigator-archon type: tall post-human figure with sharp vigilant eyes, charcoal robes with crimson lining, a small collar spur of calcium-growth bloodstone in faint turquoise and gold — a bone-like matte porous growth of the body, never a cut, faceted or polished gemstone, never set in metal like jewellery, and never ruby or crimson. Political investigation under threat. Upper-body portrait, tense corridor light.
+Highly detailed cinematic sci-fi encyclopedia illustration, rich textures, sharp focus, painterly digital art with photographic detail, soft volumetric lighting, no text, no watermark, no UI chrome. Portrait of Uulana as Wynid Imperial Celestial investigator-archon type: tall post-human figure with sharp vigilant eyes, charcoal robes with crimson lining, a small collar spur of calcium-growth bloodstone in faint turquoise and gold — a bone-like matte porous growth of the body, never a cut, faceted or polished gemstone, never set in metal like jewellery, and never red, rust, ruby, scarlet or crimson. Political investigation under threat. Upper-body portrait, tense corridor light.
 ```
 
 ## Sources

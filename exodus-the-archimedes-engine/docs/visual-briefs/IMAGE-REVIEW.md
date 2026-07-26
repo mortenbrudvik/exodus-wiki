@@ -33,11 +33,11 @@ everything below it concerns the first. Third-pass slugs are listed under [Third
 
 | Verdict | Count | Meaning |
 |---|---:|---|
-| **PASS** | 60 | Signed off, including 17 of the 30 replacements opened in the sixth pass and `carolien-amaia` regenerated after it |
+| **PASS** | 67 | Signed off. Includes all eight portraits regenerated 26 July 2026 against the repaired prompts |
 | **QUERY** | 7 | `helena-chione`, `asahi-iryna`, `radwarno`, `uulana`, `malquilvo`, `ramona-ursule` — bloodstone as faceted crystal or set jewellery rather than a matte growth — plus `siskala`, whose canon tiger badge is over-rendered |
-| **FAIL** | 7 | `inessa-pierina`, `bekket`, `luus`, `zuberi-dulcina`, `avone-valerio` from the sixth pass, plus `andino` and `medusa` still **not regenerated** |
+| **FAIL** | 0 | **None open.** Every FAIL from the fourth, fifth and sixth passes has been regenerated and re-verified |
 
-60 + 7 + 7 = 74. The signed-off count went 67 → 43 → 59: the fourth and fifth passes changed the
+67 + 7 + 0 = 74. The signed-off count went 67 → 43 → 59: the fourth and fifth passes changed the
 standard from the briefs to the book, and the [sixth](#sixth-pass--the-30-replacements-opened)
 checked the replacements that answered them. **`andino` and `medusa` remain outstanding.**
 
@@ -146,6 +146,46 @@ and every call site appends a noun, so the rendered prompts read:
 The prohibition binds to the garment rather than to the bloodstone — "never a crimson mantle" — and
 Malquilvo's reads "never ruby or crimson**, tear-shaped jewellery**". Fixing this means putting the
 noun inside the constant or ending the clause with punctuation.
+
+### Seventh pass — the remaining seven regenerated, 26 July 2026
+
+**All seven outstanding FAIL subjects rebuilt and verified by eye. No FAIL is now open.** Same route
+as `carolien-amaia` (`grok-imagine-image-quality`, 864×1152, ~$0.06 for the batch), same recipe:
+front-load the constraint that kept getting dropped, add the subtraction clause, generate two or
+three, open every one.
+
+| Subject | Was wrong | Now verified |
+|---|---|---|
+| `inessa-pierina` | turquoise, delicate circlet | **Burnt-orange** starburst of horns framing the head, matte and porous, "like a crude sculpture" |
+| `bekket` | neat slicked black hair, eagle banners | Long loose **unkempt auburn** hair, calculating half-smile, plain ground, no heraldry |
+| `luus` | lined middle-aged face | The face of a girl of about seventeen wearing hard political triumph |
+| `zuberi-dulcina` | floating runes, sunburst emblem, faceted crystal | No symbols anywhere; cracked **porous** bloodstone crown; plain smoky ground |
+| `avone-valerio` | inscription plaques, 40K marine, human soldier | Elongated pale Celestial, plain unmarked armour, turquoise-and-gold growth |
+| `andino` | drawn as a man, human eyes, `TRAVELER` patch | Unambiguously a **woman**; **black lens tubes** in place of eyes; **neck pistons**; no patch |
+| `medusa` | pale woman, cropped black hair | **Deep black skin**; long **rainbow braids** coiling like serpents; knife harness |
+
+`medusa` is the one worth looking at — the braids visibly writhe, which is the whole reason she has
+the name and something three previous passes never got.
+
+**Two subjects needed a second round, and both taught something:**
+
+**`andino`.** The first pair fixed the eyes and pistons but one read ambiguously male — the exact
+defect being fixed — and the other put **legible amber text on a bridge console** behind her. Naming
+her sex in the first clause and banning console readouts explicitly fixed both. Background screens
+are a text vector the `no text` clause does not cover, because the model reads them as scenery
+rather than lettering.
+
+**`avone-valerio` — the guard was negative-only.** Both first candidates came back with a **dark red**
+bloodstone growth, from a clause that said "never ruby or crimson". `BLOODSTONE_GUARD` named what
+the colour must *not* be and never what it must *be*, so the generator kept its default and simply
+ignored the prohibition. Adding the positive — *"in faint turquoise and gold — pale blue-green and
+gold only"* — and widening the negatives to "never red, rust, ruby, scarlet or crimson" fixed it in
+one round, two for two.
+
+That is the same lesson as Carolien's age, in a different disguise: **a constraint stated only as a
+prohibition is weak.** Say what you want first, then what you forbid. Both `BLOODSTONE_MATERIAL` and
+`BLOODSTONE_GUARD` now do that, which also matters for the seven QUERY portraits, since they were
+relying on the same negative-only wording.
 
 ### PASS — `carolien-amaia` regenerated, 26 July 2026
 

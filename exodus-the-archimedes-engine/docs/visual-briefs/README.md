@@ -98,7 +98,8 @@ wording that actually worked**, so the recorded prompt stays the one that produc
 ## Review
 
 `check-images.mjs` cannot see inside a JPEG, so delivered assets are checked by eye. Results are in
-[IMAGE-REVIEW.md](IMAGE-REVIEW.md). **Current state: 74 briefed · 60 signed off · 7 query · 7 fail.**
+[IMAGE-REVIEW.md](IMAGE-REVIEW.md). **Current state: 74 briefed · 67 signed off · 7 query · 0 fail.** No FAIL is open; the seven
+remaining QUERY portraits carry bloodstone as faceted crystal or set jewellery rather than a growth.
 
 Six passes so far. The first three checked the art against the briefs; the fourth and fifth checked
 the briefs against the novel and re-opened most of the cast; the sixth opened the 30 replacement

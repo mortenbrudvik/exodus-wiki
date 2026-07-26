@@ -30,7 +30,7 @@ Formal queen portrait backdrop
 ## Generation prompt
 
 ```
-Highly detailed cinematic sci-fi encyclopedia illustration, rich textures, sharp focus, painterly digital art with photographic detail, soft volumetric lighting, no text, no watermark, no UI chrome. Portrait of Inessa-Pierina, Imperial Celestial queen of Cheluli: tall post-human regal woman whose head is framed by a wide starburst of ORANGE bloodstone horns radiating outward like a crude, heavy sculpture — matte calcium growth, not faceted gemstone. Blunt, impatient expression, white and copper court robes. Peer queen, least polished of them. Upper-body portrait, cool ceremonial lighting.
+Highly detailed cinematic sci-fi encyclopedia illustration, rich textures, sharp focus, painterly digital art with photographic detail, soft volumetric lighting, no text, no watermark, no UI chrome. Upper-body portrait of Inessa-Pierina, Imperial Celestial queen of Cheluli. HER BLOODSTONE IS ORANGE, NOT TURQUOISE AND NOT GREEN: a wide starburst of burnt-orange bloodstone horns radiating outward all around her head like a crude, heavy, unfinished sculpture — a matte porous calcium growth of the body, never a cut, faceted or polished gemstone, never set in metal like jewellery. Tall post-human regal woman with a blunt, impatient expression, white and copper court robes. The least polished of the peer queens. Plain even light, uncluttered background, no heraldic emblems, no crests, no repeated motifs, no banners, no murals, no floating symbols or runes.
 ```
 
 ## Sources
