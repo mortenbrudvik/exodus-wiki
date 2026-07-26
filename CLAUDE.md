@@ -442,6 +442,10 @@ Three lessons from those passes are worth carrying into any new art:
 - **Count what the text counts, and check the material as well as the colour.** Olomo shipped with
   the wrong eye count for three passes because the brief never mentioned eyes; bloodstone was fixed
   from red to turquoise while staying a faceted gem, which the novel rules out just as firmly.
+- **Judge families side by side, and default to resemblance.** Any feature the novel fixes for a
+  line is mandatory for every member; where the book is silent, relatives should still match.
+  This has failed twice — the Jalgori-Tobu siblings shipped as three ancestries, and three of
+  Helena-Chione's daughters shipped without the green eyes the novel gives all of them.
 - **Check period fit.** The novel is set around 42,000 AD, so no costume may borrow from
   Earth's recent past — no suit and tie, no trench coat, no dog tags, no dado rails. Ten review
   passes missed a man in a lounge suit and necktie because they only ever asked about text,

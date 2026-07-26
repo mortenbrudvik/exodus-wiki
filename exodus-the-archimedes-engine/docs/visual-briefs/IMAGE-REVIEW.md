@@ -147,6 +147,46 @@ The prohibition binds to the garment rather than to the bloodstone — "never a 
 Malquilvo's reads "never ruby or crimson**, tear-shaped jewellery**". Fixing this means putting the
 noun inside the constant or ending the clause with punctuation.
 
+## Twelfth pass — Helena-Chione's line, judged as a family
+
+**26 July 2026 · 3 subjects · 3 pass.** Prompted by another question the process should have asked
+itself: *should Siskala not match the look of her mother?*
+
+She should, and she did not — nor did two of her sisters. The novel gives Helena's daughters exactly
+one inherited feature, and it is the one nobody checked:
+
+> "Other than sharing the same **intense green eyes**…"
+
+| Subject | Was | Now |
+|---|---|---|
+| `siskala` | **Brown eyes**, human soldier's build, no long neck, dark skin | Green eyes, elongated Celestial frame, long neck, her mother's poise and pallor |
+| `clavissa` | **Grey-blue eyes**, bloodstone as gold-set floral brooch and earrings | Green eyes, elongated, porous growth collar, wall glyphs gone |
+| `thyra` | Green eyes already, but bloodstone as **turquoise plates in gold settings** | A porous coral-like collar-crown growing from the body; neural pad at the nape visible |
+
+**The clade rule I had been applying was too strong.** The README read "hair and skin colour vary
+freely within a line — a queen's daughters share only her eye colour", derived from that sentence.
+But "other than sharing the same green eyes" is licence for relatives to differ, not an instruction
+that they must. The owner's rule replaces it: **if the book does not explicitly say otherwise,
+relatives should match** — bearing, proportions, colouring. Recorded in the clade table and in the
+site-wide art direction.
+
+**Siskala also exposed an oversight of mine.** The sixth pass flagged clade drift on three military
+Celestials — `avone-valerio`, `radwarno` and `siskala` — all reading as ordinary human soldiers. I
+front-loaded "HE IS AN IMPERIAL CELESTIAL, NOT A HUMAN SOLDIER" onto the first two and never applied
+it to Siskala, which is why she alone kept a soldier's build and no long neck. Fixing it made her
+resemble her mother, because the elongated frame *is* the family look.
+
+The line now reads as one family — pale, dark-haired, green-eyed, elongated — across
+`helena-chione`, `thyra`, `clavissa` and `siskala`, and all four were opened side by side to confirm
+it rather than judged one at a time. That is the second time a family has failed this way; the
+Jalgori-Tobu siblings were the first, and the doc has carried a "judge families together" callout
+since. It was never applied to Helena's line.
+
+**Outstanding under this rule:** `josias-aponi` is the **grandfather** of `eleanor-aponi`, and the
+pair has never been opened side by side. Both have book-fixed features that do not conflict — his
+thick beard and gray-blue eyes, her dark hair — so nothing is contradicted, but the resemblance has
+not been checked.
+
 ## Eleventh pass — period fit, a criterion the first ten never applied
 
 **26 July 2026 · 3 subjects · 3 pass.** Prompted by a question the review process should have asked

@@ -9,6 +9,11 @@ Maintainer-only notes for original encyclopedia illustrations. **Not** reader-fa
 - **Ships:** Exterior hull plate, three-quarter view, readable silhouette, space or drydock lighting; 16:9 feel.
 - **Unity:** Cool-neutral palette with warm skin/hull accents; encyclopedia seriousness (no comic speech, no UI chrome, no watermark text).
 - **Originality:** Guided by novel + wiki research only. Do not reproduce official EXODUS marketing art.
+- **Family resemblance (owner rule, 26 July 2026): if the book does not explicitly say otherwise,
+  relatives should match.** Blood relations share bearing, proportions and colouring unless the
+  novel describes one of them differently — and any feature the novel *does* fix for a line is
+  mandatory for every member of it. Judge a family side by side, never image by image; this has
+  now failed twice, on the Jalgori-Tobu siblings and on Helena-Chione's daughters.
 - **Period fit — the costume must belong to the era.** The novel is set around 42,000 AD, tens of
   thousands of years after the Sol exodus, so nothing may borrow a garment from Earth's recent past:
   no lounge suit, necktie or cravat, no twentieth-century dress collar and cuffs, no trench coat or
@@ -31,7 +36,7 @@ Maintainer-only notes for original encyclopedia illustrations. **Not** reader-fa
 
 | Clade | Body plan / cues | Dress / tech |
 |---|---|---|
-| **Imperial Celestial** | Tall elegant humanoids (queens up to ~3 m; elongated proportions, long limbs); post-human beauty; athanasia culture. **Both sexes carry a marsupial womb**; a child is near full height by seven (over 2 m) and only broadens after ten, when puberty triggers the womb's final growth phase. **Hair and skin colour vary freely within a line** — a queen's daughters share only her eye colour | Court robes and togas, bloodstone jewellery/growths that eventually entomb a host; neural induction pad in the **palm**, connection patch at the **top of the spine**; livestone architecture hints |
+| **Imperial Celestial** | Tall elegant humanoids (queens up to ~3 m; elongated proportions, long limbs); post-human beauty; athanasia culture. **Both sexes carry a marsupial womb**; a child is near full height by seven (over 2 m) and only broadens after ten, when puberty triggers the womb's final growth phase. **Family resemblance is the default.** The novel guarantees one inherited feature — Helena's daughters all share her **intense green eyes** — and says hair and skin colour are not fixed by the line. That is licence to vary, not an instruction to: unless the book explicitly describes a relative differently, draw them as family in bearing, proportions and colouring | Court robes and togas, bloodstone jewellery/growths that eventually entomb a host; neural induction pad in the **palm**, connection patch at the **top of the spine**; livestone architecture hints |
 | **Heresy Celestial** | ~3 m spindly **hexapods** — two legs, four arms, **four eyes that blink in unison**. Skull **extended into cones on both sides, level with the shoulders**, housing an inflated brain; the low body temperature exists to keep it from overheating. Skin **almost reptilian**, wrapped tight enough to read as an **exoskeleton, in blues and greens**. **The arm pairs differ**: the upper ends in four elongated three-jointed fingers and a thumb, the lower dangles like stiff rope with bulbous elbows and a simple **triple claw** | Multilayered robes cut for multi-limb anatomy, lower arms left hanging free; research/archon severity |
 | **Talloch-Te archon** | Multi-body Celestials (primary + secondary bodies; mind partition); **five eyes** on Sahdiah’s primary body; bodymorph / gravity form; not Crown two-eyed humanoid, not Heresy hexapod | Merchant-archon finery; nurture-chamber / ship-linked presence; deniable-ops cool |
 | **Uranic** | Fully human appearance; intermediate status; neural interface ports subtle at temples/neck | Client aristocracy — Gondiar estate / ministerial dress, elegant but subordinate to Celestial scale |
