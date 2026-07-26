@@ -442,6 +442,10 @@ Three lessons from those passes are worth carrying into any new art:
 - **Count what the text counts, and check the material as well as the colour.** Olomo shipped with
   the wrong eye count for three passes because the brief never mentioned eyes; bloodstone was fixed
   from red to turquoise while staying a faceted gem, which the novel rules out just as firmly.
+- **A prompt sweep does not fix a shipped image.** Sweeping a clause into every brief closes the
+  future hole and leaves the present one: images generated before the clause still fail it. Every
+  such image is QUERY until re-opened, and the tally must not move until they are. Luus shipped
+  for a day looking like an ordinary human teenager with a brief that said "elongated post-human".
 - **Fix clade-level defects at the clade, and re-open old passes when a standard tightens.** The
   Celestial body plan was front-loaded per subject four times before being swept across all 23
   briefs — the clause was identical each time, only the discovery repeated. Separately, four

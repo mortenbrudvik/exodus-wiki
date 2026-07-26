@@ -147,6 +147,40 @@ The prohibition binds to the garment rather than to the bloodstone — "never a 
 Malquilvo's reads "never ruby or crimson**, tear-shaped jewellery**". Fixing this means putting the
 noun inside the constant or ending the clause with punctuation.
 
+## Sixteenth pass — the sweep updated prompts, not images
+
+**26 July 2026 · 15 subjects audited · 5 regenerated · 5 pass.** Owner: *"Luus does not at all look
+celestial."* Correct, and the reason is a gap the fifteenth pass left open and did not state loudly
+enough.
+
+**A prompt sweep does not fix a shipped image.** `CELESTIAL_BODY` went into all 23 Celestial briefs,
+but only 4 subjects were regenerated against it. The other 19 kept images generated before the clause
+existed — Luus's dates from the seventh pass. Her brief said "elongated post-human"; her portrait was
+an ordinary human teenager. The sweep closed the *future* hole and left the *present* one, and the
+ledger recorded it as though the job were done.
+
+Auditing all 15 non-regenerated subjects by eye found **five failures**:
+
+| Subject | Failing | Now |
+|---|---|---|
+| `luus` | Ordinary human girl, no elongation | Long neck and elongated cranium, young face kept |
+| `carolien-amaia` | Ordinary human teenager | Strongly elongated, waist-length raven hair, albino pallor |
+| `bekket` | Ordinary young man | Very long neck and narrow frame, unkempt auburn, calculating smirk |
+| `valdier` | Bloodstone as carved plates set in a gold collar | Porous growth at throat and shoulders |
+| `stethos-thierry` | Glyph-like characters on the robe; glowing display cases behind him | Plain robes, plain ground, flared collar and nape bulb intact |
+
+Ten passed the audit unchanged, including `makaio`, `helena-chione`, `thyra`, `clavissa`,
+`asahi-iryna`, `uulana`, `malquilvo`, `ramona-ursule`, `zuberi-dulcina` and `lord-gahiji`.
+
+**Carolien and Luus are the instructive pair.** Both had been regenerated for a *different* reason —
+her hair, her age — and both passed those checks. Neither was ever asked whether she looked like a
+Celestial, because the body plan was not a criterion on the day they were judged. A subject can be
+signed off repeatedly and still fail a rule that arrived after its last review.
+
+**Rule this adds:** when a clause is swept into briefs, every image generated before it is QUERY
+until re-opened. Sweeping the prompt is half the work; the tally must not move until the images
+follow.
+
 ## Fifteenth pass — sweep the Celestial body plan, and four subjects left on stale standards
 
 **26 July 2026 · 19 briefs swept · 4 subjects regenerated · 4 pass.**

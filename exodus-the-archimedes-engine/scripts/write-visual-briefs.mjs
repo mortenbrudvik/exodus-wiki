@@ -366,7 +366,7 @@ const briefs = [
     ],
     clothing: "Imperial palace regalia — deep indigo and platinum, heavy bloodstone mantle",
     setting: "Imperial Palace mountain-engulfing architecture suggestion",
-    prompt: `${STYLE} Upper-body portrait of Carolien-Amaia, Imperial Celestial empress of the Crown Dominion. ${CELESTIAL_BODY} SHE IS SEVENTEEN YEARS OLD: the face must be an adolescent girl's — smooth unlined youthful skin, soft round cheeks, no age lines, no gauntness, not a middle-aged or mature woman. A strikingly young long face, skin so white she could almost be albino, and glossy raven-black hair hanging straight almost to her waist. Calm commanding expression — absolute imperial authority worn on a teenager's face, and that contrast is the point of the picture. Deep indigo and platinum imperial robes, ${bloodstone("heavy mantle")}, elongated post-human proportions. Plain grand palace light, uncluttered background, no heraldic emblems, no crowns, no repeated motifs, no banners, no portraits or murals behind her.`,
+    prompt: `${STYLE} Upper-body portrait of Carolien-Amaia, Imperial Celestial empress of the Crown Dominion. ${CELESTIAL_BODY} SHE IS SEVENTEEN YEARS OLD: the face must be an adolescent girl's — smooth unlined youthful skin, soft round cheeks, no age lines, no gauntness, not a middle-aged or mature woman. A strikingly young long face, skin so white she could almost be albino, and glossy raven-black hair hanging straight almost to her waist. Calm commanding expression — absolute imperial authority worn on a teenager's face, and that contrast is the point of the picture. Deep indigo and platinum imperial robes, ${bloodstone("heavy mantle")}, elongated post-human proportions. Plain grand palace light, uncluttered background, no heraldic emblems, no crowns, no repeated motifs, no banners, no portraits or murals behind her. ${NO_TEXT_ANYWHERE}`,
     inference: [
       "Eye colour is not stated for her",
       "The unsettling gap between a seventeen-year-old host and an empress of the Crown Dominion is the point of the description — do not age her up",
@@ -390,7 +390,7 @@ const briefs = [
     ],
     clothing: "Bassa royal colours — emerald and gold court robes with bloodstone diadem",
     setting: "Coronation-era court",
-    prompt: `${STYLE} Upper-body portrait of Luus-Marcela, Imperial Celestial Now and Forever Queen of Bassa. ${CELESTIAL_BODY} SHE HAS THE FACE OF A GIRL OF ABOUT SEVENTEEN: smooth unlined youthful skin, soft round cheeks, no age lines, no crow's feet, no gauntness, not a middle-aged or mature woman. On that beguilingly young, almost girlish face she wears an expression of hard political triumph that does not belong on it, and that contrast is the point of the picture. Tall elegant post-human sovereign, emerald and gold robes with ${bloodstone("diadem")}. Plain even light, uncluttered background, no heraldic emblems, no crests, no repeated motifs, no banners, no murals, no floating symbols or runes.`,
+    prompt: `${STYLE} Upper-body portrait of Luus-Marcela, Imperial Celestial Now and Forever Queen of Bassa. ${CELESTIAL_BODY} SHE HAS THE FACE OF A GIRL OF ABOUT SEVENTEEN: smooth unlined youthful skin, soft round cheeks, no age lines, no crow's feet, no gauntness, not a middle-aged or mature woman. On that beguilingly young, almost girlish face she wears an expression of hard political triumph that does not belong on it, and that contrast is the point of the picture. Tall elegant post-human sovereign, emerald and gold robes with ${bloodstone("diadem")}. Plain even light, uncluttered background, no heraldic emblems, no crests, no repeated motifs, no banners, no murals, no floating symbols or runes. ${NO_TEXT_ANYWHERE}`,
     inference: [
       "Hair and eye colour are not stated for her",
       "The 'dark olive skin and classic titian hair, cropped short' in the same passage belongs to **a princess Luus selected to taunt the empress**, not to Luus — do not attribute it to her",
@@ -476,7 +476,7 @@ const briefs = [
     ],
     clothing: "Dark court suit with bloodstone cuff growths, Uixic noble cut",
     setting: "Shadowed court corridor",
-    prompt: `${STYLE} Upper-body portrait of Lord Bekket, Imperial Celestial court schemer and father of a usurper queen. ${CELESTIAL_BODY} HIS HAIR IS LONG, LOOSE, UNKEMPT AND AUBURN: coppery red-brown, falling well past his collar and deliberately untidy — not black, not dark brown, not short, not slicked back, not tied up. It gives him a slightly wild, un-courtly look, deliberately less groomed than everyone around him. A young post-human man, tall but not the tallest, with a calculating half-smile. Dark tailored court suit, ${bloodstone("pair of cuff ornaments")}. Plain even light, uncluttered background, no heraldic emblems, no crests, no repeated motifs, no banners, no murals, no floating symbols or runes.`,
+    prompt: `${STYLE} Upper-body portrait of Lord Bekket, Imperial Celestial court schemer and father of a usurper queen. ${CELESTIAL_BODY} HIS HAIR IS LONG, LOOSE, UNKEMPT AND AUBURN: coppery red-brown, falling well past his collar and deliberately untidy — not black, not dark brown, not short, not slicked back, not tied up. It gives him a slightly wild, un-courtly look, deliberately less groomed than everyone around him. A young post-human man, tall but not the tallest, with a calculating half-smile. Dark tailored court suit, ${bloodstone("pair of cuff ornaments")}. Plain even light, uncluttered background, no heraldic emblems, no crests, no repeated motifs, no banners, no murals, no floating symbols or runes. ${NO_TEXT_ANYWHERE}`,
     inference: [
       "Eye colour and skin tone are not stated — the auburn hair, its unkempt length and his youth are",
     ],
@@ -533,7 +533,7 @@ const briefs = [
     cues: ["Older generation of Wynid protocol", "Master of Court formality", "Tall Imperial humanoid elder"],
     clothing: "Heavy Master of the Court robes, protocol staff-collar of bloodstone",
     setting: "Coronation introduction chamber",
-    prompt: `${STYLE} Portrait of Lord Valdier, elderly Imperial Celestial Master of the Court and royal father. ${CELESTIAL_BODY} Tall post-human elder man with formal austere expression, heavy ceremonial robes, ${bloodstone("protocol collar")}. Old-guard court. Upper-body portrait, formal gold light.`,
+    prompt: `${STYLE} Portrait of Lord Valdier, elderly Imperial Celestial Master of the Court and royal father. ${CELESTIAL_BODY} Tall post-human elder man with formal austere expression, heavy ceremonial robes, ${bloodstone("protocol collar")}. Old-guard court. Upper-body portrait, formal gold light. ${NO_TEXT_ANYWHERE}`,
     inference: [],
     image: "assets/images/characters/valdier.jpg",
   },
@@ -551,7 +551,7 @@ const briefs = [
     ],
     clothing: "Scarlet-and-grey robes with a wide flared collar; bloodstone petals over the crown and spine patch",
     setting: "Data-hall soft hologlyphs (no readable text)",
-    prompt: `${STYLE} Portrait of Lord Stethos-Thierry, Imperial Celestial court datamaster. ${CELESTIAL_BODY} Post-human man two and a half metres tall with calm vacant-focused expression, wearing scarlet-and-grey robes that flare out into a tall stiff collar rising almost to his head, his skull embellished with swirled petals of pale bloodstone that cover a connection bulb at the nape of his spine. Organic crystalline growth, not metal machinery. Upper-body portrait, cool holographic bokeh without readable text.`,
+    prompt: `${STYLE} Portrait of Lord Stethos-Thierry, Imperial Celestial court datamaster. ${CELESTIAL_BODY} Post-human man two and a half metres tall with calm vacant-focused expression, wearing scarlet-and-grey robes that flare out into a tall stiff collar rising almost to his head, his skull embellished with swirled petals of pale bloodstone that cover a connection bulb at the nape of his spine. Organic crystalline growth, not metal machinery. Upper-body portrait, cool holographic bokeh without readable text. ${NO_TEXT_ANYWHERE}`,
     inference: [
       "Face, skin tone and hair are not described",
       "The delivered portrait renders his interface as metal implants and fibre-optic cable; the novel makes it bloodstone",
